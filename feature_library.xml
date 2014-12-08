@@ -1,130 +1,133 @@
- <ab><fLib n="Linguistic Variants">
-           <f name="linguisticVariant" xml:id="ling"/>
-           <f name="morphosyntactic" xml:id="morph"/>
-           <f name="phonetic" xml:id="phon"/>
-           <f name="lexical" xml:id="lex"/>
-           <f name="languageTransfer" xml:id="transfer"/>
-           <f name="pronoum" xml:id="pr"/>
-           <f name="verb" xml:id="vb"/>
-           <f name="substantive" xml:id="n"/>
-           <f name="conjuction" xml:id="conj"/>
-           <f name="preposition" xml:id="prep"/>
-           <f name="dativeContamination" xml:id="datCon"/>
-           <f name="irregularVerb" xml:id="irreg"/>
-           <f name="pastTheme" xml:id="past"/>
-           <f name="presentTheme" xml:id="pres"/>
-           <f name="HABERE" xml:id="habere"/>
-           <f name="nasalization" xml:id="nasal"/>
-           <f name="progressiveNasalization" xml:id="proNas"/>
-           <f name="analogy" xml:id="anal"/>
-           <f name="epentheticYod" xml:id="eYod"/>
-           <f name="denasalization" xml:id="deNas"/>
-           <f name="allomorph" xml:id="allom"/>
-           <f name="apheresis" xml:id="apher"/>
-           <f name="palatalization" xml:id="pal"/>
-           <f name="foiP1" xml:id="foi1"/>
-           <f name="fuiP1" xml:id="fui1"/>
-           <f name="XE" xml:id="XE"/>
-           <f name="dipthong" xml:id="dipthong"/>
-           <f name="archaismLing" xml:id="archaismL"/>
-           <f name="perfP1i" xml:id="p1I"/>
-           
-           
-       </fLib>
-       <fvLib n="Linguistic Variants">
-           <fs xml:id="DC" feats="#datCon #pr #morph #ling"/>
-           <fs xml:id="LangT" feats="#transfer #ling"/>
-           <fs xml:id="O" feats="#habere #past #irreg #vb #morph #ling"/>
-           <fs xml:id="dip" feats="#dipthong #phon #ling"/>
-           <fs xml:id="foi" feats="#foi1 #past #irreg #vb #morph #ling"/>
-           <fs xml:id="fui" feats="#fui1 #past #irreg #vb #morph #ling"/>
-           <fs xml:id="xe" feats="#XE #pr #morph #pal #phon #ling"/>
-           <fs xml:id="archL" feats="#archaismL #ling"/>
-           <fs xml:id="min" feats="#proNas #nasal #phon #pr #ling"/>
-           <fs xml:id="yod" feats="#eYod #phon #ling"></fs>
-           <fs xml:id="p1i" feats="#p1I #past #irreg #vb #morph #ling"/>
-           <fs xml:id="dNas" feats="#deNas #phon #ling"/>
-           
-       </fvLib>
-       <fLib n="Graphic Variants">
-           <f name="graphicVariant" xml:id="graph"/>
-           <f name="vowel" xml:id="v"/>
-           <f name="consonant" xml:id="c"/>
-           <f name="yASvowel" xml:id="vY"/>
-           <f name="jASvowel" xml:id="vJ"/>
-           <f name="hASvowel" xml:id="vH"/>
-           <f name="iASconsonant" xml:id="cI"/>
-           <f name="sibilant" xml:id="sibil"/>
-           <f name="palatal" xml:id="palatal"/>
-           <f name="finalM" xml:id="fM"/>
-           <f name="Nbeforebilabial" xml:id="Nbib"/>
-           <f name="non-etymologicalH" xml:id="nonEtyH"/>
-           <f name="etymologicalH" xml:id="etyH"/>
-           <f name="doubleConsonant" xml:id="doubCon"/>
-           <f name="abbreviature" xml:id="abbrev"/>
-           <f name="synalepha" xml:id="synalepha"/>
-           <f name="elision" xml:id="elision"/>
-           <f name="regularVariant" xml:id="regular"/>
-           <f name="çBEFOREe_i" xml:id="çeçi"/>
-           <f name="archaismGrap" xml:id="archaismGrap"></f>
-       </fLib>
-       
-       <fvLib n="Graphic Variants">
-           <fs xml:id="y" feats="#vY #v #graph"/>
-           <fs xml:id="j" feats="#vJ #v #graph"/>
-           <fs xml:id="m" feats="#fM #c #graph"/>
-           <fs xml:id="N" feats="#Nbib #c #graph"/>
-           <fs xml:id="EH" feats="#etyH #c #graph"/>
-           <fs xml:id="NEH" feats="#nonEtyH #c #graph"/>
-           <fs xml:id="h_i" feats="#vH #v #graph"/>
-           <fs xml:id="doubC" feats="#doubCon #c #graph"/>
-           <fs xml:id="synal" feats="#synalepha #graph"/>
-           <fs xml:id="elis" feats="#elision #graph"/>
-           <fs xml:id="abbr" feats="#abbrev #graph"/>
-           <fs xml:id="i_g" feats="#cI #sibil #palatal #c #graph"/>
-           <fs xml:id="PC" feats="#regular #palatal #c #graph"/>
-           <fs xml:id="ç" feats="#çeçi #c #palatal #sibil #graph"/>
-           <fs xml:id="archG" feats="#archaismGrap #graph"/>
-           
-       </fvLib>
-       <fLib n="Scribal Errors">
-           <f name="scribalError" xml:id="error"/>
-           <f name="omission" xml:id="omiss"/>
-           <f name="homoteleuton" xml:id="homoteleuton"/>
-           <f name="homeoarchy" xml:id="homeoarchy"/>
-           <f name="haplography" xml:id="haplography"/>
-           <f name="abbrGlyph" xml:id="glyph"/>
-           <f name="addition" xml:id="add"/>
-           <f name="dittography" xml:id="dittography"/>
-           <f name="contamination" xml:id="contamination"/>
-           <f name="transposition" xml:id="transp"/>
-           <f name="metathesis" xml:id="metathesis"/>
-           <f name="alteration" xml:id="alter"/>
-           <f name="unwitting" xml:id="unwitting"/>
-           <f name="lectioFacilior" xml:id="lecFac"></f>
-           <f name="spellingMistake" xml:id="spelling"/>
-           <f name="deliberate" xml:id="deliberate"/>
-           <f name="illuminatorError" xml:id="illuminator"/>                    
-       </fLib>
-       <fvLib n="Scribal Errors">
-           <fs xml:id="homot" feats="#homoteleuton #omiss #error"/>
-           <fs xml:id="homeoar" feats="#homeoarchy #omiss #error"/>
-           <fs xml:id="haplog" feats="#haplography #omiss #error"/>
-           <fs xml:id="om" feats="#omiss #error"/>
-           <fs xml:id="gly" feats="#glyph #omiss #error"/>
-           <fs xml:id="ditt" feats="#dittography #add #error"/>
-           <fs xml:id="cont" feats="#contamination #add #error"/>
-           <fs xml:id="metath" feats="#metathesis #transp #error"/>
-           <fs xml:id="unwitt" feats="#unwitting #alteration #error"/>
-           <fs xml:id="graphic" feats="#spelling #unwitting #alteration #error"/>
-           <fs xml:id="LF" feats="#lecFac #unwitting #alteration #error"/>
-           <fs xml:id="illum" feats="#illuminator #unwitting #alteration #error"/>
-       </fvLib>
-       <fLib n="Equipolent Readings">
-           <f name="equipolent" xml:id="equip"/>
-       </fLib>
-       <fvLib n="Equipolent Readings">
-           <fs xml:id="E" feats="#equip"/>
-       </fvLib>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="feature-library.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="feats.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Feature library for the Iberian Poets project</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher/>
+                <availability>
+                    <licence>
+                        <ref target="http://creativecommons.org/licenses/by-nc/3.0/">Creative
+                            Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)</ref>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <ab/>
 
-</ab>
+            <fLib n="Linguistic Variants">
+                <f name="linguisticVariant" xml:id="ling"/>
+                <f name="morphosyntactic" xml:id="morph"/>
+                <f name="phonetic" xml:id="phon"/>
+                <f name="lexical" xml:id="lex"/>
+                <f name="languageTransfer" xml:id="transfer"/>
+                <f name="pronoum" xml:id="pr"/>
+                <f name="verb" xml:id="vb"/>
+                <f name="substantive" xml:id="n"/>
+                <f name="conjuction" xml:id="conj"/>
+                <f name="preposition" xml:id="prep"/>
+                <f name="adverb" xml:id="adv"/>
+                <f name="dativeContamination" xml:id="datCon"/>
+                <f name="irregularVerb" xml:id="irregV"/>
+                <f name="pastTheme" xml:id="past"/>
+                <f name="presentTheme" xml:id="pres"/>
+                <f name="HABERE" xml:id="habere"/>
+                <f name="nasalization" xml:id="nasal"/>
+                <f name="progressiveNasalization" xml:id="proNas"/>
+                <f name="analogy" xml:id="anal"/>
+                <f name="epentheticYod" xml:id="eYod"/>
+                <f name="denasalization" xml:id="deNas"/>
+                <f name="allomorph" xml:id="allom"/>
+                <f name="apheresis" xml:id="apher"/>
+                <f name="palatalization" xml:id="pal"/>
+                <f name="foiP1" xml:id="foi1"/>
+                <f name="fuiP1" xml:id="fui1"/>
+                <f name="XE" xml:id="XE"/>
+                <f name="dipthong" xml:id="dipthong"/>
+                <f name="archaismLing" xml:id="archaismL"/>
+                <f name="perfP1i" xml:id="p1I"/>
+                <f name="loan" xml:id="Loan"/>
+                <f name="par" xml:id="Par"/>
+                <f name="per" xml:id="Per"/>
+                <f name="agora" xml:id="Agora"/>
+                <f name="ora" xml:id="Ora"/>
+                <f name="vus" xml:id="uus"/>
+                <f name="ca" xml:id="Ca"/>
+                <f name="que" xml:id="Que"/>
+                <f name="cognate" xml:id="Cognate"></f>
+            </fLib>
+
+
+            <fvLib n="Linguistic Variants">
+                <fs xml:id="DC" feats="#datCon #pr #morph #ling"/>
+                <fs xml:id="langT" feats="#transfer #ling"/>
+                <fs xml:id="o" feats="#habere #past #irregV #vb #morph #ling"/>
+                <fs xml:id="dip" feats="#dipthong #phon #ling"/>
+                <fs xml:id="foi" feats="#foi1 #past #irregV #vb #morph #ling"/>
+                <fs xml:id="fui" feats="#fui1 #past #irregV #vb #morph #ling"/>
+                <fs xml:id="xe" feats="#XE #pr #morph #pal #phon #ling"/>
+                <fs xml:id="min" feats="#proNas #nasal #phon #pr #ling"/>
+                <fs xml:id="yod" feats="#eYod #phon #ling"/>
+                <fs xml:id="p1i" feats="#p1I #past #irregV #vb #morph #ling"/>
+                <fs xml:id="dNas" feats="#deNas #phon #ling"/>
+                <fs xml:id="loan" feats="#Loan #ling"/>
+                <fs xml:id="par" feats="#Par #prep #ling #lex"/>
+                <fs xml:id="per" feats="#Per #prep #ling #lex"/>
+                <fs xml:id="ora" feats="#Ora #adv #ling #lex"/>
+                <fs xml:id="agora" feats="#Agora #adv #ling #lex"/>
+                <fs xml:id="vus" feats="#uus #pr #ling"/>
+                <fs xml:id="ca" feats="#Ca #conj #ling"/>
+                <fs xml:id="que" feats="#Que #conj #ling"/>
+                <fs xml:id="apheresis" feats="#apher #phon #ling"/>
+                <fs xml:id="cognate" feats="#Cognate #phon #ling"/>
+            </fvLib>
+
+
+            <fLib n="Graphic Variants">
+                <f name="graphicVariant" xml:id="graph"/>
+                <f name="archaism" xml:id="archaism"/>
+                <f name="innovation" xml:id="innovation"/>
+                <f name="regularVar" xml:id="regular"/>
+                <f name="irregularVar" xml:id="irregular"/>
+                <f name="tendency" xml:id="tendency"/>
+                <f name="linguisticRelevance" xml:id="lingRelevance"/>
+            </fLib>
+
+            <fvLib n="Graphic Variants">
+                <fs xml:id="archG" feats="#archaism #graph"/>
+                <fs xml:id="innova" feats="#innovation #graph"/>
+                <fs xml:id="reg" feats="#regular #graph"/>
+                <fs xml:id="irreg" feats="#irregular #graph"/>
+                <fs xml:id="trend" feats="#tendency #graph"/>
+                <fs xml:id="lingR" feats="#lingRelevance #graph"/>
+            </fvLib>
+
+            <fLib n="Scribal errors">
+                <f name="scribalError" xml:id="Error"/>
+                <f name="misreading" xml:id="misreading"/>
+                <f name="lingInterference" xml:id="lingInter"/>
+            </fLib>
+
+            <fvLib n="Scribal errors">
+                <fs xml:id="misread" feats="#misreading #Error"/>
+                <fs xml:id="lingInt" feats="#lingInter #Error"/>
+                <fs xml:id="error" feats="#Error"/>
+            </fvLib>
+
+
+            <fvLib n="Equipolent Readings">
+                <fs xml:id="equip"/>
+            </fvLib>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="TEI-personography.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Corpus de Autores</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher/>
+                <availability>
+                    <licence>
+                        <ref target="http://creativecommons.org/licenses/by-nc/3.0/">Creative
+                            Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)</ref>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Orixe dixital.</p>
+                <p>Datos extraídos das bases de datos<emph>
+                        <ref corresp="#medDB">Base de datos da Lírica Profana Galego-Portuguesa
+                            (MedDB)</ref>
+                    </emph>and <emph>
+                        <ref corresp="#fsch">Cantigas Medievais Galego Portuguesas [base de dados
+                            online]</ref>
+                    </emph>.</p>
+            </sourceDesc>
+            <sourceDesc>
+                <bibl xml:id="medDB"> Base de datos da Lírica Profana Galego-Portuguesa (MedDB),
+                    versión 2.3.3, Centro Ramón Piñeiro para a Investigación en Humanidades <ref
+                        target="http://www.cirp.es">http://www.cirp.es</ref>
+                </bibl>
+                <bibl xml:id="fsch"> Lopes, Graça Videira; Ferreira, Manuel Pedro et al. (2011-),
+                    Cantigas Medievais Galego Portuguesas [base de dados online]. Lisboa: Instituto
+                    de Estudos Medievais, FCSH/NOVA. <ref target="http://cantigas.fcsh.unl.pt"
+                        >http://cantigas.fcsh.unl.pt</ref>. </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>TEI schema</p>
+            <p>Metadata segundo o modelo de <ref corresp="#medDB">MedBB</ref>
+            </p>
+            <projectDesc>
+                <p>Parte da tese de doutoramento</p>
+            </projectDesc>
+            <geoDecl> </geoDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listPerson>
+                <person xml:id="NuRdzCan">
+                    <persName>Nuno Rodriguez de Candarei</persName>
+                    <nationality cert="high" key="gl">Galega</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Penafiel</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <floruit from="1225" to="1250" period="2"/>
+                </person>
+
+                <person xml:id="VaFdezSen">
+                    <persName>Vasco Fernandez Praga de Sandin</persName>
+                    <nationality cert="high" key="gl">Galega</nationality>
+                    <birth cert="medium">
+                        <location>
+                            <placeName>Parga (Lugo)</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1200" to="1240" period="2"/>
+                </person>
+
+                <person sameAs="#JSrzSom">
+                    <persName>Johan Soarez Somesso <addName>(alternative ID)</addName></persName>
+                    <nationality cert="low" key="pt">Portuguesa</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Valadares</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1220" to="1230" period="2" cert="low"/>
+                </person>
+
+                <person xml:id="JSrzSom">
+                    <persName>Johan Soarez Somesso</persName>
+                    <nationality cert="low" key="gl">Galega</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Crecente</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1215" to="1246" period="2" cert="low"/>
+                </person>
+
+                <person sameAs="#JSrzSom">
+                    <persName>Johan Soarez Somesso <addName>(alternative ID)</addName>
+                    </persName>
+                    <nationality cert="low" key="gl">Galega</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Fornelos</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1223" to="1257" period="2" cert="low">
+                        <location cert="unknown" type="unknown">
+                            <placeName type="short">Descoñecido location</placeName>
+                        </location>
+                    </floruit>
+                </person>
+
+                <person xml:id="PaySrzTav">
+                    <persName>Pai Soarez de Taveirós</persName>
+                    <nationality cert="high" key="gl">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Tabeirós</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1225" to="1250" period="2">
+
+
+                        <location from="1241" to="1249" corresp="#jaen"/>
+                    </floruit>
+                </person>
+
+                <person xml:id="JNzCam">
+                    <persName>Johan Nunez Camanez</persName>
+                    <nationality cert="low" key="gl">Galega</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Camán (Pontevedra)</placeName>
+                        </location>
+                    </birth>
+                    <occupation cert="unknown" key="unknown">Descoñecido</occupation>
+                    <socecStatus key="unknown" cert="unknown">Descoñecido</socecStatus>
+                    <floruit from="1240" to="1260" period="3">
+                        <location cert="unknown" type="unknown">
+                            <placeName type="short">Descoñecido location</placeName>
+                        </location>
+                    </floruit>
+                </person>
+
+                <person xml:id="AfLpzBay">
+                    <persName>Alfonso Lopez de Baian</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Baião</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <floruit from="1246" to="1280" period="3">
+                        <location from="1245" to="1250" corresp="#jaen"/>
+                        <location from="1251" to="1280" corresp="#sousa"/>
+                    </floruit>
+                </person>
+
+                <person xml:id="EstFai">
+                    <persName>Estevan Faian</persName>
+                    <nationality cert="low" key="cas">Castelán</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Leon</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1240" to="1260" period="3">
+                        <location cert="low" corresp="#jaen"/>
+                        <location cert="medium" corresp="#afonsX"/>
+                    </floruit>
+                </person>
+
+                <person xml:id="FerPad">
+                    <persName>Fernan Padron</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Padrón</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1250" to="1275" period="3" cert="medium">
+                        <location cert="unknown" type="unknown">
+                            <placeName type="short">Descoñecido location</placeName>
+                        </location>
+                    </floruit>
+                </person>
+
+                <person sameAs="#FerPad">
+                    <persName>Fernan Padron <addName>(alternative ID)</addName>
+                    </persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Padrón</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1190" to="1230" period="1" cert="low">
+                        <location cert="unknown" type="unknown">
+                            <placeName type="short">Descoñecido location</placeName>
+                        </location>
+                    </floruit>
+                </person>
+
+                <person xml:id="MartMo">
+                    <persName>Martin Moxa</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <placeName>Compostela</placeName>
+                        <location>
+                            <placeName>Compostela</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="cl">Clérigo</socecStatus>
+                    <floruit from="1270" to="1280" period="3"/>
+                </person>
+
+                <person sameAs="#MartMo">
+                    <persName>Martin Moxa <addName>(alternative ID)</addName>
+                    </persName>
+                    <nationality cert="low" key="arag">Aragonesa</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="cl">Clérigo</socecStatus>
+                    <floruit from="1270" to="1280" period="3"/>
+                </person>
+
+
+                <person xml:id="JSrzPav">
+                    <persName>Johan Soarez de Pavia </persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Paiva</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1170" to="1200" period="1"/>
+                </person>
+
+                <person xml:id="MartSrz">
+                    <persName>Martin Soarez</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Riba de Lima (Minho)</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1230" to="1270" period="3"/>
+                </person>
+                <person xml:id="AyCarp">
+                    <persName>Airas Fernandes "Carpancho"</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Compostela</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1190" to="1230" period="1"/>
+                </person>
+
+                <person xml:id="NuFdzTor">
+                    <persName>Nuno Fernandez Torneol</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Compostela</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1230" to="1260" period="3"/>
+                </person>
+
+                <person xml:id="FerGarEsg">
+                    <persName>Fernan Garcia Esgaravunha</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName cert="low">Terras de Sousa</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1220" to="1250" period="2">
+                        <location from="1220" to="1238" corresp="#sousa"/>
+
+                        <location from="1246" to="1250" corresp="#afonsIII"/>
+                    </floruit>
+                </person>
+
+                <person xml:id="RoyQuey">
+                    <persName>Roi Queimado</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Sabadim</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1240" to="1270" period="3">
+                        <location from="1240" to="1252" corresp="#jaen"/>
+                        <location from="1253" to="1270" corresp="#afonsX"/>
+                    </floruit>
+                </person>
+
+                <person xml:id="VasGil">
+                    <persName>Vasco Gil</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName cert="low">Sousa</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1235" to="1260" period="3"/>
+                </person>
+
+                <person xml:id="JSrzCoe">
+                    <persName>Johan Soarez Coelho</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Ribadouro</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1235" to="1270" period="3">
+                        <location from="1235" to="1237" corresp="#serpa"/>
+                        <location from="1238" to="1241" corresp="#berenguer"/>
+                        <location from="1242" to="1248" corresp="#jaen"/>
+                        <location from="1249" to="1270" corresp="#afonsIII"/>
+                    </floruit>
+                </person>
+
+                <person xml:id="RoyPaezRib">
+                    <persName>Roi Paez de Ribela</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Monfero</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1240" to="1280" period="3"/>
+                </person>
+
+                <person xml:id="JLpzUlh">
+                    <persName>Johan Lopez de Ulhoa</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Terras de Monterroso</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1238" to="1286" period="3"/>
+                </person>
+
+                <person xml:id="FerGvzSeav">
+                    <persName>Fernan Gonçalvez de Seabra</persName>
+                    <nationality key="pt" cert="medium">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Vinahis, Trás-os-Montes</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1258" to="1275" period="3"/>
+                </person>
+
+                <person xml:id="PGmzBarr">
+                    <persName>Pero Gomez Barroso</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Terras de Barroso</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit period="3" from="1248" to="1273"/>
+                </person>
+
+                <person xml:id="JGarGlh">
+                    <persName>Johan Garcia de Guilhade</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Milhazes, Barcelos</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1240" to="1265" period="3"/>
+                </person>
+
+                <person xml:id="JVqzTal">
+                    <persName>Johan Vasquis de Talaveira</persName>
+                    <nationality cert="medium" key="cas">Castelán</nationality>
+                    <birth>
+                        <location cert="low">
+                            <placeName>Talavera de la Reina</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1260" to="1295" period="3">
+                        <location from="1260" to="1283" corresp="#afonsX"/>
+                        <location from="1284" to="1295" corresp="#sanchoIV"/>
+                    </floruit>
+                </person>
+                <person xml:id="PPon">
+                    <persName>Pero da Ponte</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="sq">Escudeiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1235" to="1275" period="3"/>
+                </person>
+                <person xml:id="MartCod">
+                    <persName>Martin Codax</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="unknown" cert="unknown">Descoñecido</socecStatus>
+                    <occupation key="jn">Xograr</occupation>
+                    <floruit from="1240" to="1275" period="3"/>
+                </person>
+
+                <person xml:id="Den">
+                    <persName>Dom Dinis</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Lisbon</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1279" to="1235" period="3"/>
+                </person>
+
+                <person xml:id="PayGmzCha">
+                    <persName>Pai Gomez Charinho</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Ponte Vedra</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1248" to="1295" period="3"/>
+                </person>
+
+
+                <person xml:id="FerVelho">
+                    <persName>Fernan Velho</persName>
+                    <nationality key="gl" cert="low">Galega</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1280" to="1320" period="3"/>
+                </person>
+
+                <person xml:id="BonGen">
+                    <persName>Bonifaci Calvo <addName>(Bonifaz de Genua)</addName>
+                    </persName>
+                    <nationality key="it" cert="medium">Genovese</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Genoa</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1250" to="1265" period="3"/>
+                </person>
+
+                <person xml:id="VaRdzCal">
+                    <persName>Vasco Rodrigues de Calvelo</persName>
+                    <nationality key="pt" cert="medium">Portuguesa</nationality>
+                    <birth>
+                        <location cert="low">
+                            <placeName>Calvelo</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1250" to="1275" period="3">
+                        <location type="noble">
+                            <placeName type="short">Calvelo</placeName>
+                        </location>
+                    </floruit>
+                </person>
+
+
+                <person xml:id="RoyFdz">
+                    <persName>Roi Fernandiz de Santiago</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Compostela</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="cl">Clérigo</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1240" to="1270" period="3"/>
+                </person>
+
+
+                <person xml:id="VaMrzRes">
+                    <persName>Vasco Martins de Resende</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Resende</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1290" to="1325" period="4"/>
+                </person>
+
+
+                <person xml:id="FerEsq">
+                    <persName>Fernand' Esquio</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Terras do Neda</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1290" to="1315" period="3"/>
+                </person>
+
+
+                <person xml:id="PPort">
+                    <persName>Pedro de Portugal, Conde de Barcelos</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Court of D. Denis</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <floruit from="1300" to="1350" period="4">
+                        <location from="1300" to="1318" corresp="#dinis"/>
+
+                        <location from="1323" to="1325" corresp="#dinis"/>
+                        <location from="1326" to="1350" corresp="#lalim"/>
+                    </floruit>
+                </person>
+
+
+                <person xml:id="EstGuar">
+                    <persName>Estevan da Guarda</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Guarda</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1320" to="1350" period="4"/>
+                </person>
+
+                <person xml:id="Johan">
+                    <persName>Johan, jograr morador en León</persName>
+                    <nationality key="leo" cert="medium">Leonesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>León</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="jn">Xograr</occupation>
+                    <floruit from="1320" to="1340" period="4"/>
+                </person>
+
+
+                <person xml:id="AfSchz">
+                    <persName>Afonso Sanchez</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Cerva</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1289" to="1328" period="4">
+
+                        <location from="1324" to="1328" corresp="#alburquerque"/>
+                    </floruit>
+                </person>
+
+
+
+                <person xml:id="EstCoe">
+                    <persName>Estevan Coelho</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Riba Homem</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1300" to="1325" period="4"/>
+                </person>
+
+
+                <person xml:id="AlvAf">
+                    <persName>Alvaro Afonso</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="late">Late Trobador</occupation>
+                    <floruit from="1440" to="1450" period="5"/>
+                </person>
+
+                <person xml:id="DieGvz">
+                    <persName>Diogo Gonçalvez de Montemor-o-Novo</persName>
+                    <nationality key="pt" cert="medium">Portuguesa</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="late">Late Trobador</occupation>
+                    <floruit from="1450" to="1480" period="5">
+                        <location type="noble">
+                            <placeName type="short">Évora</placeName>
+                        </location>
+                    </floruit>
+                </person>
+
+                <person xml:id="FerEa">
+                    <persName>Fernand' Eanes</persName>
+                    <nationality key="pt" cert="medium">Portuguesa</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="late">Late Trobador</occupation>
+                    <floruit from="1450" to="1480" period="5">
+                        <location cert="unknown" type="unknown">
+                            <placeName type="short">Descoñecido location</placeName>
+                        </location>
+                    </floruit>
+                </person>
+
+
+                <person xml:id="GarMdzEi">
+                    <persName>Garcia Mendiz d' Eixo</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Eixo</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1190" to="1239" period="1"/>
+                </person>
+
+
+                <person xml:id="OsEa">
+                    <persName>Osoir' Anes</persName>
+                    <nationality key="gl" cert="medium">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Ribadavia</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1180" to="1220" period="1"/>
+                </person>
+
+
+                <person xml:id="FerPaezTal">
+                    <persName>Fernan Paez de Tamalancos</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Tamallancos</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1220" to="1240" period="2"/>
+                </person>
+
+                <person xml:id="MonFdzMir">
+                    <persName>Nuno (Monio) Fernandez de Mirapeixe</persName>
+                    <nationality key="gl" cert="medium">Galega</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1211" to="1243" period="2"/>
+                </person>
+
+                <person xml:id="BernBon">
+                    <persName>Bernal de Bonaval</persName>
+                    <nationality key="gl" cert="medium">Galega</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="un">Descoñecido</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1230" to="1260" period="2"/>
+                </person>
+
+                <person xml:id="AfSrzSam">
+                    <persName>Afonso Soarez Sarraça</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Cercedo de Montes</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1225" to="1250" period="2">
+                        <location cert="low" type="noble">
+                            <placeName type="short">Oseira</placeName>
+                        </location>
+                    </floruit>
+                </person>
+
+                <person xml:id="PVelho">
+                    <persName>Pero Velho de Taveirós</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Tabeirós</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1225" to="1250" period="2"/>
+                </person>
+
+                <person xml:id="RoyGmzBret">
+                    <persName>Roi Gomez de Briteiros</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Braga</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1225" to="1250" period="2"/>
+                </person>
+
+
+                <person xml:id="PGarAm">
+                    <persName>Pero Garcia d' Ambroa</persName>
+                    <nationality key="gl" cert="medium">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>San Tirso de Ambroa</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1228" to="1260" period="2"/>
+                </person>
+
+                <person xml:id="JAy">
+                    <persName>Johan Airas</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Compostela</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="br">Burgués</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1270" to="1295" period="3"/>
+                </person>
+
+                <person xml:id="AlfX">
+                    <persName>Alfonso X</persName>
+                    <nationality key="cas" cert="high">Castelán</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Toledo</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1242" to="1284" period="3"/>
+                </person>
+
+
+
+                <person xml:id="FerSrzQuinh">
+                    <persName>Fernan Soarez de Quinhones</persName>
+                    <nationality key="leo" cert="high">Leonesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Quiñones del Río</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1250 " to="1275" period="3"/>
+                </person>
+
+
+                <person xml:id="PGtrz">
+                    <persName>Pero Goterrez</persName>
+                    <nationality key="leo" cert="medium">Leonesa</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1245 " to="1275" period="3"/>
+                </person>
+
+                <person xml:id="Cald">
+                    <persName>Caldeiron</persName>
+                    <nationality key="arag" cert="medium">Aragonesa</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="jn">Xograr</occupation>
+                    <floruit from="1275" to="1300" period="3"/>
+                </person>
+
+
+                <person xml:id="Picandon">
+                    <persName>Picandon</persName>
+                    <nationality key="occ" cert="high">Occitana</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="jn">Xograr</occupation>
+                    <floruit from="1230" to="1260" period="3"/>
+                </person>
+
+
+                <person xml:id="Lour">
+                    <persName>Lourenzo</persName>
+                    <nationality key="pt" cert="medium">Portuguesa</nationality>
+                    <birth>
+                        <location cert="unknown"/>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="jn">Xograr</occupation>
+                    <floruit from="1250" to="1275" period="3"/>
+                </person>
+
+
+                <person xml:id="Arn">
+                    <persName>Arnaldo</persName>
+                    <nationality key="occ" cert="medium">Occitana</nationality>
+                    <birth>
+                        <location cert="low">
+                            <placeName>Toulouse</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1220" to="1260" period="3"/>
+                </person>
+
+
+                <person xml:id="AfFdzCob">
+                    <persName>Afonso Fernandez Cebolhilha</persName>
+                    <nationality key="sev" cert="high">Sevillana</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Sevilla</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1275" to="1300" period="3"/>
+                </person>
+
+                <person xml:id="AlfXI">
+                    <persName>Alfonso XI</persName>
+                    <nationality key="cas" cert="high">Castelán</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Salamanca</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1325" to="1350" period="4"/>
+                </person>
+
+                <person xml:id="GmzGar">
+                    <persName>Gomez Garcia</persName>
+                    <nationality key="cas" cert="high">Castelán</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Toledo</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="cl">Clérigo</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1275" to="1286" period="3"/>
+                </person>
+            </listPerson>
+        </body>
+    </text>
+</TEI>

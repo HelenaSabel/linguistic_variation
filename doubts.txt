@@ -1,0 +1,34 @@
+Doubts and problems:
+
+1.
+
+<lg type="poem">
+<lg type="stanza">
+<l></l>
+<l></l>
+</lg>
+<lg type="stanza">
+<l></l>
+<l></l>
+</lg>
+</lg>
+
+or
+
+<lg type="poem">
+<l></l>
+<l></l>
+<milestone type="stanza"/>
+<l></l>
+<l></l>
+</lg>
+
+2. Is it OK to not agree with how <expan> is supposed to be used?
+Although the TEI guidelines recommend wrapping the expanded word between the <expan> tag, I want to only
+include the letters affected by the abbreviation. In the medieval romance tradition, most often than not, 
+abbreviations were used to avoid writing a certain string of characters, not specifically a word so it doesn't make 
+much sense to talk about expanded words (but expanded segments).
+
+3. Problem with a particular abbreviature (nasal consonant vs nasalized vowel)
+
+4. Problems with the spaces in the text nodes children of <l> 

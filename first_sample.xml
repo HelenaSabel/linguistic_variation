@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE TEI [
-<!ENTITY feature_library SYSTEM "feature_library.xml">
+<!ENTITY initial_feature_library SYSTEM "initial_feature_library.xml">
 ]>
 <?xml-model href="tei_tese.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -908,7 +908,7 @@
             </div>
         </body>
         <back>
-            &feature_library;
+            &initial_feature_library;
         </back>
     </text>
 </TEI>
