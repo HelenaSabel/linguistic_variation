@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
     <ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
-    <let name="featureFile" value="doc('feature_library.xml')"/>
+    <let name="featureFile" value="doc('../ancillary-files/feature_library.xml')"/>
     <let name="featureStructures" value="$featureFile//tei:fs/@xml:id"/>
-    <let name="biblFile" value="doc('biblList.xml')"/>
+    <let name="biblFile" value="doc('../ancillary-files/biblList.xml')"/>
     <let name="poems" value="$biblFile//tei:bibl/@xml:id"/>
-    <let name="personografia" value="doc('corpus_autores.xml')"/>
+    <let name="personografia" value="doc('../ancillary-files/corpus_autores.xml')"/>
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
     <pattern>
         <rule context="tei:rdg">
