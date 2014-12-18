@@ -1,0 +1,967 @@
+<?xml-model href="schemas/tei_tese.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Ediçión sinóptica (parcial) da lírica profana galego-portuguesa</title>
+                <author>
+                    <name>Helena Bermúdez Sabel</name>
+                </author>
+                <respStmt>
+                    <name/>
+                    <resp>Todos os textos foron marcados por <name>Helena Bermudez Sabel</name>.
+                        Este traballo fai parte da súa tese de doutoramente, dirixida polas
+                        profesoras <name>Pilar Lorenzo Gradín</name> e <name>Mariña Arbor
+                            Aldea</name>
+                    </resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Universidade de Santiago de Compostela</authority>
+                <availability>
+                    <licence>
+                        <ref target="http://creativecommons.org/licenses/by-nc/3.0/">Creative
+                            Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)</ref>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note/>
+            </notesStmt>
+            <sourceDesc>
+                <p>Transcrións realizadas tomando como base o traballo realizado por <name>Mariña
+                        Arbor Aldea</name> e <name>Antonio Fernández Guiadanes</name> a quen
+                    agradecemos profundamente que nos cedesem o seu trabalho previamente á súa
+                    publicación.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <variantEncoding method="parallel-segmentation" location="internal"/>
+        </encodingDesc>
+
+        <profileDesc>
+            <langUsage>
+                <language ident="gl">Galego-portugués</language>
+                <language ident="pt"/>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div>
+                <listWit>
+                    <witness xml:id="A">Cancioneiro da Ajuda</witness>
+                    <witness xml:id="B">Cancioneiro da Biblioteca Nacional</witness>
+                    <witness xml:id="R">Pergaminho Vindel</witness>
+                </listWit>
+            </div>
+        </front>
+        <body>
+            <div type="poem" corresp="#B1278V884R1">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#V">V884</rdg>
+                            <rdg wit="#R">R1</rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartCod"/>
+                </head>
+                <l n="1">
+                    <app>
+                        <rdg wit="#V">Ondas domar de uìgo</rdg>
+                        <rdg wit="#R"></rdg>
+                    </app>
+                </l>
+                <l n="2">
+                    <app>
+                        <rdg wit="#V">se uiftes meu amigo</rdg>
+                        <rdg wit="#R"></rdg>
+                    </app>
+                </l>
+                <l n="3">
+                    <app>
+                        <rdg wit="#V">se uiftes meu amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="4">
+                    <app>
+                        <rdg wit="#V">Ondas demar leuado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="5">
+                    <app>
+                        <rdg wit="#V">se uiftes meu amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="6">
+                    <app>
+                        <rdg wit="#V">cay dus</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="7">
+                    <app>
+                        <rdg wit="#V">Se uiltes meu amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="8">
+                    <app>
+                        <rdg wit="#V">p' q eu sofpiro</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="9">
+                    <app>
+                        <rdg wit="#V">cay d's</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="10">
+                    <app>
+                        <rdg wit="#V">Se uiftes meu amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="11">
+                    <app>
+                        <rdg wit="#V">op' q ey gm cuydado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="12">
+                    <app>
+                        <rdg wit="#V">cay d's</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+            </div>
+            <div type="poem" corresp="#B1278V884R1">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#V">V884</rdg>
+                            <rdg wit="#R">R1</rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartCod"/>
+                </head>
+                <l n="1">
+                    <app>
+                        <rdg wit="#V">Ondas domar de uìgo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="2">
+                    <app>
+                        <rdg wit="#V">se uiftes meu amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="3">
+                    <app>
+                        <rdg wit="#V">se uiftes meu amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="4">
+                    <app>
+                        <rdg wit="#V">Ondas demar leuado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="5">
+                    <app>
+                        <rdg wit="#V">se uiftes meu amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="6">
+                    <app>
+                        <rdg wit="#V">cay dus</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="7">
+                    <app>
+                        <rdg wit="#V">Se uiltes meu amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="8">
+                    <app>
+                        <rdg wit="#V">p' q eu sofpiro</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="9">
+                    <app>
+                        <rdg wit="#V">cay d's</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="10">
+                    <app>
+                        <rdg wit="#V">Se uiftes meu amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="11">
+                    <app>
+                        <rdg wit="#V">op' q ey gm cuydado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="12">
+                    <app>
+                        <rdg wit="#V">cay d's</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+            </div>
+            <div type="poem" corresp="#B1279V885R2">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#V">V885</rdg>
+                            <rdg wit="#R">R2</rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartCod"/>
+                </head>
+                <l n="1">
+                    <app>
+                        <rdg wit="#V">Mandade comigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="2">
+                    <app>
+                        <rdg wit="#V">ca uen meu amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="3">
+                    <app>
+                        <rdg wit="#V">hirey madre uyuo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="4">
+                    <app>
+                        <rdg wit="#V">Comigue mandado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="5">
+                    <app>
+                        <rdg wit="#V">cauen meu amade</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="6">
+                    <app>
+                        <rdg wit="#V">hirey</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="7">
+                    <app>
+                        <rdg wit="#V">Cauen meu amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="8">
+                    <app>
+                        <rdg wit="#V">euen sane uyuo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="9">
+                    <app>
+                        <rdg wit="#V">hirey.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="10">
+                    <app>
+                        <rdg wit="#V">Ga uen meu amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="11">
+                    <app>
+                        <rdg wit="#V">euen uyue seno</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="12">
+                    <app>
+                        <rdg wit="#V">hirei</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="13">
+                    <app>
+                        <rdg wit="#V">Cauen sane uyuo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="14">
+                    <app>
+                        <rdg wit="#V">edel rey amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="15">
+                    <app>
+                        <rdg wit="#V">hirey</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="16">
+                    <app>
+                        <rdg wit="#V">Cauen uyue sano</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="17">
+                    <app>
+                        <rdg wit="#V">e del rey priuado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="18">
+                    <app>
+                        <rdg wit="#V">hirey.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+            </div>
+            <div type="poem" corresp="#B1280V886R3">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#V">V886</rdg>
+                            <rdg wit="#R">R3</rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartCod"/>
+                </head>
+                <l n="1">
+                    <app>
+                        <rdg wit="#V">Ma irmana fremosa</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="2">
+                    <app>
+                        <rdg wit="#V">ala igrcia de uigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="3">
+                    <app>
+                        <rdg wit="#V">hu e mar salido</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="4">
+                    <app>
+                        <rdg wit="#V">emiraremolas ondas</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="5">
+                    <app>
+                        <rdg wit="#V">Mha irmana fremosa</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="6">
+                    <app>
+                        <rdg wit="#V">treides de grado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="7">
+                    <app>
+                        <rdg wit="#V">ala igia de uigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="8">
+                    <app>
+                        <rdg wit="#V">(e mar salido)</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="9">
+                    <app>
+                        <rdg wit="#V">hu e mar leuado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="10">
+                    <app>
+                        <rdg wit="#V">emiraremolas ondas</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="11">
+                    <app>
+                        <rdg wit="#V">Ala jgia de uigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="12">
+                    <app>
+                        <rdg wit="#V">e mar falido^)</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="13">
+                    <app>
+                        <rdg wit="#V">euerra hy madre</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="14">
+                    <app>
+                        <rdg wit="#V">meu amigo 2)</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="15">
+                    <app>
+                        <rdg wit="#V">emiraremolas</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="16">
+                    <app>
+                        <rdg wit="#V">Ala Jgia deuigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="17">
+                    <app>
+                        <rdg wit="#V">e mar leuado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="18">
+                    <app>
+                        <rdg wit="#V">eueiTa hy madre</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="19">
+                    <app>
+                        <rdg wit="#V">meu amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="20">
+                    <app>
+                        <rdg wit="#V">cmirraremolas</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+            </div>
+            <div type="poem" corresp="#B1280V886R3">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#V">V886</rdg>
+                            <rdg wit="#R">R3</rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartCod"/>
+                </head>
+                <l n="1">
+                    <app>
+                        <rdg wit="#V">Ay de9 se sabora meu</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="2">
+                    <app>
+                        <rdg wit="#V">comeu senlheyra efto</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="3">
+                    <app>
+                        <rdg wit="#V">euou namorada</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="4">
+                    <app>
+                        <rdg wit="#V">Ay ds se sabora o mei</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="5">
+                    <app>
+                        <rdg wit="#V">comeu en uigo senlhc</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="6">
+                    <app>
+                        <rdg wit="#V">euou namo.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="7">
+                    <app>
+                        <rdg wit="#V">Comeu senlheyra eftou</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="8">
+                    <app>
+                        <rdg wit="#V">ené Ihas guardas nò</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="9">
+                    <app>
+                        <rdg wit="#V">euou na.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="10">
+                    <app>
+                        <rdg wit="#V">Co meu -ycnlheira en uigo manho</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="11">
+                    <app>
+                        <rdg wit="#V">e nulhas guardas migo uo trago</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="12">
+                    <app>
+                        <rdg wit="#V">euou,</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="13">
+                    <app>
+                        <rdg wit="#V">E nulhas guardas no e comigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="14">
+                    <app>
+                        <rdg wit="#V">ergas me9 olh9 q chorà migo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="15">
+                    <app>
+                        <rdg wit="#V">15 euou na.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="16">
+                    <app>
+                        <rdg wit="#V">£ nulhas guardas migo no trago</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="17">
+                    <app>
+                        <rdg wit="#V">crgas mc9 olh9 q chorà anb9</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="18">
+                    <app>
+                        <rdg wit="#V">euou na.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+            </div>
+            <div type="poem" corresp="#B1281V887R4">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#V">V887</rdg>
+                            <rdg wit="#R">R4</rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartCod"/>
+                </head>
+                <l n="1">
+                    <app>
+                        <rdg wit="#V">Quantas sabedes amar amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="2">
+                    <app>
+                        <rdg wit="#V">creydes comig alo mar deuigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="3">
+                    <app>
+                        <rdg wit="#V">eban haru9 em9 nas ondas.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="4">
+                    <app>
+                        <rdg wit="#V">Quantas sabedes damar amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="5">
+                    <app>
+                        <rdg wit="#V">5 crcyde8U9 migo ao mar leuado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="6">
+                    <app>
+                        <rdg wit="#V">eban harnosem9.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="7">
+                    <app>
+                        <rdg wit="#V">Treydes comigo ao mar de uigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="8">
+                    <app>
+                        <rdg wit="#V">eueeremolo meu amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="9">
+                    <app>
+                        <rdg wit="#V">eban hamo8em9.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="10">
+                    <app>
+                        <rdg wit="#V">lo Trcydef migo ao mar leuado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="11">
+                    <app>
+                        <rdg wit="#V">eueremo lo meu amado.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="12">
+                    <app>
+                        <rdg wit="#V">ebanham9 em9 nas.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+            </div>
+            <div type="poem" corresp="#B1282V888R5">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#V">V888</rdg>
+                            <rdg wit="#R">R5</rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartCod"/>
+                </head>
+                <l n="1">
+                    <app>
+                        <rdg wit="#V">Eno sagrade uigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="2">
+                    <app>
+                        <rdg wit="#V">baylaua corpo uedilo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="3">
+                    <app>
+                        <rdg wit="#V">amor ey.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="4">
+                    <app>
+                        <rdg wit="#V">En uigo no sagrado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="5">
+                    <app>
+                        <rdg wit="#V">5 baylaua corpo delgado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="6">
+                    <app>
+                        <rdg wit="#V">amor.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="7">
+                    <app>
+                        <rdg wit="#V">Hu baylaua corpo uelido</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="8">
+                    <app>
+                        <rdg wit="#V">q nunca ouu'a amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="9">
+                    <app>
+                        <rdg wit="#V">am'.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="10">
+                    <app>
+                        <rdg wit="#V">Baylaua corpo delgado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="11">
+                    <app>
+                        <rdg wit="#V">q nunca ouu'a amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="12">
+                    <app>
+                        <rdg wit="#V">amor.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="13">
+                    <app>
+                        <rdg wit="#V">Que ouu'a amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="14">
+                    <app>
+                        <rdg wit="#V">ergas no sagdé uigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="15">
+                    <app>
+                        <rdg wit="#V">amor.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="16">
+                    <app>
+                        <rdg wit="#V">Que nunca ouu'a amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="17">
+                    <app>
+                        <rdg wit="#V">ergas no uigo sagdo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="18">
+                    <app>
+                        <rdg wit="#V">amor.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+            </div>
+            <div type="poem" corresp="#B1283V889R6">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#V">V889</rdg>
+                            <rdg wit="#R">R6</rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartCod"/>
+                </head>
+                <l n="1">
+                    <app>
+                        <rdg wit="#V">Eno sagrade uigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="2">
+                    <app>
+                        <rdg wit="#V">baylaua corpo uedilo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="3">
+                    <app>
+                        <rdg wit="#V">amor ey.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="4">
+                    <app>
+                        <rdg wit="#V">En uigo no sagrado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="5">
+                    <app>
+                        <rdg wit="#V">5 baylaua corpo delgado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="6">
+                    <app>
+                        <rdg wit="#V">amor.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="7">
+                    <app>
+                        <rdg wit="#V">Hu baylaua corpo uelido</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="8">
+                    <app>
+                        <rdg wit="#V">q nunca ouu'a amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="9">
+                    <app>
+                        <rdg wit="#V">am'.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="10">
+                    <app>
+                        <rdg wit="#V">Baylaua corpo delgado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="11">
+                    <app>
+                        <rdg wit="#V">q nunca ouu'a amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="12">
+                    <app>
+                        <rdg wit="#V">amor.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="13">
+                    <app>
+                        <rdg wit="#V">Que ouu'a amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="14">
+                    <app>
+                        <rdg wit="#V">ergas no sagdé uigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="15">
+                    <app>
+                        <rdg wit="#V">amor.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="16">
+                    <app>
+                        <rdg wit="#V">Que nunca ouu'a amado</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="17">
+                    <app>
+                        <rdg wit="#V">ergas no uigo sagdo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="18">
+                    <app>
+                        <rdg wit="#V">amor.</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+            </div>
+            <div type="poem" corresp="#B1284V890R7">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#V">V890</rdg>
+                            <rdg wit="#R">R7</rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartCod"/>
+                </head>
+                <l n="1">
+                    <app>
+                        <rdg wit="#V">Ay ondas que eu uin ueer</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="2">
+                    <app>
+                        <rdg wit="#V">se mi saberedes dizer</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="3">
+                    <app>
+                        <rdg wit="#V">por que tarda meu amigo <lb/> sen mi</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="4">
+                    <app>
+                        <rdg wit="#V">Ay (d)ònas q eu uin uirar</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="5">
+                    <app>
+                        <rdg wit="#V">semi saberedes contar</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+                <l n="6">
+                    <app>
+                        <rdg wit="#V">por q tarda meu amigo</rdg>
+                        <rdg wit="#R"/>
+                    </app>
+                </l>
+
+            </div>
+        </body>
+    </text>
+</TEI>
