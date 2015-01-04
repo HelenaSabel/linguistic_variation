@@ -7,6 +7,7 @@
         <assert test="@corresp">This poem has no reference</assert>
         <assert test="if (@corresp) then substring(@corresp,2) = $poems else true()">The value
             of the @corresp attribute does not occur in the list of cantigas</assert>
+        <report test="current()/@corresp = following::div[@type='poem'][@wit=current()/@wit]/@corresp">The @corresp value is not unique</report>
     </rule>
     </pattern>
 </schema>
