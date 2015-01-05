@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
     <xsl:output method="xml" indent="yes"/>
-    <xsl:variable name="B" select="document('BV.xml')//div[@wit='#B']"/>
+    <xsl:variable name="B" select="document('../BV.xml')//div[@wit='#B']"/>
     <xsl:template match="div[@corresp = $B/@corresp]">
         <xsl:element name="div">
             <xsl:attribute name="type">poem</xsl:attribute>
@@ -21,7 +21,7 @@
                 <xsl:element name="rdg">
                     <xsl:attribute name="wit">#B</xsl:attribute>
                     <xsl:value-of
-                        select="document('BV.xml')//div[@wit='#B'][@corresp = current()/parent::*/@corresp]//l[@n = current()/@n]"
+                        select="$B[@corresp = current()/parent::*/@corresp]//l[@n = current()/@n]"
                     />
                 </xsl:element>
             </xsl:element>
