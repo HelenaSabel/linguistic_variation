@@ -23,7 +23,7 @@
                     </xsl:element>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="insert-before($ATokens[current()], 2, ' ')"/>
+                    <xsl:value-of select="insert-before($ATokens[current()], 2, '')"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
