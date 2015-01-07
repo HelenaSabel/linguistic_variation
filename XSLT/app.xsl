@@ -20,7 +20,7 @@
                 </xsl:element>
                 <xsl:element name="rdg">
                     <xsl:attribute name="wit">#B</xsl:attribute>
-                    <xsl:value-of
+                    <xsl:sequence
                         select="$B[@corresp = current()/parent::*/@corresp]//l[@n = current()/@n]"
                     />
                 </xsl:element>

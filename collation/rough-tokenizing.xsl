@@ -3,7 +3,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:heb="iberian.obdurodon.org"
     exclude-result-prefixes="xs" version="2.0">
     <xsl:output method="xml" indent="yes"/>
-    <xsl:function name="heb:collate" as="node()+">
+    <xsl:function name="heb:collate" as="node()*">
         <xsl:param name="A" as="node()"/>
         <xsl:param name="B" as="node()"/>
         <xsl:variable name="ATokens" select="tokenize($A,'\s+')"/>
@@ -23,7 +23,10 @@
                     </xsl:element>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="insert-before($ATokens[current()], 2, '')"/>
+                    <xsl:if test="count($ATokens) gt count($BTokens)">
+                        <xsl:value-of select="insert-before($ATokens[current()], 2, '')"/>
+                    </xsl:if>
+                    <xsl:value-of select="insert-before($BTokens[current()], 2, '')"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
