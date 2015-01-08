@@ -14,7 +14,7 @@
                     <xsl:element name="app">
                         <xsl:element name="rdg">
                             <xsl:attribute name="wit">#A</xsl:attribute>
-                            <xsl:value-of select="$ATokens[current()]"/>
+                            <xsl:sequence select="$ATokens[current()]"/>
                         </xsl:element>
                         <xsl:element name="rdg">
                             <xsl:attribute name="wit">#B</xsl:attribute>
@@ -26,7 +26,12 @@
                     <xsl:if test="count($ATokens) gt count($BTokens)">
                         <xsl:value-of select="insert-before($ATokens[current()], 2, '')"/>
                     </xsl:if>
-                    <xsl:value-of select="insert-before($BTokens[current()], 2, '')"/>
+                    <xsl:if test="count($ATokens) lt count($BTokens)">
+                        <xsl:value-of select="insert-before($BTokens[current()], 2, '')"/>
+                    </xsl:if>
+                    <xsl:if test="count($ATokens) eq count($BTokens)">
+                        <xsl:value-of select="insert-before($BTokens[current()], 2, '')"/>
+                    </xsl:if>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
