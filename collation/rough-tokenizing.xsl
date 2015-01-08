@@ -23,15 +23,14 @@
                     </xsl:element>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:if test="count($ATokens) gt count($BTokens)">
-                        <xsl:value-of select="insert-before($ATokens[current()], 2, '')"/>
-                    </xsl:if>
-                    <xsl:if test="count($ATokens) lt count($BTokens)">
-                        <xsl:value-of select="insert-before($BTokens[current()], 2, '')"/>
-                    </xsl:if>
-                    <xsl:if test="count($ATokens) eq count($BTokens)">
-                        <xsl:value-of select="insert-before($BTokens[current()], 2, '')"/>
-                    </xsl:if>
+                    <xsl:choose>
+                        <xsl:when test="count($ATokens) gt count($BTokens)">
+                            <xsl:value-of select="insert-before($ATokens[current()], 2, '')"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="insert-before($BTokens[current()], 2, '')"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
