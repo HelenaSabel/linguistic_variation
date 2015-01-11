@@ -2,22 +2,47 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
     <xsl:output method="xml" indent="yes"/>
+    <!-- Stylesheet to tokenize a parallel segmentated transcription.
+        Input:
+        <l n="19">
+            <app>
+                <rdg wit="#A">por q<ex>ue</ex> me leixades assi</rdg>
+                <rdg wit="#B">p<ex>or</ex> q<ex>ue</ex> me leixades assy</rdg>
+            </app>
+        </l>
+        
+        Output:
+        <l n="19">
+            <app>
+                <rdg wit="#A">por</rdg>
+                <rdg wit="#B">p<ex>or</ex></rdg>
+            </app>
+            q<ex>ue</ex> me leixades <app>
+                <rdg wit="#A">assi</rdg>
+                <rdg wit="#B">assy</rdg>
+            </app>
+        </l>
+        
+        We transform any children of <rdg> to strings before doing the tokenization.
+        Credits: the insertion of <gap/> elements in the tokenization module was a contribution
+        by David Birnbaum (djbpitt@gmail.com, http://www.obdurodon.org) -->
+    
+    
+    <!-- Main template -->
     <xsl:template match="/">
         <xsl:variable name="string">
             <xsl:apply-templates mode="string"/>
         </xsl:variable>
         <xsl:apply-templates select="$string" mode="tokens"/>
     </xsl:template>
+        
+    <!-- String conversion -->    
     <xsl:template match="node()|@*" mode="string">
         <xsl:copy>
             <xsl:apply-templates select="node()|@*" mode="string"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="node()|@*" mode="tokens">
-        <xsl:copy>
-            <xsl:apply-templates select="node()|@*" mode="tokens"/>
-        </xsl:copy>
-    </xsl:template>
+    <!-- Elements with children but no attributes-->
     <xsl:template match="ex|am|add|del" mode="string">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
@@ -27,11 +52,14 @@
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
+    <!-- Empty elements with attributes-->
     <xsl:template match="gap" mode="string">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
-        <xsl:for-each select="@*">
+        <xsl:for-each select="@*">            
+            <!-- Since we used white spaces to delimit the tokens, we introduced here an 
+                asterisk instead that is replaced later on-->
             <xsl:text>*</xsl:text>
             <xsl:value-of select="name()"/>
             <xsl:text>="</xsl:text>
@@ -40,6 +68,7 @@
         </xsl:for-each>
         <xsl:text>/&gt;</xsl:text>
     </xsl:template>
+    <!-- Elements with attributes and children-->
     <xsl:template match="hi" mode="string">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
@@ -56,6 +85,14 @@
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
+    
+    
+    <!-- Tokenization -->
+    <xsl:template match="node()|@*" mode="tokens">
+        <xsl:copy>
+            <xsl:apply-templates select="node()|@*" mode="tokens"/>
+        </xsl:copy>
+    </xsl:template>
     <xsl:template match="app" mode="tokens">
         <xsl:variable name="Atokens" select="tokenize(rdg[@wit eq '#A'],'\s+')"/>
         <xsl:variable name="Btokens" select="tokenize(rdg[@wit eq '#B'],'\s+')"/>
@@ -63,6 +100,10 @@
         <xsl:for-each select="1 to $count">
             <xsl:choose>
                 <xsl:when test="$Atokens[current()] eq $Btokens[current()]">
+                    <!-- Use of insert-before() to correct white spaces
+                         The asterisk inserted in the string mode to demark the attributes
+                         is converted here using replace()
+                         The attribute @disable-output-escaping replaces the entities to angle brackets-->
                     <xsl:value-of
                         select="insert-before(replace($Atokens[current()], '\*', ' '), 2, '')"
                         disable-output-escaping="yes"/>
