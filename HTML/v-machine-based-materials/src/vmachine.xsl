@@ -2,43 +2,17 @@
 <xsl:stylesheet version="1.1" exclude-result-prefixes="tei"
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns:tei="http://www.tei-c.org/ns/1.0">
-   <xsl:output method="html" version="4.01" encoding="utf-8" indent="yes" doctype-system="http://www.w3.org/TR/html4/strict.dtd" doctype-public="-//W3C//DTD HTML 4.01//EN" />
-   
-   <!-- <xsl:strip-space elements="*" /> -->
-   
-   <xsl:variable name="indexPage">../samples.html</xsl:variable>
-   
-   <xsl:variable name="vmLogo">../vm-images/poweredby.gif</xsl:variable>
+   <xsl:output method="html" encoding="utf-8" indent="yes"/>
+
    
    <xsl:variable name="cssInclude">../src/vmachine.css</xsl:variable>
    
-   <!-- The JavaScript include file. Keep in mind that, as of April 1, 2008,
-   the current beta version of Firefox 3.0 has instituted strong JavaScript
-   security policies that prevent the inclusion of any JS files from outside
-   of the current directory when loading a document from the local filesystem
-   (i.e., anything on your local computer not beginning with "http://").
-   Because of this, if you want to use the VM offline, you will need to
-   move the JavaScript includes into the same directory as your TEI documents,
-   and modify the filename below (for example, "../src/vmachine.js" becomes
-   "vmachine.js") -->
    <xsl:variable name="jsInclude">../src/vmachine.js</xsl:variable>
 
-   <xsl:variable name="initialVersions">2</xsl:variable>
-   
-   <!-- To change the VM so that the bibliographic information page does not
-   appear at the initial load, change "true" to "false" below -->
    <xsl:variable name="displayBibInfo">true</xsl:variable>
    
-  <!-- To change the VM so that line numbers are hidden by default, change
-  "true" to "false" below -->
    <xsl:variable name="displayLineNumbers">true</xsl:variable>
    
-   <!-- To change the VM's default method of displaying notes, modify the
-   following variable:
-      - popup: Popup footnote icons
-      - inline: Inline note viewer panel
-      - none: Hide notes
-   -->
    <xsl:variable name="notesFormat">popup</xsl:variable>
    
    
@@ -70,7 +44,7 @@
          <body onload="init();">
             <xsl:call-template name="mainBanner" />
             <xsl:call-template name="manuscriptArea" />
-            <xsl:call-template name="imageViewer" />
+            <!--<xsl:call-template name="imageViewer" />-->
             <!-- <p>There are <xsl:value-of select="count($witnesses)" /> witnesses.</p> -->
          </body>
       </html>
@@ -116,21 +90,12 @@
    
    <xsl:template name="mainBanner">
       <div id="mainBanner">
-         <xsl:call-template name="brandingLogo" />
          <xsl:call-template name="headline" />
          <xsl:call-template name="mainControls" />
       </div>
    </xsl:template>
    
-   <xsl:template name="brandingLogo">
-      <div id="brandingLogo">
-         <img id="logo" alt="Powered by the Versioning Machine">
-            <xsl:attribute name="src">
-               <xsl:value-of select="$vmLogo" />
-            </xsl:attribute>
-         </img>
-      </div>
-   </xsl:template>
+   
    
    <xsl:template name="headline">
       <div id="headline">
@@ -199,9 +164,6 @@
          </select>
          &#8226;
          <a>
-            <xsl:attribute name="href">
-               <xsl:value-of select="$indexPage" />
-            </xsl:attribute>
             <xsl:text>Index of texts</xsl:text>
          </a>
       </div>
@@ -255,7 +217,7 @@
             <xsl:apply-templates select="//tei:body" />
          </div>
       </div>
-      <xsl:if test="$increment &lt; $initialVersions">
+      <xsl:if test="$increment &lt; 2">
          <xsl:call-template name="manuscriptPanel">
             <xsl:with-param name="increment" select="$increment + 1" />
          </xsl:call-template>
@@ -937,8 +899,8 @@
          </xsl:when>
          <xsl:when test="tei:orig and tei:reg">            
             <xsl:call-template name="displayChoice">
-               <xsl:with-param name="inline" select="tei:orig" />
-               <xsl:with-param name="hover" select="tei:reg" />
+               <xsl:with-param name="inline" select="tei:reg" />
+               <xsl:with-param name="hover" select="tei:orig" />
                <xsl:with-param name="label" select="'Regularized form:'" />
             </xsl:call-template>
          </xsl:when>
@@ -980,7 +942,7 @@
       </span>
    </xsl:template>
    
-   <xsl:template name="imageViewer">
+   <!--<xsl:template name="imageViewer">
       <div class="viewerRoot" id="panel_imageViewer">
          <div title="Click to drag panel." class="viewerHandle" id="handle_imageViewer">
             <span class="viewerHandleLt" id="title_imageViewer">Image Viewer</span>
@@ -988,7 +950,7 @@
          </div>
          <div class="viewerContent" id="content_imageViewer"></div>
       </div>
-   </xsl:template>
+   </xsl:template>-->
    
    <xsl:template name="truncateText">
       <xsl:param name="string"/>

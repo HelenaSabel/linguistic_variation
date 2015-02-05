@@ -1,0 +1,2968 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Edición sinóptica (parcial) da lírica pr... -- The Versioning Machine 4.0</title>
+      <link rel="stylesheet" type="text/css" href="../src/vmachine.css">
+      <!--[if IE 6]>
+            <link rel="stylesheet" type="text/css" href="../src/vmachine_ie6.css">
+         <![endif]--><script type="text/javascript" src="../src/vmachine.js"></script><script type="text/javascript">
+      var witnesses = new Array();
+      
+         witnesses["A"] = "A";
+      
+         witnesses["B"] = "B";
+      
+      var maxPanels = 2;
+   </script></head>
+   <body onload="init();">
+      <div id="mainBanner">
+         <div id="brandingLogo"><img id="logo" alt="Powered by the Versioning Machine" src="../vm-images/poweredby.gif"></div>
+         <div id="headline">
+            <h1 onclick="toggleBiblio();">Edición sinóptica (parcial) da lírica pr...</h1><span class="versionCount"> has 2 versions</span></div><img id="topEdge" src="../vm-images/topedge.gif" alt=""><div id="mainControls"><input type="button" id="newPanel" value="New Version" onclick="openPanel();">
+            •
+            <input type="button" id="bibToggle" value="Bibliographic Info" onclick="toggleBiblio();">
+            
+            •
+            <label for="toggleLineNumbers">Line Numbers:</label><input type="checkbox" id="toggleLineNumbers" onclick="toggleLineNumbers(this.checked);" checked>
+            •
+            <select id="notesMenu" disabled>
+               <option>No notes found</option></select>
+            •
+            <a href="../samples.html">Index of texts</a></div>
+      </div>
+      <div id="mssArea">
+         <div class="panel" id="bibPanel">
+            <div class="panelBanner"><img class="closePanel" onclick="toggleBiblio();" alt="X" src="../vm-images/closePanel.gif">
+               Bibliographic Information
+               
+            </div>
+            <div class="bibContent">
+               <h2>Edición sinóptica (parcial) da lírica profana galego-portuguesa</h2>
+               <h3>
+                  by Helena Bermúdez Sabel
+               </h3>
+               <h4>Original Source</h4>
+               
+               <p>Transcrións realizadas tomando como base o traballo realizado por Mariña
+                  Arbor Aldea e Antonio Fernández Guiadanes a quen
+                  agradecemos profundamente que nos cedesem o seu trabalho previamente á súa
+                  publicación.
+               </p>
+               
+               <h4>Witness List</h4>
+               <ul>
+                  <li><strong>Witness A:</strong> Cancioneiro da Ajuda
+                  </li>
+                  <li><strong>Witness B:</strong> Cancioneiro da Biblioteca Nacional
+                  </li>
+               </ul>
+               <h4>Textual Notes</h4>
+               <div class="note"></div>
+               <h4>Electronic Edition Information:</h4>
+               <h5>Responsibility Statement:</h5>
+               <ul>
+                  <li>Todos os textos foron marcados por Helena Bermudez Sabel.
+                     Este traballo fai parte da súa tese de doutoramente, dirixida polas
+                     profesoras Pilar Lorenzo Gradín e Mariña Arbor
+                     Aldea
+                      
+                  </li>
+               </ul>
+               <h5>Publication Details:</h5>
+               Universidade de Santiago de Compostela
+               
+               Creative
+               Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC
+               3.0)
+               
+               
+               <h4>Encoding Principles</h4>
+               
+               
+            </div>
+         </div>
+         <div id="manuscripts">
+            <div class="panel mssPanel">
+               <div class="panelBanner"><img class="closePanel" onclick="closePanel(this.parentNode.parentNode);" src="../vm-images/closePanel.gif" alt="X">Witness <select class="witnessMenu" onchange="changeWitness(this.value,this.parentNode.parentNode);">
+                     <option selected value="A">1: A</option>
+                     <option value="B">2: B</option></select></div>
+               <div class="mssContent">
+                  
+                  <div class="div type-poem">
+                     
+                     <div class="head">
+                        
+                        <span class="apparatus app-d1e109 clickable" onclick="matchApp('app-d1e109');">
+                           <span class="reading A">A1</span>
+                           <span class="reading B">B91</span>
+                           </span>
+                        
+                        
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e124" onclick="matchLine('lined1e124');">
+                           <div class="linenumber">1</div>
+                           <span class="apparatus">
+                              <span class="reading A">guer</span>
+                              <span class="reading B">Deus meu senhor se uos
+                                 prouguer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e142" onclick="matchLine('lined1e142');">
+                           <div class="linenumber">2</div> uos <span class="apparatus">
+                              <span class="reading A">me</span>
+                              <span class="reading B">mj</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">tollede</span>
+                              <span class="reading B">tolhed'</span>
+                              </span> este poder 
+                        </div>
+                        
+                        <div class="line lined1e163" onclick="matchLine('lined1e163');">
+                           <div class="linenumber">3</div> que eu <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">muito</span>
+                              <span class="reading B">muyto</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">uiuer</span>
+                              <span class="reading B">uyuer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e193" onclick="matchLine('lined1e193');">
+                           <div class="linenumber">4</div> ca mentr' eu tal poder 
+                           <span class="apparatus">
+                              <span class="reading A">ouuer</span>
+                              <span class="reading B">oer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e205" onclick="matchLine('lined1e205');">
+                           <div class="linenumber">5</div> de uiuer nunca 
+                           <span class="apparatus">
+                              <span class="reading A">perderei</span>
+                              <span class="reading B">perderey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e218" onclick="matchLine('lined1e218');">
+                           <div class="linenumber">6</div> esta <span class="apparatus">
+                              <span class="reading A">coita</span>
+                              <span class="reading B">coyta</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">og'</span>
+                              <span class="reading B">oi'</span>
+                              </span> eu <span class="apparatus">
+                              <span class="reading A">ey</span>
+                              <span class="reading B"></span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e259" onclick="matchLine('lined1e259');">
+                           <div class="linenumber">7</div> d' amor eno meu coraçon 
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e265" onclick="matchLine('lined1e265');">
+                           <div class="linenumber">8</div> Ca <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">mia
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> mi a
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B">
+                                 <span class="choice">mha
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> mh a
+                                       </div>
+                                    </div></span></span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">faz</span>
+                              <span class="reading B">fais</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">auer</span>
+                              <span class="reading B">au</span>
+                              </span> tal <span class="apparatus">
+                              <span class="reading A">moller</span>
+                              <span class="reading B">molher</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e325" onclick="matchLine('lined1e325');">
+                           <div class="linenumber">9</div>
+                           <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">nunca</span>
+                              <span class="reading B">nunca</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">mia
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> mi a
+                                       </div>
+                                    </div></span></span>
+                              <span class="reading B">
+                                 <span class="choice">mh a
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> mha
+                                       </div>
+                                    </div></span></span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ren</span>
+                              <span class="reading B">ren</span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">fazer</span>
+                              <span class="reading B">fazer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e405" onclick="matchLine('lined1e405');">
+                           <div class="linenumber">10</div>
+                           <span class="apparatus">
+                              <span class="reading A">per</span>
+                              <span class="reading B">per</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">q</span>
+                              <span class="reading B">que</span>
+                              </span> eu <span class="apparatus">
+                              <span class="reading A">ia possa</span>
+                              <span class="reading B">possa ia</span>
+                              </span>
+                           perder
+                           
+                        </div>
+                        
+                        <div class="line lined1e450" onclick="matchLine('lined1e450');">
+                           <div class="linenumber">11</div>
+                           que
+                           <span class="apparatus">
+                              <span class="reading A">enquant'</span>
+                              <span class="reading B">enquant'</span>
+                              </span> eu <span class="apparatus">
+                              <span class="reading A">uiuer</span>
+                              <span class="reading B">uiuer</span>
+                              </span> poder 
+                        </div>
+                        
+                        <div class="line lined1e490" onclick="matchLine('lined1e490');">
+                           <div class="linenumber">12</div>
+                           <span class="apparatus">
+                              <span class="reading A">por</span>
+                              <span class="reading B">por</span>
+                              </span> esto a non
+                           <span class="apparatus">
+                              <span class="reading A">poderey</span>
+                              <span class="reading B">poderei</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e525" onclick="matchLine('lined1e525');">
+                           <div class="linenumber">13</div>
+                           perder per
+                           <span class="apparatus">
+                              <span class="reading A">ren</span>
+                              <span class="reading B">ren</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">auerei</span>
+                              <span class="reading B">auerey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e574" onclick="matchLine('lined1e574');">
+                           <div class="linenumber">14</div> dela <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span> con
+                           <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muy</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gram</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">razon</span>
+                              <span class="reading B">razon</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="line lined1e623" onclick="matchLine('lined1e623');">
+                        <div class="linenumber">15</div>
+                        <span class="apparatus">
+                           <span class="reading A">Ca non est' e</span>
+                           <span class="reading B">E quant' esta</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">cuita</span>
+                           <span class="reading B">coyta</span>
+                           </span> d' amor 
+                     </div>
+                     
+                     <div class="line lined1e654" onclick="matchLine('lined1e654');">
+                        <div class="linenumber">16</div>
+                        <span class="apparatus">
+                           <span class="reading A">ũa</span>
+                           <span class="reading B">hũa</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading B">a</span>
+                           </span>
+                        que
+                        <span class="apparatus">
+                           <span class="reading A">ome</span>
+                           <span class="reading B">home</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">fillar</span>
+                           <span class="reading B">falar</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">uen</span>
+                           <span class="reading B">uen</span>
+                           </span>
+                        
+                     </div>
+                     
+                     <div class="line lined1e719" onclick="matchLine('lined1e719');">
+                        <div class="linenumber">17</div>
+                        <span class="apparatus">
+                           <span class="reading A">se ome</span>
+                           <span class="reading B">seu
+                              amor</span>
+                           </span> leixa <span class="apparatus">
+                           <span class="reading A">sen</span>
+                           <span class="reading B">sen</span>
+                           </span> seu <span class="apparatus">
+                           <span class="reading A">ben</span>
+                           <span class="reading B">ben</span>
+                           </span>
+                        
+                     </div>
+                     
+                     <div class="line lined1e760" onclick="matchLine('lined1e760');">
+                        <div class="linenumber">18</div> ou <span class="apparatus">
+                           <span class="reading A">sen</span>
+                           <span class="reading B">sen</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">morte ou se</span>
+                           <span class="reading B"><span class="choice">mortousse
+                                 <div class="corr">
+                                    <div class="interior"><strong>Regularized form:</strong> mort' ou se
+                                    </div>
+                                 </div></span></span>
+                           </span> faz <span class="apparatus">
+                           <span class="reading A">mellor</span>
+                           <span class="reading B">melhor</span>
+                           </span>
+                        
+                     </div>
+                     
+                     <div class="line lined1e805" onclick="matchLine('lined1e805');">
+                        <div class="linenumber">19</div>
+                        <span class="apparatus">
+                           <span class="reading A">mais</span>
+                           <span class="reading B">mays</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">semella</span>
+                           <span class="reading B">semela</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">muit'</span>
+                           <span class="reading B">muyt'</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">outro</span>
+                           <span class="reading B">outro</span>
+                           </span> mal 
+                     </div>
+                     
+                     <div class="line lined1e848" onclick="matchLine('lined1e848');">
+                        <div class="linenumber">20</div>
+                        <span class="apparatus">
+                           <span class="reading A">e quen a</span>
+                           <span class="reading B">a ten</span>
+                           </span> esta <span class="apparatus">
+                           <span class="reading A">cuita</span>
+                           <span class="reading B">coyta</span>
+                           </span> tal 
+                     </div>
+                     
+                     <div class="line lined1e873" onclick="matchLine('lined1e873');">
+                        <div class="linenumber">21</div> macar <span class="apparatus">
+                           <span class="reading A">se</span>
+                           <span class="reading B">xe</span>
+                           </span> morre non
+                        <span class="apparatus">
+                           <span class="reading A">lle</span>
+                           <span class="reading B">lhi</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">praz</span>
+                           <span class="reading B">praz</span>
+                           </span>
+                        
+                     </div>
+                     
+                  </div>
+                  
+                  <div class="div type-poem">
+                     
+                     <div class="head">
+                        
+                        <span class="apparatus app-d1e919 clickable" onclick="matchApp('app-d1e919');">
+                           <span class="reading A">A2</span>
+                           <span class="reading B">B92</span>
+                           </span>
+                        
+                        
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e934" onclick="matchLine('lined1e934');">
+                           <div class="linenumber">1</div>
+                           <span class="apparatus">
+                              <span class="reading A">Sennor</span>
+                              <span class="reading B">Senhor</span>
+                              </span> fremosa <span class="apparatus">
+                              <span class="reading A"></span>
+                              <span class="reading B">muy</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">grand'</span>
+                              <span class="reading B">grand'</span>
+                              </span> enueia <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e977" onclick="matchLine('lined1e977');">
+                           <div class="linenumber">2</div> eu a tod' ome que ueio morrer 
+                        </div>
+                        
+                        <div class="line lined1e980" onclick="matchLine('lined1e980');">
+                           <div class="linenumber">3</div> e <span class="apparatus">
+                              <span class="reading A">segud'</span>
+                              <span class="reading B">segund'</span>
+                              </span> ora o meu <span class="apparatus">
+                              <span class="reading A">connoçer</span>
+                              <span class="reading B">conhocer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1006" onclick="matchLine('lined1e1006');">
+                           <div class="linenumber">4</div> enquant' <span class="apparatus">
+                              <span class="reading A">este</span>
+                              <span class="reading B">est</span>
+                              </span> faço <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muy</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gram</span>
+                              </span> razon 
+                        </div>
+                        
+                        <div class="line lined1e1036" onclick="matchLine('lined1e1036');">
+                           <div class="linenumber">5</div> ca <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span> por uos e no meu coraçon 
+                        </div>
+                        
+                        <div class="line lined1e1049" onclick="matchLine('lined1e1049');">
+                           <div class="linenumber">6</div> tan <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gram</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">cuita</span>
+                              <span class="reading B">coyta</span>
+                              </span> que mil uezes <span class="apparatus">
+                              <span class="reading A">meten</span>
+                              <span class="reading B">metem</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1079" onclick="matchLine('lined1e1079');">
+                           <div class="linenumber">7</div>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span> sen <span class="apparatus">
+                              <span class="reading A">falla</span>
+                              <span class="reading B">fala</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">et sen</span>
+                              <span class="reading B"><span class="choice">essem
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> e sem
+                                       </div>
+                                    </div></span></span>
+                              </span> tod' o <span class="apparatus">
+                              <span class="reading A">sen</span>
+                              <span class="reading B">sem</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1125" onclick="matchLine('lined1e1125');">
+                           <div class="linenumber">8</div>e <span class="apparatus">
+                              <span class="reading A">non</span>
+                              <span class="reading B">non</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">uus</span>
+                              <span class="reading B">uus</span>
+                              </span> queredes <span class="apparatus">
+                              <span class="reading A">de</span>
+                              <span class="reading B">d</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">min</span>
+                              <span class="reading B">mj</span>
+                              </span> doer 
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e1173" onclick="matchLine('lined1e1173');">
+                           <div class="linenumber">9</div> Pero <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ũa</span>
+                              <span class="reading B">hũa</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ren</span>
+                              <span class="reading B">ren</span>
+                              </span> uus
+                           <span class="apparatus">
+                              <span class="reading A">direi</span>
+                              <span class="reading B">direy</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1230" onclick="matchLine('lined1e1230');">
+                           <div class="linenumber">10</div>
+                           <span class="apparatus">
+                              <span class="reading A">con</span>
+                              <span class="reading B">con</span>
+                              </span> tod' est' ora non
+                           <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span> eu poder 
+                        </div>
+                        
+                        <div class="line lined1e1260" onclick="matchLine('lined1e1260');">
+                           <div class="linenumber">11</div>
+                           per
+                           <span class="apparatus">
+                              <span class="reading A"> bõa fe</span>
+                              <span class="reading B"><span class="choice">bõaffe
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> bõa fe
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">null'</span>
+                              <span class="reading B">nulla</span>
+                              </span> enueia auer 
+                        </div>
+                        
+                        <div class="line lined1e1300" onclick="matchLine('lined1e1300');">
+                           <div class="linenumber">12</div> a <span class="apparatus">
+                              <span class="reading A">null'</span>
+                              <span class="reading B">null'</span>
+                              </span> ome de <span class="apparatus">
+                              <span class="reading A">quantos</span>
+                              <span class="reading B">quantus</span>
+                              </span> uiuos <span class="apparatus">
+                              <span class="reading A">son</span>
+                              <span class="reading B">son</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1342" onclick="matchLine('lined1e1342');">
+                           <div class="linenumber">13</div>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span> faç' eu esto por que
+                           <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> ca <span class="apparatus">
+                              <span class="reading A">non</span>
+                              <span class="reading B">non</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1382" onclick="matchLine('lined1e1382');">
+                           <div class="linenumber">14</div>
+                           <span class="apparatus">
+                              <span class="reading A">uiue</span>
+                              <span class="reading B">uyue</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">null'</span>
+                              <span class="reading B">null'</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ome</span>
+                              <span class="reading B">ome</span>
+                              </span>
+                           que de uos <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1444" onclick="matchLine('lined1e1444');">
+                           <div class="linenumber">15</div> aia de <span class="apparatus">
+                              <span class="reading A">mi</span>
+                              <span class="reading B">mjn</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span> non
+                           <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span> de uos ren 
+                        </div>
+                        
+                        <div class="line lined1e1486" onclick="matchLine('lined1e1486');">
+                           <div class="linenumber">16</div> se non
+                           <span class="apparatus">
+                              <span class="reading A">quant'</span>
+                              <span class="reading B">quant'</span>
+                              </span> ora <span class="apparatus">
+                              <span class="reading A">me</span>
+                              <span class="reading B">m</span>
+                              </span> oystes <span class="apparatus">
+                              <span class="reading A">dizer</span>
+                              <span class="reading B">dizer</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e1533" onclick="matchLine('lined1e1533');">
+                           <div class="linenumber">17</div> E por que
+                           <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> tan ben per bõa fe 
+                        </div>
+                        
+                        <div class="line lined1e1558" onclick="matchLine('lined1e1558');">
+                           <div class="linenumber">18</div>
+                           <span class="apparatus">
+                              <span class="reading A">que </span>
+                              <span class="reading B">que</span>
+                              </span> non
+                           <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> cousa no <span class="apparatus">
+                              <span class="reading A">mundo</span>
+                              <span class="reading B">mundo</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mellor</span>
+                              <span class="reading B">melhor</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1610" onclick="matchLine('lined1e1610');">
+                           <div class="linenumber">19</div>
+                           que ia <span class="apparatus">
+                              <span class="reading A">entanto</span>
+                              <span class="reading B">entanto</span>
+                              </span> com' eu <span class="apparatus">
+                              <span class="reading A">uiuo</span>
+                              <span class="reading B">uyuo</span>
+                              </span> for 
+                        </div>
+                        
+                        <div class="line lined1e1641" onclick="matchLine('lined1e1641');">
+                           <div class="linenumber">20</div>
+                           <span class="apparatus">
+                              <span class="reading A">nulla</span>
+                              <span class="reading B">nulla</span>
+                              </span> cousa non me pode guardar 
+                        </div>
+                        
+                        <div class="line lined1e1658" onclick="matchLine('lined1e1658');">
+                           <div class="linenumber">21</div>
+                           <span class="apparatus">
+                              <span class="reading A">d' aquesta cuita que leuo leuar</span>
+                              <span class="reading B"></span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1674" onclick="matchLine('lined1e1674');">
+                           <div class="linenumber">22</div> se eu de uos <span class="apparatus">
+                              <span class="reading A">algun</span>
+                              <span class="reading B">algun</span>
+                              </span> ben non
+                           <span class="apparatus">
+                              <span class="reading A">ouuer</span>
+                              <span class="reading B">oer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1704" onclick="matchLine('lined1e1704');">
+                           <div class="linenumber">23</div> o que m' ende guardar
+                           non poder 
+                        </div>
+                        
+                        <div class="line lined1e1717" onclick="matchLine('lined1e1717');">
+                           <div class="linenumber">24</div> ia me non
+                           <span class="apparatus">
+                              <span class="reading A">pode</span>
+                              <span class="reading B">pod'</span>
+                              </span> en al <span class="apparatus">
+                              <span class="reading A">prestar</span>
+                              <span class="reading B">prestar</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e1764" onclick="matchLine('lined1e1764');">
+                           <div class="linenumber">25</div> Ca esta <span class="apparatus">
+                              <span class="reading A">cuita</span>
+                              <span class="reading B">coyta</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">tan</span>
+                              <span class="reading B">tam</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">grand'</span>
+                              <span class="reading B">grand'</span>
+                              </span> e 
+                        </div>
+                        
+                        <div class="line lined1e1812" onclick="matchLine('lined1e1812');">
+                           <div class="linenumber">26</div> com' eu <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uus</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">dixe</span>
+                              <span class="reading B">dixi</span>
+                              </span> ia o e mayor 
+                        </div>
+                        
+                        <div class="line lined1e1836" onclick="matchLine('lined1e1836');">
+                           <div class="linenumber">27</div> e <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span> creede que non e <span class="apparatus">
+                              <span class="reading A"> mẽor</span>
+                              <span class="reading B">meor</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1874" onclick="matchLine('lined1e1874');">
+                           <div class="linenumber">28</div> e ora <span class="apparatus">
+                              <span class="reading A">por</span>
+                              <span class="reading B">por</span>
+                              </span>
+                           deus
+                           que
+                           <span class="apparatus">
+                              <span class="reading A">us</span>
+                              <span class="reading B">uos</span>
+                              </span> fez falar 
+                        </div>
+                        
+                        <div class="line lined1e1912" onclick="matchLine('lined1e1912');">
+                           <div class="linenumber">29</div> muj ben <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">e</span>
+                              <span class="reading B"></span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muj</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">semellar</span>
+                              <span class="reading B">semelhar</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1971" onclick="matchLine('lined1e1971');">
+                           <div class="linenumber">30</div>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">doede uos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> doede-uos
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B">
+                                 <span class="choice">doedeuos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> doede-uos
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">mi</span>
+                              <span class="reading B">mjn</span>
+                              </span>
+                           prouguer 
+                        </div>
+                        
+                        <div class="line lined1e2025" onclick="matchLine('lined1e2025');">
+                           <div class="linenumber">31</div>
+                           <span class="apparatus">
+                              <span class="reading A">e se o</span>
+                              <span class="reading B">
+                                 <span class="choice">esseo
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> e se o 
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span> fezerdes ia foy <span class="apparatus">
+                              <span class="reading A">moller</span>
+                              <span class="reading B">molher</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2055" onclick="matchLine('lined1e2055');">
+                           <div class="linenumber">32</div>
+                           <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">xe</span>
+                              <span class="reading B">xi</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">penso</span>
+                              <span class="reading B">penssou</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">de sa</span>
+                              <span class="reading B"><span class="choice">dessa
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> de sa
+                                       </div>
+                                    </div></span></span>
+                              </span> alma <span class="apparatus">
+                              <span class="reading A">peor</span>
+                              <span class="reading B">peyor</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                  </div>
+                  
+                  <div class="div type-poem">
+                     
+                     <div class="head">
+                        
+                        <span class="apparatus app-d1e2121 clickable" onclick="matchApp('app-d1e2121');">
+                           <span class="reading A">A3</span>
+                           <span class="reading B">B93</span>
+                           </span>
+                        
+                        
+                        
+                     </div>
+                     
+                     <div class="lg type-poem">
+                        
+                        <div class="line lined1e2136" onclick="matchLine('lined1e2136');">
+                           <div class="linenumber">1</div>
+                           <span class="apparatus">
+                              <span class="reading A">Sennor</span>
+                              <span class="reading B">Senhor</span>
+                              </span> fremosa <span class="apparatus">
+                              <span class="reading A">par</span>
+                              <span class="reading B">per</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">deus</span>
+                              <span class="reading B">deus</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gram</span>
+                              </span> sazon 
+                        </div>
+                        
+                        <div class="line lined1e2189" onclick="matchLine('lined1e2189');">
+                           <div class="linenumber">2</div> seria ia <span class="apparatus">
+                              <span class="reading A">agora</span>
+                              <span class="reading B">ora</span>
+                              </span> se en prazer 
+                        </div>
+                        
+                        <div class="line lined1e2201" onclick="matchLine('lined1e2201');">
+                           <div class="linenumber">3</div>
+                           <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span> caesse de quererdes prender 
+                        </div>
+                        
+                        <div class="line lined1e2216" onclick="matchLine('lined1e2216');">
+                           <div class="linenumber">4</div> doo de <span class="apparatus">
+                              <span class="reading A">min</span>
+                              <span class="reading B">mj</span>
+                              </span> ca ben de' la sazon 
+                        </div>
+                        
+                        <div class="line lined1e2228" onclick="matchLine('lined1e2228');">
+                           <div class="linenumber">5</div> que <span class="apparatus">
+                              <span class="reading A">uus</span>
+                              <span class="reading B">uos</span>
+                              </span> eu uj <span class="apparatus">
+                              <span class="reading A">et</span>
+                              <span class="reading B">e</span>
+                              </span> que <span class="apparatus">
+                              <span class="reading A">uusco</span>
+                              <span class="reading B">uosco</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">falei</span>
+                              <span class="reading B">faley</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2274" onclick="matchLine('lined1e2274');">
+                           <div class="linenumber">6</div>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">deulo
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> deu'-lo
+                                       </div>
+                                    </div></span></span>
+                              <span class="reading B">
+                                 <span class="choice">deulo
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> deu'-lo
+                                       </div>
+                                    </div></span></span>
+                              </span> sabe <span class="apparatus">
+                              <span class="reading A">ca</span>
+                              <span class="reading B">que</span>
+                              </span> nunca <span class="apparatus">
+                              <span class="reading A">deseiei</span>
+                              <span class="reading B">deseiey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2320" onclick="matchLine('lined1e2320');">
+                           <div class="linenumber">7</div> ben deste mundo se o uosso non 
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e2326" onclick="matchLine('lined1e2326');">
+                           <div class="linenumber">8</div>
+                           <span class="apparatus">
+                              <span class="reading A">Ben </span>
+                              <span class="reading B">Nen no meu </span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">deseiarei</span>
+                              <span class="reading B">deseiarey</span>
+                              </span> no meu <span class="apparatus">
+                              <span class="reading A">coraçon</span>
+                              <span class="reading B">coraçon</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2363" onclick="matchLine('lined1e2363');">
+                           <div class="linenumber">9</div> enquant' eu ia <span class="apparatus">
+                              <span class="reading A">eno</span>
+                              <span class="reading B">no</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mundo</span>
+                              <span class="reading B">mundo</span>
+                              </span> uiuer 
+                        </div>
+                        
+                        <div class="line lined1e2394" onclick="matchLine('lined1e2394');">
+                           <div class="linenumber">10</div> ca de <span class="apparatus">
+                              <span class="reading A">pran</span>
+                              <span class="reading B">pram</span>
+                              </span>
+                           uus
+                           <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> mayor <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">querer</span>
+                              <span class="reading B">querer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2449" onclick="matchLine('lined1e2449');">
+                           <div class="linenumber">11</div> de quantas cousas eno <span class="apparatus">
+                              <span class="reading A">mundo</span>
+                              <span class="reading B">mundo</span>
+                              </span> son 
+                        </div>
+                        
+                        <div class="line lined1e2471" onclick="matchLine('lined1e2471');">
+                           <div class="linenumber">12</div> e de 
+                           <span class="apparatus">
+                              <span class="reading A">ũa</span>
+                              <span class="reading B">hũa</span>
+                              </span> cousa <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">direi</span>
+                              <span class="reading B">direy</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2511" onclick="matchLine('lined1e2511');">
+                           <div class="linenumber">13</div>
+                           <span class="apparatus">
+                              <span class="reading A">no</span>
+                              <span class="reading B">non</span>
+                              </span> me <span class="apparatus">
+                              <span class="reading A">quitara</span>
+                              <span class="reading B">quitara</span>
+                              </span> ren eu ben o <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2547" onclick="matchLine('lined1e2547');">
+                           <div class="linenumber">14</div>
+                           <span class="apparatus">
+                              <span class="reading A"></span>
+                              <span class="reading B">e</span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span>
+                           querer <span class="apparatus">
+                              <span class="reading A">assi</span>
+                              <span class="reading B">assy</span>
+                              </span> se morte <span class="apparatus">
+                              <span class="reading A">non</span>
+                              <span class="reading B">non</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e2601" onclick="matchLine('lined1e2601');">
+                           <div class="linenumber">15</div> Ca de pran se m' end' <span class="apparatus">
+                              <span class="reading A">ouuesse</span>
+                              <span class="reading B">oess'</span>
+                              </span> a <span class="apparatus">
+                              <span class="reading A">quitar</span>
+                              <span class="reading B">quytar</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2631" onclick="matchLine('lined1e2631');">
+                           <div class="linenumber">16</div>
+                           <span class="apparatus">
+                              <span class="reading A">nulla</span>
+                              <span class="reading B">nulla</span>
+                              </span> cousa sen morte <span class="apparatus">
+                              <span class="reading A">mia</span>
+                              <span class="reading B">mha</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2669" onclick="matchLine('lined1e2669');">
+                           <div class="linenumber">17</div>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">quitarmendia
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> quitar-m' end' ia
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B">
+                                 <span class="choice">quitar mendia
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> quitar-m' end' ia
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span> o <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muy</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gran</span>
+                              </span> sabor 
+                        </div>
+                        
+                        <div class="line lined1e2727" onclick="matchLine('lined1e2727');">
+                           <div class="linenumber">18</div>
+                           que
+                           uos
+                           <span class="apparatus">
+                              <span class="reading A">ueio</span>
+                              <span class="reading B">uei'</span>
+                              </span> auer de m' <span class="apparatus">
+                              <span class="reading A">alongar</span>
+                              <span class="reading B">alongar</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2763" onclick="matchLine('lined1e2763');">
+                           <div class="linenumber">19</div> de uos <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muj</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span> ca outr' <span class="apparatus">
+                              <span class="reading A">ome</span>
+                              <span class="reading B">omen</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">poren</span>
+                              <span class="reading B">poren</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2810" onclick="matchLine('lined1e2810');">
+                           <div class="linenumber">20</div>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mia</span>
+                              <span class="reading B">mha</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">senor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A"><span class="choice">direi uos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> direi-uos
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B">
+                                 <span class="choice">direyuos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> direy-uos
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ũa</span>
+                              <span class="reading B">hũa</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ren</span>
+                              <span class="reading B"></span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2897" onclick="matchLine('lined1e2897');">
+                           <div class="linenumber">21</div> non
+                           <span class="apparatus">
+                              <span class="reading A">uus</span>
+                              <span class="reading B">uos</span>
+                              </span> am' eu <span class="apparatus">
+                              <span class="reading A">por</span>
+                              <span class="reading B">por</span>
+                              </span> ar <span class="apparatus">
+                              <span class="reading A">dessamar</span>
+                              
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e2939" onclick="matchLine('lined1e2939');">
+                           <div class="linenumber">22</div>
+                           <span class="apparatus">
+                              <span class="reading A"><span class="choice">Beno
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> Ben o
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B"><span class="choice">Benno
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> Ben-no
+                                       </div>
+                                    </div></span></span>
+                              </span> creede mais por <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span> buscar 
+                        </div>
+                        
+                        <div class="line lined1e2983" onclick="matchLine('lined1e2983');">
+                           <div class="linenumber">23</div>
+                           <span class="apparatus">
+                              <span class="reading A">muito</span>
+                              <span class="reading B">muyto</span>
+                              </span> en <span class="apparatus">
+                              <span class="reading A">quant' eu</span>
+                              <span class="reading B">quanto</span>
+                              </span> uiuo for <span class="apparatus">
+                              <span class="reading A">seruic'</span>
+                              <span class="reading B">seruiç'</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e3025" onclick="matchLine('lined1e3025');">
+                           <div class="linenumber">24</div> e <span class="apparatus">
+                              <span class="reading A">por que</span>
+                              <span class="reading B">por
+                                 que</span>
+                              </span>
+                           uos fez pareçer <span class="apparatus">
+                              <span class="reading A">mellor</span>
+                              <span class="reading B">melhor</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e3059" onclick="matchLine('lined1e3059');">
+                           <div class="linenumber">25</div>
+                           <span class="apparatus">
+                              <span class="reading A">deus</span>
+                              <span class="reading B">deus</span>
+                              </span> doutra dona e <span class="apparatus">
+                              <span class="reading A">mellor</span>
+                              <span class="reading B">melhor</span>
+                              </span> falar 
+                        </div>
+                        
+                        <div class="line lined1e3084" onclick="matchLine('lined1e3084');">
+                           <div class="linenumber">26</div> e el <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span>
+                           uos tal fez se m' algun
+                           ben
+                        </div>
+                        
+                        <div class="line lined1e3110" onclick="matchLine('lined1e3110');">
+                           <div class="linenumber">27</div> non der de uos <span class="apparatus">
+                              <span class="reading A">sennor </span>
+                              <span class="reading B">senhor</span>
+                              </span> non me de sen 
+                        </div>
+                        
+                        <div class="line lined1e3137" onclick="matchLine('lined1e3137');">
+                           <div class="linenumber">28</div>
+                           <span class="apparatus">
+                              <span class="reading A">nen</span>
+                              <span class="reading B">nen</span>
+                              </span> poder de <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">poren</span>
+                              <span class="reading B">por en</span>
+                              </span> desamar <br class="stanzabreak">
+                           
+                        </div>
+                        
+                        <div class="line lined1e3180" onclick="matchLine('lined1e3180');">
+                           <div class="linenumber">29</div> Ca <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> eu <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">u</span>
+                              <span class="reading B">hu</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">outra</span>
+                              <span class="reading B">outra</span>
+                              </span>
+                           <span class="apparatus">
+                              
+                              </span> non iaz 
+                        </div>
+                        
+                        <div class="line lined1e3237" onclick="matchLine('lined1e3237');">
+                           <div class="linenumber">30</div> ca <span class="apparatus">
+                              <span class="reading A">me</span>
+                              <span class="reading B">mj</span>
+                              </span> sera <span class="apparatus">
+                              <span class="reading A">mia</span>
+                              <span class="reading B">mha</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span> mester
+                           
+                        </div>
+                        
+                        <div class="line lined1e3286" onclick="matchLine('lined1e3286');">
+                           <div class="linenumber">31</div>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">de ueeruus
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> de ueer-uus
+                                       </div>
+                                    </div></span></span>
+                              <span class="reading B"><span class="choice">dauer uos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> d' auer-uos
+                                       </div>
+                                    </div></span></span>
+                              </span> se end' a uos prouguer 
+                        </div>
+                        
+                        <div class="line lined1e3323" onclick="matchLine('lined1e3323');">
+                           <div class="linenumber">32</div> ca <span class="apparatus">
+                              <span class="reading A">me</span>
+                              <span class="reading B">mj</span>
+                              </span> sera o mayor <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           que faz 
+                        </div>
+                        
+                        <div class="line lined1e3354" onclick="matchLine('lined1e3354');">
+                           <div class="linenumber">33</div>
+                           <span class="apparatus">
+                              </span> este <span class="apparatus">
+                              <span class="reading A">mund'</span>
+                              <span class="reading B">mund'</span>
+                              </span>
+                           <span class="apparatus">
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ome</span>
+                              <span class="reading B">home</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">outra</span>
+                              <span class="reading B">outra</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">moller</span>
+                              <span class="reading B">molher</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="panel mssPanel">
+               <div class="panelBanner"><img class="closePanel" onclick="closePanel(this.parentNode.parentNode);" src="../vm-images/closePanel.gif" alt="X">Witness <select class="witnessMenu" onchange="changeWitness(this.value,this.parentNode.parentNode);">
+                     <option value="A">1: A</option>
+                     <option selected value="B">2: B</option></select></div>
+               <div class="mssContent">
+                  
+                  <div class="div type-poem">
+                     
+                     <div class="head">
+                        
+                        <span class="apparatus app-d1e109 clickable" onclick="matchApp('app-d1e109');">
+                           <span class="reading A">A1</span>
+                           <span class="reading B">B91</span>
+                           </span>
+                        
+                        
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e124" onclick="matchLine('lined1e124');">
+                           <div class="linenumber">1</div>
+                           <span class="apparatus">
+                              <span class="reading A">guer</span>
+                              <span class="reading B">Deus meu senhor se uos
+                                 prouguer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e142" onclick="matchLine('lined1e142');">
+                           <div class="linenumber">2</div> uos <span class="apparatus">
+                              <span class="reading A">me</span>
+                              <span class="reading B">mj</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">tollede</span>
+                              <span class="reading B">tolhed'</span>
+                              </span> este poder 
+                        </div>
+                        
+                        <div class="line lined1e163" onclick="matchLine('lined1e163');">
+                           <div class="linenumber">3</div> que eu <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">muito</span>
+                              <span class="reading B">muyto</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">uiuer</span>
+                              <span class="reading B">uyuer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e193" onclick="matchLine('lined1e193');">
+                           <div class="linenumber">4</div> ca mentr' eu tal poder 
+                           <span class="apparatus">
+                              <span class="reading A">ouuer</span>
+                              <span class="reading B">oer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e205" onclick="matchLine('lined1e205');">
+                           <div class="linenumber">5</div> de uiuer nunca 
+                           <span class="apparatus">
+                              <span class="reading A">perderei</span>
+                              <span class="reading B">perderey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e218" onclick="matchLine('lined1e218');">
+                           <div class="linenumber">6</div> esta <span class="apparatus">
+                              <span class="reading A">coita</span>
+                              <span class="reading B">coyta</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">og'</span>
+                              <span class="reading B">oi'</span>
+                              </span> eu <span class="apparatus">
+                              <span class="reading A">ey</span>
+                              <span class="reading B"></span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e259" onclick="matchLine('lined1e259');">
+                           <div class="linenumber">7</div> d' amor eno meu coraçon 
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e265" onclick="matchLine('lined1e265');">
+                           <div class="linenumber">8</div> Ca <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">mia
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> mi a
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B">
+                                 <span class="choice">mha
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> mh a
+                                       </div>
+                                    </div></span></span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">faz</span>
+                              <span class="reading B">fais</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">auer</span>
+                              <span class="reading B">au</span>
+                              </span> tal <span class="apparatus">
+                              <span class="reading A">moller</span>
+                              <span class="reading B">molher</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e325" onclick="matchLine('lined1e325');">
+                           <div class="linenumber">9</div>
+                           <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">nunca</span>
+                              <span class="reading B">nunca</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">mia
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> mi a
+                                       </div>
+                                    </div></span></span>
+                              <span class="reading B">
+                                 <span class="choice">mh a
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> mha
+                                       </div>
+                                    </div></span></span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ren</span>
+                              <span class="reading B">ren</span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">fazer</span>
+                              <span class="reading B">fazer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e405" onclick="matchLine('lined1e405');">
+                           <div class="linenumber">10</div>
+                           <span class="apparatus">
+                              <span class="reading A">per</span>
+                              <span class="reading B">per</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">q</span>
+                              <span class="reading B">que</span>
+                              </span> eu <span class="apparatus">
+                              <span class="reading A">ia possa</span>
+                              <span class="reading B">possa ia</span>
+                              </span>
+                           perder
+                           
+                        </div>
+                        
+                        <div class="line lined1e450" onclick="matchLine('lined1e450');">
+                           <div class="linenumber">11</div>
+                           que
+                           <span class="apparatus">
+                              <span class="reading A">enquant'</span>
+                              <span class="reading B">enquant'</span>
+                              </span> eu <span class="apparatus">
+                              <span class="reading A">uiuer</span>
+                              <span class="reading B">uiuer</span>
+                              </span> poder 
+                        </div>
+                        
+                        <div class="line lined1e490" onclick="matchLine('lined1e490');">
+                           <div class="linenumber">12</div>
+                           <span class="apparatus">
+                              <span class="reading A">por</span>
+                              <span class="reading B">por</span>
+                              </span> esto a non
+                           <span class="apparatus">
+                              <span class="reading A">poderey</span>
+                              <span class="reading B">poderei</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e525" onclick="matchLine('lined1e525');">
+                           <div class="linenumber">13</div>
+                           perder per
+                           <span class="apparatus">
+                              <span class="reading A">ren</span>
+                              <span class="reading B">ren</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">auerei</span>
+                              <span class="reading B">auerey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e574" onclick="matchLine('lined1e574');">
+                           <div class="linenumber">14</div> dela <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span> con
+                           <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muy</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gram</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">razon</span>
+                              <span class="reading B">razon</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="line lined1e623" onclick="matchLine('lined1e623');">
+                        <div class="linenumber">15</div>
+                        <span class="apparatus">
+                           <span class="reading A">Ca non est' e</span>
+                           <span class="reading B">E quant' esta</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">cuita</span>
+                           <span class="reading B">coyta</span>
+                           </span> d' amor 
+                     </div>
+                     
+                     <div class="line lined1e654" onclick="matchLine('lined1e654');">
+                        <div class="linenumber">16</div>
+                        <span class="apparatus">
+                           <span class="reading A">ũa</span>
+                           <span class="reading B">hũa</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading B">a</span>
+                           </span>
+                        que
+                        <span class="apparatus">
+                           <span class="reading A">ome</span>
+                           <span class="reading B">home</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">fillar</span>
+                           <span class="reading B">falar</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">uen</span>
+                           <span class="reading B">uen</span>
+                           </span>
+                        
+                     </div>
+                     
+                     <div class="line lined1e719" onclick="matchLine('lined1e719');">
+                        <div class="linenumber">17</div>
+                        <span class="apparatus">
+                           <span class="reading A">se ome</span>
+                           <span class="reading B">seu
+                              amor</span>
+                           </span> leixa <span class="apparatus">
+                           <span class="reading A">sen</span>
+                           <span class="reading B">sen</span>
+                           </span> seu <span class="apparatus">
+                           <span class="reading A">ben</span>
+                           <span class="reading B">ben</span>
+                           </span>
+                        
+                     </div>
+                     
+                     <div class="line lined1e760" onclick="matchLine('lined1e760');">
+                        <div class="linenumber">18</div> ou <span class="apparatus">
+                           <span class="reading A">sen</span>
+                           <span class="reading B">sen</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">morte ou se</span>
+                           <span class="reading B"><span class="choice">mortousse
+                                 <div class="corr">
+                                    <div class="interior"><strong>Regularized form:</strong> mort' ou se
+                                    </div>
+                                 </div></span></span>
+                           </span> faz <span class="apparatus">
+                           <span class="reading A">mellor</span>
+                           <span class="reading B">melhor</span>
+                           </span>
+                        
+                     </div>
+                     
+                     <div class="line lined1e805" onclick="matchLine('lined1e805');">
+                        <div class="linenumber">19</div>
+                        <span class="apparatus">
+                           <span class="reading A">mais</span>
+                           <span class="reading B">mays</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">semella</span>
+                           <span class="reading B">semela</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">muit'</span>
+                           <span class="reading B">muyt'</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">outro</span>
+                           <span class="reading B">outro</span>
+                           </span> mal 
+                     </div>
+                     
+                     <div class="line lined1e848" onclick="matchLine('lined1e848');">
+                        <div class="linenumber">20</div>
+                        <span class="apparatus">
+                           <span class="reading A">e quen a</span>
+                           <span class="reading B">a ten</span>
+                           </span> esta <span class="apparatus">
+                           <span class="reading A">cuita</span>
+                           <span class="reading B">coyta</span>
+                           </span> tal 
+                     </div>
+                     
+                     <div class="line lined1e873" onclick="matchLine('lined1e873');">
+                        <div class="linenumber">21</div> macar <span class="apparatus">
+                           <span class="reading A">se</span>
+                           <span class="reading B">xe</span>
+                           </span> morre non
+                        <span class="apparatus">
+                           <span class="reading A">lle</span>
+                           <span class="reading B">lhi</span>
+                           </span>
+                        <span class="apparatus">
+                           <span class="reading A">praz</span>
+                           <span class="reading B">praz</span>
+                           </span>
+                        
+                     </div>
+                     
+                  </div>
+                  
+                  <div class="div type-poem">
+                     
+                     <div class="head">
+                        
+                        <span class="apparatus app-d1e919 clickable" onclick="matchApp('app-d1e919');">
+                           <span class="reading A">A2</span>
+                           <span class="reading B">B92</span>
+                           </span>
+                        
+                        
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e934" onclick="matchLine('lined1e934');">
+                           <div class="linenumber">1</div>
+                           <span class="apparatus">
+                              <span class="reading A">Sennor</span>
+                              <span class="reading B">Senhor</span>
+                              </span> fremosa <span class="apparatus">
+                              <span class="reading A"></span>
+                              <span class="reading B">muy</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">grand'</span>
+                              <span class="reading B">grand'</span>
+                              </span> enueia <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e977" onclick="matchLine('lined1e977');">
+                           <div class="linenumber">2</div> eu a tod' ome que ueio morrer 
+                        </div>
+                        
+                        <div class="line lined1e980" onclick="matchLine('lined1e980');">
+                           <div class="linenumber">3</div> e <span class="apparatus">
+                              <span class="reading A">segud'</span>
+                              <span class="reading B">segund'</span>
+                              </span> ora o meu <span class="apparatus">
+                              <span class="reading A">connoçer</span>
+                              <span class="reading B">conhocer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1006" onclick="matchLine('lined1e1006');">
+                           <div class="linenumber">4</div> enquant' <span class="apparatus">
+                              <span class="reading A">este</span>
+                              <span class="reading B">est</span>
+                              </span> faço <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muy</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gram</span>
+                              </span> razon 
+                        </div>
+                        
+                        <div class="line lined1e1036" onclick="matchLine('lined1e1036');">
+                           <div class="linenumber">5</div> ca <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span> por uos e no meu coraçon 
+                        </div>
+                        
+                        <div class="line lined1e1049" onclick="matchLine('lined1e1049');">
+                           <div class="linenumber">6</div> tan <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gram</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">cuita</span>
+                              <span class="reading B">coyta</span>
+                              </span> que mil uezes <span class="apparatus">
+                              <span class="reading A">meten</span>
+                              <span class="reading B">metem</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1079" onclick="matchLine('lined1e1079');">
+                           <div class="linenumber">7</div>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span> sen <span class="apparatus">
+                              <span class="reading A">falla</span>
+                              <span class="reading B">fala</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">et sen</span>
+                              <span class="reading B"><span class="choice">essem
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> e sem
+                                       </div>
+                                    </div></span></span>
+                              </span> tod' o <span class="apparatus">
+                              <span class="reading A">sen</span>
+                              <span class="reading B">sem</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1125" onclick="matchLine('lined1e1125');">
+                           <div class="linenumber">8</div>e <span class="apparatus">
+                              <span class="reading A">non</span>
+                              <span class="reading B">non</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">uus</span>
+                              <span class="reading B">uus</span>
+                              </span> queredes <span class="apparatus">
+                              <span class="reading A">de</span>
+                              <span class="reading B">d</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">min</span>
+                              <span class="reading B">mj</span>
+                              </span> doer 
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e1173" onclick="matchLine('lined1e1173');">
+                           <div class="linenumber">9</div> Pero <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ũa</span>
+                              <span class="reading B">hũa</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ren</span>
+                              <span class="reading B">ren</span>
+                              </span> uus
+                           <span class="apparatus">
+                              <span class="reading A">direi</span>
+                              <span class="reading B">direy</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1230" onclick="matchLine('lined1e1230');">
+                           <div class="linenumber">10</div>
+                           <span class="apparatus">
+                              <span class="reading A">con</span>
+                              <span class="reading B">con</span>
+                              </span> tod' est' ora non
+                           <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span> eu poder 
+                        </div>
+                        
+                        <div class="line lined1e1260" onclick="matchLine('lined1e1260');">
+                           <div class="linenumber">11</div>
+                           per
+                           <span class="apparatus">
+                              <span class="reading A"> bõa fe</span>
+                              <span class="reading B"><span class="choice">bõaffe
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> bõa fe
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">null'</span>
+                              <span class="reading B">nulla</span>
+                              </span> enueia auer 
+                        </div>
+                        
+                        <div class="line lined1e1300" onclick="matchLine('lined1e1300');">
+                           <div class="linenumber">12</div> a <span class="apparatus">
+                              <span class="reading A">null'</span>
+                              <span class="reading B">null'</span>
+                              </span> ome de <span class="apparatus">
+                              <span class="reading A">quantos</span>
+                              <span class="reading B">quantus</span>
+                              </span> uiuos <span class="apparatus">
+                              <span class="reading A">son</span>
+                              <span class="reading B">son</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1342" onclick="matchLine('lined1e1342');">
+                           <div class="linenumber">13</div>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span> faç' eu esto por que
+                           <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> ca <span class="apparatus">
+                              <span class="reading A">non</span>
+                              <span class="reading B">non</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1382" onclick="matchLine('lined1e1382');">
+                           <div class="linenumber">14</div>
+                           <span class="apparatus">
+                              <span class="reading A">uiue</span>
+                              <span class="reading B">uyue</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">null'</span>
+                              <span class="reading B">null'</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ome</span>
+                              <span class="reading B">ome</span>
+                              </span>
+                           que de uos <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1444" onclick="matchLine('lined1e1444');">
+                           <div class="linenumber">15</div> aia de <span class="apparatus">
+                              <span class="reading A">mi</span>
+                              <span class="reading B">mjn</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span> non
+                           <span class="apparatus">
+                              <span class="reading A">ei</span>
+                              <span class="reading B">ey</span>
+                              </span> de uos ren 
+                        </div>
+                        
+                        <div class="line lined1e1486" onclick="matchLine('lined1e1486');">
+                           <div class="linenumber">16</div> se non
+                           <span class="apparatus">
+                              <span class="reading A">quant'</span>
+                              <span class="reading B">quant'</span>
+                              </span> ora <span class="apparatus">
+                              <span class="reading A">me</span>
+                              <span class="reading B">m</span>
+                              </span> oystes <span class="apparatus">
+                              <span class="reading A">dizer</span>
+                              <span class="reading B">dizer</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e1533" onclick="matchLine('lined1e1533');">
+                           <div class="linenumber">17</div> E por que
+                           <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> tan ben per bõa fe 
+                        </div>
+                        
+                        <div class="line lined1e1558" onclick="matchLine('lined1e1558');">
+                           <div class="linenumber">18</div>
+                           <span class="apparatus">
+                              <span class="reading A">que </span>
+                              <span class="reading B">que</span>
+                              </span> non
+                           <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> cousa no <span class="apparatus">
+                              <span class="reading A">mundo</span>
+                              <span class="reading B">mundo</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mellor</span>
+                              <span class="reading B">melhor</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1610" onclick="matchLine('lined1e1610');">
+                           <div class="linenumber">19</div>
+                           que ia <span class="apparatus">
+                              <span class="reading A">entanto</span>
+                              <span class="reading B">entanto</span>
+                              </span> com' eu <span class="apparatus">
+                              <span class="reading A">uiuo</span>
+                              <span class="reading B">uyuo</span>
+                              </span> for 
+                        </div>
+                        
+                        <div class="line lined1e1641" onclick="matchLine('lined1e1641');">
+                           <div class="linenumber">20</div>
+                           <span class="apparatus">
+                              <span class="reading A">nulla</span>
+                              <span class="reading B">nulla</span>
+                              </span> cousa non me pode guardar 
+                        </div>
+                        
+                        <div class="line lined1e1658" onclick="matchLine('lined1e1658');">
+                           <div class="linenumber">21</div>
+                           <span class="apparatus">
+                              <span class="reading A">d' aquesta cuita que leuo leuar</span>
+                              <span class="reading B"></span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1674" onclick="matchLine('lined1e1674');">
+                           <div class="linenumber">22</div> se eu de uos <span class="apparatus">
+                              <span class="reading A">algun</span>
+                              <span class="reading B">algun</span>
+                              </span> ben non
+                           <span class="apparatus">
+                              <span class="reading A">ouuer</span>
+                              <span class="reading B">oer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1704" onclick="matchLine('lined1e1704');">
+                           <div class="linenumber">23</div> o que m' ende guardar
+                           non poder 
+                        </div>
+                        
+                        <div class="line lined1e1717" onclick="matchLine('lined1e1717');">
+                           <div class="linenumber">24</div> ia me non
+                           <span class="apparatus">
+                              <span class="reading A">pode</span>
+                              <span class="reading B">pod'</span>
+                              </span> en al <span class="apparatus">
+                              <span class="reading A">prestar</span>
+                              <span class="reading B">prestar</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e1764" onclick="matchLine('lined1e1764');">
+                           <div class="linenumber">25</div> Ca esta <span class="apparatus">
+                              <span class="reading A">cuita</span>
+                              <span class="reading B">coyta</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">tan</span>
+                              <span class="reading B">tam</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">grand'</span>
+                              <span class="reading B">grand'</span>
+                              </span> e 
+                        </div>
+                        
+                        <div class="line lined1e1812" onclick="matchLine('lined1e1812');">
+                           <div class="linenumber">26</div> com' eu <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uus</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">dixe</span>
+                              <span class="reading B">dixi</span>
+                              </span> ia o e mayor 
+                        </div>
+                        
+                        <div class="line lined1e1836" onclick="matchLine('lined1e1836');">
+                           <div class="linenumber">27</div> e <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span> creede que non e <span class="apparatus">
+                              <span class="reading A"> mẽor</span>
+                              <span class="reading B">meor</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1874" onclick="matchLine('lined1e1874');">
+                           <div class="linenumber">28</div> e ora <span class="apparatus">
+                              <span class="reading A">por</span>
+                              <span class="reading B">por</span>
+                              </span>
+                           deus
+                           que
+                           <span class="apparatus">
+                              <span class="reading A">us</span>
+                              <span class="reading B">uos</span>
+                              </span> fez falar 
+                        </div>
+                        
+                        <div class="line lined1e1912" onclick="matchLine('lined1e1912');">
+                           <div class="linenumber">29</div> muj ben <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">e</span>
+                              <span class="reading B"></span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muj</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">semellar</span>
+                              <span class="reading B">semelhar</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e1971" onclick="matchLine('lined1e1971');">
+                           <div class="linenumber">30</div>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">doede uos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> doede-uos
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B">
+                                 <span class="choice">doedeuos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> doede-uos
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">mi</span>
+                              <span class="reading B">mjn</span>
+                              </span>
+                           prouguer 
+                        </div>
+                        
+                        <div class="line lined1e2025" onclick="matchLine('lined1e2025');">
+                           <div class="linenumber">31</div>
+                           <span class="apparatus">
+                              <span class="reading A">e se o</span>
+                              <span class="reading B">
+                                 <span class="choice">esseo
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> e se o 
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span> fezerdes ia foy <span class="apparatus">
+                              <span class="reading A">moller</span>
+                              <span class="reading B">molher</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2055" onclick="matchLine('lined1e2055');">
+                           <div class="linenumber">32</div>
+                           <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">xe</span>
+                              <span class="reading B">xi</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">penso</span>
+                              <span class="reading B">penssou</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">de sa</span>
+                              <span class="reading B"><span class="choice">dessa
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> de sa
+                                       </div>
+                                    </div></span></span>
+                              </span> alma <span class="apparatus">
+                              <span class="reading A">peor</span>
+                              <span class="reading B">peyor</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                  </div>
+                  
+                  <div class="div type-poem">
+                     
+                     <div class="head">
+                        
+                        <span class="apparatus app-d1e2121 clickable" onclick="matchApp('app-d1e2121');">
+                           <span class="reading A">A3</span>
+                           <span class="reading B">B93</span>
+                           </span>
+                        
+                        
+                        
+                     </div>
+                     
+                     <div class="lg type-poem">
+                        
+                        <div class="line lined1e2136" onclick="matchLine('lined1e2136');">
+                           <div class="linenumber">1</div>
+                           <span class="apparatus">
+                              <span class="reading A">Sennor</span>
+                              <span class="reading B">Senhor</span>
+                              </span> fremosa <span class="apparatus">
+                              <span class="reading A">par</span>
+                              <span class="reading B">per</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">deus</span>
+                              <span class="reading B">deus</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gram</span>
+                              </span> sazon 
+                        </div>
+                        
+                        <div class="line lined1e2189" onclick="matchLine('lined1e2189');">
+                           <div class="linenumber">2</div> seria ia <span class="apparatus">
+                              <span class="reading A">agora</span>
+                              <span class="reading B">ora</span>
+                              </span> se en prazer 
+                        </div>
+                        
+                        <div class="line lined1e2201" onclick="matchLine('lined1e2201');">
+                           <div class="linenumber">3</div>
+                           <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span> caesse de quererdes prender 
+                        </div>
+                        
+                        <div class="line lined1e2216" onclick="matchLine('lined1e2216');">
+                           <div class="linenumber">4</div> doo de <span class="apparatus">
+                              <span class="reading A">min</span>
+                              <span class="reading B">mj</span>
+                              </span> ca ben de' la sazon 
+                        </div>
+                        
+                        <div class="line lined1e2228" onclick="matchLine('lined1e2228');">
+                           <div class="linenumber">5</div> que <span class="apparatus">
+                              <span class="reading A">uus</span>
+                              <span class="reading B">uos</span>
+                              </span> eu uj <span class="apparatus">
+                              <span class="reading A">et</span>
+                              <span class="reading B">e</span>
+                              </span> que <span class="apparatus">
+                              <span class="reading A">uusco</span>
+                              <span class="reading B">uosco</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">falei</span>
+                              <span class="reading B">faley</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2274" onclick="matchLine('lined1e2274');">
+                           <div class="linenumber">6</div>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">deulo
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> deu'-lo
+                                       </div>
+                                    </div></span></span>
+                              <span class="reading B">
+                                 <span class="choice">deulo
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> deu'-lo
+                                       </div>
+                                    </div></span></span>
+                              </span> sabe <span class="apparatus">
+                              <span class="reading A">ca</span>
+                              <span class="reading B">que</span>
+                              </span> nunca <span class="apparatus">
+                              <span class="reading A">deseiei</span>
+                              <span class="reading B">deseiey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2320" onclick="matchLine('lined1e2320');">
+                           <div class="linenumber">7</div> ben deste mundo se o uosso non 
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e2326" onclick="matchLine('lined1e2326');">
+                           <div class="linenumber">8</div>
+                           <span class="apparatus">
+                              <span class="reading A">Ben </span>
+                              <span class="reading B">Nen no meu </span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">deseiarei</span>
+                              <span class="reading B">deseiarey</span>
+                              </span> no meu <span class="apparatus">
+                              <span class="reading A">coraçon</span>
+                              <span class="reading B">coraçon</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2363" onclick="matchLine('lined1e2363');">
+                           <div class="linenumber">9</div> enquant' eu ia <span class="apparatus">
+                              <span class="reading A">eno</span>
+                              <span class="reading B">no</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mundo</span>
+                              <span class="reading B">mundo</span>
+                              </span> uiuer 
+                        </div>
+                        
+                        <div class="line lined1e2394" onclick="matchLine('lined1e2394');">
+                           <div class="linenumber">10</div> ca de <span class="apparatus">
+                              <span class="reading A">pran</span>
+                              <span class="reading B">pram</span>
+                              </span>
+                           uus
+                           <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> mayor <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">querer</span>
+                              <span class="reading B">querer</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2449" onclick="matchLine('lined1e2449');">
+                           <div class="linenumber">11</div> de quantas cousas eno <span class="apparatus">
+                              <span class="reading A">mundo</span>
+                              <span class="reading B">mundo</span>
+                              </span> son 
+                        </div>
+                        
+                        <div class="line lined1e2471" onclick="matchLine('lined1e2471');">
+                           <div class="linenumber">12</div> e de 
+                           <span class="apparatus">
+                              <span class="reading A">ũa</span>
+                              <span class="reading B">hũa</span>
+                              </span> cousa <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">direi</span>
+                              <span class="reading B">direy</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2511" onclick="matchLine('lined1e2511');">
+                           <div class="linenumber">13</div>
+                           <span class="apparatus">
+                              <span class="reading A">no</span>
+                              <span class="reading B">non</span>
+                              </span> me <span class="apparatus">
+                              <span class="reading A">quitara</span>
+                              <span class="reading B">quitara</span>
+                              </span> ren eu ben o <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2547" onclick="matchLine('lined1e2547');">
+                           <div class="linenumber">14</div>
+                           <span class="apparatus">
+                              <span class="reading A"></span>
+                              <span class="reading B">e</span>
+                              </span> de <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span>
+                           querer <span class="apparatus">
+                              <span class="reading A">assi</span>
+                              <span class="reading B">assy</span>
+                              </span> se morte <span class="apparatus">
+                              <span class="reading A">non</span>
+                              <span class="reading B">non</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e2601" onclick="matchLine('lined1e2601');">
+                           <div class="linenumber">15</div> Ca de pran se m' end' <span class="apparatus">
+                              <span class="reading A">ouuesse</span>
+                              <span class="reading B">oess'</span>
+                              </span> a <span class="apparatus">
+                              <span class="reading A">quitar</span>
+                              <span class="reading B">quytar</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2631" onclick="matchLine('lined1e2631');">
+                           <div class="linenumber">16</div>
+                           <span class="apparatus">
+                              <span class="reading A">nulla</span>
+                              <span class="reading B">nulla</span>
+                              </span> cousa sen morte <span class="apparatus">
+                              <span class="reading A">mia</span>
+                              <span class="reading B">mha</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2669" onclick="matchLine('lined1e2669');">
+                           <div class="linenumber">17</div>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">quitarmendia
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> quitar-m' end' ia
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B">
+                                 <span class="choice">quitar mendia
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> quitar-m' end' ia
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span> o <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muy</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">gran</span>
+                              <span class="reading B">gran</span>
+                              </span> sabor 
+                        </div>
+                        
+                        <div class="line lined1e2727" onclick="matchLine('lined1e2727');">
+                           <div class="linenumber">18</div>
+                           que
+                           uos
+                           <span class="apparatus">
+                              <span class="reading A">ueio</span>
+                              <span class="reading B">uei'</span>
+                              </span> auer de m' <span class="apparatus">
+                              <span class="reading A">alongar</span>
+                              <span class="reading B">alongar</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2763" onclick="matchLine('lined1e2763');">
+                           <div class="linenumber">19</div> de uos <span class="apparatus">
+                              <span class="reading A">mui</span>
+                              <span class="reading B">muj</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span> ca outr' <span class="apparatus">
+                              <span class="reading A">ome</span>
+                              <span class="reading B">omen</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">poren</span>
+                              <span class="reading B">poren</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2810" onclick="matchLine('lined1e2810');">
+                           <div class="linenumber">20</div>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mia</span>
+                              <span class="reading B">mha</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">senor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A"><span class="choice">direi uos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> direi-uos
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B">
+                                 <span class="choice">direyuos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> direy-uos
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ũa</span>
+                              <span class="reading B">hũa</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ren</span>
+                              <span class="reading B"></span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e2897" onclick="matchLine('lined1e2897');">
+                           <div class="linenumber">21</div> non
+                           <span class="apparatus">
+                              <span class="reading A">uus</span>
+                              <span class="reading B">uos</span>
+                              </span> am' eu <span class="apparatus">
+                              <span class="reading A">por</span>
+                              <span class="reading B">por</span>
+                              </span> ar <span class="apparatus">
+                              <span class="reading A">dessamar</span>
+                              
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                     <div class="lg type-stanza">
+                        
+                        <div class="line lined1e2939" onclick="matchLine('lined1e2939');">
+                           <div class="linenumber">22</div>
+                           <span class="apparatus">
+                              <span class="reading A"><span class="choice">Beno
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> Ben o
+                                       </div>
+                                    </div></span>
+                                 </span>
+                              <span class="reading B"><span class="choice">Benno
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> Ben-no
+                                       </div>
+                                    </div></span></span>
+                              </span> creede mais por <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span> buscar 
+                        </div>
+                        
+                        <div class="line lined1e2983" onclick="matchLine('lined1e2983');">
+                           <div class="linenumber">23</div>
+                           <span class="apparatus">
+                              <span class="reading A">muito</span>
+                              <span class="reading B">muyto</span>
+                              </span> en <span class="apparatus">
+                              <span class="reading A">quant' eu</span>
+                              <span class="reading B">quanto</span>
+                              </span> uiuo for <span class="apparatus">
+                              <span class="reading A">seruic'</span>
+                              <span class="reading B">seruiç'</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e3025" onclick="matchLine('lined1e3025');">
+                           <div class="linenumber">24</div> e <span class="apparatus">
+                              <span class="reading A">por que</span>
+                              <span class="reading B">por
+                                 que</span>
+                              </span>
+                           uos fez pareçer <span class="apparatus">
+                              <span class="reading A">mellor</span>
+                              <span class="reading B">melhor</span>
+                              </span>
+                           
+                        </div>
+                        
+                        <div class="line lined1e3059" onclick="matchLine('lined1e3059');">
+                           <div class="linenumber">25</div>
+                           <span class="apparatus">
+                              <span class="reading A">deus</span>
+                              <span class="reading B">deus</span>
+                              </span> doutra dona e <span class="apparatus">
+                              <span class="reading A">mellor</span>
+                              <span class="reading B">melhor</span>
+                              </span> falar 
+                        </div>
+                        
+                        <div class="line lined1e3084" onclick="matchLine('lined1e3084');">
+                           <div class="linenumber">26</div> e el <span class="apparatus">
+                              <span class="reading A">que</span>
+                              <span class="reading B">que</span>
+                              </span>
+                           uos tal fez se m' algun
+                           ben
+                        </div>
+                        
+                        <div class="line lined1e3110" onclick="matchLine('lined1e3110');">
+                           <div class="linenumber">27</div> non der de uos <span class="apparatus">
+                              <span class="reading A">sennor </span>
+                              <span class="reading B">senhor</span>
+                              </span> non me de sen 
+                        </div>
+                        
+                        <div class="line lined1e3137" onclick="matchLine('lined1e3137');">
+                           <div class="linenumber">28</div>
+                           <span class="apparatus">
+                              <span class="reading A">nen</span>
+                              <span class="reading B">nen</span>
+                              </span> poder de <span class="apparatus">
+                              <span class="reading A">uos</span>
+                              <span class="reading B">uos</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">poren</span>
+                              <span class="reading B">por en</span>
+                              </span> desamar <br class="stanzabreak">
+                           
+                        </div>
+                        
+                        <div class="line lined1e3180" onclick="matchLine('lined1e3180');">
+                           <div class="linenumber">29</div> Ca <span class="apparatus">
+                              <span class="reading A">sei</span>
+                              <span class="reading B">sey</span>
+                              </span> eu <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">u</span>
+                              <span class="reading B">hu</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">outra</span>
+                              <span class="reading B">outra</span>
+                              </span>
+                           <span class="apparatus">
+                              
+                              </span> non iaz 
+                        </div>
+                        
+                        <div class="line lined1e3237" onclick="matchLine('lined1e3237');">
+                           <div class="linenumber">30</div> ca <span class="apparatus">
+                              <span class="reading A">me</span>
+                              <span class="reading B">mj</span>
+                              </span> sera <span class="apparatus">
+                              <span class="reading A">mia</span>
+                              <span class="reading B">mha</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">sennor</span>
+                              <span class="reading B">senhor</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">mais</span>
+                              <span class="reading B">mays</span>
+                              </span> mester
+                           
+                        </div>
+                        
+                        <div class="line lined1e3286" onclick="matchLine('lined1e3286');">
+                           <div class="linenumber">31</div>
+                           <span class="apparatus">
+                              <span class="reading A">
+                                 <span class="choice">de ueeruus
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> de ueer-uus
+                                       </div>
+                                    </div></span></span>
+                              <span class="reading B"><span class="choice">dauer uos
+                                    <div class="corr">
+                                       <div class="interior"><strong>Regularized form:</strong> d' auer-uos
+                                       </div>
+                                    </div></span></span>
+                              </span> se end' a uos prouguer 
+                        </div>
+                        
+                        <div class="line lined1e3323" onclick="matchLine('lined1e3323');">
+                           <div class="linenumber">32</div> ca <span class="apparatus">
+                              <span class="reading A">me</span>
+                              <span class="reading B">mj</span>
+                              </span> sera o mayor <span class="apparatus">
+                              <span class="reading A">ben</span>
+                              <span class="reading B">ben</span>
+                              </span>
+                           que faz 
+                        </div>
+                        
+                        <div class="line lined1e3354" onclick="matchLine('lined1e3354');">
+                           <div class="linenumber">33</div>
+                           <span class="apparatus">
+                              </span> este <span class="apparatus">
+                              <span class="reading A">mund'</span>
+                              <span class="reading B">mund'</span>
+                              </span>
+                           <span class="apparatus">
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">ome</span>
+                              <span class="reading B">home</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">outra</span>
+                              <span class="reading B">outra</span>
+                              </span>
+                           <span class="apparatus">
+                              <span class="reading A">moller</span>
+                              <span class="reading B">molher</span>
+                              </span>
+                           
+                        </div>
+                        
+                     </div>
+                     
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+         <div class="panel" id="notesPanel" style="display: none;">
+            <div class="panelBanner"><img class="closePanel" onclick="hideNotesPanel();" alt="X" src="../vm-images/closePanel.gif">
+               Textual Notes
+               
+            </div>
+            <div id="noNotesFound" class="noteContent">
+               Sorry, but there are no notes associated with
+               any currently displayed witness.
+               
+            </div>
+         </div><br class="clear"></div>
+      <div class="viewerRoot" id="panel_imageViewer">
+         <div title="Click to drag panel." class="viewerHandle" id="handle_imageViewer"><span class="viewerHandleLt" id="title_imageViewer">Image Viewer</span><img class="viewerHandleRt" onclick="return hidePanel('imageViewer');" alt="X" src="../vm-images/closePanel.gif"></div>
+         <div class="viewerContent" id="content_imageViewer"></div>
+      </div>
+   </body>
+</html>
