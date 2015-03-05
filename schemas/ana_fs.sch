@@ -8,6 +8,9 @@
     <let name="personografia" value="doc('../ancillary-files/corpus_autores.xml')"/>
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
     <pattern>
+        <rule context="tei:l/tei:app">
+            <assert test="count(tei:rdg[@ana]) gt 0">@ana attribute missing</assert>
+        </rule>
         <rule context="tei:rdg">
             <assert
                 test="if (@ana) then tokenize(substring(@ana,2), '\s+') = $featureStructures else true()"
