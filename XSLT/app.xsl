@@ -3,7 +3,12 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
     <xsl:output method="xml" indent="yes"/>
     <xsl:variable name="B" select="document('../BV.xml')//div[@wit='#B']"/>
-    <xsl:template match="div[@corresp = $B/@corresp]">
+    <xsl:template match="/">
+        <xsl:element name="tei">
+            <xsl:apply-templates select="//div[@corresp = $B/@corresp]"/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="div">
         <xsl:element name="div">
             <xsl:attribute name="type">poem</xsl:attribute>
             <xsl:attribute name="corresp" select="current()/@corresp"/> 

@@ -6,7 +6,7 @@
     <xsl:variable name="V" select="document('../BV.xml')//div[@wit='#V']"/>
     <xsl:template match="/">
         <xsl:element name="tei">
-            <xsl:apply-templates select="//div[@corresp[contains(., 'V')]]"/>
+            <xsl:apply-templates select="//div[@corresp = $V/@corresp]"/>
         </xsl:element>
     </xsl:template>
     <xsl:template match="div">
