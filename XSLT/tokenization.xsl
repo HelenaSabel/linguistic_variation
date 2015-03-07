@@ -96,6 +96,7 @@
     <xsl:template match="app" mode="tokens">
         <xsl:variable name="Atokens" select="tokenize(rdg[@wit eq '#A'],'\s+')"/>
         <xsl:variable name="Btokens" select="tokenize(rdg[@wit eq '#B'],'\s+')"/>
+        <xsl:variable name="Vtokens" select="tokenize(rdg[@wit eq '#V'],'\s+')"/>
         <xsl:variable name="count" select="max((count($Atokens),count($Btokens)))"/>
         <xsl:for-each select="1 to $count">
             <xsl:choose>
