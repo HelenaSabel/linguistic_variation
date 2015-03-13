@@ -117,6 +117,22 @@
                             disable-output-escaping="yes"/></rdg>
                     </app>
                 </xsl:when>
+                <xsl:when test="$Btokens[current()] eq $Atokens[current()] and $Btokens[current()] ne $Vtokens[current()]">
+                    <app>
+                        <rdg wit="#A #B"><xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
+                            disable-output-escaping="yes"/></rdg>
+                        <rdg wit="#V"><xsl:value-of select="$Btokens[current()]"
+                            disable-output-escaping="yes"/></rdg>
+                    </app>
+                </xsl:when>
+                <xsl:when test="$Atokens[current()] eq $Vtokens[current()] and $Btokens[current()] ne $Vtokens[current()]">
+                    <app>
+                        <rdg wit="#A #V"><xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
+                            disable-output-escaping="yes"/></rdg>
+                        <rdg wit="#B"><xsl:value-of select="$Btokens[current()]"
+                            disable-output-escaping="yes"/></rdg>
+                    </app>
+                </xsl:when>
                 <xsl:otherwise>
                     <app>
                         <rdg wit="#A">
