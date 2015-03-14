@@ -34,7 +34,8 @@ return
             return
                 <tr>
                     <td>{$fenomenos[@xml:id =  $fen/substring(@ana, 2)]//comment()/string()}</td>
-                    <td>{if ($fen//tei:choice) then $fen//tei:orig else $fen/string()}</td>
+                    <td>{(if ($fen//tei:choice) then $fen//tei:orig else $fen/string())||' (vs. '||
+                    (if ($fen/../tei:rdg[. ne $fen]/tei:choice) then $fen/../tei:rdg[. ne $fen]//tei:orig else $fen/../tei:rdg[. ne $fen])||')'}</td>
                     <td>{$fen/substring(@wit, 2)}</td>
                     <td>{$author/tei:persName}</td>
                     <td>{$author/tei:floruit/@from||'-'||$author/tei:floruit/@to|| ' (' ||$author/tei:floruit/@period||')'}</td>
