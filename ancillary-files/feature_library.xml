@@ -64,16 +64,20 @@
                 <f name="vus" xml:id="uus"/>
                 <f name="ca" xml:id="Ca"/>
                 <f name="que" xml:id="Que"/>
-                <f name="cognate" xml:id="Cognate"></f>
+                <f name="cognate" xml:id="Cognate"/>
             </fLib>
 
 
             <fvLib n="Linguistic Variants">
-                <fs xml:id="dat" feats="#datCon #pr #morph #ling" >
+                <fs xml:id="dat" feats="#datCon #pr #morph #ling">
                     <f name="dat">Dative contamination</f>
                 </fs>
-                <fs xml:id="langT" feats="#transfer #ling"/>
-                <fs xml:id="o" feats="#habere #past #irregV #vb #morph #ling"/>
+                <fs xml:id="langT" feats="#transfer #ling">
+                    <!--Language transfer-->
+                </fs>
+                <fs xml:id="o" feats="#habere #past #irregV #vb #morph #ling">
+                    <!--Tema de perfeito em O-->
+                </fs>
                 <fs xml:id="dip" feats="#dipthong #phon #ling"/>
                 <fs xml:id="foi" feats="#foi1 #past #irregV #vb #morph #ling"/>
                 <fs xml:id="fui" feats="#fui1 #past #irregV #vb #morph #ling"/>
@@ -131,7 +135,7 @@
                 <fs xml:id="equip"/>
                 <fs xml:id="material"/>
             </fvLib>
-            
+
         </body>
     </text>
 </TEI>
