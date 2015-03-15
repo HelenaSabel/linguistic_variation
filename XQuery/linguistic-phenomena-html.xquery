@@ -11,7 +11,7 @@ return
         <title>Linguistic phenomena</title>
         <meta charset="utf-8" />
         <link href="CSS/temporary.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="javaScript/sortable.js">/**/</script>
+        <script type="text/javascript" src="javaScript/sorttable.js">/**/</script>
     </head>
     <body>
         <h1>Linguistic phenomena</h1>
@@ -20,7 +20,7 @@ return
                 <tr class="head">
                     <th>Phenomenum</th>
                     <th>Variant</th>
-                    <th>Witness(es)</th>
+                    <th>Witness</th>
                     <th>Copyist</th>
                     <th>Author</th>
                     <th>Period</th>
@@ -36,8 +36,8 @@ return
             return
                 <tr>
                     <td class="intro">{$fenomenos[@xml:id = $ana]//comment()[2]/string()}</td>
-                    <td>{(if ($fen//tei:choice) then $fen//tei:orig else $fen/string())||' (vs. '||
-                    (if ($fen/../tei:rdg[. ne $fen]/tei:choice) then $fen/../tei:rdg[. ne $fen]//tei:orig else $fen/../tei:rdg[. ne $fen])||')'}</td>
+                    <td>{(if ($fen//tei:choice) then $fen//tei:reg else $fen/string())||' (vs. '||
+                    (if ($fen/../tei:rdg[. ne $fen]/tei:choice) then $fen/../tei:rdg[. ne $fen]//tei:reg else $fen/../tei:rdg[. ne $fen])||')'}</td>
                     <td>{$fen/substring(@wit, 2)}</td>
                     <td>{$fen/ancestor::*[name()='div'[1]]//tei:rdg[@wit = $fen/@wit]/substring(@hand, 2)}</td>
                     <td>{$author/tei:persName/string()}</td>
