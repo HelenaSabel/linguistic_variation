@@ -33,7 +33,7 @@ return
             let $author := $poets[@xml:id = $fen/ancestor::*[name()='div'[1]]//tei:name/substring(@ref,2)]
             return
                 <tr>
-                    <td>{$fenomenos[@xml:id =  $fen/substring(@ana, 2)]//comment()/string()}</td>
+                    <td>{$fenomenos[@xml:id =  $fen/substring(@ana, 2)]//comment()[2]/string()}</td>
                     <td>{(if ($fen//tei:choice) then $fen//tei:orig else $fen/string())||' (vs. '||
                     (if ($fen/../tei:rdg[. ne $fen]/tei:choice) then $fen/../tei:rdg[. ne $fen]//tei:orig else $fen/../tei:rdg[. ne $fen])||')'}</td>
                     <td>{$fen/substring(@wit, 2)}</td>
