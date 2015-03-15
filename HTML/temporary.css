@@ -1,0 +1,90 @@
+
+body{
+    background-color:gray;
+    margin:50px 100px 5px;
+    font-family:verdana;
+
+}
+
+
+h1{
+    font-weight:bold;
+    text-align:center;
+    color:darkred;
+    font-stretch:expanded;
+}
+
+
+
+h2{
+    text-align:center;
+    font-weight:bold;
+    color:black;
+    background-color:darkred;
+}
+
+h3{
+    text-align:center;
+    font-weight:bold;
+    color:darkred;
+    background-color:DimGray;
+}
+
+p{
+    text-align:justify;
+    text-indent:30px;
+    line-height:150%;
+}
+
+
+a:link{
+    color:darkred
+}
+a:visited{
+    color:DimGray
+}
+a:hover{
+    background-color:lightgrey
+}
+a:active{
+    color:magenta
+}
+
+table{
+    background-color:silver;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+table,
+th,
+td{
+    border:2px solid darkred;
+    border-collapse:collapse;
+    padding:3px;
+
+}
+
+td.intro{
+    background-color:lightgrey;
+}
+
+
+table.sortable th{
+    color:black;
+    white-space:nowrap;
+    background-color:DimGray;
+}
+
+tbody td:nth-child(2){
+     font-style:italic;}
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after{
+    content:url(../images/arrow.svg)
+}
+
+table.sortable th > svg{
+    display:inline;
+}
