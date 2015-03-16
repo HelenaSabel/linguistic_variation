@@ -3,29 +3,39 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
     <xsl:output method="xml" indent="yes"/>
     <!-- Stylesheet to tokenize a parallel segmentated transcription.
+        
         Input:
-        <l n="19">
-            <app>
-                <rdg wit="#A">por q<ex>ue</ex> me leixades assi</rdg>
-                <rdg wit="#B">p<ex>or</ex> q<ex>ue</ex> me leixades assy</rdg>
-            </app>
-        </l>
+            
+            <l n="6">
+                <app>
+                    <rdg wit="#A">tanto uiuer per nulla ren</rdg>
+                    <rdg wit="#B">tanto muer per nulha re<ex>n</ex></rdg>
+                    <rdg wit="#V">tanto ouuer per nulla te<ex>n</ex></rdg>
+                </app>
+            </l>
         
         Output:
-        <l n="19">
-            <app>
-                <rdg wit="#A">por</rdg>
-                <rdg wit="#B">p<ex>or</ex></rdg>
-            </app>
-            q<ex>ue</ex> me leixades <app>
-                <rdg wit="#A">assi</rdg>
-                <rdg wit="#B">assy</rdg>
-            </app>
-        </l>
+            <l n="6">
+                tanto
+                <app>
+                    <rdg wit="#A">uiuer</rdg>
+                    <rdg wit="#B">muer</rdg>
+                    <rdg wit="#V">ouuer</rdg>
+                </app>
+                per 
+                <app>
+                    <rdg wit="#A #V">nulla</rdg>
+                    <rdg wit="#B">nulha</rdg>
+                </app>
+                <app>
+                    <rdg wit="#A">ren</rdg>
+                    <rdg wit="#B">re<ex>n</ex></rdg>
+                    <rdg wit="#V">te<ex>n</ex></rdg>
+                </app>
+            </l>
         
         We transform any children of <rdg> to strings before doing the tokenization.
-        Credits: the insertion of <gap/> elements in the tokenization module was a contribution
-        by David Birnbaum (djbpitt@gmail.com, http://www.obdurodon.org) -->
+     -->
     
     
     <!-- Main template -->
@@ -43,7 +53,7 @@
         </xsl:copy>
     </xsl:template>
     <!-- Elements with children but no attributes-->
-    <xsl:template match="ex|am|add|del" mode="string">
+    <xsl:template match="ex|am|add[not(@*)]|del[not(@*)]" mode="string">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
@@ -54,9 +64,10 @@
     </xsl:template>
     <!-- Empty elements with attributes-->
     <xsl:template match="gap" mode="string">
+        <xsl:choose>
+            <xsl:when test="current()[@reason]">
         <xsl:text>&lt;</xsl:text>
-        <xsl:value-of select="name()"/>
-        <xsl:text>&gt;</xsl:text>
+        <xsl:value-of select="name()"/>    
         <xsl:for-each select="@*">            
             <!-- Since we used white spaces to delimit the tokens, we introduced here an 
                 asterisk instead that is replaced later on-->
@@ -67,9 +78,16 @@
             <xsl:text>"</xsl:text>
         </xsl:for-each>
         <xsl:text>/&gt;</xsl:text>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:text>&lt;</xsl:text>
+                <xsl:value-of select="name()"/>
+                <xsl:text>/&gt;</xsl:text>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <!-- Elements with attributes and children-->
-    <xsl:template match="hi" mode="string">
+    <xsl:template match="hi|del[@*]|add[@*]" mode="string">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:for-each select="@*">
@@ -113,7 +131,7 @@
                     <app>
                         <rdg wit="#A"><xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
                             disable-output-escaping="yes"/></rdg>
-                        <rdg wit="#B #V"><xsl:value-of select="$Btokens[current()]"
+                        <rdg wit="#B #V"><xsl:value-of select="replace($Btokens[current()], '\*', ' ')"
                             disable-output-escaping="yes"/></rdg>
                     </app>
                 </xsl:when>
@@ -121,7 +139,7 @@
                     <app>
                         <rdg wit="#A #B"><xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
                             disable-output-escaping="yes"/></rdg>
-                        <rdg wit="#V"><xsl:value-of select="$Btokens[current()]"
+                        <rdg wit="#V"><xsl:value-of select="replace($Vtokens[current()], '\*', ' ')"
                             disable-output-escaping="yes"/></rdg>
                     </app>
                 </xsl:when>
@@ -129,7 +147,7 @@
                     <app>
                         <rdg wit="#A #V"><xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
                             disable-output-escaping="yes"/></rdg>
-                        <rdg wit="#B"><xsl:value-of select="$Btokens[current()]"
+                        <rdg wit="#B"><xsl:value-of select="replace($Btokens[current()], '\*', ' ')"
                             disable-output-escaping="yes"/></rdg>
                     </app>
                 </xsl:when>
@@ -149,7 +167,7 @@
                         <rdg wit="#B">
                             <xsl:choose>
                                 <xsl:when test="$Btokens[current()]">
-                                    <xsl:value-of select="$Btokens[current()]"
+                                    <xsl:value-of select="replace($Btokens[current()], '\*', ' ')"
                                         disable-output-escaping="yes"/>
                                 </xsl:when>
                                 <xsl:otherwise>
@@ -160,7 +178,7 @@
                         <rdg wit="#V">
                             <xsl:choose>
                                 <xsl:when test="$Vtokens[current()]">
-                                    <xsl:value-of select="$Vtokens[current()]"
+                                    <xsl:value-of select="replace($Vtokens[current()],'\*', ' ')"
                                         disable-output-escaping="yes"/>
                                 </xsl:when>
                                 <xsl:otherwise>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schemas/feature-library.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="../schemas/feats.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -25,7 +25,7 @@
         <body>
             <ab/>
 
-            <fLib n="Linguistic Variants">
+            <fLib n="Linguistic variants">
                 <f name="linguisticVariant" xml:id="ling"/>
                 <f name="morphosyntactic" xml:id="morph"/>
                 <f name="phonetic" xml:id="phon"/>
@@ -86,11 +86,11 @@
                     <!--Variation concerning diphthongs-->
                 </fs>
                 <fs xml:id="foi" feats="#foi1 #past #irregV #vb #morph #dipthong #phon #ling">
-                    <!--"foi" como P1 do perfeito de 'seer'-->
+                    <!--P1 do perfeito de 'seer' en "foi"-->
                     <!--P1 of perfect indicative of 'seer' as "foi"-->
                 </fs>
                 <fs xml:id="fui" feats="#fui1 #past #irregV #vb #morph #dipthong #phon #ling">
-                    <!--"fui" como P1 do perfeito de 'seer'-->
+                    <!--P1 do perfeito de 'seer' en "fui"-->
                     <!--P1 of perfect indicative of 'seer' as "fui"-->
                 </fs>
                 <fs xml:id="xe" feats="#palSe #pr #morph #pal #phon #ling">
@@ -122,7 +122,7 @@
                     <!--Use of "par" as preposition-->
                 </fs>
                 <fs xml:id="per" feats="#Per #prep #ling #lex">
-                    <!--Uso da "preposición "per"-->
+                    <!--Uso da preposición "per"-->
                     <!--Use of the form "per"-->
                 </fs>
                 <fs xml:id="ora" feats="#Ora #adv #ling #lex">
