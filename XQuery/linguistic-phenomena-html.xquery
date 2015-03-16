@@ -32,12 +32,12 @@ return
             {for $fen in $ling
             let $author := $poets[@xml:id = $fen/ancestor::*[name()='div'[1]]//tei:name/substring(@ref,2)]
             return
-            for $ana in $fen/tokenize(replace(@ana, '#', ''), ' ')
+            for $ana in $fen/tokenize(replace(@ana, '#', ''), ' ')[$fenomenos[@feats[contains(., '#ling')]]/@xml:id]
             return
                 <tr>
                     <td class="intro">{$fenomenos[@xml:id = $ana]//comment()[2]/string()}</td>
                     <td>{(if ($fen//tei:choice) then $fen//tei:reg else $fen/string())||' (vs. '||
-                    (if ($fen/../tei:rdg[. ne $fen]/tei:choice) then $fen/../tei:rdg[. ne $fen]//tei:reg else $fen/../tei:rdg[. ne $fen])||')'}</td>
+                    (if ($fen/../tei:rdg[not($fen)]/tei:choice) then $fen/../tei:rdg[not($fen)]//tei:reg else $fen/../tei:rdg[not($fen)])||')'}</td>
                     <td>{$fen/substring(@wit, 2)}</td>
                     <td>{$fen/ancestor::*[name()='div'[1]]//tei:rdg[@wit = $fen/@wit]/substring(@hand, 2)}</td>
                     <td>{$author/tei:persName/string()}</td>
