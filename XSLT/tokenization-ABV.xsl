@@ -104,6 +104,41 @@
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
     
+    <xsl:template match="choice" mode="string">
+        <xsl:text>&lt;</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
+        <xsl:apply-templates select="node()"/>
+        <xsl:text>&lt;/</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="reg|orig">
+        <xsl:text>&lt;</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
+        <xsl:choose>
+            <xsl:when test="contains(., ' ')">
+                <xsl:value-of select="replace(., ' ', '*')"/>
+            </xsl:when>
+            <xsl:otherwise>                
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+        <xsl:text>&lt;/</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
+    </xsl:template>
+    <xsl:template match="orig/ex">
+        <xsl:text>&lt;</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>  
+        <xsl:apply-templates select="node()"/>
+        <xsl:text>&lt;/</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
+    </xsl:template>
     
     <!-- Tokenization -->
     <xsl:template match="node()|@*" mode="tokens">
