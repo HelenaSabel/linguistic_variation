@@ -55,9 +55,12 @@ return
             return
                 <tr>
                     <td class="intro">{$fenomenos[@xml:id = $ana]/@n/string()}</td>
-                    <td>{(if ($fen//tei:choice) then $fen//tei:reg else $fen/string())||' (vs. '||
+                    <td>{(if ($fen//tei:choice) then $fen//tei:reg else 
+                    (if (string-length($fen) = 0) then 'omisión'
+                    else $fen/string()))||' (vs. '||
                     (if ($fen/../*[not(@wit = $fen/@wit)]/tei:choice) then $fen/../*[not(@wit = $fen/@wit)]//tei:reg/string() 
-                    else $fen/../*[not(@wit = $fen/@wit)]/string())||')'}</td>
+                    else 
+                    if (string-length($fen/../*[not(@wit = $fen/@wit)]) = 0) then 'omisión' else $fen/../*[not(@wit = $fen/@wit)]/string())||')'}</td>
                     <td>{$fen/substring(@wit, 2)}</td>
                     <td>{$fen/ancestor::*[name()='div'[1]]//tei:rdg[@wit = $fen/@wit]/substring(@hand, 2)}</td>
                     <td>{$author/tei:persName/string()}</td>

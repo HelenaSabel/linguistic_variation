@@ -18,7 +18,7 @@
             </xsl:attribute>
         </xsl:if>
         <xsl:attribute name="n">
-            <xsl:value-of select="../comment()[1]"/>
+            <xsl:value-of select="../comment()[2]"/>
         </xsl:attribute>
     </xsl:template>
 </xsl:stylesheet>
