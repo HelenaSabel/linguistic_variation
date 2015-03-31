@@ -29,6 +29,10 @@
                                     <xsl:value-of select="regex-group(1)"/>
                                 </xsl:matching-substring>
                             </xsl:analyze-string>
+                            <xsl:element name="locus">
+                                <xsl:attribute name="from"/>
+                                <xsl:attribute name="to"/>
+                            </xsl:element>
                         </xsl:element>
                         <xsl:element name="rdg">
                             <xsl:attribute name="wit">#B</xsl:attribute>
@@ -38,6 +42,10 @@
                                     <xsl:value-of select="regex-group(2)"/>
                                 </xsl:matching-substring>
                             </xsl:analyze-string>
+                            <xsl:element name="locus">
+                                <xsl:attribute name="from"/>
+                                <xsl:attribute name="to"/>
+                            </xsl:element>
                         </xsl:element>
                     </xsl:element>
                 </xsl:element>

@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tei>
+<?xml-model href="schemas/tei_tese.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Edición sinóptica (parcial) da lírica profana galego-portuguesa</title>
+            <author>
+               <name>Helena Bermúdez Sabel</name>
+            </author>
+            <respStmt>
+               <name/>
+               <resp>Todos os textos foron marcados por <name>Helena Bermudez Sabel</name>.
+                  Este traballo fai parte da súa tese de doutoramente, dirixida polas
+                  profesoras <name>Pilar Lorenzo Gradín</name> e <name>Mariña Arbor
+                     Aldea</name>
+               </resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Universidade de Santiago de Compostela</authority>
+            <availability>
+               <licence>
+                  <ref target="http://creativecommons.org/licenses/by-nc/3.0/">Creative
+                     Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC
+                     3.0)</ref>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note/>
+         </notesStmt>
+         <sourceDesc>
+            <p>Transcrións realizadas tomando como base o traballo realizado por <name>Mariña
+               Arbor Aldea</name> e <name>Antonio Fernández Guiadanes</name> a quen
+               agradecemos profundamente que nos cedesem o seu trabalho previamente á súa
+               publicación.</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+      
+      <profileDesc>
+         <langUsage>
+            <language ident="gl">Galego-portugués</language>
+            <language ident="pt"/>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <listWit>
+               <witness xml:id="A">Cancioneiro da Ajuda</witness>
+               <witness xml:id="B">Cancioneiro da Biblioteca Nacional</witness>
+            </listWit>
+         </div>
+      </front>
+      <body>
      <div type="poem" corresp="#A40B152">
       <l n="1">
          <app>
@@ -5510,4 +5569,6 @@
          </app>poder 
       </l>
    </div>
-</tei>
+      </body>
+   </text>
+</TEI>
