@@ -126,7 +126,7 @@
                   </rdg>
                </app>eu <app>
                   <rdg wit="#A">faço</rdg>
-                  <rdg wit="#B">faç'</rdg>
+                  <rdg wit="#B" ana="#irreg">faç'</rdg>
                </app>en <app>
                   <rdg wit="#A" ana="#irreg">u<seg ana="#irreg">u</seg>s</rdg>
 <rdg wit="#B" ana="#irreg">u<seg ana="#irreg"><ex>os</ex></seg>
@@ -147,7 +147,7 @@
                         <reg>deuede-la</reg>
                      </choice>
                   </rdg>
-                  <rdg wit="#B">
+                  <rdg wit="#B" ana="#puf">
                      <choice>
                         <orig>deuedelo</orig>
                         <reg>deuede-lo</reg>
@@ -230,9 +230,9 @@
                </app>
                <app>
                   <rdg wit="#A">iac'</rdg>
-                  <rdg wit="#B">caya</rdg>
+                  <rdg wit="#B" ana="#error">caya</rdg>
                </app>en <app>
-                  <rdg wit="#A">praçer</rdg>
+                  <rdg wit="#A" ana="#lingR">praçer</rdg>
                   <rdg wit="#B" ana="#irreg">p<ex>ra</ex>zer</rdg>
                </app>
             </l>
@@ -251,7 +251,7 @@
                </app>
                <app>
                   <rdg wit="#A">sei</rdg>
-                  <rdg wit="#B">sey</rdg>
+                  <rdg wit="#B" ana="#irreg">sey</rdg>
                </app>
             </l>
             <l n="12">
@@ -280,8 +280,9 @@
             <l n="14">
                <app>
                   <rdg wit="#A">e</rdg>
-                  <rdg wit="#B">ca</rdg>
+                  <rdg wit="#B" ana="#error">ca</rdg>
                </app>eu no<ex>n</ex> 
+<!--               FIQUEI AQUI-->
                <app>
                   <rdg wit="#A">posso</rdg>
                   <rdg wit="#B">poss'</rdg>
