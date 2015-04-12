@@ -4,12 +4,18 @@
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="xs" version="2.0">
     <xsl:output method="xml" indent="yes"/>
-    <xsl:template match="node()|@*">
+    <xsl:template match="/">
+        <xsl:variable name="ana">
+            <xsl:apply-templates mode="ana"/>
+        </xsl:variable>
+        <xsl:apply-templates select="$ana" mode="correction"/>
+    </xsl:template>
+    <xsl:template match="node()|@*" mode="ana">
         <xsl:copy>
-            <xsl:apply-templates select="node()|@*"/>
+            <xsl:apply-templates select="node()|@*" mode="ana"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="app">
+    <xsl:template match="app" mode="ana">
         <xsl:element name="app">
             <xsl:element name="rdg">
                 <xsl:attribute name="wit">
@@ -34,6 +40,9 @@
                     <xsl:if test="contains(rdg[1], 'll') and contains(rdg[2],'lh')">
                         <xsl:text>#reg</xsl:text>
                     </xsl:if>
+                    <xsl:if test="rdg[1][@gap='error']">
+                        <xsl:text>#error</xsl:text>
+                    </xsl:if>
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[1]/node()"/>
             </xsl:element>
@@ -45,7 +54,13 @@
                     <xsl:if test="rdg[2][ex] and rdg[1][not(ex)]">
                         <xsl:text>#irreg</xsl:text>
                     </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'mia') and contains(rdg[2], 'mha')">
+                    <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mh')">
+                        <xsl:text>#trend</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[1], 'mj') and contains(rdg[2], 'mh')">
+                        <xsl:text>#trend</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mj')">
                         <xsl:text>#trend</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'me') and contains(rdg[2], 'mj')">
@@ -54,9 +69,34 @@
                     <xsl:if test="contains(rdg[1], 'lle') and contains(rdg[2], 'lhi')">
                         <xsl:text>#dat</xsl:text>
                     </xsl:if>
+                    <xsl:if test="rdg[2][@gap='error']">
+                        <xsl:text>#error</xsl:text>
+                    </xsl:if>                    
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[2]/node()"/>
             </xsl:element>
         </xsl:element>
+    </xsl:template>
+    <xsl:template match="node()|@*" mode="correction">
+        <xsl:copy>
+            <xsl:apply-templates select="node()|@*" mode="correction"/>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template match="rdg/@*" mode="correction">
+        <xsl:attribute name="wit">
+            <xsl:value-of select="../@wit"/>
+        </xsl:attribute>
+        <xsl:if test="../@ana ne ''">
+        <xsl:attribute name="ana">
+            <xsl:choose>
+                <xsl:when test="matches(../@ana,'\w#')">
+                    <xsl:value-of select="replace(../@ana,'(\w)#', '$1 #')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="../@ana"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:attribute>
+        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>
