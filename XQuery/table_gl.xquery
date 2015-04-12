@@ -1,6 +1,6 @@
 xquery version "3.0";
-declare namespace tei="http://www.tei-c.org/ns/1.0";
-declare option exist:serialize "method=html5 media-type=text/html omit-xml-declaration=yes indent=yes";
+declare namespace tei="http://www.tei-c.org/ns/1.0";(:
+declare option exist:serialize "method=html5 media-type=text/html omit-xml-declaration=yes indent=yes";:)
 let $fenomenos := doc('/db/exemplos/feature_library.xml')//tei:fs
 let $cantigas := doc('/db/exemplos/A1-A4_draft.xml')//tei:div[@type='poem']
 let $ling := $cantigas//tei:rdg[tokenize(replace(@ana, '#', ''), ' ') = $fenomenos[@feats[contains(., '#ling')]]/@xml:id]
@@ -9,42 +9,27 @@ let $error := $cantigas//tei:rdg[tokenize(replace(@ana, '#', ''), ' ') = $fenome
 let $poets := doc('/db/exemplos/corpus_autores.xml')//tei:person
 
 (: Problemas que resolver: 
-    1. Tratar os elementos <gap> e omissons
-    2. Formatar <ex> 
+    1. Formatar <ex> 
+        :)
     
-    :)
-
-
 return 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Estudos lingüísticos</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="CSS/index.css" rel="stylesheet" type="text/css" />
-        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript">/**/</script>
-        <script src="JavaScript/menu.js" type="text/javascript">/**/</script>
-        <script type="text/javascript" src="javaScript/sorttable.js">/**/</script>
+       <title>Estudos lingüísticos</title>
     </head>
     <body>
-        <h1>Lírica galego-portuguesa</h1>
-        <div class="body">
-            <!--#include virtual="SSI/menu.html" -->
-            <div class="banner"><img src="images/banner-ms.jpg" alt="banner" /></div>
-            <div class="container">
-                <div class="main">
-                <h2 id="ling">Variaçom lingüística</h2>
+        <h2 id="ling">Variaçom lingüística</h2>
         <table class="sortable">
             <thead>
                 <tr class="head">
-                    <th>Fenómeno</th>
-                    <th>Variante</th>
-                    <th>Testemunho</th>
-                    <th>Copista</th>
-                    <th>Autor</th>
-                    <th>Período</th>
-                    <th>Cantiga</th>
-                    <th>Linha</th>
+                    <th>Fenómeno </th>
+                    <th>Variante </th>
+                    <th>Testemunho </th>
+                    <th>Copista </th>
+                    <th>Autor </th>
+                    <th>Período </th>
+                    <th>Cantiga </th>
+                    <th>Linha </th>
                 </tr>
             </thead>
             <tbody>
@@ -75,14 +60,14 @@ return
         <table class="sortable">
             <thead>
                 <tr class="head">
-                    <th>Fenómeno</th>
-                    <th>Variante</th>
-                    <th>Testemunho</th>
-                    <th>Copista</th>
-                    <th>Autor</th>
-                    <th>Período</th>
-                    <th>Cantiga</th>
-                    <th>Linha</th>
+                    <th>Fenómeno </th>
+                    <th>Variante </th>
+                    <th>Testemunho </th>
+                    <th>Copista </th>
+                    <th>Autor </th>
+                    <th>Período </th>
+                    <th>Cantiga </th>
+                    <th>Linha </th>
                 </tr>
             </thead>
             <tbody>
@@ -110,14 +95,14 @@ return
         <table class="sortable">
             <thead>
                 <tr class="head">
-                    <th>Fenómeno</th>
-                    <th>Variante</th>
-                    <th>Testemunho</th>
-                    <th>Copista</th>
-                    <th>Autor</th>
-                    <th>Período</th>
-                    <th>Cantiga</th>
-                    <th>Linha</th>
+                    <th>Fenómeno </th>
+                    <th>Variante </th>
+                    <th>Testemunho </th>
+                    <th>Copista </th>
+                    <th>Autor </th>
+                    <th>Período </th>
+                    <th>Cantiga </th>
+                    <th>Linha </th>
                 </tr>
             </thead>
             <tbody>
@@ -141,16 +126,5 @@ return
              }
              </tbody>
         </table>
-        </div>
-        <div class="rightSide">
-            <h3>Conteúdos</h3>
-                    <ul>
-                        <li><a href="#ling">Variaçom lingüística</a></li>
-                        <li><a href="#graph">Variaçom gráfica</a></li>
-                        <li><a href="#error">Erros de cópia</a></li>
-                    </ul>
-        </div>
-        </div>
-        </div>
     </body>
     </html>

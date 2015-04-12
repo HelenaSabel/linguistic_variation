@@ -43,6 +43,12 @@
                     <xsl:if test="rdg[1][@gap='error']">
                         <xsl:text>#error</xsl:text>
                     </xsl:if>
+                    <xsl:if test="rdg[1][@gap='economy']">
+                        <xsl:text>#material</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[1][@gap='damage']">
+                        <xsl:text>#material</xsl:text>
+                    </xsl:if>
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[1]/node()"/>
             </xsl:element>
@@ -71,6 +77,12 @@
                     </xsl:if>
                     <xsl:if test="rdg[2][@gap='error']">
                         <xsl:text>#error</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[2][@gap='economy']">
+                        <xsl:text>#material</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[2][@gap='damage']">
+                        <xsl:text>#material</xsl:text>
                     </xsl:if>                    
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[2]/node()"/>
