@@ -114,7 +114,7 @@
                     <!--P1 do perfeito em '-i'-->
                     <!--Perfect indicative personal ending of P1 as "-i" -->
                 </fs>
-                <fs xml:id="dNas" feats="#deNas #phon #ling" n="Desnasalización">
+                <fs xml:id="denas" feats="#deNas #phon #ling" n="Desnasalización">
                     <!--Desnasalização-->
                     <!--Denasalization-->
                 </fs>
@@ -172,6 +172,7 @@
                 <f name="tendency" xml:id="tendency"/>
                 <f name="linguisticRelevance" xml:id="lingRelevance"/>
                 <f name="vus" xml:id="uus"/>
+                <f name="punctuation" xml:id="punctuation"/>
             </fLib>
 
             <fvLib n="Graphic Variants">
@@ -204,6 +205,10 @@
                     n="Variante gráfica con posíbeis implicacións lingüísticas">
                     <!--Variante gráfica com possíveis implicações linguísticas-->
                     <!--Linguistically meaningful graphic variant-->
+                </fs>
+                <fs xml:id="punct" feats="#punctuation #graph">
+                    <!--Pontuação-->
+                    <!--Punctuation-->
                 </fs>
             </fvLib>
 

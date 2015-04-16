@@ -49,6 +49,9 @@
                     <xsl:if test="rdg[1][@gap='damage']">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>
+                    <xsl:if test="contains(rdg[1], '.')">
+                        <xsl:text>#punct</xsl:text>
+                    </xsl:if>
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[1]/node()"/>
             </xsl:element>
@@ -67,7 +70,7 @@
                         <xsl:text>#trend</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mj')">
-                        <xsl:text>#trend</xsl:text>
+                        <xsl:text>#irreg</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'me') and contains(rdg[2], 'mj')">
                         <xsl:text>#dat</xsl:text>
