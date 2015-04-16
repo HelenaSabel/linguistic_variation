@@ -70,7 +70,7 @@
                         <xsl:text>#trend</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mj')">
-                        <xsl:text>#irreg</xsl:text>
+                        <xsl:text>#trend</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'me') and contains(rdg[2], 'mj')">
                         <xsl:text>#dat</xsl:text>
