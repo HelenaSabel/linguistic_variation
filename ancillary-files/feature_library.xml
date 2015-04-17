@@ -67,76 +67,95 @@
 
 
             <fvLib n="Linguistic Variants">
-                <fs xml:id="dat" feats="#datCon #pr #morph #ling" n="Contaminación do dativo">
+                <fs xml:id="dat"
+                feats="#datCon #pr #morph #ling"
+                n="Contaminação do dativo">
                     <!--Contaminação do dativo-->
                     <!--Dative contamination-->
                 </fs>
-                <fs xml:id="langT" feats="#transfer #ling" n="Interfererencia lingüística">
+                <fs xml:id="langT"
+                feats="#transfer #ling"
+                n="Interfererência linguística">
                     <!--Interfererência linguística-->
                     <!--Language transfer-->
                 </fs>
-                <fs xml:id="o" feats="#habere #past #irregV #vb #morph #ling"
-                    n="Tema de perfeito de 'haver' en &#34;o-&#34;">
+                <fs xml:id="o"
+                feats="#habere #past #irregV #vb #morph #ling"
+                n="Tema de perfeito de 'haver' em 'o-'">
                     <!--Tema de perfeito de 'haver' em 'o-'-->
                     <!--Past stem of 'haver' as 'o-'-->
                 </fs>
-                <fs xml:id="dip" feats="#dipthong #phon #ling"
-                    n="Variación relacionada coa diptongación">
+                <fs xml:id="dip"
+                feats="#dipthong #phon #ling"
+                n="Variação relacionada com a ditongação">
                     <!--Variação relacionada com a ditongação-->
                     <!--Variation concerning diphthongs-->
                 </fs>
-                <fs xml:id="foi" feats="#foi1 #past #irregV #vb #morph #dipthong #phon #ling"
-                    n="P1 do perfeito de 'seer' en &#34;foi&#34;">
+                <fs xml:id="foi"
+                feats="#foi1 #past #irregV #vb #morph #dipthong #phon #ling"
+                n="P1 do perfeito de 'seer' em 'foi'">
                     <!--P1 do perfeito de 'seer' em 'foi'-->
                     <!--P1 of perfect indicative of 'seer' as 'foi'-->
                 </fs>
-                <fs xml:id="fui" feats="#fui1 #past #irregV #vb #morph #dipthong #phon #ling"
-                    n="P1 do perfeito de 'seer' en &#34;fui&#34;">
+                <fs xml:id="fui"
+                feats="#fui1 #past #irregV #vb #morph #dipthong #phon #ling"
+                n="P1 do perfeito de 'seer' en 'fui'">
                     <!--P1 do perfeito de 'seer' en 'fui'-->
                     <!--P1 of perfect indicative of 'seer' as 'fui'-->
                 </fs>
-                <fs xml:id="xe" feats="#palSe #pr #morph #pal #phon #ling"
-                    n="Palatalización do pronome 'se'">
+                <fs xml:id="xe"
+                feats="#palSe #pr #morph #pal #phon #ling"
+                n="Palatalização do pronome 'se'">
                     <!--Palatalização do pronome 'se'-->
                     <!--Palatalized 'se'-->
                 </fs>
-                <fs xml:id="min" feats="#proNas #nasal #phon #pr #ling"
-                    n="Nasalización progresiva de 'mi'">
+                <fs xml:id="min"
+                feats="#proNas #nasal #phon #pr #ling"
+                n="Nasalização progressiva de 'mi'">
                     <!--Nasalização progressiva de 'mi'-->
                     <!--Progressive nasalization of 'mi'-->
                 </fs>
-                <fs xml:id="yod" feats="#eYod #phon #ling" n="Presenza de iode epentético">
+                <fs xml:id="yod"
+                feats="#eYod #phon #ling"
+                n="Presença de iode epentético">
                     <!--Presença de iode epentético-->
                     <!--Epenthetic yod-->
                 </fs>
-                <fs xml:id="p1i" feats="#p1I #past #irregV #vb #morph #ling"
-                    n="P1 do perfeito en &#34;-i&#34;">
+                <fs xml:id="p1i"
+                feats="#p1I #past #irregV #vb #morph #ling"
+                n="P1 do perfeito em '-i'">
                     <!--P1 do perfeito em '-i'-->
                     <!--Perfect indicative personal ending of P1 as "-i" -->
                 </fs>
-                <fs xml:id="denas" feats="#deNas #phon #ling" n="Desnasalización">
+                <fs xml:id="denas" feats="#deNas #phon #ling" n="Desnasalização">
                     <!--Desnasalização-->
                     <!--Denasalization-->
                 </fs>
-                <fs xml:id="loan" feats="#Loan #ling" n="Empréstimo lingüístico">
+                <fs xml:id="loan" feats="#Loan #ling" n="Empréstimo linguístico">
                     <!--Empréstimo linguístico-->
                     <!--Loan-->
                 </fs>
-                <fs xml:id="par" feats="#Par #prep #ling #lex" n="Uso da preposición &#34;par&#34; ">
+                <fs xml:id="par"
+                feats="#Par #prep #ling #lex"
+                n="Uso da preposição 'par' ">
                     <!--Uso da preposição 'par' -->
                     <!--Use of "par" as preposition-->
                 </fs>
-                <fs xml:id="per" feats="#Per #prep #ling #lex" n="Uso da preposición &#34;per&#34;">
+                <fs xml:id="per"
+                feats="#Per #prep #ling #lex"
+                n="Uso da preposição 'per'">
                     <!--Uso da preposição 'per'-->
                     <!--Use of the form 'per'-->
                 </fs>
-                <fs xml:id="ora" feats="#Ora #adv #ling #lex"
-                    n="Uso do adverbio temporal &#34;ora&#34;">
+                <fs xml:id="ora"
+                feats="#Ora #adv #ling #lex"
+                n="Uso do advérbio temporal 'ora'">
                     <!--Uso do advérbio temporal 'ora'-->
                     <!--Use of 'ora' as a temporal adverb-->
                 </fs>
-                <fs xml:id="agora" feats="#Agora #adv #ling #lex"
-                    n="Uso do adverbio temporal &#34;agora&#34;">
+                <fs xml:id="agora"
+                feats="#Agora #adv #ling #lex"
+                n="Uso do advérbio temporal 'agora'">
                     <!--Uso do advérbio temporal 'agora'-->
                     <!--Use of 'agora' as a temporal adverb-->
                 </fs>
@@ -156,7 +175,7 @@
                     <!--Doblete léxico-->
                     <!--Cognate-->
                 </fs>
-                <fs xml:id="puf">
+                <fs xml:id="puf" n="Dúvida">
                     <!--Dúvida-->
                     <!--Doubt-->
                 </fs>
@@ -176,15 +195,17 @@
             </fLib>
 
             <fvLib n="Graphic Variants">
-                <fs xml:id="archG" feats="#archaism #graph" n="Grafía arcaica">
+                <fs xml:id="archG" feats="#archaism #graph" n="Grafia arcaica">
                     <!--Grafia arcaica-->
                     <!--Archaic spelling-->
                 </fs>
-                <fs xml:id="vus" feats="#uus #graph" n="Desenvolvemento de abreviaturas">
-                    <!--Desenvolvimento de abreviaturas-->
-                    <!--Abreviatures expansion-->
+                <fs xml:id="vus"
+                feats="#uus #graph"
+                n="Desenvolvimento de abreviaturas do modelo">
+                    <!--Desenvolvimento de abreviaturas do modelo-->
+                    <!--Abreviatures expansion from the model-->
                 </fs>
-                <fs xml:id="innova" feats="#innovation #graph" n="Innovación gráfica">
+                <fs xml:id="innova" feats="#innovation #graph" n="Inovação gráfica">
                     <!--Inovação gráfica-->
                     <!--Innovatory spelling-->
                 </fs>
@@ -192,21 +213,23 @@
                     <!--Variante gráfica regular-->
                     <!--Regular graphic variant-->
                 </fs>
-                <fs xml:id="irreg" feats="#irregular #graph"
-                    n="Variante gráfica con distribución irregular ">
+                <fs xml:id="irreg"
+                feats="#irregular #graph"
+                n="Variante gráfica com distribuição irregular ">
                     <!--Variante gráfica com distribuição irregular -->
                     <!--Irregular graphic variant-->
                 </fs>
-                <fs xml:id="trend" feats="#tendency #graph" n="Tendencia ortográfica">
+                <fs xml:id="trend" feats="#tendency #graph" n="Tendência ortográfica">
                     <!--Tendência ortográfica-->
                     <!--Orthographic tendency (not completely regular)-->
                 </fs>
-                <fs xml:id="lingR" feats="#lingRelevance #graph"
-                    n="Variante gráfica con posíbeis implicacións lingüísticas">
+                <fs xml:id="lingR"
+                feats="#lingRelevance #graph"
+                n="Variante gráfica com possíveis implicações linguísticas">
                     <!--Variante gráfica com possíveis implicações linguísticas-->
                     <!--Linguistically meaningful graphic variant-->
                 </fs>
-                <fs xml:id="punct" feats="#punctuation #graph">
+                <fs xml:id="punct" feats="#punctuation #graph" n="Pontuação">
                     <!--Pontuação-->
                     <!--Punctuation-->
                 </fs>
@@ -219,26 +242,29 @@
             </fLib>
 
             <fvLib n="Scribal errors">
-                <fs xml:id="misread" feats="#misreading #Error" n="Erro de lectura do modelo">
+                <fs xml:id="misread"
+                feats="#misreading #Error"
+                n="Erro de leitura do modelo">
                     <!--Erro de leitura do modelo-->
                     <!--Misreading-->
                 </fs>
-                <fs xml:id="lingInt" feats="#lingInter #Error"
-                    n="Erro de copia con posíbeis implicacións lingüísticas">
+                <fs xml:id="lingInt"
+                feats="#lingInter #Error"
+                n="Erro de cópia com possíveis implicações linguísticas">
                     <!--Erro de cópia com possíveis implicações linguísticas-->
                     <!--Linguistically meaningful scribal error-->
                 </fs>
-                <fs xml:id="error" feats="#Error" n="Erro de copia">
+                <fs xml:id="error" feats="#Error" n="Erro de cópia">
                     <!--Erro de cópia-->
                     <!--Scribal error-->
                 </fs>
             </fvLib>
             <fvLib n="Equipolent Readings">
-                <fs xml:id="equip" n="Lección equipolente">
+                <fs xml:id="equip" n="Lição equipolente">
                     <!--Lição equipolente-->
                     <!--Equipolent reading-->
                 </fs>
-                <fs xml:id="material" n="Variante provocada polas condicións materiais">
+                <fs xml:id="material" n="Variante provocada pelas condições materiais">
                     <!--Variante provocada pelas condições materiais-->
                     <!--Variant caused by the material conditions-->
                 </fs>
