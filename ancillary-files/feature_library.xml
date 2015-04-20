@@ -61,6 +61,7 @@
                 <f name="agora" xml:id="Agora"/>
                 <f name="ora" xml:id="Ora"/>
                 <f name="ca" xml:id="Ca"/>
+                <f name="caC" ana="caC"/>
                 <f name="que" xml:id="Que"/>
                 <f name="cognate" xml:id="Cognate"/>
             </fLib>
@@ -162,6 +163,10 @@
                 <fs xml:id="ca" feats="#Ca #conj #ling" n="Uso de &#34;ca&#34; comparativo">
                     <!--Uso de "ca" comparativo-->
                     <!--Use of "ca" as a comparative conjunction-->
+                </fs>
+                <fs xml:id="caC" feats="#CaC #conj #ling" n="Uso de &#34;ca&#34; comparativo">
+                    <!--Uso de "ca" completivo-->
+                    <!--Use of "ca" as a complementizern-->
                 </fs>
                 <fs xml:id="que" feats="#Que #conj #ling" n="Uso de &#34;que&#34; comparativo">
                     <!--Uso de "que" comparativo-->

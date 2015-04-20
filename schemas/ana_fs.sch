@@ -9,13 +9,12 @@
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
     <pattern>
         <rule context="tei:l/tei:app">
-            <assert test="count(tei:rdg[@ana]) gt 0">@ana attribute missing</assert>
+            <assert test="count(tei:rdg[@ana]) gt 0">Falta @ana</assert>
         </rule>
         <rule context="tei:rdg">
             <assert
                 test="if (@ana) then tokenize(substring(@ana,2), '\s+') = $featureStructures else true()"
-                >The value of the @ana attribute does not occur in the list of feature
-                structures</assert>
+                >O atributo nom está na lista</assert>
             <assert test="@wit">It is mandatory to specify the witness</assert>
         </rule>
         <rule context="tei:div[@type='poem']">

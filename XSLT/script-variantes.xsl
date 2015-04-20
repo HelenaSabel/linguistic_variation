@@ -28,8 +28,8 @@
                     <xsl:if test="rdg[1][hi/@rend='guide']">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'ff') and not(contains(rdg[2],'ff'))">
-                        <xsl:text>#irreg</xsl:text>
+                    <xsl:if test="contains(rdg[1], 'soff') and not(contains(rdg[2],'soff'))">
+                        <xsl:text>#trend</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'uus') and contains(rdg[2],'os')">
                         <xsl:text>#irreg</xsl:text>
