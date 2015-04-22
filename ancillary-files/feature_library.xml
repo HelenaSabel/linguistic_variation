@@ -36,6 +36,8 @@
                 <f name="conjuction" xml:id="conj"/>
                 <f name="preposition" xml:id="prep"/>
                 <f name="adverb" xml:id="adv"/>
+                <f name="vowel" xml:id="vowel"/>
+                <f name="consonant" xml:id="consonant"/>
                 <f name="dativeContamination" xml:id="datCon"/>
                 <f name="irregularVerb" xml:id="irregV"/>
                 <f name="pastTheme" xml:id="past"/>
@@ -48,6 +50,7 @@
                 <f name="denasalization" xml:id="deNas"/>
                 <f name="allomorph" xml:id="allom"/>
                 <f name="apheresis" xml:id="apher"/>
+                <f name="crasis" xml:id="crasis"/>
                 <f name="palatalization" xml:id="pal"/>
                 <f name="foiP1" xml:id="foi1"/>
                 <f name="fuiP1" xml:id="fui1"/>
@@ -113,11 +116,11 @@
                 <fs xml:id="min"
                 feats="#proNas #nasal #phon #pr #ling"
                 n="Nasalização progressiva de 'mi'">
-                    <!--Nasalização progressiva de 'mi'-->
-                    <!--Progressive nasalization of 'mi'-->
+                    <!--Nasalização progressiva-->
+                    <!--Progressive nasalization-->
                 </fs>
                 <fs xml:id="yod"
-                feats="#eYod #phon #ling"
+                feats="#eYod #vowel #phon #ling"
                 n="Presença de iode epentético">
                     <!--Presença de iode epentético-->
                     <!--Epenthetic yod-->
@@ -135,6 +138,10 @@
                 <fs xml:id="loan" feats="#Loan #ling" n="Empréstimo linguístico">
                     <!--Empréstimo linguístico-->
                     <!--Loan-->
+                </fs>
+                <fs xml:id="cras" feats="#crasis #vowel #phon #ling">
+                   <!--Crase vocálica para evitar hiato-->
+                   <!--Crasis to avoid a hiatus-->
                 </fs>
                 <fs xml:id="par"
                 feats="#Par #prep #ling #lex"

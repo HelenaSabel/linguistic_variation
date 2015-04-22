@@ -32,7 +32,7 @@
                         <xsl:text>#trend</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'uus') and contains(rdg[2],'os')">
-                        <xsl:text>#irreg</xsl:text>
+                        <xsl:text>#vus</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'n') and contains(rdg[2],'nh')">
                         <xsl:text>#reg</xsl:text>
@@ -67,6 +67,12 @@
                         <xsl:text>#trend</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'mj') and contains(rdg[2], 'mh')">
+                        <xsl:text>#trend</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[1], 'ui') and contains(rdg[2], 'uj')">
+                        <xsl:text>#trend</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[2], 'hu')">
                         <xsl:text>#trend</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mj')">
