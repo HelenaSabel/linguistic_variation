@@ -2,17 +2,17 @@
 <?xml-model href="schemas/tei_tese.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
- <teiHeader>
+   <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Edición sinóptica (parcial) da lírica profana galego-portuguesa</title>
+            <title>Edição sinóptica (parcial) da lírica profana galego-portuguesa</title>
             <author>
                <name>Helena Bermúdez Sabel</name>
             </author>
             <respStmt>
                <name/>
-               <resp>Todos os textos foron marcados por <name>Helena Bermudez Sabel</name>. Este
-                  traballo fai parte da súa tese de doutoramente, dirixida polas profesoras
+               <resp>Todos os textos foram marcados por <name>Helena Bermúdez Sabel</name>. Este
+                  trabalho faz parte da sua tese de doutoramente, dirigida pelas professoras
                      <name>Pilar Lorenzo Gradín</name> e <name>Mariña Arbor Aldea</name>
                </resp>
             </respStmt>
@@ -30,9 +30,9 @@
             <note/>
          </notesStmt>
          <sourceDesc>
-            <p>Transcrións realizadas tomando como base o traballo realizado por <name>Mariña Arbor
-                  Aldea</name> e <name>Antonio Fernández Guiadanes</name> a quen agradecemos
-               profundamente que nos cedesem o seu trabalho previamente á súa publicación.</p>
+            <p>Transcrições realizadas tomando como base o trabalho realizado por <name>Mariña Arbor
+                  Aldea</name> e <name>Antonio Fernández Guiadanes</name> a quem agradecemos imenso
+               que nos cedessem o seu trabalho previamente à sua publicação.</p>
          </sourceDesc>
       </fileDesc>
       <encodingDesc>
@@ -41,7 +41,7 @@
 
       <profileDesc>
          <langUsage>
-            <language ident="gl">Galego-portugués</language>
+            <language ident="gl">Galego-português</language>
             <language ident="pt"/>
          </langUsage>
       </profileDesc>
@@ -90,8 +90,8 @@
                   <rdg wit="#B" ana="#irreg">de<ex>us</ex>
                   </rdg>
                </app>que <app>
-                  <rdg wit="#A" ana="#irreg">u<seg corresp="#irreg">u</seg>s</rdg>
-                  <rdg wit="#B" ana="#irreg">u<seg corresp="#irreg"><ex>os</ex></seg>
+                  <rdg wit="#A" ana="#irreg">u<seg ana="#irreg">u</seg>s</rdg>
+                  <rdg wit="#B" ana="#irreg">u<seg ana="#irreg"><ex>os</ex></seg>
                   </rdg>
                </app>fez <app>
                   <rdg wit="#A">mia</rdg>
@@ -905,7 +905,7 @@
                </app>
                <app>
                   <rdg wit="#A">eu esto feit' ouuer</rdg>
-                  <rdg wit="#B" ana="#irreg #equip">este penh<ex>or</ex> puser</rdg>
+                  <rdg wit="#B" ana="#equip">este penh<ex>or</ex> puser</rdg>
                </app>
             </l>
          </div>
@@ -3380,7 +3380,7 @@
                   <rdg wit="#B">Se</rdg>
                </app>
                <app>
-                  <rdg wit="#A" ana="#material"></rdg>
+                  <rdg wit="#A" ana="#material"/>
                   <rdg wit="#B">
                      <del rend="crossOut">u</del>
                   </rdg>
@@ -3486,7 +3486,7 @@
                <app>
                   <rdg wit="#A">q<ex>ue</ex>
                   </rdg>
-                  <rdg wit="#B" ana="#error"></rdg>
+                  <rdg wit="#B" ana="#error"/>
                </app>
                <app>
                   <rdg wit="#A">nunca</rdg>
@@ -3715,7 +3715,7 @@
                </app>
                <app>
                   <rdg wit="#A" ana="#punct">.</rdg>
-                  <rdg wit="#B"></rdg>
+                  <rdg wit="#B"/>
                </app>
                se no<ex>n</ex> cuidar 
       </l>
@@ -4162,7 +4162,7 @@
          ca 
                <app>
                   <rdg wit="#A" ana="#material"><add>a</add></rdg>
-                  <rdg wit="#B"></rdg>
+                  <rdg wit="#B"/>
                </app>
          todo me auen
                <app>
@@ -4275,7 +4275,7 @@
                </app>
             </l>
          </div>
-
+         <!--
          <div type="poem" corresp="#A31B146">
             <head>
                <title>
@@ -4406,13 +4406,13 @@
          no<ex>n</ex> 
                <app>
                   <rdg wit="#A">sei</rdg>
-                  <rdg wit="#B">me sei</rdg>
+                  <rdg wit="#B" ana="#puf">me sei</rdg>
                </app>
                <app>
                   <rdg wit="#A" ana="#irreg">
                      <ex>e</ex>
                   </rdg>
-                  <rdg wit="#B">guardar</rdg>
+                  <rdg wit="#B" ana="#puf">guardar</rdg>
                </app>se me no<ex>n</ex> ualuer 
       </l>
             <l n="13">
@@ -6030,7 +6030,7 @@
                </app>
                moyr' eu
             </l>
-         </div>
+         </div>-->
 
       </body>
    </text>
