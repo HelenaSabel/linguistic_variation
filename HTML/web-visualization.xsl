@@ -198,7 +198,7 @@
                         <xsl:value-of select="$fenomenos[@xml:id = $ana]/@n"/>
                     </xsl:attribute>
                 </xsl:if>
-                <xsl:if test="..[tokenize(replace(@ana, '#', ''), ' ') = $ling/@xml:id][not(tei:seg)][not(tei:choice)]">
+                <xsl:if test=".[tokenize(replace(@ana, '#', ''), ' ') = $ling/@xml:id][not(tei:seg)][not(tei:choice)]">
                     <xsl:attribute name="data-ling">
                         <xsl:value-of select="$ling[@xml:id = $ana]/@n"/>
                     </xsl:attribute>
@@ -284,5 +284,22 @@
                 </xsl:element>
             </xsl:if>
         </xsl:element>
+    </xsl:template>
+    <xsl:template match="html:span[@data-ana='Variante gráfica com distribuição irregular '][.//html:span/@class='abbr']" mode="div">
+        <xsl:element name="span">
+            <xsl:if test="@class">
+                <xsl:attribute name="class"><xsl:value-of select="current()/@class"/></xsl:attribute>
+            </xsl:if>
+            <xsl:if test="@data-ling">
+                <xsl:attribute name="data-ling"><xsl:value-of select="current()/@data-ling"/></xsl:attribute>
+            </xsl:if>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="html:span[@class='abbr'][parent::html:span[@data-ana='Variante gráfica com distribuição irregular ']]" mode="div">
+        <span class="abbr">
+            <xsl:attribute name='data-ana'><xsl:text>Variante gráfica com distribuição irregular</xsl:text></xsl:attribute>
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
 </xsl:stylesheet>

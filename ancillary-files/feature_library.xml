@@ -201,7 +201,7 @@
                 <f name="regularVar" xml:id="regular"/>
                 <f name="irregularVar" xml:id="irregular"/>
                 <f name="tendency" xml:id="tendency"/>
-                <f name="linguisticRelevance" xml:id="lingRelevance"/>
+                <f name="linguisticRelevance" xml:id="linRelevance"/>
                 <f name="vus" xml:id="uus"/>
                 <f name="punctuation" xml:id="punctuation"/>
             </fLib>
@@ -221,6 +221,8 @@
                     <!--Inovação gráfica-->
                     <!--Innovatory spelling-->
                 </fs>
+                <fs xml:id="dub"/>
+<!--Dúvida-->
                 <fs xml:id="reg" feats="#regular #graph" n="Variante gráfica regular">
                     <!--Variante gráfica regular-->
                     <!--Regular graphic variant-->
@@ -236,7 +238,7 @@
                     <!--Orthographic tendency (not completely regular)-->
                 </fs>
                 <fs xml:id="lingR"
-                feats="#lingRelevance #graph"
+                feats="#linRelevance #graph"
                 n="Variante gráfica com possíveis implicações linguísticas">
                     <!--Variante gráfica com possíveis implicações linguísticas-->
                     <!--Linguistically meaningful graphic variant-->
