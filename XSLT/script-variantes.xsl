@@ -15,6 +15,9 @@
             <xsl:apply-templates select="node()|@*" mode="ana"/>
         </xsl:copy>
     </xsl:template>
+    <xsl:template match="comment()" mode="ana">
+        <xsl:comment select="."/>
+    </xsl:template>
     <xsl:template match="app" mode="ana">
         <xsl:element name="app">
             <xsl:element name="rdg">
@@ -102,6 +105,9 @@
         <xsl:copy>
             <xsl:apply-templates select="node()|@*" mode="correction"/>
         </xsl:copy>
+    </xsl:template>
+    <xsl:template match="comment()" mode="correction">
+        <xsl:comment select="."/>
     </xsl:template>
     <xsl:template match="rdg/@*" mode="correction">
         <xsl:attribute name="wit">

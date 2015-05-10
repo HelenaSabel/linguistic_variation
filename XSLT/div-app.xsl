@@ -10,6 +10,9 @@
             <xsl:apply-templates select="node()|@*"/>
         </xsl:copy>
     </xsl:template>    
+    <xsl:template match="comment()">
+        <xsl:comment select="."/>
+    </xsl:template>
     <xsl:template match="div[@type='poem']">
         <xsl:element name="div">
             <xsl:attribute name="type">
@@ -51,7 +54,7 @@
                 </xsl:element>
                 <xsl:element name="name">
                     <xsl:attribute name="role">author</xsl:attribute>
-                    <xsl:attribute name="ref">#</xsl:attribute>
+                    <xsl:attribute name="ref">#MartSrz</xsl:attribute>
                 </xsl:element>
             </xsl:element>
             <xsl:copy-of select="current()//l"/>

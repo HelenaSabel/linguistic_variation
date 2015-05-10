@@ -53,6 +53,9 @@
             <xsl:apply-templates select="node()|@*" mode="string"/>
         </xsl:copy>
     </xsl:template>
+    <xsl:template match="comment()" mode="string">
+        <xsl:comment select="."/>
+    </xsl:template>
     <!-- Elements with children but no attributes-->
     <xsl:template match="ex|am|add[not(@*)]|del[not(@*)]" mode="string">
         <xsl:text>&lt;</xsl:text>
@@ -146,6 +149,10 @@
         <xsl:copy>
             <xsl:apply-templates select="node()|@*" mode="tokens"/>
         </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="comment()" mode="tokens">
+        <xsl:comment select="."/>
     </xsl:template>
     <xsl:template match="app" mode="tokens">
         <xsl:variable name="Atokens" select="tokenize(rdg[@wit eq '#A'],'\s+')"/>
