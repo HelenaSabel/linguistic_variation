@@ -83,7 +83,7 @@
                     <!--Interfererência linguística-->
                     <!--Language transfer-->
                 </fs>
-                <fs xml:id="o"
+                <fs xml:id="oer"
                 feats="#habere #past #irregV #vb #morph #ling"
                 n="Tema de perfeito de 'haver' em 'o-'">
                     <!--Tema de perfeito de 'haver' em 'o-'-->
@@ -103,9 +103,9 @@
                 </fs>
                 <fs xml:id="fui"
                 feats="#fui1 #past #irregV #vb #morph #dipthong #phon #ling"
-                n="P1 do perfeito de 'seer' en 'fui'">
-                    <!--P1 do perfeito de 'seer' en 'fui'-->
-                    <!--P1 of perfect indicative of 'seer' as 'fui'-->
+                n="P3 do perfeito de 'seer' em 'fui'">
+                    <!--P3 do perfeito de 'seer' em 'fui'-->
+                    <!--P3 of perfect indicative of 'seer' as 'fui'-->
                 </fs>
                 <fs xml:id="xe"
                 feats="#palSe #pr #morph #pal #phon #ling"
@@ -114,10 +114,16 @@
                     <!--Palatalized 'se'-->
                 </fs>
                 <fs xml:id="min"
-                feats="#proNas #nasal #phon #pr #ling"
+                feats="#proNas #nasal #phon #ling"
                 n="Nasalização progressiva">
                     <!--Nasalização progressiva-->
                     <!--Progressive nasalization-->
+                </fs>
+                <fs xml:id="nasAn"
+                    feats="#anal #nasal #phon #pr #ling"
+                    n="Nasalização por analogia">
+                    <!--Nasalização por analogia-->
+                    <!--Analog nasalization-->
                 </fs>
                 <fs xml:id="yod"
                 feats="#eYod #vowel #phon #ling"
@@ -139,7 +145,7 @@
                     <!--Empréstimo linguístico-->
                     <!--Loan-->
                 </fs>
-                <fs xml:id="cras" feats="#crasis #vowel #phon #ling">
+                <fs xml:id="cras" feats="#crasis #vowel #phon #ling" n="Resolução de hiato por crase vocálica">
                    <!--Crase vocálica para evitar hiato-->
                    <!--Crasis to avoid a hiatus-->
                 </fs>
@@ -167,11 +173,11 @@
                     <!--Uso do advérbio temporal 'agora'-->
                     <!--Use of 'agora' as a temporal adverb-->
                 </fs>
-                <fs xml:id="ca" feats="#Ca #conj #ling" n="Uso de &#34;ca&#34; comparativo">
+                <fs xml:id="caAd" feats="#Ca #conj #ling" n="Uso de &#34;ca&#34; comparativo">
                     <!--Uso de "ca" comparativo-->
                     <!--Use of "ca" as a comparative conjunction-->
                 </fs>
-                <fs xml:id="caC" feats="#CaC #conj #ling" n="Uso de &#34;ca&#34; comparativo">
+                <fs xml:id="caVb" feats="#CaC #conj #ling" n="Uso de &#34;ca&#34; completivo">
                     <!--Uso de "ca" completivo-->
                     <!--Use of "ca" as a complementizern-->
                 </fs>

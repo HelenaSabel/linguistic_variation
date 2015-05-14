@@ -8,7 +8,7 @@
     <let name="personografia" value="doc('../ancillary-files/corpus_autores.xml')"/>
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
     <pattern>
-        <rule context="tei:l/tei:app">
+        <rule context="tei:l/tei:app[not(.//tei:choice)]">
             <assert test="count(tei:rdg[@ana]) gt 0">Falta @ana</assert>
         </rule>
         <rule context="tei:rdg">
