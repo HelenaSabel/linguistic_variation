@@ -24,27 +24,43 @@
             <xsl:element name="head">
                 <xsl:element name="title">
                     <xsl:element name="app">
-                        <xsl:element name="rdg">
-                            <xsl:attribute name="wit">#A</xsl:attribute>
+                        <xsl:element name="rdg">                            
+                            <xsl:attribute name="wit">
+                                <xsl:analyze-string select="string(./@corresp)" regex="(#\w)d+\w\d+">
+                                    <xsl:matching-substring>
+                                        <xsl:value-of select="regex-group(1)"/>
+                                    </xsl:matching-substring>
+                                </xsl:analyze-string>
+                            </xsl:attribute>
                             <xsl:attribute name="hand">#a</xsl:attribute>
+                            <xsl:element name="idno">
                             <xsl:analyze-string select="string(./@corresp)" regex="#(\w\d+)(\w\d+)">
                                 <xsl:matching-substring>
                                     <xsl:value-of select="regex-group(1)"/>
                                 </xsl:matching-substring>
                             </xsl:analyze-string>
+                            </xsl:element>
                             <xsl:element name="locus">
                                 <xsl:attribute name="from"/>
                                 <xsl:attribute name="to"/>
                             </xsl:element>
                         </xsl:element>
                         <xsl:element name="rdg">
-                            <xsl:attribute name="wit">#B</xsl:attribute>
+                            <xsl:attribute name="wit">
+                                <xsl:analyze-string select="string(./@corresp)" regex="#\w\d+(\w)\d+">
+                                    <xsl:matching-substring>
+                                        <xsl:value-of select="concat('#',regex-group(1))"/>
+                                    </xsl:matching-substring>
+                                </xsl:analyze-string>
+                            </xsl:attribute>
                             <xsl:attribute name="hand">#</xsl:attribute>
+                            <xsl:element name="idno">
                             <xsl:analyze-string select="string(./@corresp)" regex="#(\w\d+)(\w\d+)">
                                 <xsl:matching-substring>
                                     <xsl:value-of select="regex-group(2)"/>
                                 </xsl:matching-substring>
                             </xsl:analyze-string>
+                            </xsl:element>
                             <xsl:element name="locus">
                                 <xsl:attribute name="from"/>
                                 <xsl:attribute name="to"/>

@@ -31,6 +31,13 @@
                     <xsl:if test="rdg[1][hi/@rend='guide']">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>
+                    <xsl:if test="rdg[1][del]">
+                        <xsl:text>#rev</xsl:text>
+                    </xsl:if>
+                    
+                    <xsl:if test="rdg[1][add]">
+                        <xsl:text>#rev</xsl:text>
+                    </xsl:if>
                     <xsl:if test="contains(rdg[1], 'soff') and not(contains(rdg[2],'soff'))">
                         <xsl:text>#trend</xsl:text>
                     </xsl:if>
@@ -65,6 +72,12 @@
                 <xsl:attribute name="ana">
                     <xsl:if test="rdg[2][ex] and rdg[1][not(ex)]">
                         <xsl:text>#irreg</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[1][add]">
+                        <xsl:text>#rev</xsl:text>
+                    </xsl:if>                    
+                    <xsl:if test="rdg[1][del]">
+                        <xsl:text>#rev</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mh')">
                         <xsl:text>#trend</xsl:text>

@@ -8,21 +8,21 @@
             </titleStmt>
             <publicationStmt>
                 <publisher/>
-                <availability default="false" status="unknown">
+                <availability>
                     <licence>
                         <ref target="http://creativecommons.org/licenses/by-nc/3.0/">Creative
                             Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)</ref>
                     </licence>
                 </availability>
             </publicationStmt>
-            <sourceDesc default="false">
-                <p part="N">Born digital.</p>
+            <sourceDesc>
+                <p>Born digital.</p>
             </sourceDesc>
         </fileDesc>
     </teiHeader>
     <text>
         <body>
-            <ab part="N"/>
+            <ab/>
 
             <fLib n="Linguistic variants">
                 <f name="linguisticVariant" xml:id="ling"/>
@@ -285,6 +285,10 @@
                     <!--Equipolent reading-->
                 </fs>
                 <fs xml:id="material" n="Variante provocada pelas condições materiais">
+                    <!--Variante provocada pelas condições materiais-->
+                    <!--Variant caused by the material conditions-->
+                </fs>
+                <fs xml:id="rev" n="Variante que contém uma correção">
                     <!--Variante provocada pelas condições materiais-->
                     <!--Variant caused by the material conditions-->
                 </fs>
