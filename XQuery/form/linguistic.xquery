@@ -7,7 +7,7 @@ declare function local:locus($from as node(), $to as node())
 then $from/string()
 else
     if (substring($from,1,string-length($from) - 1) eq substring($to,1,string-length($to) - 1))
-            then concat(substring($from,1,string-length($from) - 1),'r-v')
+            then concat($from,'-v')
             else concat($from,'-',$to))};
 declare variable $search:= request:get-parameter("fenomeno", ("dat"));
 let $fenomena := doc('/db/tese/drafts/songs/ancillary/feature_library.xml')//tei:fs
