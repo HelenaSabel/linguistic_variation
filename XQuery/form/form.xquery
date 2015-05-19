@@ -7,11 +7,16 @@ return
     <head>
         <meta HTTP-EQUIV="Content-Type" content="text/html; charset=UTF-8"/>
        <title>Estudos lingüísticos</title>
-       <link href="index.css" rel="stylesheet" type="text/css"/>
+       <link href="form.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="body">
             <div class="banner"><img src="banner-ms.jpg" alt="banner" /></div>
+            <h2>Consulta de formas</h2>
+            <form method="POST" action="consulta.xq">
+                <input type="text" name='searchphrase' size='40'/>
+                <button class="submit" type="submit">Pesquisa</button>
+            </form>
         <h2>Variação linguística</h2>
         <div class="form">
         <form method='POST' action='ling.xq'>
