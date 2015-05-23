@@ -11,7 +11,7 @@
                     <xsl:sequence select="current()//tei:rdg[contains(., '{$search}')]"/>
                 </xsl:variable>
                 <xsl:if test="current()//tei:rdg[. = $rdg]">
-                    <xsl:sequence select="current()//node()[not(. = tei:rdg[@wit ne $rdg/@wit])]"/>
+                    <xsl:sequence select="current()//node()[not(. = tei:rdg[./@wit ne $rdg/@wit])]"/>
                 </xsl:if>
             </xsl:when>
             <xsl:otherwise>
