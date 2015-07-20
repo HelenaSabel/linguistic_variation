@@ -64,8 +64,10 @@
                 <f name="agora" xml:id="Agora"/>
                 <f name="ora" xml:id="Ora"/>
                 <f name="ca" xml:id="Ca"/>
-                <f name="caC" ana="caC"/>
                 <f name="que" xml:id="Que"/>
+                <f name="causal" xml:id="caus"/>
+                <f name="completive" xml:id="complet"/>
+                <f name="comparative" xml:id="comparat"/>
                 <f name="cognate" xml:id="Cognate"/>
             </fLib>
 
@@ -173,17 +175,21 @@
                     <!--Uso do advérbio temporal 'agora'-->
                     <!--Use of 'agora' as a temporal adverb-->
                 </fs>
-                <fs xml:id="caAd" feats="#Ca #conj #ling" n="Uso de &#34;ca&#34; comparativo">
+                <fs xml:id="caAd" feats="#comparat #Ca #conj #ling" n="Uso de &#34;ca&#34; comparativo">
                     <!--Uso de "ca" comparativo-->
                     <!--Use of "ca" as a comparative conjunction-->
                 </fs>
-                <fs xml:id="caVb" feats="#CaC #conj #ling" n="Uso de &#34;ca&#34; completivo">
+                <fs xml:id="caVb" feats="#complet #Ca #conj #ling" n="Uso de &#34;ca&#34; completivo">
                     <!--Uso de "ca" completivo-->
                     <!--Use of "ca" as a complementizern-->
                 </fs>
-                <fs xml:id="que" feats="#Que #conj #ling" n="Uso de &#34;que&#34; comparativo">
+                <fs xml:id="que" feats="#comparat #Que #conj #ling" n="Uso de &#34;que&#34; comparativo">
                     <!--Uso de "que" comparativo-->
                     <!--Use of "que" as a comparative conjunction-->
+                </fs>
+                <fs xml:id="queC" feats="#caus #Que #conj #ling" n="Uso de &#34;que&#34; causal">
+                    <!--Uso de "que" causal-->
+                    <!--Use of "que" as a causal conjunction-->
                 </fs>
                 <fs xml:id="apheresis" feats="#apher #phon #ling" n="Aférese">
                     <!--Aférese-->
@@ -197,6 +203,8 @@
                     <!--Dúvida-->
                     <!--Doubt-->
                 </fs>
+                <fs xml:id="unknown"/>
+                
             </fvLib>
 
 
@@ -227,7 +235,7 @@
                     <!--Inovação gráfica-->
                     <!--Innovatory spelling-->
                 </fs>
-                <fs xml:id="dub"/>
+                <fs xml:id="dub" n="Dúvida"/>
 <!--Dúvida-->
                 <fs xml:id="reg" feats="#regular #graph" n="Variante gráfica regular">
                     <!--Variante gráfica regular-->
