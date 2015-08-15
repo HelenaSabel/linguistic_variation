@@ -1,7 +1,0 @@
-Problem:
-
-I have multiple folders for each song. Each folder is named after the song ID and inside every one of them there is a A.xml, B.xml, and V.xml.
-I'm writing an XSLT stylesheet where I create one <div type="poem"> that would contain the readings of the three witnesses. 
-I need to give and ID to every song, and I intend to do that by using <xs:uri>. 
-If I create the following variable:
-<xsl:variable name="B" select="//B.xml//div">
