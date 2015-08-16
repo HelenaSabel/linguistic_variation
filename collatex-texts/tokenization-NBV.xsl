@@ -8,7 +8,7 @@
             
             <l n="6">
                 <app>
-                    <rdg wit="#A">tanto uiuer per nulla ren</rdg>
+                    <rdg wit="#N">tanto uiuer per nulla ren</rdg>
                     <rdg wit="#B">tanto muer per nulha re<ex>n</ex></rdg>
                     <rdg wit="#V">tanto ouuer per nulla te<ex>n</ex></rdg>
                 </app>
@@ -18,17 +18,17 @@
             <l n="6">
                 tanto
                 <app>
-                    <rdg wit="#A">uiuer</rdg>
+                    <rdg wit="#N">uiuer</rdg>
                     <rdg wit="#B">muer</rdg>
                     <rdg wit="#V">ouuer</rdg>
                 </app>
                 per 
                 <app>
-                    <rdg wit="#A #V">nulla</rdg>
+                    <rdg wit="#N #V">nulla</rdg>
                     <rdg wit="#B">nulha</rdg>
                 </app>
                 <app>
-                    <rdg wit="#A">ren</rdg>
+                    <rdg wit="#N">ren</rdg>
                     <rdg wit="#B">re<ex>n</ex></rdg>
                     <rdg wit="#V">te<ex>n</ex></rdg>
                 </app>
@@ -154,40 +154,40 @@
         <xsl:comment select="."/>
     </xsl:template>
     <xsl:template match="app" mode="tokens">
-        <xsl:variable name="Atokens" select="tokenize(rdg[@wit eq '#A'],'\s+')"/>
+        <xsl:variable name="Ntokens" select="tokenize(rdg[@wit eq '#N'],'\s+')"/>
         <xsl:variable name="Btokens" select="tokenize(rdg[@wit eq '#B'],'\s+')"/>
         <xsl:variable name="Vtokens" select="tokenize(rdg[@wit eq '#V'],'\s+')"/>
-        <xsl:variable name="count" select="max((count($Atokens),count($Btokens)))"/>
+        <xsl:variable name="count" select="max((count($Ntokens),count($Btokens)))"/>
         <xsl:for-each select="1 to $count">
             <xsl:choose>
-                <xsl:when test="$Atokens[current()] eq $Btokens[current()] and $Atokens[current()] eq $Vtokens[current()]">
+                <xsl:when test="$Ntokens[current()] eq $Btokens[current()] and $Ntokens[current()] eq $Vtokens[current()]">
                     <!-- Use of insert-before() to correct white spaces
                          The asterisk inserted in the string mode to demark the attributes
                          is converted here using replace()
                          The attribute @disable-output-escaping replaces the entities to angle brackets-->
                     <xsl:value-of
-                        select="insert-before(replace($Atokens[current()], '_', ' '), 2, '')"
+                        select="insert-before(replace($Ntokens[current()], '_', ' '), 2, '')"
                         disable-output-escaping="yes"/>
                 </xsl:when>
-                <xsl:when test="$Btokens[current()] eq $Vtokens[current()] and $Btokens[current()] ne $Atokens[current()]">
+                <xsl:when test="$Btokens[current()] eq $Vtokens[current()] and $Btokens[current()] ne $Ntokens[current()]">
                     <app>
-                        <rdg wit="#A"><xsl:value-of select="replace($Atokens[current()], '_', ' ')"
+                        <rdg wit="#N"><xsl:value-of select="replace($Ntokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
                         <rdg wit="#B #V"><xsl:value-of select="replace($Btokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
                     </app>
                 </xsl:when>
-                <xsl:when test="$Btokens[current()] eq $Atokens[current()] and $Btokens[current()] ne $Vtokens[current()]">
+                <xsl:when test="$Btokens[current()] eq $Ntokens[current()] and $Btokens[current()] ne $Vtokens[current()]">
                     <app>
-                        <rdg wit="#A #B"><xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
+                        <rdg wit="#N #B"><xsl:value-of select="replace($Ntokens[current()], '\*', ' ')"
                             disable-output-escaping="yes"/></rdg>
                         <rdg wit="#V"><xsl:value-of select="replace($Vtokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
                     </app>
                 </xsl:when>
-                <xsl:when test="$Atokens[current()] eq $Vtokens[current()] and $Btokens[current()] ne $Vtokens[current()]">
+                <xsl:when test="$Ntokens[current()] eq $Vtokens[current()] and $Btokens[current()] ne $Vtokens[current()]">
                     <app>
-                        <rdg wit="#A #V"><xsl:value-of select="replace($Atokens[current()], '_', ' ')"
+                        <rdg wit="#N #V"><xsl:value-of select="replace($Ntokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
                         <rdg wit="#B"><xsl:value-of select="replace($Btokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
@@ -195,10 +195,10 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <app>
-                        <rdg wit="#A">
+                        <rdg wit="#N">
                             <xsl:choose>
-                                <xsl:when test="$Atokens[current()]">
-                                    <xsl:value-of select="replace($Atokens[current()], '_', ' ')"
+                                <xsl:when test="$Ntokens[current()]">
+                                    <xsl:value-of select="replace($Ntokens[current()], '_', ' ')"
                                         disable-output-escaping="yes"/>
                                 </xsl:when>
                                 <xsl:otherwise>
