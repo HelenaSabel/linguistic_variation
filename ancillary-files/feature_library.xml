@@ -202,9 +202,7 @@
                 <fs xml:id="puf" n="Dúvida">
                     <!--Dúvida-->
                     <!--Doubt-->
-                </fs>
-                <fs xml:id="unknown"/>
-                
+                </fs> 
             </fvLib>
 
 
@@ -236,7 +234,7 @@
                     <!--Innovatory spelling-->
                 </fs>
                 <fs xml:id="dub" n="Dúvida"/>
-<!--Dúvida-->
+                    <!--Dúvida-->
                 <fs xml:id="reg" feats="#regular #graph" n="Variante gráfica regular">
                     <!--Variante gráfica regular-->
                     <!--Regular graphic variant-->
@@ -251,6 +249,10 @@
                     <!--Tendência ortográfica-->
                     <!--Orthographic tendency (not completely regular)-->
                 </fs>
+                <fs xml:id="occas" feats="#graph" n="Variante gráfica ocasional">
+                    <!--Variante gráfica ocasional-->
+                    
+                </fs>
                 <fs xml:id="lingR"
                 feats="#linRelevance #graph"
                 n="Variante gráfica com possíveis implicações linguísticas">
@@ -260,6 +262,10 @@
                 <fs xml:id="punct" feats="#punctuation #graph" n="Pontuação">
                     <!--Pontuação-->
                     <!--Punctuation-->
+                </fs>
+                <fs xml:id="indefinite" feats="#graph" n="Variante gráfica de frequência inderminada">
+                    <!--Variante gráfica de frequência inderminada-->
+                    <!--Graphic variant of unknown frequency-->
                 </fs>
             </fvLib>
 
