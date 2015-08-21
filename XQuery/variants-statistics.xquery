@@ -1,5 +1,5 @@
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 let $corpus:= doc('../dinis.xml')
-let $sharrer:= $corpus//tei:l/tei:app/tei:rdg[@wit="#T"]
-let $y:= //tei:rdg[@wit="#T"]/count(tokenize(., 'y|Y'))
-return count($y)
+let $sharrer:= string-join($corpus//tei:l/tei:app/tei:rdg[@wit="#T"])
+let $y:= count(tokenize($sharrer, 'y|Y'))
+let $i:= count(tokenize($sharrer, 'i'))
