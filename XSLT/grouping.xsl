@@ -3,6 +3,9 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns="http://www.tei-c.org/ns/1.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="xs" version="2.0">
+    
+<!--    Code written by David J. Birnbaum-->
+    
     <xsl:output method="xml" indent="yes"/>
     <xsl:strip-space elements="*"/>
     <xsl:template match="node() | @*">
