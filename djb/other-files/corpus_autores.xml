@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Corpus de Autores</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher/>
+                <availability>
+                    <licence>
+                        <ref target="http://creativecommons.org/licenses/by-nc/3.0/">Creative
+                            Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)</ref>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Orixe dixital.</p>
+                <p>Datos extraídos das bases de datos<emph>
+                        <ref corresp="#medDB">Base de datos da Lírica Profana Galego-Portuguesa
+                            (MedDB)</ref>
+                    </emph>and <emph>
+                        <ref corresp="#fsch">Cantigas Medievais Galego Portuguesas [base de dados
+                            online]</ref>
+                    </emph>.</p>
+            </sourceDesc>
+            <sourceDesc>
+                <bibl corresp="#medDB"> Base de datos da Lírica Profana Galego-Portuguesa (MedDB),
+                    versión 2.3.3, Centro Ramón Piñeiro para a Investigación en Humanidades <ref
+                        target="http://www.cirp.es">http://www.cirp.es</ref>
+                </bibl>
+                <bibl corresp="#fsch"> Lopes, Graça Videira; Ferreira, Manuel Pedro et al. (2011-),
+                    Cantigas Medievais Galego Portuguesas [base de dados online]. Lisboa: Instituto
+                    de Estudos Medievais, FCSH/NOVA. <ref target="http://cantigas.fcsh.unl.pt"
+                        >http://cantigas.fcsh.unl.pt</ref>. </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>TEI schema</p>
+            <p>Metadata segundo o modelo de <ref corresp="#medDB">MedBB</ref>
+            </p>
+            <projectDesc>
+                <p>Parte da tese de doutoramento</p>
+            </projectDesc>
+            <geoDecl> </geoDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listPerson>
+                <person>
+                    <persName>Nuno Porco</persName>
+                    <floruit period="3" from="1240" to="1280"/>
+                    <listBibl>
+                        <bibl corresp="#A69B182" type="double">A69,B182</bibl>
+                    </listBibl>
+                </person>
+               <!-- <person>
+                    <persName>Johan de Gaia</persName>
+                    <listBibl>
+                        <bibl corresp="#B1433V1043">B1433,V1043</bibl>
+                        <bibl corresp="#B1448V1058">B1448,V1058</bibl>
+                        <bibl corresp="#B1449V1059">B1449,V1059</bibl>
+                        <bibl corresp="#B1450V1060">B1450,V1060</bibl>
+                        <bibl corresp="#B1452V1062">B1452,V1062</bibl>
+                    </listBibl>
+                </person>-->
+                <person>
+                    <persName>Sancho Sanches</persName>
+                    <floruit period="3" from="1280" to="1315"/>
+                    <listBibl>
+                        <bibl corresp="#A291B982V569" type="double">A291,B982,V569</bibl>
+                    </listBibl>
+                </person>
+                <person>
+                    <persName>Pero Garcia de Burgalés</persName>
+                    <floruit period="3" from="1240" to="1270"/>
+                    <listBibl>
+                        <bibl corresp="#A82B186b">A82,B186bis</bibl>
+                        <bibl corresp="#A83B187b">A83,B187bis</bibl>
+                        <bibl corresp="#A84B188b">A84,B188bis</bibl>
+                        <bibl corresp="#A85B189b">A85,B189bis</bibl>
+                        <bibl corresp="#A86B190">A86,B190</bibl>
+                        <bibl corresp="#A87B191">A87,B191</bibl>
+                        <bibl corresp="#A88B192">A88,B192</bibl>
+                        <bibl corresp="#A89B193">A89,B193</bibl>
+                        <bibl corresp="#A90B194">A90,B194</bibl>
+                        <bibl corresp="#A91B195">A91,B195</bibl>
+                        <bibl corresp="#A92B196">A92,B196</bibl>
+                        <bibl corresp="#A93B197">A93,B197</bibl>
+                        <bibl corresp="#A94B198">A94,B198</bibl>
+                        <bibl corresp="#A95B202">A95,B202</bibl>
+                        <bibl corresp="#A96B203">A96,B203</bibl>
+                        <bibl corresp="#A97B204">A97,B204</bibl>
+                        <bibl corresp="#A98B205">A98,B205</bibl>
+                        <bibl corresp="#A99B206">A99,B206</bibl>
+                        <bibl corresp="#A100B207">A100,B207</bibl>
+                        <bibl corresp="#A101B208">A101,B208</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="NuRdzCan">
+                    <persName>Nuno Rodriguez de Candarei</persName>
+                    <nationality cert="high" key="gl">Galega</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Penafiel</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <floruit from="1225" to="1250" period="2">
+                        <location corresp="#ferIII"/>
+                        <location corresp="#afonsX"/>
+                        <location corresp="#sanchoIV"/>
+                        <location corresp="#soesto"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A68B181b">A68,B181bis</bibl>
+                        <bibl corresp="#A69B182" type="double">A69,B182</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="VaFdezSen">
+                    <persName>Vasco Fernandez Praga de Sandin</persName>
+                    <nationality cert="high" key="gl">Galega</nationality>
+                    <birth cert="medium">
+                        <location>
+                            <placeName>Parga (Lugo)</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1200" to="1240" period="2">
+                        <location corresp="#sobroso"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A1B91">A1,B91</bibl>
+                        <bibl corresp="#A2B92">A2,B92</bibl>
+                        <bibl corresp="#A3B93">A3,B93</bibl>
+                        <bibl corresp="#A4B94">A4,B94</bibl>
+                        <bibl corresp="#A5B95">A5,B95</bibl>
+                        <bibl corresp="#A6B96">A6,B96</bibl>
+                        <bibl corresp="#A7B97">A7,B97</bibl>
+                        <bibl corresp="#A8B98">A8,B98</bibl>
+                        <bibl corresp="#A9B99">A9,B99</bibl>
+                    </listBibl>
+                </person>
+                <person sameAs="#JSrzSom">
+                    <persName>Johan Soarez Somesso <addName>(identidade
+                        alternativa)</addName></persName>
+                    <nationality cert="low" key="pt">Portuguesa</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Valadares</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1220" to="1230" period="2" cert="low">
+                        <location corresp="#sobroso"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A14B107">A14,B107</bibl>
+                        <bibl corresp="#A15B108">A15,B108</bibl>
+                        <bibl corresp="#A16B109">A16,B109</bibl>
+                        <bibl corresp="#A17B110">A17,B110</bibl>
+                        <bibl corresp="#A18B111">A18,B111</bibl>
+                        <bibl corresp="#A19B112">A19,B112</bibl>
+                        <bibl corresp="#A20B113">A20,B113</bibl>
+                        <bibl corresp="#A21B114">A21,B114</bibl>
+                        <bibl corresp="#A22B115">A22,B115</bibl>
+                        <bibl corresp="#A23B116">A23,B116</bibl>
+                        <bibl corresp="#A24B117">A24,B117</bibl>
+                        <bibl corresp="#A25B118">A25,B118</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="JSrzSom">
+                    <persName>Johan Soarez Somesso</persName>
+                    <nationality cert="low" key="gl">Galega</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Crecente</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1215" to="1246" period="2" cert="low">
+                        <location corresp="#sanchoI"/>
+                        <location corresp="#dmartim"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A14B107">A14,B107</bibl>
+                        <bibl corresp="#A15B108">A15,B108</bibl>
+                        <bibl corresp="#A16B109">A16,B109</bibl>
+                        <bibl corresp="#A17B110">A17,B110</bibl>
+                        <bibl corresp="#A18B111">A18,B111</bibl>
+                        <bibl corresp="#A19B112">A19,B112</bibl>
+                        <bibl corresp="#A20B113">A20,B113</bibl>
+                        <bibl corresp="#A21B114">A21,B114</bibl>
+                        <bibl corresp="#A22B115">A22,B115</bibl>
+                        <bibl corresp="#A23B116">A23,B116</bibl>
+                        <bibl corresp="#A24B117">A24,B117</bibl>
+                        <bibl corresp="#A25B118">A25,B118</bibl>
+                    </listBibl>
+                </person>
+                <person sameAs="#JSrzSom">
+                    <persName>Johan Soarez Somesso <addName>(identidade alternativa)</addName>
+                    </persName>
+                    <nationality cert="low" key="gl">Galega</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Fornelos</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1223" to="1257" period="2" cert="low">
+                        <location cert="unknown" type="unknown"> </location>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A14B107">A14,B107</bibl>
+                        <bibl corresp="#A15B108">A15,B108</bibl>
+                        <bibl corresp="#A16B109">A16,B109</bibl>
+                        <bibl corresp="#A17B110">A17,B110</bibl>
+                        <bibl corresp="#A18B111">A18,B111</bibl>
+                        <bibl corresp="#A19B112">A19,B112</bibl>
+                        <bibl corresp="#A20B113">A20,B113</bibl>
+                        <bibl corresp="#A21B114">A21,B114</bibl>
+                        <bibl corresp="#A22B115">A22,B115</bibl>
+                        <bibl corresp="#A23B116">A23,B116</bibl>
+                        <bibl corresp="#A24B117">A24,B117</bibl>
+                        <bibl corresp="#A25B118">A25,B118</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="PaySrzTav">
+                    <persName>Pai Soarez de Taveirós</persName>
+                    <nationality cert="high" key="gl">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Tabeirós</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1225" to="1250" period="2">
+                        <location corresp="#sanchoI"/>
+                        <location corresp="#soesto"/>
+                        <location from="1241" to="1249" corresp="#ferIII"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A31B146">A31,B146</bibl>
+                        <bibl corresp="#A32B147">A32,B147</bibl>
+                        <bibl corresp="#A33B148">A33,B148</bibl>
+                        <bibl corresp="#A34B149">A34,B149</bibl>
+                        <bibl corresp="#A35B150">A35,B150</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="JNzCam">
+                    <persName>Johan Nunez Camanez</persName>
+                    <nationality cert="low" key="gl">Galega</nationality>
+                    <birth cert="low">
+                        <location>
+                            <placeName>Camán (Pontevedra)</placeName>
+                        </location>
+                    </birth>
+                    <occupation cert="unknown" key="unknown">Descoñecido</occupation>
+                    <socecStatus key="unknown" cert="unknown">Descoñecido</socecStatus>
+                    <floruit from="1240" to="1260" period="3">
+                        <location cert="unknown" type="unknown"> </location>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A111B224">A111,B224</bibl>
+                        <bibl corresp="#A112B225">A112,B225</bibl>
+                        <bibl corresp="#A113B226">A113,B226</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="AfLpzBay">
+                    <persName>Alfonso Lopez de Baian</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Baião</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <floruit from="1246" to="1280" period="3">
+                        <location from="1245" to="1250" corresp="#ferIII"/>
+                        <location from="1251" to="1280" corresp="#sousa"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A224B395V5">A224,B395,V5</bibl>
+                        <bibl corresp="#A225B396V6">A225,B396,V6</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="EstFai">
+                    <persName>Estevan Faian</persName>
+                    <nationality cert="low" key="cas">Castelá</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Leon</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1240" to="1260" period="3">
+                        <location cert="low" corresp="#ferIII"/>
+                        <location cert="medium" corresp="#afonsX"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A240B428V40">A240,B428,V40</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="FerPad">
+                    <persName>Fernan Padron</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Padrón</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1250" to="1275" period="3" cert="medium">
+                        <location cert="unknown" type="unknown"> </location>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A285B976V563">A285,B976,V563</bibl>
+                        <bibl corresp="#A286B977V564">A286,B977,V564</bibl>
+                        <bibl corresp="#A287B978V565">A287,B978,V565</bibl>
+                    </listBibl>
+                </person>
+                <person sameAs="#FerPad">
+                    <persName>Fernan Padron <addName>(identidade alternativa)</addName>
+                    </persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Padrón</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <floruit from="1190" to="1230" period="1" cert="low">
+                        <location cert="unknown" type="unknown"> </location>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A285B976V563">A285,B976,V563</bibl>
+                        <bibl corresp="#A286B977V564">A286,B977,V564</bibl>
+                        <bibl corresp="#A287B978V565">A287,B978,V565</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="MartMo">
+                    <persName>Martin Moxa</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <placeName>Compostela</placeName>
+                        <location>
+                            <placeName>Compostela</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="cl">Clérigo</socecStatus>
+                    <floruit from="1270" to="1280" period="3">
+                        <location corresp="#afonsX"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A307B895V480">A307,B895,V480</bibl>
+                    </listBibl>
+                </person>
+                <person sameAs="#MartMo">
+                    <persName>Martin Moxa <addName>(identidade alternativa)</addName>
+                    </persName>
+                    <nationality cert="low" key="arag">Aragonés</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Descoñecido</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="cl">Clérigo</socecStatus>
+                    <floruit from="1270" to="1280" period="3">
+                        <location corresp="#afonsX"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A307B895V480">A307,B895,V480</bibl>
+                    </listBibl>
+                </person>
+                <!--<person xml:id="JSrzPav">
+                    <persName>Johan Soarez de Pavia </persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Paiva</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1170" to="1200" period="1">
+                        <location corresp="#afonsII"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#B1330bV937">B1330bis,V937</bibl>
+                    </listBibl>
+                </person>-->
+                <person xml:id="MartSrz">
+                    <persName>Martin Soarez</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Riba de Lima (Minho)</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1230" to="1270" period="3">
+                        <location corresp="#ferIII"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A40B152">A40,B152</bibl>
+                        <bibl corresp="#A41B153">A41,B153</bibl>
+                        <bibl corresp="#A42B154">A42,B154</bibl>
+                        <bibl corresp="#A43B155">A43,B155</bibl>
+                        <bibl corresp="#A44B156">A44,B156</bibl>
+                        <bibl corresp="#A45B157">A45,B157</bibl>
+                        <bibl corresp="#A46B158">A46,B158</bibl>
+                        <bibl corresp="#A47B159">A47,B159</bibl>
+                        <bibl corresp="#A48B160">A48,B160</bibl>
+                        <bibl corresp="#A49B161">A49,B161</bibl>
+                        <bibl corresp="#A50B162">A50,B162</bibl>
+                        <bibl corresp="#A51B163">A51,B163</bibl>
+                        <bibl corresp="#A52B164">A52,B164</bibl>
+                        <bibl corresp="#A53B165">A53,B165</bibl>
+                        <bibl corresp="#A54B166">A54,B166</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="AyCarp">
+                    <persName>Airas Fernandes "Carpancho"</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Compostela</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1190" to="1230" period="1">
+                        <location corresp="#rodeiro"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A64B176">A64,B176</bibl>
+                        <bibl corresp="#A65B177">A65,B177</bibl>
+                        <bibl corresp="#A66B178">A66,B178</bibl>
+                        <bibl corresp="#A67B179">A67,B179</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="NuFdzTor">
+                    <persName>Nuno Fernandez Torneol</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Compostela</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1230" to="1260" period="3">
+                        <location corresp="#ferIII"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A70B183">A70,B183</bibl>
+                        <bibl corresp="#A71B184">A71,B184</bibl>
+                        <bibl corresp="#A72B185">A72,B185</bibl>
+                        <bibl corresp="#A73B186">A73,B186</bibl>
+                        <bibl corresp="#A74B187">A74,B187</bibl>
+                        <bibl corresp="#A75B188">A75,B188</bibl>
+                        <bibl corresp="#A76B189">A76,B189</bibl>
+                        <bibl corresp="#A77B180b">A77,B180bis</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="FerGarEsg">
+                    <persName>Fernan Garcia Esgaravunha</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName cert="low">Terras de Sousa</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1220" to="1250" period="2">
+                        <location from="1220" to="1238" corresp="#sousa"/>
+                        <location corresp="#ferIII" from="1239" to="1245"/>
+                        <location from="1246" to="1250" corresp="#afonsIII"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A114B230">A114,B230</bibl>
+                        <bibl corresp="#A115B231">A115,B231</bibl>
+                        <bibl corresp="#A116B232">A116,B232</bibl>
+                        <bibl corresp="#A117B233">A117,B233</bibl>
+                        <bibl corresp="#A118B234">A118,B234</bibl>
+                        <bibl corresp="#A119B235">A119,B235</bibl>
+                        <bibl corresp="#A120B236">A120,B236</bibl>
+                        <bibl corresp="#A121B237">A121,B237</bibl>
+                        <bibl corresp="#A122B238">A122,B238</bibl>
+                        <bibl corresp="#A123B238b">A123,B238bis</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="RoyQuey">
+                    <persName>Roi Queimado</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Sabadim</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1240" to="1270" period="3">
+                        <location from="1240" to="1252" corresp="#ferIII"/>
+                        <location from="1253" to="1270" corresp="#afonsX"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A129B250">A129,B250</bibl>
+                        <bibl corresp="#A130B251">A130,B251</bibl>
+                        <bibl corresp="#A131B252">A131,B252</bibl>
+                        <bibl corresp="#A132B253">A132,B253</bibl>
+                        <bibl corresp="#A133B254">A133,B254</bibl>
+                        <bibl corresp="#A134B255">A134,B255</bibl>
+                        <bibl corresp="#A135B256">A135,B256</bibl>
+                        <bibl corresp="#A136B257">A136,B257</bibl>
+                        <bibl corresp="#A137B258">A137,B258</bibl>
+                        <bibl corresp="#A138B259">A138,B259</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="VasGil">
+                    <persName>Vasco Gil</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName cert="low">Sousa</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1235" to="1260" period="3">
+                        <location corresp="#sobroso" from="1235" to="1240"/>
+                        <location corresp="#sanchoII" from="1241" to="1245"/>
+                        <location corresp="#ferIII" from="1246" to="1253"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A144B267">A144,B267</bibl>
+                        <bibl corresp="#A145B268">A145,B268</bibl>
+                        <bibl corresp="#A146B269">A146,B269</bibl>
+                        <bibl corresp="#A147B270">A147,B270</bibl>
+                        <bibl corresp="#A148B271">A148,B271</bibl>
+                        <bibl corresp="#A149B272">A149,B272</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="JSrzCoe">
+                    <persName>Johan Soarez Coelho</persName>
+                    <nationality cert="high" key="pt">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Ribadouro</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1235" to="1270" period="3">
+                        <location from="1235" to="1237" corresp="#serpa"/>
+                        <location from="1238" to="1241" corresp="#berenguer"/>
+                        <location from="1242" to="1248" corresp="#ferIII"/>
+                        <location from="1249" to="1270" corresp="#afonsIII"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A163B316">A163,B316</bibl>
+                        <bibl corresp="#A164B317">A164,B317</bibl>
+                        <bibl corresp="#A165B317b">A165,B317bis</bibl>
+                        <bibl corresp="#A166B318">A166,B318</bibl>
+                        <bibl corresp="#A167B319">A167,B319</bibl>
+                        <bibl corresp="#A169B320">A169,B320</bibl>
+                        <bibl corresp="#A170B321">A170,B321</bibl>
+                        <bibl corresp="#A171B322">A171,B322</bibl>
+                        <bibl corresp="#A172B323">A172,B323</bibl>
+                        <bibl corresp="#A173B324">A173,B324</bibl>
+                        <bibl corresp="#A174B325">A174,B325</bibl>
+                        <bibl corresp="#A175B326">A175,B326</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="RoyPaezRib">
+                    <persName>Roi Paez de Ribela</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Monfero</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1240" to="1280" period="3">
+                        <location corresp="#afonsX"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A186B337">A186,B337</bibl>
+                        <bibl corresp="#A187B338">A187,B338</bibl>
+                        <bibl corresp="#A188B339">A188,B339</bibl>
+                        <bibl corresp="#A189B340">A189,B340</bibl>
+                        <bibl corresp="#A190B341">A190,B341</bibl>
+                        <bibl corresp="#A191B342">A191,B342</bibl>
+                        <bibl corresp="#A192B343">A192,B343</bibl>
+                        <bibl corresp="#A193B344">A193,B344</bibl>
+                        <bibl corresp="#A194B345">A194,B345</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="JLpzUlh">
+                    <persName>Johan Lopez de Ulhoa</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Terras de Monterroso</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1238" to="1286" period="3">
+                        <location corresp="#soesto"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A199B350">A199,B350</bibl>
+                        <bibl corresp="#A200B351">A200,B351</bibl>
+                        <bibl corresp="#A201B352">A201,B352</bibl>
+                        <bibl corresp="#A202B353">A202,B353</bibl>
+                        <bibl corresp="#A203B354">A203,B354</bibl>
+                        <bibl corresp="#A204B335">A204,B335</bibl>
+                        <bibl corresp="#A205B356">A205,B356</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="FerGvzSeav">
+                    <persName>Fernan Gonçalvez de Seabra</persName>
+                    <nationality key="pt" cert="medium">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Vinahis, Trás-os-Montes</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1258" to="1275" period="3">
+                        <location corresp="#afonsIII"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A217B384">A217,B384</bibl>
+                        <bibl corresp="#A218B385">A218,B385</bibl>
+                        <bibl corresp="#A219B386">A219,B386</bibl>
+                        <bibl corresp="#A220B387">A220,B387</bibl>
+                        <bibl corresp="#A221B389">A221,B389</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="PGmzBarr">
+                    <persName>Pero Gomez Barroso</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Terras de Barroso</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit period="3" from="1248" to="1273">
+                        <location corresp="#afonsX"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A222B392V2">A222,B392,V2</bibl>
+                        <bibl corresp="#A223B393V3">A223,B393,V3</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="JGarGlh">
+                    <persName>Johan Garcia de Guilhade</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Milhazes, Barcelos</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1240" to="1265" period="3">
+                        <location corresp="#sousa" from="1240" to="1243"/>
+                        <location corresp="#ferIII" from="1244" to="1248"/>
+                        <location corresp="#afonsX" from="1249" to="1253"/>
+                        <location corresp="#afonsIII" from="1253" to="1265"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A228B418V29">A228,B418,V29</bibl>
+                        <bibl corresp="#A229B419V30">A229,B419,V30</bibl>
+                        <bibl corresp="#A230B420V31r-32">A230,B420,V31r-32</bibl>
+                        <bibl corresp="#A231B421V33">A231,B421,V33</bibl>
+                        <bibl corresp="#A232B422V34">A232,B422,V34</bibl>
+                        <bibl corresp="#A233B423V35">A233,B423,V35</bibl>
+                        <bibl corresp="#A234B424V36">A234,B424,V36</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="JVqzTal">
+                    <persName>Johan Vasquis de Talaveira</persName>
+                    <nationality cert="medium" key="cas">Castelá</nationality>
+                    <birth>
+                        <location cert="low">
+                            <placeName>Talavera de la Reina</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1260" to="1295" period="3">
+                        <location from="1260" to="1283" corresp="#afonsX"/>
+                        <location from="1284" to="1295" corresp="#sanchoIV"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A242B430V42">A242,B430,V42</bibl>
+                        <bibl corresp="#A243B431V43">A243,B431,V43</bibl>
+                        <bibl corresp="#A244B432V44">A244,B432,V44</bibl>
+                        <bibl corresp="#A245B433V45">A245,B433,V45</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="PPon">
+                    <persName>Pero da Ponte</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Descoñecido</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="sq">Squire</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1235" to="1275" period="3">
+                        <location corresp="#ferIII"/>
+                        <location corresp="#afonsX"/>
+                        <location corresp="#haro"/>
+                        <location corresp="#meneses"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A288B979V566">A288,B979,V566</bibl>
+                        <bibl corresp="#A289B980V567">A289,B980,V567</bibl>
+                        <bibl corresp="#A290B981V568">A290,B981,V568</bibl>
+                        <bibl corresp="#A291B982V569" type="double">A291,B982,V569</bibl>
+                        <bibl corresp="#A292B983V570">A292,B983,V570</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="MartCod">
+                    <persName>Martin Codax</persName>
+                    <nationality cert="medium" key="gl">Galega</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Descoñecido</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="unknown" cert="unknown">Descoñecido</socecStatus>
+                    <occupation key="jn">Xograr</occupation>
+                    <floruit from="1240" to="1275" period="3">
+                        <location corresp="#vigo"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#B1278V884N1">B1278,V884,N1</bibl>
+                        <bibl corresp="#B1279V885N2">B1279,V885,N2</bibl>
+                        <bibl corresp="#B1280V886N3">B1280,V886,N3</bibl>
+                        <bibl corresp="#B1281V887N4">B1281,V887,N4</bibl>
+                        <bibl corresp="#B1282V888N5">B1282,V888,N5</bibl>
+                        <bibl corresp="#B1283V889N6">B1283,V889,N6</bibl>
+                        <bibl corresp="#B1284V890N7">B1284,V890,N7</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="Den">
+                    <persName>Dom Dinis</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Lisbon</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1279" to="1235" period="3">
+                        <location corresp="#dinis"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#B524V107T1">B524,V107,T1</bibl>
+                        <bibl corresp="#B525V108T2">B525,V108,T2</bibl>
+                        <bibl corresp="#B526V109T3">B526,V109,T3</bibl>
+                        <bibl corresp="#B527V110T4">B527,V110,T4</bibl>
+                        <bibl corresp="#B528V111T5">B528,V111,T5</bibl>
+                        <bibl corresp="#B529V112T6">B529,V112,T6</bibl>
+                        <bibl corresp="#B520aV113T7">B520a,V113,T7</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="PayGmzCha">
+                    <persName>Pai Gomez Charinho</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Ponte Vedra</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1248" to="1295" period="3">
+                        <location corresp="#sanchoIV"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A246B811V395">A246,B811,V395</bibl>
+                        <bibl corresp="#A248B816V400">A248,B816,V400,A253bis</bibl>
+                        <bibl corresp="#A255B842V428">A255,B842,V428</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="FerVelho">
+                    <persName>Fernan Velho</persName>
+                    <nationality key="gl" cert="low">Galega</nationality>
+                    <birth>
+                        <location cert="unknown">
+                            <placeName>Descoñecido</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1280" to="1320" period="3">
+                        <location corresp="#afonsX"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A257B434V46">A257,B434,V46</bibl>
+                        <bibl corresp="#A258B435V47">A258,B435,V47</bibl>
+                        <bibl corresp="#A259B436V48">A259,B436,V48</bibl>
+                        <bibl corresp="#A260B437V49">A260,B437,V49</bibl>
+                        <bibl corresp="#A261B438V50">A261,B438,V50</bibl>
+                        <bibl corresp="#A262B439V51">A262,B439,V51</bibl>
+                        <bibl corresp="#A263B440V52">A263,B440,V52</bibl>
+                        <bibl corresp="#A264B441V53">A264,B441,V53</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="BonGen">
+                    <persName>Bonifaci Calvo <addName>(Bonifaz de Genua)</addName>
+                    </persName>
+                    <nationality key="it" cert="medium">Genovese</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Genoa</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1250" to="1265" period="3">
+                        <location corresp="#afonsX"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A265B449">A265,B449</bibl>
+                        <bibl corresp="#A266B450">A266,B450</bibl>
+                        <bibl corresp="#A282B1219V824">A282,B1219,V824</bibl>
+                        <bibl corresp="#A283B1220V825">A283,B1220,V825</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="VaRdzCal">
+                    <persName>Vasco Rodrigues de Calvelo</persName>
+                    <nationality key="pt" cert="medium">Portuguesa</nationality>
+                    <birth>
+                        <location cert="low">
+                            <placeName>Calvelo</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="kn">Cabaleiro</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1250" to="1275" period="3">
+                        <location type="noble"> </location>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A293B993bV582">A293,B993bis,V582</bibl>
+                        <bibl corresp="#A294B994V583">A294,B994,V583</bibl>
+                        <bibl corresp="#A295B995V584">A295,B995,V584</bibl>
+                        <bibl corresp="#A296B996V585">A296,B996,V585</bibl>
+                        <bibl corresp="#A297B997V586">A297,B997,V586</bibl>
+                        <bibl corresp="#A298B992V587">A298,B992,V587</bibl>
+                        <bibl corresp="#A300B991V579">A300,B991,V579</bibl>
+                        <bibl corresp="#A301B993V581">A301,B993,V581</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="RoyFdz">
+                    <persName>Roi Fernandiz de Santiago</persName>
+                    <nationality key="gl" cert="high">Galega</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Compostela</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="cl">Clérigo</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1240" to="1270" period="3">
+                        <location corresp="#afonsX"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#A308B900V485">A308,B900,V485</bibl>
+                        <bibl corresp="#A309B901V486">A309,B901,V486</bibl>
+                        <bibl corresp="#A310B902V487">A310,B902,V487</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="VaMrzRes">
+                    <persName>Vasco Martins de Resende</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Resende</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1290" to="1325" period="4">
+                        <location corresp="#dinis"/>
+                        <location corresp="#afonsIV"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#B416V27MP">B416,V27,M,P</bibl>
+                    </listBibl>
+                </person>
+                <!--<person xml:id="PPort">
+                    <persName>Pedro de Portugal, Conde de Barcelos</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Court of D. Denis</placeName>
+                        </location>
+                    </birth>
+                    <occupation key="tr">Trobador</occupation>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <floruit from="1300" to="1350" period="4">
+                        <location from="1300" to="1318" corresp="#dinis"/>
+                        <location corresp="#afonsXI" from="1319" to="1322"/>
+                        <location from="1323" to="1325" corresp="#dinis"/>
+                        <location from="1326" to="1350" corresp="#lalim"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#B608V210">B608,V210</bibl>
+                        <bibl corresp="#B609V211">B609,V211</bibl>
+                        <bibl corresp="#B610V212">B610,V212</bibl>
+                        <bibl corresp="#B1431V1041">B1431,V1041</bibl>
+                        <bibl corresp="#B1432V1042">B1432,V1042</bibl>
+                    </listBibl>
+                </person>-->
+               <!-- <person xml:id="EstGuar">
+                    <persName>Estevan da Guarda</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Guarda</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1320" to="1350" period="4">
+                        <location corresp="#dinis" from="1320" to="1325"/>
+                        <location corresp="#afonsIV" from="1326" to="1350"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#B619V220">B619,V220</bibl>
+                        <bibl corresp="#B620V221">B620,V221</bibl>
+                        <bibl corresp="#B621V222">B621,V222</bibl>
+                        <bibl corresp="#B622V223">B622,V223</bibl>
+                        <bibl corresp="#B623V224">B623,V224</bibl>
+                        <bibl corresp="#B624V225">B624,V225</bibl>
+                        <bibl corresp="#B779V362">B779,V362</bibl>
+                        <bibl corresp="#B1304V909">B1304,V909</bibl>
+                        <bibl corresp="#B1305V910">B1305,V910</bibl>
+                        <bibl corresp="#B1306V911">B1306,V911</bibl>
+                    </listBibl>
+                </person>-->
+                <!--<person xml:id="Johan">
+                    <persName>Johan, jograr morador en León</persName>
+                    <nationality key="leo" cert="medium">Leonés</nationality>
+                    <birth>
+                        <location>
+                            <placeName>León</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="unknown">Descoñecido</socecStatus>
+                    <occupation key="jn">Xograr</occupation>
+                    <floruit from="1320" to="1340" period="4">
+                        <location corresp="#dinis" from="1320" to="1325"/>
+                        <location corresp="#lalim" from="1326" to="1340"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#B1116V707">B1116,V707</bibl>
+                        <bibl corresp="#B1117V708">B1117,V708</bibl>
+                    </listBibl>
+                </person>-->
+               <!-- <person xml:id="GarMdzEi">
+                    <persName>Garcia Mendiz d' Eixo</persName>
+                    <nationality key="pt" cert="high">Portuguesa</nationality>
+                    <birth>
+                        <location>
+                            <placeName>Eixo</placeName>
+                        </location>
+                    </birth>
+                    <socecStatus key="nb">Noble</socecStatus>
+                    <occupation key="tr">Trobador</occupation>
+                    <floruit from="1190" to="1239" period="1">
+                        <location corresp="#sanchoI" from="1190" to="1211"/>
+                        <location corresp="#afonsIX" from="1212" to="1217"/>
+                        <location corresp="#afonsII" from="1218" to="1224"/>
+                        <location corresp="#sousa" from="1225" to="1239"/>
+                    </floruit>
+                    <listBibl>
+                        <bibl corresp="#B454">B454</bibl>
+                    </listBibl>
+                </person>-->
+            </listPerson>
+        </body>
+        <back>
+            <listPlace>
+                <place xml:id="sobroso" type="noble">
+                    <location>
+                        <placeName>Family Soverosas' Court</placeName>
+                    </location>
+                </place>
+                <place xml:id="sanchoI" type="royal">
+                    <location>
+                        <placeName>Court of Sancho I, King of Portugal</placeName>
+                    </location>
+                </place>
+                <place xml:id="traba" type="noble">
+                    <location>
+                        <placeName>Family Traba Court</placeName>
+                    </location>
+                </place>
+                <place xml:id="dmartim" type="noble">
+                    <location>
+                        <placeName>Court of Martim Sanches, Count of Trastámara</placeName>
+                    </location>
+                </place>
+                <place xml:id="soesto" type="noble">
+                    <location>
+                        <placeName>Court of Rodrigo Gómez de Trastámara</placeName>
+                    </location>
+                </place>
+                <place xml:id="ferIII" type="royal">
+                    <location>
+                        <placeName>Court of Ferdinand III of Castile</placeName>
+                    </location>
+                </place>
+                <place xml:id="haro" type="noble">
+                    <location>
+                        <placeName>Court of Lope Díaz I de Haro</placeName>
+                    </location>
+                </place>
+                <place xml:id="meneses" type="noble">
+                    <location>
+                        <placeName>Court of Telo Afonso de Meneses</placeName>
+                    </location>
+                </place>
+                <place xml:id="bragança" type="noble">
+                    <location>
+                        <placeName>Bragança</placeName>
+                    </location>
+                </place>
+                <place xml:id="afonsX" type="royal">
+                    <location>
+                        <placeName>Court of Alfonso X, King of Castile, Leon and Galicia</placeName>
+                    </location>
+                </place>
+                <place xml:id="afonsII" type="royal">
+                    <location>
+                        <placeName>Court of Alfonso II of Aragon, King of Aragon and Count of
+                            Barcelona</placeName>
+                    </location>
+                </place>
+                <place xml:id="rodeiro" type="noble">
+                    <location>
+                        <placeName>Circle of D. Múnio de Rodeiro</placeName>
+                    </location>
+                </place>
+                <place xml:id="afonsIII" type="royal">
+                    <location>
+                        <placeName>Court of Afonso III, King of Portugal</placeName>
+                    </location>
+                </place>
+                <place xml:id="sanchoII" type="royal">
+                    <location>
+                        <placeName>Court of Sancho II, King of Portugal</placeName>
+                    </location>
+                </place>
+                <place xml:id="serpa" type="noble">
+                    <location>
+                        <placeName>Court of D. Fernado de la Serpa</placeName>
+                    </location>
+                </place>
+                <place xml:id="sousa" type="noble">
+                    <location>
+                        <placeName>Court of D. Gonçalo Garcia de Sousa</placeName>
+                    </location>
+                </place>
+                <place xml:id="sanchoIV" type="royal">
+                    <location>
+                        <placeName>Court of Sancho IV</placeName>
+                    </location>
+                </place>
+                <place xml:id="vigo" type="unknown">
+                    <location>
+                        <placeName>Vigo</placeName>
+                    </location>
+                </place>
+                <place xml:id="dinis" type="royal">
+                    <location>
+                        <placeName>Court of King Denis of Portugal</placeName>
+                    </location>
+                </place>
+                <place xml:id="afonsIV" type="royal">
+                    <location>
+                        <placeName>Court of Afonso IV</placeName>
+                    </location>
+                </place>
+                <place xml:id="lalim" type="noble">
+                    <location>
+                        <placeName>Court of Pedro Afonso, Count of Barcelos</placeName>
+                    </location>
+                </place>
+                <place xml:id="afonsXI" type="royal">
+                    <location>
+                        <placeName>Court of Alfonso XI</placeName>
+                    </location>
+                </place>
+                <place xml:id="afonsIX" type="royal">
+                    <location>
+                        <placeName>Court of Alfonso IX of León</placeName>
+                    </location>
+                </place>
+                <place xml:id="berenguer" type="noble">
+                    <location>
+                        <placeName>Court of Raimon Berenguer IV, Count of Provence</placeName>
+                    </location>
+                </place>
+            </listPlace>
+        </back>
+    </text>
+</TEI>
