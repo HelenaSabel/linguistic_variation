@@ -9,7 +9,6 @@
     <xsl:variable name="fenomenos" select="doc('../ancillary-files/feature_library.xml')//tei:fs[@feats[not(contains(., '#ling'))]]"/>
     <xsl:variable name="ling" select="doc('../ancillary-files/feature_library.xml')//tei:fs[@feats[contains(., '#ling')]]"/>
     <xsl:variable name="poets" select="doc('../ancillary-files/corpus_autores.xml')//tei:person"/>
-    <xsl:variable name="cantigas" select="doc('../ancillary-files/biblList.xml')//tei:bibl"/>
     <xsl:template match="/">
         <xsl:variable name="span">
             <xsl:apply-templates/>
@@ -20,17 +19,14 @@
         <html>
             <head>
                 <title>Ediçom sinóptica</title>
-                <meta charset="utf-8"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1"/>
-                <link href="CSS/index.css" rel="stylesheet" type="text/css" media="screen"/>
-                <link href="CSS/poems.css" rel="stylesheet" type="text/css" media="screen"/>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link href="CSS/index.css" rel="stylesheet" type="text/css" />
+                <link href="CSS/poems.css" rel="stylesheet" type="text/css"/>
                 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript">/**/</script>
-                <script src="JavaScript/menu.js" type="text/javascript">/**/</script>
-                <script type="text/javascript" src="JavaScript/sorttable.js">/**/</script>
                 <script src="JavaScript/language.js" type="text/javascript">/**/</script>
-                <script src="JavaScript/tooltip.js" type="text/javascript">/**/</script>
                 <script src="http://bigspotteddog.github.io/ScrollToFixed/jquery-scrolltofixed.js" type="text/javascript">/**/</script>
-                <script src="JavaScript/sidebar.js" type="text/javascript">/**/</script>
+                <!--#include virtual="SSI/favicon.html"-->
             </head>
             <body>
                 <xsl:comment>#include virtual="SSI/initials.html"</xsl:comment>
@@ -50,9 +46,19 @@
                         <div class="rightSide" id="move">
                             <div class="gl">
                                 <h3>Conteúdos</h3>
+                                <ul>
+                                    <xsl:for-each select="//tei:div[@type='poem']">
+                                        <li><a href="{current()/@corresp}"><xsl:value-of select="current()/substring(@corresp,2)"/></a></li>
+                                    </xsl:for-each>
+                                </ul>
                             </div>
                             <div class="en">
                                 <h3>Table of contents</h3>
+                                <ul>
+                                    <xsl:for-each select="//tei:div[@type='poem']">
+                                        <li><a href="{current()/@corresp}"><xsl:value-of select="current()/substring(@corresp,2)"/></a></li>
+                                    </xsl:for-each>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -87,9 +93,9 @@
         <xsl:variable name="wit2" select="tei:head//tei:rdg[2]/@wit"/>
         <xsl:variable name="wit3" select="tei:head//tei:rdg[3]/@wit"/>
         <xsl:variable name="author" select="$poets[@xml:id = current()//tei:name/substring(@ref,2)]"/>
-        <xsl:variable name="song" select="$cantigas[@xml:id = current()/substring(@corresp,2)]"/>
+        <xsl:variable name="song" select="current()/substring(@corresp,2)"/>
         <div class="metadata">
-            <h4>Cantiga: <xsl:value-of select="$song"/></h4>
+            <h4 id="{$song}">Cantiga: <xsl:value-of select="$song"/></h4>
             <h4>
                 <xsl:text>Autor: </xsl:text>
                 <xsl:value-of select="$author/tei:persName"/>
@@ -191,7 +197,7 @@
             <xsl:variable name="ana" select="tokenize(replace(@ana, '#', ''), ' ')"/>
             <xsl:element name="span">
                 <xsl:attribute name="class">
-                    <xsl:value-of select="replace(tokenize(@wit,' '), '#', '')"/>
+                    <xsl:value-of select="replace(replace(@wit,'#', ''), ' ', '')"/>
                 </xsl:attribute>
                 <xsl:if test=".[tokenize(replace(@ana, '#', ''), ' ') = $fenomenos/@xml:id][not(tei:seg)][not(tei:choice)]">
                     <xsl:attribute name="data-ana">
@@ -247,7 +253,7 @@
             <xsl:attribute name="class">title</xsl:attribute>
             <xsl:text>Omissão</xsl:text>
         </xsl:element>-->
-    <span class="gap">[]</span>
+    <span class="gap">[ ]</span>
     </xsl:template>
     <xsl:template match="tei:add">
         <span class="add">[<xsl:apply-templates/>]</span>
