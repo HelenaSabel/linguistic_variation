@@ -61,7 +61,14 @@
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
-        <xsl:apply-templates select="node()"/>
+        <xsl:choose>
+            <xsl:when test="contains(., ' ')">
+                <xsl:value-of select="replace(., ' ', '*')"/>
+            </xsl:when>
+            <xsl:otherwise>                
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
         <xsl:text>&lt;/</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
@@ -102,7 +109,14 @@
             <xsl:text>"</xsl:text>
         </xsl:for-each>
         <xsl:text>&gt;</xsl:text>
-        <xsl:apply-templates select="node()"/>
+        <xsl:choose>
+            <xsl:when test="contains(., ' ')">
+                <xsl:value-of select="replace(., ' ', '*')"/>
+            </xsl:when>
+            <xsl:otherwise>                
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
         <xsl:text>&lt;/</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
