@@ -65,6 +65,7 @@
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[1]/node()"/>
             </xsl:element>
+            <xsl:if test="rdg[2]">
             <xsl:element name="rdg">
                 <xsl:attribute name="wit">
                     <xsl:value-of select="current()/rdg[2]/@wit"/>
@@ -73,10 +74,10 @@
                     <xsl:if test="rdg[2][ex] and rdg[1][not(ex)]">
                         <xsl:text>#irreg</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1][add]">
+                    <xsl:if test="rdg[2][add]">
                         <xsl:text>#rev</xsl:text>
                     </xsl:if>                    
-                    <xsl:if test="rdg[1][del]">
+                    <xsl:if test="rdg[2][del]">
                         <xsl:text>#rev</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mh')">
@@ -112,10 +113,28 @@
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[2]/node()"/>
             </xsl:element>
+            </xsl:if>
             <xsl:if test="rdg[3]">
             <xsl:element name="rdg">
                 <xsl:attribute name="wit">
                     <xsl:value-of select="current()/rdg[3]/@wit"/>
+                </xsl:attribute>
+                <xsl:attribute name="ana">
+                    <xsl:if test="rdg[3][add]">
+                        <xsl:text>#rev</xsl:text>
+                    </xsl:if>                    
+                    <xsl:if test="rdg[3][del]">
+                        <xsl:text>#rev</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[3][gap/@reason='error']">
+                        <xsl:text>#error</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[3][gap/@reason='economy']">
+                        <xsl:text>#material</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[3][gap/@reason='damage']">
+                        <xsl:text>#material</xsl:text>
+                    </xsl:if>                    
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[3]/node()"/>
             </xsl:element>

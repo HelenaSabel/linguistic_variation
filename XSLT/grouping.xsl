@@ -21,13 +21,13 @@
                         <xsl:copy-of select="."/>
                         <xsl:if test="current-group()[2]">
                             <app>
-                                <rdg wit="#A #B"><xsl:copy-of select="current-group() except ."/></rdg>
+                                <rdg wit="#A #B #V"><xsl:copy-of select="current-group() except ."/></rdg>
                             </app>
                         </xsl:if>
                     </xsl:when>
                     <xsl:otherwise>
                         <app>
-                            <rdg wit="#A #B"><xsl:copy-of select="current-group()"/></rdg>
+                            <rdg wit="#A #B #V"><xsl:copy-of select="current-group()"/></rdg>
                         </app>
                     </xsl:otherwise>
                 </xsl:choose>

@@ -180,9 +180,11 @@
                          The asterisk inserted in the string mode to demark the attributes
                          is converted here using replace()
                          The attribute @disable-output-escaping replaces the entities to angle brackets-->
-                    <xsl:value-of
+                    <app>
+                    <rdg wit="#A #B #V"><xsl:value-of
                         select="insert-before(replace($Atokens[current()], '\*', ' '), 2, '')"
-                        disable-output-escaping="yes"/>
+                        disable-output-escaping="yes"/></rdg>
+                    </app>
                 </xsl:when>
                 <xsl:when test="$Btokens[current()] eq $Vtokens[current()] and $Btokens[current()] ne $Atokens[current()]">
                     <app>

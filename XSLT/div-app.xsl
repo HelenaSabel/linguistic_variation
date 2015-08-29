@@ -42,7 +42,7 @@
                     <xsl:element name="app">
                         <xsl:element name="rdg">                            
                             <xsl:attribute name="wit">
-                                <xsl:analyze-string select="string(./@corresp)" regex="(#\w)d+\w\d+">
+                                <xsl:analyze-string select="string(./@corresp)" regex="(#\w)\d+\w\d+">
                                     <xsl:matching-substring>
                                         <xsl:value-of select="regex-group(1)"/>
                                     </xsl:matching-substring>
@@ -86,7 +86,7 @@
                 </xsl:element>
                 <xsl:element name="name">
                     <xsl:attribute name="role">author</xsl:attribute>
-                    <xsl:attribute name="ref">#FerVelho</xsl:attribute>
+                    <xsl:attribute name="ref">#JLpzUlh</xsl:attribute>
                 </xsl:element>
             </xsl:element>
             <xsl:copy-of select="current()//l"/>
