@@ -143,6 +143,10 @@
                     <!--Desnasalização-->
                     <!--Denasalization-->
                 </fs>
+                <fs xml:id="prot" n="Prótese">
+                    <!--Prótese-->
+                   <!-- Prothetic vowel-->
+                </fs>
                 <fs xml:id="loan" feats="#Loan #ling" n="Empréstimo linguístico">
                     <!--Empréstimo linguístico-->
                     <!--Loan-->
@@ -207,6 +211,8 @@
                     <!--Dúvida-->
                     <!--Doubt-->
                 </fs> 
+                <fs xml:id="ar" n="Alternância ar-er"/>
+                <fs xml:id="mas" n="Mas"/>
             </fvLib>
 
 
@@ -317,6 +323,26 @@
                 <fs xml:id="dist" n="Distribuição"/>
                 <!--Distribuição-->
                 <!--Distribution-->
+            </fvLib>
+            <fvLib>
+                <fs xml:id="Vy" n="y em ditongo"/>                
+                <fs xml:id="uy" n="y em ditongo com u"/>
+                <fs xml:id="mh" n="h como vogal depois de m"/>
+                <fs xml:id="uj" n="j seguida de u, n ou m"/>
+                <fs xml:id="j" n="j com outros usos"/>
+                <fs xml:id="y" n="y como núcleo silábico depois de u, n ou m"/>
+                <fs xml:id="yOut" n="y núcleo silábico"/>
+                <fs xml:id="çe" n="ç ante de e/i"/>
+                <fs xml:id="m" n="m final"/>
+                <fs xml:id="hu" n="h com os indeterminados"/>
+                <fs xml:id="hi" n="h com a particula i"/>
+                <fs xml:id="hir" n="h com o verbo ir"/>
+                <fs xml:id="abb" n="abreviatura"/>
+                <fs xml:id="syn" n="sinalefa"/>
+                <fs xml:id="np" n="n antes de p/b"/>
+                <fs xml:id="ss" n="duplo s inicial"/>
+                <fs xml:id="ff"/>
+                <fs xml:id="ge"/>
             </fvLib>
         </body>
     </text>

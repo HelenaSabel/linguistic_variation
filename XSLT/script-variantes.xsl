@@ -50,13 +50,13 @@
                     <xsl:if test="contains(rdg[1], 'll') and contains(rdg[2],'lh')">
                         <xsl:text>#reg</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1][@gap='error']">
+                    <xsl:if test="rdg[1]/gap[@reason='error']">
                         <xsl:text>#error</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1][@gap='economy']">
+                    <xsl:if test="rdg[1]/gap[@reason='economy']">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1][@gap='damage']">
+                    <xsl:if test="rdg[1]/gap[@reason='damage']">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], '.')">
@@ -101,13 +101,13 @@
                     <xsl:if test="contains(rdg[1], 'lle') and contains(rdg[2], 'lhi')">
                         <xsl:text>#dat</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[2][@gap='error']">
+                    <xsl:if test="rdg[2]/gap[@reason='error']">
                         <xsl:text>#error</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[2][@gap='economy']">
+                    <xsl:if test="rdg[2]/gap[@reason='economy']">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[2][@gap='damage']">
+                    <xsl:if test="rdg[2]/gap[@reason='damage']">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>                    
                 </xsl:attribute>
