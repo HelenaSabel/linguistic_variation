@@ -239,30 +239,30 @@
                     <!--Desenvolvimento de abreviaturas do modelo-->
                     <!--Abbreviation expansion from the model-->
                 </fs>
-                <fs xml:id="innova" feats="#innovation #graph" n="Inovação gráfica">
-                    <!--Inovação gráfica-->
-                    <!--Innovatory spelling-->
-                </fs>
+               <!-- <fs xml:id="innova" feats="#innovation #graph" n="Inovação gráfica">
+                    <!-\-Inovação gráfica-\->
+                    <!-\-Innovatory spelling-\->
+                </fs>-->
                 <fs xml:id="dub" n="Dúvida"/>
                     <!--Dúvida-->
                 <fs xml:id="reg" feats="#regular #graph" n="Variante gráfica regular">
                     <!--Variante gráfica regular-->
                     <!--Regular graphic variant-->
                 </fs>
-                <fs xml:id="irreg"
+<!--                <fs xml:id="irreg"
                 feats="#irregular #graph"
                 n="Variante gráfica com distribuição irregular ">
-                    <!--Variante gráfica com distribuição irregular -->
-                    <!--Irregular graphic variant-->
+                    <!-\-Variante gráfica com distribuição irregular -\->
+                    <!-\-Irregular graphic variant-\->
                 </fs>
                 <fs xml:id="trend" feats="#tendency #graph" n="Tendência ortográfica">
-                    <!--Tendência ortográfica-->
-                    <!--Orthographic tendency (not completely regular)-->
+                    <!-\-Tendência ortográfica-\->
+                    <!-\-Orthographic tendency (not completely regular)-\->
                 </fs>
                 <fs xml:id="occas" feats="#graph" n="Variante gráfica ocasional">
-                    <!--Variante gráfica ocasional-->
+                    <!-\-Variante gráfica ocasional-\->
                     
-                </fs>
+                </fs>-->
                 <fs xml:id="lingR"
                 feats="#linRelevance #graph"
                 n="Variante gráfica com possíveis implicações linguísticas">
@@ -342,11 +342,13 @@
                 <fs xml:id="etim-h" n="h etimológica"/>
                 <fs xml:id="abb" n="abreviatura"/>
                 <fs xml:id="syn" n="sinalefa"/>
-                <fs xml:id="nh" n="nasalização vocálica"/>
+                <fs xml:id="nh" n="nh nasalização vocálica"/>
+                <fs xml:id="vow-n" n="n nasalização vocálica"/>
                 <fs xml:id="np" n="n antes de p/b"/>
                 <fs xml:id="ss" n="duplo s inicial"/>
                 <fs xml:id="ff"/>
                 <fs xml:id="ge"/>
+                <fs xml:id="c-pal"/>
             </fvLib>
         </body>
     </text>
