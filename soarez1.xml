@@ -487,9 +487,7 @@
             <l n="5">
                <app>
                   <rdg wit="#A">e essa me tem en poder</rdg>
-                  <rdg wit="#B" ana="#error">
-                     <gap reason="unknown"/>
-                  </rdg>
+                  <rdg wit="#B" ana="#error"><gap reason="error"/></rdg>
                </app>
             </l>
             <l n="6">
@@ -694,7 +692,7 @@
                <app>
                   <rdg wit="#A">meu</rdg>
                   <rdg wit="#B" ana="#error">
-                     <gap reason="#error"/>
+                     <gap reason="error"/>
                   </rdg>
                </app>
                <app>
@@ -2182,11 +2180,11 @@
                         <reg>direi-uos</reg>
                      </choice>
                   </rdg>
-                  <rdg wit="#B" ana="#trend">
+                  <rdg wit="#B" ana="#abb #Vy">
                      <choice>
                         <orig>direyu<ex>os</ex>
                         </orig>
-                        <reg>direy-uos</reg>
+                        <reg>direy-u<ex>os</ex></reg>
                      </choice>
                   </rdg>
                </app>
@@ -3009,7 +3007,7 @@
                <app>
                   <rdg wit="#A">tod&#8217;</rdg>
                   <rdg wit="#B" ana="#error">
-                     <gap reason="#error"/>
+                     <gap reason="error"/>
                   </rdg>
                </app>
                <app>
@@ -3108,65 +3106,41 @@
             </l>
             <l n="26">
                <app>
-                  <rdg wit="#A">
-                     <gap/>
-                  </rdg>
                   <rdg wit="#B" ana="#abb">Como q<ex>ue</ex>me faz deseiar</rdg>
                </app>
             </l>
             <l n="27">
                <app>
-                  <rdg wit="#A" ana="#equip">
-                     <gap reason="unknown"/>
-                  </rdg>
                   <rdg wit="#B">d<ex>eu</ex>s uosso be<ex>n</ex> p<ex>or</ex> deseiar</rdg>
                </app>
             </l>
             <l n="28">
                <app>
-                  <rdg wit="#A" ana="#equip">
-                     <gap reason="unknown"/>
-                  </rdg>
                   <rdg wit="#B">a mha mort&#8217; eu</rdg>
                </app>
             </l>
             <l n="29">
                <app>
-                  <rdg wit="#A" ana="#equip">
-                     <gap reason="unknown"/>
-                  </rdg>
                   <rdg wit="#B">p<ex>er</ex>o sei eu</rdg>
                </app>
             </l>
             <l n="30">
                <app>
-                  <rdg wit="#A" ana="#equip">
-                     <gap reason="unknown"/>
-                  </rdg>
                   <rdg wit="#B">pois q<ex>ue</ex> me d<ex>eu</ex>s no<ex>n</ex> q<ex>ue</ex>r q<ex>ui</ex>tar</rdg>
                </app>
             </l>
             <l n="31">
                <app>
-                  <rdg wit="#A" ana="#equip">
-                     <gap reason="unknown"/>
-                  </rdg>
                   <rdg wit="#B">d&#8217; en uos andar</rdg>
                </app>
             </l>
             <l n="32">
                <app>
-                  <rdg wit="#A" ana="#equip">
-                     <gap reason="unknown"/>
-                  </rdg>
                   <rdg wit="#B">ca a meu cuidar</rdg>
                </app>
             </l>
             <l n="33">
                <app>
-                  <rdg wit="#A" ana="#equip">
-                     <gap reason="unknown"/>
-                  </rdg>
                   <rdg wit="#B">no<ex>n</ex> m&#8217; auera mort&#8217; a p<ex>re</ex>nder</rdg>
                </app>
             </l>

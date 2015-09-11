@@ -9,12 +9,15 @@
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
     <pattern>
         <rule context="tei:l/tei:app[not(.//tei:choice)][count(tei:rdg) gt 1]">
-            <assert test="count(tei:rdg[@ana]) gt 0">Falta @ana</assert>
+            <assert test="count(tei:rdg[@ana]) gt 0">Missing @ana</assert>
+        </rule>
+        <rule context="tei:l/tei:app[not(.//tei:choice)][count(tei:rdg) gt 2]">
+            <assert test="count(tei:rdg[@ana]) gt 1">Missing @ana</assert>
         </rule>
         <rule context="tei:rdg">
             <assert
                 test="if (@ana) then tokenize(substring(@ana,2), '\s+') = $featureStructures else true()"
-                >O atributo nom está na lista</assert>
+                >The value of the attribute is not listed</assert>
             <assert test="@wit">It is mandatory to specify the witness</assert>
         </rule>
         <rule context="tei:div[@type='poem']">
@@ -28,6 +31,11 @@
             <assert test="@ref">Author code missing</assert>
             <assert test="if (@ref) then substring(@ref,2) = $poets else true()">Wrong author
                 code</assert>
+        </rule>
+        <rule context="tei:gap">
+            <assert test=".[@reason='error'] | .[@reason='economy'] | .[@reason='unfinished']| .[@reason='damage']| .[@reason='illegible']">
+                "error," "economy," "damage," "unfinished," or "illegible" are the only permitted values of @reason on the gap element
+            </assert>
         </rule>
     </pattern>
 </schema>

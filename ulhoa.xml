@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tei_tese.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="schemas/tei_tese.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -94,7 +94,7 @@
                   <rdg wit="#A #B">por meu mal por</rdg>
                </app>
                <app>
-                  <rdg wit="#A" ana="#vus">uus</rdg>
+                  <rdg wit="#A" ana="#back-vow">uus</rdg>
                   <rdg wit="#B" ana="#abb">u<ex>os</ex>
                   </rdg>
                </app>
@@ -982,7 +982,7 @@
                </app>
                <app>
                   <rdg wit="#A">ome</rdg>
-                  <rdg wit="#B" ana="#etim-h">home</rdg>
+                  <rdg wit="#B" ana="#h-et">home</rdg>
                </app>
                <app>
                   <rdg wit="#A #B">que aqui chegou</rdg>
@@ -1776,11 +1776,11 @@
                         <reg>direi-uos</reg>
                      </choice>
                   </rdg>
-                  <rdg wit="#B" ana="#Vy #uy">
+                  <rdg wit="#B" ana="#Vy #uy #abb">
                      <choice>
                         <orig>direyu<ex>os</ex>
                         </orig>
-                        <reg>direy-uos</reg>
+                        <reg>direy-u<ex>os</ex></reg>
                      </choice>
                   </rdg>
                </app>
@@ -2337,7 +2337,7 @@
                <app>
                   <rdg wit="#A" ana="#material">
                      <hi rend="guide">C</hi>a se.e.f.f.a.ueer</rdg>
-                  <rdg wit="#B" ana="#material">Ca se eu fosse <gap reason="#material"/></rdg>
+                  <rdg wit="#B" ana="#material">Ca se eu fosse <gap reason="economy"/></rdg>
                </app>
             </l>
             <l n="24">
@@ -2436,7 +2436,7 @@
                   <rdg wit="#A #B">uedes por que por quanto</rdg>
                </app>
                <app>
-                  <rdg wit="#A" ana="#vus">uus</rdg>
+                  <rdg wit="#A" ana="#back-vow">uus</rdg>
                   <rdg wit="#B" ana="#abb">u<ex>os</ex>
                   </rdg>
                </app>
@@ -2463,7 +2463,7 @@
                </app>
                <app>
                   <rdg wit="#A">per</rdg>
-                  <rdg wit="#B" ana="#error"><gap reason="#error"></gap></rdg>
+                  <rdg wit="#B" ana="#error"><gap reason="error"></gap></rdg>
                </app>
                <app>
                   <rdg wit="#A #B">que ei perdudo meu sen</rdg>
@@ -2682,7 +2682,7 @@
                   <rdg wit="#A #B">qual</rdg>
                </app>
                <app>
-                  <rdg wit="#A" ana="#vus">uus</rdg>
+                  <rdg wit="#A" ana="#back-vow">uus</rdg>
                   <rdg wit="#B" ana="#abb">u<ex>os</ex>
                   </rdg>
                </app>
@@ -2746,9 +2746,6 @@
             <l n="21">
                <app>
                   <rdg wit="#A">mia morte por en querria morrer</rdg>
-                  <rdg wit="#B" ana="#error">
-                     <gap reason="unknown"/>
-                  </rdg>
                </app>
             </l>
             <l n="22">

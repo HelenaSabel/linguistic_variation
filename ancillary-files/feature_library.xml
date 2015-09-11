@@ -78,6 +78,7 @@
                 n="Contaminação do dativo">
                     <!--Contaminação do dativo-->
                     <!--Dative contamination-->
+                    
                 </fs>
                 <fs xml:id="langT"
                 feats="#transfer #ling"
@@ -220,11 +221,13 @@
                 </fs> 
                 <fs xml:id="metaph" n="Harmonização vocálica">
                     <!--Harmonização vocálica-->
-                </fs>
+                </fs>                
+                <fs xml:id="pr-fraco" n="Forma pronome fraco"/>
                 <fs xml:id="diss" n="Dissimilação vocálica"/>
                 <fs xml:id="ar" n="Alternância ar-er"/>
                 <fs xml:id="mas" n="Mas"/>
                 <fs xml:id="depois" n="Uso de 'depois'"/>
+                <fs xml:id="conf-sib" n="Possível confusão na sonoridade de sibilantes"/>
             </fvLib>
 
 
@@ -245,11 +248,8 @@
                     <!--Grafia arcaica-->
                     <!--Archaic spelling-->
                 </fs>
-                <fs xml:id="vus"
-                feats="#uus #graph"
-                n="Desenvolvimento de abreviaturas do modelo">
-                    <!--Desenvolvimento de abreviaturas do modelo-->
-                    <!--Abbreviation expansion from the model-->
+                <fs xml:id="back-vow" n="Uso de 'u' para a vogal posterior semifechada">
+                    
                 </fs>
                <fs xml:id="innova" feats="#innovation #graph" n="Inovação gráfica">
                     <!--Inovação gráfica-->
@@ -335,14 +335,13 @@
                 <fs xml:id="dist" n="Distribuição"/>
                 <!--Distribuição-->
                 <!--Distribution-->
-                <fs xml:id="pr-fraco" n="Forma pronome fraco"/>
             </fvLib>
             <fvLib>
                 <fs xml:id="Vy" n="y em ditongo"/>                
                 <fs xml:id="uy" n="y precedida ou seguida de u (anterior ou posterior)"/>
                 <fs xml:id="yod-y" n="y para yode"/>
                 <fs xml:id="mh" n="h como vogal depois de m"/>
-                <fs xml:id="h-ot" n="h como vogal noutras posições"/>
+                <fs xml:id="h-ot" n="h como vogal palatal noutras posições"/>
                 <fs xml:id="uj" n="j seguida de u, n ou m"/>
                 <fs xml:id="vow-j" n="j como núcleo silánico"/>
                 <fs xml:id="cons-j" n="j consonante"/>
@@ -353,8 +352,9 @@
                 <fs xml:id="end-m" n="m final"/>
                 <fs xml:id="hu" n="h com os indeterminados"/>
                 <fs xml:id="hi" n="h com a particula i"/>
+                <fs xml:id="h-et" n="h etimologico"/>
                 <fs xml:id="hir" n="h com o verbo ir"/>
-                <fs xml:id="etim-h" n="h etimológica"/>
+                <fs xml:id="h-ant" n="h etimológica"/>
                 <fs xml:id="abb" n="abreviatura"/>
                 <fs xml:id="syn" n="sinalefa"/>
                 <fs xml:id="nh" n="nh nasalização vocálica"/>
@@ -366,6 +366,10 @@
                 <fs xml:id="c-pal"/>
                 <fs xml:id="ll"/>
                 <fs xml:id="l-pal"/>
+                <fs xml:id="ss-inic" n="Duplo s inicial"/>
+                <fs xml:id="sc"/>
+                <fs xml:id="gu"/>
+                <fs xml:id="r-simp"/>
             </fvLib>
         </body>
     </text>
