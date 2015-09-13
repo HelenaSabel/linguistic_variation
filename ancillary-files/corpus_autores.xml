@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tei_troubadours.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="../schemas/authors-bibl.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Corpus de Autores</title>
+                <title>Corpus de trovadores e jograres</title>
+                <author>Helena Bermúdez Sabel</author>
             </titleStmt>
             <publicationStmt>
-                <publisher/>
                 <availability>
                     <licence>
-                        <ref target="http://creativecommons.org/licenses/by-nc/3.0/">Creative
-                            Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)</ref>
+                        <ref target="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                            Attribution-NonCommercial-ShareAlike 4.0 International</ref>
                     </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>Orixe dixital.</p>
-                <p>Datos extraídos das bases de datos<emph>
+                <p>Born-digital.</p>
+                <p>Dados extraídos das bases de dados<bibl>
                         <ref corresp="#medDB">Base de datos da Lírica Profana Galego-Portuguesa
                             (MedDB)</ref>
-                    </emph>and <emph>
+                    </bibl>and <bibl>
                         <ref corresp="#fsch">Cantigas Medievais Galego Portuguesas [base de dados
                             online]</ref>
-                    </emph>.</p>
+                    </bibl>.</p>
             </sourceDesc>
             <sourceDesc>
                 <bibl corresp="#medDB"> Base de datos da Lírica Profana Galego-Portuguesa (MedDB),

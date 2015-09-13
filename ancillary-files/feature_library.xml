@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/feature-library.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../schemas/tei_features.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader type="text">
+    <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Feature library for the Iberian Poets project</title>
+                <title>Fenómenos de variação textual do projeto: Edição sinóptica (parcial) da lírica profana galego-portuguesa</title>                
+                <author>Helena Bermúdez Sabel</author>
             </titleStmt>
             <publicationStmt>
                 <publisher/>
                 <availability>
                     <licence>
-                        <ref target="http://creativecommons.org/licenses/by-nc/3.0/">Creative
-                            Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)</ref>
+                        <ref target="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                            Attribution-NonCommercial-ShareAlike 4.0 International</ref>
                     </licence>
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>Born digital.</p>
+                <p>Born-digital.</p>
             </sourceDesc>
         </fileDesc>
     </teiHeader>
