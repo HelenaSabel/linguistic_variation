@@ -13,7 +13,7 @@
     </xsl:template>
     <xsl:template match="l/@n">
         <xsl:attribute name="n">
-            <xsl:value-of select="count(parent::*/preceding-sibling::*)+1"/>
+            <xsl:value-of select="count(parent::*/preceding-sibling::l)+1"/>
         </xsl:attribute>
     </xsl:template>
 </xsl:stylesheet>
