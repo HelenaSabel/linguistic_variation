@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Edição sinóptica (parcial) da lírica profana galego-portuguesa: Pai Gomez Charinho</title>
+            <title>Edição sinóptica (parcial) da lírica profana galego-portuguesa: Pai Gomez
+               Charinho</title>
             <author>
                <name>Helena Bermúdez Sabel</name>
             </author>
@@ -10,7 +14,7 @@
                <name/>
                <resp>Todos os textos foram marcados por <name>Helena Bermudez Sabel</name>. Este
                   trabalho faz parte da sua tese de doutoramente, dirigida pelas professoras
-                  <name>Pilar Lorenzo Gradín</name> e <name>Mariña ArborAldea</name>
+                     <name>Pilar Lorenzo Gradín</name> e <name>Mariña ArborAldea</name>
                </resp>
             </respStmt>
          </titleStmt>
@@ -29,7 +33,7 @@
          <sourceDesc>
             <p>As transcrições dos textos foram realizadas usando como base o trabalho levado a cabo
                por <name>Mariña Arbor Aldea</name> (para o <bibl>Cancioneiro da Ajuda</bibl>) e
-               <name>Antonio Fernández Guiadanes</name> (para o <bibl>Cancioneiro da Biblioteca
+                  <name>Antonio Fernández Guiadanes</name> (para o <bibl>Cancioneiro da Biblioteca
                   Nacional</bibl> e o <bibl>Cancioneiro da Vaticana</bibl>). Agradecemos imensamente
                que estes dous investigadores nos cedessem o seu trabalho inédito.</p>
          </sourceDesc>
@@ -59,13 +63,16 @@
             <head>
                <title>
                   <app>
-                     <rdg wit="#A" hand="#&#945;"><idno>A246</idno>
+                     <rdg wit="#A" hand="#&#945;">
+                        <idno>A246</idno>
                         <locus from="67r" to="67r"/>
                      </rdg>
-                     <rdg wit="#B" hand="#c"><idno>B811</idno>
+                     <rdg wit="#B" hand="#c">
+                        <idno>B811</idno>
                         <locus from="172r" to="172r"/>
                      </rdg>
-                     <rdg wit="#V" hand="#v"><idno>V395</idno>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V395</idno>
                         <locus from="63r" to="63r"/>
                      </rdg>
                   </app>
@@ -148,8 +155,7 @@
             </l>
             <l n="4">
                <app>
-                  <rdg wit="#A">u<ex>&#771;</ex>a
-                  </rdg>
+                  <rdg wit="#A">u<ex>&#771;</ex>a </rdg>
                   <rdg wit="#B #V" ana="#nh">hunha</rdg>
                </app>
                <app>
@@ -180,10 +186,10 @@
                      <del rend="underdot">llousey</del>
                      <add rend="margem" resp="revisor">ousem</add>
                   </rdg>
-                  <rdg wit="#B">lh&#8217; ousei</rdg>                  
+                  <rdg wit="#B">lh&#8217; ousei</rdg>
                   <rdg wit="#V" ana="#Vy">lh&#8217; ousey</rdg>
                </app>
-               <app>                  
+               <app>
                   <rdg wit="#A">mais</rdg>
                   <rdg wit="#B #V" ana="#Vy">mays</rdg>
                </app>
@@ -249,12 +255,19 @@
             <l n="9">
                <app>
                   <rdg wit="#A">eu</rdg>
-                  <rdg wit="#B #V" ana="#error"><gap reason="error"/></rdg>
+                  <rdg wit="#B #V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A">por</rdg>
                   <rdg wit="#B" ana="#error">p<ex>er</ex>olo</rdg>
-                  <rdg wit="#V" ana="#art #art-al"><choice><orig>polo</orig><reg>po-lo</reg></choice></rdg>
+                  <rdg wit="#V" ana="#art #art-al">
+                     <choice>
+                        <orig>polo</orig>
+                        <reg>po-lo</reg>
+                     </choice>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #B #V">meu mal</rdg>
@@ -312,7 +325,9 @@
                </app>
                <app>
                   <rdg wit="#A">gran</rdg>
-                  <rdg wit="#B #V" ana="#error"><gap reason="error"></gap></rdg>
+                  <rdg wit="#B #V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A">dereit&#8217;</rdg>
@@ -614,7 +629,8 @@
             </l>
             <l n="25">
                <app>
-                  <rdg wit="#A">mellor ca m&#8217; end&#8217; eu guardei q<ex>ue</ex> mor<add rend="interlinha">e</add>ria</rdg>
+                  <rdg wit="#A">mellor ca m&#8217; end&#8217; eu guardei q<ex>ue</ex> mor<add
+                        rend="interlinha">e</add>ria</rdg>
                </app>
             </l>
             <l n="26">
@@ -638,16 +654,22 @@
             <head>
                <title>
                   <app>
-                     <rdg wit="#A" hand="#&#945;"><idno>A248</idno>
+                     <rdg wit="#A" hand="#&#945;">
+                        <idno>A248</idno>
                         <locus from="67v" to="67v"/>
                      </rdg>
-                     <rdg wit="#A" hand="#&#945;"><idno>A253bis</idno>
+                     <rdg wit="#A" hand="#&#945;">
+                        <idno>A253bis</idno>
                         <locus from="69r" to="69v"/>
                      </rdg>
-                     <rdg wit="#B" hand="#c"><idno>B816</idno>
+                     <rdg wit="#B" hand="#c">
+                        <idno>B816</idno>
                         <locus from="173r" to="173r"/>
                      </rdg>
-                     <rdg wit="#V" hand="#v"><idno>V400</idno><locus from="63v" to="64r"/></rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V400</idno>
+                        <locus from="63v" to="64r"/>
+                     </rdg>
                   </app>
                </title>
                <name role="author" ref="#PayGmzCha"/>
@@ -788,34 +810,46 @@
             <l n="6">
                <app>
                   <rdg wit="#A #A2 #B">me</rdg>
-                  <rdg wit="#V" ana="#error"><gap reason="error"/></rdg>
+                  <rdg wit="#V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #A2">quer</rdg>
                   <rdg wit="#B" ana="#abb">q<ex>ue</ex>r</rdg>
-                  <rdg wit="#V" ana="#error"><gap reason="error"/></rdg>
+                  <rdg wit="#V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #A2 #B">matar</rdg>
-                  <rdg wit="#V" ana="#error"><gap reason="error"/></rdg>
+                  <rdg wit="#V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #B" ana="#punct">.</rdg>
                </app>
                <app>
                   <rdg wit="#A #A2 #B">e</rdg>
-                  <rdg wit="#V" ana="#error"><gap reason="error"/></rdg>
+                  <rdg wit="#V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A" ana="#r-simp">guaria</rdg>
                   <rdg wit="#A2" ana="#error">gualrria</rdg>
-                  <rdg wit="#B">guarria</rdg>                  
-                  <rdg wit="#V" ana="#error"><gap reason="error"/></rdg>
+                  <rdg wit="#B">guarria</rdg>
+                  <rdg wit="#V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #A2" ana="#reg">mellor</rdg>
-                  <rdg wit="#B">melhor</rdg>                  
-                  <rdg wit="#V" ana="#error"><gap reason="error"/></rdg>
+                  <rdg wit="#B">melhor</rdg>
+                  <rdg wit="#V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
             </l>
             <l n="7">
@@ -843,9 +877,13 @@
             <l n="8">
                <app>
                   <rdg wit="#A #A2" ana="#material">
-                     <hi rend="guide">E</hi> se
+                     <hi rend="guide">E</hi> se </rdg>
+                  <rdg wit="#B">
+                     <choice>
+                        <orig>Esse</orig>
+                        <reg>E se</reg>
+                     </choice>
                   </rdg>
-                  <rdg wit="#B"><choice><orig>Esse</orig><reg>E se</reg></choice></rdg>
                   <rdg wit="#V" ana="#ss-inic">E sse</rdg>
                </app>
                <app>
@@ -996,7 +1034,9 @@
                </app>
                <app>
                   <rdg wit="#A #A2">de</rdg>
-                  <rdg wit="#B #V" ana="#error"><gap reason="error"></gap></rdg>
+                  <rdg wit="#B #V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #A2" ana="#ff">soffrer</rdg>
@@ -1056,7 +1096,12 @@
                   <rdg wit="#A #A2">o uosso bon pareçer que</rdg>
                </app>
                <app>
-                  <rdg wit="#A"><choice><orig>dessi</orig><reg>de si</reg></choice></rdg>
+                  <rdg wit="#A">
+                     <choice>
+                        <orig>dessi</orig>
+                        <reg>de si</reg>
+                     </choice>
+                  </rdg>
                   <rdg wit="#A2">de si</rdg>
                </app>
             </l>
@@ -1177,13 +1222,16 @@
             <head>
                <title>
                   <app>
-                     <rdg wit="#A" hand="#&#945;"><idno>A255</idno>
+                     <rdg wit="#A" hand="#&#945;">
+                        <idno>A255</idno>
                         <locus from="69v" to="70r"/>
                      </rdg>
-                     <rdg wit="#B" hand="#c"><idno>B842</idno>
+                     <rdg wit="#B" hand="#c">
+                        <idno>B842</idno>
                         <locus from="177v" to="177v"/>
                      </rdg>
-                     <rdg wit="#V" hand="#v"><idno>V428</idno>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V428</idno>
                         <locus from="68v" to="68v"/>
                      </rdg>
                   </app>
@@ -1264,7 +1312,9 @@
             <l n="3">
                <app>
                   <rdg wit="#A">e</rdg>
-                  <rdg wit="#B #V" ana="#abb"><ex>e</ex></rdg>
+                  <rdg wit="#B #V" ana="#abb">
+                     <ex>e</ex>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #B #V">o</rdg>
@@ -1319,7 +1369,7 @@
             </l>
             <l n="5">
                <app>
-                  <rdg wit="#A" ana="#material">
+                  <rdg wit="#A" ana="#material #anal-o">
                      <gap reason="unfinished"/>isso</rdg>
                   <rdg wit="#B #V">Disse</rdg>
                </app>
@@ -1328,7 +1378,9 @@
                   <rdg wit="#B #V">moie</rdg>
                </app>
                <app>
-                  <rdg wit="#A" ana="#rev"><del rend="underdot overstrike">can me</del></rdg>
+                  <rdg wit="#A" ana="#rev">
+                     <del rend="underdot overstrike">can me</del>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #V">que</rdg>
@@ -1337,7 +1389,9 @@
                </app>
                <app>
                   <rdg wit="#A">ca</rdg>
-                  <rdg wit="#B #V" ana="#error"><gap reason="error"></gap></rdg>
+                  <rdg wit="#B #V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #B #V">me queria</rdg>
@@ -1373,7 +1427,8 @@
                </app>
             </l>
             <l n="7" rend="transposition">
-               <note>Em <bibl>B</bibl> e <bibl>V</bibl> esta e a seguinte cobra aparecem transcritas em ordem inversa</note>
+               <note>Em <bibl>B</bibl> e <bibl>V</bibl> esta e a seguinte cobra aparecem transcritas
+                  em ordem inversa</note>
                <app>
                   <rdg wit="#A #B #V">E por esto</rdg>
                </app>
@@ -1386,8 +1441,8 @@
                   <rdg wit="#A #B #V">me</rdg>
                </app>
                <app>
-                  <rdg wit="#A">disso</rdg>
-                  <rdg wit="#B #V" ana="#puf">disse</rdg>
+                  <rdg wit="#A" ana="#anal-o">disso</rdg>
+                  <rdg wit="#B #V">disse</rdg>
                </app>
                <app>
                   <rdg wit="#A #B #V">cuydou</rdg>
@@ -1486,9 +1541,9 @@
             </l>
             <l n="11">
                <app>
-                  <rdg wit="#A" ana="#material">
+                  <rdg wit="#A" ana="#material #anal-o">
                      <hi rend="guide">D</hi>isso</rdg>
-                  <rdg wit="#B #V" ana="#puf">Disse</rdg>
+                  <rdg wit="#B #V">Disse</rdg>
                </app>
                <app>
                   <rdg wit="#A" ana="#cons-g">moge</rdg>
@@ -1496,12 +1551,16 @@
                </app>
                <app>
                   <rdg wit="#A">ca me queria ben</rdg>
-                  <rdg wit="#B #V" ana="#material"><gap reason="economy"></gap></rdg>
+                  <rdg wit="#B #V" ana="#material">
+                     <gap reason="economy"/>
+                  </rdg>
                </app>
             </l>
             <l n="12">
                <app>
-                  <rdg wit="#A #B #V"><gap reason="economy"/></rdg>
+                  <rdg wit="#A #B #V">
+                     <gap reason="economy"/>
+                  </rdg>
                </app>
             </l>
             <l n="13" rend="transposition">
@@ -1560,14 +1619,18 @@
                </app>
                <app>
                   <rdg wit="#A">muito</rdg>
-                  <rdg wit="#B #V" ana="#error"><gap reason="error"></gap></rdg>
+                  <rdg wit="#B #V" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                </app>
                <app>
                   <rdg wit="#A #B #V">d<ex>eu</ex>s</rdg>
                </app>
                <app>
                   <rdg wit="#A">e</rdg>
-                  <rdg wit="#B" ana="#error"><gap reason="error"/></rdg>
+                  <rdg wit="#B" ana="#error">
+                     <gap reason="error"/>
+                  </rdg>
                   <rdg wit="#V" ana="#abb">
                      <ex>e</ex>
                   </rdg>
@@ -1578,7 +1641,9 @@
             </l>
             <l n="16" rend="transposition">
                <app>
-                  <rdg wit="#A"><ex>e</ex></rdg>
+                  <rdg wit="#A">
+                     <ex>e</ex>
+                  </rdg>
                   <rdg wit="#B #V" ana="#equip">mays</rdg>
                </app>
                <app>
@@ -1606,20 +1671,23 @@
             </l>
             <l n="17">
                <app>
-                  <rdg wit="#A" ana="#material">
+                  <rdg wit="#A" ana="#material #anal-o">
                      <hi rend="guide">D</hi>isso moie</rdg>
-                  <rdg wit="#B" ana="#puf">Disse moie</rdg>
-                  <rdg wit="#V">disemoie.</rdg>
+                  <rdg wit="#B">Disse moie</rdg>
+                  <rdg wit="#V" ana="#error">disemoie.</rdg>
                </app>
                <app>
                   <rdg wit="#A">ca me queria ben</rdg>
-                  <rdg wit="#B #V" ana="#material"><gap reason="economy"/>
+                  <rdg wit="#B #V" ana="#material">
+                     <gap reason="economy"/>
                   </rdg>
                </app>
             </l>
             <l n="18">
                <app>
-                  <rdg wit="#A #B #V"><gap reason="economy"/></rdg>
+                  <rdg wit="#A #B #V">
+                     <gap reason="economy"/>
+                  </rdg>
                </app>
             </l>
             <l n="19">

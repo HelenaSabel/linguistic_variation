@@ -33,8 +33,8 @@
                 code</assert>
         </rule>
         <rule context="tei:gap">
-            <assert test=".[@reason='error'] | .[@reason='economy'] | .[@reason='unfinished']| .[@reason='damage']| .[@reason='illegible']">
-                "error," "economy," "damage," "unfinished," or "illegible" are the only permitted values of @reason on the gap element
+            <assert test=".[@reason='error'] | .[@reason='economy'] | .[@reason='unfinished']| .[@reason='damage']| .[@reason='illegible']| .[@reason='model']">
+                "error," "economy," "damage," "unfinished," "model," or "illegible" are the only permitted values of @reason on the gap element
             </assert>
         </rule>
     </pattern>
