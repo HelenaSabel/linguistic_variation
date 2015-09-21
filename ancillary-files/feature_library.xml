@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schemas/tei_features.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../schemas/feats.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -46,6 +47,7 @@
                 <f name="presentTheme" xml:id="pres"/>
                 <f name="habere" xml:id="habere"/>
                 <f name="nasalization" xml:id="nasal"/>
+                <f name="sibiliantes" xml:id="sibilante"/>
                 <f name="progressiveNasalization" xml:id="proNas"/>
                 <f name="analogy" xml:id="anal"/>
                 <f name="epentheticYod" xml:id="eYod"/>
@@ -74,17 +76,18 @@
             </fLib>
 
 
-            <fvLib n="Linguistic Variants">
+            <fvLib n="Linguistic variants">
+                <fs xml:id="apocope" feats="#ling #phon" n="Apócope"></fs>
                 <fs xml:id="dat" feats="#datCon #pr #morph #ling" n="Contaminação do dativo">
                     <!--Contaminação do dativo-->
                     <!--Dative contamination-->
                 </fs>
-                <fs xml:id="datDub" n="Contaminação do dativo vs. crase vocálica"></fs>
+                <fs xml:id="dubDat" feats="#datCon #pr #morph #ling" n="Contaminação do dativo vs. crase vocálica"></fs>
                 <fs xml:id="langT" feats="#transfer #ling" n="Interfererência linguística">
                     <!--Interfererência linguística-->
                     <!--Language transfer-->
                 </fs>
-                <fs xml:id="sib-cognate" n="Duplo resultado na evolução de sibilantes"></fs>
+                <fs xml:id="sib-cognate" feats="#ling #Cognate #sibilante #phon" n="Duplo resultado na evolução de sibilantes"></fs>
                 <fs xml:id="oer" feats="#habere #past #irregV #vb #morph #ling"
                     n="Tema de perfeito de 'haver' em 'o-'">
                     <!--Tema de perfeito de 'haver' em 'o-'-->
@@ -131,7 +134,7 @@
                     <!--Desnasalização-->
                     <!--Denasalization-->
                 </fs>
-                <fs xml:id="prot" n="Prótese">
+                <fs xml:id="protese" feats="#ling #phon #vowel" n="Prótese">
                     <!--Prótese-->
                     <!-- Prothetic vowel-->
                 </fs>
@@ -196,24 +199,23 @@
                     <!-- Uso do artigo com o posessivo-->
                     <!--Use of the article preceding a possessive-->
                 </fs>
-                <fs xml:id="art-al" feats="#allom" n="Forma alomorfa do artigo">
+                <fs xml:id="art-al" feats="#allom #ling #phon" n="Forma alomorfa do artigo">
                     <!--Forma alomorfa do artigo-->
                 </fs>
-                <fs xml:id="a-prot" n="'a' protético"/>
                 <fs xml:id="wtf" n="WTF: uma etiqueta tam válida como 'analogia'"></fs>
                 <fs xml:id="metaph" n="Harmonização vocálica">
                     <!--Harmonização vocálica-->
                 </fs>
-                <fs xml:id="li" n="Pronome dativo 'li'"/>
-                <fs xml:id="assimC" n="Assimilação consonántica"></fs>
-                <fs xml:id="pr-fraco" n="Forma pronome fraco"/>
-                <fs xml:id="diss" n="Dissimilação vocálica"/>
-                <fs xml:id="ar" n="Alternância 'ar/er'"/>
-                <fs xml:id="mas" n="Alternância 'mas/mais'"/>
-                <fs xml:id="depois" n="Alternância 'depois/despois'"/>
-                <fs xml:id="conf-sib" n="Possível confusão na sonoridade de sibilantes"/>
-                <fs xml:id="pal-nas" n="Desenvolvimento nasal palatal"></fs>
-                <fs xml:id="paragoge" n="Paragoge"/>
+                <fs xml:id="li" feats="#ling #morph #pr" n="Pronome dativo 'li'"/>
+                <fs xml:id="assimC" feats="#ling #phon #cons" n="Assimilação consonántica"></fs>
+                <fs xml:id="pr-fraco" feats="#ling #morph" n="Forma pronome fraco"/>
+                <fs xml:id="diss" feats="#ling #vowel #phon" n="Dissimilação vocálica"/>
+                <fs xml:id="ar" feats="#ling" n="Alternância 'ar/er'"/>
+                <fs xml:id="mas" feats="#ling" n="Alternância 'mas/mais'"/>
+                <fs xml:id="depois" feats="#ling" n="Alternância 'depois/despois'"/>
+                <fs xml:id="conf-sib" feats="#ling #ph" n="Possível confusão na sonoridade de sibilantes"/>
+                <fs xml:id="pal-nas" feats="#ling #ph" n="Desenvolvimento nasal palatal"></fs>
+                <fs xml:id="paragoge" feats="#ling #ph" n="Paragoge"/>
             </fvLib>
 
 

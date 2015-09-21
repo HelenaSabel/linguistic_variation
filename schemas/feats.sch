@@ -4,7 +4,7 @@
     <pattern>
         <rule context="tei:fs">
             <assert
-                test="if (@feats) then tokenize(substring(@feats,2), '\s+') = //tei:fLib[@n = current()/../@n]//tei:f/@xml:id else true()"
+                test="if (@feats) then tokenize(replace(@feats, '#', ''), '\s+') = preceding::tei:fLib[@n = current()/../@n]//tei:f/@xml:id else true()"
                 >Non-existent feature</assert>
         </rule>
     </pattern>
