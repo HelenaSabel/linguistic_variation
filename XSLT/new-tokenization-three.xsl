@@ -57,7 +57,7 @@
         <xsl:comment select="."/>
     </xsl:template>
     <!-- Elements with children but no attributes-->
-    <xsl:template match="ex|am|add[not(@*)]|del[not(@*)]" mode="string">
+    <xsl:template match="ex|am|add[not(@*)]|del[not(@*)]|unclear" mode="string">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
@@ -75,7 +75,7 @@
         <xsl:for-each select="@*">            
             <!-- Since we used white spaces to delimit the tokens, we introduced here an 
                 asterisk instead that is replaced later on-->
-            <xsl:text>*</xsl:text>
+            <xsl:text>_</xsl:text>
             <xsl:value-of select="name()"/>
             <xsl:text>="</xsl:text>
             <xsl:value-of select="current()"/>
@@ -95,14 +95,21 @@
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:for-each select="@*">
-            <xsl:text>*</xsl:text>
+            <xsl:text>_</xsl:text>
             <xsl:value-of select="name()"/>
             <xsl:text>="</xsl:text>
             <xsl:value-of select="current()"/>
             <xsl:text>"</xsl:text>
         </xsl:for-each>
         <xsl:text>&gt;</xsl:text>
-        <xsl:apply-templates select="node()"/>
+        <xsl:choose>
+            <xsl:when test="contains(., ' ')">
+                <xsl:value-of select="replace(., ' ', '_')"/>
+            </xsl:when>
+            <xsl:otherwise>                
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
         <xsl:text>&lt;/</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
@@ -124,7 +131,7 @@
         <xsl:text>&gt;</xsl:text>
         <xsl:choose>
             <xsl:when test="contains(., ' ')">
-                <xsl:value-of select="replace(., ' ', '*')"/>
+                <xsl:value-of select="replace(., ' ', '_')"/>
             </xsl:when>
             <xsl:otherwise>                
                 <xsl:apply-templates/>
@@ -134,7 +141,7 @@
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
-    <xsl:template match="orig/ex">
+    <xsl:template match="orig/ex|reg/ex">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>  
@@ -170,32 +177,32 @@
                         <xsl:element name="rdg">
                             <xsl:attribute name="wit">#A #B #V</xsl:attribute>
                     <xsl:value-of
-                        select="insert-before(replace($Atokens[current()], '\*', ' '), 2, '')"
+                        select="insert-before(replace($Atokens[current()], '_', ' '), 2, '')"
                         disable-output-escaping="yes"/>
                         </xsl:element>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="$Btokens[current()] eq $Vtokens[current()] and $Btokens[current()] ne $Atokens[current()]">
                     <app>
-                        <rdg wit="#A"><xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
+                        <rdg wit="#A"><xsl:value-of select="replace($Atokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
-                        <rdg wit="#B #V"><xsl:value-of select="replace($Btokens[current()], '\*', ' ')"
+                        <rdg wit="#B #V"><xsl:value-of select="replace($Btokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
                     </app>
                 </xsl:when>
                 <xsl:when test="$Btokens[current()] eq $Atokens[current()] and $Btokens[current()] ne $Vtokens[current()]">
                     <app>
-                        <rdg wit="#A #B"><xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
+                        <rdg wit="#A #B"><xsl:value-of select="replace($Atokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
-                        <rdg wit="#V"><xsl:value-of select="replace($Vtokens[current()], '\*', ' ')"
+                        <rdg wit="#V"><xsl:value-of select="replace($Vtokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
                     </app>
                 </xsl:when>
                 <xsl:when test="$Atokens[current()] eq $Vtokens[current()] and $Btokens[current()] ne $Vtokens[current()]">
                     <app>
-                        <rdg wit="#A #V"><xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
+                        <rdg wit="#A #V"><xsl:value-of select="replace($Atokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
-                        <rdg wit="#B"><xsl:value-of select="replace($Btokens[current()], '\*', ' ')"
+                        <rdg wit="#B"><xsl:value-of select="replace($Btokens[current()], '_', ' ')"
                             disable-output-escaping="yes"/></rdg>
                     </app>
                 </xsl:when>
@@ -204,7 +211,7 @@
                         <rdg wit="#A">
                             <xsl:choose>
                                 <xsl:when test="$Atokens[current()]">
-                                    <xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
+                                    <xsl:value-of select="replace($Atokens[current()], '_', ' ')"
                                         disable-output-escaping="yes"/>
                                 </xsl:when>
                                 <xsl:otherwise>
@@ -215,7 +222,7 @@
                         <rdg wit="#B">
                             <xsl:choose>
                                 <xsl:when test="$Btokens[current()]">
-                                    <xsl:value-of select="replace($Btokens[current()], '\*', ' ')"
+                                    <xsl:value-of select="replace($Btokens[current()], '_', ' ')"
                                         disable-output-escaping="yes"/>
                                 </xsl:when>
                                 <xsl:otherwise>
@@ -226,7 +233,7 @@
                         <rdg wit="#V">
                             <xsl:choose>
                                 <xsl:when test="$Vtokens[current()]">
-                                    <xsl:value-of select="replace($Vtokens[current()],'\*', ' ')"
+                                    <xsl:value-of select="replace($Vtokens[current()],'_', ' ')"
                                         disable-output-escaping="yes"/>
                                 </xsl:when>
                                 <xsl:otherwise>
