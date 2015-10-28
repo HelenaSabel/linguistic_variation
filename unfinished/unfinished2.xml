@@ -1,0 +1,2438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Edición sinóptica (parcial) da lírica profana galego-portuguesa: Vasco Fernandez
+               Praga de Sandin (primeira parte)</title>
+            <author>
+               <name>Helena Bermúdez Sabel</name>
+            </author>
+            <respStmt>
+               <name/>
+               <resp>Todos os textos foram marcados por <name>Helena Bermudez Sabel</name>. Este
+                  trabalho faz parte da sua tese de doutoramente, dirigida pelas professoras
+                     <name>Pilar Lorenzo Gradín</name> e <name>Mariña ArborAldea</name>
+               </resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Universidade de Santiago de Compostela</authority>
+            <availability>
+               <licence>
+                  <ref target="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                     Attribution-NonCommercial-ShareAlike 4.0 International</ref>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note/>
+         </notesStmt>
+         <sourceDesc>
+            <p>As transcrições dos textos foram realizadas usando como base o trabalho levado a cabo
+               por <name>Mariña Arbor Aldea</name> (para o <bibl>Cancioneiro da Ajuda</bibl>) e
+                  <name>Antonio Fernández Guiadanes</name> (para o <bibl>Cancioneiro da Biblioteca
+                  Nacional</bibl> e o <bibl>Cancioneiro da Vaticana</bibl>). Agradecemos imensamente
+               que estes dous investigadores nos cedessem o seu trabalho inédito.</p>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <variantEncoding location="internal" method="parallel-segmentation"/>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="pt">Galego-português</language>
+            <language ident="gl"/>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <listWit>
+               <witness corresp="#A">Cancioneiro da Ajuda</witness>
+               <witness corresp="#B">Cancioneiro da Biblioteca Nacional</witness>
+               <witness corresp="#V">Cancioneiro da Biblioteca Vaticana</witness>
+            </listWit>
+         </div>
+      </front>
+      <body>
+         <div type="poem" corresp="#A222B392V2">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A222</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B392</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V2</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">Qvand' eu mia senor con uusco falei</rdg>
+                  <rdg wit="#B">Quand' eu mha senhor con uosco faley</rdg>
+                  <rdg wit="#V">Quand' eu mha senhor con uosco faley</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">e uus dixe ca uus queria ben</rdg>
+                  <rdg wit="#B">e u<ex>us</ex> dixi ca u<ex>us</ex> queria ben</rdg>
+                  <rdg wit="#V">e uus dixi ca uus queria ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">sennor se deus me ualla fiz mal sen</rdg>
+                  <rdg wit="#B">senhor se de<ex>us</ex> mj ualha fiz mal sen</rdg>
+                  <rdg wit="#V">senhor se deus mi ualha fix sal sen</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">e per como mend' eu depois achei</rdg>
+                  <rdg wit="#B">e per como inend' eu depoys achey</rdg>
+                  <rdg wit="#V">e per como mend' eu depous acheu</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="unclear"/>en entendi fremosa mia se<ex>n</ex>nor</rdg>
+                  <rdg wit="#B">Ben entendi fermosa mha senhor</rdg>
+                  <rdg wit="#V">ben entendi fremosa mha senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">ca uus nunca poderia mayor</rdg>
+                  <rdg wit="#B">ca u<ex>us</ex> nunca poderia mayor</rdg>
+                  <rdg wit="#V">ca uus nunca poderia mayor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">P</hi>esar dizer mas no<ex>n</ex> pud' eu y al</rdg>
+                  <rdg wit="#B">Pesar diz mays non pud' eu <gap reason="error"/> al</rdg>
+                  <rdg wit="#V">Pesar diz<ex>er</ex> mays no<ex>n</ex> pud' eu <gap reason="error"/> al</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">mia se<ex>n</ex>nor se d<ex>eu</ex>s me ualla fazer</rdg>
+                  <rdg wit="#B">mha senh<ex>or</ex> se d<ex>eu</ex>s mj ualha faz</rdg>
+                  <rdg wit="#V">mha senh<ex>or</ex> se des <gap/> 
+                     <gap/> faz<ex>er</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">
+                     <choice>
+                        <orig>e*fui*uolo</orig>
+                        <reg>e*fui-uo-lo</reg>
+                     </choice> con gran coita dizer</rdg>
+                  <rdg wit="#B">
+                     <choice>
+                        <orig>efuynolo</orig>
+                        <reg>e*fuy-no-lo</reg>
+                     </choice> co<ex>n</ex> g<ex>ra</ex>m coita diz</rdg>
+                  <rdg wit="#V">
+                     <choice>
+                        <orig>efuyuolo</orig>
+                        <reg>e*fuy-uo-lo</reg>
+                     </choice> co<ex>n</ex> g<ex>ra</ex>m coita diz<ex>er</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">mas p<ex>er</ex> com' eu depois mend' achei mal</rdg>
+                  <rdg wit="#B">mays p<ex>er</ex> com' en despois meu achei mal</rdg>
+                  <rdg wit="#V">Mays p<ex>er</ex> com' eu despois meu achei mal</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">B</hi>en entendi fremosa mia se<ex>n</ex>nor</rdg>
+                  <rdg wit="#B">be<ex>n</ex> entendi f<ex>re</ex>mosa mha senhor</rdg>
+                  <rdg wit="#V">ben entendi f<ex>re</ex>mosa mha senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">P</hi>esar dizer e mal dia naçi</rdg>
+                  <rdg wit="#B">Pesar dizer e mal dia naçi</rdg>
+                  <rdg wit="#V">Pesar dizer e mal dia naçi</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">porque uus fui dizer tan gran pesar</rdg>
+                  <rdg wit="#B">p<ex>or</ex>que u<ex>us</ex> fui diz<ex>er</ex> ta<ex>n</ex> gra<ex>n</ex> pesar</rdg>
+                  <rdg wit="#V">p<ex>or</ex>q<ex>ue</ex> ua fui diz<ex>er</ex> ta<ex>n</ex> gra<ex>n</ex> pesar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">e porque m' end' eu no<ex>n</ex> pude guardar</rdg>
+                  <rdg wit="#B">e p<ex>or</ex>q<ex>ue</ex> m' end' eu non pudi guardar</rdg>
+                  <rdg wit="#V">e p<ex>or</ex>q<ex>ue</ex> m' end' eu no<ex>n</ex> pudi guardar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">ca por quant' eu depois por en p<ex>er</ex>di</rdg>
+                  <rdg wit="#B">ca p<ex>or</ex> quanto - d<ex>eu</ex>s p<ex>or</ex> en p<ex>er</ex>di</rdg>
+                  <rdg wit="#V">ca p<ex>or</ex> qua<ex>n</ex>to dz p<ex>or</ex> en perdi</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">B</hi>en entendi fremosa mia*se<ex>n</ex>nor</rdg>
+                  <rdg wit="#B">be<ex>n</ex> entendi f<ex>re</ex>mosa <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">ben entendi f<ex>re</ex>mosa <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="19">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">P</hi>esar dizer do que uus dix' enton</rdg>
+                  <rdg wit="#B">Pesar diz<ex>er</ex> do q<ex>ue</ex> n<ex>us</ex> dix' enton</rdg>
+                  <rdg wit="#V">Pesar diz<ex>er</ex> do q<ex>ue</ex> u<ex>us</ex> dix' e<ex>n</ex>to<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="20">
+               <app>
+                  <rdg wit="#A">mais se menti ia deus non me perdon</rdg>
+                  <rdg wit="#B">mays se menti <gap reason="error"/> d<ex>eu</ex>s no<ex>n</ex> mj p<ex>er</ex>don</rdg>
+                  <rdg wit="#V">maus se menti <gap reason="error"/> d<ex>eu</ex>s no<ex>n</ex> mi perdon</rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A223B393V3">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A223</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B393</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V3</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">Por deus sennor tan gran sazon</rdg>
+                  <rdg wit="#B">Par deus senhor tam gram sazo<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">Par deus senhor tan gran sazo<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">non cuidei eu a deseiar</rdg>
+                  <rdg wit="#B">non cuydey eu a deseiar</rdg>
+                  <rdg wit="#V">no<ex>n</ex> cuydey eu a deseiar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">uosso ben a uosso pesar</rdg>
+                  <rdg wit="#B">uosso be<ex>n</ex> a uosso pesar</rdg>
+                  <rdg wit="#V">uosso ben a uosso pesar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">e uedes sennor por que non</rdg>
+                  <rdg wit="#B">e uedes senhor por que non</rdg>
+                  <rdg wit="#V">e uedes senhor por que non</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">C</hi>a non cuidei sen uoso ben</rdg>
+                  <rdg wit="#B">Ca non cuydei seu uosso ben</rdg>
+                  <rdg wit="#V">Ca non cuydei seu uosso ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">tanto uiuer per nulla ren</rdg>
+                  <rdg wit="#B">tanto muer per nulha re<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">tanto ouuer per nulla te<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">N</hi>e ar cuidei des que uus ui</rdg>
+                  <rdg wit="#B">Nen ar cuydedes des q<ex>ue</ex>u <ex>os</ex> uj</rdg>
+                  <rdg wit="#V">Nen ar cuydedes des q<ex>ue</ex>u <ex>os</ex> uj</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">o que uus agora direi</rdg>
+                  <rdg wit="#B">o q<ex>ue</ex> u<ex>us</ex> agora direi</rdg>
+                  <rdg wit="#V">o q<ex>ue</ex> u<ex>us</ex> agora direi</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">mui gran coita que per uos ei</rdg>
+                  <rdg wit="#B">muj g<ex>ra</ex>m coita q<ex>ue</ex> p<ex>or</ex> uos ei</rdg>
+                  <rdg wit="#V">mui g<ex>ra</ex>m coita q<ex>ue</ex> p<ex>or</ex> uos ei</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">
+                     <choice>
+                        <orig>sofrela</orig>
+                        <reg>sofre-la</reg>
+                     </choice> quanto a sofri</rdg>
+                  <rdg wit="#B">
+                     <choice>
+                        <orig>sofrela</orig>
+                        <reg>sofre-la</reg>
+                     </choice> qua<ex>n</ex>to a sofri</rdg>
+                  <rdg wit="#V">
+                     <choice>
+                        <orig>sofrela</orig>
+                        <reg>sofre-la</reg>
+                     </choice> qua<ex>n</ex>to a sofri</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">C</hi>a non cuidei - sen uosso ben</rdg>
+                  <rdg wit="#B">Ca no<ex>n</ex> cuydei - sen uosso be<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">Ca no<ex>n</ex> cuydei <del rend="stroke">despoys d' amor</del> se<ex>n</ex> uosso ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B"><!--tanto muer per nulha re<ex>n</ex>--></rdg>
+                  <rdg wit="#V">tanto ouuer per nulla te<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">N</hi>en ar cuidei de pois d' amor</rdg>
+                  <rdg wit="#B">Nen ar cuydei depoys d' amor</rdg>
+                  <rdg wit="#V">Nen ar cuydei depoys d' amor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">a sofrer seu ben nen seu mal</rdg>
+                  <rdg wit="#B">a sofrer seu be<ex>n</ex> ne<ex>n</ex> seu mal</rdg>
+                  <rdg wit="#V">a sofrer seu be<ex>n</ex> ne<ex>n</ex> seu mal</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">nen de uos nen de d<ex>eu</ex>s nen d' al</rdg>
+                  <rdg wit="#B">nen de uos ue<ex>n</ex> de d<ex>eu</ex>s ne<ex>n</ex> d' al</rdg>
+                  <rdg wit="#V">ne<ex>n</ex> de uos ne<ex>n</ex> de d<ex>eu</ex>s ne<ex>n</ex> d' al</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">e <choice>
+                        <orig>direi u<ex>os</ex>
+                        </orig>
+                        <reg>direi-uos</reg>
+                     </choice> por que sennor</rdg>
+                  <rdg wit="#B">e <choice>
+                        <orig>direyu<ex>os</ex>
+                        </orig>
+                        <reg>direy-uos</reg>
+                     </choice> p<ex>or</ex> q<ex>ue</ex> senhor</rdg>
+                  <rdg wit="#V">e <choice>
+                        <orig>direyu<ex>os</ex>
+                        </orig>
+                        <reg>direy-uos</reg>
+                     </choice> p<ex>or</ex> q<ex>ue</ex> senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">C</hi>a non cuidei sen uosso ben</rdg>
+                  <rdg wit="#B">Ca non cuydei seu uosso ben</rdg>
+                  <rdg wit="#V">Ca non cuydei sen uoso ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">tanto muer per nulha re<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">tanto ouuer per nulla te<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A224B395V5">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A224</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B395</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V5</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">Sennor que grau' oi' a mi e</rdg>
+                  <rdg wit="#B">Senhor que grau' oi' a mj e</rdg>
+                  <rdg wit="#V">Senhor que grau' oi' a mi e</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">de me auer de uos a partir</rdg>
+                  <rdg wit="#B">de m' auer de nos a partir</rdg>
+                  <rdg wit="#V">de m' auer de uos a partir</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">ca sei de pran pois m' eu partir</rdg>
+                  <rdg wit="#B">ca sey de pram poys m' eu partir</rdg>
+                  <rdg wit="#V">ca sey de pram poys m' eu partir</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">que mi a uerra per bo<ex>̃</ex>a fe</rdg>
+                  <rdg wit="#B">que mh a ueira per boa fe</rdg>
+                  <rdg wit="#V">que mh a uerra per boa fe</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">
+                     <del>
+                        <gap reason="unclear"/>
+                     </del>uerey se deus me perdon</rdg>
+                  <rdg wit="#B">Auerey se d<ex>eu</ex> mi perdon</rdg>
+                  <rdg wit="#V">auerey se deus mi perdon</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">gran coita no meu coraçon</rdg>
+                  <rdg wit="#B">gram coyta no meu coraçon</rdg>
+                  <rdg wit="#V">gran coyta no meu corazon</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="unfinished"/> pois partir os ollos meus</rdg>
+                  <rdg wit="#B">E poys partir os olh<ex>os</ex> me<ex>us</ex>
+                  </rdg>
+                  <rdg wit="#V">E pois partir os olh<ex>os</ex> me<ex>us</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">de uos que eu quero gran ben</rdg>
+                  <rdg wit="#B">de uos q<ex>ue</ex> eu q<ex>ue</ex>ro be<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">de uos q<ex>ue</ex> eu q<ex>ue</ex>ro ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">e uos non uiren sei eu ben</rdg>
+                  <rdg wit="#B">e u<ex>us</ex> no<ex>n</ex> uire<ex>n</ex> seu be<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">e u<ex>us</ex> non uire<ex>n</ex> seu ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">que mi auerra se<ex>n</ex>nor par d<ex>eu</ex>s</rdg>
+                  <rdg wit="#B">q<ex>ue</ex> mh aueira senhor p<ex>or</ex> d<ex>eu</ex>
+                  </rdg>
+                  <rdg wit="#V">q<ex>ue</ex> mh auerra senhor p<ex>or</ex> d<ex>eu</ex>s</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">A</hi>uerei se d<ex>eu</ex>s me perdon</rdg>
+                  <rdg wit="#B">Auerey se d<ex>eu</ex> mi p<ex>er</ex>don</rdg>
+                  <rdg wit="#V">auerey se d<ex>eu</ex>s mi perdon</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">gram coyta no meu coraçon</rdg>
+                  <rdg wit="#V">gran coyta no meu corazon</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi> se d<ex>eu</ex>s m' algun ben non der</rdg>
+                  <rdg wit="#B">E sse d<ex>eu</ex> mi algu<ex>n</ex> be<ex>n</ex> non der</rdg>
+                  <rdg wit="#V">E sse d<ex>eu</ex>s mi algu<ex>n</ex> be<ex>n</ex> no<ex>n</ex> der</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">de uos que eu por mal ui</rdg>
+                  <rdg wit="#B">de uos q<ex>ue</ex> eu p<ex>or</ex> meu mal uj</rdg>
+                  <rdg wit="#V">de uos q<ex>ue</ex> eu p<ex>or</ex> meu mal ui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">tan graue dia uos eu ui</rdg>
+                  <rdg wit="#B">ta<ex>n</ex> g<ex>ra</ex>ue dia u<ex>os</ex> eu ui</rdg>
+                  <rdg wit="#V">ta<ex>n</ex> g<ex>ra</ex>ue dia u<ex>os</ex> eu ui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">se de uos grado non ouuer</rdg>
+                  <rdg wit="#B">se de uos grado non oer</rdg>
+                  <rdg wit="#V">se de uos grado no<ex>n</ex> oer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">A</hi>uerei se d<ex>eu</ex>s me p<ex>er</ex>don</rdg>
+                  <rdg wit="#B">Au<ex>er</ex>ey se d<ex>eu</ex> mj p<ex>er</ex>don</rdg>
+                  <rdg wit="#V">Au<ex>er</ex>ey se d<ex>eu</ex>s mi p<ex>er</ex>do<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">gram coyta no meu coraçon</rdg>
+                  <rdg wit="#V">gran coyta no meu corazon</rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A225B396V6">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A225</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B396</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V6</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">O</hi> Meu sennor me guisou</rdg>
+                  <rdg wit="#B">
+                     <add rend="?">O</add> meu senhor mi guysou</rdg>
+                  <rdg wit="#V">O meu senhor miguy sou</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">de sempr' eu ia coita soffrer</rdg>
+                  <rdg wit="#B">de sempr' eu ia coyta sofrer</rdg>
+                  <rdg wit="#V">de sempr' eu ia coyta sofrer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">en qua<ex>n</ex>to no mundo uiuer</rdg>
+                  <rdg wit="#B">en quanto no mundo uiuer</rdg>
+                  <rdg wit="#V">en quanto no mundo uiuer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">u m' el atal dona mostrou</rdg>
+                  <rdg wit="#B">hu m' el atal dona mostrou</rdg>
+                  <rdg wit="#V">hu m' el atal dona mostrou</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">
+                     <del>
+                        <gap reason="unclear"/>
+                     </del>ue me fez fillar por sennor</rdg>
+                  <rdg wit="#B">Que me fez filhar por senhor</rdg>
+                  <rdg wit="#V">Que me fez filhar por senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">e non ll' ouso dizer sennor</rdg>
+                  <rdg wit="#B">e non lh' ouso dizer senhor</rdg>
+                  <rdg wit="#V">e non lh' ouso dizer senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi> se d<ex>eu</ex>s ouuo gran prazer</rdg>
+                  <rdg wit="#B">E sse d<ex>eu</ex>s ouue gra<ex>n</ex> prazer</rdg>
+                  <rdg wit="#V">E sse d<ex>eu</ex>s ouue gra<ex>n</ex> prazer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">de me fazer coita leuar</rdg>
+                  <rdg wit="#B">de mi fazer coita leuar</rdg>
+                  <rdg wit="#V">de mi fazer coita leuar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">que ben s' end' el soube guisar</rdg>
+                  <rdg wit="#B">q<ex>ue</ex> be<ex>n</ex> s' end' el soube g<ex>ui</ex>sar</rdg>
+                  <rdg wit="#V">q<ex>ue</ex> ben s' end' el soube g<ex>ui</ex>sar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">u me fez tal dona ueer</rdg>
+                  <rdg wit="#B">hu m'_el fez tal dona ueer</rdg>
+                  <rdg wit="#V">hu m'_el fez tal dona ueer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">Q</hi>ue me fez fillar .p._s</rdg>
+                  <rdg wit="#B">q<ex>ue</ex> me fez filhar por</rdg>
+                  <rdg wit="#V">Que me fez filhar por senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">S</hi>e m' eu a d<ex>eu</ex>s mal mereçi</rdg>
+                  <rdg wit="#B">Se m' eu a d<ex>eu</ex>s mal mei</rdg>
+                  <rdg wit="#V">Se m' eu a d<ex>eu</ex>s mal m<ex>er</ex>e<add rend="?">z</add>i</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">non uus quis el muito tardar</rdg>
+                  <rdg wit="#B">no<ex>n</ex> u<ex>us</ex> q<ex>ui</ex>s el muyto tardar</rdg>
+                  <rdg wit="#V">no<ex>n</ex> u<ex>us</ex> q<ex>ui</ex>s el muyto tardar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">que_se non quisesse uingar</rdg>
+                  <rdg wit="#B">q<ex>ue</ex>sse no<ex>n</ex> q<ex>ui</ex>sesse ui<ex>n</ex>gar</rdg>
+                  <rdg wit="#V">q<ex>ue</ex>sse no<ex>n</ex> q<ex>ui</ex>sesse ui<ex>n</ex>gar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">de mi u eu tal dona ui</rdg>
+                  <rdg wit="#B">de mi<ex>n</ex> hu eu tal dona uj</rdg>
+                  <rdg wit="#V">de mi<ex>n</ex> hu eu tal dona ui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">Q</hi>ue me fez fillar por ._s.</rdg>
+                  <rdg wit="#B">Que me fez filhar p<ex>or</ex> senhor</rdg>
+                  <rdg wit="#V">que me fez filhar p<ex>or</ex> senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A228B418V29">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A228</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B418</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V29</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="unknown"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="unknown"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">Quando mora uyrem moirer</rdg>
+                  <rdg wit="#V">Quando mora uyrem moirer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">porque_moyre_quereu_dizer</rdg>
+                  <rdg wit="#V">porque_moyre_quereu_dizer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">quanto_xende_poys_saberam</rdg>
+                  <rdg wit="#V">quanto_rende_poys_saberam</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">moyreu_por_quen_no<ex>n</ex>_ueiaqui</rdg>
+                  <rdg wit="#V">moyreu_por_quen_no<ex>n</ex>_ueiaqui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">a_dona_q<ex>ue</ex> non ueia_quj</rdg>
+                  <rdg wit="#V">a_dona_q<ex>ue</ex> no<ex>n</ex> ueia_quj</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">E p<ex>re</ex>gu<ex>n</ex>tar_ma<ex>n</ex> eu_o sey</rdg>
+                  <rdg wit="#V">E p<ex>re</ex>gu<ex>n</ex>tarma<ex>n</ex> eu_o sei</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">da_dona_q<ex>ue</ex>_diga_q<ex>ua</ex>l_e</rdg>
+                  <rdg wit="#V">da_dona_q<ex>ue</ex>_diga_q<ex>ua</ex>l_e</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">e iurou<ex>us</ex> p<ex>er</ex>_bo<ex>̃</ex>a_fe</rdg>
+                  <rdg wit="#V">e uirou<ex>us</ex> p<ex>er</ex>_bo<ex>̃</ex>a_fe</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">q<ex>ue</ex> uu<ex>n</ex>ca lhis_eu_mays_direy</rdg>
+                  <rdg wit="#V">q<ex>ue</ex> nu<ex>n</ex>ca lhis_eu_mays_direy</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">Moireu p<ex>or</ex> q<ex>ue</ex> no<ex>n</ex> ueia quj</rdg>
+                  <rdg wit="#V">moiren p<ex>or</ex> q<ex>ue</ex> no<ex>n</ex> ueia qui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/> 
+                     <gap reason="damage"/> 
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">E <choice>
+                        <orig>dira<ex>n</ex>mj</orig>
+                        <reg>dira<ex>n</ex>-mj</reg>
+                     </choice> q<ex>ue</ex>_parecer</rdg>
+                  <rdg wit="#V">E <choice>
+                        <orig>dira<ex>n</ex>mi</orig>
+                        <reg>diran-mi</reg>
+                     </choice> q<ex>ue</ex>_parecer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="damage"/>
+                  </rdg>
+                  <rdg wit="#B">uiro<ex>n</ex> aq<ex>ui</ex> donas muj be<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">uiro<ex>n</ex> ad donas mui be<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">e<choice>
+                        <orig>direi uolles</orig>
+                        <reg>direi-uo-lles</reg>
+                     </choice> eu por em</rdg>
+                  <rdg wit="#B">
+                     <choice>
+                        <orig>edireyuolhes</orig>
+                        <reg>e direy-uo-lhes</reg>
+                     </choice> eu por en</rdg>
+                  <rdg wit="#V">
+                     <choice>
+                        <orig>edireyuolhes</orig>
+                        <reg>e direy-uo-lhes</reg>
+                     </choice> eu por en</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">quanto mia ora oistes dizer</rdg>
+                  <rdg wit="#B">q<ex>uan</ex>to m' ora oystes dizer</rdg>
+                  <rdg wit="#V">q<ex>uan</ex>co m' ora oystes dizer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">
+                     <hi>M</hi>oir' eu porque non ueiaqui</rdg>
+                  <rdg wit="#B">Moyr' eu porq<ex>ue</ex> no<ex>n</ex> ueiquj</rdg>
+                  <rdg wit="#V">moyr' eu p<ex>or</ex> q<ex>ue</ex> no<ex>n</ex> ueiaqui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi> non digueu das outras mal</rdg>
+                  <rdg wit="#B">E no<ex>n</ex> digueu das out<ex>ra</ex>s mal</rdg>
+                  <rdg wit="#V">E non digueu das out<ex>ra</ex>s mal</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="19">
+               <app>
+                  <rdg wit="#A">nen ben nen sol non falo y</rdg>
+                  <rdg wit="#B">ne<ex>n</ex> be<ex>n</ex> ue<ex>n</ex> sol non fal' i</rdg>
+                  <rdg wit="#V">ne<ex>n</ex> be<ex>n</ex> ne<ex>n</ex> sol no<ex>n</ex> fal' i</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="20">
+               <app>
+                  <rdg wit="#A">mas pois ueio que moir<del rend="scrape">
+                        <gap reason="unclear"/>
+                     </del>' assi</rdg>
+                  <rdg wit="#B">mays pois ueio q<ex>ue</ex> moyr' assy</rdg>
+                  <rdg wit="#V">mays pois ueio q<ex>ue</ex> moyr' assy</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="21">
+               <app>
+                  <rdg wit="#A">dig' esto e nunca direi al</rdg>
+                  <rdg wit="#B">digu' est' e uu<ex>n</ex>ca direy al</rdg>
+                  <rdg wit="#V">digu' est' e nu<ex>n</ex>ca direy al</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="22">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">M</hi>oireu por que no<ex>n</ex> ueg a qui</rdg>
+                  <rdg wit="#B">Moyreu p<ex>or</ex> q<ex>ue</ex>
+                  </rdg>
+                  <rdg wit="#V">moyreu p<ex>or</ex> q<ex>ue</ex> no<ex>n</ex> ueiaqui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="23">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A229B419V30">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A229</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B419</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V30</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">Amigos non poss' eu negar</rdg>
+                  <rdg wit="#B">Amig<ex>os</ex> non poss' eu negar</rdg>
+                  <rdg wit="#V">Amig<ex>os</ex> no<ex>n</ex> poss' en negar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">a gran coita que d' amor ei</rdg>
+                  <rdg wit="#B">a gram coyta que d' amor ey</rdg>
+                  <rdg wit="#V">a gram coyta que d' amor ey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">ca me ueio sandeu andar</rdg>
+                  <rdg wit="#B">ca me ueio sandeu andar</rdg>
+                  <rdg wit="#V">ca me ueio sauden andar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">e con sandeçe o direi</rdg>
+                  <rdg wit="#B">e con sandice o direy</rdg>
+                  <rdg wit="#V">e con sandice o direy</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">O</hi>s ollos uerdes que eu ui</rdg>
+                  <rdg wit="#B">Os olh<ex>os</ex> uerdes que eu uj</rdg>
+                  <rdg wit="#V">os olh<ex>os</ex> uerdes que eu ui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">me façen ora andar assi</rdg>
+                  <rdg wit="#B">me fazen ora andar assy</rdg>
+                  <rdg wit="#V">me fazen ora andar assy</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">P</hi>ero quem quer x' entendera</rdg>
+                  <rdg wit="#B">Pero q<ex>ue</ex> q<ex>ue</ex>r x' entend<ex>er</ex>a</rdg>
+                  <rdg wit="#V">Pero q<ex>ue</ex> q<ex>ue</ex>r x' entend<ex>er</ex>a</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">aquestes ollos quaes son</rdg>
+                  <rdg wit="#B">aq<ex>ue</ex>stes olh<ex>os</ex> q<ex>ua</ex>es son</rdg>
+                  <rdg wit="#V">aq<ex>ue</ex>sios olh<ex>os</ex> q<ex>ua</ex>es son</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">e dest' alguen se queixara</rdg>
+                  <rdg wit="#B">e dest' algue<ex>n</ex> se q<ex>ue</ex>ixara</rdg>
+                  <rdg wit="#V">e dest' algue<ex>n</ex> se q<ex>ue</ex>ixata<del>
+                        <gap reason="illegible"/>
+                     </del>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">mais eu ia quer moira q<ex>ue</ex>r no<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#B">mays eu ia q<ex>ue</ex>r moira q<ex>ue</ex>r no<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">mays eu ia q<ex>ue</ex>r moira q<ex>ue</ex>r no<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">Os ollos uerdes que eu ui</rdg>
+                  <rdg wit="#B">os olh<ex>os</ex> uerdes q<ex>ue</ex> eu uj</rdg>
+                  <rdg wit="#V">os olh<ex>os</ex> uerdes q<ex>ue</ex> eu uj</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">P</hi>ero non deui'a perder</rdg>
+                  <rdg wit="#B">Pero no<ex>n</ex> deuia_a p<ex>er</ex>der</rdg>
+                  <rdg wit="#V">Pero no<ex>n</ex> deuia_a perder</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">ome que ia o sen no<ex>n</ex> a</rdg>
+                  <rdg wit="#B">hom<ex>e</ex> que ia o sen <gap reason="unknown" rend="space"/>o a</rdg>
+                  <rdg wit="#V">hom<ex>e</ex> que ia o sen o a</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">de con sandeçe ren dizer</rdg>
+                  <rdg wit="#B">de co<ex>n</ex> sandice re<ex>n</ex> dizer</rdg>
+                  <rdg wit="#V">de co<ex>n</ex> sandico re<ex>n</ex> dizer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">e con sandeçe digu' eu ia</rdg>
+                  <rdg wit="#B">e co<ex>n</ex> sandice digu' eu ia</rdg>
+                  <rdg wit="#V">e co<ex>n</ex> sandice dign eu ia</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">Os ollos uerdes que eu ui</rdg>
+                  <rdg wit="#B">Os olh<ex>os</ex> uerdas q<ex>ue</ex> eu uj</rdg>
+                  <rdg wit="#V">os olh<ex>os</ex> uerdes q<ex>ue</ex> eu ui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A231B421V33">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A231</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B421</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V33</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">U_m'_eu parti. d' u m' eu parti</rdg>
+                  <rdg wit="#B">Qvaud'_eu partj d' u m' eu partj</rdg>
+                  <rdg wit="#V">Quand'_eu parti d' u m' en parti</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">logu' eu parti aquestes meus</rdg>
+                  <rdg wit="#B">logu' eu partj aquestes me<ex>us</ex>
+                  </rdg>
+                  <rdg wit="#V">logu' eu parti aquestes meus</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">ollos de ueer e par deus</rdg>
+                  <rdg wit="#B">olh<ex>os</ex> de ueer e par deus</rdg>
+                  <rdg wit="#V">olh<ex>os</ex> de ueer e par de<ex>us</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">quanto ben auia perdi</rdg>
+                  <rdg wit="#B">quanto ben auya perdi</rdg>
+                  <rdg wit="#V">quanto ben auya perdi</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">ca meu ben tod' era 'n ueer</rdg>
+                  <rdg wit="#B">ca meu ben tod' era en ueer</rdg>
+                  <rdg wit="#V">ca meu ben tod' era en ueer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">e mais uos ar quero dizer</rdg>
+                  <rdg wit="#B">e mays u<ex>os</ex> ar quero dizer</rdg>
+                  <rdg wit="#V">e mays u<ex>os</ex> ar quero dizer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">pero ueio nunca ar ui</rdg>
+                  <rdg wit="#B">pero ueio nunca ar uj</rdg>
+                  <rdg wit="#V">pero ueio nunca ar ui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">C</hi>a non uei' eu pero uei' eu</rdg>
+                  <rdg wit="#B">Ca no<ex>n</ex> ueieu ep<ex>er</ex>o uei' eu</rdg>
+                  <rdg wit="#V">Ca non uei' eu ep<ex>er</ex>o uei' eu</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">quanto uei' eu no<ex>n</ex> me ual ren</rdg>
+                  <rdg wit="#B">q<ex>uan</ex>to uei' eu no<ex>n</ex> mi ual re<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">q<ex>uan</ex>to uei' eu no<ex>n</ex> mi ual re<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">ca perdi o lume por en</rdg>
+                  <rdg wit="#B">ca p<ex>er</ex>di o lume p<ex>or</ex> eu</rdg>
+                  <rdg wit="#V">ca p<ex>er</ex>di o lume p<ex>or</ex> eu</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">porq<ex>ue</ex> no<ex>n</ex>_ueia_quen me deu</rdg>
+                  <rdg wit="#B">porq<ex>ue</ex> nega_q<ex>ue</ex> mi de</rdg>
+                  <rdg wit="#V">porq<ex>ue</ex> nega_q<ex>ue</ex> mi de <del>esta coita q</del>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">esta coita que og' eu ey</rdg>
+                  <rdg wit="#B">esta coyta q<ex>ue</ex> oi' eu ey</rdg>
+                  <rdg wit="#V">esta coita q<ex>ue</ex> oi' eu ey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">que ia mais nunca ueerei</rdg>
+                  <rdg wit="#B">q<ex>ue</ex> ia mays nu<ex>n</ex>ca neerey</rdg>
+                  <rdg wit="#V">q<ex>ue</ex> ia mays nu<ex>n</ex>ca ueerey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">se non uir o pareçer seu</rdg>
+                  <rdg wit="#B">se no<ex>n</ex> uir o parecer seu</rdg>
+                  <rdg wit="#V">se no<ex>n</ex> uir e parecer seu</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">C</hi>a ia çeguei quando çeguei</rdg>
+                  <rdg wit="#B">Ca ia çeguey q<ex>uan</ex>do ceguey</rdg>
+                  <rdg wit="#V">Ca ia <del rend="stroke">g</del>
+                     <add rend="sup">c</add>eguey q<ex>uan</ex>do ceguey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">de pran ceguei eu log' enton</rdg>
+                  <rdg wit="#B">de pra<ex>n</ex> ceguey eu logu' enton</rdg>
+                  <rdg wit="#V">de pra<ex>n</ex> ceguey eu logu' e<ex>n</ex>ton</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">e ia d<ex>eu</ex>s nunca me pdon</rdg>
+                  <rdg wit="#B">e ia d<ex>eu</ex>s nu<ex>n</ex>ca me p<ex>er</ex>don</rdg>
+                  <rdg wit="#V">e ia d<ex>eu</ex>s nu<ex>n</ex>ca me perdon</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">se ben ueio nen se ben <del rend="underdot">s</del>ei</rdg>
+                  <rdg wit="#B">se be<ex>n</ex> ueio ne<ex>n</ex>se be<ex>n</ex> ey</rdg>
+                  <rdg wit="#V">se ben ueio ne<ex>n</ex> se be<ex>n</ex> ey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="19">
+               <app>
+                  <rdg wit="#A">pero se me d<ex>eu</ex>s aiudar</rdg>
+                  <rdg wit="#B">p<ex>er</ex>o se me d<ex>eu</ex> aiudar</rdg>
+                  <rdg wit="#V">p<ex>er</ex>o se me d<ex>eu</ex> quidar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="20">
+               <app>
+                  <rdg wit="#A">e me çedo quiser tornar</rdg>
+                  <rdg wit="#B">e me çedo q<ex>ui</ex>s cornar</rdg>
+                  <rdg wit="#V">e me cedo q<ex>ui</ex>s<ex>er</ex> tornar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="21">
+               <app>
+                  <rdg wit="#A">u eu ben ui ben ueerei</rdg>
+                  <rdg wit="#B">hu en be<ex>n</ex> nj be<ex>n</ex> ueerey</rdg>
+                  <rdg wit="#V">hu eu be<ex>n</ex> ui be<ex>n</ex> ueerey</rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A232B422V34">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A232</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B422</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V34</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">A bo<ex>̃</ex>a dona por que eu trobaua</rdg>
+                  <rdg wit="#B">A boa dona por que eu trobaua</rdg>
+                  <rdg wit="#V">A <add rend="overwrite">b</add>
+                     <del rend="overwrite">v</del>
+                     <add rend="sup">b</add>oa dona por que eu trobaua</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">e que non daua nulla ren por mi</rdg>
+                  <rdg wit="#B">e que non daua nulha ren por mj</rdg>
+                  <rdg wit="#V">e que no<ex>n</ex> daua nulha ren por mi</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">pero s' ela de min ren non pagaua</rdg>
+                  <rdg wit="#B">pero s' ela de mi re<ex>n</ex> no<ex>n</ex> plagaua</rdg>
+                  <rdg wit="#V">pero s' ela de mi re<ex>n</ex> no<ex>n</ex> pagaua</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">soffrendo coita sempre a serui</rdg>
+                  <rdg wit="#B">sofrendo coyta sempre a seruj</rdg>
+                  <rdg wit="#V">sofrendo coyta sempre a seruj</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">e ora ia por ela_'nsandeçi</rdg>
+                  <rdg wit="#B">e ora ia por el'_ensandeci</rdg>
+                  <rdg wit="#V">e ora ia por el'_ensandeci</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="error"/> da por mi ben quanto_x'_ante daua</rdg>
+                  <rdg wit="#B">e da por mi ben quant'_ante daua</rdg>
+                  <rdg wit="#V">e da por mi ben quant'_ante daua</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi> pero x' ela con bon prez estaua</rdg>
+                  <rdg wit="#B">E p<ex>er</ex>o x' ela co<ex>n</ex> prez estaua</rdg>
+                  <rdg wit="#V">E p<ex>er</ex>o x' ela co<ex>n</ex> prez estaua</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">e con bon pareçer q<ex>ue</ex> ll' eu ui</rdg>
+                  <rdg wit="#B">e co<ex>n</ex> bon pareçer q<ex>ue</ex> lh' eu uj</rdg>
+                  <rdg wit="#V">e co<ex>n</ex> bon pareçer q<ex>ue</ex> lh' eu ui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">e lle sempre con meu trobar pesaua</rdg>
+                  <rdg wit="#B">e lhi semp<ex>re</ex> co meu trobar pesaua</rdg>
+                  <rdg wit="#V">e lhi semp<ex>re</ex> co<ex>n</ex> meu trobar pesaua</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">trobei eu tanto <ex>e</ex> tanto a serui</rdg>
+                  <rdg wit="#B">trobei eu ta<ex>n</ex>t' e ta<ex>n</ex>to a s<ex>er</ex>ui</rdg>
+                  <rdg wit="#V">trobei eu ta<ex>n</ex>t' e ta<ex>n</ex>to a s<ex>er</ex>ui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">que ia por ela lum' e sen perdi</rdg>
+                  <rdg wit="#B">q<ex>ue</ex> ia p<ex>or</ex> ela lum' e sen p<ex>er</ex>di</rdg>
+                  <rdg wit="#V">q<ex>ue</ex> ia p<ex>or</ex> ela lum' e sen perdi</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">e <choice>
+                        <orig>anda xela</orig>
+                        <reg>anda-x' ela</reg>
+                     </choice> por qual x' ant' andaua</rdg>
+                  <rdg wit="#B">e <choice>
+                        <orig>andaxela</orig>
+                        <reg>anda-x' ela</reg>
+                     </choice> p<ex>or</ex> q<ex>ua</ex>l <gap reason="error"/> ant' a<ex>n</ex>daua</rdg>
+                  <rdg wit="#V">e <choice>
+                        <orig>andaxela</orig>
+                        <reg>anda-x' ela</reg>
+                     </choice> p<ex>or</ex> q<ex>ua</ex>l <gap reason="error"/> ant' a<ex>n</ex>daua</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">P</hi>or de bon prez e muito se preçaua</rdg>
+                  <rdg wit="#B">Por de bon p<ex>re</ex>z e muyto se p<ex>re</ex>caua</rdg>
+                  <rdg wit="#V">Por de bon p<ex>re</ex>z e muyto se p<ex>re</ex>gaua</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">e dereit' e <del rend="underdot stroke">dandar</del> de sempr' andar assi</rdg>
+                  <rdg wit="#B">e d<ex>er</ex>eyt' e _ de semp<ex>r</ex>' <ex>a</ex>ndar assy</rdg>
+                  <rdg wit="#V">e deyt e _ de semp<ex>re</ex> adar assy</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">ca se ll' alguen na mia coita falaua</rdg>
+                  <rdg wit="#B">ca se lh' algue<ex>n</ex> na mha coyta falaua</rdg>
+                  <rdg wit="#V">ca se lh' algue<ex>n</ex> na mha coyta falaua</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">sol no<ex>n</ex> oya nen tornaua y</rdg>
+                  <rdg wit="#B">sol no<ex>n</ex> oya ne<ex>n</ex> tornaua hi</rdg>
+                  <rdg wit="#V">sol no<ex>n</ex> oya ne<ex>n</ex> tornaua hi</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">pero por coita grande que soffri</rdg>
+                  <rdg wit="#B">p<ex>er</ex>o q<ex>ue</ex> coyta g<ex>ra</ex>nde q<ex>ue</ex> sofri</rdg>
+                  <rdg wit="#V">p<ex>er</ex>o q<ex>ue</ex> coyta g<ex>ra</ex>nde q<ex>ue</ex> sofri</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">oymais ey dela quant' auer coidaua</rdg>
+                  <rdg wit="#B">oymays ey dela qua<ex>n</ex>t' au<ex>er</ex> cuydaua</rdg>
+                  <rdg wit="#V">oymays ey dela qua<ex>n</ex>t' au<ex>er</ex> cuydaua</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="19">
+               <app>
+                  <rdg wit="#A">Sandeçe e morte que busquei sempre y</rdg>
+                  <rdg wit="#B">Sandiçe morte q<ex>ue</ex> busquey sempr' y</rdg>
+                  <rdg wit="#V">Sandice morre q<ex>ue</ex> busquey sempr' y</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="20">
+               <app>
+                  <rdg wit="#A">e seu amor me deu quant' eu buscaua</rdg>
+                  <rdg wit="#B">e seu amor mi deu qua<ex>n</ex>t' en buscaua</rdg>
+                  <rdg wit="#V">e seu amor mi deu qua<ex>n</ex>t' eu buscaua</rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A233B423V35">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A233</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B423</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V35</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">Amigos <choice>
+                        <orig>quero uos</orig>
+                        <reg>quero-uos</reg>
+                     </choice> dizer</rdg>
+                  <rdg wit="#B">Amig<ex>os</ex> 
+                     <choice>
+                        <orig>querou<ex>os</ex>
+                        </orig>
+                        <reg>quero-u<ex>os</ex>
+                        </reg>
+                     </choice> dizer</rdg>
+                  <rdg wit="#V">Amigus <choice>
+                        <orig>querou<ex>os</ex>
+                        </orig>
+                        <reg>quero-u<ex>os</ex>
+                        </reg>
+                     </choice> dizer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">mui gran coita 'n que me ten a_mui_gran_coitan_que_me_ten</rdg>
+                  <rdg wit="#B">muj gram coyta 'm q<ex>ue</ex> me ten</rdg>
+                  <rdg wit="#V">mui gram coyta 'n que me ten</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">u<ex>̃</ex>a dona que quero ben</rdg>
+                  <rdg wit="#B">hunha dona que quero ben</rdg>
+                  <rdg wit="#V">hunha dona que quero ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">e que me faz ensandeçer</rdg>
+                  <rdg wit="#B">e que me faz ensandecer</rdg>
+                  <rdg wit="#V">e que me faz ensandecer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">e catando pola ueer</rdg>
+                  <rdg wit="#B">e catando pola ueer</rdg>
+                  <rdg wit="#V">e catando pola ueer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">A</hi>assi and' eu assi and' eu</rdg>
+                  <rdg wit="#B">assy and' eu assy and' eu</rdg>
+                  <rdg wit="#V">assy aud eu assy audeu</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">assi and' eu assi and' eu</rdg>
+                  <rdg wit="#B">assy and' eu assy and' eu</rdg>
+                  <rdg wit="#V">assy aud eu assy aud eu</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">assi and' eu</rdg>
+                  <rdg wit="#B">assy and' eu assy and' eu</rdg>
+                  <rdg wit="#V">assy aud eu assy aud eu <del rend="stroke">assy audeu assy audeu</del>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi> ia meu consello non sei</rdg>
+                  <rdg wit="#B">E ia en co<ex>n</ex>sselho non sei</rdg>
+                  <rdg wit="#V">E ia eu co<ex>n</ex>sselho no<ex>n</ex> sei</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">ca ia o meu adubad' e</rdg>
+                  <rdg wit="#B">ca ia o meu adubad' e</rdg>
+                  <rdg wit="#V">ca ia o meu adubad' e</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">e sei mui ben per boa fe</rdg>
+                  <rdg wit="#B">e sey muy be<ex>n</ex> p<ex>er</ex> bo<ex>̃</ex>a fe</rdg>
+                  <rdg wit="#V">e sey mui be<ex>n</ex> p<ex>er</ex> bo<ex>̃</ex>a fe</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">que ia sempr' assi andarei</rdg>
+                  <rdg wit="#B">q<ex>ue</ex> ia senp<ex>r</ex>' <ex>a</ex>ssy andarey</rdg>
+                  <rdg wit="#V">q<ex>ue</ex> ia senp<ex>r</ex>' <ex>a</ex>ssy andarey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">catando sea ueerei</rdg>
+                  <rdg wit="#B">catando sea ueerey</rdg>
+                  <rdg wit="#V">catando sea ueerey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">A</hi>ssi andeu assi andeu</rdg>
+                  <rdg wit="#B">Assy andeu assy andeu</rdg>
+                  <rdg wit="#V">assy andeu assy andeu</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi> ia eu non posso chorar</rdg>
+                  <rdg wit="#B">E ia eu uo<ex>n</ex> posso chorar</rdg>
+                  <rdg wit="#V">E ia eu no<ex>n</ex> posso chorar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">ca ia chorand' ensandeçi</rdg>
+                  <rdg wit="#B">ca ia chora<ex>n</ex>d' enssandei</rdg>
+                  <rdg wit="#V">ca ia chora<ex>n</ex>d' enssandei</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">e <choice>
+                        <orig>faz mia mor</orig>
+                        <reg>faz-mi amor</reg>
+                     </choice> andar assi</rdg>
+                  <rdg wit="#B">e <choice>
+                        <orig>faz mhamor</orig>
+                        <reg>faz-mh amor</reg>
+                     </choice> andar assy</rdg>
+                  <rdg wit="#V">e <choice>
+                        <orig>faz mhamor</orig>
+                        <reg>faz-mh amor</reg>
+                     </choice> andar assy</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="19">
+               <app>
+                  <rdg wit="#A">como me ueedes andar</rdg>
+                  <rdg wit="#B">como me ueedes andar</rdg>
+                  <rdg wit="#V">como me ueedes andar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="20">
+               <app>
+                  <rdg wit="#A">catando per cada logar</rdg>
+                  <rdg wit="#B">catando p<ex>er</ex> ca da log<ex>a</ex>r</rdg>
+                  <rdg wit="#V">cata<ex>n</ex>do per cada log<ex>a</ex>r</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="21">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">A</hi>ssi andeu assi andeu</rdg>
+                  <rdg wit="#B">Assy andeu assy andeu</rdg>
+                  <rdg wit="#V">assy andeu assy andeu</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="22">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="23">
+               <app>
+                  <rdg wit="#A">E ia o non posso negar</rdg>
+                  <rdg wit="#B">E ia o no<ex>n</ex> posso negar</rdg>
+                  <rdg wit="#V">E ia o no<ex>n</ex> posso negar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="24">
+               <app>
+                  <rdg wit="#A">alguen me faz assi andar</rdg>
+                  <rdg wit="#B">algue<ex>n</ex> me faz assy andar</rdg>
+                  <rdg wit="#V">algue<ex>n</ex> me faz assy andar</rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A234B424V36">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A234</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B424</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V36</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">Qvantos an gran coita damor</rdg>
+                  <rdg wit="#B">Quant<ex>us</ex> am gram coyta damor</rdg>
+                  <rdg wit="#V">Quant<ex>us</ex> am gram coyta damor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">eno mundo qual og' eu ei</rdg>
+                  <rdg wit="#B">eno mundo qual or eu ey</rdg>
+                  <rdg wit="#V">eno mundo qual oi' eu ey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">querrian morrer eu o sei</rdg>
+                  <rdg wit="#B">queiriam moirer eu o sey</rdg>
+                  <rdg wit="#V">querrian moirer eu o sey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">e auerian en <del>
+                        <gap reason="illegible"/>
+                     </del> sabor</rdg>
+                  <rdg wit="#B">e aueriam en _ sabor</rdg>
+                  <rdg wit="#V">e aueriam eu _ sabor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">mais mentreu uos uir mia sennor</rdg>
+                  <rdg wit="#B">mais mentreu uos uir mha senhor</rdg>
+                  <rdg wit="#V">mais mentreu uos uir mha senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">sempre m' eu querria uiuer</rdg>
+                  <rdg wit="#B">Sempre m' en queiria inirer</rdg>
+                  <rdg wit="#V">sempre m' eu queiria uiuer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">e atender e atender</rdg>
+                  <rdg wit="#B">e atender e atender</rdg>
+                  <rdg wit="#V">e atender e atender</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="unfinished"/>ero ia non posso guarir</rdg>
+                  <rdg wit="#B">Pero ia no<ex>n</ex> posso guarir</rdg>
+                  <rdg wit="#V">Pero ia no<ex>n</ex> posso guarir</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">ca ia cegan os ollos meus</rdg>
+                  <rdg wit="#B">ca ia çega<ex>n</ex> os olh<ex>os</ex> me<ex>us</ex>
+                  </rdg>
+                  <rdg wit="#V">ca ia cega<ex>n</ex> os olh<ex>os</ex> me<ex>us</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">por uos e no<ex>n</ex> me ual y d<ex>eu</ex>s</rdg>
+                  <rdg wit="#B">p<ex>or</ex> uos e no<ex>n</ex> mi ual hi d<ex>eu</ex>s</rdg>
+                  <rdg wit="#V">p<ex>or</ex> uos e no<ex>n</ex> mi ual hi d<ex>eu</ex>s</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">nen uos mais por uos non mentir</rdg>
+                  <rdg wit="#B">ne<ex>n</ex> uos mays p<ex>or</ex> u<ex>os</ex> no<ex>n</ex> mentir</rdg>
+                  <rdg wit="#V">ne<ex>n</ex> uos mays p<ex>or</ex> u<ex>os</ex> no<ex>n</ex> mentir</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">enquant' eu uos mia se<ex>n</ex>nor uir</rdg>
+                  <rdg wit="#B">enq<ex>uan</ex>c eu uos mha senh<ex>or</ex> uyr</rdg>
+                  <rdg wit="#V">enq<ex>uan</ex>t' eu uos mha senh<ex>or</ex> uyr</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">semp<ex>re</ex> meu querria uiuer</rdg>
+                  <rdg wit="#B">Semp<ex>re</ex> meu q<ex>ue</ex>iria uiuer</rdg>
+                  <rdg wit="#V">senp<ex>re</ex> meu q<ex>ue</ex>iria uiuer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">e_atender_e_atender</rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi> te<ex>n</ex>no que fazen mal sen</rdg>
+                  <rdg wit="#B">E tenho q<ex>ue</ex> faze<ex>n</ex> mal sen</rdg>
+                  <rdg wit="#V">E tenho q<ex>ue</ex> faze<ex>n</ex> mal sen</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">quantos damor coitados son</rdg>
+                  <rdg wit="#B">q<ex>uan</ex>t<ex>os</ex> damor cuytad<ex>os</ex> son</rdg>
+                  <rdg wit="#V">q<ex>uan</ex>ta damor cuycad<ex>os</ex> son</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">de querer sa mort e se non</rdg>
+                  <rdg wit="#B">de q<ex>ue</ex>rer sa morte se no<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">de q<ex>ue</ex>rer sa morte se no<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">ouueron nunca damor ben</rdg>
+                  <rdg wit="#B">ouuero<ex>n</ex> nu<ex>n</ex>ca damor be<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">ouuero<ex>n</ex> nu<ex>n</ex>ca damor ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="19">
+               <app>
+                  <rdg wit="#A">comeu fac' e se<ex>n</ex>nor <del rend="underdot">e</del> por en</rdg>
+                  <rdg wit="#B">comeu faç' e senh<ex>or</ex> por en</rdg>
+                  <rdg wit="#V">comeu fac' e senh<ex>or</ex> por en</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="20">
+               <app>
+                  <rdg wit="#A">sempre meu queria uiuer</rdg>
+                  <rdg wit="#B">Seup<ex>re</ex> meu q<ex>ue</ex>rria uiuer</rdg>
+                  <rdg wit="#V">senp<ex>re</ex> meu q<ex>ue</ex>iria uiuer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="21">
+               <app>
+                  <rdg wit="#A">e atender e atender</rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A240B428V40">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A240</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B428</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V40</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">V</hi>edes sennor <choice>
+                        <orig>quero uus</orig>
+                        <reg>quero-uus</reg>
+                     </choice> eu tal bem</rdg>
+                  <rdg wit="#B">Vedes senhor <choice>
+                        <orig>querou<ex>os</ex>
+                        </orig>
+                        <reg>quero-u<ex>os</ex>
+                        </reg>
+                     </choice> eu tal ben</rdg>
+                  <rdg wit="#V">Vedes senhor <choice>
+                        <orig>querou<ex>os</ex>
+                        </orig>
+                        <reg>quero-u<ex>os</ex>
+                        </reg>
+                     </choice> eu tal ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">qual mayor posso no meu coraçon</rdg>
+                  <rdg wit="#B">qual mayor posso no meu coracon</rdg>
+                  <rdg wit="#V">qual mayor posso no meu coraçon</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">e non diredes uos por em de non</rdg>
+                  <rdg wit="#B">e non diredes uos por e<ex>n</ex> de non</rdg>
+                  <rdg wit="#V">e no<ex>n</ex> diredes uos por e<ex>n</ex> de no<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">non amigo mais <choice>
+                        <orig>direi me</orig>
+                        <reg>direi-me</reg>
+                     </choice>_outra rem</rdg>
+                  <rdg wit="#B">non amigo mays <choice>
+                        <orig>direy moutra</orig>
+                        <reg>direy-m' outra</reg>
+                     </choice> re<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">no<ex>n</ex> amigo mays <choice>
+                        <orig>direy moutra</orig>
+                        <reg>direy-m' outra</reg>
+                     </choice> 
+                     <unclear>r</unclear>em</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">N</hi>on me queredes uos a mi mellor</rdg>
+                  <rdg wit="#B">Non me queredes uos a mj melhor</rdg>
+                  <rdg wit="#V">no<ex>n</ex> me queredes uos a mi melhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">do que uus eu quer' amig' e sennor</rdg>
+                  <rdg wit="#B">do q<ex>ue</ex> u<ex>os</ex> eu quer' amigu' e senhor</rdg>
+                  <rdg wit="#V">do que u<ex>os</ex> eu quer' amigu' e senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="unfinished"/> uus non ueio <gap reason="unknown"/>
+                  </rdg>
+                  <rdg wit="#B">Hu u<ex>os</ex> no<ex>n</ex> ueio no<ex>n</ex> ueio p<ex>ra</ex>zer</rdg>
+                  <rdg wit="#V">Hu u<ex>os</ex> no<ex>n</ex> ueio no<ex>n</ex> ueio p<ex>ra</ex>zer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">se d<ex>eu</ex>s me ualla de ren ne<ex>n</ex> de mi</rdg>
+                  <rdg wit="#B">se d<ex>eu</ex> mj ualha de re<ex>n</ex> ne<ex>n</ex> de mi<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">se des mi ualha de re<ex>n</ex> ne<ex>n</ex> de mi<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">e non diredes que non est assi</rdg>
+                  <rdg wit="#B">e no<ex>n</ex> diredes q<ex>ue</ex> no<ex>n</ex> est assy</rdg>
+                  <rdg wit="#V">e no<ex>n</ex> diredes q<ex>ue</ex> no<ex>n</ex> est assy</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">non amigo mas <choice>
+                        <orig>quero mi</orig>
+                        <reg>quero-mi</reg>
+                     </choice>_al dizer</rdg>
+                  <rdg wit="#B">no<ex>n</ex> amigo mays <choice>
+                        <orig>q<ex>ue</ex>ro mal</orig>
+                        <reg>quero-m' al</reg>
+                     </choice> dizer</rdg>
+                  <rdg wit="#V">no<ex>n</ex> amigo mays <choice>
+                        <orig>q<ex>ue</ex>ro mal</orig>
+                        <reg>quero-m' al</reg>
+                     </choice> dizer</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">N</hi>on me queredes uos a mi mellor</rdg>
+                  <rdg wit="#B">
+                     <unclear>N</unclear>o<ex>n</ex> me q<ex>ue</ex>redes uos a mj<ex>n</ex> melhor</rdg>
+                  <rdg wit="#V">do<ex>n</ex> me q<ex>ue</ex>redes uos a mj<ex>n</ex> melhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">
+                     <choice>
+                        <orig>
+                           <hi rend="guide">A</hi>mo uus</orig>
+                        <reg>[A]mo-uus</reg>
+                     </choice> tanto que eu ben sei</rdg>
+                  <rdg wit="#B">Amo u<ex>us</ex> ta<ex>n</ex>to q<ex>ue</ex> eu muj be<ex>n</ex> sey</rdg>
+                  <rdg wit="#V">Amo u<ex>us</ex> tanto q<ex>ue</ex> eu muj be<ex>n</ex> sey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">que non podia mais p<ex>er</ex> bo<ex>̃</ex>a fe</rdg>
+                  <rdg wit="#B">q<ex>ue</ex> no<ex>n</ex> podia mays p<ex>er</ex> bo<ex>̃</ex>a fe</rdg>
+                  <rdg wit="#V">q<ex>ue</ex> no<ex>n</ex> po dia mays per bo<ex>̃</ex>a fe</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">e non diredes que assi non e</rdg>
+                  <rdg wit="#B">e no<ex>n</ex> diredes q<ex>ue</ex> assy no<ex>n</ex> e</rdg>
+                  <rdg wit="#V">e no<ex>n</ex> diredes q<ex>ue</ex> assy no<ex>n</ex> e</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">non amigo mas al me uus direi</rdg>
+                  <rdg wit="#B">non amigo mays al me u<ex>os</ex> direy</rdg>
+                  <rdg wit="#V">no<ex>n</ex> amigo mays al me <add rend="sup">u</add>
+                     <ex>os</ex> direy</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">N</hi>on me que_<gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <unclear>N</unclear>o<ex>n</ex> me <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">do<ex>n</ex> me <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+         </div>
+         <div type="poem" corresp="#A283B1220V825">
+            <head>
+               <title>
+                  <app>
+                     <rdg wit="#A" hand="#missing">
+                        <idno>A283</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#B" hand="#d">
+                        <idno>B1220</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                     <rdg wit="#V" hand="#v">
+                        <idno>V825</idno>
+                        <locus from="" to=""/>
+                     </rdg>
+                  </app>
+               </title>
+               <name role="author" ref="#FerVelho"/>
+            </head>
+            <l xmlns="" n="1">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">A</hi> que ui ontr' as amenas</rdg>
+                  <rdg wit="#B">A q<ex>ue</ex> ui antr' as amenas</rdg>
+                  <rdg wit="#V">A que ui antr' as amenas</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="2">
+               <app>
+                  <rdg wit="#A">de<ex>us</ex> como pareçe ben</rdg>
+                  <rdg wit="#B">De<ex>us</ex> como parece be<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">de<ex>us</ex> como parece ben</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="3">
+               <app>
+                  <rdg wit="#A">e <choice>
+                        <orig>mirey la</orig>
+                        <reg>mirey-la</reg>
+                     </choice> das arenas</rdg>
+                  <rdg wit="#B">Eu <choice>
+                        <orig>mireyla</orig>
+                        <reg>mirey-la</reg>
+                     </choice> das arenas</rdg>
+                  <rdg wit="#V">eu <choice>
+                        <orig>mi reyla</orig>
+                        <reg>mirey-la</reg>
+                     </choice> das arenas</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="4">
+               <app>
+                  <rdg wit="#A">des i penado me ten</rdg>
+                  <rdg wit="#B">Des y penado me te<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">des y penado me ten</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="5">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi>u das arenas la mirey</rdg>
+                  <rdg wit="#B">Eu das arenas la mirey</rdg>
+                  <rdg wit="#V">eu das arenas la mirey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="6">
+               <app>
+                  <rdg wit="#A">
+                     <ex>e</ex>desenton se<ex>n</ex>p<ex>re</ex> peney</rdg>
+                  <rdg wit="#B">
+                     <gap reason="error"/> Des enton sempre peney</rdg>
+                  <rdg wit="#V">
+                     <gap reason="error"/> des enton sempre peney</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="7">
+               <app>
+                  <rdg wit="#A">_ <gap reason="unfinished"/> que ui ontr' as amenas</rdg>
+                  <rdg wit="#B">_ A q<ex>ue</ex> ui antr' as amenas</rdg>
+                  <rdg wit="#V">eu A q<ex>ue</ex> ui antr' as amenas</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="8">
+               <app>
+                  <rdg wit="#A">deus com' a bon semellar</rdg>
+                  <rdg wit="#B">D<ex>eu</ex>s com a be<ex>n</ex> semelhar</rdg>
+                  <rdg wit="#V">d<ex>eu</ex>s com ha bo<ex>n</ex> semelhar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="9">
+               <app>
+                  <rdg wit="#A">
+                     <ex>e</ex> 
+                     <choice>
+                        <orig>mirey la</orig>
+                        <reg>mirey-la</reg>
+                     </choice>
+                     <del rend="underdot">s</del> das arenas</rdg>
+                  <rdg wit="#B">Eu <choice>
+                        <orig>mireyla</orig>
+                        <reg>mirey-la</reg>
+                     </choice> das arenas</rdg>
+                  <rdg wit="#V">en <choice>
+                        <orig>mireyla</orig>
+                        <reg>mirey-la</reg>
+                     </choice> das arenas</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="10">
+               <app>
+                  <rdg wit="#A">et des enton me fez penar</rdg>
+                  <rdg wit="#B">
+                     <gap reason="error"/> Des enco<ex>n</ex> me fez penar</rdg>
+                  <rdg wit="#V">
+                     <gap reason="error"/> des enco<ex>n</ex> me fez penar</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="11">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi>u das arenas .l.m.</rdg>
+                  <rdg wit="#B">Eu das arenas la m.</rdg>
+                  <rdg wit="#V">eu das arenas la m.</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="12">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="13">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">S</hi>e a non uiss' aquel dia</rdg>
+                  <rdg wit="#B">Se a no<ex>n</ex> uisse aq<ex>ue</ex>l dia</rdg>
+                  <rdg wit="#V">Se a no<ex>n</ex> uiss' aq<ex>ue</ex>l dia</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="14">
+               <app>
+                  <rdg wit="#A">que_sse_fezera_de_mi</rdg>
+                  <rdg wit="#B">Muyto_me_fora_melhor</rdg>
+                  <rdg wit="#V">muyto_me_fora_melhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="15">
+               <app>
+                  <rdg wit="#A">mays quis deus enton <ex>e</ex> uia</rdg>
+                  <rdg wit="#B">Mays q<ex>ui</ex>s d<ex>eu</ex>s enton e_e uia</rdg>
+                  <rdg wit="#V">mays q<ex>ui</ex>s des enton e_e uia</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="16">
+               <app>
+                  <rdg wit="#A">
+                     <ex>e</ex>_nunca_tan_fremosa_ui</rdg>
+                  <rdg wit="#B">Mui_fremosa_mha_senhor</rdg>
+                  <rdg wit="#V">mui_fremosa mha_senhor</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="17">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi>u das. a. r. <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">Eu das arenas la <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">eu das arenas la <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="18">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="19">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">S</hi>e a non uiss' aquel dia</rdg>
+                  <rdg wit="#B">Se a no<ex>n</ex> uiss' aq<ex>ue</ex>l dia</rdg>
+                  <rdg wit="#V">Se a no<ex>n</ex> uiss' aq<ex>ue</ex>l dia</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="20">
+               <app>
+                  <rdg wit="#A">muyto_me_fora_mellor</rdg>
+                  <rdg wit="#B">q<ex>ue</ex>_sse_fez<ex>er</ex>a_de_mi<ex>n</ex>
+                  </rdg>
+                  <rdg wit="#V">q<ex>ue</ex>_sse_fez<ex>er</ex>a_de_mi<ex>n</ex>
+                  </rdg>
+               </app>
+            </l>
+            <l xmlns="" n="21">
+               <app>
+                  <rdg wit="#A">mays quis deus enton <ex>e</ex> uia</rdg>
+                  <rdg wit="#B">Mays q<ex>ui</ex>s d<ex>eu</ex> enton e uya</rdg>
+                  <rdg wit="#V">mays q<ex>ui</ex>s des enton e uya</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="22">
+               <app>
+                  <rdg wit="#A">a_muy_fremosa_mia_sennor</rdg>
+                  <rdg wit="#B">Nunca_ta<ex>n</ex>_fremosa_ui</rdg>
+                  <rdg wit="#V">nunca_ta<ex>n</ex>_fremosa_ui</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="23">
+               <app>
+                  <rdg wit="#A">
+                     <hi rend="guide">E</hi>u das. a._r. l. <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">Eu das arenas la mirey</rdg>
+                  <rdg wit="#V">eu das are nas la mirey</rdg>
+               </app>
+            </l>
+            <l xmlns="" n="24">
+               <app>
+                  <rdg wit="#A">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#B">
+                     <gap reason="economy"/>
+                  </rdg>
+                  <rdg wit="#V">
+                     <gap reason="economy"/>
+                  </rdg>
+               </app>
+            </l>
+         </div>
+      </body>
+   </text>
+</TEI>
