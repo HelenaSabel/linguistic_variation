@@ -104,7 +104,7 @@
             <xsl:text>_</xsl:text>
             <xsl:value-of select="name()"/>
             <xsl:text>="</xsl:text>
-            <xsl:value-of select="current()"/>
+            <xsl:value-of select="replace(current(), ' ', '_')"/>
             <xsl:text>"</xsl:text>
         </xsl:for-each>
         <xsl:text>&gt;</xsl:text>

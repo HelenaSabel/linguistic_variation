@@ -15,11 +15,9 @@
             <assert test="count(tei:rdg[@ana]) gt 1">Missing @ana</assert>
         </rule>
         <rule context="tei:rdg">
-            <let name="value" value="tokenize(replace(@ana, '#', ''), '\s+')"/>
-            <!--  Wrong: it only validates de first value of @ana: need to find an equivalent to <xsl:for-each> -->
-            <assert
-                
-                test="if (@ana) then $value[current()] = $featureStructures else true()"
+            <let name="values" value="for $i in tokenize(@ana, '\s+') return substring-after($i,'#')"/>
+            <assert               
+                test="if (@ana) then every $value in $values satisfies $value = $featureStructures else true()"
                 >The value of the attribute is not listed</assert>
             <assert test="@wit">It is mandatory to specify the witness</assert>
         </rule>

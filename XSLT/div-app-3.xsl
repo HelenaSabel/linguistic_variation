@@ -49,7 +49,7 @@
                                     </xsl:matching-substring>
                                 </xsl:analyze-string>
                             </xsl:attribute>
-                            <xsl:attribute name="hand">#missing</xsl:attribute>
+                            <xsl:attribute name="hand">#</xsl:attribute>
                             <xsl:element name="idno">
                                 <xsl:analyze-string select="string(./@corresp)" regex="#(\w\d+)(\w\d+)\w\d+">
                                 <xsl:matching-substring>
@@ -70,7 +70,7 @@
                                     </xsl:matching-substring>
                                 </xsl:analyze-string>
                             </xsl:attribute>
-                            <xsl:attribute name="hand">#d</xsl:attribute>
+                            <xsl:attribute name="hand">#</xsl:attribute>
                             <xsl:element name="idno">
                                 <xsl:analyze-string select="string(./@corresp)" regex="#(\w\d+)(\w\d+)\w\d+">
                                 <xsl:matching-substring>

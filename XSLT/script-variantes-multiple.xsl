@@ -39,7 +39,7 @@
                         <xsl:text>#rev</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'soff') and not(contains(rdg[2],'soff'))">
-                        <xsl:text>#trend</xsl:text>
+                        <xsl:text>#ff</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'uus') and contains(rdg[2],'os')">
                         <xsl:text>#vus</xsl:text>
@@ -72,7 +72,7 @@
                 </xsl:attribute>
                 <xsl:attribute name="ana">
                     <xsl:if test="rdg[2][ex] and rdg[1][not(ex)]">
-                        <xsl:text>#irreg</xsl:text>
+                        <xsl:text>#abb</xsl:text>
                     </xsl:if>
                     <xsl:if test="rdg[2][add]">
                         <xsl:text>#rev</xsl:text>
@@ -81,7 +81,7 @@
                         <xsl:text>#rev</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mh')">
-                        <xsl:text>#trend</xsl:text>
+                        <xsl:text>#mh</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'mj') and contains(rdg[2], 'mh')">
                         <xsl:text>#trend</xsl:text>
