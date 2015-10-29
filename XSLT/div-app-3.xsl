@@ -3,7 +3,7 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0" 
     xmlns="http://www.tei-c.org/ns/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-   exclude-result-prefixes="xs tei" version="2.0">
+   exclude-result-prefixes="#all" version="2.0">
     <xsl:output method="xml" indent="yes"/>   
     <xsl:variable name="header" select="doc('../edition/sandim1.xml')//tei:teiHeader"/>
     <xsl:template match="/">
@@ -111,7 +111,7 @@
                     <xsl:attribute name="ref">#FerVelho</xsl:attribute>
                 </xsl:element>
             </xsl:element>
-            <xsl:sequence select="current()//l"/>
+            <xsl:sequence select="current()//l" extension-element-prefixes="tei"/>
         </xsl:element>
     </xsl:template>
 </xsl:stylesheet>
