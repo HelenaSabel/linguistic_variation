@@ -18,7 +18,7 @@
     <xsl:template match="comment()" mode="ana">
         <xsl:comment select="."/>
     </xsl:template>
-    <xsl:template match="app" mode="ana">
+    <xsl:template match="app[parent::l]" mode="ana">
         <xsl:element name="app">
             <xsl:element name="rdg">
                 <xsl:attribute name="wit">
@@ -26,7 +26,7 @@
                 </xsl:attribute>
                 <xsl:attribute name="ana">
                     <xsl:if test="rdg[1][ex] and rdg[2][not(ex)]">
-                        <xsl:text>#irreg</xsl:text>
+                        <xsl:text>#abb</xsl:text>
                     </xsl:if>
                     <xsl:if test="rdg[1][hi/@rend='guide']">
                         <xsl:text>#material</xsl:text>
@@ -54,6 +54,9 @@
                         <xsl:text>#error</xsl:text>
                     </xsl:if>
                     <xsl:if test="rdg[1][gap/@reason='economy']">
+                        <xsl:text>#material</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[1][gap/@reason='unfinished']">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>
                     <xsl:if test="rdg[1][gap/@reason='damage']">
