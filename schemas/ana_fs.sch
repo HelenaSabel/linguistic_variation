@@ -55,7 +55,7 @@
         </rule>
         <rule context="tei:gap">
             <assert
-                test=".[@reason = 'error'] | .[@reason = 'economy'] | .[@reason = 'unfinished'] | .[@reason = 'damage'] | .[@reason = 'illegible'] | .[@reason = 'model']"
+                test=".[@reason = 'error'] | .[@reason = 'economy'] | .[@reason = 'unfinished'] | .[@reason = 'damage'] | .[@reason = 'illegible'] | .[@reason = 'model']| .[@reason = 'unknown']"
                 > "error," "economy," "damage," "unfinished," "model," or "illegible" are the only
                 permitted values of @reason on the gap element </assert>
         </rule>
