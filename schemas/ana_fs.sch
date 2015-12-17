@@ -71,5 +71,10 @@
             <assert test="every $rendition in $renditions satisfies $values = $rendition">A @rend must express how the deletion was made(possible values:
                 “overstrike”, “underdot”, ”scrape” or “overwrite”</assert>
         </rule>
+       <rule context="tei:choice">
+           <assert test="if (tei:orig/tei:ex) then tei:reg/tei:ex else true()">Check for consistency</assert>
+           <assert test="if (tei:reg/tei:ex) then tei:orig/tei:ex else true()">Check for consistency</assert>
+           <assert test="if (tei:orig/tei:hi) then tei:reg/tei:hi else true()">Check for consistency</assert>
+       </rule>
     </pattern>
 </schema>
