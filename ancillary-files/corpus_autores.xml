@@ -50,7 +50,15 @@
     <text>
         <body>
             <listPerson>
-                <person>
+                <person xml:id="PEaSol">
+                    <persName>Pedro Eanes Solaz</persName>
+                    <floruit period="3" from="1245" to="1275"/>
+                    <listBibl>
+                        <bibl corresp="#A282B1219V824">A282,B1219,V824</bibl>                        
+                        <bibl corresp="#A283B1220V825">A283,B1220,V825</bibl>
+                    </listBibl>
+                </person>
+                <person xml:id="NuPor">
                     <persName>Nuno Porco</persName>
                     <floruit period="3" from="1240" to="1280"/>
                     <listBibl>
@@ -67,14 +75,14 @@
                         <bibl corresp="#B1452V1062">B1452,V1062</bibl>
                     </listBibl>
                 </person>-->
-                <person>
+                <person xml:id="SaSchz">
                     <persName>Sancho Sanches</persName>
                     <floruit period="3" from="1280" to="1315"/>
                     <listBibl>
                         <bibl corresp="#A291B982V569" type="double">A291,B982,V569</bibl>
                     </listBibl>
                 </person>
-                <person>
+                <person xml:id="PGarBu">
                     <persName>Pero Garcia de Burgalés</persName>
                     <floruit period="3" from="1240" to="1270"/>
                     <listBibl>
@@ -853,8 +861,6 @@
                     <listBibl>
                         <bibl corresp="#A265B449">A265,B449</bibl>
                         <bibl corresp="#A266B450">A266,B450</bibl>
-                        <bibl corresp="#A282B1219V824">A282,B1219,V824</bibl>
-                        <bibl corresp="#A283B1220V825">A283,B1220,V825</bibl>
                     </listBibl>
                 </person>
                 <person xml:id="VaRdzCal">
