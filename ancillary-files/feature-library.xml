@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/tei_features.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fenómenos de variação textual do projeto: Edição sinóptica (parcial) da
+                    lírica profana galego-portuguesa</title>
+                <author>Helena Bermúdez Sabel</author>
+            </titleStmt>
+            <publicationStmt>
+                <publisher/>
+                <availability>
+                    <licence>
+                        <ref target="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+                            Commons Attribution-NonCommercial-ShareAlike 4.0 International</ref>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born-digital.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <ab/>
+
+            <fLib n="Linguistic variants">
+                <f name="linguisticVariant" xml:id="ling"/>
+                <f name="morphosyntactic" xml:id="morph"/>
+                <f name="phonetic" xml:id="phon"/>
+                <f name="lexical" xml:id="lex"/>
+                <f name="languageTransfer" xml:id="transfer"/>
+                <f name="pronoum" xml:id="pr"/>
+                <f name="verb" xml:id="vb"/>
+                <f name="substantive" xml:id="n"/>
+                <f name="conjuction" xml:id="conj"/>
+                <f name="preposition" xml:id="prep"/>
+                <f name="adverb" xml:id="adv"/>
+                <f name="vowel" xml:id="vowel"/>
+                <f name="consonant" xml:id="consonant"/>
+                <f name="dativeContamination" xml:id="datCon"/>
+                <f name="irregularVerb" xml:id="irregV"/>
+                <f name="pastTheme" xml:id="past"/>
+                <f name="presentTheme" xml:id="pres"/>
+                <f name="habere" xml:id="habere"/>
+                <f name="nasalization" xml:id="nasal"/>
+                <f name="sibiliantes" xml:id="sibilante"/>
+                <f name="progressiveNasalization" xml:id="proNas"/>
+                <f name="analogy" xml:id="anal"/>
+                <f name="epentheticYod" xml:id="eYod"/>
+                <f name="denasalization" xml:id="deNas"/>
+                <f name="allomorph" xml:id="allom"/>
+                <f name="apheresis" xml:id="apher"/>
+                <f name="crasis" xml:id="crasis"/>
+                <f name="palatalization" xml:id="pal"/>
+                <f name="foiP1" xml:id="foi1"/>
+                <f name="fuiP1" xml:id="fui1"/>
+                <f name="palatizationSe" xml:id="palSe"/>
+                <f name="dipthong" xml:id="dipthong"/>
+                <f name="archaismLing" xml:id="archaismL"/>
+                <f name="perfP1i" xml:id="p1I"/>
+                <f name="loan" xml:id="Loan"/>
+                <f name="par" xml:id="Par"/>
+                <f name="per" xml:id="Per"/>
+                <f name="agora" xml:id="Agora"/>
+                <f name="ora" xml:id="Ora"/>
+                <f name="ca" xml:id="Ca"/>
+                <f name="que" xml:id="Que"/>
+                <f name="causal" xml:id="caus"/>
+                <f name="completive" xml:id="complet"/>
+                <f name="comparative" xml:id="comparat"/>
+                <f name="cognate" xml:id="Cognate"/>
+                <f name="reduction" xml:id="reduction"/>
+                <f name="finalPosition" xml:id="finalPosition"/> 
+            </fLib>
+
+
+            <fvLib n="Linguistic variants">
+                
+                <fs xml:id="apocope">
+                    <f name="type">
+                        <symbol value="ling"/>
+                    </f>
+                    <f name="definition">
+                        <fs ana="phonetic" feats="#vowel #reduction #finalPosition"/>
+                    </f>
+                </fs>
+                
+                
+                <fs xml:id="dat" feats="#datCon #pr #morph #ling" n="Contaminação do dativo">
+                    <!--Contaminação do dativo-->
+                    <!--Dative contamination-->
+                </fs>
+                <fs xml:id="dubDat" feats="#datCon #pr #morph #ling" n="Contaminação do dativo vs. crase vocálica"></fs>
+                <fs xml:id="langT" feats="#transfer #ling" n="Interfererência linguística">
+                    <!--Interfererência linguística-->
+                    <!--Language transfer-->
+                </fs>
+                <fs xml:id="sib-cognate" feats="#ling #Cognate #sibilante #phon" n="Duplo resultado na evolução de sibilantes"></fs>
+                <fs xml:id="oer" feats="#habere #past #irregV #vb #morph #ling"
+                    n="Tema de perfeito de 'haver' em 'o-'">
+                    <!--Tema de perfeito de 'haver' em 'o-'-->
+                    <!--Past stem of 'haver' as 'o-'-->
+                </fs>
+                <fs xml:id="dip" feats="#dipthong #phon #ling"
+                    n="Vacilação na ditongação: 'oi/ui'">
+                    <!--Variação relacionada com a ditongação-->
+                    <!--Variation concerning diphthongs-->
+                </fs>
+                <fs xml:id="foi" feats="#foi1 #past #irregV #vb #morph #dipthong #phon #ling"
+                    n="P1 do perfeito de 'seer/ir' em 'foi'">
+                    <!--P1 do perfeito de 'ir' em 'foi'-->
+                    <!--P1 of perfect indicative of 'seer' as 'foi'-->
+                </fs>
+                <fs xml:id="fui" feats="#fui1 #past #irregV #vb #morph #dipthong #phon #ling"
+                    n="P3 do perfeito de 'seer/ir' em 'fui'">
+                    <!--P3 do perfeito de 'seer' em 'fui'-->
+                    <!--P3 of perfect indicative of 'seer' as 'fui'-->
+                </fs>
+                <fs xml:id="xe" feats="#palSe #pr #morph #pal #phon #ling"
+                    n="Palatalização do pronome 'se'">
+                    <!--Palatalização do pronome 'se'-->
+                    <!--Palatalized 'se'-->
+                </fs>
+                <fs xml:id="min" feats="#proNas #nasal #phon #ling" n="Nasalização progressiva">
+                    <!--Nasalização progressiva-->
+                    <!--Progressive nasalization-->
+                </fs>
+                <fs xml:id="pro-nas">
+                    <f name="category">
+                        <symbol value="linguistic"/>
+                    </f>
+                    <f name="description">
+                        <fs feats="#nasal">
+                            <f name="phonetic"></f>
+                        </fs>
+                    </f>
+
+
+                </fs>
+                <fs xml:id="nasAn" feats="#anal #nasal #phon #pr #ling" n="Nasalização por analogia">
+                    <!--Nasalização por analogia-->
+                    <!--Analog nasalization-->
+                </fs>
+                <fs xml:id="yod" feats="#eYod #vowel #phon #ling" n="Presença de iode epentético">
+                    <!--Presença de iode epentético-->
+                    <!--Epenthetic yod-->
+                </fs>
+                <fs xml:id="p1i" feats="#p1I #past #irregV #vb #morph #ling"
+                    n="P1 do perfeito em '-i'">
+                    <!--P1 do perfeito em '-i'-->
+                    <!--Perfect indicative personal ending of P1 as "-i" -->
+                </fs>
+                <fs xml:id="denas" feats="#deNas #phon #ling" n="Desnasalização">
+                    <!--Desnasalização-->
+                    <!--Denasalization-->
+                </fs>
+                <fs xml:id="protese" feats="#ling #phon #vowel" n="Prótese">
+                    <!--Prótese-->
+                    <!-- Prothetic vowel-->
+                </fs>
+                <fs xml:id="loan" feats="#Loan #ling" n="Empréstimo linguístico">
+                    <!--Empréstimo linguístico-->
+                    <!--Loan-->
+                </fs>
+                <fs xml:id="cras" feats="#crasis #vowel #phon #ling"
+                    n="Resolução de hiato por crase vocálica">
+                    <!--Crase vocálica para evitar hiato-->
+                    <!--Crasis to avoid a hiatus-->
+                </fs>
+                <fs xml:id="par" feats="#Par #prep #ling #lex" n="Uso da preposição 'par' ">
+                    <!--Uso da preposição 'par' -->
+                    <!--Use of "par" as preposition-->
+                </fs>
+                <fs xml:id="per" feats="#Per #prep #ling #lex" n="Alternância 'per/por'">
+                    <!--Uso da preposição 'per'-->
+                    <!--Use of the form 'per'-->
+                </fs>
+                <fs xml:id="ora" feats="#Ora #adv #ling #lex" n="Uso do advérbio temporal 'ora' (sendo esperável 'agora')">
+                    <!--Uso do advérbio temporal 'ora'-->
+                    <!--Use of 'ora' as a temporal adverb-->
+                </fs>
+                <fs xml:id="agora" feats="#Agora #adv #ling #lex"
+                    n="Uso do advérbio temporal 'agora' (sendo esperável 'ora')">
+                    <!--Uso do advérbio temporal 'agora'-->
+                    <!--Use of 'agora' as a temporal adverb-->
+                </fs>
+                <fs xml:id="anal-o" feats="#ling" n="SNP &#34;-o&#34; analógico na P3 dos pretéritos fortes">
+                    <!--'o' analógico na P3 dos pretéritos fortes-->
+                    <!--Analog 'o' in the P3 perfect indicative-->
+                </fs>
+                <fs xml:id="caAd" feats="#comparat #Ca #conj #ling"
+                    n="Uso de &#34;ca&#34; comparativo">
+                    <!--Uso de "ca" comparativo-->
+                    <!--Use of "ca" as a comparative conjunction-->
+                </fs>
+                <fs xml:id="caVb" feats="#complet #Ca #conj #ling"
+                    n="Uso de &#34;ca&#34; completivo">
+                    <!--Uso de "ca" completivo-->
+                    <!--Use of "ca" as a complementizern-->
+                </fs>
+                <fs xml:id="que" feats="#comparat #Que #conj #ling"
+                    n="Uso de &#34;que&#34; comparativo">
+                    <!--Uso de "que" comparativo-->
+                    <!--Use of "que" as a comparative conjunction-->
+                </fs>
+                <fs xml:id="queC" feats="#caus #Que #conj #ling" n="Uso de &#34;que&#34; causal">
+                    <!--Uso de "que" causal-->
+                    <!--Use of "que" as a causal conjunction-->
+                </fs>
+                <fs xml:id="apheresis" feats="#apher #phon #ling" n="Aférese">
+                    <!--Aférese-->
+                    <!--Apheresis-->
+                </fs>
+                <fs xml:id="cognate" feats="#Cognate #phon #ling" n="Doblete léxico">
+                    <!--Doblete léxico-->
+                    <!--Cognate-->
+                </fs>
+                <fs xml:id="art" feats="#ling" n="Uso do artigo com o posessivo">
+                    <!-- Uso do artigo com o posessivo-->
+                    <!--Use of the article preceding a possessive-->
+                </fs>
+                <fs xml:id="art-al" feats="#allom #ling #phon" n="Forma alomorfa do artigo">
+                    <!--Forma alomorfa do artigo-->
+                </fs>
+                <fs xml:id="wtf" n="WTF: uma etiqueta tam válida como 'analogia'"></fs>
+                <fs xml:id="metaph" n="Harmonização vocálica">
+                    <!--Harmonização vocálica-->
+                </fs>
+                <fs xml:id="li" feats="#ling #morph #pr" n="Pronome dativo 'li'"/>
+                <fs xml:id="assimC" feats="#ling #phon #cons" n="Assimilação consonántica"></fs>
+                <fs xml:id="pr-fraco" feats="#ling #morph" n="Forma pronome fraco"/>
+                <fs xml:id="diss" feats="#ling #vowel #phon" n="Dissimilação vocálica"/>
+                <fs xml:id="ar" feats="#ling" n="Alternância 'ar/er'"/>
+                <fs xml:id="mas" feats="#ling" n="Alternância 'mas/mais'"/>
+                <fs xml:id="depois" feats="#ling" n="Alternância 'depois/despois'"/>
+                <fs xml:id="conf-sib" feats="#ling #ph" n="Possível confusão na sonoridade de sibilantes"/>
+                <fs xml:id="pal-nas" feats="#ling #ph" n="Desenvolvimento nasal palatal"></fs>
+                <fs xml:id="paragoge" feats="#ling #ph" n="Paragoge"/>
+            </fvLib>
+
+
+            <fLib n="Graphic Variants">
+                <f name="graphicVariant" xml:id="graph"/>
+                <f name="archaism" xml:id="archaism"/>
+                <f name="innovation" xml:id="innovation"/>
+                <f name="regularVar" xml:id="regular"/>
+                <f name="irregularVar" xml:id="irregular"/>
+                <f name="tendency" xml:id="tendency"/>
+                <f name="linguisticRelevance" xml:id="linRelevance"/>
+                <f name="vus" xml:id="uus"/>
+                <f name="punctuation" xml:id="punctuation"/>
+                <!--Forma alomorfa do artigo-->
+
+            </fLib>
+
+            <fvLib n="Graphic Variants">
+                <fs xml:id="archG" feats="#archaism #graph" n="Grafia arcaica">
+                    <!--Grafia arcaica-->
+                    <!--Archaic spelling-->
+                </fs>
+                <fs xml:id="back-vow" n="Uso de 'u' para a vogal posterior semifechada"> </fs>
+                <fs xml:id="innova" feats="#innovation #graph" n="Inovação gráfica">
+                    <!--Inovação gráfica-->
+                    <!--Innovatory spelling-->
+                </fs>
+                <fs xml:id="reg" feats="#regular #graph" n="Variante gráfica regular">
+                    <!--Variante gráfica regular-->
+                    <!--Regular graphic variant-->
+                </fs>
+                <fs xml:id="irreg" feats="#irregular #graph"
+                    n="Variante gráfica com distribuição irregular ">
+                    <!--Variante gráfica com distribuição irregular -->
+                    <!--Irregular graphic variant-->
+                </fs>
+                <fs xml:id="trend" feats="#tendency #graph" n="Tendência ortográfica">
+                    <!--Tendência ortográfica-->
+                    <!--Orthographic tendency (not completely regular)-->
+                </fs>
+                <fs xml:id="occas" feats="#graph" n="Variante gráfica ocasional">
+                    <!--Variante gráfica ocasional-->
+                </fs>
+                <fs xml:id="lingR" feats="#linRelevance #graph"
+                    n="Variante gráfica com possíveis implicações linguísticas">
+                    <!--Variante gráfica com possíveis implicações linguísticas-->
+                    <!--Linguistically meaningful graphic variant-->
+                </fs>
+                <fs xml:id="punct" feats="#punctuation #graph" n="Pontuação">
+                    <!--Pontuação-->
+                    <!--Punctuation-->
+                </fs>
+                <fs xml:id="indefinite" feats="#graph"
+                    n="Variante gráfica de frequência inderminada">
+                    <!--Variante gráfica de frequência inderminada-->
+                    <!--Graphic variant of unknown frequency-->
+                </fs>
+                <fs xml:id="abbrev"/>
+
+
+            </fvLib>
+
+            <fLib n="Scribal errors">
+                <f name="scribalError" xml:id="Error"/>
+                <f name="misreading" xml:id="misreading"/>
+                <f name="lingInterference" xml:id="lingInter"/>
+            </fLib>
+
+            <fvLib n="Scribal errors">
+                <fs xml:id="misread" feats="#misreading #Error" n="Erro de leitura do modelo">
+                    <!--Erro de leitura do modelo-->
+                    <!--Misreading-->
+                </fs>
+                <fs xml:id="lingInt" feats="#lingInter #Error"
+                    n="Erro de cópia com possíveis implicações linguísticas">
+                    <!--Erro de cópia com possíveis implicações linguísticas-->
+                    <!--Linguistically meaningful scribal error-->
+                </fs>
+                <fs xml:id="error" feats="#Error" n="Erro de cópia">
+                    <!--Erro de cópia-->
+                    <!--Scribal error-->
+                </fs>
+            </fvLib>
+            <fvLib n="Equipolent Readings">
+                <fs xml:id="equip" n="Lição equipolente">
+                    <!--Lição equipolente-->
+                    <!--Equipolent reading-->
+                </fs>
+                <fs xml:id="material" n="Variante provocada pelas condições materiais">
+                    <!--Variante provocada pelas condições materiais-->
+                    <!--Variant caused by the material conditions-->
+                </fs>
+                <fs xml:id="rev" n="Variante que contém uma correção">
+                    <!--Variante provocada pelas condições materiais-->
+                    <!--Variant caused by the material conditions-->
+                </fs>
+                <fs xml:id="other" n="Outras variantes">
+                    <!--Outras variantes-->
+                    <!--Other variants-->
+                </fs>
+                <fs xml:id="dist" n="Distribuição"/>
+                <!--Distribuição-->
+                <!--Distribution-->
+            </fvLib>
+            <fvLib>
+                <fs xml:id="Vy" n="y em ditongo"/>
+                <fs xml:id="uy" n="y precedida ou seguida de u (anterior ou posterior)"/>
+                <fs xml:id="y-yod" n="y para yode"/>
+                <fs xml:id="mh" n="h como vogal depois de m"/>
+                <fs xml:id="h-ot" n="h como vogal palatal noutras posições"/>
+                <fs xml:id="uj" n="j seguida de u, n ou m"/>
+                <fs xml:id="vow-j" n="j como núcleo silánico"/>
+                <fs xml:id="cons-j" n="j consonante"/>
+                <fs xml:id="y-minin" n="y como núcleo silábico depois de u, n ou m"/>
+                <fs xml:id="cons-g" n="g como consonante palatal"/>
+                <fs xml:id="vow-y" n="y núcleo silábico"/>
+                <fs xml:id="çe" n="ç ante de e/i"/>
+                <fs xml:id="end-m" n="m final"/>
+                <fs xml:id="hu" n="h com os indeterminados"/>
+                <fs xml:id="hi" n="h com a particula i"/>
+                <fs xml:id="h-et" n="h etimologico"/>
+                <fs xml:id="hir" n="h com o verbo ir"/>
+                <fs xml:id="h-ant" n="h anti-etimológica"/>
+                <fs xml:id="abb" n="abreviatura"/>
+                <fs xml:id="syn" n="sinalefa"/>
+                <fs xml:id="nh" n="nh nasalização vocálica"/>
+                <fs xml:id="vow-n" n="n nasalização vocálica"/>
+                <fs xml:id="np" n="n antes de p/b"/>
+                <fs xml:id="ff"/>
+                <fs xml:id="ge"/>
+                <fs xml:id="c-pal"/>
+                <fs xml:id="ll"/>
+                <fs xml:id="l-pal"/>
+                <fs xml:id="ss-inic" n="Duplo s inicial/preconsonántico"/>
+                <fs xml:id="sc"/>
+                <fs xml:id="gu"/>
+                <fs xml:id="r-simp"/>
+                <fs xml:id="graph-art" n="Representação gráfica da forma alomorfa do artigo"/>
+                <fs xml:id="cc"/>
+                <fs xml:id="gua"/>
+                <fs xml:id="et"/>
+                <fs xml:id="cap"/>
+                <fs xml:id="v"/>
+            </fvLib>
+        </body>
+    </text>
+</TEI>
+
