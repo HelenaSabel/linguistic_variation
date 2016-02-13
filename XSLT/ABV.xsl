@@ -6,25 +6,28 @@
 
     <!-- java -jar ../../SaxonHE9-6-0-7J/saxon9he.jar -s:in-progress XSLT/ABV.xsl -o:unfinished  -->
 
-    <xsl:variable name="done" select="collection('../temporary')//tei:div/@corresp"/>
+    <xsl:variable name="done" select="collection('../temporary')//tei:div/@corresp/string()"></xsl:variable>
     <xsl:variable name="A"
-        select="collection('../in-progress')//div[@wit = '#A'][@corresp != $done]"/>
+        select="collection('../in-progress')//div[@wit = '#A'][not(@corresp = $done)]"/>
     <xsl:variable name="B"
-        select="collection('../in-progress')//div[@wit = '#B'][@corresp != $done]"/>
+        select="collection('../in-progress')//div[@wit = '#B'][not(@corresp = $done)]"/>
     <xsl:variable name="V"
-        select="collection('../in-progress')//div[@wit = '#V'][@corresp != $done]"/>
-    <xsl:template match="/">
-
+        select="collection('../in-progress')//div[@wit = '#V'][not(@corresp = $done)]"/>
+    <xsl:template name="initial">
+        <xsl:message><xsl:value-of select="concat('Done: ',count($done))"/></xsl:message>
+        <xsl:message><xsl:value-of select="concat('Done: ',count($A))"/></xsl:message>
+        <xsl:message><xsl:value-of select="concat('Done: ',count($B))"/></xsl:message>
+        <xsl:message><xsl:value-of select="concat('Done: ',count($V))"/></xsl:message>
         <xsl:result-document href="AB-app.xml">
             <xsl:element name="tei">
-                <xsl:apply-templates select="//$A[@corresp = $B/@corresp][@corresp != $V/@corresp]"
+                <xsl:apply-templates select="$A[@corresp = $B/@corresp][@corresp != $V/@corresp]"
                 />
             </xsl:element>
         </xsl:result-document>
 
         <xsl:result-document href="ABV-app.xml">
             <xsl:element name="tei">
-                <xsl:apply-templates select="//$A[@corresp = $B/@corresp][@corresp = $V/@corresp]"/>
+                <xsl:apply-templates select="$A[@corresp = $B/@corresp][@corresp = $V/@corresp]"/>
             </xsl:element>
         </xsl:result-document>
 
