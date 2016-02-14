@@ -8,11 +8,11 @@
 
     <xsl:variable name="done" select="collection('../temporary')//tei:div/@corresp"/>
     <xsl:variable name="A"
-        select="collection('../in-progress')//div[@wit = '#A'][@corresp != $done]"/>
+        select="collection('../in-progress')//div[@wit = '#A'][not(@corresp = $done)]"/>
     <xsl:variable name="B"
-        select="collection('../in-progress')//div[@wit = '#B'][@corresp != $done]"/>
+        select="collection('../in-progress')//div[@wit = '#B'][not(@corresp = $done)]"/>
     <xsl:variable name="V"
-        select="collection('../in-progress')//div[@wit = '#V'][@corresp != $done]"/>
+        select="collection('../in-progress')//div[@wit = '#V'][not(@corresp = $done)]"/>
     <xsl:template match="/">
 
         <xsl:result-document href="AB-app.xml">
