@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
     <ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
-    <let name="featureFile" value="doc('../ancillary-files/feature_library.xml')"/>
-    <let name="featureStructures" value="$featureFile//tei:fs/@xml:id"/>
-    <let name="biblFile" value="doc('../ancillary-files/biblList.xml')"/>
+    <let name="featureFile" value="doc('../ancillary-files/feature-library.xml')"/>
+    <let name="featureStructures" value="$featureFile//tei:fs/@xml:id | $featureFile//tei:fLib[@xml:id eq 'graphic']//tei:f/@xml:id"/>
+    <let name="biblFile" value="doc('../ancillary-files/corpus-cantigas.xml')"/>
     <let name="poems" value="$biblFile//tei:bibl/@xml:id"/>
-    <let name="personografia" value="doc('../ancillary-files/corpus_autores.xml')"/>
+    <let name="personografia" value="doc('../ancillary-files/corpus-autores.xml')"/>
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
-   <pattern>
+    <pattern>
         <rule context="tei:l/tei:app[not(.//tei:choice)][count(tei:rdg) gt 1]">
             <assert test="count(tei:rdg[@ana]) gt 0">Missing @ana</assert>
         </rule>
@@ -54,27 +54,55 @@
                 >Wrong author code</assert>
         </rule>
         <rule context="tei:gap">
-            <assert
-                test=".[@reason = 'error'] | .[@reason = 'economy'] | .[@reason = 'unfinished'] | .[@reason = 'damage'] | .[@reason = 'illegible'] | .[@reason = 'model']| .[@reason = 'unknown']"
-                > "error," "economy," "damage," "unfinished," "model," or "illegible" are the only
-                permitted values of @reason on the gap element </assert>
+            <let name="reasons"
+                value="('error', 'damage', 'economy', 'unfinished', 'illegible', 'model', 'unknown')"/>
+            <assert test="./@reason = $reasons"> "error," "economy," "damage," "unfinished,"
+                "model," or "illegible" are the only permitted values of @reason on the gap element
+            </assert>
         </rule>
         <rule context="tei:add">
-            <let name="values" value="tokenize('above margin overwrite inline', ' ')"/>
-            <assert test="@place = $values">Additions must express the place the added text was located (possible values:
-                “above”, “margin” or “overwrite”</assert>
+            <let name="places" value="('above', 'margin', 'overwrite', 'inline')"/>
+            <assert test="@place = $places">Additions must express the place the added text was
+                located (possible values: “above”, “margin” or “overwrite”</assert>
         </rule>
         <rule context="tei:del">
-            <let name="values" value="for $i in tokenize('overstrike underdot scrape overwrite double-overstrike', ' ') return $i"/>
-            <let name="renditions" value="for $i in tokenize(@rend, '\s+') return $i"/>
+            <let name="values" 
+                value="('overstrike, underdot, scrape, overwrite, multiple-overstrike')"/>
+            <let name="renditions"
+                value="
+                    for $i in tokenize(@rend, '\s+')
+                    return
+                        $i"/>
             <assert test="@rend">Missing @rend</assert>
-            <assert test="every $rendition in $renditions satisfies $values = $rendition">A @rend must express how the deletion was made(possible values:
-                “overstrike”, “underdot”, ”scrape” or “overwrite”</assert>
+            <assert
+                test="
+                    every $rendition in $renditions
+                        satisfies $values = $rendition"
+                >A @rend must express how the deletion was made(possible values: “overstrike”,
+                “underdot”, ”scrape”, “multiple-overstrike“ or “overwrite”</assert>
         </rule>
-       <rule context="tei:choice">
-           <assert test="if (tei:orig/tei:ex) then tei:reg/tei:ex else true()">Check for consistency</assert>
-           <assert test="if (tei:reg/tei:ex) then tei:orig/tei:ex else true()">Check for consistency</assert>
-           <assert test="if (tei:orig/tei:hi) then tei:reg/tei:hi else true()">Check for consistency</assert>
-       </rule>
+        <rule context="tei:choice">
+            <assert
+                test="
+                    if (tei:orig/tei:ex) then
+                        tei:reg/tei:ex
+                    else
+                        true()"
+                >Check for consistency</assert>
+            <assert
+                test="
+                    if (tei:reg/tei:ex) then
+                        tei:orig/tei:ex
+                    else
+                        true()"
+                >Check for consistency</assert>
+            <assert
+                test="
+                    if (tei:orig/tei:hi) then
+                        tei:reg/tei:hi
+                    else
+                        true()"
+                >Check for consistency</assert>
+        </rule>
     </pattern>
 </schema>
