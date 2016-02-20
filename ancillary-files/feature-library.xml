@@ -22,6 +22,7 @@
                 <p>Born-digital.</p>
             </sourceDesc>
         </fileDesc>
+        
     </teiHeader>
     <text>
         <body>
@@ -106,7 +107,6 @@
                 <f name="diphthong" xml:id="diphthong">
                     <fs n="type" feats="#vowel"/>
                 </f>
-
 
 
 
@@ -279,8 +279,12 @@
                 <fs xml:id="conf-sib">
                     <f name="type">
                         <fs feats="#sibil">
-                            <f name="process" select="lenition"/>
-                            <f name="process" select="fortition"/>
+                            <f name="process">
+                                <vAlt>
+                                    <string>lenition</string>
+                                    <string>fortition</string>
+                                </vAlt>
+                            </f>
                         </fs>
                         <string xml:lang="en">Likely confussion in the sonority feature of
                             sibiliants</string>
@@ -305,7 +309,12 @@
                     <f name="type">
                         <fs feats="#past">
                             <f name="process" select="stem-change"/>
-                            <f name="lexeme" select="seer/ir"/>
+                            <f name="lexeme">
+                                <vAlt>
+                                    <string>seer</string>
+                                    <string>ir</string>
+                                </vAlt>
+                            </f>
                             <f name="person">
                                 <symbol value="1"/></f>
                             <f name="number">
@@ -322,7 +331,12 @@
                     <f name="type">
                         <fs feats="#past">
                             <f name="process" select="stem-change"/>
-                            <f name="lexeme" select="seer/ir"/>
+                            <f name="lexeme">
+                                <vAlt>
+                                    <string>seer</string>
+                                    <string>ir</string>
+                                </vAlt>
+                            </f>
                             <f name="person">
                                 <symbol value="3"/></f>
                             <f name="number">
@@ -457,7 +471,6 @@
                 </fs>
 
 
-
                 <!--Other phenomena -->
 
                 <fs xml:id="cast-transfer">
@@ -552,8 +565,12 @@
                 <fs xml:id="ar">
                     <f name="type">
                         <fs feats="#adv">
-                            <f name="lexeme" select="er"/>
-                            <f name="lexeme" select="ar"/>
+                            <f name="lexeme">
+                                <vAlt>
+                                    <string>ar</string>
+                                    <string>er</string>
+                                </vAlt>
+                            </f>
                         </fs>
                         <string xml:lang="en">Alternation 'ar/er'</string>
                         <string xml:lang="pt">Alternância 'ar/er'</string>
@@ -562,8 +579,12 @@
                 <fs xml:id="depois">
                     <f name="type">
                         <fs feats="#adv">
-                            <f name="lexeme" select="depois"/>
-                            <f name="lexeme" select="despois"/>
+                            <f name="lexeme">
+                                <vAlt>
+                                    <string>depois</string>
+                                    <string>despois</string>
+                                </vAlt>
+                            </f>
                         </fs>
                         <string xml:lang="en">Alternation 'depois/despois'</string>
                         <string xml:lang="pt">Alternância 'depois/despois'</string>
@@ -572,8 +593,12 @@
                 <fs xml:id="mas">
                     <f name="type">
                         <fs feats="#adv">
-                            <f name="lexeme" select="mas"/>
-                            <f name="lexeme" select="mais"/>
+                            <f name="lexeme">
+                                <vAlt>
+                                    <string>mas</string>
+                                    <string>mais</string>
+                                </vAlt>
+                            </f>
                         </fs>
                         <string xml:lang="en">Alternation 'mas/mais'</string>
                         <string xml:lang="pt">Alternância 'mas/mais'</string>
@@ -698,6 +723,7 @@
             categorization -->
 
             <fLib xml:id="graphic">
+                <f name="regular" xml:id="reg" n="nn/ll"></f>
                 <f name="punct" xml:id="punct" n="pontuação"/>
                 <f name="back-vow" xml:id="back-vow" n="uso de 'u' para a vogal posterior semifechada"/> 
                 <f name="y-dip" xml:id="y-dip" n="y segundo elemento ditongo"/>
@@ -716,7 +742,7 @@
                 <f name="çe" xml:id="çe" n="ç ante de e/i"/>
                 <f name="m-end" xml:id="m-end" n="m final"/>
                 <f name="h-et" xml:id="h-et" n="h etimologico"/>
-                <f name="h-monos" xml:id="h-monos" n="h com monosilábicos e minim adjacente"/>
+                <f name="h-monos" xml:id="h-monos" n="h com monosilábicos e nom minim adjacente"/>
                 <f name="abb" xml:id="abb" n="abreviatura"/>
                 <f name="syn" xml:id="syn" n="sinalefa"/>
                 <f name="nh" xml:id="nh" n="nh nasalização vocálica"/>
