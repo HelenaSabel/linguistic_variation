@@ -8,11 +8,12 @@
     <let name="personografia" value="doc('../ancillary-files/corpus-autores.xml')"/>
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
     <pattern>
-        <rule context="tei:l/tei:app[not(.//tei:choice)][count(tei:rdg) gt 1]">
-            <assert test="count(tei:rdg[@ana]) gt 0">Missing @ana</assert>
-        </rule>
-        <rule context="tei:l/tei:app[not(.//tei:choice)][count(tei:rdg) gt 2]">
-            <assert test="count(tei:rdg[@ana]) gt 1">Missing @ana</assert>
+        <rule context="tei:l/tei:app">
+            <let name="anas"
+                value="tokenize(replace(string-join(.//@ana, ' '), '\s?#rev\s?', ''), '\s+')"/>
+            <assert test="if (count($anas) gt 1) then count($anas) eq (count(.//tei:seg) + count(.//tei:gap[@reason eq 'error'])) else true()">Need to segmentate</assert>
+            <assert test="if (.[not(.//tei:choice)][count(tei:rdg) gt 1]) then count(tei:rdg[@ana]) gt 0 else true()">Missing @ana</assert>
+            <assert test="if (.[not(.//tei:choice)][count(tei:rdg) gt 2]) then count(tei:rdg[@ana]) gt 1 else true()">Missing @ana</assert>
         </rule>
         <rule context="tei:rdg">
             <let name="values"
@@ -29,6 +30,10 @@
                         true()"
                 >The value of the attribute is not listed</assert>
             <assert test="@wit">It is mandatory to specify the witness</assert>
+        </rule>
+        <rule context="tei:seg">
+            <assert test="@corresp">Every seg must have a @corresp attribute with its FS code</assert>
+            <assert test="./@corresp = ancestor::tei:rdg/tokenize(@ana, '\s+')">Value not present in the rdg container</assert>
         </rule>
         <rule context="tei:div[@type = 'poem']">
             <assert test="@corresp">This poem has no reference</assert>
@@ -67,7 +72,7 @@
         </rule>
         <rule context="tei:del">
             <let name="values" 
-                value="('overstrike, underdot, scrape, overwrite, multiple-overstrike')"/>
+                value="('overstrike', 'underdot', 'scrape', 'overwrite', 'multiple-overstrike')"/>
             <let name="renditions"
                 value="
                     for $i in tokenize(@rend, '\s+')
@@ -85,13 +90,13 @@
             <assert
                 test="
                     if (tei:orig/tei:ex) then
-                        tei:reg/tei:ex
+                        tei:reg//tei:ex
                     else
                         true()"
                 >Check for consistency</assert>
             <assert
                 test="
-                    if (tei:reg/tei:ex) then
+                    if (tei:reg//tei:ex) then
                         tei:orig/tei:ex
                     else
                         true()"
@@ -99,7 +104,7 @@
             <assert
                 test="
                     if (tei:orig/tei:hi) then
-                        tei:reg/tei:hi
+                        tei:reg//tei:hi
                     else
                         true()"
                 >Check for consistency</assert>
