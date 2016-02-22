@@ -558,8 +558,8 @@
                             <f name="function" select="causal"/>
                         </fs>
                         <fs n="secondary" feats="#lex"/>
-                        <string xml:lang="en">Use of 'ca' as a complementizern</string>
-                        <string xml:lang="pt">Uso de 'ca' completivo</string>
+                        <string xml:lang="en">Use of 'que' as a causal conjuction</string>
+                        <string xml:lang="pt">Uso de 'que' causal</string>
                     </f>
                 </fs>
                 <fs xml:id="ar">
@@ -602,6 +602,20 @@
                         </fs>
                         <string xml:lang="en">Alternation 'mas/mais'</string>
                         <string xml:lang="pt">Alternância 'mas/mais'</string>
+                    </f>
+                </fs>
+                <fs xml:id="inda">
+                    <f name="type">
+                        <fs feats="#adv">
+                            <f name="lexeme">
+                                <vAlt>
+                                    <string>inda</string>
+                                    <string>ainda</string>
+                                </vAlt>
+                            </f>
+                        </fs>
+                        <string xml:lang="en">Alternation 'inda/ainda'</string>
+                        <string xml:lang="pt">Alternância 'inda/ainda'</string>
                     </f>
                 </fs>
             </fvLib>
@@ -752,6 +766,7 @@
                 <f name="c-pal" xml:id="c-pal" n="c como consoante palatal"/>
                 <f name="ll" xml:id="ll" n="ll como consoante palatal em BV"/>
                 <f name="l-pal" xml:id="l-pal" n="l como consoante palatal"/>
+                <f name="ll-simp" xml:id="ll-simp" n="ll como consoante nom palatal"/>
                 <f name="ss-inic" xml:id="ss-inic" n="duplo s inicial/pos-consonántico"/>
                 <f name="sc" xml:id="sc" n="grupo culto sc"/>
                 <f name="gu" xml:id="gu" n="dígrafo antes de a/o/u ou final de palavra"/>
@@ -759,6 +774,7 @@
                 <f name="cc" xml:id="cc" n="duplicación c"/>
                 <f name="et" xml:id="et" n="conjunção grafia arcaica"/>
                 <f name="v" xml:id="v" n="uso de v minúscula"/>
+                <f name="graph-art" xml:id="graph-art" n="materialização gráfica dum fenómeno de fonética sintática"/>
             </fLib>
             
         </body>
