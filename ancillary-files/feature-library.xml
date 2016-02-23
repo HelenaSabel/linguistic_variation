@@ -182,13 +182,13 @@
                         <string xml:lang="pt">Paragoge</string>
                     </f>
                 </fs>
-                <fs xml:id="crasis">
+                <fs xml:id="non-crasis">
                     <f name="type">
                         <fs feats="#vowel">
-                            <f name="process" select="reduction"/>
+                            <f name="process" select="addition"/>
                         </fs>
-                        <string xml:lang="en">Crasis to avoid a hiatus</string>
-                        <string xml:lang="pt">Resolução de hiato por crase vocálica</string>
+                        <string xml:lang="en">Preservation of hiatus</string>
+                        <string xml:lang="pt">Conservação dum hiato</string>
                     </f>
                 </fs>
                 <fs xml:id="apheresis">
@@ -305,6 +305,21 @@
 
                 <!--Morphological change: verbs-->
 
+                
+                <fs xml:id="pal-stem">
+                    <f name="type">
+                    <!--Incomplete-->
+                        <string xml:lang="en">Palatalized past stem in irregular verbs</string>
+                        <string xml:lang="pt">Palatalização tema perfeito pretéritos fortes</string>
+                    </f>
+                </fs>
+                <fs xml:id="vow-stem">
+                    <f name="type">
+                        <!--Incomplete-->
+                        <string xml:lang="en">Analog vowel past stem</string>
+                        <string xml:lang="pt">Vogal analógica no tema de perfeito</string>
+                    </f>
+                </fs>
                 <fs xml:id="foi">
                     <f name="type">
                         <fs feats="#past">
@@ -473,6 +488,14 @@
 
                 <!--Other phenomena -->
 
+                
+                <fs xml:id="cognate">
+                    <f name="type">
+                        <fs feats="#doublet"/>
+                        <string xml:lang="en">Doublet</string>
+                        <string xml:lang="pt">Cognado</string>
+                    </f>
+                </fs>
                 <fs xml:id="cast-transfer">
                     <f name="type">
                         <fs feats="#transfer">
@@ -756,7 +779,7 @@
                 <f name="çe" xml:id="çe" n="ç ante de e/i"/>
                 <f name="m-end" xml:id="m-end" n="m final"/>
                 <f name="h-et" xml:id="h-et" n="h etimologico"/>
-                <f name="h-monos" xml:id="h-monos" n="h com monosilábicos e nom minim adjacente"/>
+                <f name="h-monos" xml:id="h-monos" n="h com monosilábicos e minim adjacente"/>
                 <f name="abb" xml:id="abb" n="abreviatura"/>
                 <f name="syn" xml:id="syn" n="sinalefa"/>
                 <f name="nh" xml:id="nh" n="nh nasalização vocálica"/>
@@ -775,6 +798,7 @@
                 <f name="et" xml:id="et" n="conjunção grafia arcaica"/>
                 <f name="v" xml:id="v" n="uso de v minúscula"/>
                 <f name="graph-art" xml:id="graph-art" n="materialização gráfica dum fenómeno de fonética sintática"/>
+                <f name="capital" xml:id="capital" n="diferença na distribuiçom maiúscula/minúscula"/>
             </fLib>
             
         </body>
