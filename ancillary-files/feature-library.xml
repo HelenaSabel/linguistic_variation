@@ -191,6 +191,15 @@
                         <string xml:lang="pt">Conservação dum hiato</string>
                     </f>
                 </fs>
+                <fs xml:id="crasis">
+                    <f name="type">
+                        <fs feats="#vowel">
+                            <f name="process" select="reduction"/>
+                        </fs>
+                        <string xml:lang="en">Crasis to avoid a hiatus</string>
+                        <string xml:lang="pt">Crase vocálica para evitar hiato</string>
+                    </f>
+                </fs>
                 <fs xml:id="apheresis">
                     <f name="type">
                         <fs feats="#vowel">
