@@ -11,7 +11,7 @@
     <pattern>
         <rule context="tei:l/tei:app">
             <let name="anas"
-                value="tokenize(replace(replace(replace(string-join(.//@ana, ' '), '\s?#rev\s?', ''), '\s?#equip\s?', ''), '\s?#error\s?', ''), '\s+')"/>
+                value="tokenize(replace(replace(replace(replace(string-join(.//@ana, ' '), '\s?#rev\s?', ''), '\s?#equip\s?', ''), '\s?#error\s?', ''), '\s?#apocope\s?', ''), '\s+')"/>
             <assert
                 test="
                     if (not(descendant::tei:choice) and count($anas) gt 1) then
@@ -29,7 +29,7 @@
             <assert
                 test="
                     if (descendant::tei:choice and count($anas) gt 1) then
-                        count($anas) eq count(descendant::tei:seg[ancestor::tei:choice]) div 2 + count(descendant::tei:seg[not(ancestor::tei:choice)]) + count(descendant::tei:gap)
+                        count($anas) eq count(descendant::tei:seg[ancestor::tei:choice]) div 2 + count(descendant::tei:seg[parent::tei:rdg]) + count(descendant::tei:gap)
                     else
                         true()"
                 >Need to segmentate</assert>
