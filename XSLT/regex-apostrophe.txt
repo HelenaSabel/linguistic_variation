@@ -1,0 +1,45 @@
+Replace:
+<rdg(.*?)#syn(.*?)(\w)</rdg>\s+<rdg(.*?)’</rdg>
+With:
+<rdg\1#syn\2\3</rdg>\n<rdg\4<supplied>\3</supplied></rdg>
+
+
+Replace:
+<rdg(.*?)’</rdg>\s+<rdg(.*?)#syn(.*?)(\w)</rdg>
+With:
+<rdg\1<supplied>\4</supplied></rdg>\n<rdg\2>#syn\3\4</rdg>
+
+
+Replace:
+<rdg(.*?)’</rdg>\s+<rdg(.*?)#syn(.*?)<seg corresp="#syn">(\w)</seg>(.*?)</rdg>
+With:
+<rdg\1<supplied>\4</supplied></rdg>\n<rdg\2#syn\3<seg corresp="#syn">\4</seg>\5</rdg>
+
+
+Replace:
+<rdg(.*?)#syn(.*?)<seg corresp="#syn">(\w)</seg></rdg>\s+<rdg(.*?)’</rdg>
+With:
+<rdg\1#syn\2<seg corresp="#syn">\3</seg></rdg>\n<rdg\4<supplied>\3</supplied></rdg>
+
+
+Replace:
+>(d|m)’(\s|<)
+With:
+>\1<supplied>e</supplied>\2
+
+ 
+
+XPath pattern:  //rdg//text()[not(parent::am)]
+
+Replace: 
+(\s|\-)(d|m)’(\s|<)
+With: 
+ (d|m)<supplied>e</supplied>\2
+
+
+Replace:
+mort’
+With:
+mort<supplied>e</supplied>
+
+
