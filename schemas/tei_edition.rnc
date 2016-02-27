@@ -32,7 +32,7 @@ macro.specialPara =
    | model.inter
    | model.divPart
    | model.global)*
-macro.xtext = (text | model.gLike)*
+macro.xtext = (text | model.gLike | supplied)*
 data.certainty = "high" | "medium" | "low" | "unknown"
 data.probability = xsd:double { minInclusive = "0" maxInclusive = "1" }
 data.numeric =
