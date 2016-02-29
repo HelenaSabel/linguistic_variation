@@ -144,5 +144,11 @@
                         true()"
                 >Check for consistency</assert>
         </rule>
+        <rule context="tei:ex">
+            <assert test="preceding-sibling::node()[1][name() eq 'am']">All abreviations need to specify their abbreviation mark.</assert>
+        </rule>
+        <rule context="tei:am">
+            <assert test="./text()">Empty am</assert>
+        </rule>
     </pattern>
 </schema>

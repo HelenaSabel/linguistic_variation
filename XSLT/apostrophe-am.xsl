@@ -5,76 +5,68 @@
     version="2.0">
     <xsl:output method="xml" indent="yes"/>
     <!--    Command line from linguistic_variation folder:
-    java -jar ../../SaxonHE9-6-0-7J/saxon9he.jar -s:edition XSLT/am-elements.xsl -o:edition2
+    java -jar ../../../SaxonHE9-6-0-7J/saxon9he.jar -s:edition XSLT/am-elements.xsl -o:edition2
     -->
     <xsl:template match="@* | node()">
         <xsl:copy>
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="ex[not(preceding-sibling::*[name() eq 'am'])]">
+    <xsl:template match="ex[not(preceding-sibling::am)]">
         <xsl:element name="am">
             <xsl:if
-                test="matches(., '^ue$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
+                test="matches(., '^ue$') and preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#772;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^e$') and ./preceding-sibling::text()[1][matches(., 'm$')]">
+                test="matches(., '^ue$') and parent::seg/preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#772;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^ue$') and ./parent::seg/preceding-sibling::text()[1][matches(., 'q$')]">
+                test="matches(., '^u$') and preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#772;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^e$') and ./parent::seg/preceding-sibling::text()[1][matches(., 'm$')]">
+                test="matches(., '^u$') and parent::seg/preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#772;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^u$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
-                <xsl:text>&#772;</xsl:text>
-            </xsl:if>
-            <xsl:if
-                test="matches(., '^u$') and ./parent::seg/preceding-sibling::text()[1][matches(., 'q$')]">
-                <xsl:text>&#772;</xsl:text>
-            </xsl:if>
-            <xsl:if
-                test="matches(., '^eu$') and ./preceding-sibling::text()[1][matches(., 'd$')]">
+                test="matches(., '^eu$') and preceding-sibling::text()[1][matches(., 'd$')]">
                 <xsl:text>&#8217;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^eu$') and ./parent::seg/preceding-sibling::text()[1][matches(., 'd$')]">
+                test="matches(., '^eu$') and parent::seg/preceding-sibling::text()[1][matches(., 'd$')]">
                 <xsl:text>&#8217;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^ro$') and ./preceding-sibling::text()[1][matches(., 'p$')]">
+                test="matches(., '^ro$') and preceding-sibling::text()[1][matches(., 'p$')]">
                 <xsl:text>&#807;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^ro$') and ./parent::seg/preceding-sibling::text()[1][matches(., 'p$')]">
+                test="matches(., '^ro$') and parent::seg/preceding-sibling::text()[1][matches(., 'p$')]">
                 <xsl:text>&#807;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^er$') and ./parent::seg/preceding-sibling::text()[1][matches(., 'p$')]">
+                test="matches(., '^er$') and parent::seg/preceding-sibling::text()[1][matches(., 'p$')]">
                 <xsl:text>&#818;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^er$') and ./preceding-sibling::text()[1][matches(., 'p$')]">
+                test="matches(., '^er$') and preceding-sibling::text()[1][matches(., 'p$')]">
                 <xsl:text>&#818;</xsl:text>
             </xsl:if>
             <xsl:if test="matches(., '^ri$')">
-                <xsl:text>&#x365;</xsl:text>
+                <xsl:text>&#8305;</xsl:text>
             </xsl:if>
             <xsl:if test="matches(., '^ui$')">
-                <xsl:text>&#x365;</xsl:text>
+                <xsl:text>&#8305;</xsl:text>
             </xsl:if>
             <xsl:if test="matches(., '^&#771;$')">
                 <xsl:text>&#772;</xsl:text>
             </xsl:if>
             <xsl:if
                 test="
-                current()[not(parent::seg)]/matches(., '^e$') and current()[count(preceding-sibling::node()) eq 0]
-                and current()[count(following-sibling::node()) eq 0]">
+                    current()[not(parent::seg)]/matches(., '^e$') and current()[count(preceding-sibling::node()) eq 0]
+                    and current()[count(following-sibling::node()) eq 0]">
                 <xsl:text>&#8266;</xsl:text>
             </xsl:if>
             <xsl:if test="matches(., '^ser$')">
@@ -85,22 +77,16 @@
             </xsl:if>
             <xsl:if test="matches(., '^ra$')">
                 <xsl:text>&#x1DD3;</xsl:text>
-            </xsl:if>            
-            <xsl:if test="matches(., '^ar$')">
-                <xsl:text>&#x1DD3;</xsl:text>
             </xsl:if>
-            <xsl:if test="matches(., '^re$')">
-                <xsl:text>&#x1DD3;</xsl:text>
-            </xsl:if>  
             <xsl:if
-                test="matches(., '^ro$') and ./not(matches(preceding-sibling::text()[1], 'p$')) and 
-                ./not(matches(parent::seg/preceding-sibling::text()[1], 'p$'))">
+                test="matches(., '^ro$') and not(matches(preceding-sibling::text()[1], 'p$')) and 
+                not(matches(parent::seg/preceding-sibling::text()[1], 'p$'))">
                 <xsl:text>&#8338;</xsl:text>
             </xsl:if>            
             <xsl:if
-                test="matches(., '^er$') and ./not(matches(preceding-sibling::text()[1], 'p$')) and 
-                ./not(matches(parent::seg/preceding-sibling::text()[1], 'p$'))">
-                <xsl:text>&#x1de3;</xsl:text>
+                test="matches(., '^er$') and not(matches(preceding-sibling::text()[1], 'p$')) and 
+                not(matches(parent::seg/preceding-sibling::text()[1], 'p$'))">
+                <xsl:text>’</xsl:text>
             </xsl:if>
             <xsl:if
                 test="current()[ancestor::rdg[contains(@wit, '#A')]]/matches(., '^or$')
@@ -108,13 +94,15 @@
                 or current()[ancestor::rdg[contains(@wit, '#N')]]/matches(., '^or$')">
                 <xsl:attribute name="rendition">superscript</xsl:attribute>
                 <xsl:text>&#42843;</xsl:text>
-            </xsl:if>
+            </xsl:if> 
+            <!--
             <xsl:if
-                test="current()[ancestor::rdg[contains(@wit, '#B')]]/matches(., '^or$')
-                or current()[ancestor::rdg[contains(@wit, '#V')]]/matches(., '^or$')">
-                <xsl:text>&#8337;</xsl:text>
-            </xsl:if>
-            
+                test="current()[ancestor::rdg[contains(@wit, '#A')]]/matches(., '^or$') and not(matches(preceding-sibling::text()[1], 'p$')) and 
+                not(matches(parent::seg/preceding-sibling::text()[1], 'p$'))">
+                <xsl:attribute name="rendition">superscript</xsl:attribute>
+                <xsl:text>&#42843;</xsl:text>
+            </xsl:if> 
+            -->
             <xsl:if test="matches(., '^us$')">
                 <xsl:text>&#42863;</xsl:text>
             </xsl:if>
@@ -128,21 +116,25 @@
                 <xsl:text>&#42862;&#772;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^uan$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
+                test="matches(., '^uan$') and preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#x1DD3;&#x0338;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^uan$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
+                test="matches(., '^uan$') and preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#x1DD3;&#x0338;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^uen$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
+                test="matches(., '^uen$') and preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#x1DD3;&#x0321;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^uen$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
+                test="matches(., '^uen$') and preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#x1DD3;&#x0321;</xsl:text>
             </xsl:if>
+            <xsl:if test="matches(., '^ua$')">
+                <xsl:text>&#x1DD3;</xsl:text>
+            </xsl:if>
+
             <xsl:if test="matches(., '^ua$')">
                 <xsl:text>&#x1DD3;</xsl:text>
             </xsl:if>
