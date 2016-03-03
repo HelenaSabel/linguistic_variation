@@ -63,6 +63,7 @@
                         true()"
                 >The value of the attribute is not listed</assert>
             <assert test="@wit">It is mandatory to specify the witness</assert>
+            <report test="tei:app">Wrong nesting of elements</report>
         </rule>
         <rule context="tei:seg">
             <assert test="@corresp">Every seg must have a @corresp attribute with its FS

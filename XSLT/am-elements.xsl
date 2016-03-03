@@ -100,7 +100,7 @@
             <xsl:if
                 test="matches(., '^er$') and ./not(matches(preceding-sibling::text()[1], 'p$')) and 
                 ./not(matches(parent::seg/preceding-sibling::text()[1], 'p$'))">
-                <xsl:text>&#x1de3;</xsl:text>
+                <xsl:text>&#x035B;</xsl:text>
             </xsl:if>
             <xsl:if
                 test="current()[ancestor::rdg[contains(@wit, '#A')]]/matches(., '^or$')
@@ -137,11 +137,11 @@
             </xsl:if>
             <xsl:if
                 test="matches(., '^uen$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
-                <xsl:text>&#x1DD3;&#x0321;</xsl:text>
+                <xsl:text>&#771;&#x0321;</xsl:text>
             </xsl:if>
             <xsl:if
                 test="matches(., '^uen$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
-                <xsl:text>&#x1DD3;&#x0321;</xsl:text>
+                <xsl:text>&#771;&#x0321;</xsl:text>
             </xsl:if>
             <xsl:if test="matches(., '^ua$')">
                 <xsl:text>&#x1DD3;</xsl:text>
