@@ -24,6 +24,9 @@ return
                 rel="stylesheet"
                 type="text/css"/>
             <script
+                src="javascript/deselect.js"
+                type="text/javascript">/**/</script>
+            <script
                 src="javascript/menu.js"
                 type="text/javascript">/**/</script>
             <script
@@ -51,16 +54,17 @@ return
                                 <legend>{$author/tei:persName/string()}</legend>
                                 <div>
                                     <input
-                                        type="checkbox"
-                                        name="author"
-                                        value="{$author/@xml:id}"/>
+                                        type="radio"
+                                        name="{$author/@xml:id}"
+                                        value="{$author/@xml:id}"
+                                        class="all"/>
                                     <span
                                         class="pt">Todas</span>
                                     <span
                                         class="en">All</span>
                                     <input
-                                        type="checkbox"
-                                        name="author"
+                                        type="radio"
+                                        name="{$author/@xml:id}"
                                         value="show"
                                         class="show"/>
                                     <span
@@ -87,5 +91,6 @@ return
                         value="Pesquisar"/>
                 </form>
             </main>
+            <!--#include virtual="ssi/footer.html"-->
         </body>
     </html>

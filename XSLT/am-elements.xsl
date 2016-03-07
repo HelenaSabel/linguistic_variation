@@ -132,7 +132,7 @@
                 <xsl:text>&#x1DD3;&#x0338;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^uan$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
+                test="matches(., '^uan$') and ./parent::seg/preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#x1DD3;&#x0338;</xsl:text>
             </xsl:if>
             <xsl:if
@@ -140,7 +140,7 @@
                 <xsl:text>&#771;&#x0321;</xsl:text>
             </xsl:if>
             <xsl:if
-                test="matches(., '^uen$') and ./preceding-sibling::text()[1][matches(., 'q$')]">
+                test="matches(., '^uen$') and ./parent::seg/preceding-sibling::text()[1][matches(., 'q$')]">
                 <xsl:text>&#771;&#x0321;</xsl:text>
             </xsl:if>
             <xsl:if test="matches(., '^ua$')">
