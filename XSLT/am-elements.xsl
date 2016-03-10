@@ -95,7 +95,7 @@
             <xsl:if
                 test="matches(., '^ro$') and ./not(matches(preceding-sibling::text()[1], 'p$')) and 
                 ./not(matches(parent::seg/preceding-sibling::text()[1], 'p$'))">
-                <xsl:text>&#8338;</xsl:text>
+                <xsl:text>ᵒ</xsl:text>
             </xsl:if>            
             <xsl:if
                 test="matches(., '^er$') and ./not(matches(preceding-sibling::text()[1], 'p$')) and 
@@ -133,7 +133,7 @@
             </xsl:if>
             <xsl:if
                 test="matches(., '^uan$') and ./parent::seg/preceding-sibling::text()[1][matches(., 'q$')]">
-                <xsl:text>&#x1DD3;&#x0338;</xsl:text>
+                <xsl:text>&#x1DD3;&#x0321;</xsl:text>
             </xsl:if>
             <xsl:if
                 test="matches(., '^uen$') and ./preceding-sibling::text()[1][matches(., 'q$')]">

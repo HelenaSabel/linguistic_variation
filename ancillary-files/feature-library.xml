@@ -433,7 +433,7 @@
                 </fs>
                 <fs xml:id="dub-dat">
                     <f name="type">
-                        <fs copyOf="#dat"/>
+                        <fs copyOf="#dat" feats="#pr"/>
                         <string xml:lang="en">Dative contamination confronted with vocalic
                             crasis</string>
                         <string xml:lang="pt">Contaminação do dativo contrastada com uma crase
@@ -677,8 +677,8 @@
                 <fs xml:id="error">
                     <f name="type">
                         <fs feats="#gen-error"/>
-                        <string xml:lang="en">Scribal error</string>
-                        <string xml:lang="pt">Erro de cópia</string>
+                        <string xml:lang="en">Generic scribal error</string>
+                        <string xml:lang="pt">Erro de cópia genérico</string>
                     </f>
                 </fs>
                 <fs xml:id="ling-inter">
