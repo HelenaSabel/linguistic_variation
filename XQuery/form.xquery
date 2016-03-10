@@ -6,13 +6,11 @@ let $ana := distinct-values(for $values in $anas
 return
     tokenize($values, '\s+'))
 let $ling-features := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#linguistic']/tei:fs[concat('#', @xml:id) = $ana]
-let $phonetic := $ling-features[tei:f/tei:fs[not(@n)][some $i in tokenize(@feats, '\s+')
-    satisfies $i = ('#vowel', '#cons', '#nasal', '#sibil', '#diphthong', '#pal')]]
-let $morph := $ling-features[tei:f/tei:fs[not(@n)][some $i in tokenize(@feats, '\s+')
-    satisfies $i = ('#past', '#pr', '#det')]]
-let $other := $ling-features[tei:f/tei:fs[not(@n)][not(some $i in tokenize(@feats, '\s+')
-    satisfies $i = ('#past', '#pr', '#det', '#vowel', '#cons', '#nasal', '#sibil', '#diphthong', '#pal'))]]
+let $phonetic := $ling-features[tei:f/tei:fs[not(@n)][some $i in tokenize(@feats,'\s+') satisfies $i = ('#vowel', '#cons', '#nasal', '#sibil', '#diphthong', '#pal')]]
+let $morph := $ling-features[tei:f/tei:fs[not(@n)][some $i in tokenize(@feats,'\s+') satisfies $i = ('#past', '#pr', '#det')]]
+let $other := $ling-features[tei:f/tei:fs[not(@n)][not(some $i in tokenize(@feats,'\s+') satisfies $i = ('#past', '#pr', '#det', '#vowel', '#cons', '#nasal', '#sibil', '#diphthong', '#pal'))]]
 let $scribalError := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#scribal']/tei:fs[concat('#', @xml:id) = $ana]
+let $equipolent := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@n eq 'equipolent readings']/tei:fs[concat('#', @xml:id) = $ana]
 
 
 return
@@ -22,8 +20,7 @@ return
         method='GET'
         action='results.php'>
         <fieldset>
-            <legend><span
-                    class="pt">Fenómenos fonéticos</span></legend>
+            <legend>Fenómenos fonéticos</legend>
             
             {
                 for $id in $phonetic
@@ -33,12 +30,11 @@ return
                     (<input
                         type="checkbox"
                         name="phenomenon[]"
-                        value="{$id/@xml:id}"/>, $name, <br/>)
+                        value="{$id/@xml:id}"/>, transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ()), <br/>)
             }
         </fieldset>
         <fieldset>
-            <legend><span
-                    class="pt">Princiapais fenómenos morfológicos</span></legend>
+            <legend>Principais fenómenos morfológicos</legend>
             
             {
                 for $id in $morph
@@ -48,12 +44,11 @@ return
                     (<input
                         type="checkbox"
                         name="phenomenon[]"
-                        value="{$id/@xml:id}"/>, $name, <br/>)
+                        value="{$id/@xml:id}"/>, transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ()), <br/>)
             }
         </fieldset>
         <fieldset>
-            <legend><span
-                    class="pt">Outros fenómenos</span></legend>
+            <legend>Outros fenómenos</legend>
             
             {
                 for $id in $other
@@ -63,7 +58,7 @@ return
                     (<input
                         type="checkbox"
                         name="phenomenon[]"
-                        value="{$id/@xml:id}"/>, $name, <br/>)
+                        value="{$id/@xml:id}"/>, transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ()), <br/>)
             }
         </fieldset>
         <button
@@ -76,8 +71,7 @@ return
         method='GET'
         action='results.php'>
         <fieldset>
-            <legend><span
-                    class="en">Phonetic phenomena</span></legend>
+            <legend>Phonetic phenomena</legend>
             
             {
                 for $id in $phonetic
@@ -87,12 +81,11 @@ return
                     (<input
                         type="checkbox"
                         name="phenomenon[]"
-                        value="{$id/@xml:id}"/>, $name, <br/>)
+                        value="{$id/@xml:id}"/>, transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ()), <br/>)
             }
         </fieldset>
         <fieldset>
-            <legend><span
-                    class="en">Main morphological phenomena</span></legend>
+            <legend>Main morphological phenomena</legend>
             
             {
                 for $id in $morph
@@ -102,12 +95,11 @@ return
                     (<input
                         type="checkbox"
                         name="phenomenon[]"
-                        value="{$id/@xml:id}"/>, $name, <br/>)
+                        value="{$id/@xml:id}"/>, transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ()), <br/>)
             }
         </fieldset>
         <fieldset>
-            <legend><span
-                    class="en">Other phenomena</span></legend>
+            <legend>Other phenomena</legend>
             
             {
                 for $id in $other
@@ -117,7 +109,7 @@ return
                     (<input
                         type="checkbox"
                         name="phenomenon[]"
-                        value="{$id/@xml:id}"/>, $name, <br/>)
+                        value="{$id/@xml:id}"/>, transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ()), <br/>)
             }
         </fieldset>
         <button
@@ -125,11 +117,11 @@ return
             type="submit"><span
                 class="en">Search</span></button>
     </form>,
-    <h2><span
-            class="pt">Erros de cópia</span><span>Scribal errors</span></h2>,
+    <h2 id="error"><span
+            class="pt">Erros de cópia</span><span class="en">Scribal errors</span></h2>,
     <form
-        action='results.php'
-        method='GET'
+    action='results-sc.php'
+    method='GET'
         class="pt lingua">
         <fieldset>
             {
@@ -149,8 +141,8 @@ return
                 class="pt">Pesquisa</span></button>
     </form>,
     <form
-        method='GET'
-        action='results.php'
+    method='GET'
+    action='results-sc.php'
         class="en lingua">
         <fieldset>
             {
@@ -168,5 +160,49 @@ return
             class="submit"
             type="submit"><span
                 class="en">Search</span></button>
+    </form>,
+    <h2 id="other"><span class="pt">Outras variantes</span><span class="en">Other variants</span></h2>,
+     <form
+    action='results-eq.php'
+    method='GET'
+        class="pt lingua">
+        <fieldset>
+            {
+                for $equip in $equipolent
+                let $name := $equip//tei:string[@xml:lang eq 'pt']/text()
+                order by $name
+                return
+                    (<input
+                        type="checkbox"
+                        name="equip[]"
+                        value="{$equip/@xml:id}"/>, $name, <br/>)
+            }
+        </fieldset>
+        <button
+            class="submit"
+            type="submit"><span
+                class="pt">Pesquisa</span></button>
+    </form>,
+    <form
+    method='GET'
+    action='results-eq.php'
+        class="en lingua">
+        <fieldset>
+            {
+                for $equip in $equipolent
+                let $name := $equip//tei:string[@xml:lang eq 'en']/text()
+                order by $name
+                return
+                    (<input
+                        type="checkbox"
+                        name="equip[]"
+                        value="{$equip/@xml:id}"/>, $name, <br/>)
+            }
+        </fieldset>
+        <button
+            class="submit"
+            type="submit"><span
+                class="en">Search</span></button>
     </form>
+    
     )

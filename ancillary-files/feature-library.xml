@@ -281,8 +281,8 @@
                 <fs xml:id="dip">
                     <f name="type">
                         <fs feats="#diphthong"/>
-                        <string xml:lang="en">Variation concerning diphthongs: 'oi/ui'</string>
-                        <string xml:lang="pt">Vacilação na ditongação: 'oi/ui'</string>
+                        <string xml:lang="en">Variation concerning diphthongs: ’oi~ui’</string>
+                        <string xml:lang="pt">Vacilação na ditongação: ’oi~ui’</string>
                     </f>
                 </fs>
                 <fs xml:id="conf-sib">
@@ -348,9 +348,9 @@
                             </f>
                         </fs>
                         <fs feats="#diphthong" n="secondary"/>
-                        <string xml:lang="en">P1 of perfect indicative of 'seer/ir' as
-                            'foi'</string>
-                        <string xml:lang="pt">P1 do perfeito de 'seer/ir' em 'foi'</string>
+                        <string xml:lang="en">P1 of perfect indicative of ’seer~ir’ as
+                            ’foi’</string>
+                        <string xml:lang="pt">P1 do perfeito de ’seer~ir’ em ’foi’</string>
                     </f>
                 </fs>
                 <fs xml:id="fui">
@@ -370,9 +370,9 @@
                             </f>
                         </fs>
                         <fs feats="#diphthong" n="secondary"/>
-                        <string xml:lang="en">P3 of perfect indicative of 'seer/ir' as
-                            'fui'</string>
-                        <string xml:lang="pt">P3 do perfeito de 'seer/ir' em 'fui'</string>
+                        <string xml:lang="en">P3 of perfect indicative of ’seer~ir’ as
+                            ’fui’</string>
+                        <string xml:lang="pt">P3 do perfeito de ’seer~ir’ em ’fui’</string>
                     </f>
                 </fs>
                 <fs xml:id="p1i">
@@ -387,8 +387,8 @@
                         </fs>
                         <fs n="secondary" feats="#archaism"/>
                         <string xml:lang="en">Perfect indicative personal ending of P1 as
-                            "-i"</string>
-                        <string xml:lang="pt">P1 do perfeito em '-i'</string>
+                            ’-i’</string>
+                        <string xml:lang="pt">P1 do perfeito em ’-i’</string>
                     </f>
                 </fs>
                 <fs xml:id="oer">
@@ -397,8 +397,8 @@
                             <f name="process" select="stem-change"/>
                             <f name="lexeme" select="haver"/>
                         </fs>
-                        <string xml:lang="en">Past stem of 'haver' as 'o-'</string>
-                        <string xml:lang="pt">Tema de perfeito de 'haver' em 'o-'</string>
+                        <string xml:lang="en">Past stem of ’haver’ as ’o-’</string>
+                        <string xml:lang="pt">Tema de perfeito de ’haver’ em ’o-’</string>
                     </f>
                 </fs>
                 <fs xml:id="anal-o">
@@ -411,8 +411,8 @@
                                 <symbol value="sg"/>
                             </f>
                         </fs>
-                        <string xml:lang="en">Analog 'o' in the P3 perfect indicative</string>
-                        <string xml:lang="pt">SNP '-o' analógico na P3 dos pretéritos
+                        <string xml:lang="en">Analog ’o’ in the P3 perfect indicative</string>
+                        <string xml:lang="pt">SNP ’-o’ analógico na P3 dos pretéritos
                             fortes</string>
                     </f>
                 </fs>
@@ -447,8 +447,8 @@
                                 <symbol value="3"/></f>
                         </fs>
                         <fs feats="#pal" n="secondary"/>
-                        <string xml:lang="en">Palatalized 'se'</string>
-                        <string xml:lang="pt">Palatalização do pronome 'se'</string>
+                        <string xml:lang="en">Palatalized ’se’</string>
+                        <string xml:lang="pt">Palatalização do pronome ’se’</string>
                     </f>
                 </fs>
                 <fs xml:id="li">
@@ -463,8 +463,8 @@
                                 <symbol value="dative"/>
                             </f>
                         </fs>
-                        <string xml:lang="en">Dative pronoun 'li'</string>
-                        <string xml:lang="pt">Pronome dativo 'li'</string>
+                        <string xml:lang="en">Dative pronoun ’li’</string>
+                        <string xml:lang="pt">Pronome dativo ’li’</string>
                     </f>
                 </fs>
                 <fs xml:id="weak-pr">
@@ -521,15 +521,15 @@
                 <fs xml:id="par">
                     <f name="type">
                         <fs feats="#prep #lex"/>
-                        <string xml:lang="en">Use of 'par' as preposition</string>
-                        <string xml:lang="pt">Uso da preposição 'par'</string>
+                        <string xml:lang="en">Use of ’par’ as preposition</string>
+                        <string xml:lang="pt">Uso da preposição ’par’</string>
                     </f>
                 </fs>
                 <fs xml:id="per">
                     <f name="type">
                         <fs feats="#prep #lex"/>
-                        <string xml:lang="en">Alternation 'per/por'</string>
-                        <string xml:lang="pt">Alternância 'per/por'</string>
+                        <string xml:lang="en">Alternation ’per~por’</string>
+                        <string xml:lang="pt">Alternância ’per~por’</string>
                     </f>
                 </fs>
                 <fs xml:id="ora">
@@ -537,10 +537,10 @@
                         <fs feats="#adv #lex">
                             <f name="category" select="time"/>
                         </fs>
-                        <string xml:lang="en">Use of 'ora' as a temporal adverb (expected
-                            'agora')</string>
-                        <string xml:lang="pt">Uso do advérbio temporal 'ora' (sendo esperável
-                            'agora')</string>
+                        <string xml:lang="en">Use of ’ora’ as a temporal adverb (expected
+                            ’agora’)</string>
+                        <string xml:lang="pt">Uso do advérbio temporal ’ora’ (sendo esperável
+                            ’agora’)</string>
                     </f>
                 </fs>
                 <fs xml:id="agora">
@@ -548,8 +548,8 @@
                         <fs feats="#adv #lex">
                             <f name="category" select="time"/>
                         </fs>
-                        <string xml:lang="en">Use of 'agora' (expected 'ora')</string>
-                        <string xml:lang="pt">Uso de 'agora' (sendo esperável 'ora')</string>
+                        <string xml:lang="en">Use of ’agora’ (expected ’ora’)</string>
+                        <string xml:lang="pt">Uso de ’agora’ (sendo esperável ’ora’)</string>
                     </f>
                 </fs>
                 <fs xml:id="comp-ca">
@@ -559,8 +559,8 @@
                             <f name="function" select="comparative"/>
                         </fs>
                         <fs n="secondary" feats="#lex"/>
-                        <string xml:lang="en">Use of 'ca' as a comparative conjunction</string>
-                        <string xml:lang="pt">Uso de 'ca' comparativo</string>
+                        <string xml:lang="en">Use of ’ca’ as a comparative conjunction</string>
+                        <string xml:lang="pt">Uso de ’ca’ comparativo</string>
                     </f>
                 </fs>
                 <fs xml:id="compl-ca">
@@ -570,8 +570,8 @@
                             <f name="function" select="complement"/>
                         </fs>
                         <fs n="secondary" feats="#lex"/>
-                        <string xml:lang="en">Use of 'ca' as a complementizern</string>
-                        <string xml:lang="pt">Uso de 'ca' completivo</string>
+                        <string xml:lang="en">Use of ’ca’ as a complementizern</string>
+                        <string xml:lang="pt">Uso de ’ca’ completivo</string>
                     </f>
                 </fs>
                 <fs xml:id="comp-que">
@@ -581,8 +581,8 @@
                             <f name="function" select="comparative"/>
                         </fs>
                         <fs n="secondary" feats="#lex"/>
-                        <string xml:lang="en">Use of 'que' as a comparative conjunction</string>
-                        <string xml:lang="pt">Uso de 'que' comparativo</string>
+                        <string xml:lang="en">Use of ’que’ as a comparative conjunction</string>
+                        <string xml:lang="pt">Uso de ’que’ comparativo</string>
                     </f>
                 </fs>
                 <fs xml:id="causal-que">
@@ -592,8 +592,8 @@
                             <f name="function" select="causal"/>
                         </fs>
                         <fs n="secondary" feats="#lex"/>
-                        <string xml:lang="en">Use of 'que' as a causal conjuction</string>
-                        <string xml:lang="pt">Uso de 'que' causal</string>
+                        <string xml:lang="en">Use of ’que’ as a causal conjuction</string>
+                        <string xml:lang="pt">Uso de ’que’ causal</string>
                     </f>
                 </fs>
                 <fs xml:id="ar">
@@ -606,8 +606,8 @@
                                 </vAlt>
                             </f>
                         </fs>
-                        <string xml:lang="en">Alternation 'ar/er'</string>
-                        <string xml:lang="pt">Alternância 'ar/er'</string>
+                        <string xml:lang="en">Alternation ’ar~er’</string>
+                        <string xml:lang="pt">Alternância ’ar~er’</string>
                     </f>
                 </fs>
                 <fs xml:id="depois">
@@ -620,8 +620,8 @@
                                 </vAlt>
                             </f>
                         </fs>
-                        <string xml:lang="en">Alternation 'depois/despois'</string>
-                        <string xml:lang="pt">Alternância 'depois/despois'</string>
+                        <string xml:lang="en">Alternation ’depois~despois’</string>
+                        <string xml:lang="pt">Alternância ’depois~despois’</string>
                     </f>
                 </fs>
                 <fs xml:id="mas">
@@ -634,8 +634,8 @@
                                 </vAlt>
                             </f>
                         </fs>
-                        <string xml:lang="en">Alternation 'mas/mais'</string>
-                        <string xml:lang="pt">Alternância 'mas/mais'</string>
+                        <string xml:lang="en">Alternation ’mas~mais’</string>
+                        <string xml:lang="pt">Alternância ’mas~mais’</string>
                     </f>
                 </fs>
                 <fs xml:id="inda">
@@ -648,8 +648,8 @@
                                 </vAlt>
                             </f>
                         </fs>
-                        <string xml:lang="en">Alternation 'inda/ainda'</string>
-                        <string xml:lang="pt">Alternância 'inda/ainda'</string>
+                        <string xml:lang="en">Alternation ’inda~ainda’</string>
+                        <string xml:lang="pt">Alternância ’inda~ainda’</string>
                     </f>
                 </fs>
             </fvLib>

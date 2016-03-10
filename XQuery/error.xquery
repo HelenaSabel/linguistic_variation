@@ -13,27 +13,22 @@ declare function local:locus($from as node(), $to as node())
         else
             concat($from, '-', $to))
 };
-declare variable $search := request:get-parameter("phenomenon", ());
+declare variable $search := request:get-parameter("error", ());
 let $values := tokenize($search, ',')
 let $songs := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem']
 let $readings := $songs//tei:rdg
-let $ling-features := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#linguistic']/tei:fs
+let $scribalError := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#scribal']/tei:fs[concat('#', @xml:id)]
 let $poets := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person
 return
     <div
         class="multiple">
-        <section
-            class="phenom">
+        <section class="phenom">
             {
                 for $result in $values
                 return
-                    (<h2><span
-                            class="pt">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span><span
-                            class="en">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span></h2>,
+                    (<h2><span class="pt">{$scribalError[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text()}</span><span class="en">{$scribalError[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text()}</span></h2>,
                     <h3
-                        id="graphs{$result}"><span
-                            class="pt">Período</span><span
-                            class="en">Period</span></h3>,
+                        id="graphs{$result}"><span class="pt">Período</span><span class="en">Period</span></h3>,
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="950"
@@ -73,9 +68,7 @@ return
                                     >Per. {$period}</text>
                                 </g>
                         }</svg>,
-                    <h3><span
-                            class="pt">Testemunho</span><span
-                            class="en">Witness</span></h3>,
+                    <h3><span class="pt">Testemunho</span><span class="en">Witness</span></h3>,
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="950"
@@ -148,38 +141,14 @@ return
                         <thead>
                             <tr
                                 class="head">
-                                <th><span
-                                        class="pt">Fenómeno</span><span
-                                        class="en">Phenomenon</span>
-                                </th>
-                                <th><span
-                                        class="pt">Testemunho</span><span
-                                        class="en">Witness</span>
-                                </th>
-                                <th><span
-                                        class="pt">Localização</span><span
-                                        class="en">Location</span>
-                                </th>
-                                <th><span
-                                        class="pt">Copista</span><span
-                                        class="en">Copyist</span>
-                                </th>
-                                <th><span
-                                        class="pt">Autor</span><span
-                                        class="en">Author</span>
-                                </th>
-                                <th><span
-                                        class="pt">Período</span><span
-                                        class="en">Period</span>
-                                </th>
-                                <th><span
-                                        class="pt">Cantiga</span><span
-                                        class="en">Song</span>
-                                </th>
-                                <th><span
-                                        class="pt">V.</span><span
-                                        class="en">L.</span>
-                                </th>
+                                <th><span class="pt">Fenómeno</span><span class="en">Phenomenon</span> </th>
+                                <th><span class="pt">Testemunho</span><span class="en">Witness</span> </th>
+                                <th><span class="pt">Localização</span><span class="en">Location</span> </th>
+                                <th><span class="pt">Copista</span><span class="en">Copyist</span> </th>
+                                <th><span class="pt">Autor</span><span class="en">Author</span> </th>
+                                <th><span class="pt">Período</span><span class="en">Period</span> </th>
+                                <th><span class="pt">Cantiga</span><span class="en">Song</span> </th>
+                                <th><span class="pt">V.</span><span class="en">L.</span>  </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -225,7 +194,7 @@ return
                     {
                         for $result in $values
                         return
-                            <li>{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}
+                            <li>{$scribalError[./@xml:id = $result]//tei:string[@xml:lang eq 'pt']}
                                 <ul>
                                     <li><a
                                             href="#graphs{$result}">Gráficas</a></li>
@@ -243,7 +212,7 @@ return
                     {
                         for $result in $values
                         return
-                            <li>{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}
+                            <li>{$scribalError[./@xml:id = $result]//tei:string[@xml:lang eq 'en']}
                                 <ul>
                                     <li><a
                                             href="#graphs{$result}">Graphs</a></li>

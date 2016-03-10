@@ -13,11 +13,11 @@ declare function local:locus($from as node(), $to as node())
         else
             concat($from, '-', $to))
 };
-declare variable $search := request:get-parameter("phenomenon", ());
+declare variable $search := request:get-parameter("equip", ());
 let $values := tokenize($search, ',')
 let $songs := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem']
 let $readings := $songs//tei:rdg
-let $ling-features := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#linguistic']/tei:fs
+let $equipolent := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@n eq 'equipolent readings']/tei:fs[concat('#', @xml:id)]
 let $poets := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person
 return
     <div
@@ -28,8 +28,8 @@ return
                 for $result in $values
                 return
                     (<h2><span
-                            class="pt">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span><span
-                            class="en">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span></h2>,
+                            class="pt">{$equipolent[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text()}</span><span
+                            class="en">{$equipolent[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text()}</span></h2>,
                     <h3
                         id="graphs{$result}"><span
                             class="pt">Período</span><span
@@ -185,14 +185,18 @@ return
                         <tbody>
                             {
                                 for $fen in $readings[matches(@ana, concat('#', $result))]
-                                let $rdg:=
+                                let $rdg :=
                                 <parameters>
-                                    <param name="rdg" value="{$fen}"/>
+                                    <param
+                                        name="rdg"
+                                        value="{$fen}"/>
                                 </parameters>
                                 let $author := $poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]
                                 return
                                     <tr>
-                                        <td><a href="http://gl-pt.obdurodon.org/edition.php?&amp;song[]={$fen/ancestor::tei:div[1]/substring(@corresp, 2)}" target="_blank">{transform:transform($fen/.., 'xmldb:exist:///db/VTLGP/xslt/ex.xsl', ($rdg))}</a></td>
+                                        <td><a
+                                                href="http://gl-pt.obdurodon.org/edition.php?&amp;song[]={$fen/ancestor::tei:div[1]/substring(@corresp, 2)}"
+                                                target="_blank">{transform:transform($fen/.., 'xmldb:exist:///db/VTLGP/xslt/ex.xsl', ($rdg))}</a></td>
                                         <td>{replace($fen/substring(@wit, 2), '#', '<br/>')}</td>
                                         <td>{
                                                 (if (contains($fen/@wit, ' ')) then
@@ -225,7 +229,7 @@ return
                     {
                         for $result in $values
                         return
-                            <li>{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}
+                            <li>{$equipolent[./@xml:id = $result]//tei:string[@xml:lang eq 'pt']}
                                 <ul>
                                     <li><a
                                             href="#graphs{$result}">Gráficas</a></li>
@@ -243,7 +247,7 @@ return
                     {
                         for $result in $values
                         return
-                            <li>{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}
+                            <li>{$equipolent[./@xml:id = $result]//tei:string[@xml:lang eq 'en']}
                                 <ul>
                                     <li><a
                                             href="#graphs{$result}">Graphs</a></li>
