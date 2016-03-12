@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -193,7 +193,7 @@
                         </choice></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffrer</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
                      <rdg wit="#B">sofrer</rdg>
                   </app>
                </l>
@@ -2121,7 +2121,7 @@
                      <rdg wit="#A #B">me foy de</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffrer</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
                      <rdg wit="#B">sofrer</rdg>
                   </app>
                </l>
@@ -2845,7 +2845,7 @@
                      <rdg wit="#A #B">faz</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffrer</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
                      <rdg wit="#B">sofrer</rdg>
                   </app>
                </l>
@@ -2911,7 +2911,7 @@
                      <rdg wit="#A #B">com<supplied>?</supplied> eu</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffro</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>ro</rdg>
                      <rdg wit="#B">sofro</rdg>
                   </app>
                   <app>
@@ -3050,7 +3050,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">defender</rdg>
-                     <rdg wit="#B" ana="#ff">deffender</rdg>
+                     <rdg wit="#B" ana="#ff">de<seg corresp="#ff">ff</seg>ender</rdg>
                   </app>
                </l>
                <l n="28">
@@ -3311,7 +3311,7 @@
                      <rdg wit="#B">coita</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffrer</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
                      <rdg wit="#B">sofrer</rdg>
                   </app>
                </l>
@@ -3365,7 +3365,7 @@
                      <rdg wit="#A #B">uiu<supplied>?</supplied> e</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffr<supplied>?</supplied></rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>r<supplied>?</supplied></rdg>
                      <rdg wit="#B">sofr<supplied>?</supplied></rdg>
                   </app>
                   <app>
@@ -3392,7 +3392,7 @@
                      <rdg wit="#A #B">de</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffrer</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
                      <rdg wit="#B">sofrer</rdg>
                   </app>
                   <app>
@@ -3432,7 +3432,7 @@
                      <rdg wit="#A #B">deu</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffrer</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
                      <rdg wit="#B">sofrer</rdg>
                   </app>
                   <app>
@@ -3806,7 +3806,7 @@
                      <rdg wit="#A #B">de</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffrer</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
                      <rdg wit="#B">sofrer</rdg>
                   </app>
                </l>
@@ -4330,7 +4330,7 @@
                      <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>sessedes</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffrer</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
                      <rdg wit="#B">sofrer</rdg>
                   </app>
                </l>
@@ -5469,7 +5469,7 @@
                      <rdg wit="#A #B">no<am>̄</am><ex>n</ex> posso</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#ff">soffrer</rdg>
+                     <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
                      <rdg wit="#B">sofrer</rdg>
                   </app>
                </l>
