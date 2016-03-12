@@ -5,12 +5,16 @@ let $anas := $songs//tei:rdg/@ana
 let $ana := distinct-values(for $values in $anas
 return
     tokenize($values, '\s+'))
-let $ling-features := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#linguistic']/tei:fs[concat('#', @xml:id) = $ana]
-let $phonetic := $ling-features[tei:f/tei:fs[not(@n)][some $i in tokenize(@feats,'\s+') satisfies $i = ('#vowel', '#cons', '#nasal', '#sibil', '#diphthong', '#pal')]]
-let $morph := $ling-features[tei:f/tei:fs[not(@n)][some $i in tokenize(@feats,'\s+') satisfies $i = ('#past', '#pr', '#det')]]
-let $other := $ling-features[tei:f/tei:fs[not(@n)][not(some $i in tokenize(@feats,'\s+') satisfies $i = ('#past', '#pr', '#det', '#vowel', '#cons', '#nasal', '#sibil', '#diphthong', '#pal'))]]
-let $scribalError := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#scribal']/tei:fs[concat('#', @xml:id) = $ana]
-let $equipolent := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@n eq 'equipolent readings']/tei:fs[concat('#', @xml:id) = $ana]
+let $file := doc('/db/VTLGP/ancillary/feature-library.xml')
+let $ling-features := $file//tei:fvLib[@corresp eq '#linguistic']/tei:fs[concat('#', @xml:id) = $ana]
+let $phonetic := $ling-features[tei:f/tei:fs[not(@n)][some $i in tokenize(@feats, '\s+')
+    satisfies $i = ('#vowel', '#cons', '#nasal', '#sibil', '#diphthong', '#pal')]]
+let $morph := $ling-features[tei:f/tei:fs[not(@n)][some $i in tokenize(@feats, '\s+')
+    satisfies $i = ('#past', '#pr', '#det')]]
+let $other := $ling-features[tei:f/tei:fs[not(@n)][not(some $i in tokenize(@feats, '\s+')
+    satisfies $i = ('#past', '#pr', '#det', '#vowel', '#cons', '#nasal', '#sibil', '#diphthong', '#pal'))]]
+let $scribalError := $file//tei:fvLib[@corresp eq '#scribal']/tei:fs[concat('#', @xml:id) = $ana]
+let $equipolent := $file//tei:fvLib[@n eq 'equipolent readings']/tei:fs[concat('#', @xml:id) = $ana]
 
 
 return
@@ -117,11 +121,13 @@ return
             type="submit"><span
                 class="en">Search</span></button>
     </form>,
-    <h2 id="error"><span
-            class="pt">Erros de cópia</span><span class="en">Scribal errors</span></h2>,
+    <h2
+        id="error"><span
+            class="pt">Erros de cópia</span><span
+            class="en">Scribal errors</span></h2>,
     <form
-    action='results-sc.php'
-    method='GET'
+        action='results-sc.php'
+        method='GET'
         class="pt lingua">
         <fieldset>
             {
@@ -141,8 +147,8 @@ return
                 class="pt">Pesquisa</span></button>
     </form>,
     <form
-    method='GET'
-    action='results-sc.php'
+        method='GET'
+        action='results-sc.php'
         class="en lingua">
         <fieldset>
             {
@@ -161,10 +167,13 @@ return
             type="submit"><span
                 class="en">Search</span></button>
     </form>,
-    <h2 id="other"><span class="pt">Outras variantes</span><span class="en">Other variants</span></h2>,
-     <form
-    action='results-eq.php'
-    method='GET'
+    <h2
+        id="other"><span
+            class="pt">Outras variantes</span><span
+            class="en">Other variants</span></h2>,
+    <form
+        action='results-eq.php'
+        method='GET'
         class="pt lingua">
         <fieldset>
             {
@@ -184,8 +193,8 @@ return
                 class="pt">Pesquisa</span></button>
     </form>,
     <form
-    method='GET'
-    action='results-eq.php'
+        method='GET'
+        action='results-eq.php'
         class="en lingua">
         <fieldset>
             {

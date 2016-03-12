@@ -1,7 +1,8 @@
 xquery version "3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 (: Local function written by David J. Birnbaum (www.obdurodon.org) :)
-declare function local:locus($from as node(), $to as node())
+declare namespace djb = "www.obdurodon.org";
+declare function djb:locus($from as node(), $to as node())
 {
     (if ($from eq $to)
     then
@@ -54,17 +55,17 @@ return
                                 <g>
                                     <rect
                                         fill="#2B3966"
-                                        height="20"
+                                        height="22"
                                         width="{$count * 6.5}"
                                         x="70"
-                                        y="{$pos * 20}"
-                                        stroke="black"
+                                        y="{$pos * 22}"
+                                        stroke="#EAE5C5"
                                         stroke-width="2"/>
                                     <text
                                         fill="black"
                                         font-size="12"
                                         x="{80 + $count * 6.5}"
-                                        y="{$pos * 20 + 14}"
+                                        y="{$pos * 22 + 14}"
                                     >{' (' || $percentage || '%)'}</text>
                                     <text
                                         fill="black"
@@ -96,17 +97,17 @@ return
                                 <g>
                                     <rect
                                         fill="blue"
-                                        height="20"
+                                        height="22"
                                         width="{$count * 6.5}"
                                         x="70"
-                                        y="{$pos * 20}"
-                                        stroke="black"
+                                        y="{$pos * 22}"
+                                        stroke="#EAE5C5"
                                     />
                                     <text
                                         fill="black"
                                         font-size="12"
                                         x="{80 + $count * 6.5}"
-                                        y="{$pos * 20 + 14}"
+                                        y="{$pos * 22 + 14}"
                                     >{' (' || $percentage || '%)'}</text>
                                     <text
                                         fill="black"
@@ -127,17 +128,17 @@ return
                                             <g>
                                                 <rect
                                                     fill="#2B3966"
-                                                    height="20"
+                                                    height="22"
                                                     width="{$conta * 6.5}"
                                                     x="{$x * 6.5 + 70}"
-                                                    y="{$pos * 20}"
-                                                    stroke="black"
+                                                    y="{$pos * 22}"
+                                                    stroke="#EAE5C5"
                                                     stroke-width="2"/>
                                                 <text
                                                     fill="white"
                                                     font-size="10.5"
                                                     x="{($x * 6.5 + 68) + (($conta * 6.5) div 2)}"
-                                                    y="{$pos * 20 + 12}">{substring($distinctHands[$h], 2)}</text>
+                                                    y="{$pos * 22 + 12}">{substring($distinctHands[$h], 2)}</text>
                                             </g>
                                     }
                                 </g>
@@ -185,26 +186,54 @@ return
                         <tbody>
                             {
                                 for $fen in $readings[matches(@ana, concat('#', $result))]
-                                let $rdg:=
+                                let $rdg :=
                                 <parameters>
-                                    <param name="rdg" value="{$fen}"/>
+                                    <param
+                                        name="rdg"
+                                        value="{$fen}"/>
                                 </parameters>
                                 let $author := $poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]
                                 return
                                     <tr>
-                                        <td><a href="http://gl-pt.obdurodon.org/edition.php?&amp;song[]={$fen/ancestor::tei:div[1]/substring(@corresp, 2)}" target="_blank">{transform:transform($fen/.., 'xmldb:exist:///db/VTLGP/xslt/ex.xsl', ($rdg))}</a></td>
-                                        <td>{replace($fen/substring(@wit, 2), '#', '<br/>')}</td>
+                                        <td><a
+                                                href="http://gl-pt.obdurodon.org/edition.php?&amp;song[]={$fen/ancestor::tei:div[1]/substring(@corresp, 2)}"
+                                                target="_blank">{transform:transform($fen/.., 'xmldb:exist:///db/VTLGP/xslt/ex.xsl', ($rdg))}</a></td>
                                         <td>{
-                                                (if (contains($fen/@wit, ' ')) then
-                                                    local:locus($fen/ancestor::tei:div[1]//tei:rdg[contains(@wit, tokenize($fen/@wit, ' '))][1]/tei:locus/@from, $fen/ancestor::tei:div[1]//tei:rdg[contains(@wit, tokenize($fen/@wit, ' '))][1]/tei:locus/@to) || <br/> || local:locus($fen/ancestor::tei:div[1]//tei:rdg[contains(@wit, tokenize($fen/@wit, ' '))][2]/tei:locus/@from, $fen/ancestor::tei:div[1]//tei:rdg[contains(@wit, tokenize($fen/@wit, ' '))][2]/tei:locus/@to)
+                                                (if ($fen/contains(@wit, ' ')) then
+                                                    <ul>{
+                                                            for $wit in tokenize($fen/@wit, '\s+')
+                                                            order by $wit
+                                                            return
+                                                                <li>{substring($wit, 2)}</li>
+                                                        }</ul>
                                                 else
-                                                    local:locus($fen/ancestor::tei:div[1]//tei:rdg[contains(@wit, tokenize($fen/@wit, ' '))][1]/tei:locus/@from, $fen/ancestor::tei:div[1]//tei:rdg[contains(@wit, tokenize($fen/@wit, ' '))][1]/tei:locus/@to))
+                                                    $fen/substring(@wit, 2)
+                                                )
                                             }</td>
                                         <td>{
                                                 (if (contains($fen/@wit, ' ')) then
-                                                    $fen/ancestor::tei:div[1]//tei:rdg[contains(@wit, tokenize($fen/@wit, ' '))][1]/substring(@hand, 2) || <br/> || $fen/ancestor::tei:div[1]//tei:rdg[contains(@wit, tokenize($fen/@wit, ' '))][2]/substring(@hand, 2)
+                                                    <ul>{
+                                                            
+                                                            for $wit in tokenize($fen/@wit, '\s+')
+                                                            order by $wit
+                                                            return
+                                                                <li>{djb:locus($fen/ancestor::tei:div[1]/tei:head//tei:rdg[@wit = $wit]/tei:locus/@from, $fen/ancestor::tei:div[1]/tei:head//tei:rdg[@wit = $wit]/tei:locus/@to)
+                                                                    }</li>
+                                                        }</ul>
                                                 else
-                                                    $fen/ancestor::tei:div[1]//tei:rdg[contains(@wit, tokenize($fen/@wit, ' '))][1]/substring(@hand, 2))
+                                                    djb:locus($fen/ancestor::tei:div[1]/tei:head//tei:rdg[@wit = $fen/@wit]/tei:locus/@from, $fen/ancestor::tei:div[1]/tei:head//tei:rdg[@wit = $fen/@wit]/tei:locus/@to))
+                                            }</td>
+                                        <td>{
+                                                (if (contains($fen/@wit, ' ')) then
+                                                    <ul>{
+                                                            
+                                                            for $wit in tokenize($fen/@wit, '\s+')
+                                                            order by $wit
+                                                            return
+                                                                <li>{$fen/ancestor::tei:div[1]/tei:head//tei:rdg[@wit = $wit]/substring(@hand, 2)}</li>
+                                                        }</ul>
+                                                else
+                                                    $fen/ancestor::tei:div[1]/tei:head//tei:rdg[@wit = $fen/@wit]/substring(@hand, 2))
                                             }</td>
                                         <td>{$author/tei:persName/string()}</td>
                                         <td>{$author/tei:floruit/@from || '-' || $author/tei:floruit/@to || ' (' || $author/tei:floruit/@period || ')'}</td>
