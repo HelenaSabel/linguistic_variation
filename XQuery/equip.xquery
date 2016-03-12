@@ -89,7 +89,7 @@ return
                             order by count($fen[./tokenize(@wit, '\s') = $i]) descending
                             return
                                 $i
-                            let $count := count($fen[@wit = $wit])
+                            let $count := count($fen[contains(@wit, $wit)])
                             let $sum := count($fen)
                             let $percentage := round-half-to-even((100 * $count div $sum), 2)
                             order by $count descending
@@ -116,13 +116,13 @@ return
                                     >Ms. {substring($wit, 2)}</text>
                                     
                                     {
-                                        let $hand := $songs[.//tei:rdg[. intersect $fen[@wit = $wit]]]/tei:head//tei:rdg[@wit = $wit]/@hand
+                                        let $hand := $songs[.//tei:rdg[. intersect $fen[contains(@wit, $wit)]]]/tei:head//tei:rdg[@wit = $wit]/@hand
                                         let $distinctHands := distinct-values($hand)
                                         for $h in 1 to count($distinctHands)
                                         let $x := count($songs[tei:head//tei:rdg[@wit = $wit][@hand = $distinctHands[position() lt $h]]]
-                                        //tei:rdg[. intersect $fen][@wit = $wit])
+                                        //tei:rdg[. intersect $fen][contains(@wit, $wit)])
                                         let $div := $songs[tei:head//tei:rdg[@wit = $wit][@hand = $distinctHands[$h]]][.//tei:rdg[. intersect $fen]]
-                                        let $conta := count($div//tei:rdg[. intersect $fen[@wit = $wit]])
+                                        let $conta := count($div//tei:rdg[. intersect $fen[contains(@wit, $wit)]])
                                         order by $h descending
                                         return
                                             <g>

@@ -56,7 +56,7 @@ return
                                     <rect
                                         fill="#2B3966"
                                         height="22"
-                                        width="{$count * 6.5}"
+                                        width="{$count * 3}"
                                         x="70"
                                         y="{$pos * 22}"
                                         stroke="#EAE5C5"
@@ -64,7 +64,7 @@ return
                                     <text
                                         fill="black"
                                         font-size="12"
-                                        x="{80 + $count * 6.5}"
+                                        x="{80 + $count * 3}"
                                         y="{$pos * 22 + 14}"
                                     >{' (' || $percentage || '%)'}</text>
                                     <text
@@ -89,7 +89,7 @@ return
                             order by count($fen[./tokenize(@wit, '\s') = $i]) descending
                             return
                                 $i
-                            let $count := count($fen[@wit = $wit])
+                            let $count := count($fen[contains(@wit, $wit)])
                             let $sum := count($fen)
                             let $percentage := round-half-to-even((100 * $count div $sum), 2)
                             order by $count descending
@@ -98,7 +98,7 @@ return
                                     <rect
                                         fill="blue"
                                         height="22"
-                                        width="{$count * 6.5}"
+                                        width="{$count * 3}"
                                         x="70"
                                         y="{$pos * 22}"
                                         stroke="#EAE5C5"
@@ -106,7 +106,7 @@ return
                                     <text
                                         fill="black"
                                         font-size="12"
-                                        x="{80 + $count * 6.5}"
+                                        x="{80 + $count * 3}"
                                         y="{$pos * 22 + 14}"
                                     >{' (' || $percentage || '%)'}</text>
                                     <text
@@ -116,28 +116,28 @@ return
                                     >Ms. {substring($wit, 2)}</text>
                                     
                                     {
-                                        let $hand := $songs[.//tei:rdg[. intersect $fen[@wit = $wit]]]/tei:head//tei:rdg[@wit = $wit]/@hand
+                                        let $hand := $songs[.//tei:rdg[. intersect $fen[contains(@wit, $wit)]]]/tei:head//tei:rdg[@wit = $wit]/@hand
                                         let $distinctHands := distinct-values($hand)
                                         for $h in 1 to count($distinctHands)
                                         let $x := count($songs[tei:head//tei:rdg[@wit = $wit][@hand = $distinctHands[position() lt $h]]]
-                                        //tei:rdg[. intersect $fen][@wit = $wit])
+                                        //tei:rdg[. intersect $fen][contains(@wit, $wit)])
                                         let $div := $songs[tei:head//tei:rdg[@wit = $wit][@hand = $distinctHands[$h]]][.//tei:rdg[. intersect $fen]]
-                                        let $conta := count($div//tei:rdg[. intersect $fen[@wit = $wit]])
+                                        let $conta := count($div//tei:rdg[. intersect $fen[contains(@wit, $wit)]])
                                         order by $h descending
                                         return
                                             <g>
                                                 <rect
                                                     fill="#2B3966"
                                                     height="22"
-                                                    width="{$conta * 6.5}"
-                                                    x="{$x * 6.5 + 70}"
+                                                    width="{$conta * 3}"
+                                                    x="{$x * 3 + 70}"
                                                     y="{$pos * 22}"
                                                     stroke="#EAE5C5"
                                                     stroke-width="2"/>
                                                 <text
                                                     fill="white"
                                                     font-size="10.5"
-                                                    x="{($x * 6.5 + 68) + (($conta * 6.5) div 2)}"
+                                                    x="{($x * 3 + 68) + (($conta * 3) div 2)}"
                                                     y="{$pos * 22 + 12}">{substring($distinctHands[$h], 2)}</text>
                                             </g>
                                     }
@@ -285,7 +285,6 @@ return
             </div>
         </aside>
     </div>
-
 
 
 
