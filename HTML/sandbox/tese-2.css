@@ -1,0 +1,131 @@
+
+
+html{
+    margin: 1% 3% 3%;
+    background-color: #b5b0aa;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+header{
+    margin: 0;
+    padding:0;
+    height:auto;
+    width:100%;
+    background-color:#2b3966;
+    min-width:750px;
+}
+
+header svg {
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: #eeebc2;
+    color: #32281b;
+    padding-bottom:3%;
+}
+
+menu{
+    margin-top: 0;
+    background-color: #2b3966;
+    font-size: 1.5em;
+    display:flex;
+    min-width:750px;
+    justify-content:space-between;
+}
+
+menu ul{
+    margin-bottom: 0%;
+    white-space: nowrap;
+}
+
+menu > ul > li{
+    float: none;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+menu ul ul{
+    background-color: #393649;
+    display: none;
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    top: 100%;
+
+}
+
+menu a{
+    cursor: pointer;
+    display: block;
+    color: #B28D28;
+    font-weight: bold;
+    padding: 0 15px 5px;
+    text-decoration: none;
+}
+
+menu li:hover{
+    background-color: #393649;
+}
+
+menu li li:hover{
+    background-color: #282633;
+}
+
+menu li:hover ul{
+    display: block;
+}
+
+ul.dropdown {
+    padding-left:0;
+}
+ul.dropdown li{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    white-space: nowrap;
+}
+
+ul.dropdown a{
+    font-weight: normal;
+}
+
+h1{
+    color: #697575;
+}
+
+h2{
+    color:#4b2b01;
+}
+
+main{
+    margin: 2%;
+}
+
+.languages {
+    display:inline;
+    color: #B28D28;
+    margin-right:2%;
+    font-weight:bold;
+}
+
+.languages span {
+    font-variant:small-caps;
+}
+
+a {
+    color:#bd6d03;
+    text-decoration:none;
+}
+
+@font-face{
+    font-family: butler;
+    src: url('fonts/Butler_Medium.otf')
+    }
+    
+p {
+    font-family: butler;
+    line-height:150%;
+    text-align:justify;
+}
