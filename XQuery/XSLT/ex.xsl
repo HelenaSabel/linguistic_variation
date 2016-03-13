@@ -1,7 +1,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xs tei" version="2.0">
-    <xsl:output method="xml" encoding="utf-8" indent="no" doctype-system="about:legacy-compat"
+    <xsl:output method="xml" encoding="utf-8" indent="no"
         omit-xml-declaration="yes"/>
     <xsl:param name="rdg"/>
     <xsl:template match="tei:app">
