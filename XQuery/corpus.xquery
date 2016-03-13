@@ -19,31 +19,50 @@ return
                         <input
                             type="radio"
                             name="author[{$i}]"
-                            value="{$author/@xml:id}"
-                            class="all"/>
-                        <span
-                            class="pt">Todas</span>
-                        <span
-                            class="en">All</span>
+                            class="all"
+                            id="none1"
+                            checked="checked"/>
+                        <label
+                            for="none1"><span
+                                class="en">None</span>
+                            <span
+                                class="pt">Nenhuma</span></label>
                         <input
                             type="radio"
                             name="author[{$i}]"
-                            class="show"/>
-                        <span
-                            class="pt">Seleccionar</span>
-                        <span
-                            class="en">Select</span>
+                            value="{$author/@xml:id}"
+                            id="author{$i}"
+                            class="all"/>
+                        <label
+                            for="author{$i}"><span
+                                class="pt">Todas</span>
+                            <span
+                                class="en">All</span></label>
+                        <input
+                            type="radio"
+                            name="author[{$i}]"
+                            class="show"
+                            id="select{$i}"/>
+                        <label
+                            for="select{$i}"><span
+                                class="pt">Seleccionar</span>
+                            <span
+                                class="en">Select</span></label>
                         <ul
                             class="hide">
                             {
                                 for $song in $songs
+                                order by $song/substring(@corresp, 2)
                                 return
                                     <li><input
                                             type="checkbox"
+                                            id="{$song/substring(@corresp, 2)}"
                                             name="song[]"
                                             value="{$song/substring(@corresp, 2)}"/>
-                                        {string-join($song//tei:title//tei:idno, ', ')}</li>
+                                        <label
+                                            for="{$song/substring(@corresp, 2)}">{string-join($song//tei:title//tei:idno, ', ')}</label></li>
                             }</ul>
+                    
                     </div>
                 </fieldset>
         }
@@ -73,31 +92,50 @@ return
                         <input
                             type="radio"
                             name="period[{$period}]"
-                            value="{$period}"
-                            class="all"/>
-                        <span
-                            class="pt">Todas</span>
-                        <span
-                            class="en">All</span>
+                            class="all"
+                            id="none2"
+                            checked="checked"/>
+                        <label
+                            for="none2"><span
+                                class="en">None</span>
+                            <span
+                                class="pt">Nenhuma</span></label>
                         <input
                             type="radio"
                             name="period[{$period}]"
+                            value="{$period}"
+                            id="{$period}"
+                            class="all"/>
+                        <label
+                            for="{$period}"><span
+                                class="pt">Todas</span>
+                            <span
+                                class="en">All</span></label>
+                        <input
+                            type="radio"
+                            name="period[{$period}]"
+                            id="select{$period}"
                             class="show"/>
-                        <span
-                            class="pt">Seleccionar</span>
-                        <span
-                            class="en">Select</span>
+                        <label
+                            for="select{$period}"><span
+                                class="pt">Seleccionar</span>
+                            <span
+                                class="en">Select</span></label>
                         <ul
                             class="hide">
                             {
                                 for $song in $songs
+                                order by $song/substring(@corresp, 2)
                                 return
                                     <li><input
                                             type="checkbox"
+                                            id="{$song/substring(@corresp, 2)}"
                                             name="song[]"
                                             value="{$song/substring(@corresp, 2)}"/>
-                                        {string-join($song//tei:title//tei:idno, ', ')}</li>
+                                        <label
+                                            for="{$song/substring(@corresp, 2)}">{string-join($song//tei:title//tei:idno, ', ')}</label></li>
                             }</ul>
+                    
                     </div>
                 </fieldset>
         }
@@ -109,8 +147,8 @@ return
     </form>,
     <h2
         id="copyist"><span
-            class="pt">Copista</span><span
-            class="en">Scribe</span></h2>,
+            class="pt">Por copista</span><span
+            class="en">By scribe</span></h2>,
     <form
         method="GET"
         action="edition.php">
@@ -144,31 +182,50 @@ return
                         <input
                             type="radio"
                             name="scribe[{$hand}]"
-                            value="{$hand}"
-                            class="all"/>
-                        <span
-                            class="pt">Todas</span>
-                        <span
-                            class="en">All</span>
+                            class="all"
+                            id="none3"
+                            checked="checked"/>
+                        <label
+                            for="none3"><span
+                                class="en">None</span>
+                            <span
+                                class="pt">Nenhuma</span></label>
                         <input
                             type="radio"
                             name="scribe[{$hand}]"
-                            class="show"/>
-                        <span
-                            class="pt">Seleccionar</span>
-                        <span
-                            class="en">Select</span>
+                            value="{$hand}"
+                            id="{$hand}"
+                            class="all"/>
+                        <label
+                            for="{$hand}"><span
+                                class="pt">Todas</span>
+                            <span
+                                class="en">All</span></label>
+                        <input
+                            type="radio"
+                            name="scribe[{$hand}]"
+                            class="show"
+                            id="select{$hand}"/>
+                        <label
+                            for="select{$hand}"><span
+                                class="pt">Seleccionar</span>
+                            <span
+                                class="en">Select</span></label>
                         <ul
                             class="hide">
                             {
                                 for $song in $songs
+                                order by $song/substring(@corresp, 2)
                                 return
                                     <li><input
                                             type="checkbox"
+                                            id="{$song/substring(@corresp, 2)}"
                                             name="song[]"
                                             value="{$song/substring(@corresp, 2)}"/>
-                                        {string-join($song//tei:title//tei:idno, ', ')}</li>
+                                        <label
+                                            for="{$song/substring(@corresp, 2)}">{string-join($song//tei:title//tei:idno, ', ')}</label></li>
                             }</ul>
+                    
                     </div>
                 </fieldset>
         }
