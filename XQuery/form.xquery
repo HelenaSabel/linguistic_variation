@@ -94,10 +94,10 @@ return
                     (<input
                         type="checkbox"
                         name="phenomenon[]"
-                        id="{$id/@xml:id}"
+                        id="en{$id/@xml:id}"
                         value="{$id/@xml:id}"/>,
                     <label
-                        for="{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
+                        for="en{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
             }
         </fieldset>
         <fieldset>
@@ -111,10 +111,10 @@ return
                     (<input
                         type="checkbox"
                         name="phenomenon[]"
-                        id="{$id/@xml:id}"
+                        id="en{$id/@xml:id}"
                         value="{$id/@xml:id}"/>,
                     <label
-                        for="{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
+                        for="en{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
             }
         </fieldset>
         <fieldset>
@@ -128,10 +128,10 @@ return
                     (<input
                         type="checkbox"
                         name="phenomenon[]"
-                        id="{$id/@xml:id}"
+                        id="en{$id/@xml:id}"
                         value="{$id/@xml:id}"/>,
                     <label
-                        for="{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
+                        for="en{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
             }
         </fieldset>
         <button
@@ -180,10 +180,10 @@ return
                     (<input
                         type="checkbox"
                         name="error[]"
-                        id="{$error/@xml:id}"
+                        id="en{$error/@xml:id}"
                         value="{$error/@xml:id}"/>,
                     <label
-                        for="{$error/@xml:id}">{$name}</label>, <br/>)
+                        for="en{$error/@xml:id}">{$name}</label>, <br/>)
             }
         </fieldset>
         <button
@@ -232,10 +232,10 @@ return
                     (<input
                         type="checkbox"
                         name="equip[]"
-                        id="{$equip/@xml:id}"
+                        id="en{$equip/@xml:id}"
                         value="{$equip/@xml:id}"/>,
                     <label
-                        for="{$equip/@xml:id}">{$name}</label>, <br/>)
+                        for="en{$equip/@xml:id}">{$name}</label>, <br/>)
             }
         </fieldset>
         <button

@@ -52,7 +52,7 @@ return
                             class="hide">
                             {
                                 for $song in $songs
-                                order by $song/substring(@corresp, 2)
+                                order by $song/number(substring-before(substring(@corresp, 3), 'B'))
                                 return
                                     <li><input
                                             type="checkbox"
@@ -125,7 +125,7 @@ return
                             class="hide">
                             {
                                 for $song in $songs
-                                order by $song/substring(@corresp, 2)
+                                order by $song/number(substring-before(substring(@corresp, 3), 'B'))
                                 return
                                     <li><input
                                             type="checkbox"
@@ -215,7 +215,7 @@ return
                             class="hide">
                             {
                                 for $song in $songs
-                                order by $song/substring(@corresp, 2)
+                                order by $song/number(substring-before(substring(@corresp, 3), 'B'))
                                 return
                                     <li><input
                                             type="checkbox"
