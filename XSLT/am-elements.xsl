@@ -106,8 +106,7 @@
                 test="current()[ancestor::rdg[contains(@wit, '#A')]]/matches(., '^or$')
                 or current()[ancestor::rdg[contains(@wit, '#T')]]/matches(., '^or$')
                 or current()[ancestor::rdg[contains(@wit, '#N')]]/matches(., '^or$')">
-                <xsl:attribute name="rendition">superscript</xsl:attribute>
-                <xsl:text>&#42843;</xsl:text>
+                <xsl:text>&#7651;</xsl:text>
             </xsl:if>
             <xsl:if
                 test="current()[ancestor::rdg[contains(@wit, '#B')]]/matches(., '^or$')

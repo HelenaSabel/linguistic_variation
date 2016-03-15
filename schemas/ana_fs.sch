@@ -145,7 +145,7 @@
                         true()"
                 >Check for consistency</assert>
         </rule>
-        <rule context="tei:ex">
+        <rule context="tei:ex[not(following-sibling::tei:am[1][. eq '&#773;'])]">
             <assert test="preceding-sibling::node()[1][name() eq 'am']">All abreviations need to specify their abbreviation mark.</assert>
         </rule>
         <rule context="tei:am">
