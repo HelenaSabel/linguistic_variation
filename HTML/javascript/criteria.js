@@ -35,7 +35,7 @@ function popUp(event) {
             inputs[i].addEventListener('click', giveId, false);
         }
         var boxes = criterion.querySelectorAll('input[type="checkbox"]');
-        for (var i = 0; i < inputs.boxes; i++) {
+        for (var i = 0; i < boxes.length; i++) {
             boxes[i].addEventListener('change', changecriteria, false);
         }
     }
@@ -49,6 +49,7 @@ function destroy() {
 
 function giveId() {
     var id = this.getAttribute('value');
+    var form = document.getElementsByClassName('criteria')[0]
     var ams = document.getElementsByClassName('am');
     var expans = document.getElementsByClassName('expansion');
     var regs = document.getElementsByClassName('reg');
@@ -64,6 +65,8 @@ function giveId() {
             expans[i].style.display = 'none';
         }
         
+        form.querySelectorAll('[value="abb"]')[0].checked = true;
+        
         break;
         
         case 'expan':
@@ -73,6 +76,8 @@ function giveId() {
         for (var i = 0; i < expans.length; i++) {
             expans[i].style.display = 'inline-block';
         }
+        
+        form.querySelectorAll('[value="expan"]')[0].checked = true;
         
         break;
         
@@ -84,6 +89,8 @@ function giveId() {
             origs[i].style.display = 'none';
         }
         
+        form.querySelectorAll('[value="reg"]')[0].checked = true;
+        
         break;
         
         case 'orig':
@@ -93,6 +100,8 @@ function giveId() {
         for (var i = 0; i < origs.length; i++) {
             origs[i].style.display = 'inline-block';
         }
+        
+        form.querySelectorAll('[value="orig"]')[0].checked = true;
     }
 }
 
@@ -100,6 +109,7 @@ function changecriteria() {
     
     var id = this.getAttribute('value');
     var dels = document.querySelectorAll('del');
+    var form = document.getElementsByClassName('criteria')[0]
     var adds = document.querySelectorAll('ins');
     var apostrophes = document.getElementsByClassName('supplied');
     
@@ -108,31 +118,14 @@ function changecriteria() {
         
         if (this.checked == true) { for (var i = 0; i < dels.length; i++) {
                 dels[i].classList.remove('hide');
-                
-                if (dels[i].classList.contains('underdot')) {
-                    var letters = dels[i].textContent.split('');
-                    var output = '';
-                    for (var j = 0; j < letters.length; j++) {
-                        output += (letters[j] + '&#803;');
-                    }
-                    dels[i].innerHTML = output;
-                }
-                if (dels[i].classList.contains('multiple-overstrike')) {
-                    var letters = dels[i].textContent.split('');
-                    var output2 = '';
-                    for (var y = 0; y < letters.length; j++) {
-                        output += (letters[y] + '&#824;');
-                    }
-                    dels[i].innerHTML = output2;
-                }
-                
-                if (dels[i].classList.contains('scrape')) {
-                    dels[i].style.opacity = '0.9';
-                }
             }
+            
+            form.querySelectorAll('[value="del"]')[0].checked = true;
         } else { for (var i = 0; i < dels.length; i++) {
                 dels[i].classList.add('hide');
             }
+            
+            form.querySelectorAll('[value="del"]')[0].checked = false;
         }
         
         break;
@@ -144,10 +137,15 @@ function changecriteria() {
             for (var i = 0; i < adds.length; i++) {
                 adds[i].classList.add('enhance');
             }
+            
+            form.querySelectorAll('[value="add"]')[0].checked = true;
         } else { for (var i = 0; i < adds.length; i++) {
-                adds[i].classList.remove('enhance')
+                adds[i].classList.remove('enhance');
             }
+            
+            form.querySelectorAll('[value="add"]')[0].checked = false;
         }
+        
         
         break;
         
@@ -158,10 +156,15 @@ function changecriteria() {
             for (var i = 0; i < apostrophes.length; i++) {
                 apostrophes[i].classList.add('hide');
             }
+            
+            form.querySelectorAll('[value="apostrophe"]')[0].checked = false;
+            
         } else {
             for (var i = 0; i < apostrophes.length; i++) {
                 apostrophes[i].classList.remove('hide');
             }
+            
+            form.querySelectorAll('[value="apostrophe"]')[0].checked = true;
         }
     }
 }
