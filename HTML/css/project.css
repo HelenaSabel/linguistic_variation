@@ -217,6 +217,10 @@ footer{
     flex-grow: 1;
 }
 
+.witness h3{
+margin-left:0;
+}
+
 section{
     width: 85%;
     border-right: 1px solid #2b3966;
@@ -322,6 +326,10 @@ del{
     text-decoration: none;
 }
 
+del.scrape {
+    opacity: 0.9;
+}
+
 .overstrike{
     text-decoration: line-through;
 }
@@ -346,10 +354,28 @@ del{
     margin-left:5%;
 
 }
-.enhance{
-    color: #17C845;
-    vertical-align: super;
-    font-size: smaller;
+ins {
+    text-decoration:none;
+}
+
+ins.enhance{
+    color: #73843A;
+}
+
+ins.enhance.above::after{
+    content: "/"
+}
+
+ins.enhance.above::before{
+    content: "\\";
+}
+
+ins.enhance.margin::after{
+    content: "//"
+}
+
+ins.enhance.margin::before{
+    content: "\\\\";
 }
 
 
