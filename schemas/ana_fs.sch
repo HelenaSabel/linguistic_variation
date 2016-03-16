@@ -15,7 +15,7 @@
             <assert
                 test="
                     if (not(descendant::tei:choice) and count($anas) gt 1) then
-                        count($anas) eq count(descendant::tei:seg[not(@corresp eq '#error')]) + count(descendant::tei:gap)
+                    count($anas) &lt;= count(descendant::tei:seg[not(@corresp eq '#error')]) + count(descendant::tei:gap)
                     else
                         true()"
                 >Need to segmentate</assert>
@@ -29,7 +29,7 @@
             <assert
                 test="
                     if (descendant::tei:choice and count($anas) gt 1) then
-                        count($anas) eq count(descendant::tei:seg[ancestor::tei:choice]) div 2 + count(descendant::tei:seg[parent::tei:rdg]) + count(descendant::tei:gap)
+                    count($anas) &lt;= count(descendant::tei:seg[ancestor::tei:choice]) div 2 + count(descendant::tei:seg[parent::tei:rdg]) + count(descendant::tei:gap)
                     else
                         true()"
                 >Need to segmentate</assert>

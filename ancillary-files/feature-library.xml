@@ -491,8 +491,8 @@
                 <fs xml:id="art-al">
                     <f name="type">
                         <fs feats="#det #phon"/>
-                        <string xml:lang="en">Allomorphic form of the article</string>
-                        <string xml:lang="pt">Forma alomorfa do artigo</string>
+                        <string xml:lang="en">Allomorphic form of the article/clitic</string>
+                        <string xml:lang="pt">Forma alomorfa do artigo/clítico</string>
                     </f>
                 </fs>
 
@@ -550,17 +550,6 @@
                         </fs>
                         <string xml:lang="en">Use of ’agora’ (expected ’ora’)</string>
                         <string xml:lang="pt">Uso de ’agora’ (sendo esperável ’ora’)</string>
-                    </f>
-                </fs>
-                <fs xml:id="comp-ca">
-                    <f name="type">
-                        <fs feats="#conj">
-                            <f name="lexeme" select="ca"/>
-                            <f name="function" select="comparative"/>
-                        </fs>
-                        <fs n="secondary" feats="#lex"/>
-                        <string xml:lang="en">Use of ’ca’ as a comparative conjunction</string>
-                        <string xml:lang="pt">Uso de ’ca’ comparativo</string>
                     </f>
                 </fs>
                 <fs xml:id="compl-ca">
@@ -805,6 +794,7 @@
                 <f name="m-end" xml:id="m-end" n="m final"/>
                 <f name="h-et" xml:id="h-et" n="h etimologico"/>
                 <f name="h-monos" xml:id="h-monos" n="h com minim adjacente"/>
+                <f name="h-anti" xml:id="h-anti" n="h muda noutras posiçons"/> 
                 <f name="abb" xml:id="abb" n="abreviatura"/>
                 <f name="syn" xml:id="syn" n="sinalefa"/>
                 <f name="nh" xml:id="nh" n="nh nasalização vocálica"/>
