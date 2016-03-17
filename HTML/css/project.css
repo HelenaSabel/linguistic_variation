@@ -222,7 +222,7 @@ margin-left:5%;
 }
 
 section{
-    width: 85%;
+    width: 82%;
     border-right: 1px solid #2b3966;
 }
 
@@ -255,14 +255,14 @@ section h4{
 }
 
 aside{
-    width: 15%;       
+    min-width: 16.9%;
+    width: 18%;
+    max-height: 100vh;
     overflow-y:auto;
-    max-height:100%;
+    margin: 0;
+    padding: 0
 }
 
-aside div{
-    min-height:100%;    
-}
 
 aside h3{
     padding-top:1%;
@@ -272,6 +272,8 @@ aside h3{
 aside ul{
     list-style-type: square;
 }
+
+
 
 .metadata{
     padding: 1%;
