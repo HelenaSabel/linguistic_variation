@@ -24,7 +24,7 @@
                 $query = REST_PATH . "/db/VTLGP/queries/error.xquery?error=" . $values;
                 echo file_get_contents($query);
             ?>
-            <div id="footer"></div>
+            <div class="footer"></div>
         </main>
         <!--#include virtual="ssi/footer.html"-->
     </body>
