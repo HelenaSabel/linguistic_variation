@@ -1,27 +1,22 @@
-/*Código tirado de: http://codepen.io/yeony/pen/CFhbu*/
+/*Código tirado de: https://github.com/bigspotteddog/ScrollToFixed*/
 
 
-(function($) {
-  $(document).ready(function() {
-    $('#move').scrollToFixed({
-        marginTop: 8,
-        limit: function() {
-            var limit = $('#footer').offset().top - $('#move').outerHeight(true) - 10;
-            return limit;
-        }
-    });
+$(document).ready(function() {
+    $('.header').scrollToFixed();
     
-    /*$("#nav").scrollToFixed({
-        marginTop: $('#header').outerHeight() + 10,
-      limit:  function() {
-          var limit = $('#footer').offset().top - $('#nav').outerHeight(true) - 10;
-          return limit;
-      },
-        zIndex: 999,
-        preFixed: function() { $(this).find('.title').css('color', 'blue'); },
-        preAbsolute: function() { $(this).find('.title').css('color', 'red'); },
-        postFixed: function() { $(this).find('.title').css('color', ''); },
-        postAbsolute: function() { $(this).find('.title').css('color', ''); }
+    /*
+
+    $('.footer').scrollToFixed( {
+        bottom: 0,
+        limit: $('.footer').offset().top
     });*/
-  });
-} (jQuery));
+
+    $('#summary').scrollToFixed({
+        marginTop: $('.header').outerHeight() + 10,
+        limit: function() {
+            var limit = $('.footer').offset().top - $('#summary').outerHeight(true) - 10;
+            return limit;
+        }/*,
+        zIndex: 999*/});
+});
+

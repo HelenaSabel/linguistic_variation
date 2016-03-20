@@ -212,13 +212,15 @@ footer{
 
 .witness{
     padding-left: 1%;
-    padding-right: 1%;
+    padding-right: 2%;
     margin-bottom: 2%;
+    margin-left:2%;
     flex-grow: 1;
+    counter-reset:numbers;
 }
 
 .witness h3{
-margin-left:5%;
+margin-left:0%;
 }
 
 section{
@@ -246,7 +248,7 @@ section h4{
 }
 
 .witness h4{
-    margin-left:5%;
+    margin-left:0%;
 }
 
 .metadata h2{
@@ -287,7 +289,34 @@ aside ul{
 
 .body ol{
     font-family: 'junicode', 'Free Serif', 'EversonMono';
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
 }
+
+li.refrao {
+    padding-left:5%;
+}
+
+.body li {
+    counter-increment: numbers;
+    position:relative;
+    margin-left:4%;
+}
+
+.body li::before {
+    content: counter(numbers) ".";
+    font-size: 80%;
+    color: #838383;
+    font-weight: bold;
+    text-align:right;
+    position:absolute;
+    left:-2.5em;
+    width:2em;
+    padding:0.8% 1% 0 0;
+    
+}
+
 
 .flex{
     display: flex;

@@ -23,16 +23,14 @@ let $poets := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person
 return
     <div
         class="multiple">
-        <section
-            class="phenom">
+        <section class="phenom">
             {
                 for $result in $values
                 return
-                    (<h2><span
-                            class="pt">{$equipolent[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text()}</span><span
-                            class="en">{$equipolent[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text()}</span></h2>,
-                    <h3
-                        id="graphs{$result}"><span
+                    (<h2><span class="pt" 
+                        id="graf{$result}">{$equipolent[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text()}</span><span class="en" 
+                        id="graphs{$result}">{$equipolent[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text()}</span></h2>,
+                        <h3><span
                             class="pt">Período</span><span
                             class="en">Period</span></h3>,
                     <svg
@@ -75,9 +73,11 @@ return
                                 </g>
                         }</svg>,
                     <h3><span
-                            class="pt">Testemunho</span><span
+                            class="pt" 
+                            id="lingua{$result}">Testemunho</span><span
                             class="en">Witness</span></h3>,
-                    <svg
+                    <svg 
+                        id="ling{$result}"
                         xmlns="http://www.w3.org/2000/svg"
                         width="950"
                         height="100">
@@ -144,8 +144,7 @@ return
                                 </g>
                         }</svg>,
                     <table
-                        class="sortable"
-                        id="ling{$result}">
+                        class="sortable">
                         <thead>
                             <tr
                                 class="head">
@@ -195,7 +194,7 @@ return
                                 let $author := $poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]
                                 return
                                     <tr>
-                                        <td><a
+                                        <td class="intro"><a
                                                 href="http://gl-pt.obdurodon.org/edition.php?&amp;song[]={$fen/ancestor::tei:div[1]/substring(@corresp, 2)}"
                                                 target="_blank">{transform:transform($fen/.., 'xmldb:exist:///db/VTLGP/xslt/ex.xsl', ($rdg))}</a></td>
                                         <td>{
@@ -245,32 +244,26 @@ return
                     </table>)
             }
         </section>
-        
-        
-        <aside
-            id="move">
-            <div
-                class="pt">
-                <h3>Conteúdos</h3>
-                <ul>
+       
+
+<aside
+            id="summary">
+                <h3><span class="pt">Conteúdos</span><span class="en">Contents</span></h3>
+                <ul class="pt">
                     {
                         for $result in $values
                         return
                             <li>{$equipolent[./@xml:id = $result]//tei:string[@xml:lang eq 'pt']}
                                 <ul>
                                     <li><a
-                                            href="#graphs{$result}">Gráficas</a></li>
+                                            href="#graf{$result}">Gráficas</a></li>
                                     <li><a
-                                            href="#ling{$result}">Tabela</a></li>
+                                            href="#lingua{$result}">Tabela</a></li>
                                 </ul>
                             </li>
                     }
                 </ul>
-            </div>
-            <div
-                class="en">
-                <h3>Contents</h3>
-                <ul>
+                <ul class="en">
                     {
                         for $result in $values
                         return
@@ -284,7 +277,7 @@ return
                             </li>
                     }
                 </ul>
-            </div>
         </aside>
     </div>
+
 

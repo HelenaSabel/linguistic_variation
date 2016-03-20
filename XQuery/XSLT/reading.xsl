@@ -13,14 +13,17 @@
         select="doc('../ancillary/feature-library.xml')//tei:fLib[@xml:id eq 'graphic']/tei:f"/>
     <xsl:param name="wit"/>
     <xsl:template match="tei:lg">
-        <ol start="{./tei:l[1]/@n}">
+        <ol start="{./tei:l[1]/@n}" class="{@type}">
             <xsl:apply-templates select="tei:l"/>
         </ol>
     </xsl:template>
     <xsl:template match="tei:l">
-        <li>
+        <xsl:element name="li">
+            <xsl:if test="current()/@type">
+                <xsl:attribute name="class"><xsl:value-of select="@type"/></xsl:attribute>
+            </xsl:if>
             <xsl:apply-templates select="tei:app/tei:rdg[contains(@wit, $wit)]"/>
-        </li>
+        </xsl:element>
     </xsl:template>
     <xsl:template match="tei:rdg">
         <xsl:variable name="ana" select="tokenize(@ana, '\s+')"/>
@@ -233,7 +236,7 @@
                     </xsl:analyze-string>
                 </xsl:if>
                 <span class="expansion">
-                    <xsl:if test="current()[preceding-sibling::node()[1][self::text()]]">
+                    <xsl:if test=".[preceding-sibling::node()[1][self::text()]]">
                         <xsl:analyze-string select="./preceding-sibling::node()[1][self::text()]"
                             regex="\w$">
                             <xsl:matching-substring>
@@ -242,9 +245,9 @@
                         </xsl:analyze-string>
                     </xsl:if>
                     <xsl:if
-                        test="current()[parent::tei:seg[@corresp eq '#abb']][preceding-sibling::node()[1][self::text()]]">
+                        test="current()[parent::tei:seg[@corresp eq '#abb']/preceding-sibling::node()[1][self::text()]]">
                         <xsl:analyze-string
-                            select="./parent::*/preceding-sibling::node()[1][self::text()]"
+                            select="current()/parent::*/preceding-sibling::node()[1][self::text()]"
                             regex="\w$">
                             <xsl:matching-substring>
                                 <xsl:value-of select="."/>

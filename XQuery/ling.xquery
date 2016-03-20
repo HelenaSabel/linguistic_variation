@@ -29,10 +29,9 @@ return
                 for $result in $values
                 return
                     (<h2><span
-                            class="pt">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span><span
-                            class="en">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span></h2>,
-                    <h3
-                        id="graphs{$result}"><span
+                            class="pt" id="graf{$result}">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span><span
+                            class="en" id="graphs{$result}">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span></h2>,
+                    <h3><span
                             class="pt">Período</span><span
                             class="en">Period</span></h3>,
                     <svg
@@ -75,9 +74,9 @@ return
                                 </g>
                         }</svg>,
                     <h3><span
-                            class="pt">Testemunho</span><span
+                            class="pt" id="lingua{$result}">Testemunho</span><span
                             class="en">Witness</span></h3>,
-                    <svg
+                    <svg id="ling{$result}"
                         xmlns="http://www.w3.org/2000/svg"
                         width="950"
                         height="100">
@@ -144,8 +143,7 @@ return
                                 </g>
                         }</svg>,
                     <table
-                        class="sortable"
-                        id="ling{$result}">
+                        class="sortable">
                         <thead>
                             <tr
                                 class="head">
@@ -195,7 +193,7 @@ return
                                 let $author := $poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]
                                 return
                                     <tr>
-                                        <td><a
+                                        <td class="intro"><a
                                                 href="http://gl-pt.obdurodon.org/edition.php?&amp;song[]={$fen/ancestor::tei:div[1]/substring(@corresp, 2)}"
                                                 target="_blank">{transform:transform($fen/.., 'xmldb:exist:///db/VTLGP/xslt/ex.xsl', ($rdg))}</a></td>
                                         <td>{
@@ -246,42 +244,35 @@ return
             }
         </section>
         <aside
-            id="move">
-            <div
-                class="pt">
-                <h3>Conteúdos</h3>
-                <ul>
-                    {
-                        for $result in $values
-                        return
-                            <li>{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}
-                                <ul>
-                                    <li><a
-                                            href="#graphs{$result}">Gráficas</a></li>
-                                    <li><a
-                                            href="#ling{$result}">Tabela</a></li>
-                                </ul>
-                            </li>
-                    }
-                </ul>
-            </div>
-            <div
-                class="en">
-                <h3>Contents</h3>
-                <ul>
+            id="summary">
+                <h3><span class="pt">Conteúdos</span><span class="en">Contents</span></h3>
+                <ul class="en">
                     {
                         for $result in $values
                         return
                             <li>{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}
                                 <ul>
                                     <li><a
-                                            href="#graphs{$result}">Graphs</a></li>
+                                            href="#graphs{$result}">Graph</a></li>
                                     <li><a
                                             href="#ling{$result}">Table</a></li>
                                 </ul>
                             </li>
                     }
                 </ul>
-            </div>
+                <ul class="pt">
+                     {
+                        for $result in $values
+                        return
+                            <li>{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}
+                                <ul>
+                                    <li><a
+                                            href="#graf{$result}">Gráficas</a></li>
+                                    <li><a
+                                            href="#lingua{$result}">Tabela</a></li>
+                                </ul>
+                            </li>
+                    }
+                </ul>
         </aside>
     </div>
