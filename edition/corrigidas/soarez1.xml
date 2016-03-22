@@ -287,11 +287,8 @@
                         </choice></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">ben</rdg>
-                     <rdg wit="#B" ana="#abb">be<am>̄</am><ex>n</ex></rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
+                     <rdg wit="#A" ana="#punct">ben<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B" ana="#abb">be<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mais</rdg>
@@ -580,10 +577,8 @@
                      <rdg wit="#B" ana="#abb">bo<am>̄</am><ex>n</ex></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A #B">sen</rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
+                     <rdg wit="#A" ana="#punct">sen<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B">sen</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
@@ -980,12 +975,8 @@
                      <rdg wit="#B">u<am>ꝯ</am><ex>os</ex></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">ui</rdg>
-                     <rdg wit="#B" ana="#j-minin">uj</rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
-                     <rdg wit="#B"/>
+                     <rdg wit="#A" ana="#punct">ui<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B" ana="#j-minin">u<seg corresp="#j-minin">j</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">o</rdg>
@@ -3025,10 +3016,11 @@
                </l>
                <l n="9">
                   <app>
-                     <rdg wit="#A #B">de quantas donas sei</rdg>
+                     <rdg wit="#A #B">de quantas donas</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
+                     <rdg wit="#A" ana="#punct">sei<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B">sei</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
@@ -3094,11 +3086,8 @@
                      <rdg wit="#A #B">que me fazedes mia</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">sen<am>̄</am><ex>n</ex>or</rdg>
-                     <rdg wit="#B" ana="#abb">senh<am>ᷣ</am><ex>or</ex></rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
+                     <rdg wit="#A" ana="#punct">sen<am>̄</am><ex>n</ex>or<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B" ana="#abb">senh<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>

@@ -528,11 +528,8 @@
                      <rdg wit="#A #B">o uosso</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">ben</rdg>
+                     <rdg wit="#A" ana="#punct">ben<seg corresp="#punct">.</seg></rdg>
                      <rdg wit="#B" ana="#error">be</rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">e</rdg>
@@ -552,10 +549,8 @@
                      <rdg wit="#B" ana="#misread">men</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A #B">cor</rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
+                     <rdg wit="#A" ana="#punct">cor<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B">cor</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">dest<supplied>?</supplied> e</rdg>
@@ -1122,10 +1117,8 @@
                </l>
                <l n="27">
                   <app>
-                     <rdg wit="#A #B">dela</rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
+                     <rdg wit="#A" ana="#punct">dela<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B">dela</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
@@ -2064,12 +2057,8 @@
                      <rdg wit="#B" ana="#abb">u<am>ꝯ</am><ex>os</ex></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">uj ir</rdg>
-                     <rdg wit="#B" ana="#error">ui <supplied>?</supplied> r</rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
-                     <rdg wit="#B"/>
+                     <rdg wit="#A" ana="#punct #syn">uj <seg corresp="#syn">i</seg>r<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B">ui <supplied>?</supplied>r</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">e</rdg>
@@ -5028,12 +5017,8 @@
                      <rdg wit="#A #B">eu</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">fige</rdg>
-                     <rdg wit="#B" ana="#p1i">figi</rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">.</rdg>
-                     <rdg wit="#B"/>
+                     <rdg wit="#A" ana="#punct">fige<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B" ana="#p1i"><seg corresp="#p1i">figi</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">se no<am>̄</am><ex>n</ex> cuidar</rdg>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/tei_tese.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -50,7 +50,6 @@
       <front>
          <div>
             <listWit>
-               <witness xml:id="A">Cancioneiro da Ajuda</witness>
                <witness xml:id="B">Cancioneiro da Biblioteca Nacional</witness>
             </listWit>
          </div>
@@ -84,9 +83,7 @@
                      <rdg wit="#N #B #V">se uistes meu amigo</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="3">
+               <l type="refrao" n="3">
                   <app>
                      <rdg wit="#N #B">E</rdg>
                      <rdg wit="#V">c</rdg>
@@ -125,9 +122,7 @@
                      <rdg wit="#N #B #V">se uistes meu amado</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="6">
+               <l type="refrao" n="6">
                   <app>
                      <rdg wit="#N #B">E</rdg>
                      <rdg wit="#V">c</rdg>
@@ -169,9 +164,7 @@
                      <rdg wit="#N #B #V">eu sospiro</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="9">
+               <l type="refrao" n="9">
                   <app>
                      <rdg wit="#N #B">E</rdg>
                      <rdg wit="#V">c</rdg>
@@ -226,9 +219,7 @@
                      <rdg wit="#B #V">cuydado</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="12">
+               <l type="refrao" n="12">
                   <app>
                      <rdg wit="#N #B">E</rdg>
                      <rdg wit="#V">c</rdg>
@@ -294,9 +285,7 @@
                      <rdg wit="#N #B #V">meu amigo</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="3">
+               <l type="refrao" n="3">
                   <app>
                      <rdg wit="#N #B">E</rdg>
                      <rdg wit="#V"/>
@@ -356,9 +345,7 @@
                      <rdg wit="#V">amade</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="6">
+               <l type="refrao" n="6">
                   <app>
                      <rdg wit="#N">E irei</rdg>
                      <rdg wit="#B"/>
@@ -429,9 +416,7 @@
                      <rdg wit="#V">uyuo</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="9">
+               <l type="refrao" n="9">
                   <app>
                      <rdg wit="#N">E irei</rdg>
                      <rdg wit="#B">hirey·</rdg>
@@ -479,9 +464,7 @@
                      <rdg wit="#V">seno</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="12">
+               <l type="refrao" n="12">
                   <app>
                      <rdg wit="#N">E irei</rdg>
                      <rdg wit="#B">hi·</rdg>
@@ -541,9 +524,7 @@
                      <rdg wit="#N #B #V">amigo</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="15">
+               <l type="refrao" n="15">
                   <app>
                      <rdg wit="#N">E irei</rdg>
                      <rdg wit="#B">hirey·</rdg>
@@ -611,9 +592,7 @@
                      <rdg wit="#N #B #V">priuado</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="18">
+               <l type="refrao" n="18">
                   <app>
                      <rdg wit="#N">E irei</rdg>
                      <rdg wit="#B">hirey</rdg>
@@ -716,9 +695,7 @@
                      <rdg wit="#N #B #V">mar salido</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="3">
+               <l type="refrao" n="3">
                   <app>
                      <rdg wit="#N #B #V">E</rdg>
                   </app>
@@ -795,9 +772,7 @@
                      <rdg wit="#V">leuado</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="6">
+               <l type="refrao" n="6">
                   <app>
                      <rdg wit="#N #B #V">E</rdg>
                   </app>
@@ -874,9 +849,7 @@
                      <rdg wit="#V">amjgo</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="9">
+               <l type="refrao" n="9">
                   <app>
                      <rdg wit="#N">&gt;E</rdg>
                      <rdg wit="#B #V">E</rdg>
@@ -971,9 +944,7 @@
                         <gap/></rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="12">
+               <l type="refrao" n="12">
                   <app>
                      <rdg wit="#N #B">E</rdg>
                      <rdg wit="#V">e</rdg>
@@ -1059,9 +1030,7 @@
                         <gap/></rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="3">
+               <l type="refrao" n="3">
                   <app>
                      <rdg wit="#N #B">E</rdg>
                      <rdg wit="#V">e</rdg>
@@ -1124,9 +1093,7 @@
                      <rdg wit="#V">manho</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="6">
+               <l type="refrao" n="6">
                   <app>
                      <rdg wit="#N #B #V">E uou</rdg>
                   </app>
@@ -1180,9 +1147,7 @@
                      <rdg wit="#N #B #V">comigo</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="9">
+               <l type="refrao" n="9">
                   <app>
                      <rdg wit="#N #B #V">E uou</rdg>
                   </app>
@@ -1239,9 +1204,7 @@
                      <rdg wit="#N #B #V">trago</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="12">
+               <l type="refrao" n="12">
                   <app>
                      <rdg wit="#N #B #V">E</rdg>
                   </app>
@@ -1296,9 +1259,7 @@
                   </app>
                   <am/>
                   <ex>ue</ex> chora<am>̄</am><ex>n</ex> migo </l>
-            </lg>
-            <lg type="refrao">
-               <l n="15">
+               <l type="refrao" n="15">
                   <app>
                      <rdg wit="#N">e</rdg>
                      <rdg wit="#B">E</rdg>
@@ -1360,9 +1321,7 @@
                      <rdg wit="#B #V">anb<am>ꝯ</am><ex>os</ex></rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="18">
+               <l type="refrao" n="18">
                   <app>
                      <rdg wit="#N #B #V">E uou</rdg>
                   </app>
@@ -1411,9 +1370,7 @@
                      <rdg wit="#B">vigo</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="3">
+               <l type="refrao" n="3">
                   <app>
                      <rdg wit="#N #B #V">E</rdg>
                   </app>
@@ -1491,9 +1448,7 @@
                         <gap/></rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="6">
+               <l type="refrao" n="6">
                   <app>
                      <rdg wit="#N"><gap reason="damage"/>emos.</rdg>
                      <rdg wit="#B #V">E</rdg>
@@ -1558,9 +1513,7 @@
                      <rdg wit="#B #V">amigo</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="9">
+               <l type="refrao" n="9">
                   <app>
                      <rdg wit="#N #B #V">E</rdg>
                   </app>
@@ -1612,9 +1565,7 @@
                      <rdg wit="#N #B #V">meu amado</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="12">
+               <l type="refrao" n="12">
                   <app>
                      <rdg wit="#N #B">E</rdg>
                      <rdg wit="#V">e</rdg>
@@ -1977,9 +1928,7 @@
                      <rdg wit="#N #B #V">saberedes dizer</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="3">
+               <l type="refrao" n="3">
                   <app>
                      <rdg wit="#N #V">por</rdg>
                      <rdg wit="#B">Por</rdg>
@@ -2041,9 +1990,7 @@
                      <rdg wit="#N #B #V">saberedes contar</rdg>
                   </app>
                </l>
-            </lg>
-            <lg type="refrao">
-               <l n="6">
+               <l type="refrao" n="6">
                   <app>
                      <rdg wit="#N #V">por</rdg>
                      <rdg wit="#B">Por</rdg>

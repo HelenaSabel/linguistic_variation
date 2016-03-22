@@ -28,7 +28,7 @@ function popUp(event) {
         criterion.style.padding = ".5em";
         criterion.dataset.pointer = random;
         criterion.addEventListener('mouseleave', destroy, false);
-        criterion.addEventListener('onscroll', destroy, false);
+        window.addEventListener('scroll', destroy, false);
         document.body.appendChild(criterion);
         var inputs = criterion.querySelectorAll('input[type="radio"]');
         for (var i = 0; i < inputs.length; i++) {
