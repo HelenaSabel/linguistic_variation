@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -1293,7 +1293,7 @@
             <head>
                <title>
                   <app>
-                     <rdg wit="#A" hand="χ β">
+                     <rdg wit="#A" hand="#β">
                         <idno>A283</idno>
                         <locus from="79r" to="79v"/></rdg>
                      <rdg wit="#B" hand="#a">
@@ -1309,7 +1309,7 @@
             <lg type="cobra">
                <l n="1">
                   <app>
-                     <rdg wit="#A" ana="#material" hand="β"><hi rend="guide">A</hi></rdg>
+                     <rdg wit="#A" ana="#material" hand="#χ"><hi rend="guide">A</hi></rdg>
                      <rdg wit="#B #V">A</rdg>
                   </app>
                   <app>
@@ -1320,7 +1320,7 @@
                      <rdg wit="#A #B #V">ui</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#wtf">ontr<supplied>?</supplied></rdg>
+                     <rdg wit="#A" ana="#metaph" cert="low">ontr<supplied>?</supplied></rdg>
                      <rdg wit="#B #V">antr<supplied>?</supplied></rdg>
                   </app>
                   <app>
@@ -1332,7 +1332,7 @@
                      <rdg wit="#A #B #V">de<am>ꝯ</am><ex>us</ex> como</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#çe">pareçe</rdg>
+                     <rdg wit="#A" ana="#çe">pare<seg corresp="#çe">ç</seg>e</rdg>
                      <rdg wit="#B #V">parece</rdg>
                   </app>
                   <app>
@@ -1372,7 +1372,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">i</rdg>
-                     <rdg wit="#B #V" ana="#y-vow"><seg corresp="#y-vow">y</seg></rdg>
+                     <rdg wit="#B #V" ana="#y-vow">y</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">penado me</rdg>
@@ -1408,27 +1408,24 @@
                   </app>
                </l>
             </lg>
-            
-            <!--Realmente a mao β começa a partir de aqui. Acrescentar @handShift-->
-            
             <lg type="cobra">
                <l n="7">
                   <app>
                      <rdg wit="#V" ana="#error">eu</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#wtf"><gap reason="unfinished"/></rdg>
+                     <rdg wit="#A" ana="#material"><gap reason="unfinished"/></rdg>
                      <rdg wit="#B #V">A</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">que</rdg>
+                     <rdg wit="#A" hand="#β">que</rdg>
                      <rdg wit="#B #V" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">ui</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#wtf">ontr<supplied>?</supplied></rdg>
+                     <rdg wit="#A" ana="#metaph" cert="low">ontr<supplied>?</supplied></rdg>
                      <rdg wit="#B #V">antr<supplied>?</supplied></rdg>
                   </app>
                   <app>
@@ -1459,9 +1456,9 @@
                </l>
                <l n="9">
                   <app>
-                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>&#8266;</am><ex>e</ex></seg></rdg>
-                     <rdg wit="#B" ana="#wtf">eu</rdg>
-                     <rdg wit="#V">en</rdg>
+                     <rdg wit="#A"><am>&#8266;</am><ex>e</ex></rdg>
+                     <rdg wit="#B" ana="#equip">eu</rdg>
+                     <rdg wit="#V" ana="#misread">e<seg corresp="#misread">n</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#rev">
@@ -1502,10 +1499,14 @@
                      <rdg wit="#B #V">Eu</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A #B #V">das arenas</rdg>
+                     <rdg wit="#A #B #V">das</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#punct">.l.</rdg>
+                     <rdg wit="#A" ana="#punct">arenas<seg corresp="#punct">.</seg></rdg>
+                     <rdg wit="#B #V">arenas</rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A" ana="#punct">l.</rdg>
                      <rdg wit="#B #V">la</rdg>
                   </app>
                   <app>
@@ -1518,8 +1519,7 @@
                   </app>
                </l>
             </lg>
-
-            <lg type="cobra">
+            <lg type="cobra" rendition="#A" rend="transposition">
                <l n="13">
                   <app>
                      <rdg wit="#A" ana="#material"><hi rend="guide">S</hi>e</rdg>
@@ -1534,7 +1534,7 @@
                   </app>
                   <app>
                      <rdg wit="#A #V">uiss<supplied>?</supplied></rdg>
-                     <rdg wit="#B" ana="#syn">uisse</rdg>
+                     <rdg wit="#B" ana="#syn">uiss<seg corresp="#syn">e</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">aquel</rdg>
@@ -1546,8 +1546,22 @@
                </l>
                <l n="14">
                   <app>
-                     <rdg wit="#A">que sse fezera de mi</rdg>
-                     <rdg wit="#B #V" ana="#wtf">muyto me fora melhor</rdg>
+                     <rdg wit="#A">que</rdg>
+                     <rdg wit="#B #V" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A #B #V">sse</rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A">fezera</rdg>
+                     <rdg wit="#B #V" ana="#abb">fez<seg corresp="#abb"><am>͛</am><ex>er</ex></seg>a</rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A #B #V">de</rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A">mi</rdg>
+                     <rdg wit="#B #V" ana="#pro-nas">mi<am>̄</am><ex>n</ex></rdg>
                   </app>
                </l>
                <l n="15">
@@ -1571,7 +1585,7 @@
                      <rdg wit="#B #V">e</rdg>
                   </app>
                   <app>
-                     <rdg wit="#B #V" ana="#wtf">e</rdg>
+                     <rdg wit="#B #V" ana="#error">e</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">uia</rdg>
@@ -1579,9 +1593,18 @@
                </l>
                <l n="16">
                   <app>
-                     <rdg wit="#A" ana="#wtf"><am>&#8266;</am><ex>e</ex> nunca tan fremosa ui</rdg>
-                     <rdg wit="#B">mui fremosa mha senhor</rdg>
-                     <rdg wit="#V">mui fremosa</rdg>
+                     <rdg wit="#A" ana="#error"><am>&#8266;</am><ex>e</ex></rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A #V">nunca</rdg>
+                     <rdg wit="#B" ana="#capital"><seg corresp="#capital">N</seg>unca</rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A">tan</rdg>
+                     <rdg wit="#B #V" ana="#abb">ta<am>̄</am><ex>n</ex></rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A #B #V">fremosa ui</rdg>
                   </app>
                </l>
                <l type="refrao" n="17">
@@ -1594,15 +1617,8 @@
                      <rdg wit="#B #V">das</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#punct">a<seg corresp="#punct">.</seg></rdg>
-                     <rdg wit="#B #V">arenas</rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A" ana="#punct">r<seg corresp="#punct">.</seg></rdg>
-                     <rdg wit="#B #V" ana="#wtf">la</rdg>
-                  </app>
-                  <app>
-                     <rdg wit="#A #B #V" ana="#material"><gap reason="economy"/></rdg>
+                     <rdg wit="#A" ana="#material #punct">a<seg corresp="#punct">.</seg>r<seg corresp="#punct">.</seg> <gap reason="economy"/></rdg>
+                     <rdg wit="#B #V">arenas la <gap reason="economy"/></rdg>
                   </app>
                </l>
                <l type="refrao" n="18">
@@ -1638,9 +1654,13 @@
                </l>
                <l n="20">
                   <app>
-                     <rdg wit="#A">muyto me fora mellor</rdg>
-                     <rdg wit="#B #V" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg> sse fez<seg corresp="#abb"><am>͛</am><ex>er</ex></seg>a de mi<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
+                     <rdg wit="#A #B #V">muyto me fora</rdg>
                   </app>
+                  <app>
+                     <rdg wit="#A" ana="#reg">me<seg corresp="#reg">ll</seg>or</rdg>                     
+                     <rdg wit="#B #V">melhor</rdg>                     
+                  </app>
+               
                </l>
                <l n="21">
                   <app>
@@ -1670,9 +1690,23 @@
                </l>
                <l n="22">
                   <app>
-                     <rdg wit="#A">a muy fremosa mia sennor</rdg>
-                     <rdg wit="#B" ana="#wtf">Nunca ta<am>̄</am><ex>n</ex> fremosa ui</rdg>
-                     <rdg wit="#V">nunca ta<am>̄</am><ex>n</ex> fremosa ui</rdg>
+                     <rdg wit="#A">a</rdg>
+                     <rdg wit="#B #V" ana="#error"><gap reason="error"/></rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A" ana="#uy">muy</rdg>
+                     <rdg wit="#B #V">mui</rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A #B #V">fremosa</rdg>
+                  </app>
+                  <app>
+                     <rdg wit="#A">mia</rdg>
+                     <rdg wit="#B #V" ana="#h-minin">mha</rdg>
+                  </app>                  
+                  <app>
+                     <rdg wit="#A" ana="#reg">se<seg corresp="#reg">nn</seg>or</rdg>
+                     <rdg wit="#B #V">senhor</rdg>
                   </app>
                </l>
                <l type="refrao" n="23">
@@ -1686,7 +1720,7 @@
                      <rdg wit="#B #V">das</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#punct #wtf">a. r.</rdg>
+                     <rdg wit="#A" ana="#punct">a. r.</rdg>
                      <rdg wit="#B #V">arenas</rdg>
                   </app>
                   <app>

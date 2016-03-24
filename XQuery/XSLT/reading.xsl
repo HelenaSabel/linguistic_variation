@@ -137,7 +137,7 @@
         <xsl:text> </xsl:text>
     </xsl:template>
     <xsl:template
-        match="text()[following-sibling::node()[1][self::tei:am]] | text()[following-sibling::node()[1][self::tei:seg[@corresp eq '#abb']]]">
+        match="text()[following-sibling::node()[1][self::tei:am]] | text()[following-sibling::node()[1][self::tei:seg]]">
         <xsl:value-of select="replace(., '\w$', '')"/>
     </xsl:template>
     <xsl:template match="tei:seg">
@@ -224,7 +224,7 @@
                     </xsl:analyze-string>
                 </xsl:if>
                 <xsl:if
-                    test="current()[parent::tei:seg[@corresp eq '#abb']/preceding-sibling::node()[1][self::text()]]">
+                    test="current()[parent::tei:seg/preceding-sibling::node()[1][self::text()]]">
                     <xsl:analyze-string
                         select="current()/parent::*/preceding-sibling::node()[1][self::text()]"
                         regex="\w$">
@@ -236,7 +236,7 @@
                     </xsl:analyze-string>
                 </xsl:if>
                 <xsl:if
-                    test="current()[parent::tei:seg[@corresp eq '#abb']/preceding-sibling::node()[1][self::tei:seg]]">
+                    test="current()[parent::tei:seg/preceding-sibling::node()[1][self::tei:seg]]">
                     <xsl:analyze-string
                         select="current()/parent::*/preceding-sibling::node()[1]/child::node()[last()][self::text()]"
                         regex="\w$">
@@ -257,7 +257,7 @@
                         </xsl:analyze-string>
                     </xsl:if>
                     <xsl:if
-                        test="current()[parent::tei:seg[@corresp eq '#abb']/preceding-sibling::node()[1][self::text()]]">
+                        test="current()[parent::tei:seg/preceding-sibling::node()[1][self::text()]]">
                         <xsl:analyze-string
                             select="current()/parent::*/preceding-sibling::node()[1][self::text()]"
                             regex="\w$">

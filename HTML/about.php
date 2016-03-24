@@ -33,6 +33,18 @@
         eles tem
         em particular, delimitando, assim, o ingente objeto de estudo.</span></p>
     <h2><span class="pt">Corpus estudado</span><span class="en">Composition of the corpus</span></h2>
+    <p><span class="pt">Neste momento, o corpus estudado está composto por
+            <?php
+            require_once('config.php');
+            $xql = REST_PATH . "/db/VTLGP/queries/count.xquery";
+            echo file_get_contents($xql);
+            ?>
+            cantigas.</span>
+    <span class="en">At this point, the corpus is composed of <?php
+        require_once('config.php');
+        $xql = REST_PATH . "/db/VTLGP/queries/count.xquery";
+        echo file_get_contents($xql);
+        ?> songs.</span></p>
     <?php
     require_once('config.php');
     $xql = REST_PATH . "/db/VTLGP/queries/songs-by-period.xquery";
