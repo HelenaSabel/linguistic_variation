@@ -2,7 +2,6 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="#all" version="2.0">
     <xsl:output method="xml" encoding="utf-8" indent="no" omit-xml-declaration="yes"/>
-
     <xsl:variable name="ling-features"
         select="doc('../ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#linguistic']/tei:fs"/>
     <xsl:variable name="errors"
@@ -12,132 +11,122 @@
     <xsl:variable name="graphic"
         select="doc('../ancillary/feature-library.xml')//tei:fLib[@xml:id eq 'graphic']/tei:f"/>
     <xsl:param name="wit"/>
-    <xsl:template match="tei:lg">
-        <ol class="{@type}">
-            <xsl:apply-templates select="tei:l"/>
-        </ol>
-    </xsl:template>
     <xsl:template match="tei:l">
-        <xsl:element name="li">
-            <xsl:if test="current()/@type">
-                <xsl:attribute name="class">
-                    <xsl:value-of select="@type"/>
-                </xsl:attribute>
-            </xsl:if>
-            <xsl:apply-templates select="tei:app/tei:rdg[contains(@wit, $wit)]"/>
-        </xsl:element>
+           <td><xsl:value-of select="substring($wit, 2)"/></td>
+           <xsl:apply-templates select="tei:app/tei:rdg[contains(@wit, $wit)]"/>
     </xsl:template>
     <xsl:template match="tei:rdg">
-        <xsl:variable name="ana" select="tokenize(@ana, '\s+')"/>
-        <xsl:choose>
-            <xsl:when test="@ana">
-                <xsl:if test="count($ana) eq 1 and current()/not(descendant::tei:seg)">
-                    <xsl:if
-                        test="substring($ana, 2) = $errors/@xml:id and current()/not(descendant::tei:gap)">
-                        <xsl:element name="span">
-                            <xsl:attribute name="class">error en</xsl:attribute>
-                            <xsl:attribute name="data-exp">
-                                <xsl:value-of
-                                    select="$errors[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'en']/text()"
-                                />
-                            </xsl:attribute>
+        <td>
+            <xsl:variable name="ana" select="tokenize(@ana, '\s+')"/>
+            <xsl:choose>
+                <xsl:when test="@ana">
+                    <xsl:if test="count($ana) eq 1 and current()/not(descendant::tei:seg)">
+                        <xsl:if
+                            test="substring($ana, 2) = $errors/@xml:id and current()/not(descendant::tei:gap)">
+                            <xsl:element name="span">
+                                <xsl:attribute name="class">error en</xsl:attribute>
+                                <xsl:attribute name="data-exp">
+                                    <xsl:value-of
+                                        select="$errors[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'en']/text()"
+                                    />
+                                </xsl:attribute>
+                                <xsl:apply-templates/>
+                            </xsl:element>
+                            <xsl:element name="span">
+                                <xsl:attribute name="class">error pt</xsl:attribute>
+                                <xsl:attribute name="data-exp">
+                                    <xsl:value-of
+                                        select="$errors[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'pt']/text()"
+                                    />
+                                </xsl:attribute>
+                                <xsl:apply-templates/>
+                            </xsl:element>
+                        </xsl:if>
+                        <xsl:if
+                            test="substring($ana, 2) = $errors/@xml:id and current()/descendant::tei:gap">
                             <xsl:apply-templates/>
-                        </xsl:element>
-                        <xsl:element name="span">
-                            <xsl:attribute name="class">error pt</xsl:attribute>
-                            <xsl:attribute name="data-exp">
-                                <xsl:value-of
-                                    select="$errors[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'pt']/text()"
-                                />
-                            </xsl:attribute>
-                            <xsl:apply-templates/>
-                        </xsl:element>
+                        </xsl:if>
+                        <xsl:if test="substring($ana, 2) = $ling-features/@xml:id">
+                            <xsl:element name="span">
+                                <xsl:attribute name="class">linguistic en</xsl:attribute>
+                                <xsl:attribute name="data-exp">
+                                    <xsl:value-of
+                                        select="$ling-features[@xml:id = substring($ana, 2)]//tei:string[@xml:lang = 'en']/text()"
+                                    />
+                                </xsl:attribute>
+                                <xsl:apply-templates/>
+                            </xsl:element>
+                            <xsl:element name="span">
+                                <xsl:attribute name="class">linguistic pt</xsl:attribute>
+                                <xsl:attribute name="data-exp">
+                                    <xsl:value-of
+                                        select="$ling-features[@xml:id = substring($ana, 2)]//tei:string[@xml:lang = 'pt']/text()"
+                                    />
+                                </xsl:attribute>
+                                <xsl:apply-templates/>
+                            </xsl:element>
+                        </xsl:if>
+                        <xsl:if test="substring($ana, 2) = $equip/@xml:id">
+                            <xsl:choose>
+                                <xsl:when test="$ana eq '#equip'">
+                                    <xsl:element name="span">
+                                        <xsl:attribute name="class">equipolent en</xsl:attribute>
+                                        <xsl:attribute name="data-exp">
+                                            <xsl:value-of
+                                                select="$equip[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'en']/text()"
+                                            />
+                                        </xsl:attribute>
+                                        <xsl:apply-templates/>
+                                    </xsl:element>
+                                    <xsl:element name="span">
+                                        <xsl:attribute name="class">equipolent pt</xsl:attribute>
+                                        <xsl:attribute name="data-exp">
+                                            <xsl:value-of
+                                                select="$equip[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'pt']/text()"
+                                            />
+                                        </xsl:attribute>
+                                        <xsl:apply-templates/>
+                                    </xsl:element>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:apply-templates/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:if>
+                        <xsl:if test="substring($ana, 2) = $graphic/@xml:id">
+                            <span class="graphic">
+                                <xsl:apply-templates/>
+                            </span>
+                        </xsl:if>
                     </xsl:if>
                     <xsl:if
-                        test="substring($ana, 2) = $errors/@xml:id and current()/descendant::tei:gap">
-                        <xsl:apply-templates/>
-                    </xsl:if>
-                    <xsl:if test="substring($ana, 2) = $ling-features/@xml:id">
-                        <xsl:element name="span">
-                            <xsl:attribute name="class">linguistic en</xsl:attribute>
-                            <xsl:attribute name="data-exp">
-                                <xsl:value-of
-                                    select="$ling-features[@xml:id = substring($ana, 2)]//tei:string[@xml:lang = 'en']/text()"
-                                />
-                            </xsl:attribute>
-                            <xsl:apply-templates/>
-                        </xsl:element>
-                        <xsl:element name="span">
-                            <xsl:attribute name="class">linguistic pt</xsl:attribute>
-                            <xsl:attribute name="data-exp">
-                                <xsl:value-of
-                                    select="$ling-features[@xml:id = substring($ana, 2)]//tei:string[@xml:lang = 'pt']/text()"
-                                />
-                            </xsl:attribute>
-                            <xsl:apply-templates/>
-                        </xsl:element>
-                    </xsl:if>
-                    <xsl:if test="substring($ana, 2) = $equip/@xml:id">
+                        test="current()/descendant::tei:seg and count($ana) ne count(descendant::tei:seg)">
                         <xsl:choose>
-                            <xsl:when test="$ana eq '#equip'">
-                                <xsl:element name="span">
-                                    <xsl:attribute name="class">equipolent en</xsl:attribute>
-                                    <xsl:attribute name="data-exp">
-                                        <xsl:value-of
-                                            select="$equip[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'en']/text()"
-                                        />
-                                    </xsl:attribute>
+                            <xsl:when test="contains(@ana, '#equip')">
+                                <span class="rev en" data-exp="Equipolent reading">
                                     <xsl:apply-templates/>
-                                </xsl:element>
-                                <xsl:element name="span">
-                                    <xsl:attribute name="class">equipolent pt</xsl:attribute>
-                                    <xsl:attribute name="data-exp">
-                                        <xsl:value-of
-                                            select="$equip[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'pt']/text()"
-                                        />
-                                    </xsl:attribute>
+                                </span>
+                                <span class="rev pt" data-exp="Lição equipolente">
                                     <xsl:apply-templates/>
-                                </xsl:element>
+                                </span>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:apply-templates/>
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:if>
-                    <xsl:if test="substring($ana, 2) = $graphic/@xml:id">
-                        <span class="graphic">
-                            <xsl:apply-templates/>
-                        </span>
+                    <xsl:if test="count($ana) eq count(descendant::tei:seg)">
+                        <xsl:apply-templates/>
                     </xsl:if>
-                </xsl:if>
-                <xsl:if
-                    test="current()/descendant::tei:seg and count($ana) ne count(descendant::tei:seg)">
-                    <xsl:choose>
-                        <xsl:when test="contains(@ana, '#equip')">
-                            <span class="rev en" data-exp="Equipolent reading">
-                                <xsl:apply-templates/>
-                            </span>
-                            <span class="rev pt" data-exp="Lição equipolente">
-                                <xsl:apply-templates/>
-                            </span>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:apply-templates/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:if>
-                <xsl:if test="count($ana) eq count(descendant::tei:seg)">
+                </xsl:when>
+                <xsl:otherwise>
                     <xsl:apply-templates/>
-                </xsl:if>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
-        <xsl:text> </xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
+        </td>
     </xsl:template>
     <xsl:template
-        match="text()[following-sibling::node()[1][self::tei:am]] | text()[following-sibling::node()[1][self::tei:seg[@corresp='#abb']]]">
+        match="text()[following-sibling::node()[1][self::tei:am]] | text()[following-sibling::node()[1][self::tei:seg]]">
         <xsl:value-of select="replace(., '\w$', '')"/>
     </xsl:template>
     <xsl:template match="tei:seg">
@@ -223,8 +212,7 @@
                         </xsl:matching-substring>
                     </xsl:analyze-string>
                 </xsl:if>
-                <xsl:if
-                    test="current()[parent::tei:seg/preceding-sibling::node()[1][self::text()]]">
+                <xsl:if test="current()[parent::tei:seg/preceding-sibling::node()[1][self::text()]]">
                     <xsl:analyze-string
                         select="current()/parent::*/preceding-sibling::node()[1][self::text()]"
                         regex="\w$">
@@ -334,7 +322,7 @@
                         select="
                             for $i in string-to-codepoints(.)
                             return
-                            string-join(codepoints-to-string($i), '&#x323;')"
+                                string-join(codepoints-to-string($i), '&#x323;')"
                     />
                 </xsl:when>
                 <xsl:when test="contains(@rend, 'multiple-overstrike')">

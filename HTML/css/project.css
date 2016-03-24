@@ -566,6 +566,18 @@ table{
     margin-left: 1%;
 }
 
+.tabular table{
+    width:60%;
+    font-family: 'junicode';
+}
+
+.tabular table tbody td:nth-child(1){
+    font-style: italic;
+    width:6%;
+    background-color: #D0CCB0;
+    font-size:small;
+} 
+
 td > ul{
     list-style: none;
     padding-left: .5em;

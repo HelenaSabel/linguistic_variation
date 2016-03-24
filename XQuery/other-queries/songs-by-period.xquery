@@ -16,7 +16,7 @@ return
         <svg
             xmlns="http://www.w3.org/2000/svg"
             width="950"
-            height="100">
+            height="{(count(distinct-values($periods)) + 2) * 20}">
             {
                 
                 for $period at $pos in distinct-values($periods)
@@ -59,8 +59,8 @@ return
                 class="en">Songs by witness</span></h3>
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="950"
-            height="100">
+            width="100%"
+            height="{(count(distinct-values($witnesses)) + 2) * 20}">
             {
                 
                 for $wit at $pos in distinct-values($witnesses)
@@ -122,8 +122,8 @@ return
                 class="en">Songs by scribe</span></h3>
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="950"
-            height="100">
+            width="100%"
+            height="{(count(distinct-values($copyists)) + 2) * 20}">
             {
                 
                 for $hand at $pos in distinct-values($copyists)
