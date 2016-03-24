@@ -8,7 +8,7 @@
     <script src="javascript/language.js" type="text/javascript">/**/</script>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript">/**/</script>
     <script src="http://bigspotteddog.github.io/ScrollToFixed/jquery-scrolltofixed.js"
-            type="text/javascript">/**/</script>  
+            type="text/javascript">/**/</script>
     <script src="javascript/header.js" type="text/javascript">/**/</script>
     <script src="javascript/menu.js" type="text/javascript">/**/</script>
 
@@ -19,8 +19,7 @@
     <h1><span class="pt">Apresentação</span><span class="en">About</span></h1>
     <h2><span class="pt">O que posso encontrar neste site?</span><span class="en">What you will find in this site</span>
     </h2>
-    <p class="en">Place holder text.</p>
-    <p class="pt">Apesar da abrangente bibliografia que compreende o estudo da lírica profana galego-portuguesa, ficam
+    <p><span class="en">Place holder text.</span><span class="pt">Apesar da abrangente bibliografia que compreende o estudo da lírica profana galego-portuguesa, ficam
         ainda muitas incógnitas
         que a crítica literária deve resolver, sendo especialmente numerosas no tocante a sua génese. Justamente, a
         caracterização
@@ -28,11 +27,11 @@
         respeito da
         sua confeção, o que nos leva a poder explicar não só a elaboração dos testemunhos escritos, mas a evolução
         sócio-histórica
-        da escola literário analisada. Para focar este tipo de análise linguística, apostamos pelo estudo do fenómeno da
+            da escola literário analisada. Para focar este tipo de análise linguística, apostamos pelo estudo do fenómeno da
         variação,
         pois, ao analisarmos os aspetos que variam de um manuscrito para o outro estamos identificando o que cada um de
         eles tem
-        em particular, delimitando, assim, o ingente objeto de estudo.</p>
+        em particular, delimitando, assim, o ingente objeto de estudo.</span></p>
     <h2><span class="pt">Corpus estudado</span><span class="en">Composition of the corpus</span></h2>
     <?php
     require_once('config.php');
@@ -40,7 +39,7 @@
     echo file_get_contents($xql);
     ?>
     <h2><span class="pt">Metodologia</span><span class="en">Methodology</span></h2>
-    <p class="pt">A nossa proposta para sistematizar o estudo da variação linguística na lírica profana
+    <p><span class="pt">A nossa proposta para sistematizar o estudo da variação linguística na lírica profana
         galego-portuguesa, consiste
         numa edição digital sinóptica. A grandes traços, fundamenta-se na colação de cada uma das leituras de todos os
         testemunhos conservados,
@@ -48,19 +47,19 @@
         faz-se seguindo as normas
         estabelecidas pela Text Encoding Initiative (TEI). Concretamente, utilizamos o método de segmentação em
         paralelo, pois permite a
-        codificação de várias versões dum mesmo texto num único documento.</p>
-    <p class="pt">Esta anotação facilita a identificação de cada variante para posteriormente ser categorizada. Para
+        codificação de várias versões dum mesmo texto num único documento.</span></p>
+    <p><span class="pt">Esta anotação facilita a identificação de cada variante para posteriormente ser categorizada. Para
         marcá-las e defini-las, utilizamos as chamadas “estruturas de traços”
         (Feature Structures). Assim, criamos uma livraria de traços mínimos com o fim de categorizar as variantes
         atendendo à sua tipologia (erros de cópia, variantes de língua,
         lições equipolentes ou variantes gráficas). Evidentemente, os valores que conformam o conteúdo de cada estrutura
         de traços que define um fenómeno linguístico são muito
         mais complexos (em quantidade e concreção) que aqueles que utilizamos para definir as outras tipologias de
-        variação. </p>
-    <p class="pt">A flexibilidade na hora de combinar os traços mínimos e a especificidade com que são definidos
+        variação.</span></p>
+    <p><span class="pt">A flexibilidade na hora de combinar os traços mínimos e a especificidade com que são definidos
         permite-nos extrair com muita precisão os fenómenos de variação linguística.
         Para extrair e manipular eficazmente a complexa informação contida em esta marcação utilizamos um gestor de
-        bases de dados não-SQL e a linguagem de consulta XQuery.</p>
+        bases de dados não-SQL e a linguagem de consulta XQuery.</span></p>
     <h3>Workflow</h3>
     <div class="mxgraph">
         <div>

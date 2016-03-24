@@ -1,4 +1,3 @@
-
 header{
     margin: 0;
     padding: 0;
@@ -214,13 +213,13 @@ footer{
     padding-left: 1%;
     padding-right: 2%;
     margin-bottom: 2%;
-    margin-left:2%;
+    margin-left: 2%;
     flex-grow: 1;
-    counter-reset:numbers;
+    counter-reset: numbers;
 }
 
 .witness h3{
-margin-left:0%;
+    margin-left: 0%;
 }
 
 section{
@@ -228,8 +227,8 @@ section{
     border-right: 1px solid #2b3966;
 }
 
-section svg {
-    margin-left:2%;
+section svg{
+    margin-left: 2%;
 }
 
 
@@ -248,7 +247,7 @@ section h4{
 }
 
 .witness h4{
-    margin-left:0%;
+    margin-left: 0%;
 }
 
 .metadata h2{
@@ -260,15 +259,15 @@ aside{
     min-width: 16.9%;
     width: 18%;
     max-height: 100vh;
-    overflow-y:auto;
+    overflow-y: auto;
     margin: 0;
     padding: 0
 }
 
 
 aside h3{
-    padding-top:1%;
-    padding-left:5%;
+    padding-top: 1%;
+    padding-left: 5%;
 }
 
 aside ul{
@@ -294,27 +293,27 @@ aside ul{
     padding-left: 0;
 }
 
-li.refrao {
-    padding-left:7%;
+li.refrao{
+    padding-left: 7%;
 }
 
-.body li {
+.body li{
     counter-increment: numbers;
-    position:relative;
-    margin-left:4%;
+    position: relative;
+    margin-left: 4%;
 }
 
-.body li::before {
+.body li::before{
     content: counter(numbers) ".";
     font-size: 80%;
     color: #838383;
     font-weight: bold;
-    text-align:right;
-    position:absolute;
-    left:-2.5em;
-    width:2em;
-    padding:0.8% 1% 0 0;
-    
+    text-align: right;
+    position: absolute;
+    left: -2.5em;
+    width: 2em;
+    padding: 0.8% 1% 0 0;
+
 }
 
 
@@ -355,6 +354,10 @@ li.refrao {
     color: #D14205;
 }
 
+.gap{
+    color: #D14205;
+}
+
 .linguistic{
     color: #2B3966;
     text-decoration: underline;
@@ -370,16 +373,24 @@ del{
     text-decoration: none;
 }
 
-del.scrape {
+del.scrape{
     opacity: 0.9;
 }
 
-.overstrike{
+del.overstrike{
+    text-decoration: line-through;
+}
+
+del.multiple-overstrike{
     text-decoration: line-through;
 }
 
 .criteria fieldset{
     border: none;
+}
+
+.criteria span{
+    white-space: nowrap;
 }
 
 .criteria{
@@ -390,16 +401,20 @@ del.scrape {
 
 }
 
+.criteria label{
+    white-space: normal;
+}
+
 .dinamic span{
     border: 1px solid #2b3966;
     font-size: smaller;
     padding: 1% 2% 1% 2%;
     color: #2b3966;
-    margin-left:5%;
+    margin-left: 5%;
 
 }
-ins {
-    text-decoration:none;
+ins{
+    text-decoration: none;
 }
 
 ins.enhance{
@@ -516,6 +531,7 @@ legend{
     color: #2b3966;
     font-size: 90%;
     font-weight: 500;
+    white-space:nowrap;
 }
 
 button{
@@ -533,7 +549,6 @@ form{
     margin-left: 1.65%;
     margin-right: 1.65%;
     width: 97%;
-    white-space: nowrap;
     margin-bottom: 6%;
 }
 
@@ -547,7 +562,7 @@ table{
     text-align: center;
     margin-top: 2%;
     margin-bottom: 2%;
-    margin-left:1%;
+    margin-left: 1%;
 }
 
 td > ul{

@@ -14,13 +14,16 @@ function popUp(event) {
         var y = event.pageY;
         var random = "n" + Math.random();
         this.id = random;
+        if (this.dataset.exp) {
+            criterion.innerHTML = this.dataset.exp;
+        }
         criterion.appendChild(divContent);
         criterion.classList.add('popup');
         criterion.style.fontSize = "smaller";
         criterion.style.backgroundColor = "#EFEEA9";
         criterion.style.position = "absolute";
-        criterion.style.top = y + "px";
-        criterion.style.right = "15px";
+        criterion.style.top = (y - 125) + "px";
+        criterion.style.right = "19%";
         criterion.style.border = "1px solid #2B3966";
         criterion.style.borderWidth = "2px";
         criterion.style.color = "#3D2301";
@@ -42,14 +45,15 @@ function popUp(event) {
 }
 
 function destroy() {
-    var popup = document.getElementById(this.dataset.pointer);
+    var popup = document.getElementsByClassName('dinamic')[0];
+    var div = document.getElementsByClassName('popup')[0];
     popup.removeAttribute("id");
-    document.body.removeChild(this);
+    document.body.removeChild(div);
 }
 
 function giveId() {
     var id = this.getAttribute('value');
-    var form = document.getElementsByClassName('criteria')[0]
+    var form = document.getElementsByClassName('criteria')[0];
     var ams = document.getElementsByClassName('am');
     var expans = document.getElementsByClassName('expansion');
     var regs = document.getElementsByClassName('reg');
@@ -109,7 +113,7 @@ function changecriteria() {
     
     var id = this.getAttribute('value');
     var dels = document.querySelectorAll('del');
-    var form = document.getElementsByClassName('criteria')[0]
+    var form = document.getElementsByClassName('criteria')[0];
     var adds = document.querySelectorAll('ins');
     var apostrophes = document.getElementsByClassName('supplied');
     
@@ -158,7 +162,6 @@ function changecriteria() {
             }
             
             form.querySelectorAll('[value="apostrophe"]')[0].checked = false;
-            
         } else {
             for (var i = 0; i < apostrophes.length; i++) {
                 apostrophes[i].classList.remove('hide');

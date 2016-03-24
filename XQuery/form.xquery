@@ -19,229 +19,241 @@ let $equipolent := $file//tei:fvLib[@n eq 'equipolent readings']/tei:fs[concat('
 
 return
     
-    (<form
-        class="lingua pt"
-        method='GET'
-        action='results.php'>
-        <fieldset>
-            <legend>Fenómenos fonéticos</legend>
-            
-            {
-                for $id in $phonetic
-                let $name := $id//tei:string[@xml:lang eq 'pt']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="phenomenon[]"
-                        id="{$id/@xml:id}"
-                        value="{$id/@xml:id}"/>,
-                    <label
-                        for="{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
-            }
-        </fieldset>
-        <fieldset>
-            <legend>Principais fenómenos morfológicos</legend>
-            
-            {
-                for $id in $morph
-                let $name := $id//tei:string[@xml:lang eq 'pt']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="phenomenon[]"
-                        id="{$id/@xml:id}"
-                        value="{$id/@xml:id}"/>,
-                    <label
-                        for="{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
-            }
-        </fieldset>
-        <fieldset>
-            <legend>Outros fenómenos</legend>
-            
-            {
-                for $id in $other
-                let $name := $id//tei:string[@xml:lang eq 'pt']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="phenomenon[]"
-                        id="{$id/@xml:id}"
-                        value="{$id/@xml:id}"/>,
-                    <label
-                        for="{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
-            }
-        </fieldset>
-        <button
-            class="submit"
-            type="submit"><span
-                class="pt">Pesquisa</span></button>
-    </form>,
-    <form
-        class="lingua en"
-        method='GET'
-        action='results.php'>
-        <fieldset>
-            <legend>Phonetic phenomena</legend>
-            
-            {
-                for $id in $phonetic
-                let $name := $id//tei:string[@xml:lang eq 'en']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="phenomenon[]"
-                        id="en{$id/@xml:id}"
-                        value="{$id/@xml:id}"/>,
-                    <label
-                        for="en{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
-            }
-        </fieldset>
-        <fieldset>
-            <legend>Main morphological phenomena</legend>
-            
-            {
-                for $id in $morph
-                let $name := $id//tei:string[@xml:lang eq 'en']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="phenomenon[]"
-                        id="en{$id/@xml:id}"
-                        value="{$id/@xml:id}"/>,
-                    <label
-                        for="en{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
-            }
-        </fieldset>
-        <fieldset>
-            <legend>Other phenomena</legend>
-            
-            {
-                for $id in $other
-                let $name := $id//tei:string[@xml:lang eq 'en']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="phenomenon[]"
-                        id="en{$id/@xml:id}"
-                        value="{$id/@xml:id}"/>,
-                    <label
-                        for="en{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
-            }
-        </fieldset>
-        <button
-            class="submit"
-            type="submit"><span
-                class="en">Search</span></button>
-    </form>,
+    (<div
+        class="pt">
+        <form
+            class="lingua"
+            method='GET'
+            action='results.php'>
+            <fieldset>
+                <legend>Fenómenos fonéticos</legend>
+                
+                {
+                    for $id in $phonetic
+                    let $name := $id//tei:string[@xml:lang eq 'pt']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="phenomenon[]"
+                            id="{$id/@xml:id}"
+                            value="{$id/@xml:id}"/>,
+                        <label
+                            for="{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
+                }
+            </fieldset>
+            <fieldset>
+                <legend>Principais fenómenos morfológicos</legend>
+                
+                {
+                    for $id in $morph
+                    let $name := $id//tei:string[@xml:lang eq 'pt']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="phenomenon[]"
+                            id="{$id/@xml:id}"
+                            value="{$id/@xml:id}"/>,
+                        <label
+                            for="{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
+                }
+            </fieldset>
+            <fieldset>
+                <legend>Outros fenómenos</legend>
+                
+                {
+                    for $id in $other
+                    let $name := $id//tei:string[@xml:lang eq 'pt']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="phenomenon[]"
+                            id="{$id/@xml:id}"
+                            value="{$id/@xml:id}"/>,
+                        <label
+                            for="{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
+                }
+            </fieldset>
+            <button
+                class="submit"
+                type="submit"><span
+                    class="pt">Pesquisa</span></button>
+        </form></div>,
+    <div
+        class="en">
+        <form
+            class="lingua"
+            method='GET'
+            action='results.php'>
+            <fieldset>
+                <legend>Phonetic phenomena</legend>
+                
+                {
+                    for $id in $phonetic
+                    let $name := $id//tei:string[@xml:lang eq 'en']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="phenomenon[]"
+                            id="en{$id/@xml:id}"
+                            value="{$id/@xml:id}"/>,
+                        <label
+                            for="en{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
+                }
+            </fieldset>
+            <fieldset>
+                <legend>Main morphological phenomena</legend>
+                
+                {
+                    for $id in $morph
+                    let $name := $id//tei:string[@xml:lang eq 'en']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="phenomenon[]"
+                            id="en{$id/@xml:id}"
+                            value="{$id/@xml:id}"/>,
+                        <label
+                            for="en{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
+                }
+            </fieldset>
+            <fieldset>
+                <legend>Other phenomena</legend>
+                
+                {
+                    for $id in $other
+                    let $name := $id//tei:string[@xml:lang eq 'en']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="phenomenon[]"
+                            id="en{$id/@xml:id}"
+                            value="{$id/@xml:id}"/>,
+                        <label
+                            for="en{$id/@xml:id}">{transform:transform($name, 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</label>, <br/>)
+                }
+            </fieldset>
+            <button
+                class="submit"
+                type="submit"><span
+                    class="en">Search</span></button>
+        </form></div>,
     <h2
         id="error"><span
             class="pt">Erros de cópia</span><span
             class="en">Scribal errors</span></h2>,
-    <form
-        action='results-sc.php'
-        method='GET'
-        class="pt lingua">
-        <fieldset>
-            {
-                for $error in $scribalError
-                let $name := $error//tei:string[@xml:lang eq 'pt']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="error[]"
-                        id="{$error/@xml:id}"
-                        value="{$error/@xml:id}"/>,
-                    <label
-                        for="{$error/@xml:id}">{$name}</label>, <br/>)
-            }
-        </fieldset>
-        <button
-            class="submit"
-            type="submit"><span
-                class="pt">Pesquisa</span></button>
-    </form>,
-    <form
-        method='GET'
-        action='results-sc.php'
-        class="en lingua">
-        <fieldset>
-            {
-                for $error in $scribalError
-                let $name := $error//tei:string[@xml:lang eq 'en']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="error[]"
-                        id="en{$error/@xml:id}"
-                        value="{$error/@xml:id}"/>,
-                    <label
-                        for="en{$error/@xml:id}">{$name}</label>, <br/>)
-            }
-        </fieldset>
-        <button
-            class="submit"
-            type="submit"><span
-                class="en">Search</span></button>
-    </form>,
+    <div
+        class="pt">
+        <form
+            action='results-sc.php'
+            method='GET'
+            class="lingua">
+            <fieldset>
+                {
+                    for $error in $scribalError
+                    let $name := $error//tei:string[@xml:lang eq 'pt']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="error[]"
+                            id="{$error/@xml:id}"
+                            value="{$error/@xml:id}"/>,
+                        <label
+                            for="{$error/@xml:id}">{$name}</label>, <br/>)
+                }
+            </fieldset>
+            <button
+                class="submit"
+                type="submit"><span
+                    class="pt">Pesquisa</span></button>
+        </form></div>,
+    <div
+        class="en">
+        <form
+            method='GET'
+            action='results-sc.php'
+            class="lingua">
+            <fieldset>
+                {
+                    for $error in $scribalError
+                    let $name := $error//tei:string[@xml:lang eq 'en']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="error[]"
+                            id="en{$error/@xml:id}"
+                            value="{$error/@xml:id}"/>,
+                        <label
+                            for="en{$error/@xml:id}">{$name}</label>, <br/>)
+                }
+            </fieldset>
+            <button
+                class="submit"
+                type="submit"><span
+                    class="en">Search</span></button>
+        </form></div>,
     <h2
         id="other"><span
             class="pt">Outras variantes</span><span
             class="en">Other variants</span></h2>,
-    <form
-        action='results-eq.php'
-        method='GET'
-        class="pt lingua">
-        <fieldset>
-            {
-                for $equip in $equipolent
-                let $name := $equip//tei:string[@xml:lang eq 'pt']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="equip[]"
-                        id="{$equip/@xml:id}"
-                        value="{$equip/@xml:id}"/>,
-                    <label
-                        for="{$equip/@xml:id}">{$name}</label>, <br/>)
-            }
-        </fieldset>
-        <button
-            class="submit"
-            type="submit"><span
-                class="pt">Pesquisa</span></button>
-    </form>,
-    <form
-        method='GET'
-        action='results-eq.php'
-        class="en lingua">
-        <fieldset>
-            {
-                for $equip in $equipolent
-                let $name := $equip//tei:string[@xml:lang eq 'en']/text()
-                order by $name
-                return
-                    (<input
-                        type="checkbox"
-                        name="equip[]"
-                        id="en{$equip/@xml:id}"
-                        value="{$equip/@xml:id}"/>,
-                    <label
-                        for="en{$equip/@xml:id}">{$name}</label>, <br/>)
-            }
-        </fieldset>
-        <button
-            class="submit"
-            type="submit"><span
-                class="en">Search</span></button>
-    </form>
+    <div
+        class="pt">
+        <form
+            action='results-eq.php'
+            method='GET'
+            class="lingua">
+            <fieldset>
+                {
+                    for $equip in $equipolent
+                    let $name := $equip//tei:string[@xml:lang eq 'pt']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="equip[]"
+                            id="{$equip/@xml:id}"
+                            value="{$equip/@xml:id}"/>,
+                        <label
+                            for="{$equip/@xml:id}">{$name}</label>, <br/>)
+                }
+            </fieldset>
+            <button
+                class="submit"
+                type="submit"><span
+                    class="pt">Pesquisa</span></button>
+        </form></div>,
+    <div
+        class="en">
+        <form
+            method='GET'
+            action='results-eq.php'
+            class="lingua">
+            <fieldset>
+                {
+                    for $equip in $equipolent
+                    let $name := $equip//tei:string[@xml:lang eq 'en']/text()
+                    order by $name
+                    return
+                        (<input
+                            type="checkbox"
+                            name="equip[]"
+                            id="en{$equip/@xml:id}"
+                            value="{$equip/@xml:id}"/>,
+                        <label
+                            for="en{$equip/@xml:id}">{$name}</label>, <br/>)
+                }
+            </fieldset>
+            <button
+                class="submit"
+                type="submit"><span
+                    class="en">Search</span></button>
+        </form></div>
     
     )

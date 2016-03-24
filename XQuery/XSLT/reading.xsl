@@ -328,22 +328,27 @@
                 <xsl:text> hide</xsl:text>
             </xsl:attribute>
             <xsl:text>(</xsl:text>
-            <xsl:if test="contains(@rend, 'underdot')">
-                <xsl:value-of
-                    select="
-                        for $i in string-to-codepoints(.)
-                        return
-                            string-join(codepoints-to-string($i), '&#803;')"
-                />
-            </xsl:if>
-            <xsl:if test="contains(@rend, 'multiple-overstrike')">
-                <xsl:value-of
-                    select="
-                        for $i in string-to-codepoints(.)
-                        return
-                            string-join(codepoints-to-string($i), '&#824;')"
-                />
-            </xsl:if>
+            <xsl:choose>
+                <xsl:when test="contains(@rend, 'underdot')">
+                    <xsl:value-of
+                        select="
+                            for $i in string-to-codepoints(.)
+                            return
+                            string-join(codepoints-to-string($i), '&#x323;')"
+                    />
+                </xsl:when>
+                <xsl:when test="contains(@rend, 'multiple-overstrike')">
+                    <xsl:value-of
+                        select="
+                            for $i in string-to-codepoints(.)
+                            return
+                                string-join(codepoints-to-string($i), '&#824;')"
+                    />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates/>
+                </xsl:otherwise>
+            </xsl:choose>
             <xsl:text>)</xsl:text>
         </xsl:element>
     </xsl:template>
@@ -431,6 +436,6 @@
         <span class="supplied">’</span>
     </xsl:template>
     <xsl:template match="tei:subst">
-        <xsl:apply-templates/>
+        <xsl:apply-templates select="*"/>
     </xsl:template>
 </xsl:stylesheet>

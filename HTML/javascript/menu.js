@@ -17,5 +17,5 @@ function destroy() {
     this.classList.toggle('has-sub');
 }
 
-window.onload = menu
+window.onload = menu;
 

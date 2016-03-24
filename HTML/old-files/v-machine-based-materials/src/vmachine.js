@@ -13,7 +13,7 @@ function init() {
 }
 
 function getElementsByClass(searchClass,node,tag) {
-   var classElements = new Array();
+   var classElements = [];
    if ( node == null ) node = document;
    if ( tag == null ) tag = "*";
    var els = node.getElementsByTagName(tag);
@@ -394,12 +394,12 @@ var panels = [];
     pStyleDrag = function() {
         this.style.opacity = '.70';
         this.style.filter = "alpha(opacity=70)";
-    }
+    };
     pStyleDragEnd = function() {
        this.style.opacity = '1.0'; 
        this.style.filter = "alpha(opacity=100)";
    
-    }
+    };
     
 /*************************************************************************
  Name: hidePanel
@@ -726,7 +726,7 @@ var Tooltip = {
   Tooltip.positionTip(e);	
   }
   
-  }
+  };
 
 /*************************************************************************
     dw_event.js (version date Feb 2004)
@@ -755,13 +755,13 @@ var Tooltip = {
     e = e? e: window.event;
     e.tgt = e.srcElement? e.srcElement: e.target;
     
-    if (!e.preventDefault) e.preventDefault = function () { return false; }
-    if (!e.stopPropagation) e.stopPropagation = function () { if (window.event) window.event.cancelBubble = true; }
+    if (!e.preventDefault) e.preventDefault = function () { return false; };
+    if (!e.stopPropagation) e.stopPropagation = function () { if (window.event) window.event.cancelBubble = true; };
     
     return e;
     }
     
-    }
+    };
     
     
     /*************************************************************************
@@ -822,7 +822,7 @@ var Tooltip = {
     this.getScrollX();  this.getScrollY();
     }
     
-    }
+    };
     
  /**************************************************
  * dom-drag.js
@@ -916,8 +916,8 @@ var Drag = {
       nx = x + ((ex - o.lastMouseX) * (o.hmode ? 1 : -1));
       ny = y + ((ey - o.lastMouseY) * (o.vmode ? 1 : -1));
 
-      if (o.xMapper)		nx = o.xMapper(y)
-      else if (o.yMapper)	ny = o.yMapper(x)
+      if (o.xMapper)		nx = o.xMapper(y);
+      else if (o.yMapper)	ny = o.yMapper(x);
 
       Drag.obj.root.style[o.hmode ? "left" : "right"] = nx + "px";
       Drag.obj.root.style[o.vmode ? "top" : "bottom"] = ny + "px";

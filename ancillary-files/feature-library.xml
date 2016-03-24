@@ -22,7 +22,7 @@
                 <p>Born-digital.</p>
             </sourceDesc>
         </fileDesc>
-        
+
     </teiHeader>
     <text>
         <body>
@@ -314,11 +314,11 @@
 
                 <!--Morphological change: verbs-->
 
-                
+
                 <fs xml:id="pal-stem">
                     <f name="type">
                         <fs feats="#past"/>
-                    <!--Incomplete-->
+                        <!--Incomplete-->
                         <string xml:lang="en">Palatalized past stem in irregular verbs</string>
                         <string xml:lang="pt">Palatalização tema perfeito pretéritos fortes</string>
                     </f>
@@ -499,7 +499,7 @@
 
                 <!--Other phenomena -->
 
-                
+
                 <fs xml:id="cognate">
                     <f name="type">
                         <fs feats="#doublet"/>
@@ -612,7 +612,7 @@
                         <string xml:lang="en">Alternation ’depois~despois’</string>
                         <string xml:lang="pt">Alternância ’depois~despois’</string>
                     </f>
-                </fs>                
+                </fs>
                 <fs xml:id="si">
                     <f name="type">
                         <fs feats="#conj">
@@ -684,7 +684,7 @@
                         <string xml:lang="pt">Erro de cópia</string>
                     </f>
                 </fs>
-                
+
                 <fs xml:id="ling-inter">
                     <f name="type">
                         <fs feats="#gen-error #ling-interference"/>
@@ -775,11 +775,12 @@
             categorization -->
 
             <fLib xml:id="graphic">
-                <f name="regular" xml:id="reg" n="nn/ll"></f>
+                <f name="regular" xml:id="reg" n="nn/ll"/>
                 <f name="punct" xml:id="punct" n="pontuação"/>
-                <f name="back-vow" xml:id="back-vow" n="uso de 'u' para a vogal posterior semifechada"/> 
+                <f name="back-vow" xml:id="back-vow"
+                    n="uso de 'u' para a vogal posterior semifechada"/>
                 <f name="y-dip" xml:id="y-dip" n="y segundo elemento ditongo"/>
-                <f name="uy" xml:id="uy" n="y segundo elemento ditongo com u"/>                
+                <f name="uy" xml:id="uy" n="y segundo elemento ditongo com u"/>
                 <f name="y-minin" xml:id="y-minin" n="y como núcleo silábico com minin adjacente"/>
                 <f name="y-yod" xml:id="y-yod" n="y para yode"/>
                 <f name="y-vow" xml:id="y-vow" n="y núcleo silábico sem minin"/>
@@ -788,14 +789,14 @@
                 <f name="j-minin" xml:id="j-minin" n="j nucleo silábico com minin adjacente"/>
                 <f name="j-vow" xml:id="j-vow" n="j como núcleo silábico sem minim"/>
                 <f name="j-dip" xml:id="j-dip" n="j segundo elemento ditongo"/>
-                <f name="uj" xml:id="uj" n="j segundo elemento ditongo com u"/> 
+                <f name="uj" xml:id="uj" n="j segundo elemento ditongo com u"/>
                 <f name="j-cons" xml:id="j-cons" n="j consoante"/>
                 <f name="g-cons" xml:id="g-cons" n="g como consoante palatal"/>
                 <f name="çe" xml:id="çe" n="ç ante de e/i"/>
                 <f name="m-end" xml:id="m-end" n="m final"/>
                 <f name="h-et" xml:id="h-et" n="h etimologico"/>
                 <f name="h-monos" xml:id="h-monos" n="h com minim adjacente"/>
-                <f name="h-anti" xml:id="h-anti" n="h muda noutras posiçons"/> 
+                <f name="h-anti" xml:id="h-anti" n="h muda noutras posiçons"/>
                 <f name="abb" xml:id="abb" n="abreviatura"/>
                 <f name="syn" xml:id="syn" n="sinalefa"/>
                 <f name="nh" xml:id="nh" n="nh nasalização vocálica"/>
@@ -813,12 +814,13 @@
                 <f name="cc" xml:id="cc" n="duplicación c"/>
                 <f name="et" xml:id="et" n="conjunção grafia arcaica"/>
                 <f name="v" xml:id="v" n="uso de v minúscula"/>
-                <f name="graph-art" xml:id="graph-art" n="materialização gráfica dum fenómeno de fonética sintática"/>
+                <f name="graph-art" xml:id="graph-art"
+                    n="materialização gráfica dum fenómeno de fonética sintática"/>
                 <f name="capital" xml:id="capital" n="diferença na distribuiçom maiúscula/minúscula"/>
                 <f name="duvida" xml:id="duvida" n="Nom sei"/>
-                
+
             </fLib>
-            
+
         </body>
     </text>
 </TEI>

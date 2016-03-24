@@ -1694,7 +1694,7 @@
                         <orig>iurou<am>ꝯ</am><ex>os</ex></orig>
                         <reg>iuro-u<am>ꝯ</am><ex>os</ex></reg>
                      </choice> p<am>̲</am><ex>er</ex> bo<am>̄</am><ex>̃</ex>a fe</rdg>
-                     <rdg wit="V"><sic>ui</sic>rou<am>ꝯ</am><ex>us</ex> p<am>̲</am><ex>er</ex> bo<am>̄</am><ex>̃</ex>a fe</rdg>
+                     <rdg wit="#V"><sic>ui</sic>rou<am>ꝯ</am><ex>us</ex> p<am>̲</am><ex>er</ex> bo<am>̄</am><ex>̃</ex>a fe</rdg>
                   </app>
                </l>
                <l n="10">
@@ -1741,7 +1741,7 @@
                </l>
                <l n="15">
                   <app>
-                     <rdg wit="#A" ana="#reg">e<choice>
+                     <rdg wit="#A" ana="#reg">e <choice>
                         <orig>direi uo<seg corresp="#reg">ll</seg>es</orig>
                         <reg>direi-uo-<seg corresp="#reg">ll</seg>es</reg>
                      </choice></rdg>
@@ -2730,9 +2730,7 @@
                   <app>
                      <rdg wit="#A">bo<am>̄</am><ex>̃</ex>a</rdg>
                      <rdg wit="#B" ana="#denas">boa</rdg>
-                     <rdg wit="#V" ana="#rev #denas">
-                     <subst>
-                        <add place="overwrite">b</add>
+                     <rdg wit="#V" ana="#rev #denas"><subst>
                         <del rend="overwrite">v</del>
                         <add place="above">b</add>
                      </subst>oa</rdg>
@@ -3022,8 +3020,7 @@
                      <rdg wit="#A #B #V">e</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#rev">
-                     <del rend="underdot overstrike">dandar</del></rdg>
+                     <rdg wit="#A" ana="#rev"><del rend="underdot overstrike">dandar</del></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">de</rdg>

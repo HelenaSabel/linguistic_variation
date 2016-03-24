@@ -57,29 +57,36 @@
         <h3 class="en">Other criteria</h3>
         <h3 class="pt">Outros critérios</h3>
         <form class="criteria">
-            <fieldset><input type="radio" name="abbreviation" value="expan"
-                             checked="checked"/><span class="en">Expanded abbreviations</span><span
-                    class="pt">Desenvolvimento de abreviaturas</span><input type="radio"
-                                                                            name="abbreviation" value="abb"/><span
-                    class="en">Abbreviation
-                            markers</span><span class="pt">Signos de abreviação</span>
+            <fieldset><span><input type="radio" name="abbreviation" value="expan"
+                                   checked="checked" id="expan"/><label for="expan" class="en">Expanded
+                        abbreviations</label><label for="expan"
+                                                    class="pt">Desenvolvimento de
+                        abreviaturas</label></span><span><input type="radio"
+                                                                name="abbreviation" value="abb" id="abb"/><label
+                        for="abb"
+                        class="en">Abbreviation
+                        markers</label><label for="abb" class="pt">Signos de abreviação</label></span>
             </fieldset>
-            <fieldset><input type="radio" name="hyphen" value="reg" checked="checked"
-                /><span class="en">Hyphenated clitics and allomoph articles</span><span
-                    class="pt">Clíticos e segunda forma do artigo com hífen</span><input
-                    type="radio" name="hyphen" value="orig"/><span class="en">Original
-                            disposition of clitics and allomorphs</span><span class="pt">Conservação
-                            da disposição original de clíticos e artigos alomorfos</span>
+            <fieldset><span><input type="radio" id="reg" name="hyphen" value="reg" checked="checked"
+                    /><label for="reg" class="en">Hyphenated clitics and allomoph articles</label><label for="reg"
+                                                                                                         class="pt">Clíticos
+                        e segunda forma do artigo com hífen</label></span><span><input
+                        type="radio" name="hyphen" value="orig" id="orig"/><label for="orig" class="en">Original
+                        disposition of clitics and allomorphs</label><label for="orig" class="pt">Conservação
+                        da disposição original de clíticos e artigos alomorfos</label></span>
             </fieldset>
-            <fieldset><input type="checkbox" name="apostrophe" value="apostrophe"
-                             checked="checked"/><span class="en">Apostrophes to detect
-                            elisions</span><span class="pt">Apóstrofes nas elisões
-                            vocálicas</span><input type="checkbox" name="add" value="add"/><span
-                    class="pt">Identificar visualmente as adições</span><span class="en"
-                >Identification of additions</span><input type="checkbox" name="del"
-                                                          value="del"/><span class="pt">Ver cancelações</span><span
-                    class="en"
-                >View deletations</span>
+            <fieldset><span><input type="checkbox" name="apostrophe" value="apostrophe"
+                                   checked="checked" id="apostrophe"/><label class="en" for="apostrophe">Apostrophes to
+                        detect
+                        elisions</label><label for="apostrophe" class="pt">Apóstrofes nas elisões
+                        vocálicas</label></span><span><input type="checkbox" name="add" value="add" id="add"/><label
+                        for="add"
+                        class="pt">Identificar visualmente as adições</label><label for="add" class="en"
+                    >Identification of additions</label></span><span><input type="checkbox" name="del" id="del"
+                                                                      value="del"/><label for="del" class="pt">Ver
+                    cancelações</label><label for="del"
+                                         class="en"
+                >View deletations</label></span>
             </fieldset>
         </form>
     </div>

@@ -52,7 +52,7 @@ function readCookie(name) {
   switch (id) {
     case 'pt':
     for (var i = 0; i < ptsLength; i++) {
-      pts[i].style.display = 'inline-block';
+      pts[i].style.display = 'inline';
     }
     for (var i = 0; i < ensLength; i++) {
       ens[i].style.display = 'none';
@@ -63,7 +63,7 @@ function readCookie(name) {
       pts[i].style.display = 'none';
     }
     for (var i = 0; i < ensLength; i++) {
-      ens[i].style.display = 'inline-block';
+      ens[i].style.display = 'inline';
     }
     
   }

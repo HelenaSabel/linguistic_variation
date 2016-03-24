@@ -15,4 +15,4 @@ function hide() {
 }
 
 
-window.onload = select
+window.onload = select;
