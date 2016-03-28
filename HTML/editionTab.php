@@ -10,6 +10,7 @@
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript">/**/</script>
     <script src="http://bigspotteddog.github.io/ScrollToFixed/jquery-scrolltofixed.js"
             type="text/javascript">/**/</script>
+    <script src="javascript/header.js" type="text/javascript">/**/</script>
     <script src="javascript/checkboxes.js" type="text/javascript">/**/</script>
     <script src="javascript/tooltip.js" type="text/javascript">/**/</script>
     <script src="javascript/form.js" type="text/javascript">/**/</script>

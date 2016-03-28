@@ -83,15 +83,38 @@
                         for="add"
                         class="pt">Identificar visualmente as adições</label><label for="add" class="en"
                     >Identification of additions</label></span><span><input type="checkbox" name="del" id="del"
-                                                                      value="del"/><label for="del" class="pt">Ver
-                    cancelações</label><label for="del"
-                                         class="en"
-                >View deletations</label></span>
+                                                                            value="del"/><label for="del" class="pt">Ver
+                        cancelações</label><label for="del"
+                                                  class="en"
+                    >View deletations</label></span>
             </fieldset>
         </form>
     </div>
-    <?php
 
+<!--
+    -->
+   <!-- require_once('config.php');
+    $url = REST_PATH . "/db/VTLGP/queries/edition.xquery";
+    $value = htmlspecialchars($_POST['author']);
+    $data = array('author' => $value);
+    $options = array(
+        'http' => array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        )
+    );
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+    if ($result === FALSE) { /* Handle error */
+    }
+
+    var_dump($result);
+    echo $result;-->
+
+
+
+    <?php
     $songs = $_GET["song"];
     $songValues = implode(",", $songs);
     $authors = $_GET["author"];
@@ -106,6 +129,9 @@
     echo file_get_contents($query);
 
     ?>
+
+
+
 
     <div class="footer"></div>
 </main>
