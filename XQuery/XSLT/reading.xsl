@@ -137,7 +137,7 @@
         <xsl:text> </xsl:text>
     </xsl:template>
     <xsl:template
-        match="text()[following-sibling::node()[1][self::tei:am]] | text()[following-sibling::node()[1][self::tei:seg[@corresp='#abb']]]">
+        match="text()[following-sibling::node()[1][self::tei:am]] | text()[following-sibling::node()[1][self::tei:seg][child::node()[1][self::tei:am]]]">
         <xsl:value-of select="replace(., '\w$', '')"/>
     </xsl:template>
     <xsl:template match="tei:seg">
@@ -332,18 +332,78 @@
                 <xsl:when test="contains(@rend, 'underdot')">
                     <xsl:value-of
                         select="
-                            for $i in string-to-codepoints(.)
+                            string-join(for $i in string-to-codepoints(.)
                             return
-                            string-join(codepoints-to-string($i), '&#x323;')"
+                            concat(codepoints-to-string($i), '&#x323;'),'')"
                     />
                 </xsl:when>
                 <xsl:when test="contains(@rend, 'multiple-overstrike')">
                     <xsl:value-of
                         select="
-                            for $i in string-to-codepoints(.)
+                        string-join(for $i in string-to-codepoints(.)
                             return
-                                string-join(codepoints-to-string($i), '&#824;')"
+                                concat(codepoints-to-string($i), '&#824;'), '')"
                     />
+                </xsl:when>
+                <xsl:when test="tei:gap">
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">
+                            <xsl:text>gap pt</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="data-exp">
+                            <xsl:if test="tei:gap[@reason eq 'error']">
+                                <xsl:text>Erro de cópia</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'economy']">
+                                <xsl:text>Omissão de conteúdos repetidos</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'unknown']">
+                                <xsl:text>Omissão de origem desconhecida</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'damage']">
+                                <xsl:text>Omissão provocada pelo estado de conservação do testemunho</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'illegible']">
+                                <xsl:text>Trecho ilegível</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'model']">
+                                <xsl:text>Provavelmente, omissão presente no modelo</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'unfinished']">
+                                <xsl:text>Testemunho inacabado</xsl:text>
+                            </xsl:if>
+                        </xsl:attribute>
+                        <xsl:text> </xsl:text>
+                    </xsl:element>
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">
+                            <xsl:text>gap en</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="data-exp">
+                            <xsl:if test="tei:gap[@reason eq 'error']">
+                                <xsl:text>Scribal error</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'economy']">
+                                <xsl:text>Omission of repeated contents</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'unknown']">
+                                <xsl:text>Unknown reason for omission</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'damage']">
+                                <xsl:text>Damaged witness</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'illegible']">
+                                <xsl:text>Illegivel</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'model']">
+                                <xsl:text>Likely, omission present in the model of this witness</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'unfinished']">
+                                <xsl:text>Unfinished witness</xsl:text>
+                            </xsl:if>
+                        </xsl:attribute>                        
+                        <xsl:text> </xsl:text>
+                    </xsl:element>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:apply-templates/>
@@ -360,7 +420,7 @@
             <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
-    <xsl:template match="tei:gap">
+    <xsl:template match="tei:gap[not(parent::tei:del)]">
         <xsl:element name="span">
             <xsl:attribute name="class">
                 <xsl:text>gap pt</xsl:text>
