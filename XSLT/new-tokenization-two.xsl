@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0"
+    exclude-result-prefixes="#all" version="2.0">
     <xsl:output method="xml" indent="yes"/>
     <xsl:template match="/">
         <xsl:variable name="string">
@@ -37,7 +39,7 @@
                 <xsl:for-each select="@*">
                     <!-- Since we used white spaces to delimit the tokens, we introduced here an 
                 asterisk instead that is replaced later on-->
-                    <xsl:text>*</xsl:text>
+                    <xsl:text>_</xsl:text>
                     <xsl:value-of select="name()"/>
                     <xsl:text>="</xsl:text>
                     <xsl:value-of select="current()"/>
@@ -57,7 +59,7 @@
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:for-each select="@*">
-            <xsl:text>*</xsl:text>
+            <xsl:text>_</xsl:text>
             <xsl:value-of select="name()"/>
             <xsl:text>="</xsl:text>
             <xsl:value-of select="current()"/>
@@ -108,7 +110,7 @@
         <xsl:text>&gt;</xsl:text>
         <xsl:choose>
             <xsl:when test="contains(., ' ')">
-                <xsl:value-of select="replace(., ' ', '*')"/>
+                <xsl:value-of select="replace(., ' ', '_')"/>
             </xsl:when>
             <xsl:otherwise>                
                 <xsl:apply-templates/>
@@ -138,7 +140,7 @@
     <xsl:template match="comment()" mode="tokens">
         <xsl:comment select="."/>
     </xsl:template>
-    <xsl:template match="app" mode="tokens">
+    <xsl:template match="app[not(parent::title)]" mode="tokens">
         <xsl:variable name="Atokens" select="tokenize(rdg[@wit eq '#A'],'\s+')"/>
         <xsl:variable name="Btokens" select="tokenize(rdg[@wit eq '#B'],'\s+')"/>
         <xsl:variable name="count" select="max((count($Atokens),count($Btokens)))"/>
@@ -149,7 +151,7 @@
                         <xsl:element name="rdg">
                             <xsl:attribute name="wit">#A #B</xsl:attribute>
                     <xsl:value-of
-                        select="insert-before(replace($Atokens[current()], '\*', ' '), 2, '')"
+                        select="insert-before(replace($Atokens[current()], '_', ' '), 2, '')"
                         disable-output-escaping="yes"/>
                         </xsl:element>
                     </xsl:element>
@@ -159,7 +161,7 @@
                         <rdg wit="#A">
                             <xsl:choose>
                                 <xsl:when test="$Atokens[current()]">
-                                    <xsl:value-of select="replace($Atokens[current()], '\*', ' ')"
+                                    <xsl:value-of select="replace($Atokens[current()], '_', ' ')"
                                         disable-output-escaping="yes"/>
                                 </xsl:when>
                                 <xsl:otherwise>
@@ -170,7 +172,7 @@
                         <rdg wit="#B">
                             <xsl:choose>
                                 <xsl:when test="$Btokens[current()]">
-                                    <xsl:value-of select="replace($Btokens[current()], '\*', ' ')"
+                                    <xsl:value-of select="replace($Btokens[current()], '_', ' ')"
                                         disable-output-escaping="yes"/>
                                 </xsl:when>
                                 <xsl:otherwise>
