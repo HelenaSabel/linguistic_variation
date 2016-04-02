@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--    Code written by David J. Birnbaum, www.obdurodon.org -->
+
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0"
@@ -9,15 +12,33 @@
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template
-        match="app[rdg[contains(@wit, '#A #B')]][following-sibling::node()[1][self::app/rdg[contains(@wit, '#A #B')]]]">
-        <app>
-            <rdg wit="#A #B"><xsl:sequence select="current()/rdg/*"/><xsl:sequence select="
-                        following-sibling::app/rdg[contains(@wit, '#A #B')]/*
-                        except following-sibling::app[rdg[not(contains(@wit, '#A #B'))]]/following-sibling::*"/></rdg>
-        </app>
+    <xsl:template match="l">
+        <l n="{@n}">
+            <xsl:for-each-group select="app"
+                group-adjacent="
+                if (rdg/@wit = '#A #B') then
+                0
+                else
+                position()">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each-group>
+        </l>
     </xsl:template>
-    <xsl:template
-        match="app[rdg[contains(@wit, '#A #B')]][preceding-sibling::node()[1][self::app/rdg[contains(@wit, '#A #B')]]]"
-    />
+    <xsl:template match="app">
+        <xsl:choose>
+            <xsl:when test="count(current-group()) eq 1">
+                <xsl:sequence select="current-group()"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <app>
+                    <rdg wit="#A #B">
+                        <xsl:apply-templates select="current-group()/node()" mode="group"/>
+                    </rdg>
+                </app>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="rdg" mode="group">
+        <xsl:apply-templates/>
+    </xsl:template>
 </xsl:stylesheet>
