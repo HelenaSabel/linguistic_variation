@@ -53,7 +53,7 @@ menu > ul > li{
 }
 
 menu ul ul{
-    background-color: #393649;
+    background-color: #282633;
     display: none;
     position: absolute;
     left: 0;
@@ -63,7 +63,6 @@ menu ul ul{
 }
 
 menu a{
-    cursor: pointer;
     display: block;
     color: #FFC938;
     padding: 0 15px 5px;
@@ -736,7 +735,7 @@ ul ul{
         display: block;
     }
     menu li li:hover{
-        background-color: #282633;
+        background-color: #393649;
     }
 
 }
