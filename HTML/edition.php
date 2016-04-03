@@ -123,9 +123,10 @@
     $periodValues = implode(",", $periods);
     $scribes = $_GET["scribe"];
     $scribeValues = implode(",", $scribes);
+    $line = $_GET["line"];
     require_once('config.php');
     $query = REST_PATH . "/db/VTLGP/queries/edition.xquery?song=" . $songValues . "&author=" . $authorValues .
-        "&period=" . $periodValues . "&scribe=" . $scribeValues;
+        "&period=" . $periodValues . "&scribe=" . $scribeValues . "&line=" . $line;
     echo file_get_contents($query);
 
     ?>

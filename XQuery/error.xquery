@@ -34,53 +34,9 @@ return
                             id="graf{$result}">{$scribalError[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text()}</span><span
                             class="en">{$scribalError[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text()}</span></h2>,
                     <h3><span
-                            class="pt">Período</span><span
-                            class="en">Period</span></h3>,
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="950"
-                        height="100">
-                        {
-                            
-                            let $fen := $readings[matches(@ana, concat('#', $result))]
-                            for $period at $pos in
-                            for $i in distinct-values($poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]/tei:floruit/@period)
-                            order by count($fen[ancestor::tei:div[1]//tei:name/substring(@ref, 2) = $poets/tei:floruit[@period = $i]/../@xml:id]) descending
-                            return
-                                $i
-                            let $count := count($fen[ancestor::tei:div[1]//tei:name/substring(@ref, 2) = $poets/tei:floruit[@period = $period]/../@xml:id])
-                            let $sum := count($fen)
-                            let $percentage := round-half-to-even((100 * $count div $sum), 2)
-                            order by $count descending
-                            return
-                                <g>
-                                    <rect
-                                        fill="#2B3966"
-                                        height="22"
-                                        width="{$count * 3}"
-                                        x="70"
-                                        y="{$pos * 22}"
-                                        stroke="#EAE5C5"
-                                        stroke-width="2"/>
-                                    <text
-                                        fill="black"
-                                        font-size="12"
-                                        x="{80 + $count * 3}"
-                                        y="{$pos * 22 + 14}"
-                                    >{' (' || $percentage || '%)'}</text>
-                                    <text
-                                        fill="black"
-                                        x="10"
-                                        y="{$pos * 20 + 18}"
-                                    >Per. {$period}</text>
-                                </g>
-                        }</svg>,
-                    <h3><span
-                            class="pt" 
-                            id="lingua{$result}">Testemunho</span><span
+                            class="pt">Testemunho</span><span
                             class="en">Witness</span></h3>,
                     <svg 
-                        id="ling{$result}"
                         xmlns="http://www.w3.org/2000/svg"
                         width="950"
                         height="100">
@@ -146,6 +102,48 @@ return
                                     }
                                 </g>
                         }</svg>,
+                         <h3><span
+                            class="pt" id="lingua{$result}">Período</span><span
+                            class="en">Period</span></h3>,
+                    <svg id="ling{$result}"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="950"
+                        height="100">
+                        {
+                            
+                            let $fen := $readings[matches(@ana, concat('#', $result))]
+                            for $period at $pos in
+                            for $i in distinct-values($poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]/tei:floruit/@period)
+                            order by count($fen[ancestor::tei:div[1]//tei:name/substring(@ref, 2) = $poets/tei:floruit[@period = $i]/../@xml:id]) descending
+                            return
+                                $i
+                            let $count := count($fen[ancestor::tei:div[1]//tei:name/substring(@ref, 2) = $poets/tei:floruit[@period = $period]/../@xml:id])
+                            let $sum := count($fen)
+                            let $percentage := round-half-to-even((100 * $count div $sum), 2)
+                            order by $count descending
+                            return
+                                <g>
+                                    <rect
+                                        fill="#2B3966"
+                                        height="22"
+                                        width="{$count * 3}"
+                                        x="70"
+                                        y="{$pos * 22}"
+                                        stroke="#EAE5C5"
+                                        stroke-width="2"/>
+                                    <text
+                                        fill="black"
+                                        font-size="12"
+                                        x="{80 + $count * 3}"
+                                        y="{$pos * 22 + 14}"
+                                    >{' (' || $percentage || '%)'}</text>
+                                    <text
+                                        fill="black"
+                                        x="10"
+                                        y="{$pos * 20 + 18}"
+                                    >Per. {$period}</text>
+                                </g>
+                        }</svg>,
                     <table
                         class="sortable">
                         <thead>
@@ -189,16 +187,19 @@ return
                             {
                                 for $fen in $readings[matches(@ana, concat('#', $result))]
                                 let $rdg :=
-                                <parameters>
+                                 <parameters>
                                     <param
                                         name="rdg"
                                         value="{$fen}"/>
+                                    <param
+                                        name="ana"
+                                        value="{$result}"/>
                                 </parameters>
                                 let $author := $poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]
                                 return
                                     <tr>
                                         <td class="intro"><a
-                                                href="http://gl-pt.obdurodon.org/edition.php?&amp;song[]={$fen/ancestor::tei:div[1]/substring(@corresp, 2)}"
+                                                href="http://gl-pt.obdurodon.org/edition.php?&amp;song[]={$fen/ancestor::tei:div[1]/substring(@corresp, 2)}&amp;line={$fen/ancestor::tei:l/@n/string()}"
                                                 target="_blank">{transform:transform($fen/.., 'xmldb:exist:///db/VTLGP/xslt/ex.xsl', ($rdg))}</a></td>
                                         <td>{
                                                 (if ($fen/contains(@wit, ' ')) then
@@ -250,7 +251,8 @@ return
         <aside
             id="summary">
             <h3><span class="pt">Conteúdos</span><span class="en">Contents</span></h3>
-                <ul class="pt">
+                 <div class="pt">
+                <ul>
                     {
                         for $result in $values
                         return
@@ -264,7 +266,9 @@ return
                             </li>
                     }
                 </ul>
-                <ul class="en">
+                </div>
+                 <div class="en">
+                <ul>
                     {
                         for $result in $values
                         return
@@ -278,6 +282,7 @@ return
                             </li>
                     }
                 </ul>
+                </div>
         </aside>
     </div>
 

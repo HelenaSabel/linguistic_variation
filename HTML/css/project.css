@@ -106,6 +106,7 @@ h3{
     color: #FFC938;
     margin-right: 2%;
     font-weight: bold;
+    cursor:pointer;
 }
 
 .languages span{
@@ -457,6 +458,12 @@ cursor:pointer;
     
 }
 
+#highlight{
+    background-color:#FFF8DC;
+    width: -moz-max-content;
+    width:-webkit-max-content;
+    width: -o-max-content;
+}
 
 @font-face{
     font-family: 'junicode';
@@ -622,7 +629,6 @@ table{
 }
 
 .tabular table tbody td:nth-child(1){
-    font-style: italic;
     color:#562302;
     font-weight:700;
     font-size:small;
@@ -660,7 +666,7 @@ table.sortable th{
     background-color: #490301;
 }
 
-tbody td:nth-child(1){
+/*tbody td:nth-child(1){
     font-style: italic;
 }
 
@@ -668,7 +674,7 @@ tbody td:nth-child(1) span.normal,
 tbody td:nth-child(1)
 .ex{
     font-style: normal;
-}
+}*/
 
 table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after{
     content: url(../images/arrow.svg)
@@ -705,7 +711,7 @@ ul ul{
 
 @media all and (max-width : 805px){
     .languages{
-        display: inline;
+        display: inline;  
     }
 
     .languages span{
