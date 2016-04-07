@@ -3,19 +3,18 @@
     exclude-result-prefixes="xs tei" version="2.0">
     <xsl:output method="xml" encoding="utf-8" indent="no" omit-xml-declaration="yes"/>
     <xsl:param name="rdg"/>
-    <xsl:param name="ana"/>
     <xsl:template match="tei:app">
-        <xsl:apply-templates select="tei:rdg[. = $rdg]" mode="init"/>
+        <xsl:apply-templates select="tei:rdg[. = $rdg][1]" mode="init"/>
     </xsl:template>
     <xsl:template match="tei:rdg" mode="init">
         <xsl:apply-templates/>
         <xsl:text>] </xsl:text>
         <xsl:apply-templates
-            select="../tei:rdg[@wit ne current()/@wit][not(contains(@ana, $ana))][1]" mode="second"/>
-        <xsl:if test="../count(tei:rdg[not(contains(@ana, $ana))]) eq 2">
+            select="../tei:rdg[@wit ne current()/@wit][not(@cert)][1]" mode="second"/>
+        <xsl:if test="../count(tei:rdg[not(@cert)]) eq 2">
             <xsl:text> // </xsl:text>
             <xsl:apply-templates
-                select="../tei:rdg[@wit ne current()/@wit][not(contains(@ana, $ana))][2]"
+                select="../tei:rdg[@wit ne current()/@wit][not(@cert)][2]"
                 mode="second"/>
         </xsl:if>
         <xsl:if test="../count(tei:rdg) eq 1">
@@ -40,7 +39,7 @@
     <xsl:template match="tei:rdg" mode="second">
         <xsl:choose>
             <xsl:when test="contains(@ana, '#error')">
-               <span class="ex">error</span>
+                <span class="ex">error</span>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates/>
