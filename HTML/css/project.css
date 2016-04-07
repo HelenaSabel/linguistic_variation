@@ -106,7 +106,7 @@ h3{
     color: #FFC938;
     margin-right: 2%;
     font-weight: bold;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .languages span{
@@ -339,19 +339,19 @@ li.refrao{
 }
 
 .tabular .am{
-    display:inline;
+    display: inline;
 }
 
-.tabular .expansion {
-    display:none;
+.tabular .expansion{
+    display: none;
 }
 
 .tabular .orig{
-    display:inline;
+    display: inline;
 }
 
-.tabular .reg {
-    display:none;
+.tabular .reg{
+    display: none;
 }
 
 .ex{
@@ -421,6 +421,7 @@ del.multiple-overstrike{
     white-space: normal;
 }
 
+
 .dinamic span{
     border: 1px solid #2b3966;
     font-size: smaller;
@@ -454,14 +455,22 @@ ins.enhance.margin::before{
 }
 
 [data-exp]:hover{
-cursor:pointer;
-    
+    cursor: pointer;
+
+}
+
+.corpus{
+    display: inline-flex;
+}
+
+.corpus span {
+        padding-right:0.4em;
 }
 
 #highlight{
-    background-color:#FFF8DC;
+    background-color: #FFF8DC;
     width: -moz-max-content;
-    width:-webkit-max-content;
+    width: -webkit-max-content;
     width: -o-max-content;
 }
 
@@ -531,7 +540,6 @@ url('../fonts/junicode/junicode-webfont.svg#junicoderegular') format('svg');
 fieldset{
     border: 1px solid #2b3966;
     margin: 1%;
-    margin-bottom: 1%;
 }
 
 fieldset > div{
@@ -550,8 +558,8 @@ fieldset ul{
 
 fieldset li{
     padding-bottom: 8%;
-    white-space:nowrap;
-    
+    white-space: nowrap;
+
 }
 
 legend{
@@ -560,7 +568,7 @@ legend{
     color: #2b3966;
     font-size: 90%;
     font-weight: 500;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 button{
@@ -595,47 +603,47 @@ table{
 }
 
 .tabular table{
-    width:auto;
+    width: auto;
     font-family: 'junicode';
-    border:none;
-    margin-left:4%;
-    margin-top:0%;
+    border: none;
+    margin-left: 4%;
+    margin-top: 0%;
 }
 
 .tabular{
-    padding-top:2%;
+    padding-top: 2%;
 }
 
-.tabular p {
-    font-size:small;
+.tabular p{
+    font-size: small;
     font-weight: bold;
     text-align: right;
     color: #838383;
     left: 3em;
     width: 2em;
-    position:absolute;
-    margin-top:-0.5%;
+    position: absolute;
+    margin-top: -0.5%;
 }
 
 
-.tabular td {
-    border:none;
-    white-space:nowrap;
-    text-align:left;
-    padding-left:7px;
-    padding-right:7px;
-    padding-bottom:0;
-    padding-top:0;
+.tabular td{
+    border: none;
+    white-space: nowrap;
+    text-align: left;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .tabular table tbody td:nth-child(1){
-    color:#562302;
-    font-weight:700;
-    font-size:small;
-    vertical-align:central;
-    padding-right:9px;
+    color: #562302;
+    font-weight: 700;
+    font-size: small;
+    vertical-align: central;
+    padding-right: 9px;
     border-right: 1px solid #838383;
-} 
+}
 
 td > ul{
     list-style: none;
@@ -711,7 +719,7 @@ ul ul{
 
 @media all and (max-width : 805px){
     .languages{
-        display: inline;  
+        display: inline;
     }
 
     .languages span{

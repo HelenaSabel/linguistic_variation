@@ -9,6 +9,11 @@
         <script src="javascript/show.js" type="text/javascript">/**/</script>
         <script src="javascript/deselect.js" type="text/javascript">/**/</script>
         <script src="javascript/language.js" type="text/javascript">/**/</script>
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript">/**/</script>
+        <script src="http://bigspotteddog.github.io/ScrollToFixed/jquery-scrolltofixed.js"
+                type="text/javascript">/**/</script>
+        <script src="javascript/header.js" type="text/javascript">/**/</script>
+        <script src="javascript/menu.js" type="text/javascript">/**/</script>
         <!--#include virtual="ssi/favicon.html"-->
     </head>
     <body><!--#include virtual="ssi/header.html"-->
