@@ -348,7 +348,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">uiu</rdg>
-                     <rdg wit="#B" ana="#y-minin #dip" cert="low">u<seg corresp="#dip"><seg corresp="#y-minin">y</seg>o</seg></rdg>
+                     <rdg wit="#B" ana="#diph" cert="low">u<seg corresp="#dip">yo</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mui</rdg>
@@ -527,7 +527,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">uiu</rdg>                     
-                     <rdg wit="#B" ana="#y-minin #dip" cert="low">u<seg corresp="#dip"><seg corresp="#y-minin">y</seg>o</seg></rdg>
+                     <rdg wit="#B" ana="#diph" cert="low">u<seg corresp="#dip">yo</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">que seu amor me forçou</rdg>
@@ -1089,13 +1089,13 @@
                      <rdg wit="#A #B">de me ueer e</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#cons-assim #li" cert="low">
+                     <rdg wit="#A" ana="#art-al">
                         <choice>
-                           <orig>ue<seg corresp="#cons-assim">e</seg><seg corresp="#li">l</seg>ei</orig>
-                        <reg>ue<seg corresp="#cons-assim">e-</seg><seg corresp="#li">l<supplied>i</supplied></seg>-ei</reg></choice></rdg>
-                     <rdg wit="#B"><choice>
-                           <orig>ueerlhei</orig>
-                           <reg>ueer-lh<supplied>e</supplied>-ei</reg>
+                           <orig>uee<seg corresp="#art-al">l</seg>ei</orig>
+                        <reg>uee-<seg corresp="#art-al">l<supplied>a</supplied></seg>-ei</reg></choice></rdg>
+                     <rdg wit="#B" ana="#dat" cert="low"><choice>
+                           <orig>ueer<seg corresp="#dat">lh</seg>ei</orig>
+                           <reg>ueer-<seg corresp="#dat">lh<supplied>e</supplied></seg>-ei</reg>
                         </choice></rdg>
                   </app>
                </l>
@@ -2192,7 +2192,7 @@
                            <orig>mostre mia</orig>
                            <reg>mostre-mi-a</reg>
                         </choice></rdg>
-                     <rdg wit="#B" ana="#h-minin #error" cert="low"><choice>
+                     <rdg wit="#B" ana="#error" cert="low"><choice>
                            <orig>Mostramha</orig>
                            <reg>mostra-mh a</reg>
                         </choice></rdg>
