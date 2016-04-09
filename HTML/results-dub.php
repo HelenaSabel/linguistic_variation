@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <title>Resultados</title>
+    <title>Dúvidas</title>
     <meta charset="utf-8" lang="pt"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="css/project.css" rel="stylesheet" type="text/css"/>
@@ -25,6 +25,5 @@
     ?>
     <div class="footer"></div>
 </main>
-<!--#include virtual="ssi/footer.html"-->
 </body>
 </html>

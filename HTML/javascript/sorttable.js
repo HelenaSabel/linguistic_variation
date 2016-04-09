@@ -204,7 +204,8 @@ sorttable = {
       return node.text.replace(/^\s+|\s+$/g, '');
     }
     else {
-      switch (node.nodeType) {
+      //noinspection FallThroughInSwitchStatementJS
+        switch (node.nodeType) {
         case 3:
           if (node.nodeName.toLowerCase() == 'input') {
             return node.value.replace(/^\s+|\s+$/g, '');
