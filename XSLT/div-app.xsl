@@ -7,6 +7,23 @@
     <xsl:output method="xml" indent="yes"/>   
     <xsl:variable name="header" select="doc('../edition/corrigidas/sandim1.xml')//tei:teiHeader"/>
     <xsl:template match="/">
+        <xsl:variable name="input">
+            <xsl:apply-templates mode="namespace"/>
+        </xsl:variable>
+        <xsl:apply-templates select="$input" mode="header"/>
+    </xsl:template>
+    <xsl:template match="*" mode="namespace">
+        <xsl:element name="{local-name()}" namespace="http://www.tei-c.org/ns/1.0">
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates mode="namespace"/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="node() | @*" mode="header">
+        <xsl:copy>
+            <xsl:apply-templates select="node() | @*" mode="header"/>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template match="/" mode="header">
         <xsl:element name="TEI">
             <xsl:copy-of select="$header"/>
             <text>
@@ -20,7 +37,7 @@
                 </front>
                 <body>
                     <xsl:copy>
-                        <xsl:apply-templates select="//div"/>
+                        <xsl:apply-templates select="//tei:div" mode="header"/>
                     </xsl:copy>
                 </body>
             </text>
@@ -29,7 +46,7 @@
     <xsl:template match="comment()">
         <xsl:comment select="."/>
     </xsl:template>
-    <xsl:template match="div[@type='poem']">
+    <xsl:template match="tei:div[@type='poem']" mode="header">
         <xsl:element name="div">
             <xsl:attribute name="type">
                 <xsl:value-of select="current()/@type"/>
@@ -48,7 +65,7 @@
                                     </xsl:matching-substring>
                                 </xsl:analyze-string>
                             </xsl:attribute>
-                            <xsl:attribute name="hand">#missing</xsl:attribute>
+                            <xsl:attribute name="hand">#&#945;</xsl:attribute>
                             <xsl:element name="idno">
                             <xsl:analyze-string select="string(./@corresp)" regex="#(\w\d+)(\w\d+)">
                                 <xsl:matching-substring>
@@ -86,10 +103,10 @@
                 </xsl:element>
                 <xsl:element name="name">
                     <xsl:attribute name="role">author</xsl:attribute>
-                    <xsl:attribute name="ref">#JLpzUlh</xsl:attribute>
+                    <xsl:attribute name="ref">#NuFdzTor</xsl:attribute>
                 </xsl:element>
             </xsl:element>
-            <xsl:copy-of select="current()//l"/>
+            <xsl:copy-of select="current()/tei:lg"/>
         </xsl:element>
     </xsl:template>
 </xsl:stylesheet>

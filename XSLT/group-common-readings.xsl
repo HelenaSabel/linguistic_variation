@@ -24,7 +24,7 @@
             </xsl:for-each-group>
         </l>
     </xsl:template>
-    <xsl:template match="app">
+    <xsl:template match="app[not(parent::title)]">
         <xsl:choose>
             <xsl:when test="count(current-group()) eq 1">
                 <xsl:sequence select="current-group()"/>
