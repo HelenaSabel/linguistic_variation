@@ -230,6 +230,18 @@
         </xsl:analyze-string>
     </xsl:template>
     <xsl:template
+        match="text()[matches(., 'ff')][not(parent::seg)][ancestor::rdg[contains(@ana, '#ff')]]">
+        <xsl:analyze-string select="current()" regex=".*ff">
+            <xsl:matching-substring>
+                <xsl:value-of select="replace(., 'ff', '')"/>
+                <seg corresp="#ff">ff</seg>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
+    <xsl:template
         match="text()[matches(., 'us')][not(parent::seg)][ancestor::rdg[contains(@ana, '#back-vow')]]">
         <xsl:analyze-string select="current()" regex=".*us">
             <xsl:matching-substring>
