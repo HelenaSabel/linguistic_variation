@@ -22,8 +22,8 @@
     <h1 class="center"><span class="pt">Edição sinóptica</span><span class="en">Synoptic
                     edition</span>
     </h1>
-    <div class="criterios"><h2><span class="en">Edition criteria</span><span class="pt"
-            >Critérios de edição</span>
+    <div class="criterios"><h2><span class="en">Key</span><span class="pt"
+            >Legenda</span>
         </h2>
         <div class="flex">
             <p>
@@ -54,8 +54,7 @@
         <p><span class="en">Click on the colored or underlined form for additional
                         information</span><span class="pt">Clica na forma colorida ou sublinhada
                         para ler informação adicional</span>.</p>
-        <h3 class="en">Other criteria</h3>
-        <h3 class="pt">Outros critérios</h3>
+        <h3><span  class="en">Edition criteria</span><span class="pt">Critérios de edição</span></h3>
         <form class="criteria">
             <fieldset><span><input type="radio" name="abbreviation" value="expan"
                                    checked="checked" id="expan"/><label for="expan" class="en">Expanded

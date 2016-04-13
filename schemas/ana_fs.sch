@@ -9,6 +9,12 @@
     <let name="personografia" value="doc('../ancillary-files/corpus-autores.xml')"/>
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
     <pattern>
+        <rule context="tei:l[@type]">
+            <report test="@type ne 'refrao'">Only possible line type is “refrao”</report>
+        </rule>
+        <rule context="tei:lg">
+            <assert test="@type = ('cobra', 'finda')">Is this a “cobra” or a “finda“?</assert>
+        </rule>
         <rule context="tei:l/tei:app">
             <let name="anas"
                 value="tokenize(replace(replace(replace(replace(string-join(.//@ana, ' '), '\s?#rev\s?', ''), '\s?#equip\s?', ''), '\s?#error\s?', ''), '\s?#apocope\s?', ''), '\s+')"/>
