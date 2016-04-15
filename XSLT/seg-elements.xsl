@@ -172,7 +172,7 @@
             </xsl:non-matching-substring>
         </xsl:analyze-string>
     </xsl:template>
-    <xsl:template
+    <!--<xsl:template
         match="text()[matches(., 'c')][not(parent::seg)][ancestor::rdg[contains(@ana, '#c-pal')]]">
         <xsl:analyze-string select="current()" regex=".*?c">
             <xsl:matching-substring>
@@ -183,7 +183,7 @@
                 <xsl:value-of select="."/>
             </xsl:non-matching-substring>
         </xsl:analyze-string>
-    </xsl:template>
+    </xsl:template>-->
     <xsl:template
         match="text()[matches(., 'v')][not(parent::seg)][ancestor::rdg[contains(@ana, '#v')]]">
         <xsl:analyze-string select="current()" regex=".*?v">
@@ -223,6 +223,18 @@
             <xsl:matching-substring>
                 <xsl:value-of select="replace(., 'ss', '')"/>
                 <seg corresp="#ss-inic">ss</seg>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
+    <xsl:template
+        match="text()[matches(., 'rr')][not(parent::seg)][ancestor::rdg[contains(@ana, '#rr-inic')]]">
+        <xsl:analyze-string select="current()" regex=".*rr">
+            <xsl:matching-substring>
+                <xsl:value-of select="replace(., 'rr', '')"/>
+                <seg corresp="#rr-inic">rr</seg>
             </xsl:matching-substring>
             <xsl:non-matching-substring>
                 <xsl:value-of select="."/>
@@ -271,6 +283,18 @@
             <xsl:matching-substring>
                 <xsl:value-of select="replace(., 'ui', '')"/>
                 <seg corresp="#dip">ui</seg>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
+    <xsl:template
+        match="text()[matches(., 'gu')][not(parent::seg)][ancestor::rdg[contains(@ana, '#gu')]]">
+        <xsl:analyze-string select="current()" regex=".*gu">
+            <xsl:matching-substring>
+                <xsl:value-of select="replace(., 'gu', '')"/>
+                g<seg corresp="#gu">u</seg>
             </xsl:matching-substring>
             <xsl:non-matching-substring>
                 <xsl:value-of select="."/>

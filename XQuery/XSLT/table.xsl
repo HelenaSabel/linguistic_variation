@@ -204,10 +204,9 @@
     <xsl:template match="tei:am">
         <xsl:variable name="am" select="current()"/>
         <xsl:choose>
-            <xsl:when test=". = ('&#773;', '̄', '̧', '̲', 'ͥ', 'ᷓ', '͛', 'ᷓ&#x0321;', '̡̃')">
+            <xsl:when test=". = ('̅', '̄', '̧', '̲', 'ͥ', 'ᷓ', '͛', '̡ᷓ', '̡̃')">
                 <xsl:if test=".[preceding-sibling::node()[1][self::text()]]">
-                    <xsl:analyze-string select="./preceding-sibling::node()[1][self::text()]"
-                        regex="\w$">
+                    <xsl:analyze-string select="./preceding-sibling::node()[1][self::text()]" regex="\w$">
                         <xsl:matching-substring>
                             <span class="am">
                                 <xsl:value-of select="concat(., $am)"/>
@@ -215,10 +214,8 @@
                         </xsl:matching-substring>
                     </xsl:analyze-string>
                 </xsl:if>
-                <xsl:if test="current()[parent::tei:seg/preceding-sibling::node()[1][self::text()]]">
-                    <xsl:analyze-string
-                        select="current()/parent::*/preceding-sibling::node()[1][self::text()]"
-                        regex="\w$">
+                <xsl:if test="current()[not(preceding-sibling::node()[1][self::text()])][parent::tei:seg/preceding-sibling::node()[1][self::text()]]">
+                    <xsl:analyze-string select="current()/parent::*/preceding-sibling::node()[1][self::text()]" regex="\w$">
                         <xsl:matching-substring>
                             <span class="am">
                                 <xsl:value-of select="concat(., $am)"/>
@@ -226,11 +223,8 @@
                         </xsl:matching-substring>
                     </xsl:analyze-string>
                 </xsl:if>
-                <xsl:if
-                    test="current()[parent::tei:seg/preceding-sibling::node()[1][self::tei:seg]]">
-                    <xsl:analyze-string
-                        select="current()/parent::*/preceding-sibling::node()[1]/child::node()[last()][self::text()]"
-                        regex="\w$">
+                <xsl:if test="current()[not(preceding-sibling::node()[1][self::text()])][parent::tei:seg/preceding-sibling::node()[1][self::tei:seg]]">
+                    <xsl:analyze-string select="current()/parent::*/preceding-sibling::node()[1]/child::node()[last()][self::text()]" regex="\w$">
                         <xsl:matching-substring>
                             <span class="am">
                                 <xsl:value-of select="concat(., $am)"/>
@@ -240,29 +234,25 @@
                 </xsl:if>
                 <span class="expansion">
                     <xsl:if test=".[preceding-sibling::node()[1][self::text()]]">
-                        <xsl:analyze-string select="./preceding-sibling::node()[1][self::text()]"
-                            regex="\w$">
+                        <xsl:analyze-string select="./preceding-sibling::node()[1][self::text()]" regex="\w$">
                             <xsl:matching-substring>
                                 <xsl:value-of select="."/>
                             </xsl:matching-substring>
                         </xsl:analyze-string>
                     </xsl:if>
-                    <xsl:if
-                        test="current()[parent::tei:seg/preceding-sibling::node()[1][self::text()]]">
-                        <xsl:analyze-string
-                            select="current()/parent::*/preceding-sibling::node()[1][self::text()]"
-                            regex="\w$">
+                    <xsl:if test="current()[not(preceding-sibling::node()[1][self::text()])][parent::tei:seg/preceding-sibling::node()[1][self::text()]]">
+                        <xsl:analyze-string select="current()/parent::*/preceding-sibling::node()[1][self::text()]" regex="\w$">
                             <xsl:matching-substring>
                                 <xsl:value-of select="."/>
                             </xsl:matching-substring>
                         </xsl:analyze-string>
                     </xsl:if>
-                    <xsl:if test="current()[. ne '&#773;']">
+                    <xsl:if test="current()[. ne '̅']">
                         <span class="ex">
                             <xsl:value-of select="current()/following-sibling::tei:ex[1]"/>
                         </span>
                     </xsl:if>
-                    <xsl:if test="current()[. eq '&#773;']">
+                    <xsl:if test="current()[. eq '̅']">
                         <span class="ex">
                             <xsl:value-of select="current()/preceding-sibling::tei:ex[1]"/>
                         </span>
@@ -271,18 +261,14 @@
             </xsl:when>
             <xsl:otherwise>
                 <xsl:if test="current()[preceding-sibling::node()[1][self::text()]]">
-                    <xsl:analyze-string select="./preceding-sibling::node()[1][self::text()]"
-                        regex="\w$">
+                    <xsl:analyze-string select="./preceding-sibling::node()[1][self::text()]" regex="\w$">
                         <xsl:matching-substring>
                             <xsl:value-of select="."/>
                         </xsl:matching-substring>
                     </xsl:analyze-string>
                 </xsl:if>
-                <xsl:if
-                    test="current()[parent::tei:seg[@corresp eq '#abb']/preceding-sibling::node()[1][self::text()]]">
-                    <xsl:analyze-string
-                        select="current()/parent::*/preceding-sibling::node()[1][self::text()]"
-                        regex="\w$">
+                <xsl:if test="current()[not(preceding-sibling::node()[1][self::text()])][parent::tei:seg/preceding-sibling::node()[1][self::text()]]">
+                    <xsl:analyze-string select="current()/parent::*/preceding-sibling::node()[1][self::text()]" regex="\w$">
                         <xsl:matching-substring>
                             <xsl:value-of select="."/>
                         </xsl:matching-substring>

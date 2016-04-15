@@ -17,54 +17,44 @@ declare function djb:locus($from as node()?, $to as node()?)
             concat($from, '-', $to))
 };
 declare function functx:is-node-in-sequence-deep-equal
-($node as node()?,
-$seq as node()*) as xs:boolean {
-    
-    some $nodeInSeq in $seq
-        satisfies deep-equal($nodeInSeq, $node)
-};
+  ( $node as node()? ,
+    $seq as node()* )  as xs:boolean {
+
+   some $nodeInSeq in $seq satisfies deep-equal($nodeInSeq,$node)
+ } ;
 declare function functx:distinct-deep
-($nodes as node()*) as node()* {
-    
+  ( $nodes as node()* )  as node()* {
+
     for $seq in (1 to count($nodes))
-    return
-        $nodes[$seq][not(functx:is-node-in-sequence-deep-equal(
-        ., $nodes[position() < $seq]))]
-};
-declare variable $cantigas := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem'];
+    return $nodes[$seq][not(functx:is-node-in-sequence-deep-equal(
+                          .,$nodes[position() < $seq]))]
+ } ;
+declare variable $cantigas:= collection('/db/VTLGP/edition')//tei:div[@type eq 'poem'];
 declare variable $poets := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[@xml:id/string() = $cantigas//tei:name[@role eq 'author']/substring(@ref, 2)];
-declare variable $partialselection := request:get-parameter("song", ());
+declare variable $partialselection:= request:get-parameter("song", ());
 declare variable $otherSelection := request:get-parameter("period", ());
-declare variable $partialSelection := request:get-parameter("author", ());
-declare variable $nextSelection := request:get-parameter("scribe", ());
-declare variable $line := request:get-parameter("line", ());
-let $poetselection := tokenize($partialSelection, ',+')
-let $songselection := tokenize($partialselection, ',+')
-let $periodselection := tokenize($otherSelection, ',+')
-let $scribeselection := tokenize($nextSelection, ',+')
-let $selectionPoet := for $i in $poetselection
-return
-    $i
-let $selectionSong := for $y in $songselection
-return
-    $y
-let $selectionPeriod := for $h in $periodselection
-return
-    $h
-let $selectionScribe := for $g in $scribeselection
-return
-    $g
-let $songs := $cantigas[substring(@corresp, 2) = $selectionSong] |
-$cantigas[descendant::tei:name[substring(@ref, 2) = $selectionPoet]] |
-$cantigas[descendant::tei:name[substring(@ref, 2) = doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[./tei:floruit/@period = $selectionPeriod]/@xml:id]] |
-$cantigas[tei:head/descendant::tei:rdg[substring(@hand, 2) = $selectionScribe]]
+declare variable $partialSelection:= request:get-parameter("author", ());
+declare variable $nextSelection:= request:get-parameter("scribe", ());
+declare variable $line:= request:get-parameter("line", ());
+let $selectionPoet:= for $i in tokenize($partialSelection, ',+') return concat($i, '#')
+let $selectionSong:= for $y in tokenize($partialselection, ',+') return concat($y, '#')
+let $selectionPeriod:= for $h in tokenize($otherSelection, ',+') return concat($h, '#')
+let $selectionScribe:= for $g in tokenize($nextSelection, ',+') return concat($g, '#')
+(:  :let $selectionPoet:= for $i in $poetselection return $i
+let $selectionSong:= for $y in $songselection return $y
+let $selectionPeriod:= for $h in $periodselection return $h
+let $selectionScribe:= for $g in $scribeselection return $g:)
+let $songs:= $cantigas[@corresp = $selectionSong] | 
+    $cantigas[descendant::tei:name[@ref = $selectionPoet]] | 
+    $cantigas[descendant::tei:name[@ref = doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[./tei:floruit/@period = $selectionPeriod]/concat(@xml:id, '#')]] | 
+    $cantigas[tei:head/descendant::tei:rdg[@hand = $selectionScribe]]
 return
     <div
         class="multiple">
         <section>
             {
                 for $song in functx:distinct-deep($songs)
-                let $author := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[string(@xml:id) = $song//tei:name[@role eq 'author']/substring(@ref, 2)]
+                let $author := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[concat(@xml:id, '#') = $song//tei:name[@role eq 'author']/@ref]
                 order by $song/number(substring-before(substring(@corresp, 3), 'B'))
                 return
                     <div
@@ -89,28 +79,19 @@ return
                                     class="en">period</span>
                                 {'&#32;' || $author/tei:floruit/@period/string()})</h2>
                         </div>
-                        <p
-                            style="text-align:center"><a
-                                class="pt"
-                                href="http://gl-pt.obdurodon.org/editionTab.php?song={$song/substring(@corresp, 2)}"
-                                target="_blank">Ver edição tabular</a>
-                            <a
-                                class="en"
-                                href="http://gl-pt.obdurodon.org/editionTab.php?song={$song/substring(@corresp, 2)}">View tabular edition</a></p>
+                        <p style="text-align:center"><a class="pt" href="http://gl-pt.obdurodon.org/editionTab.php?song={$song/substring(@corresp, 2)}"
+                           target="_blank">Ver edição tabular</a>
+                           <a class="en" href="http://gl-pt.obdurodon.org/editionTab.php?song={$song/substring(@corresp, 2)}">View tabular layout</a></p>
                         <div
                             class="body">
                             {
-                                
-                                for $witness in $song/tei:head/descendant::tei:rdg
-                                let $parameter :=
-                                <parameters>
-                                    <param
-                                        name="wit"
-                                        value="{$witness/@wit}"/>
-                                    <param
-                                        name="line"
-                                        value="{$line}"/>
-                                </parameters>
+                                            
+                                            for $witness in $song/tei:head/descendant::tei:rdg
+                                            let $parameter:= 
+                                                    <parameters>
+                                                        <param name="wit" value="{$witness/@wit}"/>
+                                                        <param name="line" value="{$line}"/>
+                                                    </parameters>
                                 return
                                     <div
                                         class="witness">
@@ -126,9 +107,9 @@ return
                                                 class="pt">Copista</span><span
                                                 class="en">Copyist</span>: {$witness/substring(@hand, 2)}</h4>
                                         
-                                        {transform:transform($song//tei:lg, doc('/db/VTLGP/xslt/reading.xsl'), $parameter)}
-                                    
-                                    </div>
+                                         {transform:transform($song//tei:lg, doc('/db/VTLGP/xslt/reading.xsl'), $parameter)}
+                                                        
+                                                     </div>
                             
                             }
                         </div>
@@ -137,27 +118,21 @@ return
         </section>
         <aside
             id="summary">
-            {
-                (if (count($songs) gt 1) then
-                    (<h3
-                        class="pt">Cantigas</h3>,
-                    <h3
-                        class="en">Songs</h3>,
-                    <ul>{
-                            for $song in $songs
-                            order by $song/number(substring-before(substring(@corresp, 3), 'B'))
-                            return
-                                <li><a
-                                        href="{$song/@corresp}">{string-join($song//tei:title//tei:idno, ', ')}</a></li>
-                        }
-                    
-                    </ul>)
-                else
-                    ())
-            }
-            <p
-                class="dinamic"><span
-                    class="pt">Mudar critérios</span><span
-                    class="en">Change criteria</span></p>
+             {(if (count($songs) gt 1) then 
+            (<h3
+                class="pt">Cantigas</h3>,
+            <h3
+                class="en">Songs</h3>,
+            <ul>{
+                    for $song in $songs
+                    order by $song/number(substring-before(substring(@corresp, 3), 'B'))
+                    return
+                        <li><a
+                                href="{$song/@corresp}">{string-join($song//tei:title//tei:idno, ', ')}</a></li>
+                }
+            
+            </ul>)
+                    else ())}
+            <p class="dinamic"><span class="pt">Mudar critérios</span><span class="en">Change criteria</span></p>
         </aside>
     </div>

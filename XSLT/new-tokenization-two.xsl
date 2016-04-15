@@ -15,9 +15,6 @@
             <xsl:apply-templates select="node() | @*" mode="string"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="comment()" mode="string">
-        <xsl:comment select="."/>
-    </xsl:template>
     <!-- Elements with children but no attributes-->
     <xsl:template match="ex | am | add[not(@*)] | del[not(@*)]" mode="string">
         <xsl:text>&lt;</xsl:text>
@@ -85,7 +82,7 @@
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
-    <xsl:template match="text()[parent::orig | parent::reg | parent::del | parent::add]">
+    <xsl:template match="text()[parent::orig | parent::reg | parent::del | parent::add | parent::ex]">
         <xsl:value-of select="replace(., ' ', '_')"/>
     </xsl:template>
     <xsl:template match="orig/ex | orig/am | reg/ex | reg/am | del/ex | del/am | add/ex | add/am">

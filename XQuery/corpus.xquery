@@ -4,26 +4,28 @@ let $authors := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[@xml:i
 let $periods := $authors/tei:floruit/@period
 let $copyists := collection('/db/VTLGP/edition')//tei:div//tei:title//tei:rdg/substring(@hand, 2)
 return
+    
     (<form
         method="GET"
         action="edition.php">
         {
             for $i in 1 to (count($authors))
             let $author := $authors[$i]
-            let $songs := collection('/db/VTLGP/edition')//tei:name[@role eq 'author'][substring(@ref, 2) = $author/string(@xml:id)]/ancestor::tei:div
+            let $songs := collection('/db/VTLGP/edition')//tei:name[@role eq 'author'][@ref = $author/concat(@xml:id, '#')]/ancestor::tei:div
             order by $author
             return
                 <fieldset>
-                    <legend>{$author/tei:persName/string()}</legend>
+                    <legend id="{$author/@xml:id/string()}">{$author/tei:persName/string()}</legend>
                     <div>
                         <input
                             type="radio"
                             name="author[{$i}]"
                             class="all"
-                            id="none1"
+                            id="none{$i}"
                             checked="checked"/>
                         <label
-                            for="none1"><span
+                            class="all"
+                            for="none{$i}"><span
                                 class="en">None</span>
                             <span
                                 class="pt">Nenhuma</span></label>
@@ -33,11 +35,11 @@ return
                             value="{$author/@xml:id}"
                             id="author{$i}"
                             class="all"/>
-                        <label
+                        <label class="corpus all"
                             for="author{$i}"><span
                                 class="pt">Todas</span>
                             <span
-                                class="en">All</span></label>
+                                class="en">All</span> ({count($songs)})</label>
                         <input
                             type="radio"
                             name="author[{$i}]"
@@ -93,10 +95,10 @@ return
                             type="radio"
                             name="period[{$period}]"
                             class="all"
-                            id="none2"
+                            id="none{$period}"
                             checked="checked"/>
                         <label
-                            for="none2"><span
+                            for="none{$period}"><span
                                 class="en">None</span>
                             <span
                                 class="pt">Nenhuma</span></label>
@@ -106,11 +108,11 @@ return
                             value="{$period}"
                             id="{$period}"
                             class="all"/>
-                        <label
+                        <label class="corpus"
                             for="{$period}"><span
                                 class="pt">Todas</span>
                             <span
-                                class="en">All</span></label>
+                                class="en">All</span> ({count($songs)})</label>
                         <input
                             type="radio"
                             name="period[{$period}]"
@@ -183,10 +185,10 @@ return
                             type="radio"
                             name="scribe[{$hand}]"
                             class="all"
-                            id="none3"
+                            id="none{$hand}"
                             checked="checked"/>
                         <label
-                            for="none3"><span
+                            for="none{$hand}"><span
                                 class="en">None</span>
                             <span
                                 class="pt">Nenhuma</span></label>
@@ -196,11 +198,11 @@ return
                             value="{$hand}"
                             id="{$hand}"
                             class="all"/>
-                        <label
+                        <label class="corpus"
                             for="{$hand}"><span
                                 class="pt">Todas</span>
                             <span
-                                class="en">All</span></label>
+                                class="en">All</span> ({count($songs)})</label>
                         <input
                             type="radio"
                             name="scribe[{$hand}]"

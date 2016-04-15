@@ -18,7 +18,7 @@
     <xsl:template match="comment()" mode="ana">
         <xsl:comment select="."/>
     </xsl:template>
-    <xsl:template match="app[not(parent::title)]" mode="ana">
+    <xsl:template match="app[not(parent::title)][count(rdg) eq 2]" mode="ana">
         <xsl:element name="app">
             <xsl:element name="rdg">
                 <xsl:attribute name="wit">
@@ -51,7 +51,10 @@
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'll') and contains(rdg[2],'lh')">
                         <xsl:text>#reg</xsl:text>
-                    </xsl:if>                    
+                    </xsl:if>
+                    <xsl:if test="matches(rdg[1], '(e|a|o)i') and matches(rdg[2], '(e|a|o)y')">
+                        <xsl:text>#y-dip</xsl:text>
+                    </xsl:if>                      
                     <xsl:if test="contains(rdg[1], 'ui') and matches(rdg[2], 'o(y|i|j)')">
                         <xsl:text>#dip</xsl:text>
                     </xsl:if>
@@ -136,10 +139,7 @@
                     <xsl:if test="rdg[1]/gap[@reason=('economy', 'damage')]">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>                     
-                    <xsl:if test="contains(rdg[1], 'ei') and contains(rdg[2], 'ey')">
-                        <xsl:text>#y-dip</xsl:text>
-                    </xsl:if>  
-                    <xsl:if test="contains(rdg[1], 'oi') and contains(rdg[2], 'oy')">
+                    <xsl:if test="matches(rdg[1], '(e|a|o)i') and matches(rdg[2], '(e|a|o)y')">
                         <xsl:text>#y-dip</xsl:text>
                     </xsl:if>                      
                     <xsl:if test="matches(rdg[2], '[A-Z]') and not(matches(rdg[1], '[A-Z]'))">

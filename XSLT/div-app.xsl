@@ -103,7 +103,7 @@
                 </xsl:element>
                 <xsl:element name="name">
                     <xsl:attribute name="role">author</xsl:attribute>
-                    <xsl:attribute name="ref">#NuFdzTor</xsl:attribute>
+                    <xsl:attribute name="ref">#PGarBu</xsl:attribute>
                 </xsl:element>
             </xsl:element>
             <xsl:copy-of select="current()/tei:lg"/>

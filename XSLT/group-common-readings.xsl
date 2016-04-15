@@ -3,9 +3,7 @@
 <!--    Code written by David J. Birnbaum, www.obdurodon.org -->
 
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0"
-    exclude-result-prefixes="xs" version="2.0">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
     <xsl:output method="xml" indent="yes"/>
     <xsl:template match="node() | @*">
         <xsl:copy>
@@ -13,16 +11,22 @@
         </xsl:copy>
     </xsl:template>
     <xsl:template match="l">
-        <l n="{@n}">
+        <xsl:element name="l">
+            <xsl:attribute name="n">
+                <xsl:value-of select="@n"/>
+            </xsl:attribute>
+            <xsl:if test="@type">
+                <xsl:value-of select="@type"/>
+            </xsl:if>
             <xsl:for-each-group select="app"
                 group-adjacent="
-                if (rdg/@wit = '#A #B') then
-                0
-                else
-                position()">
+                    if (rdg/@wit = '#A #B') then
+                        0
+                    else
+                        position()">
                 <xsl:apply-templates select="."/>
             </xsl:for-each-group>
-        </l>
+        </xsl:element>
     </xsl:template>
     <xsl:template match="app[not(parent::title)]">
         <xsl:choose>
