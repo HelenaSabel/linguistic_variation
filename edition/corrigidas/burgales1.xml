@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -468,7 +465,7 @@
             <lg type="cobra">
                <l n="22">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg></rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg></seg></rdg>
                      <rdg wit="#B">E</rdg>
                   </app>
                   <app>
@@ -757,7 +754,7 @@
             <lg type="cobra">
                <l n="8">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg></rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg></seg></rdg>
                      <rdg wit="#B">E</rdg>
                   </app>
                   <app>
@@ -1581,7 +1578,7 @@
             <lg type="finda">
                <l n="22">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg></rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg></seg></rdg>
                      <rdg wit="#B">E</rdg>
                   </app>
                   <app>
@@ -2282,7 +2279,7 @@
             <lg type="finda">
                <l n="29">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">C</hi></seg>a</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">C</hi></seg></seg>a</rdg>
                      <rdg wit="#B">Ca</rdg>
                   </app>
                   <app>

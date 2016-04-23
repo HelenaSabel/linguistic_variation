@@ -28,7 +28,7 @@
             <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                      viewBox="0 0 22 22">
-                    <rect width="20" height="20" x="1" y="1" rx="4" ry="4" fill="#2B3966"
+                    <rect width="20" height="20" x="1" y="1" rx="4" ry="4" fill="#6C659D"
                           stroke-width="1" stroke="black"></rect>
                 </svg>
                 <span class="pt linguistic">Variantes de língua</span><span

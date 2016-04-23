@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -137,22 +134,22 @@
                <l n="11">
                   <app>
                      <rdg wit="#A">mais</rdg>
-                     <rdg wit="#B" ana="#y-dip">mays</rdg>
+                     <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">non</rdg>
-                     <rdg wit="#B" ana="#abb">no<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">no<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">quis</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ͥ</am><ex>ui</ex>s</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">d<am>’</am><ex>eu</ex>s q<am>̄</am><ex>ue</ex> meu mal</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">entendesse</rdg>
-                     <rdg wit="#B" ana="#abb">ente<am>̄</am><ex>n</ex>desse</rdg>
+                     <rdg wit="#B" ana="#abb">ente<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>desse</rdg>
                   </app>
                </l>
                <l n="12">
@@ -167,8 +164,8 @@
                         </choice></rdg>
                      <rdg wit="#B" ana="#h-minin">
                         <choice>
-                           <orig>mostrou mho</orig>
-                           <reg>mostrou-mh o</reg>
+                           <orig>mostrou m<seg corresp="#h-minin">h</seg>o</orig>
+                           <reg>mostrou-m<seg corresp="#h-minin">h</seg> o</reg>
                         </choice></rdg>
                   </app>
                   <app>
@@ -176,27 +173,27 @@
                   </app>
                   <app>
                      <rdg wit="#A">bon</rdg>
-                     <rdg wit="#B" ana="#abb">bo<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">bo<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#çe">pareçer</rdg>
+                     <rdg wit="#A" ana="#çe">pare<seg corresp="#çe">ç</seg>er</rdg>
                      <rdg wit="#B">parecer</rdg>
                   </app>
                </l>
                <l n="13">
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">mal de</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">min</rdg>
-                     <rdg wit="#B" ana="#abb">mj<am>̄</am><ex>n</ex> e</rdg>
+                     <rdg wit="#B" ana="#abb">mj<seg corresp="#abb"><am>̄</am><ex>n</ex></seg> e</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                      <rdg wit="#B">e</rdg>
                   </app>
                   <app>
@@ -204,7 +201,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">quis</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ͥ</am><ex>ui</ex>s</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">ualer</rdg>
@@ -227,7 +224,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">quis</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ͥ</am><ex>ui</ex>s</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">q<am>̄</am><ex>ue</ex></rdg>
@@ -248,7 +245,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<am>̄</am><ex>n</ex>nor</rdg>
@@ -261,18 +258,18 @@
                <l n="16">
                   <app>
                      <rdg wit="#A">aquel</rdg>
-                     <rdg wit="#B" ana="#abb">aq<am>̄</am><ex>ue</ex>l</rdg>
+                     <rdg wit="#B" ana="#abb">aq<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>l</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">primeiro</rdg>
-                     <rdg wit="#B" ana="#y-dip">primeyro</rdg>
+                     <rdg wit="#B" ana="#y-dip">prime<seg corresp="#y-dip">y</seg>ro</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">dia en</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">u<am>ꝯ</am><ex>os</ex> uj</rdg>
@@ -292,18 +289,18 @@
                   </app>
                   <app>
                      <rdg wit="#A">mais</rdg>
-                     <rdg wit="#B" ana="#y-dip">mays</rdg>
+                     <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">no<am>̄</am><ex>n</ex></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">q<am>̄</am><ex>u</ex>is</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ͥ</am><ex>ui</ex>s</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">de<am>ꝯ</am><ex>us</ex></rdg>
-                     <rdg wit="#B" ana="#abb">d<am>’</am><ex>eu</ex>s</rdg>
+                     <rdg wit="#B" ana="#abb">d<seg corresp="#abb"><am>’</am><ex>eu</ex></seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">assi</rdg>
@@ -315,7 +312,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">meu mal q<am>̄</am><ex>ue</ex> uiuesse</rdg>
@@ -343,7 +340,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mais</rdg>
-                     <rdg wit="#B" ana="#y-dip">mays</rdg>
+                     <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">de p<am>ᷓ</am><ex>re</ex>nder</rdg>
@@ -356,14 +353,14 @@
                   </app>
                   <app>
                      <rdg wit="#A">aquel</rdg>
-                     <rdg wit="#B" ana="#abb">aq<am>̄</am><ex>ue</ex>l</rdg>
+                     <rdg wit="#B" ana="#abb">aq<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>l</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">dia</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">u<am>ꝯ</am><ex>os</ex></rdg>
@@ -382,20 +379,20 @@
                   </app>
                   <app>
                      <rdg wit="#A">uos</rdg>
-                     <rdg wit="#B" ana="#abb">u<am>ꝯ</am><ex>os</ex></rdg>
+                     <rdg wit="#B" ana="#abb">u<seg corresp="#abb"><am>ꝯ</am><ex>os</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">eu uisse</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">nen</rdg>
-                     <rdg wit="#B" ana="#abb">ne<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">ne<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">u<am>ꝯ</am><ex>os</ex></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb">co<am>̄</am><ex>n</ex>nosciesse</rdg>
+                     <rdg wit="#A" ana="#abb">co<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>nosciesse</rdg>
                      <rdg wit="#B">conhocesse</rdg>
                   </app>
                </l>
@@ -421,14 +418,14 @@
                      <rdg wit="#A #B">Qual</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">sennor</rdg>
+                     <rdg wit="#A" ana="#reg">se<seg corresp="#reg">nn</seg>or</rdg>
                      <rdg wit="#B">senhor</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">deuia</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">fillar</rdg>
+                     <rdg wit="#A" ana="#reg">fi<seg corresp="#reg">ll</seg>ar</rdg>
                      <rdg wit="#B">filhar</rdg>
                   </app>
                </l>
@@ -441,7 +438,7 @@
                      <rdg wit="#B">soubess<supplied>e</supplied></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">escoller</rdg>
+                     <rdg wit="#A" ana="#reg">esco<seg corresp="#reg">ll</seg>er</rdg>
                      <rdg wit="#B">escolher</rdg>
                   </app>
                </l>
@@ -469,7 +466,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<am>̄</am><ex>n</ex>nor</rdg>
@@ -494,7 +491,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mundo</rdg>
-                     <rdg wit="#B" ana="#abb">mu<am>̄</am><ex>n</ex>do</rdg>
+                     <rdg wit="#B" ana="#abb">mu<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>do</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">deseiar</rdg>
@@ -508,11 +505,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">ben</rdg>
-                     <rdg wit="#B" ana="#abb">be<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">be<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">no<am>̄</am><ex>n</ex> a</rdg>
@@ -528,11 +525,11 @@
                <l n="9">
                   <app>
                      <rdg wit="#A">tan</rdg>
-                     <rdg wit="#B" ana="#m-end">tam</rdg>
+                     <rdg wit="#B" ana="#m-end">ta<seg corresp="#m-end">m</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">muito</rdg>
-                     <rdg wit="#B" ana="#uy">muyto</rdg>
+                     <rdg wit="#B" ana="#uy">mu<seg corresp="#uy">y</seg>to</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">a faz d<am>’</am><ex>eu</ex>s ualer</rdg>
@@ -541,18 +538,18 @@
                <l n="10">
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">bon</rdg>
-                     <rdg wit="#B" ana="#abb">bo<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">bo<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">prez</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷓ</am><ex>re</ex>z</rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷓ</am><ex>re</ex></seg>z</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                      <rdg wit="#B">e</rdg>
                   </app>
                   <app>
@@ -570,31 +567,31 @@
                <l n="11">
                   <app>
                      <rdg wit="#A">per</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>̲</am><ex>er</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>̲</am><ex>er</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">bon</rdg>
-                     <rdg wit="#B" ana="#abb">bo<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">bo<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#punct">sen<seg corresp="#punct">.</seg></rdg>
                      <rdg wit="#B">sen</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                      <rdg wit="#B">e</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">p<am>̲</am><ex>er</ex></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#çe">pareçer</rdg>
+                     <rdg wit="#A" ana="#çe">pare<seg corresp="#çe">ç</seg>er</rdg>
                      <rdg wit="#B">parecer</rdg>
                   </app>
                </l>
                <l n="12">
                   <app>
-                     <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                      <rdg wit="#B">e</rdg>
                   </app>
                   <app>
@@ -636,11 +633,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">coit<supplied>?</supplied></rdg>
-                     <rdg wit="#B" ana="#y-dip">coyt<supplied>?</supplied></rdg>
+                     <rdg wit="#B" ana="#y-dip">co<seg corresp="#y-dip">y</seg>t<supplied>?</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">a</rdg>
@@ -660,7 +657,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">m<supplied>e</supplied></rdg>
@@ -691,11 +688,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">qual</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ᷓ</am><ex>ua</ex>l</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ᷓ</am><ex>ua</ex></seg>l</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mi</rdg>
-                     <rdg wit="#B" ana="#h-minin">mh</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">or<supplied>a</supplied></rdg>
@@ -706,7 +703,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">dizer</rdg>
-                     <rdg wit="#B" ana="#abb">diz<am>&#x035B;</am><ex>er</ex></rdg>
+                     <rdg wit="#B" ana="#abb">diz<seg corresp="#abb"><am>͛</am><ex>er</ex></seg></rdg>
                   </app>
                </l>
                <l n="19">
@@ -735,27 +732,27 @@
                         </choice></rdg>
                      <rdg wit="#B" ana="#y-vow">
                         <choice>
-                           <orig>dessy</orig>
+                           <orig>dess<seg corresp="#y-vow">y</seg></orig>
                            <reg>de s<seg corresp="#y-vow">y</seg>
                            </reg>
                         </choice></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">partir</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷓ</am><ex>ar</ex>tir</rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷓ</am><ex>ar</ex></seg>tir</rdg>
                   </app>
                </l>
                <l n="21">
                   <app>
                      <rdg wit="#A">mui</rdg>
-                     <rdg wit="#B" ana="#uj">muj</rdg>
+                     <rdg wit="#B" ana="#uj">mu<seg corresp="#uj">j</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">trist<supplied>e</supplied> e</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">muit<supplied>o</supplied></rdg>
-                     <rdg wit="#B" ana="#uy">muyt<supplied>o</supplied></rdg>
+                     <rdg wit="#B" ana="#uy">mu<seg corresp="#uy">y</seg>t<supplied>o</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">a meu pesar</rdg>
@@ -773,7 +770,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">quitar</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ͥ</am><ex>ui</ex>tar</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>tar</rdg>
                   </app>
                </l>
                <l n="23">
@@ -783,7 +780,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">seus</rdg>
-                     <rdg wit="#B" ana="#abb">se<am>ꝯ</am><ex>us</ex></rdg>
+                     <rdg wit="#B" ana="#abb">se<seg corresp="#abb"><am>ꝯ</am><ex>us</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">o<seg corresp="#reg">ll</seg>os</rdg>
@@ -799,18 +796,18 @@
                   </app>
                   <app>
                      <rdg wit="#A">quen</rdg>
-                     <rdg wit="#B" ana="#abb">que<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">que<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">d<am>’</am><ex>eu</ex>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">quisesse</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ͥ</am><ex>ui</ex>sesse</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>sesse</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">guisar</rdg>
-                     <rdg wit="#B" ana="#abb">g<am>ͥ</am><ex>ui</ex>sar</rdg>
+                     <rdg wit="#B" ana="#abb">g<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>sar</rdg>
                   </app>
                </l>
                <l n="25">
@@ -818,12 +815,12 @@
                      <rdg wit="#A #B">de</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">llo</rdg>
+                     <rdg wit="#A" ana="#reg"><seg corresp="#reg">ll</seg>o</rdg>
                      <rdg wit="#B">lho</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">querer</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex>rer</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>rer</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">ela</rdg>
@@ -836,27 +833,27 @@
                <l n="26">
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">q<am>̄</am><ex>ue</ex> os</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">quitaria</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ͥ</am><ex>ui</ex>taria</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>taria</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">d<supplied>e</supplied></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#y-vow">y</rdg>
+                     <rdg wit="#A" ana="#y-vow"><seg corresp="#y-vow">y</seg></rdg>
                      <rdg wit="#B">i</rdg>
                   </app>
                </l>
                <l n="27">
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">tal</rdg>
@@ -867,14 +864,14 @@
                   </app>
                   <app>
                      <rdg wit="#A">auer</rdg>
-                     <rdg wit="#B" ana="#abb">au<am>&#x035B;</am><ex>er</ex></rdg>
+                     <rdg wit="#B" ana="#abb">au<seg corresp="#abb"><am>͛</am><ex>er</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">com<supplied>?</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">e</rdg>
-                     <rdg wit="#B" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#B" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mi</rdg>
@@ -919,8 +916,8 @@
                   <app>
                      <rdg wit="#A" ana="#reg">
                         <choice>
-                           <orig>Marauillo meu</orig>
-                           <reg>Marauillo-m<supplied>e</supplied> eu</reg>
+                           <orig>Maraui<seg corresp="#reg">ll</seg>o meu</orig>
+                           <reg>Maraui<seg corresp="#reg">ll</seg>o-m<supplied>e</supplied> eu</reg>
                         </choice></rdg>
                      <rdg wit="#B">
                         <choice>
@@ -930,10 +927,10 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">sennor</rdg>
+                     <rdg wit="#A" ana="#reg">se<seg corresp="#reg">nn</seg>or</rdg>
                      <rdg wit="#B">senhor</rdg>
                   </app>
                </l>
@@ -1007,10 +1004,10 @@
                   </app>
                   <app>
                      <rdg wit="#A">log<supplied>o</supplied></rdg>
-                     <rdg wit="#B" ana="#gu">logu<supplied>o</supplied></rdg>
+                     <rdg wit="#B" ana="#gu">lo g<seg corresp="#gu">u</seg><supplied>o</supplied></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#y-vow">y</rdg>
+                     <rdg wit="#A" ana="#y-vow"><seg corresp="#y-vow">y</seg></rdg>
                      <rdg wit="#B">j</rdg>
                   </app>
                </l>
@@ -1020,7 +1017,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">assi</rdg>
-                     <rdg wit="#B" ana="#y-vow">assy</rdg>
+                     <rdg wit="#B" ana="#y-vow">ass<seg corresp="#y-vow">y</seg></rdg>
                   </app>
                </l>
                <l n="7">
@@ -1043,7 +1040,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<am>̄</am><ex>n</ex>nor</rdg>
@@ -1053,28 +1050,28 @@
                <l n="9">
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">quanto</rdg>
-                     <rdg wit="#B" ana="#abb">qua<am>̄</am><ex>n</ex>to</rdg>
+                     <rdg wit="#B" ana="#abb">qua<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>to</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">u<am>ꝯ</am><ex>os</ex></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">quero</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex>ro</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>ro</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">dizer</rdg>
-                     <rdg wit="#B" ana="#abb">diz<am>&#x035B;</am><ex>er</ex></rdg>
+                     <rdg wit="#B" ana="#abb">diz<seg corresp="#abb"><am>͛</am><ex>er</ex></seg></rdg>
                   </app>
                </l>
                <l n="10">
                   <app>
                      <rdg wit="#A">porq<am>̄</am><ex>ue</ex></rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex>q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg>q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">u<am>ꝯ</am><ex>os</ex> fez d<am>’</am><ex>eu</ex>s entender</rdg>
@@ -1095,14 +1092,14 @@
                   </app>
                   <app>
                      <rdg wit="#A">quen</rdg>
-                     <rdg wit="#B" ana="#abb">que<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">que<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">d<am>’</am><ex>eu</ex>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">tanto</rdg>
-                     <rdg wit="#B" ana="#abb">ta<am>̄</am><ex>n</ex>to</rdg>
+                     <rdg wit="#B" ana="#abb">ta<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>to</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">ben deu</rdg>
@@ -1110,16 +1107,16 @@
                </l>
                <l n="13">
                   <app>
-                     <rdg wit="#A" ana="#y-minin">deuya</rdg>
+                     <rdg wit="#A" ana="#y-minin">deu<seg corresp="#y-minin">y</seg>a</rdg>
                      <rdg wit="#B">deuia</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">sa</rdg>
-                     <rdg wit="#B" ana="#ss-inic">ssa</rdg>
+                     <rdg wit="#B" ana="#ss-inic"><seg corresp="#ss-inic">ss</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">nenbrar</rdg>
-                     <rdg wit="#B" ana="#abb">ne<am>̄</am><ex>n</ex>brar</rdg>
+                     <rdg wit="#B" ana="#abb">ne<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>brar</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">do seu</rdg>
@@ -1146,7 +1143,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">tan</rdg>
-                     <rdg wit="#B" ana="#abb">ta<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">ta<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#dip">c<seg corresp="#dip">ui</seg>tado</rdg>
@@ -1154,7 +1151,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<am>̄</am><ex>n</ex>nor</rdg>
@@ -1174,7 +1171,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">poder</rdg>
@@ -1183,11 +1180,11 @@
                <l n="17">
                   <app>
                      <rdg wit="#A">non</rdg>
-                     <rdg wit="#B" ana="#abb">no<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">no<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">ei</rdg>
-                     <rdg wit="#B" ana="#y-dip">ey</rdg>
+                     <rdg wit="#B" ana="#y-dip">e<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">de</rdg>
@@ -1197,7 +1194,7 @@
                      <rdg wit="#B" ana="#abb #m-end">g<seg corresp="#abb"><am>ᷓ</am><ex>ra</ex></seg><seg corresp="#m-end">m</seg></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#dip">cuita</rdg>
+                     <rdg wit="#A" ana="#dip">c<seg corresp="#dip">ui</seg>ta</rdg>
                      <rdg wit="#B">coita</rdg>
                   </app>
                   <app>
@@ -1215,16 +1212,16 @@
                   </app>
                   <app>
                      <rdg wit="#A">quiserdes</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ͥ</am><ex>ui</ex>serdes</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>serdes</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">p<am>̲</am><ex>er</ex>derei</rdg>
-                     <rdg wit="#B" ana="#y-dip">p<am>̲</am><ex>er</ex>derey</rdg>
+                     <rdg wit="#B" ana="#y-dip">p<am>̲</am><ex>er</ex>dere<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                </l>
                <l n="20">
                   <app>
-                     <rdg wit="#A" ana="#dip">cuita</rdg>
+                     <rdg wit="#A" ana="#dip">c<seg corresp="#dip">ui</seg>ta</rdg>
                      <rdg wit="#B">coita</rdg>
                   </app>
                   <app>
@@ -1232,7 +1229,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">morrerei</rdg>
-                     <rdg wit="#B" ana="#y-dip">moirerey</rdg>
+                     <rdg wit="#B" ana="#y-dip">moirere<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                </l>
                <l n="21">
@@ -1246,11 +1243,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">e</rdg>
-                     <rdg wit="#B" ana="#h-et">he</rdg>
+                     <rdg wit="#B" ana="#h-et"><seg corresp="#h-et">h</seg>e</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">en</rdg>
-                     <rdg wit="#B" ana="#abb">e<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">e<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">uosso prazer</rdg>
@@ -1270,7 +1267,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#dip">c<seg corresp="#dip">ui</seg>ta</rdg>
@@ -1278,7 +1275,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<seg corresp="#reg"><am>̄</am><ex>n</ex>n</seg>or</rdg>
@@ -1302,7 +1299,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">dizer</rdg>
-                     <rdg wit="#B" ana="#abb">diz<am>&#x035B;</am><ex>er</ex></rdg>
+                     <rdg wit="#B" ana="#abb">diz<seg corresp="#abb"><am>͛</am><ex>er</ex></seg></rdg>
                   </app>
                </l>
                <l n="24">
@@ -1320,14 +1317,14 @@
                   </app>
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">uos</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">ei pauor</rdg>
@@ -1347,7 +1344,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">mal</rdg>
@@ -1359,7 +1356,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">quen</rdg>
-                     <rdg wit="#B" ana="#abb">que<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">que<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">a seu</rdg>
@@ -1396,15 +1393,15 @@
                   </app>
                   <app>
                      <rdg wit="#A">pois</rdg>
-                     <rdg wit="#B" ana="#y-dip">poys</rdg>
+                     <rdg wit="#B" ana="#y-dip">po<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb">u<am>ꝯ</am><ex>os</ex></rdg>
+                     <rdg wit="#A" ana="#abb">u<seg corresp="#abb"><am>ꝯ</am><ex>os</ex></seg></rdg>
                      <rdg wit="#B">uos</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">outro</rdg>
-                     <rdg wit="#B" ana="#abb">out<am>ᵒ</am><ex>ro</ex></rdg>
+                     <rdg wit="#B" ana="#abb">out<seg corresp="#abb"><am>ᵒ</am><ex>ro</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">ben no<am>̄</am><ex>n</ex></rdg>
@@ -1420,7 +1417,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">non</rdg>
-                     <rdg wit="#B" ana="#abb">no<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">no<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">façades</rdg>
@@ -1444,7 +1441,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">dizer</rdg>
-                     <rdg wit="#B" ana="#abb">diz<am>&#x035B;</am><ex>er</ex></rdg>
+                     <rdg wit="#B" ana="#abb">diz<seg corresp="#abb"><am>͛</am><ex>er</ex></seg></rdg>
                   </app>
                </l>
             </lg>
@@ -1469,7 +1466,7 @@
                      <rdg wit="#A #B">Nostro</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">sennor</rdg>
+                     <rdg wit="#A" ana="#reg">se<seg corresp="#reg">nn</seg>or</rdg>
                      <rdg wit="#B">senhor</rdg>
                   </app>
                   <app>
@@ -1481,7 +1478,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">coitado</rdg>
-                     <rdg wit="#B" ana="#y-dip">coytado</rdg>
+                     <rdg wit="#B" ana="#y-dip">co<seg corresp="#y-dip">y</seg>tado</rdg>
                   </app>
                </l>
                <l n="2">
@@ -1491,7 +1488,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">assi</rdg>
-                     <rdg wit="#B" ana="#y-vow">assy</rdg>
+                     <rdg wit="#B" ana="#y-vow">ass<seg corresp="#y-vow">y</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">en tal poder d<supplied>e</supplied> amor</rdg>
@@ -1506,14 +1503,14 @@
                      <rdg wit="#B" ana="#dat">mj</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">tolleu</rdg>
+                     <rdg wit="#A" ana="#reg">to<seg corresp="#reg">ll</seg>eu</rdg>
                      <rdg wit="#B">tolheu</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">o sen</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                      <rdg wit="#B">e</rdg>
                   </app>
                   <app>
@@ -1554,8 +1551,8 @@
                   <app>
                      <rdg wit="#A" ana="#reg">
                         <choice>
-                           <orig>tolle me</orig>
-                           <reg>tolle-me</reg>
+                           <orig>to<seg corresp="#reg">ll</seg>e me</orig>
+                           <reg>to<seg corresp="#reg">ll</seg>e-me</reg>
                         </choice></rdg>
                      <rdg wit="#B">
                         <choice>
@@ -1568,7 +1565,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">rogar</rdg>
-                     <rdg wit="#B" ana="#gu">roguar</rdg>
+                     <rdg wit="#B" ana="#gu">ro g<seg corresp="#gu">u</seg>ar</rdg>
                   </app>
                </l>
                <l n="6">
@@ -1577,7 +1574,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#dip">c<seg corresp="#dip">ui</seg>ta</rdg>
@@ -1609,7 +1606,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">graue</rdg>
-                     <rdg wit="#B" ana="#abb">g<am>ᷓ</am><ex>ra</ex>ue</rdg>
+                     <rdg wit="#B" ana="#abb">g<seg corresp="#abb"><am>ᷓ</am><ex>ra</ex></seg>ue</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">dia co<am>̄</am><ex>n</ex> amor foy nado</rdg>
@@ -1618,18 +1615,18 @@
                <l n="9">
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">me de</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#dip">cuita</rdg>
+                     <rdg wit="#A" ana="#dip">c<seg corresp="#dip">ui</seg>ta</rdg>
                      <rdg wit="#B">coita</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">sempre</rdg>
-                     <rdg wit="#B" ana="#abb">se<am>̄</am><ex>n</ex>p<am>ᷓ</am><ex>re</ex></rdg>
+                     <rdg wit="#B" ana="#abb">se<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>p<seg corresp="#abb"><am>ᷓ</am><ex>re</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">soffredor</rdg>
@@ -1645,11 +1642,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">uiuer</rdg>
-                     <rdg wit="#B" ana="#abb">uiu<am>&#x035B;</am><ex>er</ex></rdg>
+                     <rdg wit="#B" ana="#abb">uiu<seg corresp="#abb"><am>͛</am><ex>er</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">tan</rdg>
-                     <rdg wit="#B" ana="#abb">ta<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">ta<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">alongado</rdg>
@@ -1672,17 +1669,17 @@
                   </app>
                   <app>
                      <rdg wit="#A">ui</rdg>
-                     <rdg wit="#B" ana="#j-minin">uj</rdg>
+                     <rdg wit="#B" ana="#j-minin">u<seg corresp="#j-minin">j</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">o seu</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">bon</rdg>
-                     <rdg wit="#B" ana="#abb">bo<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">bo<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#çe">pareçer</rdg>
+                     <rdg wit="#A" ana="#çe">pare<seg corresp="#çe">ç</seg>er</rdg>
                      <rdg wit="#B">parecer</rdg>
                   </app>
                </l>
@@ -1723,7 +1720,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">ben</rdg>
-                     <rdg wit="#B" ana="#abb">be<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">be<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#error">madado</rdg>
@@ -1736,7 +1733,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#g-cons">og<supplied>?</supplied></rdg>
@@ -1757,14 +1754,14 @@
                <l n="17">
                   <app>
                      <rdg wit="#A">mais</rdg>
-                     <rdg wit="#B" ana="#y-dip">mays</rdg>
+                     <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">sei q<am>̄</am><ex>ue</ex> este desei e</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">cuidado</rdg>
-                     <rdg wit="#B" ana="#uy">cuydado</rdg>
+                     <rdg wit="#B" ana="#uy">cu<seg corresp="#uy">y</seg>dado</rdg>
                   </app>
                </l>
                <l n="18">
@@ -1773,7 +1770,7 @@
                      <rdg wit="#B" ana="#equip">assy como</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb">q<am>̄</am><ex>ue</ex>n</rdg>
+                     <rdg wit="#A" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>n</rdg>
                      <rdg wit="#B">que<am>̄</am><ex>n</ex></rdg>
                   </app>
                   <app>
@@ -1786,7 +1783,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">ui</rdg>
-                     <rdg wit="#B" ana="#j-minin">uj</rdg>
+                     <rdg wit="#B" ana="#j-minin">u<seg corresp="#j-minin">j</seg></rdg>
                   </app>
                </l>
                <l n="20">
@@ -1799,7 +1796,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">moir<supplied>?</supplied></rdg>
-                     <rdg wit="#B" ana="#y-dip">moyr<supplied>?</supplied></rdg>
+                     <rdg wit="#B" ana="#y-dip">mo<seg corresp="#y-dip">y</seg>r<supplied>?</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#g-cons">og<supplied>?</supplied></rdg>
@@ -1819,7 +1816,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<seg corresp="#reg"><am>̄</am><ex>n</ex>n</seg>or</rdg>
@@ -1845,7 +1842,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">dereit<supplied>?</supplied></rdg>
-                     <rdg wit="#B" ana="#abb">d<am>&#x035B;</am><ex>er</ex>eit<supplied>?</supplied></rdg>
+                     <rdg wit="#B" ana="#abb">d<seg corresp="#abb"><am>͛</am><ex>er</ex></seg>eit<supplied>?</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#error"><gap reason="error"/></rdg>
@@ -1856,7 +1853,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">fui</rdg>
-                     <rdg wit="#B" ana="#uj">fuj</rdg>
+                     <rdg wit="#B" ana="#uj">fu<seg corresp="#uj">j</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">mal</rdg>
@@ -1869,7 +1866,7 @@
                <l n="23">
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg"><seg corresp="#reg">ll</seg>e</rdg>
@@ -1877,7 +1874,7 @@
                   </app>
                   <app>
                      <rdg wit="#A" ana="#rev">fa<del rend="underdot">l</del>lei</rdg>
-                     <rdg wit="#B" ana="#y-dip">faley</rdg>
+                     <rdg wit="#B" ana="#y-dip">fale<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">p<am>̲</am><ex>er</ex>o m<supplied>?</supplied></rdg>
@@ -1888,7 +1885,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">en</rdg>
-                     <rdg wit="#B" ana="#abb">e<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">e<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">sabor</rdg>
@@ -1900,7 +1897,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">tan</rdg>
-                     <rdg wit="#B" ana="#abb">ta<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">ta<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">sen</rdg>
@@ -1910,14 +1907,14 @@
                      <rdg wit="#B" ana="#error"><gap reason="error"/></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb">g<am>ᷓ</am><ex>ra</ex>do</rdg>
+                     <rdg wit="#A" ana="#abb">g<seg corresp="#abb"><am>ᷓ</am><ex>ra</ex></seg>do</rdg>
                      <rdg wit="#B">grado</rdg>
                   </app>
                </l>
                <l n="25">
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg"><seg corresp="#reg">ll</seg>e</rdg>
@@ -1931,7 +1928,7 @@
                      <rdg wit="#A #B">da</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">t<am>&#x035B;</am><ex>er</ex>ra</rdg>
+                     <rdg wit="#A">t<am>͛</am><ex>er</ex>ra</rdg>
                      <rdg wit="#B" ana="#misread">t<am>’</am><ex>e</ex>ira</rdg>
                   </app>
                   <app>
@@ -1941,7 +1938,7 @@
                <l n="26">
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">ouue</rdg>
@@ -1952,7 +1949,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mui</rdg>
-                     <rdg wit="#B" ana="#uj">muj</rdg>
+                     <rdg wit="#B" ana="#uj">mu<seg corresp="#uj">j</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">mal sen</rdg>
@@ -1973,7 +1970,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">nen</rdg>
-                     <rdg wit="#B" ana="#abb">ne<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">ne<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">outre</rdg>
@@ -2015,7 +2012,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">me leixa uiuer</rdg>
@@ -2023,7 +2020,7 @@
                </l>
                <l n="3">
                   <app>
-                     <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                      <rdg wit="#B">e</rdg>
                   </app>
                   <app>
@@ -2046,7 +2043,7 @@
                </l>
                <l n="4">
                   <app>
-                     <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                      <rdg wit="#B">e</rdg>
                   </app>
                   <app>
@@ -2054,10 +2051,10 @@
                   </app>
                   <app>
                      <rdg wit="#A">gran</rdg>
-                     <rdg wit="#B" ana="#m-end">gram</rdg>
+                     <rdg wit="#B" ana="#m-end">gra<seg corresp="#m-end">m</seg></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#dip">cuita</rdg>
+                     <rdg wit="#A" ana="#dip">c<seg corresp="#dip">ui</seg>ta</rdg>
                      <rdg wit="#B">coita</rdg>
                   </app>
                   <app>
@@ -2065,7 +2062,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mi</rdg>
-                     <rdg wit="#B" ana="#h-minin">mh</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">o faz dizer</rdg>
@@ -2074,11 +2071,11 @@
                <l n="5">
                   <app>
                      <rdg wit="#A">ei</rdg>
-                     <rdg wit="#B" ana="#y-dip">ey</rdg>
+                     <rdg wit="#B" ana="#y-dip">e<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">gran</rdg>
-                     <rdg wit="#B" ana="#m-end">gram</rdg>
+                     <rdg wit="#B" ana="#m-end">gra<seg corresp="#m-end">m</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">pauor de</rdg>
@@ -2094,7 +2091,7 @@
                <l n="6">
                   <app>
                      <rdg wit="#A">coit<supplied>?</supplied></rdg>
-                     <rdg wit="#B" ana="#y-dip">coyt<supplied>?</supplied></rdg>
+                     <rdg wit="#B" ana="#y-dip">co<seg corresp="#y-dip">y</seg>t<supplied>?</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">alongadament<supplied>?</supplied> e m<supplied>e</supplied> ar matar</rdg>
@@ -2120,21 +2117,21 @@
                   </app>
                   <app>
                      <rdg wit="#A">en</rdg>
-                     <rdg wit="#B" ana="#abb">e<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">e<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">me leixa</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">uiuer</rdg>
-                     <rdg wit="#B" ana="#abb">uiu<am>&#x035B;</am><ex>er</ex></rdg>
+                     <rdg wit="#B" ana="#abb">uiu<seg corresp="#abb"><am>͛</am><ex>er</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">des</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">aqui</rdg>
-                     <rdg wit="#B" ana="#abb">aq<am>ͥ</am><ex>ui</ex></rdg>
+                     <rdg wit="#B" ana="#abb">aq<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg></rdg>
                   </app>
                </l>
                <l n="9">
@@ -2147,7 +2144,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">entender</rdg>
-                     <rdg wit="#B" ana="#abb">ente<am>̄</am><ex>n</ex>der</rdg>
+                     <rdg wit="#B" ana="#abb">ente<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>der</rdg>
                   </app>
                </l>
                <l n="10">
@@ -2156,13 +2153,13 @@
                   </app>
                   <app>
                      <rdg wit="#A">muit<supplied>o</supplied></rdg>
-                     <rdg wit="#B" ana="#uy">muyt<supplied>o</supplied></rdg>
+                     <rdg wit="#B" ana="#uy">mu<seg corresp="#uy">y</seg>t<supplied>o</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">a q<am>̄</am><ex>ue</ex></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">ll<supplied>?</supplied></rdg>
+                     <rdg wit="#A" ana="#reg"><seg corresp="#reg">ll</seg><supplied>?</supplied></rdg>
                      <rdg wit="#B">lh<supplied>?</supplied></rdg>
                   </app>
                   <app>
@@ -2199,11 +2196,11 @@
                <l n="12">
                   <app>
                      <rdg wit="#A">mais</rdg>
-                     <rdg wit="#B" ana="#y-dip">mays</rdg>
+                     <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">non</rdg>
-                     <rdg wit="#B" ana="#abb">no<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">no<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">me mata ne<am>̄</am><ex>n</ex> me q<am>̄</am><ex>ue</ex>r guarir</rdg>
@@ -2215,14 +2212,14 @@
                   </app>
                   <app>
                      <rdg wit="#A">ei</rdg>
-                     <rdg wit="#B" ana="#y-dip">ey</rdg>
+                     <rdg wit="#B" ana="#y-dip">e<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">del pois uiu<supplied>?</supplied> a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">partir</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷓ</am><ex>ar</ex>tir</rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷓ</am><ex>ar</ex></seg>tir</rdg>
                   </app>
                </l>
                <l n="14">
@@ -2235,7 +2232,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">prazer</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷓ</am><ex>ra</ex>zer</rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷓ</am><ex>ra</ex></seg>zer</rdg>
                   </app>
                </l>
             </lg>
@@ -2246,7 +2243,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">nunca</rdg>
-                     <rdg wit="#B" ana="#abb">nu<am>̄</am><ex>n</ex>ca</rdg>
+                     <rdg wit="#B" ana="#abb">nu<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>ca</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">un</rdg>
@@ -2254,24 +2251,24 @@
                   </app>
                   <app>
                      <rdg wit="#A">prazer</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷓ</am><ex>ra</ex>zer</rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷓ</am><ex>ra</ex></seg>zer</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">pre<am>̄</am><ex>n</ex>di</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷓ</am><ex>re</ex>ndi</rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷓ</am><ex>re</ex></seg>ndi</rdg>
                   </app>
                </l>
                <l n="16">
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">mil pesares</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">m<supplied>e</supplied> el faz</rdg>
@@ -2291,14 +2288,14 @@
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">eu</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">meu mal uj</rdg>
@@ -2310,7 +2307,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">contra</rdg>
-                     <rdg wit="#B" ana="#abb"><am>Ꝯ̄</am><ex>contra</ex></rdg>
+                     <rdg wit="#B" ana="#abb"><seg corresp="#abb"><am>Ꝯ̄</am><ex>contra</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">ela ualer</rdg>
@@ -2319,7 +2316,7 @@
                <l n="19">
                   <app>
                      <rdg wit="#A">nen</rdg>
-                     <rdg wit="#B" ana="#abb">ne<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">ne<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">
@@ -2335,20 +2332,20 @@
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">m<supplied>e</supplied> era</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mester</rdg>
-                     <rdg wit="#B" ana="#abb">mest<am>&#x035B;</am><ex>er</ex></rdg>
+                     <rdg wit="#B" ana="#abb">mest<seg corresp="#abb"><am>͛</am><ex>er</ex></seg></rdg>
                   </app>
                </l>
                <l n="20">
                   <app>
                      <rdg wit="#A">pois</rdg>
-                     <rdg wit="#B" ana="#y-dip">poys</rdg>
+                     <rdg wit="#B" ana="#y-dip">po<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">m<supplied>e</supplied> esto faz e matar no<am>̄</am><ex>n</ex> me q<am>̄</am><ex>ue</ex>r</rdg>
@@ -2357,20 +2354,20 @@
                <l n="21">
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">q<am>̄</am><ex>ue</ex></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">ll<supplied>?</supplied></rdg>
+                     <rdg wit="#A" ana="#reg"><seg corresp="#reg">ll</seg><supplied>?</supplied></rdg>
                      <rdg wit="#B">lh<supplied>?</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">ei eu tal uida</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#çe">gradeçer</rdg>
+                     <rdg wit="#A" ana="#çe">grade<seg corresp="#çe">ç</seg>er</rdg>
                      <rdg wit="#B">gradecer</rdg>
                   </app>
                </l>
@@ -2382,7 +2379,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">m<supplied>e</supplied></rdg>
@@ -2402,7 +2399,7 @@
                <l n="23">
                   <app>
                      <rdg wit="#A">non</rdg>
-                     <rdg wit="#B" ana="#abb">no<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">no<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#g-cons">dese<seg corresp="#g-cons">g</seg>ei</rdg>
@@ -2410,11 +2407,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">ben</rdg>
-                     <rdg wit="#B" ana="#abb">be<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">be<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="&gt;#syn">podesse</rdg>
@@ -2430,18 +2427,18 @@
                   </app>
                   <app>
                      <rdg wit="#A">quer</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex>r</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>r</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">morte</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">deseiei</rdg>
-                     <rdg wit="#B" ana="#y-dip">deseiey</rdg>
+                     <rdg wit="#B" ana="#y-dip">deseie<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">
@@ -2455,14 +2452,14 @@
                <l n="25">
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">ant<supplied>?</supplied> eu</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">muit</rdg>
-                     <rdg wit="#B" ana="#uy">muyto</rdg>
+                     <rdg wit="#B" ana="#uy">mu<seg corresp="#uy">y</seg>to</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">soya temer</rdg>
@@ -2478,7 +2475,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">non</rdg>
-                     <rdg wit="#B" ana="#abb">no<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">no<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">me mata ne<am>̄</am><ex>n</ex></rdg>
@@ -2494,7 +2491,7 @@
                <l n="27">
                   <app>
                      <rdg wit="#A">mais</rdg>
-                     <rdg wit="#B" ana="#y-dip">mays</rdg>
+                     <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A"/>
@@ -2527,21 +2524,21 @@
                   </app>
                   <app>
                      <rdg wit="#A">cuidass<supplied>?</supplied></rdg>
-                     <rdg wit="#B" ana="#uy">cuydass<supplied>?</supplied></rdg>
+                     <rdg wit="#B" ana="#uy">cu<seg corresp="#uy">y</seg>dass<supplied>?</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">en</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">mort<supplied>e</supplied> a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">perder</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>̲</am><ex>er</ex>der</rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>̲</am><ex>er</ex></seg>der</rdg>
                   </app>
                </l>
             </lg>
@@ -2568,10 +2565,10 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">sennor</rdg>
+                     <rdg wit="#A" ana="#reg">se<seg corresp="#reg">nn</seg>or</rdg>
                      <rdg wit="#B">senhor</rdg>
                   </app>
                   <app>
@@ -2585,7 +2582,7 @@
                <l n="2">
                   <app>
                      <rdg wit="#A">non</rdg>
-                     <rdg wit="#B" ana="#m-end">nom</rdg>
+                     <rdg wit="#B" ana="#m-end">no<seg corresp="#m-end">m</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">me</rdg>
@@ -2596,11 +2593,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">mui</rdg>
-                     <rdg wit="#B" ana="#uj">muj</rdg>
+                     <rdg wit="#B" ana="#uj">mu<seg corresp="#uj">j</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">gran</rdg>
-                     <rdg wit="#B" ana="#m-end">gram</rdg>
+                     <rdg wit="#B" ana="#m-end">gra<seg corresp="#m-end">m</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">prazer</rdg>
@@ -2651,11 +2648,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">pois</rdg>
-                     <rdg wit="#B" ana="#y-dip">poys</rdg>
+                     <rdg wit="#B" ana="#y-dip">po<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">est<supplied>?</supplied> a creer</rdg>
@@ -2669,7 +2666,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">mal</rdg>
@@ -2686,14 +2683,14 @@
                <l n="10">
                   <app>
                      <rdg wit="#A">aquel</rdg>
-                     <rdg wit="#B" ana="#abb">aq<am>̄</am><ex>ue</ex>l</rdg>
+                     <rdg wit="#B" ana="#abb">aq<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>l</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">dia en</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#l-pal">filei</rdg>
@@ -2706,7 +2703,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">por</rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<am>̄</am><ex>n</ex>nor</rdg>
@@ -2719,7 +2716,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<am>̄</am><ex>n</ex>nor</rdg>
@@ -2729,18 +2726,18 @@
                <l n="13">
                   <app>
                      <rdg wit="#A">senpr<supplied>e</supplied> eu</rdg>
-                     <rdg wit="#B" ana="#abb">senp<am>ᷣ</am><ex>r<supplied>e</supplied> e</ex>u</rdg>
+                     <rdg wit="#B" ana="#abb">senp<seg corresp="#abb"><am>ᷣ</am><ex>r<supplied>e</supplied> e</ex></seg>u</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">morte</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">deseiei</rdg>
-                     <rdg wit="#B" ana="#y-dip">deseiey</rdg>
+                     <rdg wit="#B" ana="#y-dip">deseie<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                </l>
                <l n="14">
@@ -2749,13 +2746,13 @@
                   </app>
                   <app>
                      <rdg wit="#A">cuidei</rdg>
-                     <rdg wit="#B" ana="#y-dip">cuydey</rdg>
+                     <rdg wit="#B" ana="#y-dip">cu<seg corresp="#y-dip">y</seg>de<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                </l>
                <l n="15">
                   <app>
                      <rdg wit="#A">porq<am>̄</am><ex>ue</ex></rdg>
-                     <rdg wit="#B" ana="#abb">p<am>ᷣ</am><ex>or</ex>q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">p<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg>q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#error">uidei</rdg>
@@ -2772,14 +2769,14 @@
                   </app>
                   <app>
                      <rdg wit="#A">mais</rdg>
-                     <rdg wit="#B" ana="#y-dip">mays</rdg>
+                     <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">q<am>̄</am><ex>ue</ex></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">farei</rdg>
-                     <rdg wit="#B" ana="#y-dip">farey</rdg>
+                     <rdg wit="#B" ana="#y-dip">fare<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                </l>
             </lg>
@@ -2790,11 +2787,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">con</rdg>
-                     <rdg wit="#B" ana="#abb">co<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">co<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">tanto</rdg>
-                     <rdg wit="#B" ana="#abb">ta<am>̄</am><ex>n</ex>to</rdg>
+                     <rdg wit="#B" ana="#abb">ta<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>to</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">mal</rdg>
@@ -2803,7 +2800,7 @@
                <l n="18">
                   <app>
                      <rdg wit="#A">pois</rdg>
-                     <rdg wit="#B" ana="#y-dip">poys</rdg>
+                     <rdg wit="#B" ana="#y-dip">po<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">uosso ben</rdg>
@@ -2828,7 +2825,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">assi</rdg>
-                     <rdg wit="#B" ana="#y-vow">assy</rdg>
+                     <rdg wit="#B" ana="#y-vow">ass<seg corresp="#y-vow">y</seg></rdg>
                   </app>
                </l>
                <l n="21">
@@ -2865,11 +2862,11 @@
                <l n="23">
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">nunca</rdg>
-                     <rdg wit="#B" ana="#abb">nu<am>̄</am><ex>n</ex>ca</rdg>
+                     <rdg wit="#B" ana="#abb">nu<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>ca</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">tal</rdg>
@@ -2881,7 +2878,7 @@
                   </app>
                   <app>
                      <rdg wit="#A" ana="#syn">outr<seg corresp="#syn">o</seg> ome</rdg>
-                     <rdg wit="#B" ana="#abb #pro-nas">out<seg corresp="#abb"><am>&#807;</am><ex>r<supplied>o</supplied> o</ex></seg>me<seg corresp="#pro-nas"><am>̄</am><ex>n</ex></seg></rdg>
+                     <rdg wit="#B" ana="#abb #pro-nas">out<seg corresp="#abb"><am>̧</am><ex>r<supplied>o</supplied> o</ex></seg>me<seg corresp="#pro-nas"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">d<supplied>e</supplied> amor ne<am>̄</am><ex>n</ex> d<supplied>e</supplied> al</rdg>
@@ -2891,7 +2888,7 @@
             <lg type="cobra">
                <l n="25">
                   <app>
-                     <rdg wit="#B" ana="#abb">Como q<am>̄</am><ex>ue</ex>me faz deseiar</rdg>
+                     <rdg wit="#B" ana="#abb">Como q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>me faz deseiar</rdg>
                   </app>
                </l>
                <l n="26">
@@ -2986,14 +2983,14 @@
                   </app>
                   <app>
                      <rdg wit="#A">cuidad<supplied>?</supplied></rdg>
-                     <rdg wit="#B" ana="#y-dip">cuydad<supplied>?</supplied></rdg>
+                     <rdg wit="#B" ana="#y-dip">cu<seg corresp="#y-dip">y</seg>dad<supplied>?</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">ar</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">ei</rdg>
-                     <rdg wit="#B" ana="#y-dip">ey</rdg>
+                     <rdg wit="#B" ana="#y-dip">e<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">log<supplied>o</supplied> a prender</rdg>
@@ -3007,11 +3004,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">mui</rdg>
-                     <rdg wit="#B" ana="#uj">muj</rdg>
+                     <rdg wit="#B" ana="#uj">mu<seg corresp="#uj">j</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mellor</rdg>
-                     <rdg wit="#B" ana="#abb">melh<am>ᷣ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb">melh<seg corresp="#abb"><am>ᷣ</am><ex>or</ex></seg></rdg>
                   </app>
                </l>
                <l n="9">
@@ -3023,11 +3020,11 @@
                      <rdg wit="#B">sei</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                      <rdg wit="#B">e</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#çe">pareçer</rdg>
+                     <rdg wit="#A" ana="#çe">pare<seg corresp="#çe">ç</seg>er</rdg>
                      <rdg wit="#B">parecer</rdg>
                   </app>
                </l>
@@ -3064,18 +3061,18 @@
                   </app>
                   <app>
                      <rdg wit="#A">quand<supplied>?</supplied></rdg>
-                     <rdg wit="#B" ana="#abb">q<am>&#x1DD3;&#x0321;</am><ex>uan</ex>d<supplied>e</supplied></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̡ᷓ</am><ex>uan</ex></seg>d<supplied>e</supplied></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">ar</rdg>
-                     <rdg wit="#B" ana="#ar">er</rdg>
+                     <rdg wit="#A" ana="#ar">ar</rdg>
+                     <rdg wit="#B">er</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">soyo</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">cuidar</rdg>
-                     <rdg wit="#B" ana="#uy">cuydar</rdg>
+                     <rdg wit="#B" ana="#uy">cu<seg corresp="#uy">y</seg>dar</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">no pauor</rdg>
@@ -3097,7 +3094,7 @@
                <l n="17">
                   <app>
                      <rdg wit="#A">enton</rdg>
-                     <rdg wit="#B" ana="#abb">ento<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">ento<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">cuid<supplied>?</supplied></rdg>
@@ -3108,7 +3105,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">enquant</rdg>
-                     <rdg wit="#B" ana="#abb">enq<am>&#x1DD3;&#x0321;</am><ex>uan</ex>t<supplied>?</supplied></rdg>
+                     <rdg wit="#B" ana="#abb">enq<seg corresp="#abb"><am>̡ᷓ</am><ex>uan</ex></seg>t<supplied>?</supplied></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">eu uiuo for</rdg>
@@ -3117,11 +3114,11 @@
                <l n="18">
                   <app>
                      <rdg wit="#A">que</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>̄</am><ex>ue</ex></rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">nunca</rdg>
-                     <rdg wit="#B" ana="#abb">nu<am>̄</am><ex>n</ex>ca</rdg>
+                     <rdg wit="#B" ana="#abb">nu<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>ca</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">ue<seg corresp="#reg">nn</seg>
@@ -3139,7 +3136,7 @@
                <l n="19">
                   <app>
                      <rdg wit="#A">mais</rdg>
-                     <rdg wit="#B" ana="#y-dip">mays</rdg>
+                     <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#abb #reg">
@@ -3172,14 +3169,14 @@
                      <rdg wit="#B">p<am>ᷓ</am><ex>ra</ex>z</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb"><am>⁊</am><ex>e</ex></rdg>
+                     <rdg wit="#A" ana="#abb"><seg corresp="#abb"><am>⁊</am><ex>e</ex></seg></rdg>
                      <rdg wit="#B">e</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">uosso</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg">semellar</rdg>
+                     <rdg wit="#A" ana="#reg">seme<seg corresp="#reg">ll</seg>ar</rdg>
                      <rdg wit="#B">semelhar</rdg>
                   </app>
                </l>
@@ -3189,11 +3186,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">quanto</rdg>
-                     <rdg wit="#B" ana="#abb">qua<am>̄</am><ex>n</ex>nto</rdg>
+                     <rdg wit="#B" ana="#abb">qua<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>nto</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">ben</rdg>
-                     <rdg wit="#B" ana="#abb">be<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">be<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">de uos ouço dizer</rdg>
@@ -3204,18 +3201,18 @@
                <l n="22">
                   <app>
                      <rdg wit="#A">Mais</rdg>
-                     <rdg wit="#B" ana="#y-dip">Mays</rdg>
+                     <rdg wit="#B" ana="#y-dip">Ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">quen</rdg>
-                     <rdg wit="#B" ana="#abb">que<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">que<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">u<am>ꝯ</am><ex>os</ex> ousa</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">mia</rdg>
-                     <rdg wit="#B" ana="#h-minin">mha</rdg>
+                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<seg corresp="#reg"><am>̄</am><ex>n</ex>n</seg>or</rdg>
@@ -3231,7 +3228,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">quitar</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>ͥ</am><ex>ui</ex>tar</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>ͥ</am><ex>ui</ex></seg>tar</rdg>
                   </app>
                </l>
                <l n="24">
@@ -3239,12 +3236,12 @@
                      <rdg wit="#A #B">de</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#abb">u<am>ꝯ</am><ex>os</ex></rdg>
+                     <rdg wit="#A" ana="#abb">u<seg corresp="#abb"><am>ꝯ</am><ex>os</ex></seg></rdg>
                      <rdg wit="#B">uos</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">nen</rdg>
-                     <rdg wit="#B" ana="#abb">ne<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">ne<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">os</rdg>
@@ -3254,7 +3251,7 @@
                      <rdg wit="#B" ana="#abb">olh<seg corresp="#abb"><am>ꝯ</am><ex>os</ex></seg></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">de u<am>ꝯ</am><ex>os</ex> u<am>&#x035B;</am><ex>er</ex></rdg>
+                     <rdg wit="#A">de u<am>ꝯ</am><ex>os</ex> u<am>͛</am><ex>er</ex></rdg>
                   </app>
                </l>
             </lg>
@@ -3262,7 +3259,7 @@
                <l n="25">
                   <app>
                      <rdg wit="#A">Nen</rdg>
-                     <rdg wit="#B" ana="#abb">Ne<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">Ne<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">como</rdg>
@@ -3277,7 +3274,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">ben</rdg>
-                     <rdg wit="#B" ana="#abb">be<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">be<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">deseiar</rdg>
@@ -3286,7 +3283,7 @@
                <l n="26">
                   <app>
                      <rdg wit="#A">senon</rdg>
-                     <rdg wit="#B" ana="#abb">seno<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">seno<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">de uos q<am>̄</am><ex>ue</ex> sol oyr falar</rdg>
@@ -3298,11 +3295,11 @@
                   </app>
                   <app>
                      <rdg wit="#A">quanto</rdg>
-                     <rdg wit="#B" ana="#abb">q<am>&#x1DD3;&#x0321;</am><ex>uan</ex>to</rdg>
+                     <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̡ᷓ</am><ex>uan</ex></seg>to</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">ben</rdg>
-                     <rdg wit="#B" ana="#abb">be<am>̄</am><ex>n</ex></rdg>
+                     <rdg wit="#B" ana="#abb">be<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">d<am>’</am><ex>eu</ex>s en uos faz auer</rdg>
