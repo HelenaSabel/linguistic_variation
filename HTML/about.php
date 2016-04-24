@@ -33,23 +33,32 @@
         eles tem
         em particular, delimitando, assim, o ingente objeto de estudo.</span></p>
     <h2><span class="pt">Corpus estudado</span><span class="en">Composition of the corpus</span></h2>
-    <p><span class="pt">Neste momento, o corpus estudado está composto por
+    <p><span class="pt">Neste momento, o corpus estudado está conformado por
             <?php
             require_once('config.php');
             $xql = REST_PATH . "/db/VTLGP/queries/count.xquery";
             echo file_get_contents($xql);
             ?>
-            cantigas.</span>
+            cantigas, compostas por <?php
+            require_once('config.php');
+            $xql = REST_PATH . "/db/VTLGP/queries/count2.xquery";
+            echo file_get_contents($xql);
+            ?> trovadores. </span>
     <span class="en">At this point, the corpus is composed of <?php
         require_once('config.php');
         $xql = REST_PATH . "/db/VTLGP/queries/count.xquery";
         echo file_get_contents($xql);
-        ?> songs.</span></p>
+        ?> songs written by <?php
+        require_once('config.php');
+        $xql = REST_PATH . "/db/VTLGP/queries/count2.xquery";
+        echo file_get_contents($xql);
+        ?> troubadours.</span></p>
     <?php
     require_once('config.php');
-    $xql = REST_PATH . "/db/VTLGP/queries/songs-by-period.xquery";
+    $xql = REST_PATH . "/db/VTLGP/queries/corpus-composition.xquery";
     echo file_get_contents($xql);
     ?>
+    <p><a href="visualizations.php"><span class="pt">Outras visualizações (incompleto)</span><span class="en">Additional visualizations (in progress)</span>.</a></p>
     <h2><span class="pt">Metodologia</span><span class="en">Methodology</span></h2>
     <p><span class="pt">A nossa proposta para sistematizar o estudo da variação linguística na lírica profana
         galego-portuguesa, consiste
