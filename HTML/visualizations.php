@@ -58,6 +58,12 @@
     $xql = REST_PATH . "/db/VTLGP/queries/overlap-non-scaled.xquery";
     echo file_get_contents($xql);
     ?>
+    <h2><span class="pt">Variantes significativas</span><span class="en">Substantive variants</span></h2>
+    <?php
+    require_once('config.php');
+    $xql = REST_PATH . "/db/VTLGP/queries/variants.xquery";
+    echo file_get_contents($xql);
+    ?>
 </main>
 <!--#include virtual="ssi/footer.html"-->
 </body>
