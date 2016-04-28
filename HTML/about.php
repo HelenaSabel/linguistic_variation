@@ -27,7 +27,7 @@
         respeito da
         sua confeção, o que nos leva a poder explicar não só a elaboração dos testemunhos escritos, mas a evolução
         sócio-histórica
-            da escola literário analisada. Para focar este tipo de análise linguística, apostamos pelo estudo do fenómeno da
+            da escola literária analisada. Para focar este tipo de análise linguística, apostamos pelo estudo do fenómeno da
         variação,
         pois, ao analisarmos os aspetos que variam de um manuscrito para o outro estamos identificando o que cada um de
         eles tem
