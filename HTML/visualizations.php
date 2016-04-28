@@ -11,6 +11,7 @@
             type="text/javascript">/**/</script>
     <script src="javascript/header.js" type="text/javascript">/**/</script>
     <script src="javascript/menu.js" type="text/javascript">/**/</script>
+    <script src="javascript/hide-show.js" type="text/javascript">/**/</script>
 
     <!--#include virtual="ssi/favicon.html"-->
 </head>
@@ -58,12 +59,24 @@
     $xql = REST_PATH . "/db/VTLGP/queries/overlap-non-scaled.xquery";
     echo file_get_contents($xql);
     ?>
-    <h2><span class="pt">Variantes significativas</span><span class="en">Substantive variants</span></h2>
+    <h2><span class="pt">Variantes significativas</span><span class="en">Substantive variants</span> (I)</h2>
+    <p><span class="pt">Inclui-se a localizaçãodos textos de cada autor no testemunho <em>A</em></span><span class="en">We include the location of the texts by each author in witness <em>A</em></span>.</p>
     <?php
     require_once('config.php');
     $xql = REST_PATH . "/db/VTLGP/queries/variants.xquery";
     echo file_get_contents($xql);
     ?>
+    <h2><span class="pt">Variantes significativas</span><span class="en">Substantive variants</span> (II)</h2>
+    <div class="radar"><?php
+    require_once('config.php');
+    $xql = REST_PATH . "/db/VTLGP/queries/radar-plot.xquery";
+    echo file_get_contents($xql);
+    ?>
+    <?php
+    require_once('config.php');
+    $xql = REST_PATH . "/db/VTLGP/queries/radar-plot-form.xquery";
+    echo file_get_contents($xql);
+    ?></div>
 </main>
 <!--#include virtual="ssi/footer.html"-->
 </body>

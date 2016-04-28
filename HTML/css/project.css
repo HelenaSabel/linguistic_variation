@@ -154,6 +154,23 @@ p{
     overflow: hidden;
 }
 
+
+.radar {
+    display:flex;
+    justify-content:space-between;
+}
+
+.radarF {
+list-style:none;
+   width: -moz-max-content;
+    width: -webkit-max-content;
+    width: -o-max-content;
+}
+
+g[id^="esc"]{
+    display : none;
+}
+
 /* Footer */
 
 footer{
