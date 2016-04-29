@@ -155,20 +155,25 @@ p{
 }
 
 
-.radar {
-    display:flex;
-    justify-content:space-between;
+.radar{
+    display: flex;
+    justify-content: space-between;
 }
 
-.radarF {
-list-style:none;
-   width: -moz-max-content;
+.radarF{
+    list-style: none;
+    margin-right:4%;
+    width: -moz-max-content;
     width: -webkit-max-content;
     width: -o-max-content;
 }
 
-g[id^="esc"]{
-    display : none;
+.radarF li {
+    white-space:nowrap;
+}
+
+g[id ^= "esc"]{
+    display: none;
 }
 
 /* Footer */
@@ -249,7 +254,7 @@ section svg{
 }
 
 svg a:hover{
-    opacity:0.5;
+    opacity: 0.5;
 }
 
 section h3{
@@ -482,8 +487,8 @@ ins.enhance.margin::before{
     display: inline-flex;
 }
 
-.corpus span {
-        padding-right:0.4em;
+.corpus span{
+    padding-right: 0.4em;
 }
 
 #highlight{

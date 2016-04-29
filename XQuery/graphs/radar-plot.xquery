@@ -9,7 +9,7 @@ declare variable $significant := $equipolent | $scribalError | $ling-features;
 declare variable $poets := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[concat('#', @xml:id) = $songs//tei:name[@role eq 'author']/@ref];
 declare variable $periods := $poets[@xml:id = $songs//tei:name/substring(@ref, 2)]/tei:floruit/@period;
 declare variable $fixedWidth := number('400');
-declare variable $radio := number("3");
+declare variable $radio := number("3.5");
 declare variable $color := ('#2B3966', '#BD6D03', '#B3A8CC', '#CF4205', '#6C659D', '#009CA2', '#BC9650', '#233310', '#FFC938', '#5C647F',
 '#22461E', '#EDDF81', '#6A643A', '#B0E9ED', '#B788A4', '#889BB7', '#73843A', '#3d4144', '#6A685A', '#2B6273',
 '#73473C', '#490301', '#f2cf95', '#1B0CA2', '#630C03', '#025256', '#E25C05', '#11894A', '#009CA2', '#895F11');
@@ -214,7 +214,7 @@ declare variable $max := number('320');
                 <polyline
                     stroke="{$color[$pos]}"
                     fill="none"
-                    stroke-width="1"
+                    stroke-width="2"
                     points="{concat('0,-', $ling, ' -', $errors, ',0 0,', $equip, ' ', $outras, ',0 ', '0,-', $ling)}"/>
                 <polyline
                     stroke="none"
@@ -266,7 +266,7 @@ declare variable $max := number('320');
                 <polyline
                     stroke="{$color[$no]}"
                     fill="none"
-                    stroke-width="1"
+                    stroke-width="2"
                     points="{concat('0,-', $ling, ' -', $errors, ',0 0,', $equip, ' ', $outras, ',0 ', '0,-', $ling)}"/>
                 <polyline
                     stroke="none"
