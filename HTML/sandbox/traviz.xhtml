@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Prova</title>
+        <link rel="stylesheet" href="TRAViz/traviz.css" type="text/css"/>
+        <script src="TRAViz/traviz-min.js"/>
+    </head>
+    <body>
+        <div id="TRAVizContainerDiv">
+           
+        </div>
+        <script type="text/javascript">
+            var traviz = new TRAViz("TRAVizContainerDiv", {
+            lineNumbering: false});
+            traviz.align(
+            [{
+    edition: "American Standard Version",
+    text: "In the beginning God created \n the heavens and the earth."
+ },{
+    edition: "Bible in Basic English",
+    text: "At the first God made \n  the heaven and the earth."
+ },{
+    edition: "Darby Bible",
+    text: "In the beginning God created \n the heavens and the earth."
+ }]
+ 
+            );
+            traviz.visualize();
+            </script>
+    </body>
+</html>
