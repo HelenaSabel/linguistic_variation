@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0"
-    exclude-result-prefixes="xs" version="2.0">
+    exclude-result-prefixes="xs" version="3.0">
     <xsl:output method="xml" indent="yes"/>
     <xsl:template match="/">
         <xsl:variable name="ana">
@@ -43,6 +43,9 @@
                     <xsl:if test="contains(rdg[1], 'ff') and not(contains(rdg[2],'ff'))">
                         <xsl:text>#ff</xsl:text>
                     </xsl:if>
+                    <xsl:if test="contains(rdg[1], 'cc') and not(contains(rdg[2],'cc'))">
+                        <xsl:text>#cc</xsl:text>
+                    </xsl:if>
                     <xsl:if test="contains(rdg[1], 'us') and contains(rdg[2],'os')">
                         <xsl:text>#back-vow</xsl:text>
                     </xsl:if>
@@ -52,7 +55,7 @@
                     <xsl:if test="contains(rdg[1], 'll') and contains(rdg[2],'lh')">
                         <xsl:text>#reg</xsl:text>
                     </xsl:if>
-                    <xsl:if test="matches(rdg[1], '(e|a|o)i') and matches(rdg[2], '(e|a|o)y')">
+                    <xsl:if test="matches(rdg[2], '(e|a|o)i') and matches(rdg[1], '(e|a|o)y')">
                         <xsl:text>#y-dip</xsl:text>
                     </xsl:if>                      
                     <xsl:if test="contains(rdg[1], 'ui') and matches(rdg[2], 'o(y|i|j)')">
@@ -97,6 +100,9 @@
                     <xsl:if test="contains(rdg[2], 'ff') and not(contains(rdg[1],'ff'))">
                         <xsl:text>#ff</xsl:text>
                     </xsl:if>
+                    <xsl:if test="contains(rdg[2], 'cc') and not(contains(rdg[1],'cc'))">
+                        <xsl:text>#cc</xsl:text>
+                    </xsl:if>
                     <xsl:if test="rdg[1]/descendant::supplied and rdg[2]/not(descendant::supplied)">
                         <xsl:text>#syn</xsl:text>
                     </xsl:if>
@@ -109,6 +115,9 @@
                     <xsl:if test="contains(rdg[1], 'ui') and contains(rdg[2], 'uy')">
                         <xsl:text>#uy</xsl:text>
                     </xsl:if>     
+                    <xsl:if test="matches(rdg[2], 'u(i|y)') and matches(rdg[1], 'o(y|i|j)')">
+                        <xsl:text>#dip</xsl:text>
+                    </xsl:if>
                     <xsl:if test="contains(rdg[2], 'hu')">
                         <xsl:text>#h-monos</xsl:text>
                     </xsl:if>                    
@@ -136,7 +145,7 @@
                     <xsl:if test="rdg[2]/gap[@reason='error']">
                         <xsl:text>#error</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1]/gap[@reason=('economy', 'damage')]">
+                    <xsl:if test="rdg[2]/gap[@reason=('economy', 'damage')]">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>                     
                     <xsl:if test="matches(rdg[1], '(e|a|o)i') and matches(rdg[2], '(e|a|o)y')">
@@ -147,7 +156,10 @@
                     </xsl:if>                     
                     <xsl:if test="matches(rdg[2], 'm$') and not(matches(rdg[1], 'm$'))">
                         <xsl:text>#m-end</xsl:text>
-                    </xsl:if> 
+                    </xsl:if>
+                    <xsl:if test="matches(rdg[2], '^uj$') and not(matches(rdg[1], '^uj$'))">
+                        <xsl:text>#j-minin</xsl:text>
+                    </xsl:if>
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[2]/node()"/>
             </xsl:element>
@@ -162,7 +174,7 @@
     <xsl:template match="comment()" mode="correction">
         <xsl:comment select="."/>
     </xsl:template>
-    <xsl:template match="rdg/@*" mode="correction">
+    <xsl:template match="l/descendant::rdg/@*" mode="correction">
         <xsl:attribute name="wit">
             <xsl:value-of select="../@wit"/>
         </xsl:attribute>

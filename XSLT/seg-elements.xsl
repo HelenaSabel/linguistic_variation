@@ -16,15 +16,37 @@
     <xsl:template match="hi[ancestor::rdg[contains(@ana, '#material')]]">
         <seg corresp="#material"><xsl:copy-of select="current()"/></seg>
     </xsl:template>
-<!--    r-simp
-    nh
-    capital-->
+<!--   
+    nh-->
     <xsl:template
         match="text()[matches(., 'y')][not(parent::seg)][ancestor::rdg[contains(@ana, '#y-dip')]]">
         <xsl:analyze-string select="current()" regex=".*?y">
             <xsl:matching-substring>
                 <xsl:value-of select="replace(., 'y', '')"/>
                 <seg corresp="#y-dip">y</seg>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
+    <xsl:template
+        match="text()[matches(., 'nh')][not(parent::seg)][ancestor::rdg[contains(@ana, '#nh')]]">
+        <xsl:analyze-string select="current()" regex=".*?nh">
+            <xsl:matching-substring>
+                <xsl:value-of select="replace(., 'nh', '')"/>
+                <seg corresp="#nh">nh</seg>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
+    <xsl:template
+        match="text()[matches(., '[A-Z]')][not(parent::seg)][ancestor::rdg[contains(@ana, '#capital')]]">
+        <xsl:analyze-string select="current()" regex="^[A-Z]">
+            <xsl:matching-substring>
+                <seg corresp="#capital"><xsl:value-of select="."/></seg>
             </xsl:matching-substring>
             <xsl:non-matching-substring>
                 <xsl:value-of select="."/>

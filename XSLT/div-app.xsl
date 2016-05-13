@@ -86,7 +86,7 @@
                                     </xsl:matching-substring>
                                 </xsl:analyze-string>
                             </xsl:attribute>
-                            <xsl:attribute name="hand">#d</xsl:attribute>
+                            <xsl:attribute name="hand">#c</xsl:attribute>
                             <xsl:element name="idno">
                             <xsl:analyze-string select="string(./@corresp)" regex="#(\w\d+)(\w\d+)">
                                 <xsl:matching-substring>
@@ -103,7 +103,7 @@
                 </xsl:element>
                 <xsl:element name="name">
                     <xsl:attribute name="role">author</xsl:attribute>
-                    <xsl:attribute name="ref">#PGarBu</xsl:attribute>
+                    <xsl:attribute name="ref">#JNzCam</xsl:attribute>
                 </xsl:element>
             </xsl:element>
             <xsl:copy-of select="current()/tei:lg"/>
