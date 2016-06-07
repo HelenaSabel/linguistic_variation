@@ -2,11 +2,15 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all" version="2.0">
     <xsl:output method="xml" indent="yes"/>
+    <!--Main template-->
     <xsl:template match="/">
         <xsl:variable name="string">
             <xsl:apply-templates mode="string"/>
         </xsl:variable>
-        <xsl:apply-templates select="$string" mode="tokens"/>
+        <xsl:variable name="tokens">            
+            <xsl:apply-templates select="$string" mode="tokens"/>
+        </xsl:variable>
+        <xsl:apply-templates select="$tokens" mode="grouping"/>
     </xsl:template>
 
     <!-- String conversion -->
@@ -16,7 +20,7 @@
         </xsl:copy>
     </xsl:template>
     <!-- Elements with children but no attributes-->
-    <xsl:template match="ex | am | add[not(@*)] | del[not(@*)]" mode="string">
+    <xsl:template match="supplied | ex | am | add[not(@*)] | del[not(@*)]" mode="string">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
@@ -55,7 +59,7 @@
             <xsl:text>_</xsl:text>
             <xsl:value-of select="name()"/>
             <xsl:text>="</xsl:text>
-            <xsl:value-of select="current()"/>
+            <xsl:value-of select="replace(current(), '\s+', '_')"/>
             <xsl:text>"</xsl:text>
         </xsl:for-each>
         <xsl:text>&gt;</xsl:text>
@@ -110,8 +114,10 @@
     <xsl:value-of select="name()"/>
     <xsl:text>&gt;</xsl:text>
 </xsl:template>
+    
+<!--    Tokenization -->
+    
     <xsl:template match="node() | @*" mode="tokens">
-
         <xsl:copy>
             <xsl:apply-templates select="node() | @*" mode="tokens"/>
         </xsl:copy>
@@ -161,5 +167,52 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
+    </xsl:template>
+    
+<!--    Grouping -->
+    
+    <xsl:template match="node() | @*" mode="grouping">
+        
+        <xsl:copy>
+            <xsl:apply-templates select="node() | @*"/>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template match="comment()" mode="grouping">
+        <xsl:comment select="."/>
+    </xsl:template>
+    <xsl:template match="l" mode="grouping">
+        <xsl:element name="l">
+            <xsl:attribute name="n">
+                <xsl:value-of select="@n"/>
+            </xsl:attribute>
+            <xsl:if test="@type">
+                <xsl:value-of select="@type"/>
+            </xsl:if>
+            <xsl:for-each-group select="app"
+                group-adjacent="
+                if (rdg/@wit = '#A #B') then
+                0
+                else
+                position()">
+                <xsl:apply-templates select="."/>
+            </xsl:for-each-group>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="app[not(parent::title)]" mode="grouping">
+        <xsl:choose>
+            <xsl:when test="count(current-group()) eq 1">
+                <xsl:sequence select="current-group()"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <app>
+                    <rdg wit="#A #B">
+                        <xsl:apply-templates select="current-group()/node()" mode="group"/>
+                    </rdg>
+                </app>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="rdg" mode="group">
+        <xsl:apply-templates/>
     </xsl:template>
 </xsl:stylesheet>

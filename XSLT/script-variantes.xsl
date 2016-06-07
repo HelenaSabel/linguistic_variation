@@ -151,7 +151,7 @@
                     <xsl:if test="matches(rdg[1], '(e|a|o)i') and matches(rdg[2], '(e|a|o)y')">
                         <xsl:text>#y-dip</xsl:text>
                     </xsl:if>                      
-                    <xsl:if test="matches(rdg[2], '[A-Z]') and not(matches(rdg[1], '[A-Z]'))">
+                    <xsl:if test="matches(rdg[2], '[A-Z]') and not(matches(rdg[1], '[A-Z]')) and not(rdg[1]/hi)">
                         <xsl:text>#capital</xsl:text>
                     </xsl:if>                     
                     <xsl:if test="matches(rdg[2], 'm$') and not(matches(rdg[1], 'm$'))">
