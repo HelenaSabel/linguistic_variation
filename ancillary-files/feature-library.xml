@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../schemas/tei_features.rnc" type="application/relax-ng-compact-syntax"?>
 <?xml-model href="../schemas/feats.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
@@ -22,13 +21,11 @@
                 <p>Born-digital.</p>
             </sourceDesc>
         </fileDesc>
-
     </teiHeader>
     <text>
         <body>
             <ab/>
-
-            <fLib xml:id="linguistic" n="recurrent features">
+            <fLib xml:id="linguistic" n="recurrent features" >
 
                 <!-- Main linguistic categories  -->
                 <f name="phonetic" xml:id="phon">
@@ -43,10 +40,11 @@
                 <f name="languageTransfer" xml:id="transfer">
                     <symbol value="ling"/>
                 </f>
+            </fLib>
 
 
-                <!-- Parts of speech categories -->
-
+            <!-- Parts of speech categories -->
+            <fLib n="POS" corresp="#linguistic">
                 <f name="pronoum" xml:id="pr">
                     <fs n="type" feats="#morph"/>
                 </f>
@@ -68,11 +66,12 @@
                 <f name="determiner" xml:id="det">
                     <fs n="type" feats="#morph"/>
                 </f>
+            </fLib>
 
 
 
+            <fLib n="phonetic"  corresp="#linguistic">
                 <!-- Recurrent phonetic phenomena features-->
-
                 <f name="consonantism" xml:id="cons">
                     <fs type="#phon">
                         <f name="constriction">
@@ -102,16 +101,18 @@
                     </fs>
                 </f>
                 <f name="sibilants" xml:id="sibil">
-                    <fs n="type" feats="#cons"> </fs>
+                    <fs n="type" feats="#cons"/>
                 </f>
                 <f name="diphthong" xml:id="diphthong">
                     <fs n="type" feats="#vowel"/>
                 </f>
+            </fLib>
 
 
 
-                <!-- Morphological phenomena features-->
-
+            <!-- Morphological phenomena features-->
+            <fLib n="morphological"  corresp="#linguistic">
+                
                 <f name="pastTheme" xml:id="past">
                     <fs n="type" feats="#vb">
                         <f name="regular">
@@ -122,28 +123,26 @@
                 <f name="presentTheme" xml:id="pres">
                     <fs n="type" feats="#vb"/>
                 </f>
+            </fLib>
+            <fLib  corresp="#linguistic" n="other">
 
 
                 <!-- Other features-->
                 <f name="analogy" xml:id="anal"/>
                 <f name="doublet" xml:id="doublet"/>
                 <f name="archaism" xml:id="archaism"/>
-
             </fLib>
-
-
-
 
             <fvLib corresp="#linguistic" n="linguistic variants">
 
                 <!--Sound change-->
-
                 <fs xml:id="apocope">
                     <f name="type">
                         <fs feats="#vowel">
                             <f name="process" select="reduction"/>
                             <f name="position">
-                                <symbol value="end"/></f>
+                                <symbol value="end"/>
+                            </f>
                         </fs>
                         <string xml:lang="en">Apocope</string>
                         <string xml:lang="pt">Apócope</string>
@@ -154,7 +153,8 @@
                         <fs feats="#vowel">
                             <f name="process" select="addition"/>
                             <f name="position">
-                                <symbol value="start"/></f>
+                                <symbol value="start"/>
+                            </f>
                         </fs>
                         <string xml:lang="en">Prothetic vowel</string>
                         <string xml:lang="pt">Prótese</string>
@@ -165,7 +165,8 @@
                         <fs feats="#vowel">
                             <f name="process" select="addition"/>
                             <f name="position">
-                                <symbol value="middle"/></f>
+                                <symbol value="middle"/>
+                            </f>
                         </fs>
                         <string xml:lang="en">Epenthetic yod</string>
                         <string xml:lang="pt">Presença de iode epentético</string>
@@ -173,10 +174,11 @@
                 </fs>
                 <fs xml:id="paragoge">
                     <f name="type">
-                        <fs feats="#phon #vowel">
+                        <fs feats="#vowel">
                             <f name="process" select="addition"/>
                             <f name="position">
-                                <symbol value="end"/></f>
+                                <symbol value="end"/>
+                            </f>
                         </fs>
                         <string xml:lang="en">Paragoge</string>
                         <string xml:lang="pt">Paragoge</string>
@@ -205,7 +207,8 @@
                         <fs feats="#vowel">
                             <f name="process" select="reduction"/>
                             <f name="position">
-                                <symbol value="start"/></f>
+                                <symbol value="start"/>
+                            </f>
                         </fs>
                         <string xml:lang="en">Apheresis</string>
                         <string xml:lang="pt">Aférese</string>
@@ -320,8 +323,6 @@
 
 
                 <!--Morphological change: verbs-->
-
-
                 <fs xml:id="pal-stem">
                     <f name="type">
                         <fs feats="#past"/>
@@ -349,7 +350,8 @@
                                 </vAlt>
                             </f>
                             <f name="person">
-                                <symbol value="1"/></f>
+                                <symbol value="1"/>
+                            </f>
                             <f name="number">
                                 <symbol value="sg"/>
                             </f>
@@ -371,7 +373,8 @@
                                 </vAlt>
                             </f>
                             <f name="person">
-                                <symbol value="3"/></f>
+                                <symbol value="3"/>
+                            </f>
                             <f name="number">
                                 <symbol value="sg"/>
                             </f>
@@ -387,7 +390,8 @@
                         <fs feats="#past">
                             <f name="process" select="inflectional-morpheme"/>
                             <f name="person">
-                                <symbol value="1"/></f>
+                                <symbol value="1"/>
+                            </f>
                             <f name="number">
                                 <symbol value="sg"/>
                             </f>
@@ -413,7 +417,8 @@
                         <fs feats="#past">
                             <f name="process" select="inflectional-morpheme"/>
                             <f name="person">
-                                <symbol value="3"/></f>
+                                <symbol value="3"/>
+                            </f>
                             <f name="number">
                                 <symbol value="sg"/>
                             </f>
@@ -426,7 +431,6 @@
 
 
                 <!--Morphological change: pronouns-->
-
                 <fs xml:id="dat">
                     <f name="type">
                         <fs feats="#pr">
@@ -451,7 +455,8 @@
                     <f name="type">
                         <fs feats="#pr">
                             <f name="person">
-                                <symbol value="3"/></f>
+                                <symbol value="3"/>
+                            </f>
                         </fs>
                         <fs feats="#pal" n="secondary"/>
                         <string xml:lang="en">Palatalized ’se’</string>
@@ -462,7 +467,8 @@
                     <f name="type">
                         <fs feats="#pr #archaism">
                             <f name="person">
-                                <symbol value="3"/></f>
+                                <symbol value="3"/>
+                            </f>
                             <f name="number">
                                 <symbol value="sg"/>
                             </f>
@@ -470,8 +476,10 @@
                                 <symbol value="dative"/>
                             </f>
                         </fs>
-                        <string xml:lang="en">Dative pronoun ’li’ or its palatalized version</string>
-                        <string xml:lang="pt">Pronome dativo ’li’ ou a sua forma palatalizada</string>
+                        <string xml:lang="en">Dative pronoun ’li’ or its palatalized
+                            version</string>
+                        <string xml:lang="pt">Pronome dativo ’li’ ou a sua forma
+                            palatalizada</string>
                     </f>
                 </fs>
                 <fs xml:id="weak-pos">
@@ -484,8 +492,6 @@
 
 
                 <!--Other morphological changes-->
-
-
                 <fs xml:id="art">
                     <f name="type">
                         <fs feats="#det">
@@ -505,8 +511,6 @@
 
 
                 <!--Other phenomena -->
-
-
                 <fs xml:id="cognate">
                     <f name="type">
                         <fs feats="#doublet"/>
@@ -667,16 +671,12 @@
 
 
             <!-- Scribal errors -->
-
-
             <fLib n="recurrent scribal errors" xml:id="scribal">
                 <f name="error" xml:id="gen-error"/>
                 <f name="model" xml:id="model"/>
                 <f name="ling-interference" xml:id="ling-interference"/>
             </fLib>
-
             <fvLib n="scribal errors" corresp="#scribal">
-
                 <fs xml:id="misread">
                     <f name="type">
                         <fs feats="#model #gen-error"/>
@@ -691,7 +691,6 @@
                         <string xml:lang="pt">Erro de cópia</string>
                     </f>
                 </fs>
-
                 <fs xml:id="ling-inter">
                     <f name="type">
                         <fs feats="#gen-error #ling-interference"/>
@@ -701,7 +700,6 @@
                     </f>
                 </fs>
             </fvLib>
-
             <fvLib n="equipolent readings">
                 <fs xml:id="equip">
                     <f name="type">
@@ -780,7 +778,6 @@
             <!-- Temporary value library: needed to get the occurrences
             of each individual variant so as to create a more generic 
             categorization -->
-
             <fLib xml:id="graphic">
                 <f name="regular" xml:id="reg" n="nn/ll"/>
                 <f name="punct" xml:id="punct" n="pontuação"/>
@@ -825,9 +822,7 @@
                     n="materialização gráfica dum fenómeno de fonética sintática"/>
                 <f name="capital" xml:id="capital" n="diferença na distribuiçom maiúscula/minúscula"/>
                 <f name="duvida" xml:id="duvida" n="Nom sei"/>
-
             </fLib>
-
         </body>
     </text>
 </TEI>
