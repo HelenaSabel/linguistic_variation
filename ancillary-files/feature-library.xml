@@ -185,6 +185,7 @@
                     </f>
                 </fs>
                 <fs xml:id="non-crasis">
+                <!-- Synezesis? -->
                     <f name="type">
                         <fs feats="#vowel">
                             <f name="process" select="addition"/>
@@ -202,6 +203,8 @@
                         <string xml:lang="pt">Crase vocálica para evitar hiato</string>
                     </f>
                 </fs>
+                
+                
                 <fs xml:id="apheresis">
                     <f name="type">
                         <fs feats="#vowel">
@@ -680,15 +683,15 @@
                 <fs xml:id="misread">
                     <f name="type">
                         <fs feats="#model #gen-error"/>
-                        <string xml:lang="en">Misreading</string>
-                        <string xml:lang="pt">Erro de leitura do modelo</string>
+                        <string xml:lang="en">Error</string>
+                        <string xml:lang="pt">Erro</string>
                     </f>
                 </fs>
                 <fs xml:id="error">
                     <f name="type">
                         <fs feats="#gen-error"/>
-                        <string xml:lang="en">Scribal error</string>
-                        <string xml:lang="pt">Erro de cópia</string>
+                        <string xml:lang="en">Error</string>
+                        <string xml:lang="pt">Erro</string>
                     </f>
                 </fs>
                 <fs xml:id="ling-inter">
@@ -703,8 +706,8 @@
             <fvLib n="equipolent readings">
                 <fs xml:id="equip">
                     <f name="type">
-                        <string xml:lang="en">Equipolent reading</string>
-                        <string xml:lang="pt">Lição equipolente</string>
+                        <string xml:lang="en">Divergent reading</string>
+                        <string xml:lang="pt">Lição divergente</string>
                     </f>
                 </fs>
                 <fs xml:id="material">
@@ -717,6 +720,12 @@
                     <f name="type">
                         <string xml:lang="en">Variant that contains a revision</string>
                         <string xml:lang="pt">Variante que contem uma correção</string>
+                    </f>
+                </fs>
+                <fs xml:id="trans">
+                    <f name="type">
+                        <string xml:lang="pt">Transposição</string>
+                        <string xml:lang="en">Transpositions</string>
                     </f>
                 </fs>
             </fvLib>
