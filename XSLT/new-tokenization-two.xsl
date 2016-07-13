@@ -7,10 +7,11 @@
         <xsl:variable name="string">
             <xsl:apply-templates mode="string"/>
         </xsl:variable>
-        <xsl:variable name="tokens">            
+<!--        <xsl:variable name="tokens">            
             <xsl:apply-templates select="$string" mode="tokens"/>
-        </xsl:variable>
-        <xsl:apply-templates select="$tokens" mode="grouping"/>
+        </xsl:variable>-->
+        <xsl:apply-templates select="$string" mode="tokens"/>
+       <!-- <xsl:apply-templates select="$tokens" mode="grouping"/>-->
     </xsl:template>
 
     <!-- String conversion -->
@@ -171,14 +172,11 @@
     
 <!--    Grouping -->
     
-    <xsl:template match="node() | @*" mode="grouping">
+  <!--  <xsl:template match="node() | @*" mode="grouping">
         
         <xsl:copy>
-            <xsl:apply-templates select="node() | @*"/>
+            <xsl:apply-templates select="node() | @*" mode="grouping"/>
         </xsl:copy>
-    </xsl:template>
-    <xsl:template match="comment()" mode="grouping">
-        <xsl:comment select="."/>
     </xsl:template>
     <xsl:template match="l" mode="grouping">
         <xsl:element name="l">
@@ -194,7 +192,7 @@
                 0
                 else
                 position()">
-                <xsl:apply-templates select="."/>
+                <xsl:apply-templates select="." mode="grouping"/>
             </xsl:for-each-group>
         </xsl:element>
     </xsl:template>
@@ -206,13 +204,13 @@
             <xsl:otherwise>
                 <app>
                     <rdg wit="#A #B">
-                        <xsl:apply-templates select="current-group()/node()" mode="group"/>
+                        <xsl:apply-templates select="current-group()/node()" mode="grouping"/>
                     </rdg>
                 </app>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template match="rdg" mode="group">
+    <xsl:template match="rdg" mode="grouping">
         <xsl:apply-templates/>
-    </xsl:template>
+    </xsl:template>-->
 </xsl:stylesheet>
