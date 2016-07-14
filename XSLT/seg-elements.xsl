@@ -17,7 +17,9 @@
         <seg corresp="#material"><xsl:copy-of select="current()"/></seg>
     </xsl:template>
 <!--   
-    nh-->
+    nh
+    ir
+    -->
     <xsl:template
         match="text()[matches(., 'y')][not(parent::seg)][ancestor::rdg[contains(@ana, '#y-dip')]]">
         <xsl:analyze-string select="current()" regex=".*?y">
