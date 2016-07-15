@@ -16,10 +16,18 @@
     <xsl:template match="hi[ancestor::rdg[contains(@ana, '#material')]]">
         <seg corresp="#material"><xsl:copy-of select="current()"/></seg>
     </xsl:template>
-<!--   
-    nh
-    ir
-    -->
+    <xsl:template
+        match="text()[matches(., 'ir')][not(parent::seg)][ancestor::rdg[contains(@ana, '#misread')]]">
+        <xsl:analyze-string select="current()" regex=".*?ir">
+            <xsl:matching-substring>
+                <xsl:value-of select="replace(., 'i', '')"/>
+                <seg corresp="#misread">i</seg>r
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
     <xsl:template
         match="text()[matches(., 'y')][not(parent::seg)][ancestor::rdg[contains(@ana, '#y-dip')]]">
         <xsl:analyze-string select="current()" regex=".*?y">
