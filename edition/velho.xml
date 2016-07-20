@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -73,7 +73,7 @@
             <lg type="cobra">
                <l n="1">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">P</hi></seg></seg>ois</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">P</hi></seg>ois</rdg>
                      <rdg wit="#B #V" ana="#y-dip">Po<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
@@ -173,8 +173,8 @@
                   <app>
                      <rdg wit="#A" ana="#y-vow #material">
                         <choice>
-                           <orig><seg corresp="#material"><seg corresp="#material"><hi rend="guide"><seg corresp="#y-vow">Y</seg></hi></seg></seg>r mei</orig>
-                           <reg><seg corresp="#material"><seg corresp="#material"><hi rend="guide"><seg corresp="#y-vow">Y</seg></hi></seg></seg>r-m<supplied>e</supplied>-ei</reg>
+                           <orig><seg corresp="#material"><hi rend="guide"><seg corresp="#y-vow">Y</seg></hi></seg>r mei</orig>
+                           <reg><seg corresp="#material"><hi rend="guide"><seg corresp="#y-vow">Y</seg></hi></seg>r-m<supplied>e</supplied>-ei</reg>
                         </choice></rdg>
                      <rdg wit="#B #V" ana="#y-dip"><choice>
                            <orig>Irme<seg corresp="#y-dip">y</seg></orig>
@@ -474,8 +474,8 @@
                   <app>
                      <rdg wit="#A" ana="#y-vow #material">
                         <choice>
-                           <orig><seg corresp="#material"><seg corresp="#material"><hi rend="guide"><seg corresp="#y-vow">Y</seg></hi></seg></seg>r mei</orig>
-                           <reg><seg corresp="#material"><seg corresp="#material"><hi rend="guide"><seg corresp="#y-vow">Y</seg></hi></seg></seg>r-m<supplied>e</supplied>-ei</reg>
+                           <orig><seg corresp="#material"><hi rend="guide"><seg corresp="#y-vow">Y</seg></hi></seg>r mei</orig>
+                           <reg><seg corresp="#material"><hi rend="guide"><seg corresp="#y-vow">Y</seg></hi></seg>r-m<supplied>e</supplied>-ei</reg>
                         </choice></rdg>
                      <rdg wit="#B #V" ana="#y-dip"><choice>
                            <orig>Irme<seg corresp="#y-dip">y</seg></orig>
@@ -1188,7 +1188,7 @@
                </l>
                <l n="11">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">P</hi></seg></seg>ois</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">P</hi></seg>ois</rdg>
                      <rdg wit="#B #V" ana="#y-dip">Po<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
@@ -1907,7 +1907,7 @@
                </l>
                <l n="6" type="refrao">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">P</hi></seg></seg>ois</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">P</hi></seg>ois</rdg>
                      <rdg wit="#B #V" ana="#y-dip">Po<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
@@ -2457,7 +2457,7 @@
             <lg type="cobra">
                <l n="7">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">M</hi></seg></seg>ais</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">M</hi></seg>ais</rdg>
                      <rdg wit="#B #V" ana="#y-dip">Ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
@@ -2638,9 +2638,9 @@
                   </app>
                   <app>
                      <rdg wit="#A">pero se</rdg>
-                     <rdg wit="#B #V" ana="#abb"><choice>
-                           <orig>p<seg corresp="#abb"><am>̲</am><ex>er</ex></seg>osse</orig>
-                           <reg>p<seg corresp="#abb"><am>̲</am><ex>er</ex></seg>o se</reg>
+                     <rdg wit="#B #V" ana="#abb #ss-inic"><choice>
+                           <orig>p<seg corresp="#abb"><am>̲</am><ex>er</ex></seg><seg corresp="#ss-inic">ss</seg>se</orig>
+                           <reg>p<seg corresp="#abb"><am>̲</am><ex>er</ex></seg>o<seg corresp="#ss-inic">ss</seg>se</reg>
                         </choice></rdg>
                   </app>
                   <app>
@@ -2739,9 +2739,9 @@
                <l n="19">
                   <app>
                      <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg> se</rdg>
-                     <rdg wit="#B #V"><choice>
-                           <orig>Esse</orig>
-                           <reg>E se</reg>
+                     <rdg wit="#B #V" ana="#ss-inic"><choice>
+                           <orig>E<seg corresp="#ss-inic">ss</seg>e</orig>
+                           <reg>E <seg corresp="#ss-inic">ss</seg>e</reg>
                         </choice></rdg>
                   </app>
                   <app>
@@ -2934,7 +2934,7 @@
             <lg type="cobra">
                <l n="7">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">S</hi></seg></seg>enon</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">S</hi></seg>enon</rdg>
                      <rdg wit="#B #V" ana="#abb">Seno<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                   </app>
                   <app>
@@ -3206,9 +3206,9 @@
                   <app>
                      <rdg wit="#A">de seu</rdg>
                      <rdg wit="#B" ana="#error">dessseu</rdg>
-                     <rdg wit="#V"><choice>
-                           <orig>desseu</orig>
-                           <reg>de seu</reg>
+                     <rdg wit="#V" ana="#ss-inic"><choice>
+                           <orig>de<seg corresp="#ss-inic">ss</seg>eu</orig>
+                           <reg>de <seg corresp="#ss-inic">ss</seg>eu</reg>
                         </choice></rdg>
                   </app>
                   <app>
@@ -3250,7 +3250,7 @@
             <lg type="cobra">
                <l n="19">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">M</hi></seg></seg>ais</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">M</hi></seg>ais</rdg>
                      <rdg wit="#B #V" ana="#y-dip">Ma<seg corresp="#y-dip">y</seg>s</rdg>
                   </app>
                   <app>
@@ -3962,7 +3962,7 @@
             <lg type="cobra">
                <l n="19">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">M</hi></seg></seg>ais</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">M</hi></seg>ais</rdg>
                      <rdg wit="#B" ana="#y-dip">Ma<seg corresp="#y-dip">y</seg>s</rdg>
                      <rdg wit="#V" ana="#error">Miys</rdg>
                   </app>

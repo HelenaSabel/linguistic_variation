@@ -9,6 +9,9 @@
     <let name="personografia" value="doc('../ancillary-files/corpus-autores.xml')"/>
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
     <pattern>
+        <rule context="tei:l">
+            <assert test="parent::tei:lg">All lines must be inside a cobra</assert>
+        </rule>
         <rule context="tei:l[@type]">
             <report test="@type ne 'refrao'">Only possible line type is “refrao”</report>
         </rule>
@@ -18,10 +21,11 @@
         <rule context="tei:l/tei:app">
             <let name="anas"
                 value="tokenize(replace(replace(replace(replace(string-join(.//@ana, ' '), '\s?#rev\s?', ''), '\s?#equip\s?', ''), '\s?#error\s?', ''), '\s?#apocope\s?', ''), '\s+')"/>
+            <let name="segs" value="string-join(./descendant::tei:seg/@corresp, ' ')"/>
             <assert
                 test="
-                    if (not(descendant::tei:choice) and count($anas) gt 1) then
-                    count($anas) &lt;= count(descendant::tei:seg[not(@corresp eq '#error')]) + count(descendant::tei:gap)
+                if (not(descendant::tei:choice) and count($anas) gt 1 and not(descendant::*[@cert])) then
+                    count($anas) &lt;= ./count(tokenize($segs, '\s+')) - count(descendant::tei:seg[@corresp eq '#error']) + count(descendant::tei:gap)
                     else
                         true()"
                 >Need to segmentate</assert>
@@ -34,8 +38,8 @@
                 >Need to segmentate</assert>-->
             <assert
                 test="
-                    if (descendant::tei:choice and count($anas) gt 1) then
-                    count($anas) &lt;= count(descendant::tei:seg[ancestor::tei:choice]) div 2 + count(descendant::tei:seg[parent::tei:rdg]) + count(descendant::tei:gap)
+                    if (descendant::tei:choice and count($anas) gt 1 and not(descendant::*[@cert])) then
+                    count($anas) &lt;= (count(descendant::tei:seg[ancestor::tei:choice]) div 2) + count(descendant::tei:seg[parent::tei:rdg]) + count(descendant::tei:gap)
                     else
                         true()"
                 >Need to segmentate</assert>
@@ -48,7 +52,7 @@
                 >Missing @ana</assert>
             <assert
                 test="
-                    if (not(descendant::tei:choice) and count(tei:rdg) gt 2) then
+                    if (not(descendant::tei:choice) and count(tei:rdg) gt 2 and not(tei:rdg[@wit eq '#A'][@ana eq '#material'])) then
                         count(tei:rdg[@ana]) gt 1
                     else
                         true()"
@@ -73,8 +77,8 @@
         </rule>
         <rule context="tei:seg">
             <assert test="@corresp">Every seg must have a @corresp attribute with its FS
-                code</assert>
-            <assert test="./@corresp = ancestor::tei:rdg/tokenize(@ana, '\s+')">Value not present in
+                code</assert>            
+            <assert test="every $corresp in tokenize(./@corresp, '\s+') satisfies $corresp = ancestor::tei:rdg/tokenize(@ana, '\s+')">Value not present in
                 the rdg container</assert>
         </rule>
         <rule context="tei:div[@type = 'poem']">

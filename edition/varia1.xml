@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -188,11 +188,11 @@
                         </app>
                         <app>
                             <rdg wit="#A">quen sen</rdg>
-                            <rdg wit="#B" ana="#ss-inic #abb"><choice><orig>qu<seg corresp="#abb"><am>̄</am><ex>en</ex></seg><seg corresp="#ss-inic">ss</seg>en</orig><reg>qu<seg corresp="#abb"><am>̄</am><ex>en</ex></seg> sen</reg></choice></rdg>
+                            <rdg wit="#B" ana="#ss-inic #abb"><choice><orig>qu<seg corresp="#abb"><am>̄</am><ex>en</ex></seg><seg corresp="#ss-inic">ss</seg>en</orig><reg>qu<seg corresp="#abb"><am>̄</am><ex>en</ex></seg> <seg corresp="#ss-inic">ss</seg>en</reg></choice></rdg>
                             <rdg wit="#V" ana="#abb #ss-inic">
                      <choice>
                         <orig>que<seg corresp="#abb"><am>̄</am><ex>n</ex></seg><seg corresp="#ss-inic">ss</seg>en</orig>
-                        <reg>que<seg corresp="#abb"><am>̄</am><ex>n</ex></seg> sen</reg>
+                        <reg>que<seg corresp="#abb"><am>̄</am><ex>n</ex></seg> <seg corresp="#ss-inic">ss</seg>en</reg>
                      </choice></rdg>
                         </app>
                         <app>
@@ -1260,7 +1260,7 @@
                     </l>
                     <l type="refrao" n="5">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">N</hi></seg></seg>on</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">N</hi></seg>on</rdg>
                             <rdg wit="#B">Non</rdg>
                             <rdg wit="#V" ana="#capital #abb"><seg corresp="#capital">n</seg>o<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                         </app>
@@ -1415,7 +1415,7 @@
                     </l>
                     <l type="refrao" n="11">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">N</hi></seg></seg>on</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">N</hi></seg>on</rdg>
                             <rdg wit="#B" ana="#abb"><unclear>N</unclear>o<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                             <rdg wit="#V" ana="#error">do<am>̄</am><ex>n</ex></rdg>
                         </app>
@@ -1449,8 +1449,8 @@
                         <app>
                             <rdg wit="#A" ana="#back-vow #material">
                      <choice>
-                        <orig><seg corresp="#material"><seg corresp="#material"><hi ana="guide">A</hi></seg></seg>mo u<seg corresp="#back-vow">u</seg>s</orig>
-                        <reg><seg corresp="#material"><seg corresp="#material"><hi ana="guide">A</hi></seg></seg>mo-u<seg corresp="#back-vow">u</seg>s</reg>
+                        <orig><seg corresp="#material"><hi rend="guide">A</hi></seg>mo u<seg corresp="#back-vow">u</seg>s</orig>
+                        <reg><seg corresp="#material"><hi rend="guide">A</hi></seg>mo-u<seg corresp="#back-vow">u</seg>s</reg>
                      </choice></rdg>
                             <rdg wit="#B #V" ana="#abb">
                      <choice>
@@ -1562,7 +1562,7 @@
                     </l>
                     <l n="17" type="refrao">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">N</hi></seg></seg>on</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">N</hi></seg>on</rdg>
                             <rdg wit="#B" ana="#abb"><unclear>N</unclear>o<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                             <rdg wit="#V" ana="#error">do<am>̄</am><ex>n</ex></rdg>
                         </app>
@@ -2002,7 +2002,7 @@
                     </l>
                     <l type="refrao" n="23">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg></seg>u</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg>u</rdg>
                             <rdg wit="#B">Eu</rdg>
                             <rdg wit="#V" ana="#capital"><seg corresp="#capital">e</seg>u</rdg>
                         </app>
@@ -2300,7 +2300,7 @@
                     </l>
                     <l n="11" type="refrao">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">B</hi></seg></seg>en</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">B</hi></seg>en</rdg>
                             <rdg wit="#B" ana="#abb">be<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                             <rdg wit="#V">ben</rdg>
                         </app>
@@ -2422,7 +2422,7 @@
                     </l>
                     <l n="17" type="refrao">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">B</hi></seg></seg>en</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">B</hi></seg>en</rdg>
                             <rdg wit="#B" ana="#abb">be<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></rdg>
                             <rdg wit="#V">ben</rdg>
                         </app>
@@ -3121,7 +3121,7 @@
                     </l>
                     <l type="refrao" n="11">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">A</hi></seg></seg>uerei</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">A</hi></seg>uerei</rdg>
                             <rdg wit="#B" ana="#y-dip">Auere<seg corresp="#y-dip">y</seg></rdg>
                             <rdg wit="#V" ana="#capital #y-dip"><seg corresp="#capital">a</seg>uere<seg corresp="#y-dip">y</seg></rdg>
                         </app>
@@ -3240,7 +3240,7 @@
                     </l>
                     <l type="refrao" n="17">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">A</hi></seg></seg>uerei</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">A</hi></seg>uerei</rdg>
                             <rdg wit="#B #V" ana="#abb #y-dip">Au<seg corresp="#abb"><am>͛</am><ex>er</ex></seg>e<seg corresp="#y-dip">y</seg></rdg>
                         </app>
                         <app>
@@ -3283,7 +3283,7 @@
                 <lg type="cobra">
                     <l n="1">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">O</hi></seg></seg></rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">O</hi></seg></rdg>
                             <rdg wit="#B" ana="#material"><gap reason="damage"/></rdg>
                             <rdg wit="#V">O</rdg>
                         </app>
@@ -3444,7 +3444,7 @@
                     </l>
                     <l type="refrao" n="11">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">Q</hi></seg></seg>ue</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">Q</hi></seg>ue</rdg>
                             <rdg wit="#B" ana="#abb">q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg></rdg>
                             <rdg wit="#V">Que</rdg>
                         </app>
@@ -3513,10 +3513,10 @@
                     <l n="15">
                         <app>
                             <rdg wit="#A">que se</rdg>
-                            <rdg wit="#B #V" ana="#abb">
+                            <rdg wit="#B #V" ana="#abb #ss-inic">
                      <choice>
-                        <orig>q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>sse</orig>
-                        <reg>q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg> se</reg>
+                        <orig>q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg><seg corresp="#ss-inic">ss</seg>e</orig>
+                        <reg>q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg> <seg corresp="#ss-inic">ss</seg>e</reg>
                      </choice></rdg>
                         </app>
                         <app>
@@ -3554,7 +3554,7 @@
                     </l>
                     <l type="refrao" n="17">
                         <app>
-                            <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">Q</hi></seg></seg>ue</rdg>
+                            <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">Q</hi></seg>ue</rdg>
                             <rdg wit="#B">Que</rdg>
                             <rdg wit="#V" ana="#capital"><seg corresp="#capital">q</seg>ue</rdg>
                         </app>

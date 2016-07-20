@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -357,7 +357,7 @@
                </l>
                <l type="refrao" n="23">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">M</hi></seg></seg>oir<supplied>?</supplied></rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">M</hi></seg>oir<supplied>?</supplied></rdg>
                      <rdg wit="#B #V" ana="#y-dip">Mo<seg corresp="#y-dip">y</seg>r<supplied>?</supplied></rdg>
                   </app>
                   <app>
@@ -478,7 +478,7 @@
                </l>
                <l type="refrao" n="5">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">O</hi></seg></seg>s</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">O</hi></seg>s</rdg>
                      <rdg wit="#B">Os</rdg>
                      <rdg wit="#V" ana="#capital"><seg corresp="#capital">o</seg>s</rdg>
                   </app>
@@ -1719,7 +1719,7 @@
                </l>
                <l type="refrao" n="6">
                   <app>
-                     <rdg wit="#A" ana="#material"><hi rend="guide">A</hi>assi</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">A</hi></seg>assi</rdg>
                      <rdg wit="#B #V" ana="#y-vow">ass<seg corresp="#y-vow">y</seg></rdg>
                   </app>
                   <app>
@@ -1878,7 +1878,7 @@
                </l>
                <l n="14" type="refrao">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">A</hi></seg></seg>ssi</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">A</hi></seg>ssi</rdg>
                      <rdg wit="#B #V" ana="#y-vow">Ass<seg corresp="#y-vow">y</seg></rdg>
                   </app>
                   <app>
@@ -1983,7 +1983,7 @@
                </l>
                <l n="22" type="refrao">
                   <app>
-                     <rdg wit="#A" ana="#material"><seg corresp="#material"><seg corresp="#material"><hi rend="guide">A</hi></seg></seg>ssi</rdg>
+                     <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">A</hi></seg>ssi</rdg>
                      <rdg wit="#B #V" ana="#y-dip">Ass<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                   <app>

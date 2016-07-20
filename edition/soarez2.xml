@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -877,7 +877,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">sabia</rdg>
-                     <rdg wit="#B" ana="#h-out">sabha</rdg>
+                     <rdg wit="#B" ana="#h-ot">sabha</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">de</rdg>
@@ -952,9 +952,9 @@
                <l n="20">
                   <app>
                      <rdg wit="#A">mentr<supplied>?</supplied> o sen</rdg>
-                     <rdg wit="#B"><choice>
-                           <orig>mentrossen</orig>
-                           <reg>mentr<supplied>?</supplied> o sen</reg>
+                     <rdg wit="#B" ana="#ss-inic"><choice>
+                           <orig>mentro<seg corresp="#ss-inic">ss</seg>en</orig>
+                           <reg>mentr<supplied>?</supplied> o <seg corresp="#ss-inic">ss</seg>en</reg>
                         </choice></rdg>
                   </app>
                   <app>
@@ -1933,9 +1933,9 @@
                      <rdg wit="#A #B">E</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A"><choice>
-                           <orig>dessenton</orig>
-                           <reg>des enton</reg>
+                     <rdg wit="#A" ana="#ss-inic"><choice>
+                           <orig>de<seg corresp="#ss-inic">ss</seg>enton</orig>
+                           <reg>de<seg corresp="#ss-inic">ss</seg> enton</reg>
                         </choice></rdg>
                      <rdg wit="#B">des ento<am>̄</am><ex>n</ex></rdg>
                   </app>
@@ -2357,9 +2357,9 @@
                   </app>
                   <app>
                      <rdg wit="#A" ana="#punct">p<am>̲</am><ex>er</ex>de sen<seg corresp="#punct">.</seg></rdg>
-                     <rdg wit="#B" ana="#equip #m-end"><choice>
-                           <orig>p<am>̲</am><ex>er</ex>dosse<seg corresp="#m-end">m</seg></orig>
-                           <reg>p<am>̲</am><ex>er</ex>d<supplied>e</supplied> o se<seg corresp="#m-end">m</seg></reg>
+                     <rdg wit="#B" ana="#equip #ss-inic #m-end"><choice>
+                           <orig>p<am>̲</am><ex>er</ex>d<seg corresp="#ss-inic">ss</seg>se<seg corresp="#m-end">m</seg></orig>
+                           <reg>p<am>̲</am><ex>er</ex>d<supplied>e</supplied> o<seg corresp="#ss-inic">ss</seg>se<seg corresp="#m-end">m</seg></reg>
                         </choice></rdg>
                   </app>
                   <app>
@@ -2917,7 +2917,7 @@
                            </reg>
                         </choice></rdg>
                      <rdg wit="#B" ana="#abb"><choice>
-                           <orig>q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>ixarme<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>dassy</orig>
+                           <orig>q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>ixarme<seg corresp="#abb"><am>̄</am><ex>n</ex></seg></orig>
                            <reg>q<seg corresp="#abb"><am>̄</am><ex>ue</ex></seg>ixar-m<supplied>?</supplied> e<seg corresp="#abb"><am>̄</am><ex>n</ex></seg>d<supplied>e</supplied>
                            </reg>
                         </choice></rdg>
@@ -3152,9 +3152,9 @@
                <l n="5">
                   <app>
                      <rdg wit="#A">e se</rdg>
-                     <rdg wit="#B"><choice>
-                           <orig>esse</orig>
-                           <reg>e se</reg>
+                     <rdg wit="#B" ana="#ss-inic"><choice>
+                           <orig>e<seg corresp="#ss-inic">ss</seg>e</orig>
+                           <reg>e <seg corresp="#ss-inic">ss</seg>e</reg>
                         </choice></rdg>
                   </app>
                   <app>
@@ -3394,7 +3394,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">sabiades</rdg>
-                     <rdg wit="#B" ana="#h-out">sabhades</rdg>
+                     <rdg wit="#B" ana="#h-ot">sabhades</rdg>
                   </app>
                </l>
                <l n="16">
@@ -4028,9 +4028,9 @@
                <l n="11">
                   <app>
                      <rdg wit="#A">e seu</rdg>
-                     <rdg wit="#B"><choice>
-                           <orig>esseu</orig>
-                           <reg>e seu</reg>
+                     <rdg wit="#B" ana="#ss-inic"><choice>
+                           <orig>e<seg corresp="#ss-inic">ss</seg>eu</orig>
+                           <reg>e <seg corresp="#ss-inic">ss</seg>eu</reg>
                         </choice></rdg>
                   </app>
                   <app>

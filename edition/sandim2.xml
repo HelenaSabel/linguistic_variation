@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -192,10 +192,10 @@
                <l n="8">
                   <app>
                      <rdg wit="#A">E se</rdg>
-                     <rdg wit="#B">
+                     <rdg wit="#B" ana="#ss-inic">
                         <choice>
-                           <reg>E se</reg>
-                           <orig>Esse</orig>
+                           <reg>E <seg corresp="#ss-inic">ss</seg>e</reg>
+                           <orig>E<seg corresp="#ss-inic">ss</seg>e</orig>
                         </choice></rdg>
                   </app>
                   <app>
@@ -302,10 +302,10 @@
                   </app>
                   <app>
                      <rdg wit="#A">q<am>̄</am><ex>ue</ex> se</rdg>
-                     <rdg wit="#B">
+                     <rdg wit="#B" ana="#ss-inic">
                         <choice>
-                           <reg>q<am>̄</am><ex>ue</ex> se</reg>
-                           <orig><!--<g ref="E681"/>-->q<am>̄</am><ex>ue</ex>sse</orig>
+                           <reg>q<am>̄</am><ex>ue</ex> <seg corresp="#ss-inic">ss</seg></reg>
+                           <orig><!--<g ref="E681"/>-->q<am>̄</am><ex>ue</ex><seg corresp="#ss-inic">ss</seg>e</orig>
                         </choice></rdg>
                   </app>
                   <app>
@@ -426,10 +426,10 @@
                            <reg>guarde-se</reg>
                            <orig>guarde se</orig>
                         </choice></rdg>
-                     <rdg wit="#B" ana="#abb">
+                     <rdg wit="#B" ana="#abb #ss-inic">
                         <choice>
-                           <reg>g<seg corresp="#abb"><am>ᷓ</am><ex>uar</ex></seg>de-se</reg>
-                           <orig>g<seg corresp="#abb"><am>ᷓ</am><ex>uar</ex></seg>desse</orig>
+                           <reg>g<seg corresp="#abb"><am>ᷓ</am><ex>uar</ex></seg>de-<seg corresp="#ss-inic">ss</seg>e</reg>
+                           <orig>g<seg corresp="#abb"><am>ᷓ</am><ex>uar</ex></seg>de<seg corresp="#ss-inic">ss</seg>e</orig>
                         </choice></rdg>
                   </app>
                   <app>
@@ -1376,11 +1376,11 @@
                <l n="22">
                   <app>
                      <rdg wit="#A">E se u<am>ꝯ</am><ex>os</ex></rdg>
-                     <rdg wit="#B" ana="#back-vow">
+                     <rdg wit="#B" ana="#ss-inic">
                         <choice>
-                           <reg>E se u<am>ꝯ</am><ex>os</ex>
+                           <reg>E <seg corresp="#ss-inic">ss</seg>e u<am>ꝯ</am><ex>os</ex>
                            </reg>
-                           <orig>Esseu<am>ꝯ</am><ex>os</ex>
+                           <orig>E<seg corresp="#ss-inic">ss</seg>eu<am>ꝯ</am><ex>os</ex>
                            </orig>
                         </choice></rdg>
                   </app>
@@ -1632,10 +1632,10 @@
                <l n="8">
                   <app>
                      <rdg wit="#A">E seede ora</rdg>
-                     <rdg wit="#B">
+                     <rdg wit="#B" ana="#ss-inic">
                         <choice>
-                           <reg>E seed<supplied>?</supplied> ora</reg>
-                           <orig>Esseedora</orig>
+                           <reg>E <seg corresp="#ss-inic">ss</seg>eed<supplied>?</supplied> ora</reg>
+                           <orig>E<seg corresp="#ss-inic">ss</seg>eedora</orig>
                         </choice></rdg>
                   </app>
                   <app>

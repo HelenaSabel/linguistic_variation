@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -728,12 +728,12 @@
                      <rdg wit="#A">
                         <choice>
                            <orig>dessi</orig>
-                           <reg>de si</reg>
+                           <reg>de ssi</reg>
                         </choice></rdg>
                      <rdg wit="#B" ana="#y-vow">
                         <choice>
                            <orig>dess<seg corresp="#y-vow">y</seg></orig>
-                           <reg>de s<seg corresp="#y-vow">y</seg>
+                           <reg>de ss<seg corresp="#y-vow">y</seg>
                            </reg>
                         </choice></rdg>
                   </app>
@@ -881,10 +881,10 @@
                <l n="28">
                   <app>
                      <rdg wit="#A">ante se</rdg>
-                     <rdg wit="#B">
+                     <rdg wit="#B" ana="#ss-inic">
                         <choice>
-                           <orig>antesse</orig>
-                           <reg>ante se</reg>
+                           <orig>ante<seg corresp="#ss-inic">ss</seg>e</orig>
+                           <reg>ante <seg corresp="#ss-inic">ss</seg>e</reg>
                         </choice></rdg>
                   </app>
                   <app>
@@ -2441,10 +2441,10 @@
                      <rdg wit="#B" ana="#y-dip">deseie<seg corresp="#y-dip">y</seg></rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">
+                     <rdg wit="#A" ana="#ss-inic">
                         <choice>
-                           <orig>dessi</orig>
-                           <reg>des i</reg>
+                           <orig>de<seg corresp="#ss-inic">ss</seg>i</orig>
+                           <reg>de<seg corresp="#ss-inic">ss</seg> i</reg>
                         </choice></rdg>
                      <rdg wit="#B">des i</rdg>
                   </app>

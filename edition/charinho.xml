@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -724,7 +724,7 @@
                            <orig>direi uolo</orig>
                            <reg>direi-uo-lo</reg>
                         </choice></rdg>
-                     <rdg wit="#B" ana="#misread #y-vow">d<seg corresp="#y-vow">y</seg><seg corresp="#misread">s</seg>e<seg corresp="#y-vow">y</seg> uolo</rdg>
+                     <rdg wit="#B" ana="#misread #y-vow #y-dip">d<seg corresp="#y-vow">y</seg><seg corresp="#misread">s</seg>e<seg corresp="#y-dip">y</seg> uolo</rdg>
                      <rdg wit="#V" ana="#error">dyr uolo</rdg>
                   </app>
                   <app>
@@ -1233,9 +1233,9 @@
                <l n="8">
                   <app>
                      <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg> se</rdg>
-                     <rdg wit="#B"><choice>
-                           <orig>Esse</orig>
-                           <reg>E se</reg>
+                     <rdg wit="#B" ana="#ss-inic"><choice>
+                           <orig>E<seg corresp="#ss-inic">ss</seg>e</orig>
+                           <reg>E <seg corresp="#ss-inic">ss</seg>e</reg>
                         </choice></rdg>
                      <rdg wit="#V" ana="#ss-inic">E <seg corresp="#ss-inic">ss</seg>e</rdg>
                   </app>
@@ -1415,7 +1415,7 @@
                   <app>
                      <rdg wit="#A">o uosso bon pareçer que <choice>
                            <orig>dessi</orig>
-                           <reg>de si</reg>
+                           <reg>de ssi</reg>
                         </choice></rdg>
                      <rdg wit="#B #V" ana="#material"><gap reason="model"/></rdg>
                   </app>
