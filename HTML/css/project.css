@@ -181,32 +181,39 @@ g[id ^= "esc"]{
 
 footer{
     display: flex;
+    flex-direction:column;
+    font-size:smaller;
+    line-height:100%;
 }
 
 
 .license p{
     padding-top: 0.5%;
+     display: flex;
+     align-items:center;
 }
 
-.license > a{
-    margin-left: 1.65%;
+.license img {
+    margin-left: 15px;
+    width:60px;
 }
 
 .acknowledments{
-    margin-left: 1.65%;
 }
 
-.linhd{
-    width: 65%;
-}
 
 .acknowledments div{
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
-.ob{
-    width: 45%;
+.normal {
+    width: 100px;
+}
+
+.big {
+    width: 150px
 }
 
 .stats{

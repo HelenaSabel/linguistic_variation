@@ -41,14 +41,14 @@
                     <rect width="20" height="20" x="1" y="1" rx="4" ry="4" fill="#D14205"
                           stroke-width="1" stroke="black"></rect>
                 </svg>
-                <span class="pt error">Erros de cópia</span><span class="en error"
-                >Scribal errors</span>
+                <span class="pt error">Erros</span><span class="en error"
+                >Errors</span>
             </p>
             <p><span class="en graphic">Graphic variants</span><span class="pt graphic"
                 >Variantes gráficas</span>
             </p>
-            <p><span class="en equipolent">Equipolent readings</span><span
-                    class="pt equipolent">Lições equipolentes</span>
+            <p><span class="en equipolent">Divergent readings</span><span
+                    class="pt equipolent">Lições divergentes</span>
             </p>
         </div>
         <p><span class="en">Click on the colored or underlined form for additional
@@ -118,14 +118,12 @@
     $songValues = implode(",", $songs);
     $authors = $_GET["author"];
     $authorValues = implode(",", $authors);
-    $periods = $_GET["period"];
-    $periodValues = implode(",", $periods);
     $scribes = $_GET["scribe"];
     $scribeValues = implode(",", $scribes);
     $line = $_GET["line"];
     require_once('config.php');
     $query = REST_PATH . "/db/VTLGP/queries/edition.xquery?song=" . $songValues . "&author=" . $authorValues .
-        "&period=" . $periodValues . "&scribe=" . $scribeValues . "&line=" . $line;
+         "&scribe=" . $scribeValues . "&line=" . $line;
     echo file_get_contents($query);
 
     ?>
