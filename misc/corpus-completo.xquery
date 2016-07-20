@@ -7,7 +7,7 @@ declare variable $songs:= //song[@class eq 'A'][label/@id = (preceding::label/@i
         let $sorted := for $song in $songs order by $song/*[1]/number(replace(.,'-.*', ''))
         return $song
         for $song at $position in $sorted
-        let $collection := collection('../edition/corrigidas')//tei:div[@type eq 'poem']
+        let $collection := collection('../edition')//tei:div[@type eq 'poem']
             return 
                 (<rect x="20" y="{($position * 15) + 40}" height="15" width="96" stroke="#EAE5C5" fill="{
                     if($song/*[1]/@class/string() eq 'A') then '#6E0A00' else (if ($song/*[1]/@class/string() eq 
