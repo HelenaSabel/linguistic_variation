@@ -2,7 +2,7 @@ xquery version "3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 declare variable $songs := //song[@class eq 'A'];
 declare variable $b := //song[@class eq 'B'];
-declare variable $collection := collection('../edition')//tei:div[@type eq 'poem'];
+declare variable $collection := collection('../../edition')//tei:div[@type eq 'poem'];
 declare variable $authors := distinct-values($songs/author);
 declare variable $colors := ('#934B98', '#893C11', '#351278', '#E4FBA4', '#848DF1', '#58B94C', '#B15282', '#5B77EE', '#FD2F8D', '#311CE1',
 '#E399DE', '#58FBA7', '#D03471', '#36F657', '#398566', '#74A0D7', '#F20EDA', '#6BA901', '#A38A9E', '#1D8A3E', '#1A2BB0', '#3A3391', '#EFC88C', '#A303DA', '#2F7A9B', '#9A5C61', '#CABFE5',
@@ -10,8 +10,10 @@ declare variable $colors := ('#934B98', '#893C11', '#351278', '#E4FBA4', '#848DF
 '#68579C', '#157715', '#7FF998', '#A7DAC1', '#4EA807');
 <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1635"
-    height="300">
+    width="100%"
+    height="300"
+    view-box="0 0 1635 300"
+    preserveAspectRatio="xMidYMid meet">
     <text
         y="45"
         x="110"
