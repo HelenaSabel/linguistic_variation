@@ -19,7 +19,7 @@
 </head>
 <body><!--#include virtual="ssi/header.html"-->
 <main>
-    <h1 class="center"><span class="pt">Edição sinóptica</span><span class="en">Synoptic
+    <h1 class="center"><span class="pt">Edição</span><span class="gl">Edición</span><span class="gl pt"> sinóptica</span><span class="en">Synoptic
                     edition</span>
     </h1>
     <div class="criterios"><h2><span class="en">Key</span><span class="pt"
@@ -32,7 +32,7 @@
                     <rect width="20" height="20" x="1" y="1" rx="4" ry="4" fill="#77659D"
                           stroke-width="1" stroke="black"></rect>
                 </svg>
-                <span class="pt linguistic">Variantes de língua</span><span
+                <span class="pt gl linguistic">Variantes de l<span class="pt">í</span><span class="gl">i</span>ngua</span><span
                     class="en linguistic">Linguistic variants</span>
             </p>
             <p>
@@ -41,41 +41,40 @@
                     <rect width="20" height="20" x="1" y="1" rx="4" ry="4" fill="#D14205"
                           stroke-width="1" stroke="black"></rect>
                 </svg>
-                <span class="pt error">Erros</span><span class="en error"
+                <span class="pt gl error">Erros</span><span class="en error"
                 >Errors</span>
             </p>
-            <p><span class="en graphic">Graphic variants</span><span class="pt graphic"
+            <p><span class="en graphic">Graphic variants</span><span class="pt gl graphic"
                 >Variantes gráficas</span>
             </p>
             <p><span class="en equipolent">Divergent readings</span><span
-                    class="pt equipolent">Lições divergentes</span>
+                    class="pt equipolent">Lições divergentes</span><span class="gl">Leccións diverxentes</span>
             </p>
         </div>
         <p><span class="en">Click on the colored or underlined form for additional
                         information</span><span class="pt">Clica na forma colorida ou sublinhada
-                        para ler informação adicional</span>.</p>
-        <h3><span  class="en">Edition criteria</span><span class="pt">Critérios de edição</span></h3>
+                        para ler informação adicional</span><span class="gl">Fai click na forma colorida ou subliñada para ler información adicional</span>.</p>
+        <h3><span  class="en">Edition criteria</span><span class="pt">Critérios de edição</span><span class="gl">Criterios de edición</span></h3>
         <form class="criteria">
             <fieldset><span><input type="radio" name="abbreviation" value="expan"
-                                   checked="checked" id="expan"/><label for="expan" class="en">Expanded
+                                  id="expan"/><label for="expan" class="en">Expanded
                         abbreviations</label><label for="expan"
                                                     class="pt">Desenvolvimento de
-                        abreviaturas</label></span><span><input type="radio"
+                        abreviaturas</label></span><span><input type="radio" checked="checked"
                                                                 name="abbreviation" value="abb" id="abb"/><label
                         for="abb"
                         class="en">Abbreviation
                         markers</label><label for="abb" class="pt">Signos de abreviação</label></span>
             </fieldset>
-            <fieldset><span><input type="radio" id="reg" name="hyphen" value="reg" checked="checked"
+            <fieldset><span><input type="radio" id="reg" name="hyphen" value="reg"
                     /><label for="reg" class="en">Hyphenated clitics and allomoph articles</label><label for="reg"
                                                                                                          class="pt">Clíticos
-                        e segunda forma do artigo com hífen</label></span><span><input
+                        e segunda forma do artigo com hífen</label></span><span><input  checked="checked"
                         type="radio" name="hyphen" value="orig" id="orig"/><label for="orig" class="en">Original
                         disposition of clitics and allomorphs</label><label for="orig" class="pt">Conservação
                         da disposição original de clíticos e artigos alomorfos</label></span>
             </fieldset>
-            <fieldset><span><input type="checkbox" name="apostrophe" value="apostrophe"
-                                   checked="checked" id="apostrophe"/><label class="en" for="apostrophe">Apostrophes to
+            <fieldset><span><input type="checkbox" name="apostrophe" value="apostrophe" id="apostrophe"/><label class="en" for="apostrophe">Apostrophes to
                         detect
                         elisions</label><label for="apostrophe" class="pt">Apóstrofes nas elisões
                         vocálicas</label></span><span><input type="checkbox" name="add" value="add" id="add"/><label

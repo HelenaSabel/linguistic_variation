@@ -9,7 +9,7 @@ declare variable $count := count($songs);
 <div
     class="stats">
     <h3><span
-            class="pt">Cantigas segundo o período</span><span
+            class="pt gl">Cantigas segundo o período</span><span
             class="en">Songs by period</span></h3>
     
     <svg
@@ -38,7 +38,7 @@ declare variable $count := count($songs);
                         y="{$pos * 20 + 14}"
                     >{' (' || $percentage || '%)'}</text>
                     <text
-                        class="pt"
+                        class="pt gl"
                         fill="black"
                         x="10"
                         y="{$pos * 20 + 18}"
@@ -52,7 +52,7 @@ declare variable $count := count($songs);
                 </g>
         }</svg>
     <h3><span
-            class="pt">Cantigas por testemunho</span><span
+            class="pt gl">Cantigas por testemu<span class="pt">nh</span><span class="gl">ñ</span>o</span><span
             class="en">Songs by witness</span></h3>
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -85,14 +85,17 @@ declare variable $count := count($songs);
                         y="{$pos * 20 + 18}"
                     >Ms. {substring($wit, 2)}</text>
                     
+                    
                     {
                         let $hand := $songs/tei:head//tei:rdg[@wit = $wit]/@hand
-                        let $distinctHands := distinct-values($hand)
-                        for $h in 1 to count($distinctHands)
+                        let $distinctHands := for $distinct-hand in distinct-values($hand) order by $distinct-hand return $distinct-hand
+                        for $h in 1 to count($distinctHands) 
                         let $x := count($songs[.//tei:head//tei:rdg[@wit = $wit][@hand = $distinctHands[position() lt $h]]])
                         let $div := $songs[tei:head//tei:rdg[@wit = $wit][@hand = $distinctHands[$h]]]
                         let $conta := count($div)
-                        order by $h descending
+                        order by $h
+                        
+                        
                         return
                             
                             (<rect
@@ -110,10 +113,11 @@ declare variable $count := count($songs);
                                 y="{$pos * 20 + 12}">{substring($distinctHands[$h], 2)}</text>)
                     
                     
-                    }</g>
+                    }
+                    </g>
         }</svg>
     <h3><span
-            class="pt">Cantigas segundo o copista</span><span
+            class="pt gl">Cantigas segundo o copista</span><span
             class="en">Songs by scribe</span></h3>
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +156,7 @@ declare variable $count := count($songs);
                         y="{$pos * 20 + 14}"
                     >{' (' || $thing/percentage || '%)'}</text>
                     <text
-                        class="pt"
+                        class="pt gl"
                         fill="black"
                         x="10"
                         y="{$pos * 20 + 18}"

@@ -17,50 +17,9 @@
 </head>
 <body><!--#include virtual="ssi/header.html"-->
 <main>
-    <h1><span class="pt">Visualizações</span><span class="en">Visualizations</span></h1>
-    <h2><span class="pt">Proporção de leituras comuns (escala fixa)</span><span
-            class="en">Overlapping of common text (fixed)</span>
-    </h2>
-    <div class="en">
-        <ul>
-            <li>Graphic variants included as “common text”</li>
-            <li>Explanation of the scaling process</li>
-        </ul>
-    </div>
-    <div class="pt">
-        <ul>
-            <li>Variantes gráficas incluídas como “texto comum”</li>
-            <li>Explicação da escala</li>
-        </ul>
-    </div>
-
-    <?php
-    require_once('config.php');
-    $xql = REST_PATH . "/db/VTLGP/queries/overlap-scaled.xquery";
-    echo file_get_contents($xql);
-    ?>
-    <h2><span class="pt">Proporção de leituras comuns (escala proporcional)</span><span
-            class="en">Overlapping of common text (scaled)</span>
-    </h2>
-    <div class="en">
-        <ul>
-            <li>Graphic variants included as “common text”</li>
-            <li>Explanation of the scaling process</li>
-        </ul>
-    </div>
-    <div class="pt">
-        <ul>
-            <li>Variantes gráficas incluídas como “texto comum”</li>
-            <li>Explicação da escala</li>
-        </ul>
-    </div>
-    <?php
-    require_once('config.php');
-    $xql = REST_PATH . "/db/VTLGP/queries/overlap-non-scaled.xquery";
-    echo file_get_contents($xql);
-    ?>
-    <h2><span class="pt">Variantes significativas</span><span class="en">Substantive variants</span> (I)</h2>
-    <!--#include virtual="ssi/sig-variants1.svg"-->
+    <h1><span class="pt">Visualizações</span><span class="en">Visualizations</span><span class="gl">Visualizacións</span></h1>
+    <h2><span class="pt gl">Variantes significativas</span><span class="en">Substantive variants</span> (I)</h2>
+    <!--#include virtual="ssi/sig-variants.svg"-->
         <h2><span class="pt">Variantes significativas</span><span class="en">Substantive variants</span> (II)</h2>
     <div class="radar">
         <!--#include virtual="ssi/radar-plot.svg"-->

@@ -16,10 +16,11 @@
 </head>
 <body><!--#include virtual="ssi/header.html"-->
 <main>
-    <h1><span class="pt">Apresentação</span><span class="en">About</span></h1>
+    <h1><span class="pt">Apresentação</span><span class="en">About</span><span class="gl">Presentación</span></h1>
     <h2><span class="pt">O que posso encontrar neste site?</span><span class="en">What you will find in this site</span>
+        <span class="gl">Que podo encontrar neste portal?</span>
     </h2>
-    <p><span class="en">Place holder text.</span><span class="pt">Apesar da abrangente bibliografia que compreende o estudo da lírica profana galego-portuguesa, ficam
+    <p><span class="en">Place holder text.</span><span class="gl">Texto modelo.</span><span class="pt">Apesar da abrangente bibliografia que compreende o estudo da lírica profana galego-portuguesa, ficam
         ainda muitas incógnitas
         que a crítica literária deve resolver, sendo especialmente numerosas no tocante a sua génese. Justamente, a
         caracterização
@@ -32,34 +33,27 @@
         pois, ao analisarmos os aspetos que variam de um manuscrito para o outro estamos identificando o que cada um de
         eles tem
         em particular, delimitando, assim, o ingente objeto de estudo.</span></p>
-    <h2><span class="pt">Corpus estudado</span><span class="en">Composition of the corpus</span></h2>
-    <p><span class="pt">Neste momento, o corpus estudado está conformado por
+    <h2><span class="pt gl">Corpus estudado</span><span class="en">Composition of the corpus</span></h2>
+    <p><span class="pt gl">Neste momento, o corpus estudado está conformado por</span><span class="en">At this point, the corpus is composed of</span>
             <?php
             require_once('config.php');
             $xql = REST_PATH . "/db/VTLGP/queries/count.xquery";
             echo file_get_contents($xql);
             ?>
-            cantigas, compostas por <?php
+            <span class="gl pt">cantigas, compostas por</span><span class="en">songs written by</span> <?php
             require_once('config.php');
             $xql = REST_PATH . "/db/VTLGP/queries/count2.xquery";
             echo file_get_contents($xql);
-            ?> trovadores. </span>
-    <span class="en">At this point, the corpus is composed of <?php
-        require_once('config.php');
-        $xql = REST_PATH . "/db/VTLGP/queries/count.xquery";
-        echo file_get_contents($xql);
-        ?> songs written by <?php
-        require_once('config.php');
-        $xql = REST_PATH . "/db/VTLGP/queries/count2.xquery";
-        echo file_get_contents($xql);
-        ?> troubadours.</span></p>
+            ?> <span class="pt"> trovadores.</span><span class="gl">trobadores.</span><span class="en"> troubadours.</span></p>
+    <h3><span class="gl pt">Textos</span><span class="en">Texts</span></h3>
+    <!--#include virtual="ssi/corpus.svg"-->
     <?php
     require_once('config.php');
     $xql = REST_PATH . "/db/VTLGP/queries/corpus-composition.xquery";
     echo file_get_contents($xql);
     ?>
-    <p><a href="visualizations.php"><span class="pt">Outras visualizações (incompleto)</span><span class="en">Additional visualizations (in progress)</span>.</a></p>
-    <h2><span class="pt">Metodologia</span><span class="en">Methodology</span></h2>
+    <p><a href="visualizations.php"><span class="pt gl">Outras <span class="pt">visualizações</span><span class="gl">visualizacións</span> (incompleto)</span><span class="en">Additional visualizations (in progress)</span>.</a></p>
+    <h2><span class="pt">Metodologia</span><span class="en">Methodology</span><span class="gl">Metodoloxía<span></h2>
     <p><span class="pt">A nossa proposta para sistematizar o estudo da variação linguística na lírica profana
         galego-portuguesa, consiste
         numa edição digital sinóptica. A grandes traços, fundamenta-se na colação de cada uma das leituras de todos os
@@ -68,7 +62,7 @@
         faz-se seguindo as normas
         estabelecidas pela Text Encoding Initiative (TEI). Concretamente, utilizamos o método de segmentação em
         paralelo, pois permite a
-        codificação de várias versões dum mesmo texto num único documento.</span></p>
+        codificação de várias versões dum mesmo texto num único documento.</span><span class="en">Place holder text.</span><span class="gl">Texto modelo.</span></p>
     <p><span class="pt">Esta anotação facilita a identificação de cada variante para posteriormente ser categorizada. Para
         marcá-las e defini-las, utilizamos as chamadas “estruturas de traços”
         (Feature Structures). Assim, criamos uma livraria de traços mínimos com o fim de categorizar as variantes

@@ -1,5 +1,9 @@
 xquery version "3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
+declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+declare option output:method "xhtml";
+declare option output:indent "yes";
+declare option output:encoding "UTF-8";
 declare variable $songs := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem'];
 declare variable $fs := doc('/db/VTLGP/ancillary/feature-library.xml');
 declare variable $ling-features := $fs//tei:fvLib[@corresp eq '#linguistic']/tei:fs/@xml:id;
@@ -21,8 +25,9 @@ declare variable $periods := $poets[@xml:id = $songs//tei:name/substring(@ref, 2
                         class="per{$period}"
                         type="checkbox"
                         checked="checked"/>
-                    <label
-                        for="per{$period}">{'Período ' || $period}</label></li>
+                    <label class="gl pt"
+                        for="per{$period}">{'Período ' || $period}</label><label class="en"
+                        for="per{$period}">{'Period ' || $period}</label></li>
         }
     </ul>
     <ul

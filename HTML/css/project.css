@@ -27,6 +27,16 @@ main{
     src: url('../fonts/texgyreschola-regular.otf');
 }
 
+@font-face {
+  font-family: 'EB Garamond Initials';
+  src: url('../fonts/EBGaramond-Initials.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/EBGaramond-Initials.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/EBGaramond-Initials.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/EBGaramond-Initials.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/EBGaramond-Initials.svg#e41167c8191f80c007a31720e97e8dff') format('svg'); /* Legacy iOS */
+  font-style:   normal;
+  font-weight:  400;
+}
 menu{
     margin-top: 0;
     margin-bottom: 0;
@@ -137,6 +147,14 @@ p{
 
 .en{
     display: none;
+}
+
+.pt {
+    display: none;
+}
+
+.gl{
+    display:none;
 }
 
 
