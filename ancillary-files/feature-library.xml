@@ -1,5 +1,5 @@
 <?xml-model href="../schemas/tei_features.rnc" type="application/relax-ng-compact-syntax"?>
-<?xml-model href="../schemas/feats.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schemas/feature-library.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -21,11 +21,190 @@
                 <p>Born-digital.</p>
             </sourceDesc>
         </fileDesc>
+        <encodingDesc>
+            <fsdDecl>
+                <fsDecl type="variants.taxonomy">
+                    <fDecl name="description">
+                        <fDescr>Prose description of the phenomenon</fDescr>
+                        <vRange>
+                            <vNot>
+                                <string/>
+                            </vNot>
+                        </vRange>
+                    </fDecl>
+                    <fDecl name="taxonomy">
+                        <fDescr>Main categorization of the type of variant</fDescr>
+                        <vRange>
+                            <vAlt>
+                                <fs type="linguistic"/>
+                                <fs type="error"/>
+                                <fs type="material"/>
+                                <fs type="equipolent"/>
+                                <fs type="graphic"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                </fsDecl>
+                <fsDecl type="linguistic">
+                    <fDecl name="category">
+                        <vRange>
+                            <vAlt>
+                                <fs type="phonetic"/>
+                                <fs type="morphosyntatic"/>
+                                <fs type="lexical"/>
+                                <fs type="language-transfer"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                </fsDecl>
+                <fsDecl type="phonetic">
+                    <fsDescr>Features to describe phonetic change</fsDescr>
+                    <fDecl name="process">
+                        <fDescr>Feature to represent the main type of sound change</fDescr>
+                        <vRange>
+                            <vAlt>
+                                <symbol value="addition"/>
+                                <symbol value="reduction"/>
+                                <fs type="alteration"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                    <fDecl name="position">
+                        <fDescr>Location of the phenomenon in the sound chain</fDescr>
+                        <vRange>
+                            <vAlt>
+                                <symbol value="start"/>
+                                <symbol value="end"/>
+                                <symbol value="intern"/>
+                                <symbol value="intervocalic"/>
+                                <symbol value="interconsonantic"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                    <fDecl name="constriction">
+                        <vRange>
+                            <vAlt>
+                                <binary value="true"/>
+                                <binary value="false"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                </fsDecl>
+                <fsDecl type="alteration">
+                    <fDecl name="type">
+                        <vRange>
+                            <vAlt>
+                                <fs type="assimilation"/>
+                                <symbol value="dissimilation"/>
+                                <symbol value="metathesis"/>
+                                <symbol value="lenition"/>
+                                <symbol value="fortition"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                </fsDecl>
+                <fsDecl type="assimilation">
+                    <fDecl name="direction">
+                        <vRange>
+                            <vColl>
+                                <vAlt>
+                                    <symbol value="adjacent"/>
+                                    <symbol value="long-distance"/>
+                                </vAlt>
+                                <vAlt>
+                                    <symbol value="regressive"/>
+                                    <symbol value="progressive"/>
+                                </vAlt>
+                            </vColl>
+                        </vRange>
+                    </fDecl>
+                    <!--<fDecl name="type">
+                        <vRange>
+                            <vAlt>
+                                <symbol value="nassalization"/>
+                                <symbol value="-"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>-->
+                </fsDecl>
+                <fsDecl type="morphosyntatic">
+                    <fDecl name="POS">
+                        <vRange>
+                            <vAlt>
+                                <symbol value="N"/>
+                                <fs type="VB"/>
+                                <fs type="PR"/>
+                                <symbol value="DET"/>
+                                <symbol value="CONJ"/>
+                                <symbol value="PREP"/>
+                                <symbol value="ADV"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                    <fDecl name="process">
+                        <fDescr>Morphological process that causes the variation (analogy, stem
+                            alternation, inflective morphemes alternation)</fDescr>
+                        <vRange>
+                            <vAlt>
+                                <symbol value="stem"/>
+                                <symbol value="inflection"/>
+                                <symbol value="analogy"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                </fsDecl>
+                <fsDecl type="VB">
+                    <fDecl name="stem-tense">
+                        <vRange>
+                            <vAlt>
+                                <symbol value="present"/>
+                                <symbol value="past"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                    <fDecl name="agreement">
+                        <vRange>
+                            <fs type="concord"/>
+                        </vRange>
+                    </fDecl>
+                </fsDecl>
+                <fsDecl type="concord">
+                    <fsDescr>This type of feature structure encodes the features for subject-verb
+                        agreement</fsDescr>
+                    <fDecl name="PERS">
+                        <fDescr>Person</fDescr>
+                        <vRange>
+                            <vAlt>
+                                <symbol value="1"/>
+                                <symbol value="2"/>
+                                <symbol value="3"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                    <fDecl name="NUM">
+                        <fDescr>Number</fDescr>
+                        <vRange>
+                            <vAlt>
+                                <symbol value="sg"/>
+                                <symbol value="pl"/>
+                            </vAlt>
+                        </vRange>
+                    </fDecl>
+                </fsDecl>
+                <fsDecl type="PR">
+                    <fDecl name="agreement">
+                        <vRange>
+                            <fs type="concord"/>
+                        </vRange>
+                    </fDecl>
+                </fsDecl>
+            </fsdDecl>
+        </encodingDesc>
     </teiHeader>
     <text>
         <body>
             <ab/>
-            <fLib xml:id="linguistic" n="recurrent features" >
+            <fLib xml:id="linguistic" n="recurrent features">
 
                 <!-- Main linguistic categories  -->
                 <f name="phonetic" xml:id="phon">
@@ -70,7 +249,7 @@
 
 
 
-            <fLib n="phonetic"  corresp="#linguistic">
+            <fLib n="phonetic" corresp="#linguistic">
                 <!-- Recurrent phonetic phenomena features-->
                 <f name="consonantism" xml:id="cons">
                     <fs type="#phon">
@@ -111,8 +290,8 @@
 
 
             <!-- Morphological phenomena features-->
-            <fLib n="morphological"  corresp="#linguistic">
-                
+            <fLib n="morphological" corresp="#linguistic">
+
                 <f name="pastTheme" xml:id="past">
                     <fs n="type" feats="#vb">
                         <f name="regular">
@@ -124,7 +303,7 @@
                     <fs n="type" feats="#vb"/>
                 </f>
             </fLib>
-            <fLib  corresp="#linguistic" n="other">
+            <fLib corresp="#linguistic" n="other">
 
 
                 <!-- Other features-->
@@ -137,102 +316,223 @@
 
                 <!--Sound change-->
                 <fs xml:id="apocope">
-                    <f name="type">
-                        <fs feats="#vowel">
-                            <f name="process" select="reduction"/>
-                            <f name="position">
-                                <symbol value="end"/>
-                            </f>
+                    <f name="taxonomy"><fs type="linguistic">
+                            <f name="category"><fs type="phonetic">
+                                    <f name="process">
+                                        <symbol value="reduction"/>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="end"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="false"/>
+                                    </f>
+                                </fs></f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Apocope</string>
                         <string xml:lang="pt">Apócope</string>
-                    </f>
+                        <string xml:lang="gl">Apócope</string></f>
+
                 </fs>
                 <fs xml:id="prothesis">
-                    <f name="type">
-                        <fs feats="#vowel">
-                            <f name="process" select="addition"/>
-                            <f name="position">
-                                <symbol value="start"/>
-                            </f>
+                    <f name="taxonomy"><fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <symbol value="addition"/>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="start"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="false"/>
+                                    </f>
+                                </fs></f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Prothetic vowel</string>
                         <string xml:lang="pt">Prótese</string>
+                        <string xml:lang="gl">Prótese</string>
                     </f>
                 </fs>
                 <fs xml:id="yod">
-                    <f name="type">
-                        <fs feats="#vowel">
-                            <f name="process" select="addition"/>
-                            <f name="position">
-                                <symbol value="middle"/>
-                            </f>
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <symbol value="addition"/>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="intervocalic"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="false"/>
+                                    </f>
+                                </fs></f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Epenthetic yod</string>
                         <string xml:lang="pt">Presença de iode epentético</string>
+                        <string xml:lang="gl">Presenza de iode epentético</string>
                     </f>
                 </fs>
                 <fs xml:id="paragoge">
-                    <f name="type">
-                        <fs feats="#vowel">
-                            <f name="process" select="addition"/>
-                            <f name="position">
-                                <symbol value="end"/>
-                            </f>
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category"><fs type="phonetic">
+                                    <f name="process">
+                                        <symbol value="addition"/>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="end"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="false"/>
+                                    </f>
+                                </fs></f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Paragoge</string>
                         <string xml:lang="pt">Paragoge</string>
+                        <string xml:lang="gl">Paragoxe</string>
                     </f>
                 </fs>
+
+                <!-- Needs to be corrected-->
                 <fs xml:id="non-crasis">
-                <!-- Synezesis? -->
-                    <f name="type">
-                        <fs feats="#vowel">
-                            <f name="process" select="addition"/>
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category"><fs type="phonetic">
+                                    <f name="process">
+                                        <symbol value="addition"/>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="intern"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="false"/>
+                                    </f>
+                                </fs></f>
                         </fs>
-                        <string xml:lang="en">Preservation of hiatus</string>
-                        <string xml:lang="pt">Conservação dum hiato</string>
+                    </f>
+                    <f name="description">
+                        <string xml:lang="en">Preservation of hiatus / Synizesis</string>
+                        <string xml:lang="pt">Conservação dum hiato / Sinizese</string>
+                        <string xml:lang="gl">Conservação dum hiato / Sinicese</string>
                     </f>
                 </fs>
                 <fs xml:id="crasis">
-                    <f name="type">
-                        <fs feats="#vowel">
-                            <f name="process" select="reduction"/>
+                    <f name="taxonomy"><fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <symbol value="reduction"/>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="intern"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="false"/>
+                                    </f>
+                                </fs></f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Crasis to avoid a hiatus</string>
                         <string xml:lang="pt">Crase vocálica para evitar hiato</string>
+                        <string xml:lang="gl">Crase vocálica para evitar hiato</string>
                     </f>
                 </fs>
-                
-                
+
+
                 <fs xml:id="apheresis">
-                    <f name="type">
-                        <fs feats="#vowel">
-                            <f name="process" select="reduction"/>
-                            <f name="position">
-                                <symbol value="start"/>
-                            </f>
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <symbol value="reduction"/>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="start"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="false"/>
+                                    </f>
+                                </fs></f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Apheresis</string>
                         <string xml:lang="pt">Aférese</string>
+                        <string xml:lang="gl">Aférese</string>
                     </f>
                 </fs>
                 <fs xml:id="pro-nas">
-                    <f name="type">
-                        <fs feats="#nasal">
-                            <f name="direction" select="progressive"/>
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <fs type="alteration">
+                                            <f name="type">
+                                                <fs type="assimilation">
+                                                  <f name="type">
+                                                  <symbol value="nassalization"/>
+                                                  </f>
+                                                  <f name="direction">
+                                                  <symbol value="progressive"/>
+                                                  </f>
+                                                </fs>
+                                            </f>
+                                        </fs>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="intern"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="true"/>
+                                    </f>
+                                </fs></f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Progressive nasalization</string>
                         <string xml:lang="pt">Nasalização progressiva</string>
+                        <string xml:lang="gl">Nasalización progresiva</string>
                     </f>
                 </fs>
                 <fs xml:id="ana-nas">
-                    <f name="type">
-                        <fs feats="#nasal #anal">
-                            <f name="direction" select="analogy"/>
-                        </fs>
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <fs type="alteration">
+                                            <f name="type">
+                                                <symbol value="analogy"/>
+                                            </f>
+                                        </fs>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="intern"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="true"/>
+                                    </f>
+                                </fs>
+                            </f>
+                        </fs></f>
+                    <f name="description">
                         <string xml:lang="en">Analog nasalization</string>
                         <string xml:lang="pt">Nasalização por analogia</string>
+                        <string xml:lang="gl">Nasalización por analoxía</string>
                     </f>
                 </fs>
                 <fs xml:id="denas">
@@ -242,60 +542,120 @@
                         </fs>
                         <string xml:lang="en">Denasalization</string>
                         <string xml:lang="pt">Desnasalização</string>
+                        <string xml:lang="gl">Desnasalamento</string>
                     </f>
                 </fs>
                 <fs xml:id="metaph">
-                    <f name="type">
-                        <fs feats="#vowel">
-                            <f name="process" select="assimilation">
-                                <symbol value="long-distance"/>
-                            </f>
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <fs type="alteration">
+                                            <f name="type"><fs type="assimilation">
+                                                  <f name="direction">
+                                                  <symbol value="long-distance"/></f>
+                                                </fs></f>
+                                        </fs>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="intern"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="false"/>
+                                    </f>
+                                </fs></f>
                         </fs>
-                        <string xml:lang="en">Vowel harmony</string>
-                        <string xml:lang="pt">Harmonização vocálica</string>
+                    </f>
+                    <f name="description">
+                        <string xml:lang="en">Metaphony</string>
+                        <string xml:lang="pt">Metafonia</string>
+                        <string xml:lang="gl">Metafonía</string>
                     </f>
                 </fs>
                 <fs xml:id="cons-assim">
-                    <f name="type">
-                        <fs feats="#cons">
-                            <f name="process" select="assimilation">
-                                <symbol value="adjacent"/>
-                            </f>
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <fs type="alteration">
+                                            <f name="type">
+                                                <fs type="assimilation">
+                                                    <f name="direction">
+                                                        <symbol value="adjacent"/>
+                                                    </f>
+                                                </fs>
+                                            </f>
+                                        </fs>
+                                    </f>
+                                    <f name="position">
+                                        <symbol value="interconsonantic"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="true"/>
+                                    </f>
+                                </fs></f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Consonant assimilation</string>
-                        <string xml:lang="pt">Assimilação consonántica</string>
+                        <string xml:lang="pt">Assimilação consonântica</string>
+                        <string xml:lang="gl">Asimilación consonántica</string>
                     </f>
                 </fs>
                 <fs xml:id="diss">
-                    <f name="type">
-                        <fs feats="#vowel">
-                            <f name="process" select="dissimilation">
-                                <symbol value="long-distance"/>
+                    <f name="taxonomy">
+                        <fs type="linguistic"><f name="category"><fs type="phonetic">
+                            <f name="process">
+                                <fs type="alteration">
+                                    <f name="type">
+                                        <symbol value="dissimilation"/>
+                                    </f>
+                                </fs>
                             </f>
-                        </fs>
+                            <f name="position">
+                                <symbol value="intern"/>
+                            </f>
+                            <f name="constriction">
+                                <binary value="false"/>
+                            </f>
+                        </fs></f></fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Vowel dissimilation</string>
                         <string xml:lang="pt">Dissimilação vocálica</string>
+                        <string xml:lang="gl">Disimilación vocálica</string>
                     </f>
                 </fs>
                 <fs xml:id="sib-cognate">
                     <f name="type">
                         <fs feats="#sibil #doublet"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Double result in sibilants evolution</string>
                         <string xml:lang="pt">Duplo resultado na evolução de sibilantes</string>
+                        <string xml:lang="gl">Doble resultado na evolución de sibilantes</string>
                     </f>
                 </fs>
                 <fs xml:id="dip">
                     <f name="type">
                         <fs feats="#diphthong"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Variation concerning diphthongs: ’oi~ui’</string>
                         <string xml:lang="pt">Vacilação na ditongação: ’oi~ui’</string>
+                        <string xml:lang="gl">Vacilación na ditongación: ’oi~ui’</string>
                     </f>
                 </fs>
                 <fs xml:id="diph">
                     <f name="type">
                         <fs feats="#diphthong"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Variation concerning diphthongs</string>
                         <string xml:lang="pt">Vacilação relacionada com a ditongação</string>
+                        <string xml:lang="gl">Vacilación relacionada coa ditongación</string>
                     </f>
                 </fs>
                 <fs xml:id="conf-sib">
@@ -308,9 +668,12 @@
                                 </vAlt>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Likely confusion in the sonority feature of
                             sibilants</string>
                         <string xml:lang="pt">Possível confusão na sonoridade de sibilantes</string>
+                        <string xml:lang="gl">Posíbel confusión na sonoridade de sibilantes</string>
                     </f>
                 </fs>
                 <fs xml:id="pal-nas">
@@ -318,8 +681,12 @@
                         <fs feats="#pal">
                             <f name="process" select="mutation"/>
                         </fs>
-                        <string xml:lang="en">Nasal palatal from nasalized hiatus</string>
+                    </f>
+                    <f name="description">
+                        <string xml:lang="en">Nasal palatal consonant from nasalized hiatus</string>
                         <string xml:lang="pt">Desenvolvimento nasal palatal a partir de
+                            hiato</string>
+                        <string xml:lang="gl">Desenvolvemento nasal palatal a partir de
                             hiato</string>
                     </f>
                 </fs>
@@ -330,16 +697,23 @@
                     <f name="type">
                         <fs feats="#past"/>
                         <!--Incomplete-->
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Palatalized past stem in irregular verbs</string>
                         <string xml:lang="pt">Palatalização tema perfeito pretéritos fortes</string>
+                        <string xml:lang="gl">Palatalización tema perfecto pretéritos
+                            fortes</string>
                     </f>
                 </fs>
                 <fs xml:id="vow-stem">
                     <f name="type">
                         <fs feats="#past"/>
                         <!--Incomplete-->
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Analog vowel past stem</string>
                         <string xml:lang="pt">Vogal analógica no tema de perfeito</string>
+                        <string xml:lang="gl">Vogal analóxica no tema de perfecto</string>
                     </f>
                 </fs>
                 <fs xml:id="foi">
@@ -360,9 +734,12 @@
                             </f>
                         </fs>
                         <fs feats="#diphthong" n="secondary"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">P1 of perfect indicative of ’seer~ir’ as
                             ’foi’</string>
                         <string xml:lang="pt">P1 do perfeito de ’seer~ir’ em ’foi’</string>
+                        <string xml:lang="gl">P1 do perfecto de ’seer~ir’ en ’foi’</string>
                     </f>
                 </fs>
                 <fs xml:id="fui">
@@ -383,9 +760,12 @@
                             </f>
                         </fs>
                         <fs feats="#diphthong" n="secondary"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">P3 of perfect indicative of ’seer~ir’ as
                             ’fui’</string>
                         <string xml:lang="pt">P3 do perfeito de ’seer~ir’ em ’fui’</string>
+                        <string xml:lang="gl">P3 do perfecto de ’seer~ir’ en ’fui’</string>
                     </f>
                 </fs>
                 <fs xml:id="p1i">
@@ -400,9 +780,12 @@
                             </f>
                         </fs>
                         <fs n="secondary" feats="#archaism"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Perfect indicative personal ending of P1 as
                             ’-i’</string>
                         <string xml:lang="pt">P1 do perfeito em ’-i’</string>
+                        <string xml:lang="gl">P1 do perfecto en ’-i’</string>
                     </f>
                 </fs>
                 <fs xml:id="oer">
@@ -411,23 +794,43 @@
                             <f name="process" select="stem-change"/>
                             <f name="lexeme" select="haver"/>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Past stem of ’haver’ as ’o-’</string>
                         <string xml:lang="pt">Tema de perfeito de ’haver’ em ’o-’</string>
+                        <string xml:lang="gl">Tema de perfecto de ’haver’ en ’o-’</string>
                     </f>
                 </fs>
-                <fs xml:id="anal-o">
-                    <f name="type">
-                        <fs feats="#past">
-                            <f name="process" select="inflectional-morpheme"/>
-                            <f name="person">
-                                <symbol value="3"/>
+                <fs xml:id="analog-o">
+                    <f name="taxonomy" select="linguistic">
+                        <fs type="morphosyntatic">
+                            <f name="POS">
+                                <fs type="VB">
+                                    <f name="stem-tense">
+                                        <symbol value="past"/>
+                                    </f>
+                                    <f name="agreement">
+                                        <fs type="concord">
+                                            <f name="PERS">
+                                                <symbol value="3"/>
+                                            </f>
+                                            <f name="NUM">
+                                                <symbol value="sg"/>
+                                            </f>
+                                        </fs>
+                                    </f>
+                                </fs>
                             </f>
-                            <f name="number">
-                                <symbol value="sg"/>
+                            <f name="process">
+                                <symbol value="inflection"/>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Analog ’o’ in the P3 perfect indicative</string>
                         <string xml:lang="pt">SNP ’-o’ analógico na P3 dos pretéritos
+                            fortes</string>
+                        <string xml:lang="gl">SNP ’-o’ analóxico na P3 dos pretéritos
                             fortes</string>
                     </f>
                 </fs>
@@ -441,16 +844,23 @@
                                 <symbol value="accusative"/>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Dative contamination</string>
                         <string xml:lang="pt">Contaminação do dativo</string>
+                        <string xml:lang="gl">Contaminación do dativo</string>
                     </f>
                 </fs>
                 <fs xml:id="dub-dat">
                     <f name="type">
                         <fs copyOf="#dat" feats="#pr"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Dative contamination confronted with vocalic
                             crasis</string>
                         <string xml:lang="pt">Contaminação do dativo contrastada com uma crase
+                            vocálica</string>
+                        <string xml:lang="gl">Contaminación do dativo contrastada cunha crase
                             vocálica</string>
                     </f>
                 </fs>
@@ -462,8 +872,11 @@
                             </f>
                         </fs>
                         <fs feats="#pal" n="secondary"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Palatalized ’se’</string>
                         <string xml:lang="pt">Palatalização do pronome ’se’</string>
+                        <string xml:lang="gl">Palatalización do pronome ’se’</string>
                     </f>
                 </fs>
                 <fs xml:id="li">
@@ -479,17 +892,24 @@
                                 <symbol value="dative"/>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Dative pronoun ’li’ or its palatalized
                             version</string>
                         <string xml:lang="pt">Pronome dativo ’li’ ou a sua forma
+                            palatalizada</string>
+                        <string xml:lang="gl">Pronome dativo ’li’ ou a súa forma
                             palatalizada</string>
                     </f>
                 </fs>
                 <fs xml:id="weak-pos">
                     <f name="type">
                         <fs feats="#pr"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Unstressed possessive allomorph</string>
                         <string xml:lang="pt">Forma fraca do possessivo</string>
+                        <string xml:lang="gl">Forma fraca do posesivo</string>
                     </f>
                 </fs>
                 <!--Other morphological changes-->
@@ -498,15 +918,21 @@
                         <fs feats="#det">
                             <f name="process" select="addition"/>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Use of the article preceding a possessive</string>
                         <string xml:lang="pt">Uso do artigo com o posessivo</string>
+                        <string xml:lang="gl">Uso do artigo co poesivo</string>
                     </f>
                 </fs>
                 <fs xml:id="art-al">
                     <f name="type">
                         <fs feats="#det #phon"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Allomorphic form of the article/clitic</string>
                         <string xml:lang="pt">Forma alomorfa do artigo/clítico</string>
+                        <string xml:lang="gl">Forma alomorfa do artigo/clítico</string>
                     </f>
                 </fs>
 
@@ -515,8 +941,11 @@
                 <fs xml:id="cognate">
                     <f name="type">
                         <fs feats="#doublet"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Doublet</string>
                         <string xml:lang="pt">Cognado</string>
+                        <string xml:lang="gl">Cognado</string>
                     </f>
                 </fs>
                 <fs xml:id="cast-transfer">
@@ -526,59 +955,104 @@
                                 <symbol value="sp"/>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Language transfer from Castilian</string>
                         <string xml:lang="pt">Interferência linguística do castelhano</string>
+                        <string xml:lang="gl">Interferencia lingüística do castelán</string>
                     </f>
                 </fs>
                 <fs xml:id="par">
                     <f name="type">
                         <fs feats="#prep #lex"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Use of ’par’ as preposition</string>
                         <string xml:lang="pt">Uso da preposição ’par’</string>
+                        <string xml:lang="gl">Uso da preposición ’par’</string>
                     </f>
                 </fs>
                 <fs xml:id="per">
                     <f name="type">
                         <fs feats="#prep #lex"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Alternation ’per~por’</string>
                         <string xml:lang="pt">Alternância ’per~por’</string>
+                        <string xml:lang="gl">Alternancia ’per~por’</string>
                     </f>
                 </fs>
                 <fs xml:id="ora">
                     <f name="type">
                         <fs feats="#adv #lex">
                             <f name="category" select="time"/>
+                            <f name="lexeme">
+                                <vAlt>
+                                    <string>ora</string>
+                                    <string>agora</string>
+                                </vAlt>
+                            </f>
                         </fs>
-                        <string xml:lang="en">Use of ’ora’ as a temporal adverb (expected
+                    </f>
+                    <f name="description">
+                        <!-- <string xml:lang="en">Use of ’ora’ as a temporal adverb (expected
                             ’agora’)</string>
                         <string xml:lang="pt">Uso do advérbio temporal ’ora’ (sendo esperável
-                            ’agora’)</string>
+                            ’agora’)</string>                        
+                        <string xml:lang="gl">Uso do adverbio temporal ’ora’ (sendo esperábel
+                            ’agora’)</string>-->
+                        <string xml:lang="en">Alternation ’ora~agora’</string>
+                        <string xml:lang="pt">Alternância ’ora~agora’</string>
+                        <string xml:lang="gl">Alternancia ’ora~agora’</string>
                     </f>
                 </fs>
                 <fs xml:id="agora">
                     <f name="type">
                         <fs feats="#adv #lex">
                             <f name="category" select="time"/>
+                            <f name="lexeme">
+                                <vAlt>
+                                    <string>ora</string>
+                                    <string>agora</string>
+                                </vAlt>
+                            </f>
                         </fs>
-                        <string xml:lang="en">Use of ’agora’ (expected ’ora’)</string>
-                        <string xml:lang="pt">Uso de ’agora’ (sendo esperável ’ora’)</string>
+                    </f>
+                    <f name="description">
+                        <!--<string xml:lang="en">Use of ’agora’ (expected ’ora’)</string>
+                        <string xml:lang="pt">Uso de ’agora’ (sendo esperável ’ora’)</string>                        
+                        <string xml:lang="gl">Uso de ’agora’ (sendo esperábel ’ora’)</string>-->
+                        <string xml:lang="en">Alternation ’ora~agora’</string>
+                        <string xml:lang="pt">Alternância ’ora~agora’</string>
+                        <string xml:lang="gl">Alternancia ’ora~agora’</string>
                     </f>
                 </fs>
-                <fs xml:id="compl-ca">
+                <!--                <fs xml:id="compl-ca">
                     <f name="type">
                         <fs feats="#conj">
-                            <f name="lexeme" select="ca"/>
+                            <f name="lexeme" select="ca">
+                                <vAlt>
+                                    <string>ca</string>
+                                    <string>que</string>
+                                </vAlt>
+                            </f>
                             <f name="function" select="complement"/>
                         </fs>
                         <fs n="secondary" feats="#lex"/>
                         <string xml:lang="en">Use of ’ca’ as a complementizern</string>
-                        <string xml:lang="pt">Uso de ’ca’ completivo</string>
+                        <string xml:lang="pt">Uso de ’ca’ completivo</string>                        
+                        <string xml:lang="gl">Uso de ’ca’ completivo</string>
                     </f>
                 </fs>
                 <fs xml:id="comp-que">
                     <f name="type">
                         <fs feats="#conj">
-                            <f name="lexeme" select="que"/>
+                            <f name="lexeme" select="que">
+                                <vAlt>
+                                    <string>ca</string>
+                                    <string>que</string>
+                                </vAlt>
+                            </f>
                             <f name="function" select="comparative"/>
                         </fs>
                         <fs n="secondary" feats="#lex"/>
@@ -589,12 +1063,35 @@
                 <fs xml:id="causal-que">
                     <f name="type">
                         <fs feats="#conj">
-                            <f name="lexeme" select="que"/>
+                            <f name="lexeme" select="que">
+                                <vAlt>
+                                    <string>ca</string>
+                                    <string>que</string>
+                                </vAlt>
+                            </f>
                             <f name="function" select="causal"/>
                         </fs>
                         <fs n="secondary" feats="#lex"/>
                         <string xml:lang="en">Use of ’que’ as a causal conjuction</string>
                         <string xml:lang="pt">Uso de ’que’ causal</string>
+                    </f>
+                </fs>-->
+                <fs xml:id="ca-que">
+                    <f name="type">
+                        <fs feats="#conj">
+                            <f name="lexeme" select="que">
+                                <vAlt>
+                                    <string>ca</string>
+                                    <string>que</string>
+                                </vAlt>
+                            </f>
+                        </fs>
+                        <fs n="secondary" feats="#lex"/>
+                    </f>
+                    <f name="description">
+                        <string xml:lang="en">Alternation ’ca~que’</string>
+                        <string xml:lang="pt">Alternância ’ca~que’</string>
+                        <string xml:lang="gl">Alternancia ’ca~que’</string>
                     </f>
                 </fs>
                 <fs xml:id="ar">
@@ -607,8 +1104,11 @@
                                 </vAlt>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Alternation ’ar~er’</string>
                         <string xml:lang="pt">Alternância ’ar~er’</string>
+                        <string xml:lang="gl">Alternancia ’ar~er’</string>
                     </f>
                 </fs>
                 <fs xml:id="depois">
@@ -621,8 +1121,11 @@
                                 </vAlt>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Alternation ’depois~despois’</string>
                         <string xml:lang="pt">Alternância ’depois~despois’</string>
+                        <string xml:lang="gl">Alternancia ’depois~despois’</string>
                     </f>
                 </fs>
                 <fs xml:id="si">
@@ -635,8 +1138,11 @@
                                 </vAlt>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Alternation ’si~se’</string>
                         <string xml:lang="pt">Alternância ’si~se’</string>
+                        <string xml:lang="gl">Alternancia ’si~se’</string>
                     </f>
                 </fs>
                 <fs xml:id="mas">
@@ -649,8 +1155,11 @@
                                 </vAlt>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Alternation ’mas~mais’</string>
                         <string xml:lang="pt">Alternância ’mas~mais’</string>
+                        <string xml:lang="gl">Alternancia ’mas~mais’</string>
                     </f>
                 </fs>
                 <fs xml:id="inda">
@@ -663,8 +1172,11 @@
                                 </vAlt>
                             </f>
                         </fs>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Alternation ’inda~ainda’</string>
                         <string xml:lang="pt">Alternância ’inda~ainda’</string>
+                        <string xml:lang="gl">Alternancia ’inda~ainda’</string>
                     </f>
                 </fs>
             </fvLib>
@@ -681,49 +1193,71 @@
                 <fs xml:id="misread">
                     <f name="type">
                         <fs feats="#model #gen-error"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Error</string>
                         <string xml:lang="pt">Erro</string>
+                        <string xml:lang="gl">Erro</string>
                     </f>
                 </fs>
                 <fs xml:id="error">
                     <f name="type">
                         <fs feats="#gen-error"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Error</string>
                         <string xml:lang="pt">Erro</string>
+                        <string xml:lang="gl">Erro</string>
                     </f>
                 </fs>
                 <fs xml:id="ling-inter">
                     <f name="type">
                         <fs feats="#gen-error #ling-interference"/>
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Linguistically meaningful scribal error</string>
                         <string xml:lang="pt">Erro de cópia com possíveis implicações
                             linguísticas</string>
+                        <string xml:lang="gl">Erro de copia con posíbeis implicacións
+                            lingüísticas</string>
                     </f>
                 </fs>
             </fvLib>
             <fvLib n="equipolent readings">
                 <fs xml:id="equip">
                     <f name="type">
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Divergent reading</string>
                         <string xml:lang="pt">Lição divergente</string>
+                        <string xml:lang="gl">Lección diverxente</string>
                     </f>
                 </fs>
                 <fs xml:id="material">
                     <f name="type">
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Variant caused by the material conditions</string>
                         <string xml:lang="pt">Variante provocada pelas condições materiais</string>
+                        <string xml:lang="gl">Variante provocada polas condicións materiais</string>
                     </f>
                 </fs>
                 <fs xml:id="rev">
                     <f name="type">
+                    </f>
+                    <f name="description">
                         <string xml:lang="en">Variant that contains a revision</string>
                         <string xml:lang="pt">Variante que contem uma correção</string>
+                        <string xml:lang="gl">Variante que contén unha corrección</string>
                     </f>
                 </fs>
                 <fs xml:id="trans">
                     <f name="type">
+                    </f>
+                    <f name="description">
                         <string xml:lang="pt">Transposição</string>
                         <string xml:lang="en">Transpositions</string>
+                        <string xml:lang="gl">Transposición</string>
                     </f>
                 </fs>
             </fvLib>

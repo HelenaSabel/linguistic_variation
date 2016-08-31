@@ -17,7 +17,7 @@
 </head>
 <body><!--#include virtual="ssi/header.html"-->
 <main>
-    <h1><span class="pt">Variantes de língua</span><span class="en">Linguistic
+    <h1><span class="pt gl">Variantes de lingua</span><span class="en">Linguistic
                     variants</span></h1>
 
     <?php

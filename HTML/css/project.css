@@ -13,6 +13,30 @@ body{
     background-color: #b5b0aa;
 }
 
+.splash{
+    margin: auto;
+    background-color: #BD6D03;
+    width: 70%;
+    margin-top:8%;
+    box-shadow: 10px 10px 5px #3D2B13;
+}
+
+.splash h1{
+    color: #004870
+
+}
+
+.splash .languages{
+    padding-bottom: 3%;
+    display:flex;
+    justify-content:space-around;
+}
+
+.splash a {
+    font-size: 25px;
+    color: #562302;
+}
+
 main{
     background-color: #eae5c5;
     font-family: 'born';
@@ -27,15 +51,15 @@ main{
     src: url('../fonts/texgyreschola-regular.otf');
 }
 
-@font-face {
-  font-family: 'EB Garamond Initials';
-  src: url('../fonts/EBGaramond-Initials.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/EBGaramond-Initials.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/EBGaramond-Initials.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/EBGaramond-Initials.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/EBGaramond-Initials.svg#e41167c8191f80c007a31720e97e8dff') format('svg'); /* Legacy iOS */
-  font-style:   normal;
-  font-weight:  400;
+@font-face{
+    font-family: 'EB Garamond Initials';
+    src: url('../fonts/EBGaramond-Initials.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/EBGaramond-Initials.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ 
+url('../fonts/EBGaramond-Initials.woff') format('woff'), /* Modern Browsers */ 
+url('../fonts/EBGaramond-Initials.ttf') format('truetype'), /* Safari, Android, iOS */ 
+url('../fonts/EBGaramond-Initials.svg#e41167c8191f80c007a31720e97e8dff') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: 400;
 }
 menu{
     margin-top: 0;
@@ -149,12 +173,12 @@ p{
     display: none;
 }
 
-.pt {
+.pt{
     display: none;
 }
 
 .gl{
-    display:none;
+    display: none;
 }
 
 
@@ -199,21 +223,21 @@ g[id ^= "esc"]{
 
 footer{
     display: flex;
-    flex-direction:column;
-    font-size:smaller;
-    line-height:100%;
+    flex-direction: column;
+    font-size: smaller;
+    line-height: 100%;
 }
 
 
 .license p{
     padding-top: 0.5%;
-     display: flex;
-     align-items:center;
+    display: flex;
+    align-items: center;
 }
 
-.license img {
+.license img{
     margin-left: 15px;
-    width:60px;
+    width: 60px;
 }
 
 .acknowledments{
@@ -226,11 +250,11 @@ footer{
     justify-content: space-around;
 }
 
-.normal {
+.normal{
     width: 100px;
 }
 
-.big {
+.big{
     width: 150px
 }
 
@@ -385,23 +409,11 @@ li.refrao{
     height: 17px;
 }
 
-.am{
+.expansion{
     display: none;
 }
 
-.tabular .am{
-    display: inline;
-}
-
-.tabular .expansion{
-    display: none;
-}
-
-.tabular .orig{
-    display: inline;
-}
-
-.tabular .reg{
+.reg{
     display: none;
 }
 
@@ -409,8 +421,8 @@ li.refrao{
     font-style: italic;
 }
 
-.orig{
-    display: none;
+.supplied {
+    display:none;
 }
 
 .graphic{
@@ -596,7 +608,7 @@ fieldset > div{
     display: flex;
 }
 
-fieldset span{
+fieldset > span{
     margin-right: 1%;
     padding-left: .5%;
 }

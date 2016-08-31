@@ -19,7 +19,7 @@
    <body><!--#include virtual="ssi/header.html"-->
       <main>
          <h1>Corpus</h1>
-         <h2 class="pt">Por autor</h2>
+         <h2 class="pt gl">Por autor</h2>
          <h2 class="en">By author</h2>         
          <?php
             require_once('config.php');
