@@ -122,7 +122,7 @@
                         <vRange>
                             <vAlt>
                                 <symbol value="nassalization"/>
-                                <symbol value="-"/>
+                                <symbol value="analogy"/>
                             </vAlt>
                         </vRange>
                     </fDecl>-->
@@ -545,6 +545,27 @@
                         <string xml:lang="gl">Desnasalamento</string>
                     </f>
                 </fs>
+                
+                <fs xml:id="homoteleuton">
+                    <f name="taxonomy">                       
+                       <fs type="error">            
+                            <f name="category">
+                                <fs type="omission">
+                                    <f name="type">
+                                        <symbol value="involutary"/>
+                                    </f>
+                                    <f name="process">
+                                        <symbol value="eye-skip"/>
+                                    </f>
+                                </fs>
+                            </f>
+                       </fs>
+                    </f>
+                    <f name="description">
+                        <string xml:lang="en">Homeoteleuton</string>
+                    </f>
+                </fs>
+                
                 <fs xml:id="metaph">
                     <f name="taxonomy">
                         <fs type="linguistic">
@@ -552,9 +573,11 @@
                                 <fs type="phonetic">
                                     <f name="process">
                                         <fs type="alteration">
-                                            <f name="type"><fs type="assimilation">
+                                            <f name="type">
+                                                <fs type="assimilation">
                                                   <f name="direction">
-                                                  <symbol value="long-distance"/></f>
+                                                  <symbol value="long-distance"/>
+                                                  </f>
                                                 </fs></f>
                                         </fs>
                                     </f>
