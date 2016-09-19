@@ -1,8 +1,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all" version="2.0">
     <xsl:output method="xml" encoding="utf-8" indent="no" omit-xml-declaration="yes"/>
-    <xsl:variable name="ling-features" select="doc('../ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#linguistic']/tei:fs"/>
-    <xsl:variable name="errors" select="doc('../ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#scribal']/tei:fs"/>
-    <xsl:variable name="equip" select="doc('../ancillary/feature-library.xml')//tei:fvLib[@n eq 'equipolent readings']/tei:fs"/>
+    <xsl:variable name="ling-features" select="doc('../ancillary/feature-library.xml')//tei:fs[tei:f[@name eq 'taxonomy']/tei:fs[@type eq 'linguistic']]"/>
+    <xsl:variable name="errors" select="doc('../ancillary/feature-library.xml')//tei:fs[tei:f[@name eq 'taxonomy']/tei:fs[@type eq 'error']]"/>
+    <xsl:variable name="equip" select="doc('../ancillary/feature-library.xml')//tei:fs[tei:f[@name eq 'taxonomy']/tei:fs[@type eq 'equipolent']]"/>
     <xsl:variable name="graphic" select="doc('../ancillary/feature-library.xml')//tei:fLib[@xml:id eq 'graphic']/tei:f"/>
     <xsl:param name="wit"/>
     <xsl:param name="line"/>
@@ -44,6 +44,13 @@
                             </xsl:attribute>
                             <xsl:apply-templates/>
                         </xsl:element>
+                        <xsl:element name="span">
+                            <xsl:attribute name="class">error gl</xsl:attribute>
+                            <xsl:attribute name="data-exp">
+                                <xsl:value-of select="$errors[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'gl']/text()"/>
+                            </xsl:attribute>
+                            <xsl:apply-templates/>
+                        </xsl:element>
                     </xsl:if>
                     <xsl:if test="substring($ana, 2) = $errors/@xml:id and current()/descendant::tei:gap">
                         <xsl:apply-templates/>
@@ -60,6 +67,13 @@
                             <xsl:attribute name="class">linguistic pt</xsl:attribute>
                             <xsl:attribute name="data-exp">
                                 <xsl:value-of select="$ling-features[@xml:id = substring($ana, 2)]//tei:string[@xml:lang = 'pt']/text()"/>
+                            </xsl:attribute>
+                            <xsl:apply-templates/>
+                        </xsl:element>
+                        <xsl:element name="span">
+                            <xsl:attribute name="class">linguistic gl</xsl:attribute>
+                            <xsl:attribute name="data-exp">
+                                <xsl:value-of select="$ling-features[@xml:id = substring($ana, 2)]//tei:string[@xml:lang = 'gl']/text()"/>
                             </xsl:attribute>
                             <xsl:apply-templates/>
                         </xsl:element>
@@ -81,6 +95,13 @@
                                     </xsl:attribute>
                                     <xsl:apply-templates/>
                                 </xsl:element>
+                                <xsl:element name="span">
+                                    <xsl:attribute name="class">equipolent gl</xsl:attribute>
+                                    <xsl:attribute name="data-exp">
+                                        <xsl:value-of select="$equip[@xml:id = substring($ana, 2)]//tei:string[@xml:lang eq 'gl']/text()"/>
+                                    </xsl:attribute>
+                                    <xsl:apply-templates/>
+                                </xsl:element>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:apply-templates/>
@@ -96,10 +117,13 @@
                 <xsl:if test="current()/descendant::tei:seg and count($ana) ne count(descendant::tei:seg)">
                     <xsl:choose>
                         <xsl:when test="contains(@ana, '#equip')">
-                            <span class="rev en" data-exp="Equipolent reading">
+                            <span class="rev en" data-exp="Divergent reading">
                                 <xsl:apply-templates/>
                             </span>
-                            <span class="rev pt" data-exp="Lição equipolente">
+                            <span class="rev pt" data-exp="Lição divergente">
+                                <xsl:apply-templates/>
+                            </span>
+                            <span class="rev gl" data-exp="Lección diverxente">
                                 <xsl:apply-templates/>
                             </span>
                         </xsl:when>
@@ -143,6 +167,13 @@
                     </xsl:attribute>
                     <xsl:apply-templates/>
                 </xsl:element>
+                <xsl:element name="span">
+                    <xsl:attribute name="class">error gl</xsl:attribute>
+                    <xsl:attribute name="data-exp">
+                        <xsl:value-of select="$errors[@xml:id = current()/substring(@corresp, 2)]//tei:string[@xml:lang eq 'gl']/text()"/>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </xsl:element>
             </xsl:when>
             <xsl:when test="substring(@corresp, 2) = $errors/@xml:id and current()/descendant::tei:gap">
                 <xsl:apply-templates/>
@@ -162,16 +193,28 @@
                     </xsl:attribute>
                     <xsl:apply-templates/>
                 </xsl:element>
+                <xsl:element name="span">
+                    <xsl:attribute name="class">linguistic gl</xsl:attribute>
+                    <xsl:attribute name="data-exp">
+                        <xsl:value-of select="$ling-features[@xml:id eq current()/substring(@corresp, 2)]//tei:string[@xml:lang eq 'gl']/text()"/>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </xsl:element>
             </xsl:when>
             <xsl:when test="substring(@corresp, 2) = 'equip'">
                 <xsl:element name="span">
                     <xsl:attribute name="class">equipolent en</xsl:attribute>
-                    <xsl:attribute name="data-exp">Equipolent reading</xsl:attribute>
+                    <xsl:attribute name="data-exp">Divergent reading</xsl:attribute>
                     <xsl:apply-templates/>
                 </xsl:element>
                 <xsl:element name="span">
                     <xsl:attribute name="class">equipolent pt</xsl:attribute>
-                    <xsl:attribute name="data-exp">Lição equipolente</xsl:attribute>
+                    <xsl:attribute name="data-exp">Lição divergente</xsl:attribute>
+                    <xsl:apply-templates/>
+                </xsl:element>
+                <xsl:element name="span">
+                    <xsl:attribute name="class">equipolent gl</xsl:attribute>
+                    <xsl:attribute name="data-exp">Lección diverxente</xsl:attribute>
                     <xsl:apply-templates/>
                 </xsl:element>
             </xsl:when>
@@ -233,12 +276,12 @@
                     </xsl:if>
                     <xsl:if test="current()[. ne '̅']">
                         <span class="ex">
-                            <xsl:value-of select="current()/following-sibling::tei:ex[1]"/>
+                            <xsl:value-of select="current()/following-sibling::tei:ex[1]/text()"/>
                         </span>
                     </xsl:if>
                     <xsl:if test="current()[. eq '̅']">
                         <span class="ex">
-                            <xsl:value-of select="current()/preceding-sibling::tei:ex[1]"/>
+                            <xsl:value-of select="current()/preceding-sibling::tei:ex[1]/text()"/>
                         </span>
                     </xsl:if>
                 </span>
@@ -268,7 +311,7 @@
                     <xsl:value-of select="current()"/>
                 </xsl:element>
                 <span class="ex expansion">
-                    <xsl:value-of select="current()/following-sibling::tei:ex[1]"/>
+                    <xsl:value-of select="current()/following-sibling::tei:ex[1]/text()"/>
                 </span>
             </xsl:otherwise>
         </xsl:choose>
@@ -322,6 +365,35 @@
                             </xsl:if>
                             <xsl:if test="tei:gap[@reason eq 'unfinished']">
                                 <xsl:text>Testemunho inacabado</xsl:text>
+                            </xsl:if>
+                        </xsl:attribute>
+                        <xsl:text> </xsl:text>
+                    </xsl:element>
+                    <xsl:element name="span">
+                        <xsl:attribute name="class">
+                            <xsl:text>gap gl</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="data-exp">
+                            <xsl:if test="tei:gap[@reason eq 'error']">
+                                <xsl:text>Erro de copia</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'economy']">
+                                <xsl:text>Omisión de contidos repetidos</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'unknown']">
+                                <xsl:text>Omisión de orixe descoñecida</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'damage']">
+                                <xsl:text>Omisión provocada polo estado de conservación do testemuño</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'illegible']">
+                                <xsl:text>Trecho ilexíbel</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'model']">
+                                <xsl:text>Probabelmente, omisión presente no modelo</xsl:text>
+                            </xsl:if>
+                            <xsl:if test="tei:gap[@reason eq 'unfinished']">
+                                <xsl:text>Testemuño inacabado</xsl:text>
                             </xsl:if>
                         </xsl:attribute>
                         <xsl:text> </xsl:text>
@@ -403,6 +475,35 @@
         </xsl:element>
         <xsl:element name="span">
             <xsl:attribute name="class">
+                <xsl:text>gap gl</xsl:text>
+            </xsl:attribute>
+            <xsl:attribute name="data-exp">
+                <xsl:if test="tei:gap[@reason eq 'error']">
+                    <xsl:text>Erro de copia</xsl:text>
+                </xsl:if>
+                <xsl:if test="tei:gap[@reason eq 'economy']">
+                    <xsl:text>Omisión de contidos repetidos</xsl:text>
+                </xsl:if>
+                <xsl:if test="tei:gap[@reason eq 'unknown']">
+                    <xsl:text>Omisión de orixe descoñecida</xsl:text>
+                </xsl:if>
+                <xsl:if test="tei:gap[@reason eq 'damage']">
+                    <xsl:text>Omisión provocada polo estado de conservación do testemuño</xsl:text>
+                </xsl:if>
+                <xsl:if test="tei:gap[@reason eq 'illegible']">
+                    <xsl:text>Trecho ilexíbel</xsl:text>
+                </xsl:if>
+                <xsl:if test="tei:gap[@reason eq 'model']">
+                    <xsl:text>Probabelmente, omisión presente no modelo</xsl:text>
+                </xsl:if>
+                <xsl:if test="tei:gap[@reason eq 'unfinished']">
+                    <xsl:text>Testemuño inacabado</xsl:text>
+                </xsl:if>
+            </xsl:attribute>
+            <xsl:text>[ ]</xsl:text>
+        </xsl:element>
+        <xsl:element name="span">
+            <xsl:attribute name="class">
                 <xsl:text>gap en</xsl:text>
             </xsl:attribute>
             <xsl:attribute name="data-exp">
@@ -432,19 +533,15 @@
         </xsl:element>
     </xsl:template>
     <xsl:template match="tei:hi">
-        <span class="pt" data-exp="Letra de espera">
-            <xsl:text>[</xsl:text>
+        <sup class="pt gl" data-exp="Letra de espera">
             <xsl:value-of select="."/>
-            <xsl:text>]</xsl:text>
-        </span>
-        <span class="en" data-exp="Guide letter">
-            <xsl:text>[</xsl:text>
+        </sup>
+        <sup class="en" data-exp="Guide letter">
             <xsl:value-of select="."/>
-            <xsl:text>]</xsl:text>
-        </span>
+        </sup>
     </xsl:template>
     <xsl:template match="tei:supplied">
-        <span class="supplied">’</span>
+        <span class="supplied hide">’</span>
     </xsl:template>
     <xsl:template match="tei:subst">
         <xsl:apply-templates select="*"/>

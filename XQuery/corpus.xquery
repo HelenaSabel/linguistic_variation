@@ -1,6 +1,10 @@
 xquery version "3.0";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
-let $authors := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[@xml:id/string() = collection('/db/VTLGP/edition')//tei:name[@role eq 'author']/substring(@ref, 2)]
+declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+declare option output:method "xhtml";
+declare option output:indent "yes";
+declare option output:encoding "UTF-8";
+let $authors := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[concat('#', @xml:id) = collection('/db/VTLGP/edition')//tei:name[@role eq 'author']/@ref]
 let $periods := $authors/tei:floruit/@period
 let $copyists := collection('/db/VTLGP/edition')//tei:div//tei:title//tei:rdg/substring(@hand, 2)
 return
@@ -11,7 +15,7 @@ return
         {
             for $i in 1 to (count($authors))
             let $author := $authors[$i]
-            let $songs := collection('/db/VTLGP/edition')//tei:name[@role eq 'author'][@ref = $author/concat(@xml:id, '#')]/ancestor::tei:div
+            let $songs := collection('/db/VTLGP/edition')//tei:name[@role eq 'author'][@ref = $author/concat('#', @xml:id)]/ancestor::tei:div
             order by $author
             return
                 <fieldset>
@@ -28,7 +32,7 @@ return
                             for="none{$i}"><span
                                 class="en">None</span>
                             <span
-                                class="pt">Nenhuma</span></label>
+                                class="pt">Nenhuma</span><span class="gl">Ningunha</span></label>
                         <input
                             type="radio"
                             name="author[{$i}]"
@@ -37,7 +41,7 @@ return
                             class="all"/>
                         <label class="corpus all"
                             for="author{$i}"><span
-                                class="pt">Todas</span>
+                                class="pt gl">Todas</span>
                             <span
                                 class="en">All</span> ({count($songs)})</label>
                         <input
@@ -47,7 +51,7 @@ return
                             id="select{$i}"/>
                         <label
                             for="select{$i}"><span
-                                class="pt">Seleccionar</span>
+                                class="pt gl">Sele<span class="gl">c</span>cionar</span>
                             <span
                                 class="en">Select</span></label>
                         <ul
@@ -71,10 +75,10 @@ return
         <button
             class="submit"
             type="submit"><span
-                class="pt">Pesquisa</span><span
+                class="pt gl">Pesquisa</span><span
                 class="en">Search</span></button>
     </form>,
-    <h2
+   (: <h2
         id="period"><span
             class="pt">Por período</span><span
             class="en">By period</span></h2>,
@@ -83,7 +87,7 @@ return
         action="edition.php">
         {
             for $period in distinct-values($periods)
-            let $songs := collection('/db/VTLGP/edition')//tei:name[@role eq 'author'][substring(@ref, 2) = $authors[tei:floruit/@period eq $period]/@xml:id]/ancestor::tei:div
+            let $songs := collection('/db/VTLGP/edition')//tei:name[@role eq 'author'][@ref = $authors[tei:floruit/@period eq $period]/concat('#', @xml:id)]/ancestor::tei:div
             order by number($period)
             return
                 <fieldset>
@@ -146,10 +150,10 @@ return
             type="submit"><span
                 class="pt">Pesquisa</span><span
                 class="en">Search</span></button>
-    </form>,
+    </form>,:)
     <h2
         id="copyist"><span
-            class="pt">Por copista</span><span
+            class="pt gl">Por copista</span><span
             class="en">By scribe</span></h2>,
     <form
         method="GET"
@@ -161,7 +165,7 @@ return
             return
                 <fieldset>
                     <legend><span
-                            class="pt">Copista {$hand} (manuscrito{
+                            class="pt gl">Copista {$hand} (manuscrito{
                                 (if ($hand = ('b', 'c', 'a', 'd', 'e')) then
                                     ' B'
                                 else
@@ -191,7 +195,7 @@ return
                             for="none{$hand}"><span
                                 class="en">None</span>
                             <span
-                                class="pt">Nenhuma</span></label>
+                                class="pt">Nenhuma</span><span class="gl">Ningunha</span></label>
                         <input
                             type="radio"
                             name="scribe[{$hand}]"
@@ -200,7 +204,7 @@ return
                             class="all"/>
                         <label class="corpus"
                             for="{$hand}"><span
-                                class="pt">Todas</span>
+                                class="pt gl">Todas</span>
                             <span
                                 class="en">All</span> ({count($songs)})</label>
                         <input
@@ -210,7 +214,7 @@ return
                             id="select{$hand}"/>
                         <label
                             for="select{$hand}"><span
-                                class="pt">Seleccionar</span>
+                                class="pt gl">Sele<span class="gl">c</span>cionar</span>
                             <span
                                 class="en">Select</span></label>
                         <ul
@@ -234,7 +238,7 @@ return
         <button
             class="submit"
             type="submit"><span
-                class="pt">Pesquisa</span><span
+                class="pt gl">Pesquisa</span><span
                 class="en">Search</span></button>
     </form>
     )

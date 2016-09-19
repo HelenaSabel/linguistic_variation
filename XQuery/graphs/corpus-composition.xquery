@@ -52,7 +52,7 @@ declare variable $count := count($songs);
                 </g>
         }</svg>
     <h3><span
-            class="pt gl">Cantigas por testemu<span class="pt">nh</span><span class="gl">ñ</span>o</span><span
+            class="pt gl">Cantigas por <span class="pt">testemunho</span><span class="gl">testemuño</span></span><span
             class="en">Songs by witness</span></h3>
     <svg
         xmlns="http://www.w3.org/2000/svg"

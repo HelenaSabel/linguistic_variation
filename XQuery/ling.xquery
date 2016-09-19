@@ -18,7 +18,7 @@ declare variable $search := request:get-parameter("phenomenon", ());
 let $values := tokenize($search, ',')
 let $songs := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem']
 let $readings := $songs//tei:rdg
-let $ling-features := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib[@corresp eq '#linguistic']/tei:fs
+let $ling-features := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fs[tei:f[@name eq 'taxonomy']/tei:fs[@type eq 'linguistic']]
 let $poets := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person
 return
     <div
@@ -29,10 +29,13 @@ return
                 for $result in $values
                 return
                     (<h2><span
-                            class="pt" id="graf{$result}">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span><span
+                            class="pt" id="graf{$result}">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span>
+                            <span
+                            class="gl" id="grafo{$result}">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'gl']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span><span
                             class="en" id="graphs{$result}">{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}</span></h2>,
                        <h3><span
                             class="pt">Testemunho</span><span
+                            class="gl">Testemuño</span><span
                             class="en">Witness</span></h3>,
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -40,10 +43,10 @@ return
                         height="100">
                         {
                             
-                            let $fen := $readings[matches(@ana, concat('#', $result))]
+                            let $fen := $readings[some $ana in tokenize(@ana, '\s+') satisfies $ana = concat('#', $result)]
                             for $wit at $pos in
-                            for $i in distinct-values($fen/tokenize(./@wit, '\s'))
-                            order by count($fen[./tokenize(@wit, '\s') = $i]) descending
+                            for $i in distinct-values($fen/tokenize(./@wit, '\s+'))
+                            order by count($fen[./tokenize(@wit, '\s+') = $i]) descending
                             return
                                 $i
                             let $count := count($fen[contains(@wit, $wit)])
@@ -100,8 +103,8 @@ return
                                     }
                                 </g>
                         }</svg>,
-                        <h3><span
-                            class="pt" id="lingua{$result}">Período</span><span
+                        <h3 id="lg{$result}"><span
+                            class="pt gl" id="lingua{$result}">Período</span><span
                             class="en">Period</span></h3>,
                     <svg id="ling{$result}"
                         xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +112,7 @@ return
                         height="100">
                         {
                             
-                            let $fen := $readings[matches(@ana, concat('#', $result))]
+                            let $fen :=  $readings[some $ana in tokenize(@ana, '\s+') satisfies $ana = concat('#', $result)]
                             for $period at $pos in
                             for $i in distinct-values($poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]/tei:floruit/@period)
                             order by count($fen[ancestor::tei:div[1]//tei:name/substring(@ref, 2) = $poets/tei:floruit[@period = $i]/../@xml:id]) descending
@@ -148,42 +151,42 @@ return
                             <tr
                                 class="head">
                                 <th><span
-                                        class="pt">Fenómeno</span><span
+                                        class="pt gl">Fenómeno</span><span
                                         class="en">Phenomenon</span>
                                 </th>
                                 <th><span
-                                        class="pt">Testemunho</span><span
+                                        class="pt">Testemunho</span><span class="gl">Testemuño</span><span
                                         class="en">Witness</span>
                                 </th>
                                 <th><span
-                                        class="pt">Localização</span><span
+                                        class="pt">Localização</span><span class="gl">Localización</span><span
                                         class="en">Location</span>
                                 </th>
                                 <th><span
-                                        class="pt">Copista</span><span
+                                        class="pt gl">Copista</span><span
                                         class="en">Copyist</span>
                                 </th>
                                 <th><span
-                                        class="pt">Autor</span><span
+                                        class="pt gl">Autor</span><span
                                         class="en">Author</span>
                                 </th>
                                 <th><span
-                                        class="pt">Período</span><span
+                                        class="pt gl">Período</span><span
                                         class="en">Period</span>
                                 </th>
                                 <th><span
-                                        class="pt">Cantiga</span><span
+                                        class="pt gl">Cantiga</span><span
                                         class="en">Song</span>
                                 </th>
                                 <th><span
-                                        class="pt">V.</span><span
+                                        class="pt gl">V.</span><span
                                         class="en">L.</span>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             {
-                                for $fen in $readings[matches(@ana, concat('#', $result))]
+                                for $fen in $readings[some $ana in tokenize(@ana, '\s+') satisfies $ana = concat('#', $result)]
                                 let $rdg :=
                                 <parameters>
                                     <param
@@ -248,7 +251,7 @@ return
         </section>
         <aside
             id="summary">
-                <h3><span class="pt">Conteúdos</span><span class="en">Contents</span></h3>
+                <h3><span class="pt">Conteúdos</span><span class="en">Contents</span><span class="gl">Contidos</span></h3>
                  <div class="en">
                 <ul>
                     {
@@ -276,6 +279,23 @@ return
                                             href="#graf{$result}">Gráficas</a></li>
                                     <li><a
                                             href="#lingua{$result}">Tabela</a></li>
+                                </ul>
+                            </li>
+                    }
+                </ul>
+                </div>
+                
+                 <div class="gl">
+                <ul>
+                     {
+                        for $result in $values
+                        return
+                            <li>{transform:transform($ling-features[@xml:id = $result]//tei:string[@xml:lang eq 'gl']/text(), 'xmldb:exist:///db/VTLGP/xslt/string.xsl', ())}
+                                <ul>
+                                    <li><a
+                                            href="#grafo{$result}">Gráficas</a></li>
+                                    <li><a
+                                            href="#lg{$result}">Táboa</a></li>
                                 </ul>
                             </li>
                     }

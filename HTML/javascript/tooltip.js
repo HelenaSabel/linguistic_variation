@@ -1,5 +1,5 @@
 function tooltip() {
-    var myspans = document.querySelectorAll('span[data-exp]');
+    var myspans = document.querySelectorAll('[data-exp]');
     for (var i = 0; i < myspans.length; i++) {
         myspans[i].addEventListener('click', popup, false);
     }
