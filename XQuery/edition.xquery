@@ -87,7 +87,7 @@ return
                                 target="_blank">Ver edição tabular</a><a
                                 class="gl"
                                 href="http://gl-pt.obdurodon.org/editionTab.php?song={$song/substring(@corresp, 2)}"
-                                target="_blank">Ver edição tabular</a>
+                                target="_blank">Ver edición tabular</a>
                             <a
                                 class="en"
                                 href="http://gl-pt.obdurodon.org/editionTab.php?song={$song/substring(@corresp, 2)}">Ver edición tabular</a></p>
