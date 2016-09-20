@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
     <ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
-    <let name="featureFile" value="doc('../ancillary-files/feature-library.xml')"/>
+    <let name="featureFile" value="doc('../ancillary/feature-library.xml')"/>
     <let name="featureStructures"
         value="$featureFile//tei:fs/@xml:id | $featureFile//tei:fLib[@xml:id eq 'graphic']//tei:f/@xml:id"/>
-    <let name="biblFile" value="doc('../ancillary-files/corpus-cantigas.xml')"/>
+    <let name="biblFile" value="doc('../ancillary/corpus-cantigas.xml')"/>
     <let name="poems" value="$biblFile//tei:bibl/@xml:id"/>
-    <let name="personografia" value="doc('../ancillary-files/corpus-autores.xml')"/>
+    <let name="personografia" value="doc('../ancillary/corpus-autores.xml')"/>
     <let name="poets" value="$personografia//tei:person/@xml:id"/>
     <pattern>
         <rule context="tei:l">
@@ -24,8 +23,8 @@
             <let name="segs" value="string-join(./descendant::tei:seg/@corresp, ' ')"/>
             <assert
                 test="
-                if (not(descendant::tei:choice) and count($anas) gt 1 and not(descendant::*[@cert])) then
-                    count($anas) &lt;= ./count(tokenize($segs, '\s+')) - count(descendant::tei:seg[@corresp eq '#error']) + count(descendant::tei:gap)
+                    if (not(descendant::tei:choice) and count($anas) gt 1 and not(descendant::*[@cert])) then
+                        count($anas) &lt;= ./count(tokenize($segs, '\s+')) - count(descendant::tei:seg[@corresp eq '#error']) + count(descendant::tei:gap)
                     else
                         true()"
                 >Need to segmentate</assert>
@@ -39,7 +38,7 @@
             <assert
                 test="
                     if (descendant::tei:choice and count($anas) gt 1 and not(descendant::*[@cert])) then
-                    count($anas) &lt;= (count(descendant::tei:seg[ancestor::tei:choice]) div 2) + count(descendant::tei:seg[parent::tei:rdg]) + count(descendant::tei:gap)
+                        count($anas) &lt;= (count(descendant::tei:seg[ancestor::tei:choice]) div 2) + count(descendant::tei:seg[parent::tei:rdg]) + count(descendant::tei:gap)
                     else
                         true()"
                 >Need to segmentate</assert>
@@ -76,9 +75,14 @@
             <report test="tei:app">Wrong nesting of elements</report>
         </rule>
         <rule context="tei:seg">
-            <assert test="@corresp">Every seg must have a @corresp attribute with its FS
-                code</assert>            
-            <assert test="every $corresp in tokenize(./@corresp, '\s+') satisfies $corresp = ancestor::tei:rdg/tokenize(@ana, '\s+')">Value not present in
+            <assert test="@corresp"
+                >Every seg must have a @corresp attribute with its FS
+                code</assert>
+            <assert
+                test="
+                    every $corresp in tokenize(./@corresp, '\s+')
+                        satisfies $corresp = ancestor::tei:rdg/tokenize(@ana, '\s+')"
+                >Value not present in
                 the rdg container</assert>
         </rule>
         <rule context="tei:div[@type = 'poem']">
@@ -90,7 +94,8 @@
                     else
                         true()"
                 >The value of the @corresp attribute does not occur in the list of cantigas</assert>
-            <assert test="tei:head[tei:title/tei:app/count(tei:rdg) gt 1][tei:name]">Missing
+            <assert test="tei:head[tei:title/tei:app/count(tei:rdg) gt 1][tei:name]"
+                >Missing
                 element. Every poem must have a head element with a title an a name. Head must
                 contain an app element with the readings</assert>
         </rule>
@@ -107,13 +112,15 @@
         <rule context="tei:gap">
             <let name="reasons"
                 value="('error', 'damage', 'economy', 'unfinished', 'illegible', 'model', 'unknown')"/>
-            <assert test="./@reason = $reasons"> "error," "economy," "damage," "unfinished,"
+            <assert test="./@reason = $reasons"
+                > "error," "economy," "damage," "unfinished,"
                 "model," or "illegible" are the only permitted values of @reason on the gap element
             </assert>
         </rule>
         <rule context="tei:add">
             <let name="places" value="('above', 'margin', 'overwrite', 'inline')"/>
-            <assert test="@place = $places">Additions must express the place the added text was
+            <assert test="@place = $places"
+                >Additions must express the place the added text was
                 located (possible values: “above”, “margin” or “overwrite”</assert>
         </rule>
         <rule context="tei:del">
@@ -155,11 +162,11 @@
                         true()"
                 >Check for consistency</assert>
         </rule>
-        <rule context="tei:ex[not(following-sibling::tei:am[1][. eq '&#773;'])]">
-            <assert test="preceding-sibling::node()[1][name() eq 'am']">All abreviations need to specify their abbreviation mark.</assert>
-        </rule>
+        <rule context="tei:ex[not(following-sibling::tei:am[1][. eq '̅'])]"> </rule>
         <rule context="tei:am">
             <assert test="./text()">Empty am</assert>
+            <assert test=".[not(. eq '̅')]/following-sibling::*[1][self::tei:ex]"
+                >All abreviations need to specify their abbreviation mark.</assert>
         </rule>
     </pattern>
 </schema>
