@@ -20,7 +20,7 @@
         </rule>
         <rule context="tei:l/tei:app">
             <let name="anas"
-                value="tokenize(replace(replace(replace(replace(string-join(.//@ana, ' '), '\s?#rev\s?', ''), '\s?#equip\s?', ''), '\s?#error\s?', ''), '\s?#apocope\s?', ''), '\s+')"/>
+                value="tokenize(replace(replace(replace(replace(replace(string-join(.//@ana, ' '), '\s?#rev\s?', ''), '\s?#equip\s?', ''), '\s?#error\s?', ''), '\s?#abb\s?', ''), '\s?#apocope\s?', ''), '\s+')"/>
             <let name="segs" value="string-join(./descendant::tei:seg/@corresp, ' ')"/>
             <assert
                 test="
