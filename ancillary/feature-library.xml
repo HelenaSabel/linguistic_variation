@@ -1,4 +1,4 @@
-<?xml-model href="../schemas/tei_features.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/feature-library.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schemas/tei_features.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/feature-structure-library.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -49,7 +49,7 @@
                         <vRange>
                             <vAlt>
                                 <fs type="phonetic"/>
-                                <fs type="morphosyntatic"/>
+                                <fs type="morphosyntactic"/>
                                 <fs type="lexical"/>
                                 <fs type="language-transfer"/>
                             </vAlt>
@@ -93,7 +93,7 @@
                     </fDecl>
                 </fsDecl>
                 <fsDecl type="alteration">
-                    <fDecl name="type">
+                    <fDecl name="mode">
                         <vRange>
                             <vAlt>
                                 <fs type="assimilation"/>
@@ -101,6 +101,8 @@
                                 <symbol value="metathesis"/>
                                 <symbol value="lenition"/>
                                 <symbol value="fortition"/>
+                                <symbol value="analogy"/>
+                                <symbol value="sound-loss"/>
                             </vAlt>
                         </vRange>
                     </fDecl>
