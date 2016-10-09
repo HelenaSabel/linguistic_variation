@@ -49,7 +49,7 @@
                         <vRange>
                             <vAlt>
                                 <fs type="phonetic"/>
-                                <fs type="morphosyntactic"/>
+                                <fs type="morphosyntatic"/>
                                 <fs type="lexical"/>
                                 <fs type="language-transfer"/>
                             </vAlt>
@@ -93,7 +93,7 @@
                     </fDecl>
                 </fsDecl>
                 <fsDecl type="alteration">
-                    <fDecl name="mode">
+                    <fDecl name="type">
                         <vRange>
                             <vAlt>
                                 <fs type="assimilation"/>
@@ -101,8 +101,6 @@
                                 <symbol value="metathesis"/>
                                 <symbol value="lenition"/>
                                 <symbol value="fortition"/>
-                                <symbol value="analogy"/>
-                                <symbol value="sound-loss"/>
                             </vAlt>
                         </vRange>
                     </fDecl>
@@ -991,7 +989,6 @@
                                             <f name="agreement">
                                                 <fs type="concord">
                                                     <f name="PERS">
-                                                        <symbol value="2"/>
                                                         <symbol value="1"/>
                                                     </f>
                                                     <f name="NUM">
@@ -1013,9 +1010,9 @@
                         </fs>
                     </f>
                     <f name="description">
-                        <string xml:lang="en">Dative contamination</string>
-                        <string xml:lang="pt">Contaminação do dativo</string>
-                        <string xml:lang="gl">Contaminación do dativo</string>
+                        <string xml:lang="en">First person pronominal weak form in ’-i’</string>
+                        <string xml:lang="pt">Forma fraca pronominal da P1 en ’-i’</string>
+                        <string xml:lang="gl">Forma fraca pronominal da P1 en ’-i’</string>
                     </f>
                 </fs>
                 <fs xml:id="dub-dat">
@@ -1028,7 +1025,7 @@
                                             <f name="agreement">
                                                 <fs type="concord">
                                                     <f name="PERS">
-                                                        <symbol value="2"/>
+                                                        <symbol value="3"/>
                                                         <symbol value="1"/>
                                                     </f>
                                                     <f name="NUM">
@@ -1050,12 +1047,9 @@
                         </fs>
                     </f>
                     <f name="description">
-                        <string xml:lang="en">Dative contamination confronted with vocalic
-                            crasis</string>
-                        <string xml:lang="pt">Contaminação do dativo contrastada com uma crase
-                            vocálica</string>
-                        <string xml:lang="gl">Contaminación do dativo contrastada cunha crase
-                            vocálica</string>
+                        <string xml:lang="en">Pronominal weak form in ’-i’ in synaloepha</string>
+                        <string xml:lang="pt">Forma fraca pronominal en ’-i’ em sinalefa</string>
+                        <string xml:lang="gl">Forma fraca pronominal en ’-i’ en sinalefa</string>
                     </f>
                 </fs>
                 <fs xml:id="xe">
@@ -1124,12 +1118,9 @@
                         </fs>
                     </f>
                     <f name="description">
-                        <string xml:lang="en">Dative pronoun ’li’ or its palatalized
-                            version</string>
-                        <string xml:lang="pt">Pronome dativo ’li’ ou a sua forma
-                            palatalizada</string>
-                        <string xml:lang="gl">Pronome dativo ’li’ ou a súa forma
-                            palatalizada</string>
+                        <string xml:lang="en">Third person pronominal weak form in ’-i’</string>
+                        <string xml:lang="pt">Forma fraca pronominal da P3/P6 en ’-i’</string>
+                        <string xml:lang="gl">Forma fraca pronominal da P3/P6 en ’-i’</string>
                     </f>
                 </fs>
                 <fs xml:id="weak-pos">
