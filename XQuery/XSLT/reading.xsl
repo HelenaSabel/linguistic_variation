@@ -3,7 +3,36 @@
     <xsl:variable name="ling-features" select="doc('../ancillary/feature-library.xml')//tei:fs[tei:f[@name eq 'taxonomy']/tei:fs[@type eq 'linguistic']]"/>
     <xsl:variable name="errors" select="doc('../ancillary/feature-library.xml')//tei:fs[tei:f[@name eq 'taxonomy']/tei:fs[@type eq 'error']]"/>
     <xsl:variable name="equip" select="doc('../ancillary/feature-library.xml')//tei:fs[tei:f[@name eq 'taxonomy']/tei:fs[@type eq 'equipolent']]"/>
+    <xsl:variable name="material" select="doc('../ancillary/feature-library.xml')//tei:fs[tei:f[@name eq 'taxonomy']/tei:fs[@type eq 'material']]"/>
     <xsl:variable name="graphic" select="doc('../ancillary/feature-library.xml')//tei:fLib[@xml:id eq 'graphic']/tei:f[not(@xml:id eq 'abb')]"/>
+    
+    
+    <!--          This creates a problem!
+                    
+                    <l n="20">
+                        <app>
+                            <rdg wit="#A" ana="#reg">fi<seg corresp="#reg">ll</seg>ar por mi</rdg>
+                            <rdg wit="#B" ana="#trans #j-minin"><seg corresp="#trans">p<am>ᷣ</am>
+                                <ex>or</ex> m<seg corresp="#j-minin">j</seg> filhar</seg></rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">e</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg #reg">
+                                <choice>
+                                    <orig>to<seg corresp="#reg">ll</seg>er<seg corresp="#reg">ll</seg>ey</orig>
+                                    <reg>to<seg corresp="#reg">ll</seg>er-<seg corresp="#reg">ll</seg>
+                                        <supplied>?</supplied>-ey</reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B" ana="#abb #equip">tolh<am>͛</am>
+                                <ex>er</ex>ey</rdg>
+                        </app>
+                    </l>-->
+    
+    
+    
     <xsl:param name="wit"/>
     <xsl:param name="line"/>
     <xsl:template match="tei:lg">
@@ -53,6 +82,9 @@
                         </xsl:element>
                     </xsl:if>
                     <xsl:if test="substring($ana, 2) = $errors/@xml:id and current()/descendant::tei:gap">
+                        <xsl:apply-templates/>
+                    </xsl:if>
+                    <xsl:if test="substring($ana, 2) = $material/@xml:id and current()/descendant::tei:gap">
                         <xsl:apply-templates/>
                     </xsl:if>
                     <xsl:if test="substring($ana, 2) = $ling-features/@xml:id">
@@ -320,12 +352,6 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:ex"/>
-    
-    
-    
-    
-    
-    
     <xsl:template match="tei:am[ancestor::tei:rdg[contains(@ana, '#abb')]]">
         <xsl:variable name="am" select="current()"/>
         <xsl:choose>
@@ -414,17 +440,6 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <xsl:template match="tei:choice">
         <span class="reg">
             <xsl:apply-templates select="tei:reg"/>
@@ -586,25 +601,25 @@
                 <xsl:text>gap gl</xsl:text>
             </xsl:attribute>
             <xsl:attribute name="data-exp">
-                <xsl:if test="tei:gap[@reason eq 'error']">
+                <xsl:if test="@reason eq 'error'">
                     <xsl:text>Erro de copia</xsl:text>
                 </xsl:if>
-                <xsl:if test="tei:gap[@reason eq 'economy']">
+                <xsl:if test="@reason eq 'economy'">
                     <xsl:text>Omisión de contidos repetidos</xsl:text>
                 </xsl:if>
-                <xsl:if test="tei:gap[@reason eq 'unknown']">
+                <xsl:if test="@reason eq 'unknown'">
                     <xsl:text>Omisión de orixe descoñecida</xsl:text>
                 </xsl:if>
-                <xsl:if test="tei:gap[@reason eq 'damage']">
+                <xsl:if test="@reason eq 'damage'">
                     <xsl:text>Omisión provocada polo estado de conservación do testemuño</xsl:text>
                 </xsl:if>
-                <xsl:if test="tei:gap[@reason eq 'illegible']">
+                <xsl:if test="@reason eq 'illegible'">
                     <xsl:text>Trecho ilexíbel</xsl:text>
                 </xsl:if>
-                <xsl:if test="tei:gap[@reason eq 'model']">
+                <xsl:if test="@reason eq 'model'">
                     <xsl:text>Probabelmente, omisión presente no modelo</xsl:text>
                 </xsl:if>
-                <xsl:if test="tei:gap[@reason eq 'unfinished']">
+                <xsl:if test="@reason eq 'unfinished'">
                     <xsl:text>Testemuño inacabado</xsl:text>
                 </xsl:if>
             </xsl:attribute>
