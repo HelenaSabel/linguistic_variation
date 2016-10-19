@@ -30,9 +30,6 @@
                                 <ex>er</ex>ey</rdg>
                         </app>
                     </l>-->
-    
-    
-    
     <xsl:param name="wit"/>
     <xsl:param name="line"/>
     <xsl:template match="tei:lg">
@@ -656,12 +653,16 @@
         </xsl:element>
     </xsl:template>
     <xsl:template match="tei:hi">
-        <sup class="pt gl" data-exp="Letra de espera">
+        <span class="pt gl" data-exp="Letra de espera">
+            <xsl:text>‹</xsl:text>
             <xsl:value-of select="."/>
-        </sup>
-        <sup class="en" data-exp="Guide letter">
+            <xsl:text>›</xsl:text>
+        </span>
+        <span class="en" data-exp="Guide letter">
+            <xsl:text>‹</xsl:text>
             <xsl:value-of select="."/>
-        </sup>
+            <xsl:text>›</xsl:text>
+        </span>
     </xsl:template>
     <xsl:template match="tei:supplied">
         <span class="supplied hide">’</span>

@@ -5,7 +5,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     exclude-result-prefixes="#all" version="2.0">
     <xsl:output method="xml" indent="yes"/>   
-    <xsl:variable name="header" select="doc('../edition/corrigidas/sandim1.xml')//tei:teiHeader"/>
+    <xsl:variable name="header" select="doc('../edition/esgaravunha.xml')//tei:teiHeader"/>
     <xsl:template match="/">
         <xsl:variable name="input">
             <xsl:apply-templates mode="namespace"/>
@@ -103,7 +103,7 @@
                 </xsl:element>
                 <xsl:element name="name">
                     <xsl:attribute name="role">author</xsl:attribute>
-                    <xsl:attribute name="ref">#JNzCam</xsl:attribute>
+                    <xsl:attribute name="ref">#FerGarEsg</xsl:attribute>
                 </xsl:element>
             </xsl:element>
             <xsl:copy-of select="current()/tei:lg"/>

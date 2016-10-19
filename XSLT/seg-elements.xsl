@@ -9,10 +9,10 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template>
-    <xsl:template match="am[not(parent::seg)][ancestor::rdg[contains(@ana, '#abb')]]">
+    <!--<xsl:template match="am[not(parent::seg)][ancestor::rdg[contains(@ana, '#abb')]]">
         <seg corresp="#abb"><xsl:copy-of select="current()"/><xsl:sequence select="following-sibling::ex[1]"/></seg>
     </xsl:template>
-    <xsl:template match="ex[not(parent::seg)][ancestor::rdg[contains(@ana, '#abb')]]"/>
+    <xsl:template match="ex[not(parent::seg)][ancestor::rdg[contains(@ana, '#abb')]]"/>-->
     <xsl:template match="hi[ancestor::rdg[contains(@ana, '#material')]]">
         <seg corresp="#material"><xsl:copy-of select="current()"/></seg>
     </xsl:template>
@@ -69,6 +69,18 @@
             <xsl:matching-substring>
                 <xsl:value-of select="replace(., 'j', '')"/>
                 <seg corresp="#j-minin">j</seg>
+            </xsl:matching-substring>
+            <xsl:non-matching-substring>
+                <xsl:value-of select="."/>
+            </xsl:non-matching-substring>
+        </xsl:analyze-string>
+    </xsl:template>
+    <xsl:template
+        match="text()[matches(., 'c')][not(parent::seg)][ancestor::rdg[contains(@ana, '#c-pal')]]">
+        <xsl:analyze-string select="current()" regex=".*?j">
+            <xsl:matching-substring>
+                <xsl:value-of select="replace(., 'c', '')"/>
+                <seg corresp="#c-pal">c</seg>
             </xsl:matching-substring>
             <xsl:non-matching-substring>
                 <xsl:value-of select="."/>
