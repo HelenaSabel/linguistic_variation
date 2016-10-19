@@ -29,23 +29,26 @@ function language () {
         siglas[i].addEventListener('click', changeLang, false);
     }
     var lang = readCookie('lg');
-    createCookie('lg', lang, 30);
-    changeLang();
-    if (! lang) { alert('Please, select one of the languages on the blue frame')
+    if (lang) {
+        createCookie('lg', lang, 30);
+        changeLang();
+    } else {
+        var LNG = window.navigator.language.substring(0, 2);
+        if (LNG == 'gl') {
+            var lang = LNG;
+        } else if (LNG == 'es') {
+            var lang = 'gl';
+        } else if (LNG == 'pt') {
+            var lang = LNG;
+        } else {
+            var lang = 'en';
+        }        
+            createCookie('lg', lang, 30);
+            changeLang();
     }
 }
 
-/*function Alert() {
-            var SelectLanguage = document.createElement("div");
-            SelectLanguage.innerHTML = "<p style='color: #FFC938'>Please, select language</p><div class='languages'><a><span id='en' class='language'>en</span></a><a><span id='gl' class='language'>gl</span></a><a><span id='pt' class='language'>pt</span></a></div>";
-            SelectLanguage.style.backgroundColor = "#2B3966";
-            SelectLanguage.style.position = "absolute";
-            SelectLanguage.style.left = "100 px";
-            SelectLanguage.style.top = "100 px";
-            document.body.appendChild(SelectLanguage);
-        }*/
-        
-        
+
 
 function changeLang() {
     if (typeof this.id === 'undefined') {
