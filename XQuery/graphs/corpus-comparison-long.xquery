@@ -4,28 +4,33 @@ declare variable $songs := //song[@class eq 'A'];
 declare variable $b := //song[@class eq 'B'];
 declare variable $collection := collection('../../edition')//tei:div[@type eq 'poem'];
 declare variable $authors := distinct-values($songs/author);
-declare variable $colors := ('#934B98', '#893C11', '#351278', '#E4FBA4', '#848DF1', '#58B94C', '#B15282', '#5B77EE', '#FD2F8D', '#311CE1',
-'#E399DE', '#58FBA7', '#D03471', '#36F657', '#398566', '#74A0D7', '#F20EDA', '#6BA901', '#A38A9E', '#1D8A3E', '#1A2BB0', '#3A3391', '#EFC88C', '#A303DA', '#2F7A9B', '#9A5C61', '#CABFE5',
-'#1C4D5D', '#A01A3F', '#46FC18', '#8A3D7A', '#F45B43', '#050526', '#2D648A', '#4C0391', '#B1CFF3', '#AE709B', '#4A14F4', '#A21169', '#BA6CDF', '#D91A91', '#D40549', '#1842D3',
-'#68579C', '#157715', '#7FF998', '#A7DAC1', '#4EA807');
+declare variable $realauthors := $songs/author[not(. = ' ')];
+declare variable $colors := ('#B54D1A', '#4E240A', '#351278', '#FFFDF0', '#B0E9ED', '#848DF1', '#58B94C', '#B15282', '#5B77EE', '#FD2F8D', '#311CE1',
+'#E399DE', '#6A685A', '#D03471', '#EAE5C5', '#6C659D', '#398566', '#74A0D7', '#F20EDA', '#6BA901', '#A38A9E', '#1D8A3E', '#1A2BB0', '#5C647F', '#EFC88C', '#A303DA', '#2F7A9B', '#9A5C61', '#CABFE5',
+'#1C4D5D', '#679DA1', '#B788A4', '#9D9875', '#F45B43', '#050526', '#2D648A', '#4C0391', '#B1CFF3', '#AE709B', '#4A14F4', '#A21169', '#BA6CDF', '#D91A91', '#D40549', '#1842D3',
+'#68579C', '#157715', '#7FF998', '#4EA807');
+declare variable $colors2 := ('#B54D1A', '#4E240A', '#351278', '#FFFDF0', '#B0E9ED', '#848DF1', '#58B94C', '#B15282', '#5B77EE', '#FD2F8D', '#311CE1', 
+'#E399DE', '#6A685A', '#D03471', '#6C659D', '#398566', '#74A0D7', '#F20EDA', '#6BA901', '#A38A9E', '#1D8A3E', '#1A2BB0', '#5C647F', '#EFC88C', 
+'#A303DA', '#2F7A9B', '#9A5C61', '#CABFE5', '#1C4D5D', '#679DA1', '#B788A4', '#9D9875', '#F45B43', '#050526', '#2D648A', '#4C0391', '#B1CFF3', '#AE709B', 
+'#4A14F4', '#A21169', '#BA6CDF', '#D91A91', '#D40549', '#1842D3', '#68579C', '#157715', '#7FF998', '#4EA807');
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"
-    height="450"
-    view-box="0 0 1600 450"
+    height="300"
+    view-box="0 0 1635 300"
     preserveAspectRatio="xMidYMid meet">
     <text
-        y="56"
+        y="45"
         x="110"
         text-anchor="end"
         font-size="11">All</text>
     <text
-        y="130"
+        y="100"
         x="110"
         text-anchor="end"
         font-size="11">Other witnesses</text>
     <text
-        y="204"
+        y="155"
         x="110"
         text-anchor="end"
         font-size="11">Done</text>
@@ -39,9 +44,9 @@ declare variable $colors := ('#934B98', '#893C11', '#351278', '#E4FBA4', '#848DF
             let $margin := number('100')
             let $current := index-of($authors, $song/*[3])
             return
-                (if ((number($song/*[1]) + 3) mod 4 = 0) then
+                (if ((number($song/*[1]) + 2) mod 3 = 0) then
                     <rect
-                        x="{(($position + 3) div 4 * 15) + $margin}"
+                        x="{(($position + 2) div 3 * 15) + $margin}"
                         y="20"
                         height="15"
                         width="15"
@@ -49,11 +54,11 @@ declare variable $colors := ('#934B98', '#893C11', '#351278', '#E4FBA4', '#848DF
                         fill="{$colors[$current]}"/>
                 
                 else
-                    (if ((number($song/*[1]) + 2) mod 4 = 0)
+                    (if ((number($song/*[1]) + 1) mod 3 = 0)
                     
                     then
                         <rect
-                            x="{(($position + 2) div 4 * 15) + $margin}"
+                            x="{(($position + 1) div 3 * 15) + $margin}"
                             y="35"
                             height="15"
                             width="15"
@@ -61,195 +66,139 @@ declare variable $colors := ('#934B98', '#893C11', '#351278', '#E4FBA4', '#848DF
                             fill="{$colors[$current]}"/>
                     
                     else
-                        (if ((number($song/*[1]) + 1) mod 4 = 0) then
-                            <rect
-                                x="{(($position + 1) div 4 * 15) + $margin}"
-                                y="50"
-                                height="15"
-                                width="15"
-                                stroke="#EAE5C5"
-                                fill="{$colors[$current]}"/>
-                        else
-                            <rect
-                                x="{($position div 4 * 15) + $margin}"
-                                y="65"
-                                height="15"
-                                width="15"
-                                stroke="#EAE5C5"
-                                fill="{$colors[$current]}"/>
-                        ))
+                        <rect
+                            x="{($position div 3 * 15) + $margin}"
+                            y="50"
+                            height="15"
+                            width="15"
+                            stroke="#EAE5C5"
+                            fill="{$colors[$current]}"/>
+                    )
                 
                 ,
-                if ($song/*[1]/@id = $b/*[1]/@id and (number($song/*[1]) + 3) mod 4 = 0) then
+                if ($song/*[1]/@id = $b/*[1]/@id and (number($song/*[1]) + 2) mod 3 = 0) then
                     <rect
-                        x="{(($position + 3) div 4 * 15) + $margin}"
-                        y="95"
+                        x="{(($position + 2) div 3 * 15) + $margin}"
+                        y="75"
                         height="15"
                         width="15"
                         stroke="#EAE5C5"
                         fill="{$colors[$current]}"/>
                 else
-                    (if ($song/*[1]/@id = $b/*[1]/@id and (number($song/*[1]) + 2) mod 4 = 0)
+                    (if ($song/*[1]/@id = $b/*[1]/@id and (number($song/*[1]) + 1) mod 3 = 0)
                     then
                         <rect
-                            x="{(($position + 2) div 4 * 15) + $margin}"
-                            y="110"
+                            x="{(($position + 1) div 3 * 15) + $margin}"
+                            y="90"
                             height="15"
                             width="15"
                             stroke="#EAE5C5"
                             fill="{$colors[$current]}"/>
                     else
-                        (if ($song/*[1]/@id = $b/*[1]/@id and (number($song/*[1] + 1) mod 4 = 0))
+                        (if ($song/*[1]/@id = $b/*[1]/@id and number($song/*[1] mod 3 = 0))
                         then
                             <rect
-                                x="{(($position + 1) div 4 * 15) + $margin}"
-                                y="125"
+                                x="{($position div 3 * 15) + $margin}"
+                                y="105"
                                 height="15"
                                 width="15"
                                 stroke="#EAE5C5"
                                 fill="{$colors[$current]}"/>
                         else
-                            (if ($song/*[1]/@id = $b/*[1]/@id and number($song/*[1] mod 4 = 0)) then
-                                <rect
-                                    x="{($position div 4 * 15) + $margin}"
-                                    y="140"
-                                    height="15"
-                                    width="15"
-                                    stroke="#EAE5C5"
-                                    fill="{$colors[$current]}"/>
-                            else
-                                ()))),
-                
+                            ())),
                 if ($collection//tei:head/descendant::tei:rdg[@wit eq '#A']/substring(tei:idno, 2) = $song/*[1]/replace(., '-([a-z])', '$1')
-                and (number($song/*[1]) + 3) mod 4 = 0) then
+                and (number($song/*[1]) + 2) mod 3 = 0) then
                     <rect
-                        x="{(($position + 3) div 4 * 15) + $margin}"
-                        y="170"
+                        x="{(($position + 2) div 3 * 15) + $margin}"
+                        y="130"
                         height="15"
                         width="15"
                         stroke="#EAE5C5"
                         fill="{$colors[$current]}"/>
                 else
                     (if ($collection//tei:head/descendant::tei:rdg[@wit eq '#A']/substring(tei:idno, 2) = $song/*[1]/replace(., '-([a-z])', '$1')
-                    and (number($song/*[1]) + 2) mod 4 = 0) then
+                    and (number($song/*[1]) + 1) mod 3 = 0) then
                         <rect
-                            x="{(($position + 2) div 4 * 15) + $margin}"
-                            y="185"
+                            x="{(($position + 1) div 3 * 15) + $margin}"
+                            y="145"
                             height="15"
                             width="15"
                             stroke="#EAE5C5"
                             fill="{$colors[$current]}"/>
                     else
                         (if ($collection//tei:head/descendant::tei:rdg[@wit eq '#A']/substring(tei:idno, 2) = $song/*[1]/replace(., '-([a-z])', '$1')
-                        and number($song/*[1] + 1) mod 4 = 0) then
+                        and number($song/*[1]) mod 3 = 0) then
                             <rect
-                                x="{(($position + 1) div 4 * 15) + $margin}"
-                                y="200"
+                                x="{($position div 3 * 15) + $margin}"
+                                y="160"
                                 height="15"
                                 width="15"
                                 stroke="#EAE5C5"
                                 fill="{$colors[$current]}"/>
                         else
-                            (if ($collection//tei:head/descendant::tei:rdg[@wit eq '#A']/substring(tei:idno, 2) = $song/*[1]/replace(., '-([a-z])', '$1')
-                            and number($song/*[1]) mod 4 = 0) then
-                                <rect
-                                    x="{($position div 4 * 15) + $margin}"
-                                    y="215"
-                                    height="15"
-                                    width="15"
-                                    stroke="#EAE5C5"
-                                    fill="{$colors[$current]}"/>
-                            else
-                                ())))
+                            ()))
                 )
         }
     </g>
     <g>{
-            for $author at $pos in $authors
-            let $current := $colors[$pos]
+            for $author at $pos in distinct-values($realauthors)
+            let $current := $colors2[$pos]
             return
-                if (($pos + 5) mod 6 = 0) then
+                if (($pos + 3) mod 4 = 0) then
                     (<text
-                        y="310"
-                        x="{$pos * 36 + 82}"
+                        y="210"
+                        x="{$pos * 47 + 82}"
                         font-size="11">{replace($author, '\(.*?\)', '')}</text>,
                     <rect
-                        y="300"
+                        y="200"
                         fill="{$current}"
                         height="15"
                         width="15"
                         stroke="#EAE5C5"
-                        x="{$pos * 36 + 62}"/>)
+                        x="{$pos * 47 + 62}"/>)
                 else
-                    (if (($pos + 4) mod 6 = 0)
+                    (if (($pos + 2) mod 4 = 0)
                     then
                         (<text
-                            y="335"
-                            x="{($pos - 1) * 36 + 82}"
+                            y="235"
+                            x="{($pos - 1) * 47 + 82}"
                             font-size="11">{replace($author, '\(.*?\)', '')}</text>,
                         <rect
-                            y="325"
+                            y="225"
                             fill="{$current}"
                             height="15"
                             width="15"
                             stroke="#EAE5C5"
-                            x="{($pos - 1) * 36 + 62}"/>)
+                            x="{($pos - 1) * 47 + 62}"/>)
                     else
-                        (if (($pos + 3) mod 6 = 0) then
+                        (if (($pos + 1) mod 4 = 0) then
                             (<text
-                                y="360"
-                                x="{($pos - 2) * 36 + 82}"
+                                y="260"
+                                x="{($pos - 2) * 47 + 82}"
                                 font-size="11">{replace($author, '\(.*?\)', '')}</text>,
                             <rect
-                                y="350"
+                                y="250"
                                 fill="{$current}"
                                 height="15"
                                 width="15"
                                 stroke="#EAE5C5"
-                                x="{($pos - 2) * 36 + 62}"/>)
+                                x="{($pos - 2) * 47 + 62}"/>)
                         else
-                            (if (($pos + 2) mod 6 = 0) then
+                            (if ($pos mod 4 = 0)
+                            then
                                 (<text
-                                    y="385"
-                                    x="{($pos - 3) * 36 + 82}"
+                                    y="285"
+                                    x="{($pos - 3) * 47 + 82}"
                                     font-size="11">{replace($author, '\(.*?\)', '')}</text>,
                                 <rect
-                                    y="375"
+                                    y="275"
                                     fill="{$current}"
                                     height="15"
                                     width="15"
                                     stroke="#EAE5C5"
-                                    x="{($pos - 3) * 36 + 62}"/>)
+                                    x="{($pos - 3) * 47 + 62}"/>)
                             else
-                                (if (($pos + 1) mod 6 = 0)
-                                then
-                                    (<text
-                                        y="410"
-                                        x="{($pos - 4) * 36 + 82}"
-                                        font-size="11">{replace($author, '\(.*?\)', '')}</text>,
-                                    <rect
-                                        y="400"
-                                        fill="{$current}"
-                                        height="15"
-                                        width="15"
-                                        stroke="#EAE5C5"
-                                        x="{($pos - 4) * 36 + 62}"/>)
-                                else
-                                    (if ($pos mod 6 = 0)
-                                    then
-                                        (<text
-                                            y="435"
-                                            x="{($pos - 5) * 36 + 82}"
-                                            font-size="11">{replace($author, '\(.*?\)', '')}</text>,
-                                        <rect
-                                            y="425"
-                                            fill="{$current}"
-                                            height="15"
-                                            width="15"
-                                            stroke="#EAE5C5"
-                                            x="{($pos - 5) * 36 + 62}"/>)
-                                    else
-                                        ())))))
+                                ())))
         }
     </g>
 </svg>
