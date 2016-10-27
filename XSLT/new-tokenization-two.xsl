@@ -87,10 +87,19 @@
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
+    <xsl:template match="ex/supplied" mode="string">
+        <xsl:text>&lt;</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
+        <xsl:apply-templates select="node()"/>
+        <xsl:text>&lt;/</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
+    </xsl:template>
     <xsl:template match="text()[parent::orig | parent::reg | parent::del | parent::add | parent::ex]">
         <xsl:value-of select="replace(., ' ', '_')"/>
     </xsl:template>
-    <xsl:template match="orig/ex | orig/am | reg/ex | reg/am | del/ex | del/am | add/ex | add/am">
+    <xsl:template match="orig/ex | orig/am | reg/ex | reg/am | del/ex | del/am | add/ex | add/am | reg/supplied">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>

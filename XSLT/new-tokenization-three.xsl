@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xpath-default-namespace="http://www.tei-c.org/ns/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs" version="2.0">
     <xsl:output method="xml" indent="yes"/>
     <!-- Stylesheet to tokenize a parallel segmentated transcription.
@@ -57,7 +56,7 @@
         <xsl:comment select="."/>
     </xsl:template>
     <!-- Elements with children but no attributes-->
-    <xsl:template match="ex|am|add[not(@*)]|del[not(@*)]|unclear" mode="string">
+    <xsl:template match="supplied|ex[not(supplied)]|am|add[not(@*)]|del[not(@*)]|unclear" mode="string">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
@@ -124,28 +123,48 @@
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
-    
-    <xsl:template match="reg|orig">
+    <xsl:template match="ex/supplied" mode="string">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
-        <xsl:choose>
-            <xsl:when test="contains(., ' ')">
-                <xsl:value-of select="replace(., ' ', '_')"/>
-            </xsl:when>
-            <xsl:otherwise>                
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:apply-templates select="node()"/>
         <xsl:text>&lt;/</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>
     </xsl:template>
-    <xsl:template match="orig/ex|reg/ex">
+    <xsl:template match="reg | orig">
         <xsl:text>&lt;</xsl:text>
         <xsl:value-of select="name()"/>
-        <xsl:text>&gt;</xsl:text>  
+        <xsl:text>&gt;</xsl:text>
+        <xsl:apply-templates/>
+        <xsl:text>&lt;/</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
+    </xsl:template>
+    <xsl:template match="text()[parent::orig | parent::reg | parent::del | parent::add | parent::ex]">
+        <xsl:value-of select="replace(., ' ', '_')"/>
+    </xsl:template>
+    <xsl:template match="orig/ex | orig/am | reg/ex | reg/am | del/ex | del/am | add/ex | add/am | reg/supplied">
+        <xsl:text>&lt;</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
         <xsl:apply-templates select="node()"/>
+        <xsl:text>&lt;/</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:text>&gt;</xsl:text>
+    </xsl:template>
+    <xsl:template match="orig/hi|reg/hi">
+        <xsl:text>&lt;</xsl:text>
+        <xsl:value-of select="name()"/>
+        <xsl:for-each select="@*">
+            <xsl:text>_</xsl:text>
+            <xsl:value-of select="name()"/>
+            <xsl:text>="</xsl:text>
+            <xsl:value-of select="current()"/>
+            <xsl:text>"</xsl:text>
+        </xsl:for-each>
+        <xsl:text>&gt;</xsl:text>
+        <xsl:apply-templates/>
         <xsl:text>&lt;/</xsl:text>
         <xsl:value-of select="name()"/>
         <xsl:text>&gt;</xsl:text>

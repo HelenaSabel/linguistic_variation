@@ -7,6 +7,23 @@
     <xsl:output method="xml" indent="yes"/>   
     <xsl:variable name="header" select="doc('../edition/sandim1.xml')//tei:teiHeader"/>
     <xsl:template match="/">
+        <xsl:variable name="input">
+            <xsl:apply-templates mode="namespace"/>
+        </xsl:variable>
+        <xsl:apply-templates select="$input" mode="header"/>
+    </xsl:template>
+    <xsl:template match="*" mode="namespace">
+        <xsl:element name="{local-name()}" namespace="http://www.tei-c.org/ns/1.0">
+            <xsl:copy-of select="@*"/>
+            <xsl:apply-templates mode="namespace"/>
+        </xsl:element>
+    </xsl:template>
+    <xsl:template match="node() | @*" mode="header">
+        <xsl:copy>
+            <xsl:apply-templates select="node() | @*" mode="header"/>
+        </xsl:copy>
+    </xsl:template>
+    <xsl:template match="/" mode="header">
         <xsl:element name="TEI">
             <xsl:copy-of select="$header"/>
             <text>
@@ -20,9 +37,9 @@
                     </div>
                 </front>
                 <body>
-        <xsl:copy>
-            <xsl:apply-templates select="//div"/>
-        </xsl:copy>
+                    <xsl:copy>
+                        <xsl:apply-templates select="//tei:div" mode="header"/>
+                    </xsl:copy>
                 </body>
             </text>
         </xsl:element>
@@ -30,7 +47,7 @@
     <xsl:template match="comment()">
         <xsl:comment select="."/>
     </xsl:template>
-    <xsl:template match="div[@type='poem']">
+    <xsl:template match="tei:div[@type='poem']" mode="header">
         <xsl:element name="div">
             <xsl:attribute name="type">
                 <xsl:value-of select="current()/@type"/>
@@ -111,7 +128,7 @@
                     <xsl:attribute name="ref">#FerVelho</xsl:attribute>
                 </xsl:element>
             </xsl:element>
-            <xsl:sequence select="current()//l" extension-element-prefixes="tei"/>
+            <xsl:copy-of select="current()/tei:lg"/>
         </xsl:element>
     </xsl:template>
 </xsl:stylesheet>
