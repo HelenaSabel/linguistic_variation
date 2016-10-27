@@ -513,6 +513,14 @@ ins.enhance.margin::before{
     content: "\\\\";
 }
 
+ins.enhance.scrape::before{
+    content: "⸢"
+}
+
+ins.enhance.scrape::after{
+    content: "⸣"
+}
+
 [data-exp]:hover{
     cursor: pointer;
 
@@ -531,6 +539,17 @@ ins.enhance.margin::before{
     width: -moz-max-content;
     width: -webkit-max-content;
     width: -o-max-content;
+}
+
+@font-face {
+    font-family: 'palemonas';
+    src: url('../fonts/palemonas/palemmufi-reg-webfont.woff2') format('woff2'),
+         url('../fonts/palemonas/palemmufi-reg-webfont.woff') format('woff'),
+         url('../fonts/palemonas/palemmufi-reg-webfont.ttf') format('truetype'),
+         url('../fonts/palemonas/palemmufi-reg-webfont.svg#palemonas_mufiregular') format('palemonas/svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 @font-face{
