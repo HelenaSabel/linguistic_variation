@@ -118,10 +118,10 @@
             </assert>
         </rule>
         <rule context="tei:add">
-            <let name="places" value="('above', 'margin', 'overwrite', 'inline')"/>
+            <let name="places" value="('above', 'margin', 'overwrite', 'inline', 'scrape')"/>
             <assert test="@place = $places"
                 >Additions must express the place the added text was
-                located (possible values: “above”, “margin” or “overwrite”</assert>
+                located (possible values: “above,” “margin,” "scrape" or “overwrite”</assert>
         </rule>
         <rule context="tei:del">
             <let name="values"
@@ -141,31 +141,16 @@
         </rule>
         <rule context="tei:choice">
             <assert
-                test="
-                    if (tei:orig//tei:ex) then
-                        tei:reg//tei:ex
-                    else
-                        true()"
+                test="count(tei:reg//tei:ex) eq count(tei:orig//tei:ex)"
                 >Check for consistency</assert>
+
             <assert
-                test="
-                    if (tei:reg//tei:ex) then
-                        tei:orig//tei:ex
-                    else
-                        true()"
-                >Check for consistency</assert>
-            <assert
-                test="
-                    if (tei:orig//tei:hi) then
-                        tei:reg//tei:hi
-                    else
-                        true()"
+                test="count(tei:reg//tei:hi) eq count(tei:orig//tei:hi)"
                 >Check for consistency</assert>
         </rule>
-        <rule context="tei:ex[not(following-sibling::tei:am[1][. eq '̅'])]"> </rule>
-        <rule context="tei:am">
+        <rule context="tei:am[not(. eq '&#x0305;')]">
             <assert test="./text()">Empty am</assert>
-            <assert test=".[not(. eq '̅')]/following-sibling::*[1][self::tei:ex]"
+            <assert test="following-sibling::*[1][self::tei:ex]"
                 >All abreviations need to specify their abbreviation mark.</assert>
         </rule>
     </pattern>
