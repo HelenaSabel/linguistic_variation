@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" xmlns="http://www.tei-c.org/ns/1.0"
-    exclude-result-prefixes="xs" version="2.0">
+    exclude-result-prefixes="xs" version="3.0">
     <xsl:output method="xml" indent="yes"/>
     <xsl:template match="/">
         <xsl:variable name="ana">
@@ -18,50 +18,67 @@
     <xsl:template match="comment()" mode="ana">
         <xsl:comment select="."/>
     </xsl:template>
-    <xsl:template match="app[parent::l]" mode="ana">
+    <xsl:template match="app[not(parent::title)][count(rdg) >= 2]" mode="ana">
         <xsl:element name="app">
             <xsl:element name="rdg">
                 <xsl:attribute name="wit">
                     <xsl:value-of select="current()/rdg[1]/@wit"/>
                 </xsl:attribute>
                 <xsl:attribute name="ana">
-                    <xsl:if test="rdg[1][ex] and rdg[2][not(ex)]">
+                    <xsl:if test="rdg[1]/count(ex) gt rdg[2]/count(ex)">
                         <xsl:text>#abb</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1][hi/@rend='guide']">
+                    <xsl:if test="rdg[1][descendant::hi/@rend='guide']">
                         <xsl:text>#material</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1][del]">
+                    <xsl:if test="rdg[1][del|add]">
                         <xsl:text>#rev</xsl:text>
                     </xsl:if>
-                    
-                    <xsl:if test="rdg[1][add]">
-                        <xsl:text>#rev</xsl:text>
+                    <xsl:if test="matches(rdg[1], 'g(e|i)') and not(contains(rdg[2],'g'))">
+                        <xsl:text>#g-cons</xsl:text>
                     </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'soff') and not(contains(rdg[2],'soff'))">
+                    <xsl:if test="matches(rdg[1], 'ç(e|i)') and not(contains(rdg[2],'ç'))">
+                        <xsl:text>#çe</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[1], 'ff') and not(contains(rdg[2],'ff'))">
                         <xsl:text>#ff</xsl:text>
                     </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'uus') and contains(rdg[2],'os')">
-                        <xsl:text>#vus</xsl:text>
+                    <xsl:if test="contains(rdg[1], 'cc') and not(contains(rdg[2],'cc'))">
+                        <xsl:text>#cc</xsl:text>
                     </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'n') and contains(rdg[2],'nh')">
+                    <xsl:if test="contains(rdg[1], 'us') and contains(rdg[2],'os')">
+                        <xsl:text>#back-vow</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="matches(rdg[1], 'n') and contains(rdg[2],'nh')">
                         <xsl:text>#reg</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[1], 'll') and contains(rdg[2],'lh')">
                         <xsl:text>#reg</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1][gap/@reason='error']">
+                    <xsl:if test="matches(rdg[2], '(e|a|o)i') and matches(rdg[1], '(e|a|o)y')">
+                        <xsl:text>#y-dip</xsl:text>
+                    </xsl:if>                      
+                    <xsl:if test="contains(rdg[1], 'ui') and matches(rdg[2], 'o(y|i|j)')">
+                        <xsl:text>#dip</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[1]/gap[@reason='error']">
                         <xsl:text>#error</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1][gap/@reason='economy']">
+                    <xsl:if test="rdg[1]/gap[@reason=('economy', 'damage')]">
                         <xsl:text>#material</xsl:text>
+                    </xsl:if>                    
+                    <xsl:if test="rdg[2]/descendant::supplied and rdg[1]/not(descendant::supplied)">
+                        <xsl:text>#syn</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[1][gap/@reason='unfinished']">
-                        <xsl:text>#material</xsl:text>
-                    </xsl:if>
-                    <xsl:if test="rdg[1][gap/@reason='damage']">
-                        <xsl:text>#material</xsl:text>
-                    </xsl:if>
+                    <xsl:if test="matches(rdg[1], 'v') and not(contains(rdg[2],'v'))">
+                        <xsl:text>#v</xsl:text>
+                    </xsl:if>                     
+                    <xsl:if test="matches(rdg[1], '[A-Z]') and not(matches(rdg[2], '[A-Z]'))">
+                        <xsl:text>#capital</xsl:text>
+                    </xsl:if> 
+                    <xsl:if test="matches(rdg[1], 'm$') and not(matches(rdg[2], 'm$'))">
+                        <xsl:text>#m-end</xsl:text>
+                    </xsl:if> 
                     <xsl:if test="contains(rdg[1], '.')">
                         <xsl:text>#punct</xsl:text>
                     </xsl:if>
@@ -74,45 +91,75 @@
                     <xsl:value-of select="current()/rdg[2]/@wit"/>
                 </xsl:attribute>
                 <xsl:attribute name="ana">
-                    <xsl:if test="rdg[2][ex] and rdg[1][not(ex)]">
+                    <xsl:if test="rdg[2]/count(ex) gt rdg[1]/count(ex)">
                         <xsl:text>#abb</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[2][add]">
+                    <xsl:if test="rdg[2][add|del]">
                         <xsl:text>#rev</xsl:text>
+                    </xsl:if>    
+                    <xsl:if test="contains(rdg[2], 'ff') and not(contains(rdg[1],'ff'))">
+                        <xsl:text>#ff</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[2], 'cc') and not(contains(rdg[1],'cc'))">
+                        <xsl:text>#cc</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[1]/descendant::supplied and rdg[2]/not(descendant::supplied)">
+                        <xsl:text>#syn</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="matches(rdg[1], 'm(i|j)') and contains(rdg[2], 'mh')">
+                        <xsl:text>#h-minin</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[1], 'mui') and contains(rdg[2], 'muj')">
+                        <xsl:text>#uj</xsl:text>
                     </xsl:if>                    
-                    <xsl:if test="rdg[2][del]">
-                        <xsl:text>#rev</xsl:text>
-                    </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mh')">
-                        <xsl:text>#mh</xsl:text>
-                    </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'mj') and contains(rdg[2], 'mh')">
-                        <xsl:text>#trend</xsl:text>
-                    </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'ui') and contains(rdg[2], 'uj')">
-                        <xsl:text>#trend</xsl:text>
+                    <xsl:if test="contains(rdg[1], 'ui') and contains(rdg[2], 'uy')">
+                        <xsl:text>#uy</xsl:text>
+                    </xsl:if>     
+                    <xsl:if test="matches(rdg[2], 'u(i|y)') and matches(rdg[1], 'o(y|i|j)')">
+                        <xsl:text>#dip</xsl:text>
                     </xsl:if>
                     <xsl:if test="contains(rdg[2], 'hu')">
-                        <xsl:text>#trend</xsl:text>
+                        <xsl:text>#h-monos</xsl:text>
+                    </xsl:if>                    
+                    <xsl:if test="matches(rdg[2], '[^l]hi')">
+                        <xsl:text>#h-monos</xsl:text>
                     </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'mi') and contains(rdg[2], 'mj')">
-                        <xsl:text>#trend</xsl:text>
+                    <xsl:if test="matches(rdg[1], '(m|n)i') and matches(rdg[2], '(m|n)j')">
+                        <xsl:text>#j-minin</xsl:text>
                     </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'me') and contains(rdg[2], 'mj')">
+                    <xsl:if test="contains(rdg[1], 'me') and matches(rdg[2], 'm(j|i)')">
                         <xsl:text>#dat</xsl:text>
                     </xsl:if>
-                    <xsl:if test="contains(rdg[1], 'lle') and contains(rdg[2], 'lhi')">
-                        <xsl:text>#dat</xsl:text>
+                    <xsl:if test="contains(rdg[1], 'lle') and matches(rdg[2], 'lh(i|j)')">
+                        <xsl:text>#li</xsl:text>
+                    </xsl:if>                    
+                    <xsl:if test="matches(rdg[2], 'ç(e|i)') and not(contains(rdg[1],'ç'))">
+                        <xsl:text>#çe</xsl:text>
+                    </xsl:if> 
+                    <xsl:if test="matches(rdg[2], 'v') and not(contains(rdg[1],'v'))">
+                        <xsl:text>#v</xsl:text>
+                    </xsl:if> 
+                    <xsl:if test="matches(rdg[2], '^ho')">
+                        <xsl:text>#h-et</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[2][gap/@reason='error']">
+                    <xsl:if test="rdg[2]/gap[@reason='error']">
                         <xsl:text>#error</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[2][gap/@reason='economy']">
+                    <xsl:if test="rdg[2]/gap[@reason=('economy', 'damage')]">
                         <xsl:text>#material</xsl:text>
+                    </xsl:if>                     
+                    <xsl:if test="matches(rdg[1], '(e|a|o)i') and matches(rdg[2], '(e|a|o)y')">
+                        <xsl:text>#y-dip</xsl:text>
+                    </xsl:if>                      
+                    <xsl:if test="matches(rdg[2], '[A-Z]') and not(matches(rdg[1], '[A-Z]')) and not(rdg[1]/hi)">
+                        <xsl:text>#capital</xsl:text>
+                    </xsl:if>                     
+                    <xsl:if test="matches(rdg[2], 'm$') and not(matches(rdg[1], 'm$'))">
+                        <xsl:text>#m-end</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[2][gap/@reason='damage']">
-                        <xsl:text>#material</xsl:text>
-                    </xsl:if>                    
+                    <xsl:if test="matches(rdg[2], '^uj$') and not(matches(rdg[1], '^uj$'))">
+                        <xsl:text>#j-minin</xsl:text>
+                    </xsl:if>
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[2]/node()"/>
             </xsl:element>
@@ -123,21 +170,75 @@
                     <xsl:value-of select="current()/rdg[3]/@wit"/>
                 </xsl:attribute>
                 <xsl:attribute name="ana">
-                    <xsl:if test="rdg[3][add]">
-                        <xsl:text>#rev</xsl:text>
-                    </xsl:if>                    
-                    <xsl:if test="rdg[3][del]">
-                        <xsl:text>#rev</xsl:text>
+                    <xsl:if test="rdg[3]/count(ex) gt rdg[1]/count(ex)">
+                        <xsl:text>#abb</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[3][gap/@reason='error']">
+                    <xsl:if test="rdg[3][add|del]">
+                        <xsl:text>#rev</xsl:text>
+                    </xsl:if>    
+                    <xsl:if test="contains(rdg[3], 'ff') and not(contains(rdg[1],'ff'))">
+                        <xsl:text>#ff</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[3], 'cc') and not(contains(rdg[1],'cc'))">
+                        <xsl:text>#cc</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[1]/descendant::supplied and rdg[3]/not(descendant::supplied)">
+                        <xsl:text>#syn</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="matches(rdg[1], 'm(i|j)') and contains(rdg[3], 'mh')">
+                        <xsl:text>#h-minin</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[1], 'mui') and contains(rdg[3], 'muj')">
+                        <xsl:text>#uj</xsl:text>
+                    </xsl:if>                    
+                    <xsl:if test="contains(rdg[1], 'ui') and contains(rdg[3], 'uy')">
+                        <xsl:text>#uy</xsl:text>
+                    </xsl:if>     
+                    <xsl:if test="matches(rdg[3], 'u(i|y)') and matches(rdg[1], 'o(y|i|j)')">
+                        <xsl:text>#dip</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[3], 'hu')">
+                        <xsl:text>#h-monos</xsl:text>
+                    </xsl:if>                    
+                    <xsl:if test="matches(rdg[3], '[^l]hi')">
+                        <xsl:text>#h-monos</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="matches(rdg[1], '(m|n)i') and matches(rdg[3], '(m|n)j')">
+                        <xsl:text>#j-minin</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[1], 'me') and matches(rdg[3], 'm(j|i)')">
+                        <xsl:text>#dat</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="contains(rdg[1], 'lle') and matches(rdg[3], 'lh(i|j)')">
+                        <xsl:text>#li</xsl:text>
+                    </xsl:if>                    
+                    <xsl:if test="matches(rdg[3], 'ç(e|i)') and not(contains(rdg[1],'ç'))">
+                        <xsl:text>#çe</xsl:text>
+                    </xsl:if> 
+                    <xsl:if test="matches(rdg[3], 'v') and not(contains(rdg[1],'v'))">
+                        <xsl:text>#v</xsl:text>
+                    </xsl:if> 
+                    <xsl:if test="matches(rdg[3], '^ho')">
+                        <xsl:text>#h-et</xsl:text>
+                    </xsl:if>
+                    <xsl:if test="rdg[3]/gap[@reason='error']">
                         <xsl:text>#error</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[3][gap/@reason='economy']">
+                    <xsl:if test="rdg[3]/gap[@reason=('economy', 'damage')]">
                         <xsl:text>#material</xsl:text>
+                    </xsl:if>                     
+                    <xsl:if test="matches(rdg[1], '(e|a|o)i') and matches(rdg[3], '(e|a|o)y')">
+                        <xsl:text>#y-dip</xsl:text>
+                    </xsl:if>                      
+                    <xsl:if test="matches(rdg[3], '[A-Z]') and not(matches(rdg[1], '[A-Z]')) and not(rdg[1]/hi)">
+                        <xsl:text>#capital</xsl:text>
+                    </xsl:if>                     
+                    <xsl:if test="matches(rdg[3], 'm$') and not(matches(rdg[1], 'm$'))">
+                        <xsl:text>#m-end</xsl:text>
                     </xsl:if>
-                    <xsl:if test="rdg[3][gap/@reason='damage']">
-                        <xsl:text>#material</xsl:text>
-                    </xsl:if>                    
+                    <xsl:if test="matches(rdg[3], '^uj$') and not(matches(rdg[1], '^uj$'))">
+                        <xsl:text>#j-minin</xsl:text>
+                    </xsl:if>        
                 </xsl:attribute>
                 <xsl:sequence select="current()/rdg[3]/node()"/>
             </xsl:element>
@@ -152,7 +253,7 @@
     <xsl:template match="comment()" mode="correction">
         <xsl:comment select="."/>
     </xsl:template>
-    <xsl:template match="rdg/@*" mode="correction">
+    <xsl:template match="l/descendant::rdg/@*" mode="correction">
         <xsl:attribute name="wit">
             <xsl:value-of select="../@wit"/>
         </xsl:attribute>
