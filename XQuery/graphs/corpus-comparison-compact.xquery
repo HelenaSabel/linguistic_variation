@@ -5,14 +5,18 @@ declare variable $b := //song[@class eq 'B'];
 declare variable $collection := collection('../../edition')//tei:div[@type eq 'poem'];
 declare variable $authors := distinct-values($songs/author);
 declare variable $realauthors := $songs/author[not(. = ' ')];
-declare variable $colors := ('#B54D1A', '#4E240A', '#351278', '#FFFDF0', '#B0E9ED', '#848DF1', '#58B94C', '#B15282', '#5B77EE', '#FD2F8D', '#311CE1',
-'#E399DE', '#6A685A', '#D03471', '#EAE5C5', '#6C659D', '#398566', '#74A0D7', '#F20EDA', '#6BA901', '#A38A9E', '#1D8A3E', '#1A2BB0', '#5C647F', '#EFC88C', '#A303DA', '#2F7A9B', '#9A5C61', '#CABFE5',
+declare variable $colors := ('#B54D1A', '#EAE5C5', '#4E240A', '#351278', '#B0E9ED', '#FFFDF0', '#848DF1', '#58B94C', '#B15282', '#5B77EE', '#FD2F8D', '#311CE1',
+'#E399DE', '#6A685A', '#D03471', '#6C659D', '#398566', '#74A0D7', '#F20EDA', '#6BA901', '#A38A9E', '#1D8A3E', '#1A2BB0', '#5C647F', '#EFC88C', '#A303DA', '#2F7A9B', '#9A5C61', '#CABFE5',
 '#1C4D5D', '#679DA1', '#B788A4', '#9D9875', '#F45B43', '#050526', '#2D648A', '#4C0391', '#B1CFF3', '#AE709B', '#4A14F4', '#A21169', '#BA6CDF', '#D91A91', '#D40549', '#1842D3',
 '#68579C', '#157715', '#7FF998', '#4EA807');
-declare variable $colors2 := ('#B54D1A', '#4E240A', '#351278', '#FFFDF0', '#B0E9ED', '#848DF1', '#58B94C', '#B15282', '#5B77EE', '#FD2F8D', '#311CE1', 
+declare variable $colors2 := ('#B54D1A', '#4E240A', '#351278', '#B0E9ED', '#FFFDF0', '#848DF1', '#58B94C', '#B15282', '#5B77EE', '#FD2F8D', '#311CE1', 
 '#E399DE', '#6A685A', '#D03471', '#6C659D', '#398566', '#74A0D7', '#F20EDA', '#6BA901', '#A38A9E', '#1D8A3E', '#1A2BB0', '#5C647F', '#EFC88C', 
 '#A303DA', '#2F7A9B', '#9A5C61', '#CABFE5', '#1C4D5D', '#679DA1', '#B788A4', '#9D9875', '#F45B43', '#050526', '#2D648A', '#4C0391', '#B1CFF3', '#AE709B', 
 '#4A14F4', '#A21169', '#BA6CDF', '#D91A91', '#D40549', '#1842D3', '#68579C', '#157715', '#7FF998', '#4EA807');
+declare variable $colors3 := ('#B54D1A', '#EAE5C5', '#4E240A', '#351278', '#B0E9ED', '#EAE5C5', '#848DF1', '#58B94C', '#B15282', '#5B77EE', '#FD2F8D', '#311CE1',
+'#E399DE', '#6A685A', '#D03471', '#6C659D', '#398566', '#74A0D7', '#F20EDA', '#6BA901', '#A38A9E', '#1D8A3E', '#1A2BB0', '#5C647F', '#EFC88C', '#A303DA', '#2F7A9B', '#9A5C61', '#CABFE5',
+'#1C4D5D', '#679DA1', '#B788A4', '#9D9875', '#F45B43', '#050526', '#2D648A', '#4C0391', '#B1CFF3', '#AE709B', '#4A14F4', '#A21169', '#BA6CDF', '#D91A91', '#D40549', '#1842D3',
+'#68579C', '#157715', '#7FF998', '#4EA807');
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"
@@ -92,7 +96,7 @@ declare variable $colors2 := ('#B54D1A', '#4E240A', '#351278', '#FFFDF0', '#B0E9
                         height="15"
                         width="15"
                         stroke="#EAE5C5"
-                        fill="{$colors[$current]}"/>
+                        fill="{$colors3[$current]}"/>
                 else
                     (if ($song/*[1]/@id = $b/*[1]/@id and (number($song/*[1]) + 2) mod 4 = 0)
                     then
@@ -102,7 +106,7 @@ declare variable $colors2 := ('#B54D1A', '#4E240A', '#351278', '#FFFDF0', '#B0E9
                             height="15"
                             width="15"
                             stroke="#EAE5C5"
-                            fill="{$colors[$current]}"/>
+                            fill="{$colors3[$current]}"/>
                     else
                         (if ($song/*[1]/@id = $b/*[1]/@id and (number($song/*[1] + 1) mod 4 = 0))
                         then
@@ -112,7 +116,7 @@ declare variable $colors2 := ('#B54D1A', '#4E240A', '#351278', '#FFFDF0', '#B0E9
                                 height="15"
                                 width="15"
                                 stroke="#EAE5C5"
-                                fill="{$colors[$current]}"/>
+                                fill="{$colors3[$current]}"/>
                         else
                             (if ($song/*[1]/@id = $b/*[1]/@id and number($song/*[1] mod 4 = 0)) then
                                 <rect
@@ -121,7 +125,7 @@ declare variable $colors2 := ('#B54D1A', '#4E240A', '#351278', '#FFFDF0', '#B0E9
                                     height="15"
                                     width="15"
                                     stroke="#EAE5C5"
-                                    fill="{$colors[$current]}"/>
+                                    fill="{$colors3[$current]}"/>
                             else
                                 ()))),
                 
