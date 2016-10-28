@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
         <ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
-        <let name="poems" value="doc('../ancillary-files/corpus-cantigas.xml')//tei:bibl/@xml:id"/>
+        <let name="poems" value="doc('../ancillary/corpus-cantigas.xml')//tei:bibl/@xml:id"/>
         <pattern>
             <rule context="tei:body//tei:bibl">
                 <assert test="@corresp">The bibl has no reference</assert>
