@@ -494,32 +494,35 @@ ins{
     text-decoration: none;
 }
 
-ins.enhance{
-    color: #73843A;
-}
 
 ins.enhance.above::after{
-    content: "/"
+    content: "/";
+    color: #73843A;
 }
 
 ins.enhance.above::before{
     content: "\\";
+    color: #73843A;
 }
 
 ins.enhance.margin::after{
-    content: "//"
+    content: "//";
+    color: #73843A;
 }
 
 ins.enhance.margin::before{
     content: "\\\\";
+    color: #73843A;
 }
 
 ins.enhance.scrape::before{
-    content: "⸢"
+    content: "⸢";
+    color: #73843A;
 }
 
 ins.enhance.scrape::after{
-    content: "⸣"
+    content: "⸣";
+    color: #73843A;
 }
 
 [data-exp=Letra\ de\ espera]::before{
