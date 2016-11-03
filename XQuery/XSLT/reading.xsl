@@ -81,7 +81,7 @@
                     <xsl:if test="substring($ana, 2) = $errors/@xml:id and current()/descendant::tei:gap">
                         <xsl:apply-templates/>
                     </xsl:if>
-                    <xsl:if test="substring($ana, 2) = $material/@xml:id and current()/descendant::tei:gap">
+                    <xsl:if test="substring($ana, 2) = $material/@xml:id">
                         <xsl:apply-templates/>
                     </xsl:if>
                     <xsl:if test="substring($ana, 2) = $ling-features/@xml:id">
@@ -654,14 +654,10 @@
     </xsl:template>
     <xsl:template match="tei:hi">
         <span class="pt gl" data-exp="Letra de espera">
-            <xsl:text>‹</xsl:text>
             <xsl:value-of select="."/>
-            <xsl:text>›</xsl:text>
         </span>
         <span class="en" data-exp="Guide letter">
-            <xsl:text>‹</xsl:text>
             <xsl:value-of select="."/>
-            <xsl:text>›</xsl:text>
         </span>
     </xsl:template>
     <xsl:template match="tei:supplied">

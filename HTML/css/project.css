@@ -376,6 +376,7 @@ li.refrao{
     counter-increment: numbers;
     position: relative;
     margin-left: 4%;
+    color: black;
 }
 
 .body li::before{
@@ -519,6 +520,26 @@ ins.enhance.scrape::before{
 
 ins.enhance.scrape::after{
     content: "⸣"
+}
+
+[data-exp=Letra\ de\ espera]::before{
+    content: "‹";
+    color: #515050;
+}
+
+[data-exp=Letra\ de\ espera]::after{
+    content: "›";
+    color: #515050;
+}
+
+[data-exp=Guide\ letter]::before{
+    content: "‹";
+    color: #515050;
+}
+
+[data-exp=Guide\ letter]::after{
+    content: "›";
+    color: #515050;
 }
 
 [data-exp]:hover{
