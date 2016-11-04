@@ -536,9 +536,9 @@
                 <xsl:when test="contains(@rend, 'underdot') and contains(@rend, 'overstrike')">
                     <xsl:value-of
                         select="
-                        string-join(for $i in string-to-codepoints(.)
-                        return
-                        concat(codepoints-to-string($i), '&#822;̣'), '')"
+                            string-join(for $i in string-to-codepoints(.)
+                            return
+                                concat(codepoints-to-string($i), '&#822;̣'), '')"
                     />
                 </xsl:when>
                 <xsl:when test="contains(@rend, 'underdot')">
@@ -552,9 +552,9 @@
                 <xsl:when test="contains(@rend, 'overstrike')">
                     <xsl:value-of
                         select="
-                        string-join(for $i in string-to-codepoints(.)
-                        return
-                        concat(codepoints-to-string($i), '&#822;'), '')"
+                            string-join(for $i in string-to-codepoints(.)
+                            return
+                                concat(codepoints-to-string($i), '&#822;'), '')"
                     />
                 </xsl:when>
                 <xsl:when test="contains(@rend, 'multiple-overstrike')">
@@ -562,7 +562,7 @@
                         select="
                             string-join(for $i in string-to-codepoints(.)
                             return
-                            concat(codepoints-to-string($i), '&#822;̸'), '')"
+                                concat(codepoints-to-string($i), '&#822;̸'), '')"
                     />
                 </xsl:when>
                 <xsl:when test="tei:gap">
@@ -697,7 +697,14 @@
                     <xsl:text>Testemunho inacabado</xsl:text>
                 </xsl:if>
             </xsl:attribute>
-            <xsl:text>[ ]</xsl:text>
+            <xsl:choose>
+                <xsl:when test="@reason eq 'error'">
+                    <xsl:text>&#8709;</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text>[ ]</xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:element>
         <xsl:element name="span">
             <xsl:attribute name="class">
@@ -726,7 +733,14 @@
                     <xsl:text>Testemuño inacabado</xsl:text>
                 </xsl:if>
             </xsl:attribute>
-            <xsl:text>[ ]</xsl:text>
+            <xsl:choose>
+                <xsl:when test="@reason eq 'error'">
+                    <xsl:text>&#8709;</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text>[ ]</xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:element>
         <xsl:element name="span">
             <xsl:attribute name="class">
@@ -755,7 +769,14 @@
                     <xsl:text>Unfinished witness</xsl:text>
                 </xsl:if>
             </xsl:attribute>
-            <xsl:text>[ ]</xsl:text>
+            <xsl:choose>
+                <xsl:when test="@reason eq 'error'">
+                    <xsl:text>&#8709;</xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text>[ ]</xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:element>
     </xsl:template>
     <xsl:template match="tei:hi">
