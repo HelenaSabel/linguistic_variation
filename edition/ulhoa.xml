@@ -169,7 +169,7 @@
                         </app>
                         <app>
                             <rdg wit="#A">seruir</rdg>
-                            <rdg wit="#B" ana="#material">se<gap reason="damage"/>uir</rdg>
+                            <rdg wit="#B" ana="#material">se<gap reason="damage" unit="chars" quantity="1"/>uir</rdg>
                         </app>
                     </l>
                     <l n="4">
@@ -1841,7 +1841,7 @@
                         </app>
                         <app>
                             <rdg wit="#A">deus</rdg>
-                            <rdg wit="#B" ana="#material">de<gap reason="damage"/>
+                            <rdg wit="#B" ana="#material">de<gap reason="damage" quantity="1" unit="chars"/>
                             </rdg>
                         </app>
                     </l>
@@ -1863,7 +1863,6 @@
                             <rdg wit="#A #B">en que</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A"/>
                             <rdg wit="#B" ana="#error">a</rdg>
                         </app>
                         <app>

@@ -538,7 +538,7 @@
                         select="
                             string-join(for $i in string-to-codepoints(.)
                             return
-                                concat(codepoints-to-string($i), '&#822;̣'), '')"
+                                concat(codepoints-to-string($i), '̶̣'), '')"
                     />
                 </xsl:when>
                 <xsl:when test="contains(@rend, 'underdot')">
@@ -554,7 +554,7 @@
                         select="
                             string-join(for $i in string-to-codepoints(.)
                             return
-                                concat(codepoints-to-string($i), '&#822;'), '')"
+                                concat(codepoints-to-string($i), '̶'), '')"
                     />
                 </xsl:when>
                 <xsl:when test="contains(@rend, 'multiple-overstrike')">
@@ -562,7 +562,7 @@
                         select="
                             string-join(for $i in string-to-codepoints(.)
                             return
-                                concat(codepoints-to-string($i), '&#822;̸'), '')"
+                                concat(codepoints-to-string($i), '̶̸'), '')"
                     />
                 </xsl:when>
                 <xsl:when test="tei:gap">
@@ -699,7 +699,21 @@
             </xsl:attribute>
             <xsl:choose>
                 <xsl:when test="@reason eq 'error'">
-                    <xsl:text>&#8709;</xsl:text>
+                    <xsl:text>∅</xsl:text>
+                </xsl:when>
+                <xsl:when test="@reason eq 'damage'">
+                    <xsl:text>⁅</xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="@quantity and @unit eq 'chars'">
+                            <xsl:for-each select="1 to @quantity">
+                                <xsl:text>*</xsl:text>
+                            </xsl:for-each>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text> </xsl:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:text>⁆</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:text>[ ]</xsl:text>
@@ -735,7 +749,21 @@
             </xsl:attribute>
             <xsl:choose>
                 <xsl:when test="@reason eq 'error'">
-                    <xsl:text>&#8709;</xsl:text>
+                    <xsl:text>∅</xsl:text>
+                </xsl:when>
+                <xsl:when test="@reason eq 'damage'">
+                    <xsl:text>⁅</xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="@quantity and @unit eq 'chars'">
+                            <xsl:for-each select="1 to @quantity">
+                                <xsl:text>*</xsl:text>
+                            </xsl:for-each>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text> </xsl:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:text>⁆</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:text>[ ]</xsl:text>
@@ -771,7 +799,21 @@
             </xsl:attribute>
             <xsl:choose>
                 <xsl:when test="@reason eq 'error'">
-                    <xsl:text>&#8709;</xsl:text>
+                    <xsl:text>∅</xsl:text>
+                </xsl:when>
+                <xsl:when test="@reason eq 'damage'">
+                    <xsl:text>⁅</xsl:text>
+                    <xsl:choose>
+                        <xsl:when test="@quantity and @unit eq 'chars'">
+                            <xsl:for-each select="1 to @quantity">
+                                <xsl:text>*</xsl:text>
+                            </xsl:for-each>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text> </xsl:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:text>⁆</xsl:text>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:text>[ ]</xsl:text>

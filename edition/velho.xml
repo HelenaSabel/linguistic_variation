@@ -699,7 +699,7 @@
                <l n="7" rend="transposition" rendition="#A #V">
                   <note>Em <bibl>B</bibl> a ordem das duas últimas cobras está invertida.</note>
                   <app>
-                     <rdg wit="#B" ana="#rev"><del rend="overstrike">E semp<am>ᷓ</am>u ouui pauor</del></rdg>
+                     <rdg wit="#B" ana="#rev"><del rend="overstrike">E semp<am>ᷓ</am><ex>ᷓ</ex>u ouui pauor</del></rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#material"><seg corresp="#material"><hi rend="guide">E</hi></seg></rdg>
@@ -1455,7 +1455,7 @@
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">se<seg corresp="#reg">nn</seg>or</rdg>
-                     <rdg wit="#B" ana="#abb #material"><gap reason="damage"/><am>ᵉ</am><ex>or</ex></rdg>
+                     <rdg wit="#B" ana="#abb #material"><gap reason="damage" unit="chars" quantity="4"/><am>ᵉ</am><ex>or</ex></rdg>
                      <rdg wit="#V">senhor</rdg>
                   </app>
                </l>
@@ -3048,7 +3048,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">enquant<supplied>o</supplied></rdg>
-                     <rdg wit="#B" ana="#misread">e<seg corresp="#misread">u</seg>q<am>̡ᷓ</am>t</rdg>
+                     <rdg wit="#B" ana="#misread">e<seg corresp="#misread">u</seg><am>ꝙᷓ</am><ex>ꝙᷓ</ex>t</rdg>
                      <rdg wit="#V" ana="#abb">en<am>ꝙᷓ</am><ex>quan</ex>t<supplied>o</supplied></rdg>
                   </app>
                   <app>
@@ -3095,7 +3095,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">gran</rdg>
-                     <rdg wit="#B" ana="#misread">g<am>ᷓ</am><seg corresp="#misread">i</seg>n</rdg>
+                     <rdg wit="#B" ana="#misread">g<am>ᷓ</am><ex>ᷓ</ex><seg corresp="#misread">i</seg>n</rdg>
                      <rdg wit="#V" ana="#abb #m-end">g<am>ᷓ</am><ex>ra</ex><seg corresp="#m-end">m</seg></rdg>
                   </app>
                   <app>
@@ -3525,7 +3525,7 @@
                   </app>
                   <app>
                      <rdg wit="#A #V">ora</rdg>
-                     <rdg wit="#B" ana="#material"><gap reason="damage"/></rdg>
+                     <rdg wit="#B" ana="#material"><gap reason="damage" unit="chars" quantity="3"/></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">que me</rdg>
@@ -3897,7 +3897,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">quiser</rdg>
-                     <rdg wit="#B" ana="#material"><gap reason="damage"/></rdg>
+                     <rdg wit="#B" ana="#material"><gap reason="damage" quantity="2" unit="chars"/></rdg>
                      <rdg wit="#V" ana="#abb #abb">q<am>ͥ</am><ex>ui</ex>s<am>͛</am><ex>er</ex></rdg>
                   </app>
                   <app>
@@ -4161,7 +4161,7 @@
                </l>
                <l n="27">
                   <app>
-                     <rdg wit="#A" ana="#material">nun<gap reason="damage"/></rdg>
+                     <rdg wit="#A" ana="#material">nun<gap reason="damage" extent="multiple_lines"/></rdg>
                      <rdg wit="#B #V">nu<am>̄</am><ex>n</ex>ca <am>&#42833;</am><ex>per</ex> out<am>ᷓ</am><ex>re</ex>m enparado serey</rdg>
                   </app> 
                </l>

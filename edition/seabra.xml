@@ -81,7 +81,7 @@
                      <rdg wit="#A" ana="#rev">A<del rend="underdot">y</del>
                      </rdg>
                      <rdg wit="#B" ana="#material">
-                        <gap reason="damage"/>
+                        <gap reason="damage" unit="chars" quantity="1"/>
                      </rdg>
                   </app>
                   <app>
@@ -363,7 +363,7 @@
                         <seg corresp="#material"><hi rend="guide">E</hi></seg>
                      </rdg>
                      <rdg wit="#B" ana="#material">
-                        <gap reason="damage"/>
+                        <gap reason="damage" quantity="1" unit="chars"/>
                      </rdg>
                   </app>
                   <app>
@@ -844,7 +844,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">saben ren</rdg>
-                     <rdg wit="#B" ana="#material">sa<gap reason="damage"/>
+                     <rdg wit="#B" ana="#material">sa<gap reason="damage" unit="chars" quantity="5"/>
                      </rdg>
                   </app>
                </l>
@@ -2347,7 +2347,7 @@
                      </app>
                      <app>
                         <rdg wit="#A">osmasse</rdg>
-                        <rdg wit="#B" ana="#material">osmass<gap reason="damage"/>
+                        <rdg wit="#B" ana="#material">osmass<gap reason="damage" quantity="1" unit="chars"/>
                         </rdg>
                      </app>
                   </l>
