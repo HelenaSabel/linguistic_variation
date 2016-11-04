@@ -194,7 +194,7 @@
                         </app>
                         <app>
                             <rdg wit="#A">uos</rdg>
-                            <rdg wit="#B" ana="#material">uo<gap reason="illegible"/>
+                            <rdg wit="#B" ana="#material">uo<gap reason="illegible" unit="chars" quantity="1"/>
                             </rdg>
                         </app>
                         <app>
@@ -206,13 +206,6 @@
                         </app>
                         <app>
                             <rdg wit="#A #B">por meu mal</rdg>
-                        </app>
-                        <app>
-                            <rdg wit="#B">
-                                <del rend="multiple-overstrike">
-                                    <gap reason="illegible"/>
-                                </del>
-                            </rdg>
                         </app>
                         <app>
                             <rdg wit="#A" ana="#back-vow">u<seg corresp="#back-vow">u</seg>s</rdg>
@@ -3878,7 +3871,7 @@
                     </l>
                     <l n="2">
                         <app>
-                            <rdg wit="#A" ana="#art-al">creer-la</rdg>
+                            <rdg wit="#A" ana="#art-al" cert="low"><choice><orig>creer la</orig><reg>creer-la</reg></choice></rdg>
                             <rdg wit="#B">creer a</rdg>
                         </app>
                         <app>
@@ -4419,23 +4412,7 @@
                     </l>
                 </lg>
             </div>
-            <div type="poem" corresp="#A53B165">
-                <head>
-                    <title>
-                        <app>
-                            <rdg wit="#A" hand="#α">
-                                <idno>A53</idno>
-                                <locus from="13r" to="13r"/>
-                            </rdg>
-                            <rdg wit="#B" hand="#d">
-                                <idno>B165</idno>
-                                <locus from="42r" to="42v"/>
-                            </rdg>
-                        </app>
-                    </title>
-                    <name role="author" ref="#MartSrz"/>
-                </head>
-            </div>
+         
             <div type="poem" corresp="#A54B166">
                 <head>
                     <title>
@@ -4656,12 +4633,7 @@
                             <rdg wit="#A #B">e pois</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A" ana="#error #syn">
-                                <choice>
-                                    <orig>fazed mial</orig>
-                                    <reg>fazed mi al</reg>
-                                </choice>
-                            </rdg>
+                            <rdg wit="#A" ana="#error">fazed mial</rdg>
                             <rdg wit="#B">
                                 <choice>
                                     <orig>fazedemal</orig>
@@ -4671,7 +4643,7 @@
                         </app>
                         <app>
                             <rdg wit="#A #B">q<am>̄</am>
-                                <ex>ue</ex>q<am>̄</am>
+                                <ex>ue</ex> q<am>̄</am>
                                 <ex>ue</ex>r</rdg>
                         </app>
                     </l>
@@ -4780,10 +4752,7 @@
                         </app>
                         <app>
                             <rdg wit="#A">mi</rdg>
-                            <rdg wit="#B" ana="#pro-nas #j-minin">m<seg corresp="#j-minin">j</seg>
-                                <seg corresp="#pro-nas">
-                                    <am>̄</am>
-                                    <ex>n</ex>
+                            <rdg wit="#B" ana="#pro-nas"><seg corresp="#pro-nas">mj<am>̄</am><ex>n</ex>
                                 </seg>
                             </rdg>
                         </app>
@@ -4792,6 +4761,23 @@
                         </app>
                     </l>
                 </lg>
+            </div>
+            <div type="poem" corresp="#A53B165">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#A" hand="#α">
+                                <idno>A53</idno>
+                                <locus from="13r" to="13r"/>
+                            </rdg>
+                            <rdg wit="#B" hand="#d">
+                                <idno>B165</idno>
+                                <locus from="42r" to="42v"/>
+                            </rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#MartSrz"/>
+                </head>
                 <lg type="cobra">
                     <l n="1">
                         <app>
@@ -5003,7 +4989,7 @@
                             <rdg wit="#A">dereit<supplied>?</supplied>
                             </rdg>
                             <rdg wit="#B" ana="#abb">d<am>͛</am>
-                                <ex>er</ex>ei<gap reason="illegible"/>
+                                <ex>er</ex>ei<gap reason="illegible" unit="chars" quantity="2"/>
                             </rdg>
                         </app>
                         <app>
