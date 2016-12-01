@@ -18,10 +18,8 @@
         <main>
             <h1><span class="pt">Erros de cópia</span><span class="en">Scribal errors</span></h1>
             <?php
-                $parameters = $_GET['error'];
-                $values = implode(",", $parameters);
                 require_once('config.php');
-                $query = REST_PATH . "/db/VTLGP/queries/error.xquery?error=" . $values;
+                $query = REST_PATH . "/db/VTLGP/queries/error.xquery";
                 echo file_get_contents($query);
             ?>
             <div class="footer"></div>
