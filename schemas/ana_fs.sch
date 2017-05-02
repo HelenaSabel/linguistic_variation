@@ -73,15 +73,13 @@
                 >The value of the attribute is not listed</assert>
             <assert test="@wit">It is mandatory to specify the witness</assert>
             <report test="tei:app">Wrong nesting of elements</report>
+            <assert test="if (@select) then @select = ('weak', 'strong') else true()">Weak or strong position</assert>
         </rule>
         <rule context="tei:seg">
-            <assert test="@corresp"
-                >Every seg must have a @corresp attribute with its FS
-                code</assert>
             <assert
-                test="
+                test="if (@corresp) then 
                     every $corresp in tokenize(./@corresp, '\s+')
-                        satisfies $corresp = ancestor::tei:rdg/tokenize(@ana, '\s+')"
+                        satisfies $corresp = ancestor::tei:rdg/tokenize(@ana, '\s+') else true()"
                 >Value not present in
                 the rdg container</assert>
         </rule>

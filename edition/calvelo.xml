@@ -1423,8 +1423,8 @@
                             <rdg wit="#B #V" ana="#abb">no<am>̄</am><ex>n</ex></rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">mi</rdg>
-                            <rdg wit="#B #V" ana="#h-minin">m<seg corresp="#h-minin">h</seg></rdg>
+                            <rdg wit="#A" select="weak">mi</rdg>
+                            <rdg wit="#B #V" ana="#h-minin" select="weak">m<seg corresp="#h-minin">h</seg></rdg>
                         </app>
                         <app>
                             <rdg wit="#A #B #V">o</rdg>
@@ -1618,7 +1618,7 @@
                         </app>
                         <app>
                             <rdg wit="#A">tanto</rdg>
-                            <rdg wit="#B" ana="#error">tato</rdg>
+                            <rdg wit="#B" ana="#lineta">tato</rdg>
                             <rdg wit="#V" ana="#abb">ta<am>̄</am><ex>n</ex>to</rdg>
                         </app>
                         <app>
@@ -1803,8 +1803,8 @@
                             <rdg wit="#A #B #V">a</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">coyt<supplied>a</supplied> en</rdg>
-                            <rdg wit="#B #V" ana="#error">coyta m</rdg>
+                            <rdg wit="#A" ana="#syn">coyt<seg corresp="#syn"><supplied>a</supplied></seg> en</rdg>
+                            <rdg wit="#B #V" ana="#syn #m-end">coyta <seg corresp="#syn"><supplied>e</supplied></seg><seg corresp="#m-end">m</seg></rdg>
                         </app>
                         <app>
                             <rdg wit="#A #B #V">que ey a uiuer</rdg>

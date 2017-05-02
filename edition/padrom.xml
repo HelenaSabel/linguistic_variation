@@ -651,13 +651,13 @@
                             <rdg wit="#A #B #V">se me matassedes ia</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">
+                            <rdg wit="#A" select="weak">
                                 <choice>
                                     <orig>prazermia</orig>
                                     <reg>prazer-m<supplied>?</supplied>-ia</reg>
                                 </choice>
                             </rdg>
-                            <rdg wit="#B">
+                            <rdg wit="#B" select="weak">
                                 <choice>
                                     <orig>prazer mia</orig>
                                     <reg>prazer-m<supplied>?</supplied>-ia</reg>
@@ -924,9 +924,9 @@
                             <rdg wit="#A #B #V">foy de</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">min</rdg>
-                            <rdg wit="#B" ana="#error">mj</rdg>
-                            <rdg wit="#V" ana="#abb">mi<am>̄</am><ex>n</ex>
+                            <rdg wit="#A" select="strong">min</rdg>
+                            <rdg wit="#B" ana="#lineta">mj</rdg>
+                            <rdg wit="#V" ana="#abb" select="strong">mi<am>̄</am><ex>n</ex>
                             </rdg>
                         </app>
                         <app>
@@ -1180,7 +1180,7 @@
                         </app>
                         <app>
                             <rdg wit="#A">dormiran</rdg>
-                            <rdg wit="#B" ana="#error">dormira</rdg>
+                            <rdg wit="#B" ana="#lineta">dormira</rdg>
                             <rdg wit="#V" ana="#abb">dormira<am>̄</am><ex>n</ex>
                             </rdg>
                         </app>
@@ -1214,7 +1214,7 @@
                     </l>
                     <l n="24">
                         <app>
-                            <rdg wit="#A" ana="#error">ne</rdg>
+                            <rdg wit="#A" ana="#lineta">ne</rdg>
                             <rdg wit="#B">nen</rdg>
                             <rdg wit="#V" ana="#abb">ne<am>̄</am><ex>n</ex>
                             </rdg>

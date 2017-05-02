@@ -248,7 +248,7 @@
                      <rdg wit="#B" ana="#abb #h-ot" cert="low">
                         <am>ẜ</am>
                         <ex>ser</ex>ru<seg corresp="#h-ot">h</seg>o</rdg>
-                     <rdg wit="#V" ana="#error #h-ot">ser<seg corresp="#error">r</seg>u<seg corresp="#h-ot">h</seg>o</rdg>
+                     <rdg wit="#V" ana="#rr-inic #h-ot">se<seg corresp="#rr-inic">rr</seg>u<seg corresp="#h-ot">h</seg>o</rdg>
                   </app>
                   <app>
                      <rdg wit="#A">quanto</rdg>
@@ -437,15 +437,15 @@
                      </rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">mi</rdg>
-                     <rdg wit="#B #V" ana="#h-minin">m<seg corresp="#h-minin">h</seg></rdg>
+                     <rdg wit="#A" select="weak">mi</rdg>
+                     <rdg wit="#B #V" ana="#h-minin" select="weak">m<seg corresp="#h-minin">h</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">a</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">min</rdg>
-                     <rdg wit="#B #V" ana="#j-minin">m<seg corresp="#j-minin">j</seg></rdg>
+                     <rdg wit="#A" ana="#pro-nas" select="strong"><seg corresp="#pro-nas">min</seg></rdg>
+                     <rdg wit="#B #V" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B" ana="#çe">gra<seg corresp="#çe">ç</seg>ido</rdg>
@@ -476,16 +476,16 @@
                      </rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">mi</rdg>
-                     <rdg wit="#B #V" ana="#h-minin">m<seg corresp="#h-minin">h</seg></rdg>
+                     <rdg wit="#A" select="weak">mi</rdg>
+                     <rdg wit="#B #V" ana="#h-minin" select="weak">m<seg corresp="#h-minin">h</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">a</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#pro-nas"><seg corresp="#pro-nas">min</seg></rdg>
-                     <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg></rdg>
-                     <rdg wit="#V">mi</rdg>
+                     <rdg wit="#A" ana="#pro-nas" select="strong"><seg corresp="#pro-nas">min</seg></rdg>
+                     <rdg wit="#B" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j</seg></rdg>
+                     <rdg wit="#V" select="strong">mi</rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">nada</rdg>

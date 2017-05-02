@@ -732,12 +732,12 @@
                      <rdg wit="#A #B">e</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">
+                     <rdg wit="#A" select="weak">
                         <choice>
                            <orig>quero miante</orig>
                            <reg>quero-mi ante</reg>
                         </choice></rdg>
-                     <rdg wit="#B" ana="#h-minin">
+                     <rdg wit="#B" ana="#h-minin" select="weak">
                         <choice>
                            <orig>querom<seg corresp="#h-minin">h</seg>ante</orig>
                            <reg>quero-m<seg corresp="#h-minin">h</seg> ante</reg>
@@ -1048,7 +1048,7 @@
                            <orig>conse<seg corresp="#reg">ll</seg>ar ma</orig>
                            <reg>conse<seg corresp="#reg">ll</seg>ar-m<supplied>?</supplied>-a</reg>
                         </choice></rdg>
-                     <rdg wit="#B" ana="#ss-inic #dub-dat">
+                     <rdg wit="#B" ana="#ss-inic #dub-dat" select="weak">
                         <choice>
                            <orig>con<seg corresp="#ss-inic">ss</seg>elhar<seg corresp="#dub-dat">mh</seg>a</orig>
                            <reg>con<seg corresp="#ss-inic">ss</seg>elhar-<seg corresp="#dub-dat">mh</seg>-a</reg>

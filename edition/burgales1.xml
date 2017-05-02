@@ -116,10 +116,10 @@
                     </l>
                     <l n="3">
                         <app>
-                            <rdg wit="#A" ana="#pro-nas">
+                            <rdg wit="#A" ana="#pro-nas" select="weak">
                                 <seg corresp="#pro-nas">min</seg>
                             </rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg>
+                            <rdg wit="#B" ana="#j-minin" select="weak">m<seg corresp="#j-minin">j</seg>
                             </rdg>
                         </app>
                         <app>
@@ -215,8 +215,8 @@
                             <rdg wit="#A #B">e non</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">mi</rdg>
-                            <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>
+                            <rdg wit="#A" select="weak">mi</rdg>
+                            <rdg wit="#B" ana="#h-minin" select="weak">m<seg corresp="#h-minin">h</seg>
                             </rdg>
                         </app>
                         <app>
@@ -230,8 +230,10 @@
                             <rdg wit="#A #B">E</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">da</rdg>
-                            <rdg wit="#B" ana="#error" cert="low">ada</rdg>
+                            <rdg wit="#B" ana="#error">a</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">da</rdg>
                         </app>
                         <app>
                             <rdg wit="#A">me</rdg>
@@ -262,8 +264,8 @@
                             <rdg wit="#A #B">sei de</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">min</rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j<am>̄</am>
+                            <rdg wit="#A" select="strong">min</rdg>
+                            <rdg wit="#B" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j<am>̄</am>
                                     <ex>n</ex>
                                 </seg>
                             </rdg>
@@ -502,12 +504,12 @@
                             <rdg wit="#A #B">mal</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A" ana="#pro-nas">
+                            <rdg wit="#A" ana="#pro-nas" select="weak">
                                 <seg corresp="#pro-nas">mi<am>̄</am>
                                     <ex>n</ex>
                                 </seg>
                             </rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg>
+                            <rdg wit="#B" ana="#j-minin" select="weak">m<seg corresp="#j-minin">j</seg>
                             </rdg>
                         </app>
                         <app>
@@ -600,8 +602,8 @@
                             <rdg wit="#A #B">a</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">mi</rdg>
-                            <rdg wit="#B" ana="#pro-nas #j-minin">
+                            <rdg wit="#A" select="strong">mi</rdg>
+                            <rdg wit="#B" ana="#pro-nas #j-minin" select="strong">
                                 <seg corresp="#pro-nas">m<seg corresp="#j-minin">j<am>̄</am>
                                         <ex>n</ex>
                                     </seg>
@@ -778,12 +780,12 @@
                             <rdg wit="#A #B">mayor ca</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A" ana="#pro-nas">
+                            <rdg wit="#A" ana="#pro-nas" select="strong">
                                 <seg corresp="#pro-nas">mi<am>̄</am>
                                     <ex>n</ex>
                                 </seg>
                             </rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg>
+                            <rdg wit="#B" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j</seg>
                             </rdg>
                         </app>
                         <app>
@@ -1444,10 +1446,10 @@
                             <rdg wit="#A #B">de</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A" ana="#pro-nas">
+                            <rdg wit="#A" ana="#pro-nas" select="strong">
                                 <seg corresp="#pro-nas">min</seg>
                             </rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg>
+                            <rdg wit="#B" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j</seg>
                             </rdg>
                         </app>
                         <app>
@@ -1503,10 +1505,10 @@
                             <rdg wit="#A #B">eu nen por</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A" ana="#pro-nas">
+                            <rdg wit="#A" ana="#pro-nas" select="strong">
                                 <seg corresp="#pro-nas">min</seg>
                             </rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg>
+                            <rdg wit="#B" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j</seg>
                             </rdg>
                         </app>
                         <app>
@@ -1569,7 +1571,7 @@
                     </l>
                     <l n="10">
                         <app>
-                            <rdg wit="#A" ana="#error">no</rdg>
+                            <rdg wit="#A" ana="#lineta">no</rdg>
                             <rdg wit="#B">no<am>̄</am>
                                 <ex>n</ex>
                             </rdg>
@@ -1619,7 +1621,7 @@
                             </rdg>
                         </app>
                         <app>
-                            <rdg wit="#A" ana="#dub-dat">mi</rdg>
+                            <rdg wit="#A" ana="#dub-dat" select="weak">mi</rdg>
                             <rdg wit="#B">m<supplied>?</supplied>
                             </rdg>
                         </app>
@@ -1683,13 +1685,13 @@
                     </l>
                     <l n="14">
                         <app>
-                            <rdg wit="#A">mi</rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg>
+                            <rdg wit="#A" select="weak">mi</rdg>
+                            <rdg wit="#B" ana="#j-minin" select="weak">m<seg corresp="#j-minin">j</seg>
                             </rdg>
                         </app>
                         <app>
                             <rdg wit="#A">p<am>̲</am>
-                                <ex>r</ex>r</rdg>
+                                <ex>e</ex>r</rdg>
                             <rdg wit="#B" ana="#abb">p<am>͛</am>
                                 <ex>er</ex>
                             </rdg>
@@ -1819,7 +1821,7 @@
                             </rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">mia dada</rdg>
+                            <rdg wit="#A" select="weak"><seg>mi</seg> a dada</rdg>
                             <rdg wit="#B" ana="#equip" cert="low">fadada</rdg>
                         </app>
                     </l>
@@ -2147,10 +2149,10 @@
                             <rdg wit="#A #B">deseiar a</rdg>
                         </app>
                         <app>
-                            <rdg wit="#A" ana="#pro-nas">
+                            <rdg wit="#A" ana="#pro-nas" select="strong">
                                 <seg corresp="#pro-nas">min</seg>
                             </rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg>
+                            <rdg wit="#B" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j</seg>
                             </rdg>
                         </app>
                     </l>
@@ -2220,8 +2222,8 @@
                             </rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">mi</rdg>
-                            <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>
+                            <rdg wit="#A" select="weak">mi</rdg>
+                            <rdg wit="#B" ana="#h-minin" select="weak">m<seg corresp="#h-minin">h</seg>
                             </rdg>
                         </app>
                         <app>
@@ -2368,10 +2370,10 @@
                             </rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">mi<am>̄</am>
+                            <rdg wit="#A" select="strong">mi<am>̄</am>
                                 <ex>n</ex>
                             </rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg>
+                            <rdg wit="#B" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j</seg>
                                 <am>̄</am>
                                 <ex>n</ex>
                             </rdg>
@@ -2519,8 +2521,11 @@
                             </rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">mio</rdg>
-                            <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>o</rdg>
+                            <rdg wit="#A" select="weak">mi</rdg>
+                            <rdg wit="#B" ana="#h-minin" select="weak">m<seg corresp="#h-minin">h</seg></rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">o</rdg>
                         </app>
                         <app>
                             <rdg wit="#A">om<supplied>?</supplied>
@@ -2531,7 +2536,7 @@
                         </app>
                         <app>
                             <rdg wit="#A">adeuinar</rdg>
-                            <rdg wit="#B" ana="#misread">adeina<am>̄</am>r</rdg>
+                            <rdg wit="#B" ana="#misread">adeina<am>̄</am><ex>̄</ex>r</rdg>
                         </app>
                         <app>
                             <rdg wit="#A #B">poder</rdg>
@@ -2819,10 +2824,11 @@
                         </app>
                         <app>
                             <rdg wit="#A">a</rdg>
+                            <rdg wit="#B" ana="#error"><gap reason="error"/></rdg>
                         </app>
                         <app>
-                            <rdg wit="#A">mi</rdg>
-                            <rdg wit="#B" ana="#j-minin">m<seg corresp="#j-minin">j</seg>
+                            <rdg wit="#A" select="strong">mi</rdg>
+                            <rdg wit="#B" ana="#j-minin" select="weak" cert="low">m<seg corresp="#j-minin">j</seg>
                             </rdg>
                         </app>
                         <app>

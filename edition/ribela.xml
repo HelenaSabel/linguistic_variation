@@ -524,8 +524,8 @@
                      <rdg wit="#A #B">ora que</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">mi</rdg>
-                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg></rdg>
+                     <rdg wit="#A" select="weak">mi</rdg>
+                     <rdg wit="#B" ana="#h-minin" select="weak">m<seg corresp="#h-minin">h</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">auen</rdg>
@@ -588,7 +588,7 @@
                      <rdg wit="#B">E</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#error">no</rdg>
+                     <rdg wit="#A" ana="#lineta">no</rdg>
                      <rdg wit="#B">non</rdg>
                   </app>
                   <app>
@@ -1084,8 +1084,8 @@
                      <rdg wit="#A #B">que</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">mi</rdg>
-                     <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg></rdg>
+                     <rdg wit="#A" select="weak">mi</rdg>
+                     <rdg wit="#B" ana="#h-minin" select="weak">m<seg corresp="#h-minin">h</seg></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">auen</rdg>
@@ -1214,7 +1214,7 @@
                      </rdg>
                   </app>
                   <app>
-                     <rdg wit="#A">que mi auen</rdg>
+                     <rdg wit="#A" select="weak">que <seg>mi</seg> auen</rdg>
                      <rdg wit="#B" ana="#material">
                         <gap reason="economy"/>
                      </rdg>
@@ -1342,12 +1342,12 @@
                      <rdg wit="#A #B">ora ia</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A"><choice>
+                     <rdg wit="#A" select="weak"><choice>
                            <orig>direi u<am>&#xF1A6;</am><ex>os</ex>
                            </orig>
                            <reg>direi-u<am>&#xF1A6;</am><ex>os</ex>
                            </reg>
-                        </choice> que mi auen</rdg>
+                        </choice> que <seg>mi</seg> auen</rdg>
                      <rdg wit="#B" ana="#material">
                         <gap reason="economy"/>
                      </rdg>
