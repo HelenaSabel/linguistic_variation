@@ -19,7 +19,8 @@ return
             order by $author
             return
                 <fieldset>
-                    <legend id="{$author/@xml:id/string()}">{$author/tei:persName/string()}</legend>
+                    <legend
+                        id="{$author/@xml:id/string()}">{$author/tei:persName/string()}</legend>
                     <div>
                         <input
                             type="radio"
@@ -32,14 +33,16 @@ return
                             for="none{$i}"><span
                                 class="en">None</span>
                             <span
-                                class="pt">Nenhuma</span><span class="gl">Ningunha</span></label>
+                                class="pt">Nenhuma</span><span
+                                class="gl">Ningunha</span></label>
                         <input
                             type="radio"
                             name="author[{$i}]"
                             value="{$author/@xml:id}"
                             id="author{$i}"
                             class="all"/>
-                        <label class="corpus all"
+                        <label
+                            class="corpus all"
                             for="author{$i}"><span
                                 class="pt gl">Todas</span>
                             <span
@@ -51,7 +54,8 @@ return
                             id="select{$i}"/>
                         <label
                             for="select{$i}"><span
-                                class="pt gl">Sele<span class="gl">c</span>cionar</span>
+                                class="pt gl">Sele<span
+                                    class="gl">c</span>cionar</span>
                             <span
                                 class="en">Select</span></label>
                         <ul
@@ -78,7 +82,7 @@ return
                 class="pt gl">Pesquisa</span><span
                 class="en">Search</span></button>
     </form>,
-   (: <h2
+    (: <h2
         id="period"><span
             class="pt">Por período</span><span
             class="en">By period</span></h2>,
@@ -195,14 +199,16 @@ return
                             for="none{$hand}"><span
                                 class="en">None</span>
                             <span
-                                class="pt">Nenhuma</span><span class="gl">Ningunha</span></label>
+                                class="pt">Nenhuma</span><span
+                                class="gl">Ningunha</span></label>
                         <input
                             type="radio"
                             name="scribe[{$hand}]"
                             value="{$hand}"
                             id="{$hand}"
                             class="all"/>
-                        <label class="corpus"
+                        <label
+                            class="corpus"
                             for="{$hand}"><span
                                 class="pt gl">Todas</span>
                             <span
@@ -214,7 +220,8 @@ return
                             id="select{$hand}"/>
                         <label
                             for="select{$hand}"><span
-                                class="pt gl">Sele<span class="gl">c</span>cionar</span>
+                                class="pt gl">Sele<span
+                                    class="gl">c</span>cionar</span>
                             <span
                                 class="en">Select</span></label>
                         <ul

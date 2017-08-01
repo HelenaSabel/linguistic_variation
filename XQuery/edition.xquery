@@ -109,12 +109,16 @@ return
                                     <div
                                         class="witness">
                                         <h3><span
-                                                class="pt gl">Testemu<span class="pt">nh</span><span class="gl">ñ</span>o</span><span
+                                                class="pt gl">Testemu<span
+                                                    class="pt">nh</span><span
+                                                    class="gl">ñ</span>o</span><span
                                                 class="en">Witness</span>: {$witness/substring(@wit, 2)}</h3>
                                         <h4>Text<span
                                                 class="pt gl">o</span>: {$witness/tei:idno/string()}</h4>
                                         <h4><span
-                                                class="pt gl">Localiza<span class="pt">ção</span><span class="gl">ción</span></span><span
+                                                class="pt gl">Localiza<span
+                                                    class="pt">ção</span><span
+                                                    class="gl">ción</span></span><span
                                                 class="en">Location</span>: {djb:locus($witness/tei:locus/@from, $witness/tei:locus/@to)}</h4>
                                         <h4><span
                                                 class="pt gl">Copista</span><span
@@ -151,7 +155,8 @@ return
             }
             <p
                 class="dinamic"><span
-                    class="pt">Mudar critérios</span><span class="gl">Cambiar criterios</span><span
+                    class="pt">Mudar critérios</span><span
+                    class="gl">Cambiar criterios</span><span
                     class="en">Change criteria</span></p>
         </aside>
     </div>

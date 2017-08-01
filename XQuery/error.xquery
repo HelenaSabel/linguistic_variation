@@ -28,21 +28,22 @@ return
             {
                 for $result in $values
                 return
-                    (<h2 
+                    (<h2
                         id="graphs{$result}"><span
-                            class="pt" 
+                            class="pt"
                             id="graf{$result}">{$scribalError[@xml:id = $result]//tei:string[@xml:lang eq 'pt']/text()}</span><span
                             class="en">{$scribalError[@xml:id = $result]//tei:string[@xml:lang eq 'en']/text()}</span></h2>,
                     <h3><span
                             class="pt">Testemunho</span><span
                             class="en">Witness</span></h3>,
-                    <svg 
+                    <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="950"
                         height="100">
                         {
                             
-                              let $fen := $readings[matches(@ana, concat('#', $result))]
+                            let $fen := $readings[some $ana in tokenize(@ana, '\s+')
+                                satisfies $ana = concat('#', $result)]
                             for $wit at $pos in
                             for $i in distinct-values($fen/tokenize(./@wit, '\s'))
                             order by count($fen[./tokenize(@wit, '\s') = $i]) descending
@@ -102,16 +103,19 @@ return
                                     }
                                 </g>
                         }</svg>,
-                         <h3><span
-                            class="pt" id="lingua{$result}">Período</span><span
+                    <h3><span
+                            class="pt"
+                            id="lingua{$result}">Período</span><span
                             class="en">Period</span></h3>,
-                    <svg id="ling{$result}"
+                    <svg
+                        id="ling{$result}"
                         xmlns="http://www.w3.org/2000/svg"
                         width="950"
                         height="100">
                         {
                             
-                            let $fen := $readings[matches(@ana, concat('#', $result))]
+                            let $fen := $readings[some $ana in tokenize(@ana, '\s+')
+                                satisfies $ana = concat('#', $result)]
                             for $period at $pos in
                             for $i in distinct-values($poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]/tei:floruit/@period)
                             order by count($fen[ancestor::tei:div[1]//tei:name/substring(@ref, 2) = $poets/tei:floruit[@period = $i]/../@xml:id]) descending
@@ -185,9 +189,10 @@ return
                         </thead>
                         <tbody>
                             {
-                                for $fen in $readings[matches(@ana, concat('#', $result))]
+                                for $fen in $readings[some $ana in tokenize(@ana, '\s+')
+                                    satisfies $ana = concat('#', $result)]
                                 let $rdg :=
-                                 <parameters>
+                                <parameters>
                                     <param
                                         name="rdg"
                                         value="{$fen}"/>
@@ -198,7 +203,8 @@ return
                                 let $author := $poets[@xml:id = $fen/ancestor::tei:div[1]//tei:name/substring(@ref, 2)]
                                 return
                                     <tr>
-                                        <td class="intro"><a
+                                        <td
+                                            class="intro"><a
                                                 href="http://gl-pt.obdurodon.org/edition.php?&amp;song[]={$fen/ancestor::tei:div[1]/substring(@corresp, 2)}&amp;line={$fen/ancestor::tei:l/@n/string()}"
                                                 target="_blank">{transform:transform($fen/.., 'xmldb:exist:///db/VTLGP/xslt/ex.xsl', ($rdg))}</a></td>
                                         <td>{
@@ -250,8 +256,11 @@ return
         </section>
         <aside
             id="summary">
-            <h3><span class="pt">Conteúdos</span><span class="en">Contents</span></h3>
-                 <div class="pt">
+            <h3><span
+                    class="pt">Conteúdos</span><span
+                    class="en">Contents</span></h3>
+            <div
+                class="pt">
                 <ul>
                     {
                         for $result in $values
@@ -266,8 +275,9 @@ return
                             </li>
                     }
                 </ul>
-                </div>
-                 <div class="en">
+            </div>
+            <div
+                class="en">
                 <ul>
                     {
                         for $result in $values
@@ -282,10 +292,9 @@ return
                             </li>
                     }
                 </ul>
-                </div>
+            </div>
         </aside>
     </div>
-
 
 
 

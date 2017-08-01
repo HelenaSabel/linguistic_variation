@@ -3,46 +3,47 @@ declare namespace tei = "http://www.tei-c.org/ns/1.0";
 declare variable $songs := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem']; (:corpus of songs:)
 declare variable $fs := doc('/db/VTLGP/ancillary/feature-library.xml'); (:variants file:)
 declare variable $ling-features := $fs//tei:fvLib[@corresp eq '#linguistic']/tei:fs/@xml:id;
-declare variable $equipolent := $fs//tei:fvLib[@n eq 'equipolent readings']/tei:fs/@xml:id;
+declare variable $equipolent := $fs//tei:fvLib[@n eq 'equipolent readings']/tei:fs[1]/@xml:id;
 declare variable $scribalError := $fs//tei:fvLib[@corresp eq '#scribal']/tei:fs/@xml:id;
 declare variable $significant := $equipolent | $scribalError | $ling-features;
 declare variable $fixedHeight := number('600');
-(: Since there is a gap in my edition regarding the location of the songs, I manually create a sequence of the intervals :)
+(: Since there is a gap in my edition regarding the location of the songs, I manually create the intervals :)
 declare variable $sections :=
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) = 1][descendant::tei:locus/number(replace(@to, 'v|r', '')) = 1]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 1][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 5]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 5][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 10]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 10][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 15]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 15][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 20]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 20][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 25]}</item>,
+<sections>
+<item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) = 1][descendant::tei:locus/number(replace(@to, 'v|r', '')) = 1]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 1][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 5]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 5][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 10]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 10][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 15]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 15][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 20]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 20][descendant::tei:locus/number(replace(@to, 'v|r', '')) < 25]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) >= 25][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 30]}</item>
     (: Gap in my edition :)
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) = 51][descendant::tei:locus/number(replace(@to, 'v|r', '')) = 51]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 51][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 55]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 55][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 60]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 60][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 65]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 65][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 70]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 70][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 75]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 85][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 80]}</item>,
-    <item>{$songs[descendant::tei:locus/number(replace(@from, 'v|r', '')) > 80][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 85]}</item>
-;
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) >= 51][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 55]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 55][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 60]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 60][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 65]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 65][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 70]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 70][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 75]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 75][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 80]}</item>
+    <item>{$songs[descendant::tei:rdg[@wit eq '#A']/tei:locus/number(replace(@from, 'v|r', '')) > 80][descendant::tei:locus/number(replace(@to, 'v|r', '')) <= 85]}</item>
+    </sections>;
 declare variable $legendWidth := number('22');
 declare variable $legendHeight := number('22');
 <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="100%"
-    height="100%">
+    width="650"
+    height="620">
     <g
-        transform="translate(80,500)">
+        transform="translate(80,450)">
         <polyline
             fill="none"
             stroke="#32281b"
             stroke-width="1"
-            points="0,0 248,0 258,15 262,-15 272,0 580,0"></polyline>
+            points="0,0 288,0 298,15 302,-15 312,0 580,0"></polyline>
         <line
             x1="0"
             x2="0"
             y1="0"
-            y2="-482"
+            y2="-422"
             stroke="#32281b"
             stroke-width="1"/>
         <text
@@ -51,9 +52,9 @@ declare variable $legendHeight := number('22');
             text-anchor="middle"
             fill="#32281b"
             style="writing-mode:tb"
-            transform="rotate(180 -50 -200)">Percentagem variantes significativas</text>
+            transform="rotate(180 -50 -241)">Percentagem variantes significativas</text>
         <text
-            x="290"
+            x="330"
             text-anchor="middle"
             y="70"
             fill="#32281b">Folio Ms. A</text>
@@ -104,13 +105,6 @@ declare variable $legendHeight := number('22');
             x2="3"
             y1="-420"
             y2="-420"
-            stroke="#32281b"
-            stroke-width="1"/>
-        <line
-            x1="-3"
-            x2="3"
-            y1="-480"
-            y2="-480"
             stroke="#32281b"
             stroke-width="1"/>
         <text
@@ -228,7 +222,7 @@ declare variable $legendHeight := number('22');
             y2="3"
             x1="520"
             x2="520"/>
-        <line
+                <line
             stroke="#32281b"
             stroke-width="1"
             y1="-3"
@@ -271,12 +265,12 @@ declare variable $legendHeight := number('22');
             font-size="11"
             y="20"
             x="240">25</text>
-        <text
+         <text
             text-anchor="middle"
             fill="#32281b"
             font-size="11"
             y="20"
-            x="280">50</text>
+            x="280">30</text>
         <text
             text-anchor="middle"
             fill="#32281b"
@@ -322,7 +316,7 @@ declare variable $legendHeight := number('22');
         <rect
             height="{$legendHeight}"
             width="{$legendWidth}"
-            x="0"
+            x="140"
             y="105"
             fill="#11894A"
             stroke-width=".5"
@@ -330,12 +324,12 @@ declare variable $legendHeight := number('22');
         <text
             fill="#32281b"
             font-size="11"
-            x="25"
+            x="165"
             y="120">Língua</text>
         <rect
             height="{$legendHeight}"
             width="{$legendWidth}"
-            x="150"
+            x="290"
             y="105"
             fill="#FFC938"
             stroke-width=".5"
@@ -343,12 +337,12 @@ declare variable $legendHeight := number('22');
         <text
             fill="#32281b"
             font-size="11"
-            x="175"
+            x="315"
             y="120">Erros</text>
         <rect
             height="{$legendHeight}"
             width="{$legendWidth}"
-            x="300"
+            x="440"
             y="105"
             fill="#2b3966"
             stroke-width=".5"
@@ -356,28 +350,14 @@ declare variable $legendHeight := number('22');
         <text
             fill="#32281b"
             font-size="11"
-            x="325"
+            x="465"
             y="120">Equipolentes</text>
-        <rect
-            height="{$legendHeight}"
-            width="{$legendWidth}"
-            x="450"
-            y="105"
-            fill="#CF4205"
-            stroke-width=".5"
-            stroke="#32281b"/>
-        <text
-            fill="#32281b"
-            font-size="11"
-            x="475"
-            y="120">Outras*</text>
-    </g>,
-    
-    (: To create the circles for each type of variant and each section, I loop over the sections :)
+
+    </g>
     <g
-        transform="translate(80,500)">
+        transform="translate(80,450)">
         {
-            for $section at $pos in $sections
+            for $section at $pos in $sections/*
             
             (: Total of substantive variants :)
             let $area := sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $significant]/string-length(.))
@@ -386,7 +366,6 @@ declare variable $legendHeight := number('22');
             let $errors := sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $scribalError]/string-length(.)) * $fixedHeight div $area
             let $equip := sum($section/descendant::tei:rdg[contains(@ana, '#equip')]/string-length(.)) * $fixedHeight div $area
             let $ling := sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $ling-features]/string-length(.)) * $fixedHeight div $area
-             let $other := (sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $equipolent]/string-length(.)) * $fixedHeight div $area) - $equip
             let $x := $pos * 40 (:40 is the interval between the sections:)
             return
                 (<circle
@@ -403,23 +382,16 @@ declare variable $legendHeight := number('22');
                     r="3"
                     cx="{$x}"
                     cy="-{$equip}"
-                    fill="#2B3966"/>,
-                <circle
-                    r="3"
-                    cx="{$x}"
-                    cy="-{$other}"
-                    fill="#CF4205"/>)
+                    fill="#2B3966"/>)
         
         }
-        
-        (:To get the points of the line, I loop over each section again inside each of the lines :)
         
         <polyline
             fill="none"
             stroke="#FFC938"
             stroke-width="3"
             points="{
-                    for $section at $pos in $sections
+                    for $section at $pos in $sections/*
                     let $area := sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $significant]/string-length(.))
                     let $errors := sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $scribalError]/string-length(.)) * $fixedHeight div $area
                     let $x := $pos * 40
@@ -431,7 +403,7 @@ declare variable $legendHeight := number('22');
             stroke="#11894A"
             stroke-width="3"
             points="{
-                    for $section at $pos in $sections
+                    for $section at $pos in $sections/*
                     let $area := sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $significant]/string-length(.))
                     let $ling := sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $ling-features]/string-length(.)) * $fixedHeight div $area
                     let $x := $pos * 40
@@ -443,25 +415,13 @@ declare variable $legendHeight := number('22');
             stroke="#2B3966"
             stroke-width="3"
             points="{
-                    for $section at $pos in $sections
+                    for $section at $pos in $sections/*
                     let $area := sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $significant]/string-length(.))
                     let $equip := sum($section/descendant::tei:rdg[contains(@ana, '#equip')]/string-length(.)) * $fixedHeight div $area
                     let $x := $pos * 40
                     return
                         concat($x, ',-', $equip)
                 }"/>
-        <polyline
-            fill="none"
-            stroke="#CF4205"
-            stroke-width="3"
-            points="{
-                    for $section at $pos in $sections
-                    let $area := sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $significant]/string-length(.))
-                    let $equip := sum($section/descendant::tei:rdg[contains(@ana, '#equip')]/string-length(.)) * $fixedHeight div $area
-                    let $other := (sum($section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $equipolent]/string-length(.)) * $fixedHeight div $area) - $equip
-                    let $x := $pos * 40
-                    return
-                        concat($x, ',-', ($other))
-                }"/>
+       
     </g>
 </svg>

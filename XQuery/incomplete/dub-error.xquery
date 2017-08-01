@@ -19,7 +19,6 @@ let $songs := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem']
 let $readings := $songs//tei:rdg[@cert eq 'low']
 let $features := doc('/db/VTLGP/ancillary/feature-library.xml')//tei:fvLib/tei:fs
 let $poets := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person
-let $otherReadings := $songs//tei:rdg[contains(@ana, '#nh')]|$songs//tei:rdg[not(@wit eq '#A')][contains(@ana, '#ll')]
 return
                        (<table
                         class="sortable">

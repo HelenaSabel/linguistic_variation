@@ -13,17 +13,17 @@ return
     <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
-        width="2000"
+        width="1200"
         height="{count($authors) * 30}">
         <g
-            transform="translate(190,520)">
+            transform="translate(190,540)">
             <text
                 x="45"
-                y="-500"
+                y="-520"
                 text-anchor="end">Ms. A</text>
             <rect
                 x="55"
-                y="-515"
+                y="-535"
                 width="22"
                 height="22"
                 fill="#777E90"
@@ -31,11 +31,11 @@ return
                 stroke="black"/>
             <text
                 x="150"
-                y="-500"
+                y="-520"
                 text-anchor="end">Ms. B</text>
             <rect
                 x="155"
-                y="-515"
+                y="-535"
                 width="22"
                 height="22"
                 fill="#C1705A"
@@ -66,7 +66,7 @@ return
                                 x="{$xB1 + $xB2}"
                                 width="{$widthB}"
                                 y="-{$barShift * ($pos - 1)}"
-                                opacity=".7"/>
+                                opacity="0.7"/>
                             <rect
                                 height="25"
                                 fill="#3E4861"
