@@ -3,6 +3,8 @@ declare namespace tei = "http://www.tei-c.org/ns/1.0";
 (:declare variable $songs := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem']; (\:corpus of songs:\)
 declare variable $fs := doc('/db/VTLGP/ancillary/feature-library.xml'); (\:variants file:\):)
 declare variable $songs := collection('../../edition')//tei:div[@type eq 'poem'];
+declare variable $names := doc('../../ancillary/corpus-autores.xml')//tei:person;
+declare variable $authors := $songs//tei:name;
 declare variable $fs := doc('../../ancillary/feature-library.xml');
 declare variable $ling-features := $fs//tei:fs[tei:f/tei:fs[@type eq 'linguistic']]/@xml:id;
 declare variable $legendWidth := number('22');
@@ -12,7 +14,7 @@ declare variable $sep := number('9');
 <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1500"
-    height="580">
+    height="1000">
     <g
         transform="translate(20,500)">
         <line
@@ -27,42 +29,21 @@ declare variable $sep := number('9');
             x1="{151 * $sep}"
             x2="{151 * $sep}"
             y1="0"
-            y2="-{22 * $increased}"
+            y2="-{16 * $increased}"
             stroke="black"
             stroke-width="1"/>
         <text
-            x="1415"
-            y="-140"
+            x="1380"
+            y="-100"
             text-anchor="middle"
             fill="black"
             style="writing-mode:tb"
-            transform="rotate(180 1415 -140)">Número ocorrências</text>
-        <text
-            fill="black"
-            x="{151 * $sep div 2}"
-            y="50"
-            text-anchor="middle"
-            transform="{concat('rotate(180 ', 151 * $sep div 2, ' 50)')}">Cantiga</text>
-        <rect
-            height="{$legendHeight}"
-            width="{$legendWidth}"
-            x="600"
-            y="-{$increased * 26}"
-            fill="orange"
-            stroke-width=".5"
-            stroke="black"/>
-        <text
-            fill="black"
-            font-size="11"
-            x="612"
-            style="writing-mode:tb"
-            transform="rotate(180 612 -330)"
-            y="-{$increased * 27.5}">Variantes de língua</text>
+            transform="rotate(180 1380 -100)">Número ocorrências</text>
         <rect
             height="{$legendHeight}"
             width="{$legendWidth}"
             x="750"
-            y="-{$increased * 26}"
+            y="-{$increased * 20}"
             fill="#2b3966"
             stroke-width=".5"
             stroke="black"/>
@@ -71,8 +52,8 @@ declare variable $sep := number('9');
             font-size="11"
             x="762"
             style="writing-mode:tb"
-            transform="rotate(180 762 -330)"
-            y="-{$increased * 27.5}">Formas únicas</text>
+            transform="rotate(180 762 -258)"
+            y="-{$increased * 21.5}">Formas únicas</text>
         
         {
             for $section at $pos in
@@ -93,18 +74,10 @@ declare variable $sep := number('9');
                     stroke-dasharray="5,5"
                     stroke-width="1"
                     y1="0"
-                    y2="-{22 * $increased}"
+                    y2="-{16 * $increased}"
                     x1="{$x}"
                     x2="{$x}"
                 />,
-                <circle
-                    stroke="black"
-                    stroke-width=".5"
-                    r="4"
-                    cx="{$x}"
-                    cy="-{$y}"
-                    fill="orange"/>
-                ,
                 <line
                     fill="none"
                     stroke="black"
@@ -127,9 +100,8 @@ declare variable $sep := number('9');
                 <circle
                     stroke="black"
                     stroke-width=".5"
-                    r="4"
+                    r="2.8"
                     cx="{$x}"
-                    opacity="{if ($dist-ling eq $y) then '.5' else '1'}"
                     cy="-{$dist-ling}"
                     fill="#2B3966"/>
                 
@@ -137,10 +109,31 @@ declare variable $sep := number('9');
         
         }
     </g>
+    <g transform="translate(20,500)">
+    <path
+    fill="none"
+    stroke="#2B3966"
+    stroke-width="1"
+    points="{for $section at $pos in
+            for $i in $songs
+            order by number($i//tei:title//tei:rdg[@wit eq '#A']/substring(tei:idno, 2)) descending
+            return
+                $i
+            let $ling := $section/descendant::tei:rdg[tokenize(replace(@ana, '#', ''), '\s+') = $ling-features]
+            let $dist-ling := count(distinct-values($ling/string())) * $increased
+            let $x := $sep * $pos
+            
+            return
+            $x || ',-' || $dist-ling
+    
+    }" />
+    
+    
+    </g>
     <g
         transform="translate(20,500)">
         {
-            for $i in 1 to 21
+            for $i in 1 to 16
             return
                 <line
                     x1="{150.5 * $sep}"
@@ -153,30 +146,26 @@ declare variable $sep := number('9');
         }
     
     </g>
-    <g
-        transform="translate(20,500)">
-        {
-            for $x in 1 to 4
-            return
-                <text
-                    font-size="12"
-                    x="1380"
-                    y="-{$x * 5 * $increased - $increased - 7}"
-                    text-anchor="middle"
-                    fill="black"
-                    style="writing-mode:tb"
-                    transform="rotate(180 1380 -140)">{($x + 4 - $x * 2 + 1) * 5}</text>
-        }</g>
     
-    <g
-        transform="translate(20,500)">
-        <text
-            font-size="12"
-            x="1380"
-            y="-{22 * $increased - 7}"
-            text-anchor="middle"
-            fill="black"
-            style="writing-mode:tb"
-            transform="rotate(180 1380 -140)">1</text></g>
+    <g transform="translate(20,500)">
+    {
+    for $poet at $pos in
+            for $i in distinct-values($authors/@ref)
+            order by number($songs[descendant::tei:name/@ref = $i][1]//tei:title//tei:rdg[@wit eq '#A']/substring(tei:idno, 2)) descending
+            return
+                $i
+    let $name := $names[@xml:id = substring($poet, 2)]/tei:persName
+    
+    let $x := $sep * count($songs//tei:name/@ref = $poet) * $pos
+    return
+    
+    <text y="50" x="{$x}" 
+      font-size="10"
+      transform="{concat('rotate(180 ', $x, ' 50)')}"
+      style="writing-mode:tb" 
+      text-anchor="end">{$name/string()}</text>
+    }
+    
+    </g>
 
 </svg>

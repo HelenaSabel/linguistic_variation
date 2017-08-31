@@ -286,7 +286,7 @@
                         <string xml:lang="gl">Prótese</string>
                     </f>
                 </fs>
-                <fs xml:id="yod">
+                <fs xml:id="yod" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -336,8 +336,7 @@
                 </fs>
 
                 <!-- Needs to be corrected-->
-                
-                <fs xml:id="non-crasis">
+                <fs xml:id="non-crasis" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -361,7 +360,7 @@
                         <string xml:lang="gl">Conservação dum hiato / Sinicese</string>
                     </f>
                 </fs>
-                <fs xml:id="crasis">
+                <fs xml:id="crasis" type="inova">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -385,7 +384,7 @@
                         <string xml:lang="gl">Crase vocálica para evitar hiato</string>
                     </f>
                 </fs>
-                <fs xml:id="apheresis">
+                <fs xml:id="apheresis" type="inova">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -409,7 +408,7 @@
                         <string xml:lang="gl">Aférese</string>
                     </f>
                 </fs>
-                <fs xml:id="pro-nas">
+                <fs xml:id="pro-nas" type="inova">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -444,7 +443,7 @@
                         <string xml:lang="gl">Nasalización progresiva</string>
                     </f>
                 </fs>
-                <fs xml:id="ana-nas">
+                <fs xml:id="ana-nas" type="inova">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -472,7 +471,7 @@
                         <string xml:lang="gl">Nasalización por analoxía</string>
                     </f>
                 </fs>
-                <fs xml:id="denas">
+                <fs xml:id="denas" type="inova-gl">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -529,7 +528,7 @@
                         <string xml:lang="gl">Metafonía</string>
                     </f>
                 </fs>
-                <fs xml:id="cons-assim">
+                <fs xml:id="cons-assim" type="inova">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -644,7 +643,7 @@
                         <string xml:lang="gl">Vacilación na ditongación: ’oi~ui’</string>
                     </f>
                 </fs>
-                <fs xml:id="diph">
+                <fs xml:id="diph" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -673,7 +672,7 @@
                         <string xml:lang="gl">Vacilación relacionada coa ditongación</string>
                     </f>
                 </fs>
-                <fs xml:id="conf-sib">
+                <fs xml:id="conf-sib" type="inova-gl">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -700,7 +699,7 @@
                         <string xml:lang="gl">Posíbel confusión na sonoridade de sibilantes</string>
                     </f>
                 </fs>
-                <fs xml:id="pal-nas">
+                <fs xml:id="pal-nas" type="inova">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -740,7 +739,7 @@
 
 
                 <!--Morphological change: verbs-->
-                <fs xml:id="pal-stem">
+                <fs xml:id="pal-stem" type="inova-gl">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -766,7 +765,7 @@
                             fortes</string>
                     </f>
                 </fs>
-                <fs xml:id="vow-stem">
+                <fs xml:id="vow-stem" type="inova">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -876,7 +875,7 @@
                         <string xml:lang="gl">P3 do perfecto de ’seer~ir’ en ’fui’</string>
                     </f>
                 </fs>
-                <fs xml:id="p1i">
+                <fs xml:id="p1i" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -912,7 +911,7 @@
                         <string xml:lang="gl">P1 do perfecto en ’-i’</string>
                     </f>
                 </fs>
-                <fs xml:id="oer">
+                <fs xml:id="oer" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -940,7 +939,7 @@
                         <string xml:lang="gl">Tema de perfecto de ’haver’ en ’o-’</string>
                     </f>
                 </fs>
-                <fs xml:id="analog-o">
+                <fs xml:id="analog-o" type="inova-gl">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -980,7 +979,7 @@
 
 
                 <!--Morphological change: pronouns-->
-                <fs xml:id="dat">
+                <fs xml:id="dat" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1016,7 +1015,7 @@
                         <string xml:lang="gl">Forma fraca pronominal da P1 en ’-i’</string>
                     </f>
                 </fs>
-                <fs xml:id="dub-dat">
+                <fs xml:id="dub-dat" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1053,7 +1052,7 @@
                         <string xml:lang="gl">Forma fraca pronominal en ’-i’ en sinalefa</string>
                     </f>
                 </fs>
-                <fs xml:id="xe">
+                <fs xml:id="xe" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1088,7 +1087,7 @@
                         <string xml:lang="gl">Palatalización do pronome ’se’</string>
                     </f>
                 </fs>
-                <fs xml:id="li">
+                <fs xml:id="li" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1124,7 +1123,7 @@
                         <string xml:lang="gl">Forma fraca pronominal da P3/P6 en ’-i’</string>
                     </f>
                 </fs>
-                <fs xml:id="weak-pos">
+                <fs xml:id="weak-pos" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1151,7 +1150,7 @@
                 </fs>
 
                 <!--Other morphological changes-->
-                <fs xml:id="art">
+                <fs xml:id="art" type="inova">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1172,7 +1171,7 @@
                         <string xml:lang="gl">Uso do artigo co posesivo</string>
                     </f>
                 </fs>
-                <fs xml:id="art-al">
+                <fs xml:id="art-al" type="inova">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1196,7 +1195,7 @@
 
 
                 <!--Other phenomena -->
-                <fs xml:id="cognate">
+                <fs xml:id="cognate-n">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1213,9 +1212,53 @@
                         </fs>
                     </f>
                     <f name="description">
-                        <string xml:lang="en">Doublet</string>
-                        <string xml:lang="pt">Cognado</string>
-                        <string xml:lang="gl">Cognado</string>
+                        <string xml:lang="en">Doublet (name)</string>
+                        <string xml:lang="pt">Cognado (nominal)</string>
+                        <string xml:lang="gl">Cognado (nominal)</string>
+                    </f>
+                </fs>
+                <fs xml:id="cognate-vb" type="inova-gl">
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <symbol value="parallel-evolution"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="true"/>
+                                        <binary value="false"/>
+                                    </f>
+                                </fs>
+                            </f>
+                        </fs>
+                    </f>
+                    <f name="description">
+                        <string xml:lang="en">Doublet (verb)</string>
+                        <string xml:lang="pt">Cognado (verbal)</string>
+                        <string xml:lang="gl">Cognado (verbal)</string>
+                    </f>
+                </fs>
+                <fs xml:id="cognate-loan">
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category">
+                                <fs type="phonetic">
+                                    <f name="process">
+                                        <symbol value="parallel-evolution"/>
+                                    </f>
+                                    <f name="constriction">
+                                        <binary value="true"/>
+                                        <binary value="false"/>
+                                    </f>
+                                </fs>
+                            </f>
+                        </fs>
+                    </f>
+                    <f name="description">
+                        <string xml:lang="en">Doublet (loan)</string>
+                        <string xml:lang="pt">Cognado (estrangeirismo)</string>
+                        <string xml:lang="gl">Cognado (estranxeirismo)</string>
                     </f>
                 </fs>
                 <fs xml:id="cast-transfer">
@@ -1254,7 +1297,7 @@
                         <string xml:lang="gl">Interferencia lingüística do italiano</string>
                     </f>
                 </fs>
-                <fs xml:id="par">
+                <fs xml:id="par" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1283,7 +1326,7 @@
                         <string xml:lang="gl">Uso da preposición ’par’</string>
                     </f>
                 </fs>
-                <fs xml:id="per">
+                <fs xml:id="per" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1469,7 +1512,7 @@
                         <string xml:lang="gl">Alternancia ’ar~er’</string>
                     </f>
                 </fs>
-                <fs xml:id="depois">
+                <fs xml:id="depois" type="inova-pt">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1497,7 +1540,7 @@
                         <string xml:lang="gl">Alternancia ’depois~despois’</string>
                     </f>
                 </fs>
-                <fs xml:id="si">
+                <fs xml:id="si" type="arcaico">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">
@@ -1525,7 +1568,7 @@
                         <string xml:lang="gl">Alternancia ’si~se’</string>
                     </f>
                 </fs>
-                <fs xml:id="mas">
+                <fs xml:id="mas" type="inova-pt">
                     <f name="taxonomy">
                         <fs type="linguistic">
                             <f name="category">

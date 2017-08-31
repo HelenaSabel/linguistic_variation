@@ -14,6 +14,12 @@ declare variable $authors := doc('../../ancillary/corpus-autores.xml')//tei:pers
     xmlns="http://www.w3.org/2000/svg"
     width="800"
     height="700">
+    <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="4">
+  <path d="M-1,1 l2,-2
+           M0,4 l4,-4
+           M3,5 l2,-2" 
+        style="stroke:orange; stroke-width:.3" />
+</pattern>
     <g
         transform="translate(240,600)">
         <line
@@ -22,7 +28,7 @@ declare variable $authors := doc('../../ancillary/corpus-autores.xml')//tei:pers
             stroke-width="1"
             x1="0"
             x2="0"
-            y="0"
+            y1="0"
             y2="-{2 + count($authors) * $sep}"></line>
         <line
             fill="none"
@@ -30,7 +36,7 @@ declare variable $authors := doc('../../ancillary/corpus-autores.xml')//tei:pers
             stroke-width="1"
             x1="0"
             x2="370"
-            y="0"
+            y1="0"
             y2="0"/>
         <text
             x="200"
@@ -40,12 +46,12 @@ declare variable $authors := doc('../../ancillary/corpus-autores.xml')//tei:pers
         <text
             y="-{2 + count($authors) * $sep div 2}"
             text-anchor="middle"
-            x="-190"
-            transform="{concat('rotate(270 -190 -', 2 + count($authors) * $sep div 2, ')')}">Autores</text>
+            x="-185"
+            transform="{concat('rotate(270 -185 -', 2 + count($authors) * $sep div 2, ')')}">Autores</text>
         <rect
             height="{$legendHeight}"
             width="{$legendWidth}"
-            x="450"
+            x="390"
             y="-250"
             fill="orange"
             stroke-width=".5"
@@ -53,12 +59,12 @@ declare variable $authors := doc('../../ancillary/corpus-autores.xml')//tei:pers
         <text
             fill="black"
             font-size="12"
-            x="490"
-            y="-240">Ms. B</text>
+            x="428"
+            y="-235">Ms. B</text>
         <rect
             height="{$legendHeight}"
             width="{$legendWidth}"
-            x="450"
+            x="390"
             y="-280"
             fill="#2b3966"
             stroke-width=".5"
@@ -66,11 +72,11 @@ declare variable $authors := doc('../../ancillary/corpus-autores.xml')//tei:pers
         <text
             fill="black"
             font-size="12"
-            x="490"
-            y="-270">Ms. A</text>
+            x="428"
+            y="-265">Ms. A</text>
         
-        {
-            for $author at $pos in $authors
+        {   let $orderedAuthors := for $i in $authors order by $i/tei:nationality/@key descending return $i
+            for $author at $pos in $orderedAuthors
             let $booksong := $songs[descendant::tei:name[substring(@ref, 2) = $author/@xml:id]]
             let $lines := count($booksong//tei:l)
             let $ling-A := distinct-values($booksong/descendant::tei:rdg[contains(@wit, '#A')]
@@ -80,10 +86,18 @@ declare variable $authors := doc('../../ancillary/corpus-autores.xml')//tei:pers
             let $x-A := count($ling-A) * $increased * 100 div $lines
             let $x-B := count($ling-B) * $increased * 100 div $lines
             let $y := $sep * $pos
-            order by $author/tei:persName
             return
                 
-                (<circle
+                (<line
+                    fill="none"
+                    stroke="gray"
+                    stroke-width="1"
+                    stroke-dasharray="3,3"
+                    y1="-{$y}"
+                    y2="-{$y}"
+                    x1="0"
+                    x2="370"/>,
+                <circle
                     stroke="black"
                     stroke-width=".5"
                     r="4"
@@ -97,6 +111,7 @@ declare variable $authors := doc('../../ancillary/corpus-autores.xml')//tei:pers
                     r="4"
                     cx="{$x-A}"
                     cy="-{$y}"
+                    opacity="{if ($x-A eq $x-B) then '.5' else '1'}"
                     fill="#2B3966"/>,
                 <line
                     fill="none"
@@ -107,10 +122,13 @@ declare variable $authors := doc('../../ancillary/corpus-autores.xml')//tei:pers
                     x1="-2"
                     x2="2"/>,
                 
+                
                 <text
                     fill="black"
+                    stroke="{if ($author/tei:floruit/@period eq '2') then 'black' else 'none'}"
                     y="-{$y - 2}"
                     x="-5"
+                    stroke-width=".5"
                     text-anchor="end"
                     font-size="10">{$author/tei:persName/text()}</text>
                 

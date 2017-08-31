@@ -2,6 +2,9 @@
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
    <ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/>
    <pattern>
+      <rule context="tei:fvLib/tei:fs/@type">
+         <assert test=". = ('arcaico','inova','inova-gl', 'inova-pt')">Either arcaich or innovation</assert>
+      </rule>
       <rule context="tei:fvLib/tei:fs">
          <assert test="tei:f[@name = ('description', 'taxonomy')]">
                         One of the following features is required: 
