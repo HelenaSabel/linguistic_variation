@@ -536,8 +536,8 @@
                <l n="8">
                   <app>
                      <rdg wit="#A">aquestes</rdg>
-                     <rdg wit="#B" ana="#abb"><choice><abbr>a<am>q&#772;</am>ste</abbr><expan>aq<ex>ue</ex>ste</expan></choice>s</rdg>
-                     <rdg wit="#V" ana="#error">a<choice><abbr><am>q&#772;</am></abbr><expan>q<ex>ue</ex></expan></choice>sios</rdg>
+                     <rdg wit="#B" ana="#abb"><choice><abbr>a<am>q&#772;</am>stes</abbr><expan>aq<ex>ue</ex>stes</expan></choice></rdg>
+                     <rdg wit="#V" ana="#error">aq&#772;sios</rdg>
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">o<seg corresp="#reg">ll</seg>os</rdg>
@@ -564,8 +564,8 @@
                   </app>
                   <app>
                      <rdg wit="#A">queixara</rdg>
-                     <rdg wit="#B" ana="#abb"><choice><abbr><am>q&#772;</am>ixar</abbr><expan>q<ex>ue</ex>ixar</expan></choice>a</rdg>
-                     <rdg wit="#V" ana="#misread"><choice><abbr><am>q&#772;</am></abbr><expan>q<ex>ue</ex></expan></choice>ixa<seg corresp="#misread">t</seg>a</rdg>
+                     <rdg wit="#B" ana="#abb"><choice><abbr><am>q&#772;</am>ixara</abbr><expan>q<ex>ue</ex>ixara</expan></choice></rdg>
+                     <rdg wit="#V" ana="#misread"><choice><abbr><am>q&#772;</am>ixa<seg corresp="#misread">t</seg>a</abbr><expan>q<ex>ue</ex>ixa<seg corresp="#misread">t</seg>a</expan></choice></rdg>
                   </app>
                </l>
                <l n="10">
@@ -1447,8 +1447,10 @@
                   </app>
                   <app>
                      <rdg wit="#A">preçaua</rdg>
-                     <rdg wit="#B" ana="#abb #c-pal">p<am>ᷓ</am><ex>re</ex><seg corresp="#c-pal">c</seg>aua</rdg>
-                     <rdg wit="#V" ana="#error" cert="low">p<am>ᷓ</am><ex>re</ex>gaua</rdg>
+                     <rdg wit="#B" ana="#abb #c-pal"><choice><abbr><am>pᷓ</am><seg corresp="#c-pal">c</seg>aua</abbr>
+                     <expan>p<ex>re</ex><seg corresp="#c-pal">c</seg>aua</expan></choice></rdg>
+                     <rdg wit="#V" ana="#error" cert="medium"><choice><abbr><am>pᷓ</am><seg corresp="#error">g</seg>aua</abbr>
+                     <expan>p<ex>re</ex><seg corresp="#error">g</seg>aua</expan></choice></rdg>
                   </app>
                </l>
                <l n="14">
@@ -1471,7 +1473,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">sempr<supplied>e</supplied> andar</rdg>
-                     <rdg wit="#B" ana="#abb"><choice><abbr>sem<am>pᷓ</am></abbr><expan>semp<ex>r<supplied>e</supplied> a</ex></expan></choice>ndar</rdg>
+                     <rdg wit="#B" ana="#abb"><choice><abbr>sem<am>pᷓ</am>ndar</abbr><expan>semp<ex>r<supplied>e</supplied> a</ex>ndar</expan></choice></rdg>
                      <rdg wit="#V" ana="#abb #lineta"><choice><abbr>sem<am>pᷓ</am></abbr><expan>semp<ex>re</ex></expan></choice> <seg corresp="#lineta">adar</seg></rdg>
                   </app>
                   <app>
@@ -1537,7 +1539,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">grande</rdg>
-                     <rdg wit="#B #V" ana="#abb"><choice><abbr><am>gᷓ</am>n</abbr><expan>g<ex>ra</ex>n</expan></choice>de</rdg>
+                     <rdg wit="#B #V" ana="#abb"><choice><abbr><am>gᷓ</am>nde</abbr><expan>g<ex>ra</ex>nde</expan></choice></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">que</rdg>
@@ -1657,7 +1659,7 @@
                      </choice></rdg>
                      <rdg wit="#B #V" ana="#abb">
                      <choice>
-                        <orig>quero<choice><abbr>u<am>&#xF1A6;</am></abbr><expan>u<ex>os</ex></expan></choice></orig>
+                        <orig><choice><abbr>querou<am>&#xF1A6;</am></abbr><expan>querou<ex>os</ex></expan></choice></orig>
                         <reg>quero-u<ex>os</ex></reg>
                      </choice></rdg>
                   </app>
@@ -1807,7 +1809,7 @@
                   </app>
                   <app>
                      <rdg wit="#A" ana="#reg">conse<seg corresp="#reg">ll</seg>o</rdg>
-                     <rdg wit="#B #V" ana="#abb #ss-inic"><choice><abbr>c<am>ō</am></abbr><expan>co<ex>n</ex></expan></choice><seg corresp="#ss-inic">ss</seg>elho</rdg>
+                     <rdg wit="#B #V" ana="#abb #ss-inic"><choice><abbr>c<am>ō</am><seg corresp="#ss-inic">ss</seg>elho</abbr><expan>co<ex>n</ex><seg corresp="#ss-inic">ss</seg>elho</expan></choice></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B">non</rdg>
@@ -1860,7 +1862,8 @@
                   </app>
                   <app>
                      <rdg wit="#A">sempr<supplied>e</supplied> assi</rdg>
-                     <rdg wit="#B #V" ana="#abb">senp<am>ᷓ</am><ex>r<supplied>e</supplied> a</ex></rdg>
+                     <rdg wit="#B #V" ana="#abb #np #y-vow"><choice><abbr>se<seg corresp="#np">n</seg><am>pᷓ</am>ss<seg corresp="#y-vow">y</seg></abbr>
+                     <expan>se<seg corresp="#np">n</seg>p<ex>r<supplied>e</supplied> a</ex>ss<seg corresp="#y-vow">y</seg></expan></choice></rdg>
                   </app>
                   <app>
                      <rdg wit="#A">andarei</rdg>
@@ -1968,7 +1971,7 @@
                <l n="21">
                   <app>
                      <rdg wit="#A #B">catando</rdg>
-                     <rdg wit="#V" ana="#abb">ca<choice><abbr>t<am>a&#772;</am></abbr><expan>ta<ex>n</ex></expan></choice>do</rdg>
+                     <rdg wit="#V" ana="#abb"><choice><abbr>cat<am>a&#772;</am>do</abbr><expan>cata<ex>n</ex>do</expan></choice></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #V">per</rdg>
@@ -2257,7 +2260,7 @@
                <l n="12">
                   <app>
                      <rdg wit="#A">enquant<supplied>?</supplied></rdg>
-                     <rdg wit="#B" ana="#abb #misread">en<choice><abbr><am>ꝙᷓ</am></abbr><expan>q<ex>uan</ex></expan></choice><seg corresp="#misread">c</seg></rdg>
+                     <rdg wit="#B" ana="#abb #misread"><choice><abbr>en<am>ꝙᷓ</am><seg corresp="#misread">c</seg></abbr><expan>enq<ex>uan</ex><seg corresp="#misread">c</seg></expan></choice></rdg>
                      <rdg wit="#V" ana="#abb"><choice><abbr>en<am>ꝙᷓ</am>t</abbr><expan>enq<ex>uan</ex>t<supplied>?</supplied></expan></choice></rdg>
                   </app>
                   <app>
@@ -2286,7 +2289,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">querria</rdg>
-                     <rdg wit="#B #V" ana="#misread"><choice><abbr><am>q&#772;</am></abbr><expan>q<ex>ue</ex></expan></choice>iria</rdg>
+                     <rdg wit="#B #V" ana="#misread"><choice><abbr><am>q&#772;</am>iria</abbr><expan>q<ex>ue</ex>iria</expan></choice></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">uiuer</rdg>
@@ -2307,7 +2310,7 @@
                      <rdg wit="#B #V">E</rdg>
                   </app>
                   <app>
-                     <rdg wit="#A" ana="#reg"><choice><abbr>t<am>e&#772;</am></abbr><expan>te<ex>n</ex></expan></choice>no</rdg>
+                     <rdg wit="#A" ana="#reg"><choice><abbr>t<seg corresp="#reg"><am>e&#772;</am>n</seg>o</abbr><expan>te<seg corresp="#reg"><ex>n</ex>n</seg>o</expan></choice></rdg>
                      <rdg wit="#B #V">tenho</rdg>
                   </app>
                   <app>
@@ -2333,8 +2336,9 @@
                   </app>
                   <app>
                      <rdg wit="#A">coitados</rdg>
-                     <rdg wit="#B" ana="#abb #uy #dip">c<seg corresp="#dip">u<seg corresp="#uy">y</seg></seg>ta<choice><abbr>d<am>&#xF1A6;</am></abbr><expan>d<ex>os</ex></expan></choice></rdg>
-                     <rdg wit="#V" ana="#misread #uy #dip #abb">c<seg corresp="#dip">u<seg corresp="#uy">y</seg></seg><seg corresp="#misread">c</seg>a<choice><abbr>d<am>&#xF1A6;</am></abbr><expan>d<ex>os</ex></expan></choice></rdg>
+                     <rdg wit="#B" ana="#abb #uy #dip"><choice><abbr>c<seg corresp="#dip">u<seg corresp="#uy">y</seg></seg>tad<am>&#xF1A6;</am></abbr><expan>c<seg corresp="#dip">u<seg corresp="#uy">y</seg></seg>tad<ex>os</ex></expan></choice></rdg>
+                     <rdg wit="#V" ana="#misread #uy #dip #abb"><choice><abbr>c<seg corresp="#dip">u<seg corresp="#uy">y</seg></seg><seg corresp="#misread">c</seg>ad<am>&#xF1A6;</am></abbr>
+                        <expan>c<seg corresp="#dip">u<seg corresp="#uy">y</seg></seg><seg corresp="#misread">c</seg>ad<ex>os</ex></expan></choice></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">son</rdg>
@@ -2398,7 +2402,8 @@
                <l n="20">
                   <app>
                      <rdg wit="#A">sempre</rdg>
-                     <rdg wit="#B" ana="#misread">se<seg corresp="#misread">u</seg>p<am>ᷓ</am><ex>re</ex></rdg>
+                     <rdg wit="#B" ana="#misread"><choice><abbr>se<seg corresp="#misread">u</seg><am>pᷓ</am></abbr>
+                        <expan>se<seg corresp="#misread">u</seg>p<ex>re</ex></expan></choice></rdg>
                      <rdg wit="#V" ana="#abb #np"><choice><abbr>se<seg corresp="#np">n</seg><am>pᷓ</am></abbr>
                         <expan>se<seg corresp="#np">n</seg>p<ex>re</ex></expan></choice></rdg>
                   </app>
@@ -2407,8 +2412,8 @@
                   </app>
                   <app>
                      <rdg wit="#A" ana="#r-simp">queria</rdg>
-                     <rdg wit="#B" ana="#abb"><choice><abbr><am>q&#772;</am>r</abbr><expan>q<ex>ue</ex>r</expan></choice>ria</rdg>
-                     <rdg wit="#V" ana="#misread"><choice><abbr><am>q&#772;</am></abbr><expan>q<ex>ue</ex></expan></choice><seg corresp="#misread">i</seg>ria</rdg>
+                     <rdg wit="#B" ana="#abb"><choice><abbr><am>q&#772;</am>rria</abbr><expan>q<ex>ue</ex>rria</expan></choice></rdg>
+                     <rdg wit="#V" ana="#misread"><choice><abbr><am>q&#772;</am><seg corresp="#misread">i</seg>ria</abbr><expan>q<ex>ue</ex><seg corresp="#misread">i</seg>ria</expan></choice></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V">uiuer</rdg>
@@ -2678,8 +2683,7 @@
                      <rdg wit="#A">outra</rdg>
                      <rdg wit="#B" ana="#abb"><choice><abbr>ou<am>tᷓ</am></abbr><expan>out<ex>ra</ex></expan></choice>
                      </rdg>
-                     <rdg wit="#V" ana="#abb">ouc<am>̄</am>
-                        <ex>̄</ex>
+                     <rdg wit="#V" ana="#misread">ou&#772;
                      </rdg>
                   </app>
                   <app>
@@ -2753,7 +2757,7 @@
                <l n="16">
                   <app>
                      <rdg wit="#A">nenbre</rdg>
-                     <rdg wit="#B #V" ana="#abb"><choice><abbr>n<am>e&#772;</am></abbr><expan>ne<ex>n</ex></expan></choice>bre</rdg>
+                     <rdg wit="#B #V" ana="#abb"><choice><abbr>n<am>e&#772;</am>bre</abbr><expan>ne<ex>n</ex>bre</expan></choice></rdg>
                   </app>
                   <app>
                      <rdg wit="#A #B #V"><choice><abbr>u<am>&#xF1A6;</am></abbr><expan>u<ex>os</ex></expan></choice>
@@ -2808,7 +2812,7 @@
                   </app>
                   <app>
                      <rdg wit="#A">coraçon</rdg>
-                     <rdg wit="#B #V" ana="#abb">cora<choice><abbr>c<am>o&#772;</am></abbr><expan>co<ex>n</ex></expan></choice>
+                     <rdg wit="#B #V" ana="#abb #c-pal"><choice><abbr>cora<seg corresp="#c-pal">c</seg><am>o&#772;</am></abbr><expan>cora<seg corresp="#c-pal">c</seg>o<ex>n</ex></expan></choice>
                      </rdg>
                   </app>
                </l>
