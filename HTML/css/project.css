@@ -504,12 +504,12 @@ ins.enhance.scrape::after{
 }
 
 [data-exp=Guide\ letter]::before{
-    content: "‹";
+    content: "⟨"; 
     color: #515050;
 }
 
 [data-exp=Guide\ letter]::after{
-    content: "›";
+    content: "⟩";
     color: #515050;
 }
 

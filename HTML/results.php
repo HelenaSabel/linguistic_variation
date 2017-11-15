@@ -17,8 +17,8 @@
 </head>
 <body><!--#include virtual="ssi/header.html"-->
 <main>
-    <h1><span class="pt gl">Variantes de lingua</span><span class="en">Linguistic
-                    variants</span></h1>
+    <h1><span class="gl">Variantes de lingua</span><span class="en">Linguistic
+                    variants</span><span class="pt">Variantes de língua</h1>
 
     <?php
     $parameters = $_GET['phenomenon'];

@@ -20,7 +20,7 @@
     <h2><span class="pt">O que posso encontrar neste site?</span><span class="en">What you will find in this site</span>
         <span class="gl">Que podo encontrar neste portal?</span>
     </h2>
-    <p><span class="en">Place holder text.</span><span class="gl">Texto modelo.</span><span class="pt">Apesar da abrangente bibliografia que compreende o estudo da lírica profana galego-portuguesa, ficam
+    <p><span class="en">Place holder text.</span><span class="gl">(En curso)</span><span class="pt">Apesar da abrangente bibliografia que compreende o estudo da lírica profana galego-portuguesa, ficam
         ainda muitas incógnitas
         que a crítica literária deve resolver, sendo especialmente numerosas no tocante a sua génese. Justamente, a
         caracterização
@@ -52,7 +52,7 @@
     $xql = REST_PATH . "/db/VTLGP/queries/corpus-composition.xquery";
     echo file_get_contents($xql);
     ?>
-    <p><a href="visualizations.php"><span class="pt gl">Outras <span class="pt">visualizações</span><span class="gl">visualizacións</span> (incompleto)</span><span class="en">Additional visualizations (in progress)</span>.</a></p>
+    <!--<p><a href="visualizations.php"><span class="pt gl">Outras <span class="pt">visualizações</span><span class="gl">visualizacións</span> (incompleto)</span><span class="en">Additional visualizations (in progress)</span>.</a></p>-->
     <h2><span class="pt">Metodologia</span><span class="en">Methodology</span><span class="gl">Metodoloxía<span></h2>
     <p><span class="pt">A nossa proposta para sistematizar o estudo da variação linguística na lírica profana
         galego-portuguesa, consiste
@@ -62,7 +62,7 @@
         faz-se seguindo as normas
         estabelecidas pela Text Encoding Initiative (TEI). Concretamente, utilizamos o método de segmentação em
         paralelo, pois permite a
-        codificação de várias versões dum mesmo texto num único documento.</span><span class="en">Place holder text.</span><span class="gl">Texto modelo.</span></p>
+        codificação de várias versões dum mesmo texto num único documento.</span><span class="en">Place holder text.</span><span class="gl">(En curso)</span></p>
     <p><span class="pt">Esta anotação facilita a identificação de cada variante para posteriormente ser categorizada. Para
         marcá-las e defini-las, utilizamos as chamadas “estruturas de traços”
         (Feature Structures). Assim, criamos uma livraria de traços mínimos com o fim de categorizar as variantes
