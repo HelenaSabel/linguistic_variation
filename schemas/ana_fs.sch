@@ -23,8 +23,8 @@
             <let name="segs" value="string-join(./descendant::tei:seg/@corresp, ' ')"/>
             <assert
                 test="
-                    if (not(descendant::tei:choice) and count($anas) gt 1 and not(descendant::*[@cert])) then
-                        count($anas) &lt;= ./count(tokenize($segs, '\s+')) - count(descendant::tei:seg[@corresp eq '#error']) + count(descendant::tei:gap)
+                    if (not(descendant::tei:choice[tei:orig]) and count($anas) gt 1 and not(descendant::*[@cert])) then
+                        count($anas) &lt;= ./count(tokenize($segs, '\s+')) - count(descendant::tei:seg[@corresp eq '#error']) + count(descendant::tei:gap) + count(descendant::tei:hi)
                     else
                         true()"
                 >Need to segmentate</assert>
@@ -37,21 +37,21 @@
                 >Need to segmentate</assert>-->
             <assert
                 test="
-                    if (descendant::tei:choice and count($anas) gt 1 and not(descendant::*[@cert])) then
-                        count($anas) &lt;= (count(descendant::tei:seg[ancestor::tei:choice]) div 2) + count(descendant::tei:seg[parent::tei:rdg]) + count(descendant::tei:gap)
+                    if (descendant::tei:choice[tei:orig] and count($anas) gt 1 and not(descendant::*[@cert])) then
+                    count($anas) &lt;= (count(descendant::tei:seg[ancestor::tei:choice]) div 2) + count(descendant::tei:seg[parent::tei:rdg]) + count(descendant::tei:gap) + count(descendant::tei:hi)
                     else
                         true()"
                 >Need to segmentate</assert>
             <assert
                 test="
-                    if (not(descendant::tei:choice) and count(tei:rdg) gt 1) then
+                    if (not(descendant::tei:choice[tei:orig]) and count(tei:rdg) gt 1) then
                         count(tei:rdg[@ana]) gt 0
                     else
                         true()"
                 >Missing @ana</assert>
             <assert
                 test="
-                    if (not(descendant::tei:choice) and count(tei:rdg) gt 2 and not(tei:rdg[@wit eq '#A'][@ana eq '#material'])) then
+                    if (not(descendant::tei:choice[tei:orig]) and count(tei:rdg) gt 2 and not(tei:rdg[@wit eq '#A'][@ana eq '#material'])) then
                         count(tei:rdg[@ana]) gt 1
                     else
                         true()"
@@ -139,17 +139,29 @@
         </rule>
         <rule context="tei:choice">
             <assert
-                test="count(tei:reg//tei:ex) eq count(tei:orig//tei:ex)"
-                >Check for consistency</assert>
-
-            <assert
                 test="count(tei:reg//tei:hi) eq count(tei:orig//tei:hi)"
                 >Check for consistency</assert>
         </rule>
-        <rule context="tei:am[not(. eq '&#x0305;')]">
+        <rule context="tei:orig">
+            <report test="descendant::tei:supplied">No supplied elements!</report>
+        </rule>
+        <rule context="tei:reg">
+            <report test="tei:choice">Only expansions</report>
+        </rule>
+        <rule context="tei:abbr">
+            <assert test="descendant::tei:am">Abbreviation mark?</assert>
+            <assert test="following-sibling::tei:expan">Expansion alternative?</assert>
+            <report test="descendant::tei:ex">No expansions!</report>
+            <report test="descendant::tei:supplied">No additions!</report>
+        </rule>
+        <rule context="tei:am">
             <assert test="./text()">Empty am</assert>
-            <assert test="following-sibling::*[1][self::tei:ex]"
-                >All abreviations need to specify their abbreviation mark.</assert>
+            <assert test="ancestor::tei:abbr"
+                >All abreviations marks inside choice/abbr</assert>
+        </rule>
+        <rule context="tei:expan">
+            <assert test="descendant::tei:ex">Expansion</assert>
+            <report test="descendant::tei:am">No abbreviation marks</report>
         </rule>
     </pattern>
 </schema>
