@@ -1,0 +1,2520 @@
+<?xml-model href="../schemas/tei_edition.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/ana_fs.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Edição sinóptica (parcial) da lírica profana galego-portuguesa: Fernão Gonçalves de Seabra</title>
+                <author>
+                    <name>Helena Bermúdez Sabel</name>
+                </author>
+                <respStmt>
+                    <name/>
+                    <resp>Todos os textos foram marcados por <name>Helena Bermudez Sabel</name>. Este
+                  trabalho faz parte da sua tese de doutoramente, dirigida pelas professoras
+                     <name>Pilar Lorenzo Gradín</name> e <name>Mariña ArborAldea</name>
+                    </resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Universidade de Santiago de Compostela</authority>
+                <availability>
+                    <licence>
+                        <ref target="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+                     Attribution-NonCommercial-ShareAlike 4.0 International</ref>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note/>
+            </notesStmt>
+            <sourceDesc>
+                <p>As transcrições dos textos foram realizadas usando como base o trabalho levado a cabo
+               por <name>Mariña Arbor Aldea</name> (para o <bibl>Cancioneiro da Ajuda</bibl>) e
+                  <name>Antonio Fernández Guiadanes</name> (para o <bibl>Cancioneiro da Biblioteca
+                  Nacional</bibl> e o <bibl>Cancioneiro da Vaticana</bibl>). Agradecemos imensamente
+               que estes dous investigadores nos cedessem o seu trabalho inédito.</p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <variantEncoding location="internal" method="parallel-segmentation"/>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="pt">Galego-português</language>
+                <language ident="gl"/>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div>
+                <listWit>
+                    <witness corresp="#A">Cancioneiro da Ajuda</witness>
+                    <witness corresp="#B">Cancioneiro da Biblioteca Nacional</witness>
+                </listWit>
+            </div>
+        </front>
+        <body>
+            <div type="poem" corresp="#A217B384">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#A" hand="#α">
+                                <idno>A217</idno>
+                                <locus from="57r" to="57r"/>
+                            </rdg>
+                            <rdg wit="#B" hand="#d">
+                                <idno>B384</idno>
+                                <locus from="87r" to="87r"/>
+                            </rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#FerGvzSeav"/>
+                </head>
+                <lg type="cobra">
+                    <l n="1">
+                        <app>
+                            <rdg wit="#A" ana="#rev">A<del rend="underdot">y</del>
+                            </rdg>
+                            <rdg wit="#B" ana="#material">
+                                <gap reason="damage" unit="chars" quantity="1"/>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">mia</rdg>
+                            <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">se<seg corresp="#reg">nn</seg>or</rdg>
+                            <rdg wit="#B">senhor</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">a tanto</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">
+                                <seg corresp="#reg">ll</seg>e</rdg>
+                            <rdg wit="#B" ana="#li">
+                                <seg corresp="#li">lhi</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">farei</rdg>
+                            <rdg wit="#B" ana="#y-dip">fare<seg corresp="#y-dip">y</seg>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="2">
+                        <app>
+                            <rdg wit="#A" ana="#reg">
+                                <choice>
+                                    <orig>quero <seg corresp="#reg">ll</seg>eu</orig>
+                                    <reg>quero-<seg corresp="#reg">ll</seg>
+                                        <supplied>e</supplied> eu</reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B">
+                                <choice>
+                                    <orig>querolheu</orig>
+                                    <reg>quero-lh<supplied>e</supplied> eu</reg>
+                                </choice>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">ia</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
+                            <rdg wit="#B">sofrer</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">tod<supplied>o</supplied> outro mal</rdg>
+                        </app>
+                    </l>
+                    <l n="3">
+                        <app>
+                            <rdg wit="#A #B">que</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">me</rdg>
+                            <rdg wit="#B" ana="#dat">mi</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">faça</rdg>
+                            <rdg wit="#B" ana="#c-pal">faca</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">pero</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#back-vow">
+                                <choice>
+                                    <orig>direi u<seg corresp="#back-vow">u</seg>s
+            </orig>
+                                    <reg>direi-u<seg corresp="#back-vow">u</seg>s
+            </reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B" ana="#y-dip #abb">
+                                <choice>
+                                    <orig>dire<seg corresp="#y-dip">y</seg>u<am></am>
+                                        <ex>os</ex>
+                                    </orig>
+                                    <reg>dire<seg corresp="#y-dip">y</seg>-u<am></am>
+                                        <ex>os</ex>
+                                    </reg>
+                                </choice>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">al</rdg>
+                        </app>
+                    </l>
+                    <l n="4">
+                        <app>
+                            <rdg wit="#A #B">de</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">pran</rdg>
+                            <rdg wit="#B" ana="#m-end">pra<seg corresp="#m-end">m</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">aquesto</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">
+                                <seg corresp="#reg">ll</seg>e</rdg>
+                            <rdg wit="#B" ana="#li">
+                                <seg corresp="#li">lhi</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">non</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rerei</rdg>
+                            <rdg wit="#B" ana="#y-dip">sofrere<seg corresp="#y-dip">y</seg>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="5" type="refrao">
+<!--                  mirar facsimil-->
+                        <app>
+                            <rdg wit="#A" ana="#rev">
+                                <subst>
+                                    <del rend="scrape">d</del>
+                                    <add place="margin">D</add>
+                                </subst>eu</rdg>
+                            <rdg wit="#B">deu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">estar</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">muito</rdg>
+                            <rdg wit="#B" ana="#uy">mu<seg corresp="#uy">y</seg>to</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">que a non ueia</rdg>
+                        </app>
+                    </l>
+                </lg>
+                <lg type="cobra">
+                    <l n="6">
+                        <app>
+                            <rdg wit="#A" ana="#material #ff">
+                                <seg corresp="#material">
+                                    <hi rend="guide">S</hi>
+                                </seg>o<seg corresp="#ff">ff</seg>rer</rdg>
+                            <rdg wit="#B">Sofrer</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">quero</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>ro</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">de</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">nunca</rdg>
+                            <rdg wit="#B" ana="#abb">nu<am>̄</am>
+                                <ex>n</ex>ca</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">
+                                <seg corresp="#reg">ll</seg>e</rdg>
+                            <rdg wit="#B" ana="#li">
+                                <seg corresp="#li">lhi</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">dizer</rdg>
+                            <rdg wit="#B" ana="#abb">diz<am>͛</am>
+                                <ex>er</ex>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="7">
+                        <app>
+                            <rdg wit="#A">qual</rdg>
+                            <rdg wit="#B" ana="#equip">que</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">ben</rdg>
+                            <rdg wit="#B" ana="#abb">be<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">
+                                <seg corresp="#reg">ll</seg>e</rdg>
+                            <rdg wit="#B" ana="#li">
+                                <seg corresp="#li">lhi</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">quero</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>ro</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">no</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">meu</rdg>
+                            <rdg wit="#B" ana="#error">mero</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">coraçon</rdg>
+                            <rdg wit="#B" ana="#abb">coraco<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="8">
+                        <app>
+                            <rdg wit="#A">pero</rdg>
+                            <rdg wit="#B" ana="#abb">
+                                <am>ꝑ</am>
+                                <ex>per</ex>o</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">me</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">graue</rdg>
+                            <rdg wit="#B" ana="#abb">g<am>ᷓ</am>
+                                <ex>ra</ex>ue</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">se</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#abb">d<am>’</am>
+                                <ex>eu</ex>s</rdg>
+                            <rdg wit="#B">d<am>̄</am>
+                                <ex>eu</ex>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">me</rdg>
+                            <rdg wit="#B" ana="#dat">mi</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">p<ex>er</ex>don
+                     </rdg>
+                            <rdg wit="#B" ana="#abb">p<ex>er</ex>do<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="9">
+                        <app>
+                            <rdg wit="#A">mais</rdg>
+                            <rdg wit="#B" ana="#error">mai<seg corresp="#error">x</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">de</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">pran</rdg>
+                            <rdg wit="#B" ana="#abb">pra<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">esto</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#abb">no<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                            <rdg wit="#B">non</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">posso</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rer</rdg>
+                            <rdg wit="#B" ana="#error">
+                                <gap reason="error"/>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="10" type="refrao">
+                        <app>
+                            <rdg wit="#A #B">D<supplied>e</supplied> eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#abb">estar muito que a no<am>̄</am>
+                                <ex>n</ex> ueia</rdg>
+                            <rdg wit="#B" ana="#material">
+                                <gap reason="economy"/>
+                            </rdg>
+                        </app>
+                    </l>
+                </lg>
+                <lg type="cobra">
+                    <l n="11">
+                        <app>
+                            <rdg wit="#A" ana="#material">
+                                <seg corresp="#material">
+                                    <hi rend="guide">E</hi>
+                                </seg>
+                            </rdg>
+                            <rdg wit="#B" ana="#material">
+                                <gap reason="damage" quantity="1" unit="chars"/>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg #y-dip">
+                                <choice>
+                                    <orig>soffrer <seg corresp="#reg">ll</seg>e<seg corresp="#y-dip">y</seg>
+                                    </orig>
+                                    <reg>soffrer-<seg corresp="#reg">ll</seg>
+                                        <supplied>e</supplied>-e<seg corresp="#y-dip">y</seg>
+                                    </reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B">
+                                <choice>
+                                    <orig>soffrerlhei</orig>
+                                    <reg>soffrer-lh<supplied>e</supplied>-ei</reg>
+                                </choice>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">qua<am>ᷓ</am>
+                                <ex>n</ex>ta</rdg>
+                            <rdg wit="#B" ana="#abb">
+                                <am>ꝙᷓ</am>
+                                <ex>quan</ex>ta</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">coita</rdg>
+                            <rdg wit="#B" ana="#y-dip">co<seg corresp="#y-dip">y</seg>ta</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">me da</rdg>
+                        </app>
+                    </l>
+                    <l n="12">
+                        <app>
+                            <rdg wit="#A #B">e</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">quant<supplied>?</supplied>
+                            </rdg>
+                            <rdg wit="#B" ana="#abb">
+                                <am>ꝙᷓ</am>
+                                <ex>quan</ex>t<supplied>?</supplied>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">affan</rdg>
+                            <rdg wit="#B" ana="#abb">affa<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" select="weak">outro <seg>mi</seg> auer fazer</rdg>
+                            <rdg wit="#B" ana="#equip" select="weak">outr<am></am>
+                                <ex>os</ex>
+                                <seg>mh</seg> an fezer</rdg>
+                        </app>
+                    </l>
+                    <l n="13">
+                        <app>
+                            <rdg wit="#A #B">e ela</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">faça</rdg>
+                            <rdg wit="#B" ana="#sib-cognate">faza</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">i</rdg>
+                            <rdg wit="#B" ana="#h-monos">
+                                <seg corresp="#h-monos">h</seg>i</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">como</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">quiser</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>ͥ</am>
+                                <ex>ui</ex>
+                                <am>ẜ</am>
+                                <ex>ser</ex>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="14">
+                        <app>
+                            <rdg wit="#A" ana="#mas">mas</rdg>
+                            <rdg wit="#B">maix</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">de</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">pran</rdg>
+                            <rdg wit="#B" ana="#abb">pra<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">esto</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#abb">no<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                            <rdg wit="#B">non</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>rerei</rdg>
+                            <rdg wit="#B" ana="#y-dip">sofrere<seg corresp="#y-dip">y</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">ia</rdg>
+                        </app>
+                    </l>
+                    <l n="15" type="refrao">
+                        <app>
+                            <rdg wit="#A #B">D<supplied>e</supplied> eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#abb">estar muito que a no<am>̄</am>
+                                <ex>n</ex> ueia</rdg>
+                            <rdg wit="#B" ana="#material">
+                                <gap reason="economy"/>
+                            </rdg>
+                        </app>
+                    </l>
+                </lg>
+                <lg type="finda">
+                    <l n="16">
+                        <app>
+                            <rdg wit="#A" ana="#abb #material #capital">
+                                <seg corresp="#material">
+                                    <hi rend="guide">C</hi>
+                                </seg>a no<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                            <rdg wit="#B">
+                                <gap reason="unknown"/>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">posso q<am>̄</am>
+                                <ex>ue</ex> morto no<am>̄</am>
+                                <ex>n</ex> seia</rdg>
+                        </app>
+                    </l>
+                </lg>
+            </div>
+            <div type="poem" corresp="#A218B385">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#A" hand="#α">
+                                <idno>A218</idno>
+                                <locus from="57r" to="57v"/>
+                            </rdg>
+                            <rdg wit="#B" hand="#d">
+                                <idno>B385</idno>
+                                <locus from="87r" to="87r"/>
+                            </rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#FerGvzSeav"/>
+                </head>
+                <lg type="cobra">
+                    <l n="1">
+                        <app>
+                            <rdg wit="#A #B">Sazon</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">sei</rdg>
+                            <rdg wit="#B" ana="#y-dip">se<seg corresp="#y-dip">y</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">ora fremosa</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">mia</rdg>
+                            <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">se<seg corresp="#reg">nn</seg>or</rdg>
+                            <rdg wit="#B">senhor</rdg>
+                        </app>
+                    </l>
+                    <l n="2">
+                        <app>
+                            <rdg wit="#A #B">que eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">auia</rdg>
+                            <rdg wit="#B" ana="#y-minin">au<seg corresp="#y-minin">y</seg>a</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">de uiuer</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">gran</rdg>
+                            <rdg wit="#B" ana="#m-end">gra<seg corresp="#m-end">m</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">sabor</rdg>
+                        </app>
+                    </l>
+                    <l n="3">
+                        <app>
+                            <rdg wit="#A">mais</rdg>
+                            <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">so<am>̄</am>
+                                <ex>̃</ex>o</rdg>
+                            <rdg wit="#B" ana="#denas">soo</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">por uos</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">tan</rdg>
+                            <rdg wit="#B" ana="#m-end">ta<seg corresp="#m-end">m</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">coitado</rdg>
+                            <rdg wit="#B" ana="#y-dip">co<seg corresp="#y-dip">y</seg>tado</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">d<supplied>e</supplied> amor</rdg>
+                        </app>
+                    </l>
+                    <l n="4" type="refrao">
+                        <app>
+                            <rdg wit="#A">que</rdg>
+                            <rdg wit="#B" ana="#capital">
+                                <seg corresp="#capital">Q</seg>ue</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">me</rdg>
+                            <rdg wit="#B" ana="#dat">mi</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">faz ora</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">mia</rdg>
+                            <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">morte deseiar</rdg>
+                        </app>
+                    </l>
+                </lg>
+                <lg type="cobra">
+                    <l n="5">
+                        <app>
+                            <rdg wit="#A">Pois</rdg>
+                            <rdg wit="#B" ana="#y-dip">Po<seg corresp="#y-dip">y</seg>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#denas" cert="low">neun</rdg>
+                            <rdg wit="#B" ana="#abb #h-monos">ne<am>̄</am>
+                                <ex>n</ex>
+                                <seg corresp="#h-monos">h</seg>u<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">doo</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">non</rdg>
+                            <rdg wit="#B" ana="#abb">no<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">auedes de</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" select="strong">mi<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                            <rdg wit="#B" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j</seg>
+                                <am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="6">
+                        <app>
+                            <rdg wit="#A" ana="#abb #reg">se<am>̄</am>
+                                <ex>n</ex>nor</rdg>
+                            <rdg wit="#B">senhor</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">fremosa</rdg>
+                            <rdg wit="#B" ana="#abb">f<am>͛</am>
+                                <ex>re</ex>mosa</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">graue</rdg>
+                            <rdg wit="#B" ana="#abb">g<am>ᷓ</am>
+                                <ex>ra</ex>ue</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">dia u<am></am>
+                                <ex>os</ex> ui</rdg>
+                        </app>
+                    </l>
+                    <l n="7">
+                        <app>
+                            <rdg wit="#A #B">ca</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#denas">soo</rdg>
+                            <rdg wit="#B" ana="#cognate-vb">son</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">por</rdg>
+                            <rdg wit="#B" ana="#abb">p<am>᷑</am>
+                                <ex>or</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">uos</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">tan</rdg>
+                            <rdg wit="#B" ana="#abb">ta<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">coitado des i</rdg>
+                        </app>
+                    </l>
+                    <l n="8" type="refrao">
+                        <app>
+                            <rdg wit="#A" ana="#material">
+                                <seg corresp="#material">
+                                    <hi rend="guide">Q</hi>
+                                </seg>ue</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">me</rdg>
+                            <rdg wit="#B" ana="#dat">mi</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">faz ora</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">mia</rdg>
+                            <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">morte deseiar</rdg>
+                        </app>
+                    </l>
+                </lg>
+            </div>
+            <div type="poem" corresp="#A219B386">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#A" hand="#α">
+                                <idno>A219</idno>
+                                <locus from="57v" to="57v"/>
+                            </rdg>
+                            <rdg wit="#B" hand="#d">
+                                <idno>B386</idno>
+                                <locus from="87r" to="87r"/>
+                            </rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#FerGvzSeav"/>
+                </head>
+                <lg type="cobra">
+                    <l n="1">
+                        <app>
+                            <rdg wit="#A #B">Gradesc<supplied>?</supplied> a</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">deus</rdg>
+                            <rdg wit="#B" ana="#abb">de<am></am>
+                                <ex>us</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">que me ueio</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">morrer</rdg>
+                            <rdg wit="#B" ana="#misread">mo<seg corresp="#misread">i</seg>rer</rdg>
+                        </app>
+                    </l>
+                    <l n="2">
+                        <app>
+                            <rdg wit="#A #B">ante que</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#mas">mas</rdg>
+                            <rdg wit="#B">mays</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">me</rdg>
+                            <rdg wit="#B" ana="#error">
+                                <gap reason="error"/>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">soubessen</rdg>
+                            <rdg wit="#B" ana="#m-end">soubesse<seg corresp="#m-end">m</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">meu mal</rdg>
+                        </app>
+                    </l>
+                    <l n="3">
+                        <app>
+                            <rdg wit="#A">ca</rdg>
+                            <rdg wit="#B" ana="#ca-que">que</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#çe">re<seg corresp="#çe">ç</seg>eei</rdg>
+                            <rdg wit="#B" ana="#y-dip #h-ot">rece<seg corresp="#h-ot">h</seg>e<seg corresp="#y-dip">y</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" select="weak">
+                                <choice>
+                                    <orig>saberen mio</orig>
+                                    <reg>saberen-mi-o</reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B" ana="#h-minin" select="weak">
+                                <choice>
+                                    <orig>saberen m<seg corresp="#h-minin">h</seg>o</orig>
+                                    <reg>saberen-m<seg corresp="#h-minin">h</seg>-o</reg>
+                                </choice>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">mais</rdg>
+                            <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">d<supplied>e</supplied> al</rdg>
+                        </app>
+                    </l>
+                    <l n="4">
+                        <app>
+                            <rdg wit="#A #B">e os que</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">cuidan</rdg>
+                            <rdg wit="#B" ana="#misread #uy #m-end">
+                                <seg corresp="#misread">e</seg>u<seg corresp="#uy">y</seg>da<seg corresp="#m-end">m</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">mais end</rdg>
+                            <rdg wit="#B" ana="#y-dip">en ma<seg corresp="#y-dip">y</seg>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">a saber</rdg>
+                        </app>
+                    </l>
+                    <l n="5" type="refrao">
+                        <app>
+                            <rdg wit="#A" ana="#capital">
+                                <choice>
+                                    <orig>
+                                        <seg corresp="#capital">P</seg>raz me</orig>
+                                    <reg>
+                                        <seg corresp="#capital">P</seg>raz-me</reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B" ana="#dat">
+                                <choice>
+                                    <orig>praz <seg corresp="#dat">mi</seg>
+                                    </orig>
+                                    <reg>praz-<seg corresp="#dat">mi</seg>
+                                    </reg>
+                                </choice>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">muito</rdg>
+                            <rdg wit="#B" ana="#uy">mu<seg corresp="#uy">y</seg>to</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">porque</rdg>
+                            <rdg wit="#B" ana="#equip">de que</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">non</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">saben ren</rdg>
+                            <rdg wit="#B" ana="#material">sa<gap reason="damage" unit="chars" quantity="5"/>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="6" type="refrao">
+                        <app>
+                            <rdg wit="#A #B">de</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#syn">que</rdg>
+                            <rdg wit="#B">com<supplied>?</supplied>eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">moiro</rdg>
+                            <rdg wit="#B" ana="#y-dip">mo<seg corresp="#y-dip">y</seg>ro</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">nen como nen por</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#m-end">que<seg corresp="#m-end">m</seg>
+                            </rdg>
+                            <rdg wit="#B" ana="#equip">que</rdg>
+                        </app>
+                    </l>
+                </lg>
+                <lg type="cobra">
+                    <l n="7">
+                        <app>
+                            <rdg wit="#A" ana="#material">
+                                <seg corresp="#material">
+                                    <hi rend="guide">D</hi>
+                                </seg>e</rdg>
+                            <rdg wit="#B">De</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">m<supplied>?</supplied>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">entenderen</rdg>
+                            <rdg wit="#B" ana="#abb">ente<am>̄</am>
+                                <ex>n</ex>dere<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">auia</rdg>
+                            <rdg wit="#B" ana="#y-minin">au<seg corresp="#y-minin">y</seg>a</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">pauor</rdg>
+                        </app>
+                    </l>
+                    <l n="8">
+                        <app>
+                            <rdg wit="#A #B">o</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">que</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">m<supplied>e</supplied> eu</rdg>
+                            <rdg wit="#B" ana="#syn">en</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">sei</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">eno</rdg>
+                            <rdg wit="#B" ana="#apheresis">no</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">meu</rdg>
+                            <rdg wit="#B" ana="#misread">me<seg corresp="#misread">n</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">coraçon</rdg>
+                            <rdg wit="#B" ana="#abb">coraco<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="9">
+                        <app>
+                            <rdg wit="#A" ana="#mas">mas</rdg>
+                            <rdg wit="#B">mays</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">ia q<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">moir<supplied>?</supplied>
+                            </rdg>
+                            <rdg wit="#B" ana="#y-dip">mo<seg corresp="#y-dip">y</seg>r<supplied>?</supplied>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">assi</rdg>
+                            <rdg wit="#B" ana="#error" cert="low">ase</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#abb">d<am>’</am>
+                                <ex>eu</ex>s</rdg>
+                            <rdg wit="#B">d<am>̄</am>
+                                <ex>eu</ex>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">me</rdg>
+                            <rdg wit="#B" ana="#dat">mi</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">perdon</rdg>
+                            <rdg wit="#B" ana="#abb">p<ex>er</ex>do<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="10">
+                        <app>
+                            <rdg wit="#A #B">os q<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">uiueren</rdg>
+                            <rdg wit="#B" ana="#equip">hi uyuem</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">pois</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">eu</rdg>
+                            <rdg wit="#B" ana="#misread">en</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">morto for</rdg>
+                        </app>
+                    </l>
+                    <l n="11" type="refrao">
+                        <app>
+                            <rdg wit="#A" ana="#material">
+                                <choice>
+                                    <orig>
+                                        <seg corresp="#material">
+                                            <hi rend="guide">P</hi>
+                                        </seg>raz me</orig>
+                                    <reg>
+                                        <seg corresp="#material">
+                                            <hi rend="guide">P</hi>
+                                        </seg>raz-me</reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B" ana="#dat">
+                                <choice>
+                                    <orig>Praz<seg corresp="#dat">mi</seg>
+                                    </orig>
+                                    <reg>Praz-<seg corresp="#dat">mi</seg>
+                                    </reg>
+                                </choice>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#punct">muito de que non s r<seg corresp="#punct">.</seg>
+                            </rdg>
+                            <rdg wit="#B" ana="#material">
+                                <gap reason="economy"/>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="12" type="refrao">
+                        <app>
+                            <rdg wit="#A #B">
+                                <gap reason="economy"/>
+                            </rdg>
+                        </app>
+                    </l>
+                </lg>
+                <lg type="cobra">
+                    <l n="13">
+                        <app>
+                            <rdg wit="#A #B">Pero</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">
+                                <choice>
+                                    <orig>chorauam</orig>
+                                    <reg>choraua-me</reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B" ana="#abb">chora<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">estes</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">o<seg corresp="#reg">ll</seg>os</rdg>
+                            <rdg wit="#B" ana="#abb">olh<am></am>
+                                <ex>os</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">meus</rdg>
+                            <rdg wit="#B" ana="#abb">me<am></am>
+                                <ex>us</ex>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="14">
+                        <app>
+                            <rdg wit="#A">con</rdg>
+                            <rdg wit="#B" ana="#abb">
+                                <am>ꝯ</am>
+                                <ex>con</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">mui</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">gran</rdg>
+                            <rdg wit="#B" ana="#abb #m-end">g<am>ᷓ</am>
+                                <ex>ra</ex>
+                                <seg corresp="#m-end">m</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">coita</rdg>
+                            <rdg wit="#B" ana="#y-dip">co<seg corresp="#y-dip">y</seg>ta</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">senpre</rdg>
+                            <rdg wit="#B" ana="#abb">semp<am>͛</am>
+                                <ex>re</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">me</rdg>
+                            <rdg wit="#B" ana="#equip">m<supplied>e</supplied> eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">calei</rdg>
+                            <rdg wit="#B" ana="#y-dip">cale<seg corresp="#y-dip">y</seg>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="15">
+                        <app>
+                            <rdg wit="#A">que</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">nunca</rdg>
+                            <rdg wit="#B" ana="#abb">nu<am>̄</am>
+                                <ex>n</ex>ca</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">dix<supplied>?</supplied>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">u<am>̄</am>
+                                <ex>̃</ex>a</rdg>
+                            <rdg wit="#B" ana="#nh" cert="low">u<am>̄</am>
+                                <ex>n</ex>ha</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">cousa</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">que</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">sei</rdg>
+                            <rdg wit="#B" ana="#y-dip">se<seg corresp="#y-dip">y</seg>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="16">
+                        <app>
+                            <rdg wit="#A">mais</rdg>
+                            <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">como</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">quer</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>r</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">que</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" select="weak">mi</rdg>
+                            <rdg wit="#B" ana="#error">
+                                <gap reason="error"/>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">o aia co<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#abb">d<am>’</am>
+                                <ex>eu</ex>s</rdg>
+                            <rdg wit="#B">d<am>̄</am>
+                                <ex>eu</ex>s</rdg>
+                        </app>
+                    </l>
+                    <l n="17" type="refrao">
+                        <app>
+                            <rdg wit="#A" ana="#material">
+                                <choice>
+                                    <orig>
+                                        <seg corresp="#material">
+                                            <hi rend="guide">P</hi>
+                                        </seg>raz me</orig>
+                                    <reg>
+                                        <seg corresp="#material">
+                                            <hi rend="guide">P</hi>
+                                        </seg>raz-me</reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B" ana="#dat">
+                                <choice>
+                                    <orig>praz<seg corresp="#dat">mi</seg>
+                                    </orig>
+                                    <reg>praz-<seg corresp="#dat">mi</seg>
+                                    </reg>
+                                </choice>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">muito</rdg>
+                            <rdg wit="#B" ana="#uy">mu<seg corresp="#uy">y</seg>to</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">porque non saben. r.</rdg>
+                            <rdg wit="#B" ana="#material">
+                                <gap reason="economy"/>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="18" type="refrao">
+                        <app>
+                            <rdg wit="#A #B">
+                                <gap reason="economy"/>
+                            </rdg>
+                        </app>
+                    </l>
+                </lg>
+                <lg type="finda">
+                    <l n="19">
+                        <app>
+                            <rdg wit="#A #B">E</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">ben</rdg>
+                            <rdg wit="#B" ana="#lineta">be</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">te<seg corresp="#reg">nn</seg>o</rdg>
+                            <rdg wit="#B" ana="#equip">tenh<supplied>o</supplied> eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">que</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">me</rdg>
+                            <rdg wit="#B" ana="#dat">mi</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">fez</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#abb">d<am>’</am>
+                                <ex>eu</ex>s</rdg>
+                            <rdg wit="#B">d<am>̄</am>
+                                <ex>eu</ex>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#y-vow">
+                                <seg corresp="#y-vow">y</seg>
+                            </rdg>
+                            <rdg wit="#B" ana="#h-monos">
+                                <seg corresp="#h-monos">h</seg>i</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">ben</rdg>
+                            <rdg wit="#B" ana="#abb">be<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="20">
+                        <app>
+                            <rdg wit="#A">porque</rdg>
+                            <rdg wit="#B" ana="#abb">porq<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">mia</rdg>
+                            <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">coita</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">non</rdg>
+                            <rdg wit="#B" ana="#abb">no<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">forçou</rdg>
+                            <rdg wit="#B" ana="#c-pal">forcou</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">meu</rdg>
+                            <rdg wit="#B" ana="#equip">o</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">sen</rdg>
+                        </app>
+                    </l>
+                </lg>
+            </div>
+            <div type="poem" corresp="#A220B387">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#A" hand="#α">
+                                <idno>A220</idno>
+                                <locus from="57v" to="58r"/>
+                            </rdg>
+                            <rdg wit="#B" hand="#d">
+                                <idno>B387</idno>
+                                <locus from="87r" to="87v"/>
+                            </rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#FerGvzSeav"/>
+                </head>
+                <lg type="cobra">
+                    <l n="1">
+                        <app>
+                            <rdg wit="#A">Pois</rdg>
+                            <rdg wit="#B" ana="#y-dip">Po<seg corresp="#y-dip">y</seg>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#p1i">ouui</rdg>
+                            <rdg wit="#B" ana="#equip">
+                                <choice>
+                                    <orig>ouue<seg corresp="#equip">m</seg>
+                                    </orig>
+                                    <reg>ouue-<seg corresp="#equip">me</seg>
+                                    </reg>
+                                </choice>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">o mal que eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#ff">so<seg corresp="#ff">ff</seg>ro</rdg>
+                            <rdg wit="#B">sofro</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">pu<seg corresp="#reg">nn</seg>ei</rdg>
+                            <rdg wit="#B" ana="#y-dip">punhe<seg corresp="#y-dip">y</seg>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="2">
+                        <app>
+                            <rdg wit="#A #B">de o negar</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">assi</rdg>
+                            <rdg wit="#B" ana="#y-vow">ass<seg corresp="#y-vow">y</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">deus</rdg>
+                            <rdg wit="#B" ana="#abb">de<am></am>
+                                <ex>us</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">me</rdg>
+                            <rdg wit="#B" ana="#dat">mi</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">perdon</rdg>
+                            <rdg wit="#B" ana="#abb">p<ex>er</ex>don</rdg>
+                        </app>
+                    </l>
+                    <l n="3">
+                        <app>
+                            <rdg wit="#A #B">e</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">queren</rdg>
+                            <rdg wit="#B" ana="#m-end">quere<seg corresp="#m-end">m</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">deuinar</rdg>
+                            <rdg wit="#B">deuinhar</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">meu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">coraçon</rdg>
+                            <rdg wit="#B" ana="#c-pal">coracon</rdg>
+                        </app>
+                    </l>
+                    <l n="4">
+                        <app>
+                            <rdg wit="#A #B">e non</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">poden</rdg>
+                            <rdg wit="#B" ana="#m-end">pode<seg corresp="#m-end">m</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">mailo</rdg>
+                            <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>lo</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">mal que eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">ei</rdg>
+                            <rdg wit="#B" ana="#y-dip">e<seg corresp="#y-dip">y</seg>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="5" type="refrao">
+                        <app>
+                            <rdg wit="#A">
+                                <gap reason="unfinished"/>ois</rdg>
+                            <rdg wit="#B" ana="#y-dip">Po<seg corresp="#y-dip">y</seg>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">que eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">pu<seg corresp="#reg">nn</seg>o</rdg>
+                            <rdg wit="#B">punho</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">sempre</rdg>
+                            <rdg wit="#B" ana="#abb">se<am>̄</am>
+                                <ex>n</ex>pre</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">eno</rdg>
+                            <rdg wit="#B" ana="#apheresis">no</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">negar</rdg>
+                            <rdg wit="#B" ana="#misread">
+                                <seg corresp="#misread">u</seg>egar</rdg>
+                        </app>
+                    </l>
+                    <l n="6" type="refrao">
+                        <app>
+                            <rdg wit="#A">maldito</rdg>
+                            <rdg wit="#B" ana="#error">ma<seg corresp="#error">i</seg>dito</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">seia quen</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" select="weak">mi</rdg>
+                            <rdg wit="#B" ana="#h-minin" select="weak">m<seg corresp="#h-minin">h</seg>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">o</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">deui<ex>n</ex>nar</rdg>
+                            <rdg wit="#B">deuinhar</rdg>
+                        </app>
+                    </l>
+                </lg>
+                <lg type="cobra">
+                    <l n="7">
+                        <app>
+                            <rdg wit="#A" ana="#material">
+                                <seg corresp="#material">
+                                    <hi rend="guide">E</hi>
+                                </seg>
+                            </rdg>
+                            <rdg wit="#B">E</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">non</rdg>
+                            <rdg wit="#B" ana="#abb">no<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">pode</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">per</rdg>
+                            <rdg wit="#B" ana="#abb">
+                                <am>ꝑ</am>
+                                <ex>per</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B" select="strong">
+                                <seg>mi</seg> saber meu mal</rdg>
+                        </app>
+                    </l>
+                    <l n="8">
+                        <app>
+                            <rdg wit="#A #B">sen</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#abb #reg">
+                                <choice>
+                                    <orig>deuin<am>̄</am>
+                                        <ex>n</ex> alo</orig>
+                                    <reg>deuin<am>̄</am>
+                                        <ex>n</ex>a-lo</reg>
+                                </choice>
+                            </rdg>
+                            <rdg wit="#B">
+                                <choice>
+                                    <orig>deuinha lo</orig>
+                                    <reg>deuinha-lo</reg>
+                                </choice>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">nen</rdg>
+                            <rdg wit="#B" ana="#abb">ne<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">ei</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">en</rdg>
+                            <rdg wit="#B" ana="#error">
+                                <gap reason="error"/>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">pauor</rdg>
+                        </app>
+                    </l>
+                    <l n="9">
+                        <app>
+                            <rdg wit="#A">nen</rdg>
+                            <rdg wit="#B" ana="#abb">ne<am>̄</am>
+                                <ex>n</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">ia</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#per">per</rdg>
+                            <rdg wit="#B">p<am>᷑</am>
+                                <ex>or</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">outr<supplied>o</supplied> enquat eu</rdg>
+                            <rdg wit="#B" ana="#equip">out<am>͛</am>
+                                <ex>re</ex>m ment<am>͛</am>
+                                <ex>r<supplied>e</supplied> e</ex>u</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">uiuo</rdg>
+                            <rdg wit="#B" ana="#misread">ui<seg corresp="#misread">n</seg>o</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">for</rdg>
+                        </app>
+                    </l>
+                    <l n="10">
+                        <app>
+                            <rdg wit="#A #B">o</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">que</rdg>
+                            <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                <ex>ue</ex>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">cuid<supplied>?</supplied>e</rdg>
+                            <rdg wit="#B" ana="#error">
+                                <gap reason="error"/>
+                            </rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">digo que</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A">cuid<supplied>o</supplied> al</rdg>
+                            <rdg wit="#B" ana="#equip">cuydar</rdg>
+                        </app>
+                    </l>
+                    <l n="11" type="refrao">
+                        <app>
+                            <rdg wit="#A" ana="#material">
+                                <seg corresp="#material">
+                                    <hi rend="guide">P</hi>
+                                </seg>ois</rdg>
+                            <rdg wit="#B" ana="#y-dip">Po<seg corresp="#y-dip">y</seg>s</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A #B">que eu</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#reg">pu<seg corresp="#reg">nn</seg>o</rdg>
+                            <rdg wit="#B">punho</rdg>
+                        </app>
+                        <app>
+                            <rdg wit="#A" ana="#punct">sempre<seg corresp="#punct">.</seg>
+                            </rdg>
+                            <rdg wit="#B" ana="#abb #material">semp<am>͛</am>
+                                <ex>re</ex> e. n.
+                        <gap reason="economy"/>
+                            </rdg>
+                        </app>
+                    </l>
+                    <l n="12" type="refrao">
+                        <app>
+                            <rdg wit="#A #B">
+                                <gap reason="economy"/>
+                            </rdg>
+                        </app>
+                    </l>
+                </lg>
+            </div>
+            <div type="poem" corresp="#A221B389">
+                <head>
+                    <title>
+                        <app>
+                            <rdg wit="#A" hand="#α">
+                                <idno>A221</idno>
+                                <locus from="58r" to="58r"/>
+                            </rdg>
+                            <rdg wit="#B" hand="#d">
+                                <idno>B389</idno>
+                                <locus from="87v" to="88r"/>
+                            </rdg>
+                        </app>
+                    </title>
+                    <name role="author" ref="#FerGvzSeav"/>
+                </head>
+                <lg type="cobra">
+                    <lg type="cobra">
+                        <l n="1">
+                            <app>
+                                <rdg wit="#A #B">Nostro</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#reg">se<seg corresp="#reg">nn</seg>or</rdg>
+                                <rdg wit="#B">senhor</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">quen</rdg>
+                                <rdg wit="#B" ana="#equip">que</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">m<supplied>e</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#g-cons">og<supplied>e</supplied>
+                                </rdg>
+                                <rdg wit="#B">oi<supplied>e</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">a</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#pro-nas" select="strong">
+                                    <seg corresp="#pro-nas">min</seg>
+                                </rdg>
+                                <rdg wit="#B" ana="#j-minin" select="strong">m<seg corresp="#j-minin">j</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">guisasse</rdg>
+                                <rdg wit="#B" ana="#y-minin">gu<seg corresp="#y-minin">y</seg>sasse</rdg>
+                            </app>
+                        </l>
+                        <l n="2">
+                            <app>
+                                <rdg wit="#A #B">o que eu nunca guisad<supplied>?</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">auerei</rdg>
+                                <rdg wit="#B" ana="#misread #y-dip">a<seg corresp="#misread">n</seg>ere<seg corresp="#y-dip">y</seg>
+                                </rdg>
+                            </app>
+                        </l>
+                        <l n="3">
+                            <app>
+                                <rdg wit="#A #B">a</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">meu</rdg>
+                                <rdg wit="#B" ana="#misread">me<seg corresp="#misread">n</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">cuidar</rdg>
+                                <rdg wit="#B" ana="#uy">cu<seg corresp="#uy">y</seg>dar</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">per</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">quanto</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>ᷓ</am>
+                                    <ex>ua</ex>nto</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">poder</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">ei</rdg>
+                                <rdg wit="#B" ana="#y-dip">e<seg corresp="#y-dip">y</seg>
+                                </rdg>
+                            </app>
+                        </l>
+                        <l n="4">
+                            <app>
+                                <rdg wit="#A #B">ca</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#abb">no<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                                <rdg wit="#B">non</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">sei</rdg>
+                                <rdg wit="#B" ana="#y-dip">se<seg corresp="#y-dip">y</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">oi<supplied>?</supplied> eu</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">quen</rdg>
+                                <rdg wit="#B" ana="#abb">que<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">s<supplied>?</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">auenturasse</rdg>
+                                <rdg wit="#B" ana="#abb">aue<am>̄</am>
+                                    <ex>n</ex>turasse</rdg>
+                            </app>
+                        </l>
+                        <l n="5">
+                            <app>
+                                <rdg wit="#A #B">ao que meu non</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">ous<supplied>o</supplied>
+                                </rdg>
+                                <rdg wit="#B" ana="#misread">ons</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">auenturar</rdg>
+                            </app>
+                        </l>
+                        <l n="6">
+                            <app>
+                                <rdg wit="#A #B">pero me</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#g-cons">ueg<supplied>?</supplied>
+                                </rdg>
+                                <rdg wit="#B">uei<supplied>?</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">en mayor</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">coit<supplied>?</supplied>
+                                </rdg>
+                                <rdg wit="#B" ana="#y-dip">co<seg corresp="#y-dip">y</seg>t<supplied>?</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">andar</rdg>
+                            </app>
+                        </l>
+                        <l n="7">
+                            <app>
+                                <rdg wit="#A #B">ca outra</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">coita</rdg>
+                                <rdg wit="#B" ana="#y-dip">co<seg corresp="#y-dip">y</seg>ta</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">que</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#g-cons">og<supplied>?</supplied>
+                                </rdg>
+                                <rdg wit="#B">oi<supplied>?</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">om<supplied>?</supplied> achasse</rdg>
+                            </app>
+                        </l>
+                    </lg>
+                    <lg type="cobra">
+                        <l n="8">
+                            <app>
+                                <rdg wit="#A">Algun</rdg>
+                                <rdg wit="#B" ana="#abb">Algu<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">amigo meu</rdg>
+                                <rdg wit="#B" ana="#trans">meu amigo</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">
+                                    <choice>
+                                        <orig>se sa cordasse</orig>
+                                        <reg>se s<supplied>e</supplied> acordasse</reg>
+                                    </choice>
+                                </rdg>
+                                <rdg wit="#B" ana="#ss-inic">
+                                    <choice>
+                                        <orig>sea corda<seg corresp="#ss-inic">ss</seg>e</orig>
+                                        <reg>se <seg corresp="#ss-inic">ss</seg>
+                                            <supplied>e</supplied> acorda<seg corresp="#ss-inic">ss</seg>e</reg>
+                                    </choice>
+                                </rdg>
+                            </app>
+                        </l>
+                        <l n="9">
+                            <app>
+                                <rdg wit="#A #B">e</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">acordado</rdg>
+                                <rdg wit="#B" ana="#error">acordo</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">foss<supplied>?</supplied> en me</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">partir</rdg>
+                                <rdg wit="#B" ana="#abb">p<am>̲</am>
+                                    <ex>ar</ex>tir</rdg>
+                            </app>
+                        </l>
+                        <l n="10">
+                            <app>
+                                <rdg wit="#A #B">ante da</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">terra</rdg>
+                                <rdg wit="#B" ana="#misread">te<seg corresp="#misread">i</seg>ra</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">e</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">
+                                    <choice>
+                                        <orig>leixasse mir</orig>
+                                        <reg>leixasse-m<supplied>e</supplied> ir</reg>
+                                    </choice>
+                                </rdg>
+                                <rdg wit="#B">
+                                    <choice>
+                                        <orig>leixassemir</orig>
+                                        <reg>leixasse-m<supplied>e</supplied> ir</reg>
+                                    </choice>
+                                </rdg>
+                            </app>
+                        </l>
+                        <l n="11">
+                            <app>
+                                <rdg wit="#A #B">e</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">pois</rdg>
+                                <rdg wit="#B" ana="#y-dip">po<seg corresp="#y-dip">y</seg>s</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">eu</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">ido</rdg>
+                                <rdg wit="#B" ana="#h-minin">
+                                    <seg corresp="#h-minin">h</seg>ido</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#syn">foss<seg corresp="#syn">e</seg>
+                                </rdg>
+                                <rdg wit="#B">foss<supplied>e</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">ele chegasse</rdg>
+                            </app>
+                        </l>
+                        <l n="12">
+                            <app>
+                                <rdg wit="#A">u</rdg>
+                                <rdg wit="#B" ana="#h-monos">
+                                    <seg corresp="#h-monos">h</seg>u</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">de chegar</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">eu ei</rdg>
+                                <rdg wit="#B" ana="#equip">ouue</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">mui</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">gran</rdg>
+                                <rdg wit="#B" ana="#abb #m-end">g<am>ᷓ</am>
+                                    <ex>ra</ex>
+                                    <seg corresp="#m-end">m</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">sabor</rdg>
+                            </app>
+                        </l>
+                        <l n="13">
+                            <app>
+                                <rdg wit="#A">u</rdg>
+                                <rdg wit="#B" ana="#error">ou</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">est a mui</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">fremosa</rdg>
+                                <rdg wit="#B" ana="#error">
+                                    <seg corresp="#error">f</seg>mosa</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">mia</rdg>
+                                <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#reg">se<am>̄</am>
+                                    <ex>n</ex>nor</rdg>
+                                <rdg wit="#B">senh<am>ᷣ</am>
+                                    <ex>or</ex>
+                                </rdg>
+                            </app>
+                        </l>
+                        <l n="14">
+                            <app>
+                                <rdg wit="#A #B">e</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">llo</rdg>
+                                <rdg wit="#B" ana="#equip" cert="low">o</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">gran</rdg>
+                                <rdg wit="#B" ana="#abb #m-end">g<am>ᷓ</am>
+                                    <ex>ra</ex>
+                                    <seg corresp="#m-end">m</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">ben</rdg>
+                                <rdg wit="#B" ana="#abb">be<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">que</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#reg">
+                                    <seg corresp="#reg">ll</seg>
+                                    <supplied>?</supplied>
+                                </rdg>
+                                <rdg wit="#B">lh<supplied>?</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">eu</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">quero</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>ro</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">contasse</rdg>
+                                <rdg wit="#B" ana="#abb">co<am>̄</am>
+                                    <ex>n</ex>tasse</rdg>
+                            </app>
+                        </l>
+                    </lg>
+                    <lg type="cobra">
+                        <l n="15">
+                            <app>
+                                <rdg wit="#A" ana="#material">
+                                    <seg corresp="#material">
+                                        <hi rend="guide">E</hi>
+                                    </seg>
+                                </rdg>
+                                <rdg wit="#B">E</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">me</rdg>
+                                <rdg wit="#B" ana="#dat">mi</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">dissesse pois se</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#reg">
+                                    <seg corresp="#reg">ll</seg>e</rdg>
+                                <rdg wit="#B" ana="#li">
+                                    <seg corresp="#li">lhi</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">pesasse</rdg>
+                            </app>
+                        </l>
+                        <l n="16">
+                            <app>
+                                <rdg wit="#A">pero</rdg>
+                                <rdg wit="#B" ana="#abb">
+                                    <am>ꝑ</am>
+                                    <ex>per</ex>o</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#error">mm</rdg>
+                                <rdg wit="#B" select="weak">mh</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">a</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#pro-nas" select="strong">mi<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                                <rdg wit="#B" select="strong">mi</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">pesaria</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">muit<supplied>?</supplied>
+                                </rdg>
+                                <rdg wit="#B" ana="#error">
+                                    <gap reason="error"/>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">en</rdg>
+                            </app>
+                        </l>
+                        <l n="17">
+                            <app>
+                                <rdg wit="#A #B">se d<am>͛</am>
+                                    <ex>eu</ex>s</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">me</rdg>
+                                <rdg wit="#B" ana="#dat">mj</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#reg">ua<seg corresp="#reg">ll</seg>a</rdg>
+                                <rdg wit="#B">ualha</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#mas">mas</rdg>
+                                <rdg wit="#B">mays</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">faria</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">ben</rdg>
+                                <rdg wit="#B" ana="#abb">be<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                            </app>
+                        </l>
+                        <l n="18">
+                            <app>
+                                <rdg wit="#A">quand<supplied>?</supplied>
+                                </rdg>
+                                <rdg wit="#B" ana="#abb">qua<am>̄</am>
+                                    <ex>n</ex>d<supplied>?</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">eu</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">uiss<supplied>?</supplied>
+                                </rdg>
+                                <rdg wit="#B" ana="#misread">urss</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">ela</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">pois</rdg>
+                                <rdg wit="#B" ana="#error">
+                                    <gap reason="error"/>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>
+                                </rdg>
+                                <rdg wit="#B" ana="#misread">qnaudo</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#reg">
+                                    <seg corresp="#reg">ll</seg>e</rdg>
+                                <rdg wit="#B" ana="#li">
+                                    <seg corresp="#li">lhi</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">iurasse</rdg>
+                            </app>
+                        </l>
+                        <l n="19">
+                            <app>
+                                <rdg wit="#A">qual</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>ᷓ</am>
+                                    <ex>ua</ex>l</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">maior</rdg>
+                                <rdg wit="#B" ana="#y-yod">mayor</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">iura</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">ssoubesse</rdg>
+                                <rdg wit="#B" ana="#equip">podesse</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">fazer</rdg>
+                            </app>
+                        </l>
+                        <l n="20">
+                            <app>
+                                <rdg wit="#A">que</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">nunca</rdg>
+                                <rdg wit="#B" ana="#abb">nu<am>̄</am>
+                                    <ex>n</ex>ca</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#reg">
+                                    <seg corresp="#reg">ll</seg>e</rdg>
+                                <rdg wit="#B" ana="#li">
+                                    <seg corresp="#li">lhi</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">soubera</rdg>
+                                <rdg wit="#B" ana="#abb">soub<am>’</am>
+                                    <ex>er</ex>a</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">ben</rdg>
+                                <rdg wit="#B" ana="#abb">be<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">querer</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>rer</rdg>
+                            </app>
+                        </l>
+                        <l n="21">
+                            <app>
+                                <rdg wit="#A #B">en tal</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">razon</rdg>
+                                <rdg wit="#B" ana="#abb">razo<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#per">
+                                    <am>ꝑ</am>
+                                    <ex>per</ex>
+                                </rdg>
+                                <rdg wit="#B">por</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">que</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">m<supplied>e</supplied>
+                                </rdg>
+                                <rdg wit="#B" ana="#syn">mela</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">ela</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#syn">
+                                    <seg corresp="#syn">
+                                        <supplied>e</supplied>
+                                    </seg>stra<am>̄</am>
+                                    <ex>̃</ex>yasse</rdg>
+                                <rdg wit="#B" ana="#pal-nas">
+                                    <seg corresp="#pal-nas">estra<am>̄</am>
+                                        <ex>n</ex>hasse</seg>
+                                </rdg>
+                            </app>
+                        </l>
+                    </lg>
+                    <lg type="cobra">
+                        <l n="22">
+                            <app>
+                                <rdg wit="#A #B">E des</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">i</rdg>
+                                <rdg wit="#B" ana="#y-vow">
+                                    <seg corresp="#y-vow">y</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">pois</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">que</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">m<supplied>?</supplied> eu</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">assi</rdg>
+                                <rdg wit="#B" ana="#y-vow">ass<seg corresp="#y-vow">y</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">saluasse</rdg>
+                            </app>
+                        </l>
+                        <l n="23">
+                            <app>
+                                <rdg wit="#A #B">se</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#abb">d<am>͛</am>
+                                    <ex>eu</ex>s</rdg>
+                                <rdg wit="#B">d<am>̄</am>
+                                    <ex>eu</ex>s</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">me salue</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">que</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">nunca</rdg>
+                                <rdg wit="#B" ana="#abb">nu<am>̄</am>
+                                    <ex>n</ex>ca</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">o meu</rdg>
+                            </app>
+                        </l>
+                        <l n="24">
+                            <app>
+                                <rdg wit="#A #B">mal</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">mais</rdg>
+                                <rdg wit="#B" ana="#y-dip">ma<seg corresp="#y-dip">y</seg>s</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">diria</rdg>
+                                <rdg wit="#B" ana="#error">di<seg corresp="#error">t</seg>ia</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">de</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">mia</rdg>
+                                <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">coita eu</rdg>
+                            </app>
+                        </l>
+                        <l n="25">
+                            <app>
+                                <rdg wit="#A #B">a</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">mia</rdg>
+                                <rdg wit="#B" ana="#h-minin">m<seg corresp="#h-minin">h</seg>a</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#reg">se<am>̄</am>
+                                    <ex>n</ex>nor</rdg>
+                                <rdg wit="#B" ana="#abb">senh<am>ᷣ</am>
+                                    <ex>or</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">pero</rdg>
+                                <rdg wit="#B" ana="#abb">
+                                    <am>ꝑ</am>
+                                    <ex>per</ex>o</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">que</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">me matasse</rdg>
+                            </app>
+                        </l>
+                        <l n="26">
+                            <app>
+                                <rdg wit="#A #B">o seu amor</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">que</rdg>
+                                <rdg wit="#B" ana="#abb">q<am>̄</am>
+                                    <ex>ue</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">xe</rdg>
+                                <rdg wit="#B" ana="#li">xi</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">me</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">matara</rdg>
+                                <rdg wit="#B" ana="#error" cert="low">mataria</rdg>
+                            </app>
+                        </l>
+                        <l n="27">
+                            <app>
+                                <rdg wit="#A">e o</rdg>
+                                <rdg wit="#B" ana="#equip" cert="low">eu</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">sei</rdg>
+                                <rdg wit="#B" ana="#y-dip">se<seg corresp="#y-dip">y</seg>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A" ana="#çe">
+                                    <seg corresp="#çe">ç</seg>ed<supplied>?</supplied>
+                                </rdg>
+                                <rdg wit="#B">ced<supplied>?</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">u al</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">non</rdg>
+                                <rdg wit="#B" ana="#abb">no<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">auera</rdg>
+                                <rdg wit="#B" ana="#abb">au<am>͛</am>
+                                    <ex>er</ex>a</rdg>
+                            </app>
+                        </l>
+                        <l n="28">
+                            <app>
+                                <rdg wit="#A #B">ca</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">nunca</rdg>
+                                <rdg wit="#B" ana="#abb">nu<am>̄</am>
+                                    <ex>n</ex>ca</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">foi quen</rdg>
+                                <rdg wit="#B" ana="#error">en</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">tal</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">coita</rdg>
+                                <rdg wit="#B" ana="#y-dip">co<seg corresp="#y-dip">y</seg>ta</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">leuasse</rdg>
+                                <rdg wit="#B" ana="#misread">le<seg corresp="#misread">n</seg>asse</rdg>
+                            </app>
+                        </l>
+                    </lg>
+                    <lg type="cobra">
+                        <l n="29">
+                            <app>
+                                <rdg wit="#A" ana="#material">
+                                    <seg corresp="#material">
+                                        <hi rend="guide">C</hi>
+                                    </seg>om<supplied>?</supplied>
+                                </rdg>
+                                <rdg wit="#B">Com<supplied>?</supplied>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A #B">eu leuo</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">nen</rdg>
+                                <rdg wit="#B" ana="#abb">ne<am>̄</am>
+                                    <ex>n</ex>
+                                </rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">foi que<am>̄</am>
+                                    <ex>n</ex> s<supplied>e</supplied> end<supplied>e</supplied>
+                                </rdg>
+                                <rdg wit="#B" ana="#equip">sey q<am>̄</am>
+                                    <ex>ue</ex> sen</rdg>
+                            </app>
+                            <app>
+                                <rdg wit="#A">osmasse</rdg>
+                                <rdg wit="#B" ana="#material">osmass<gap reason="damage" quantity="1" unit="chars"/>
+                                </rdg>
+                            </app>
+                        </l>
+                    </lg>
+                </lg>
+            </div>
+        </body>
+    </text>
+</TEI>
