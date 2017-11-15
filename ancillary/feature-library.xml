@@ -939,6 +939,35 @@
                         <string xml:lang="gl">Tema de perfecto de ’haver’ en ’o-’</string>
                     </f>
                 </fs>
+<!--                Incompleto:-->
+                <fs xml:id="queda-b" type="arcaico">
+                    <f name="taxonomy">
+                        <fs type="linguistic">
+                            <f name="category">
+                                <fs type="morphosyntactic">
+                                    <f name="POS">
+                                        <fs type="VB">
+                                            <f name="stem-tense">
+                                                <symbol value="past"/>
+                                            </f>
+                                        </fs>
+                                    </f>
+                                    <f name="lexeme">
+                                        <string>haver</string>
+                                    </f>
+                                    <f name="process">
+                                        <symbol value="stem"/>
+                                    </f>
+                                </fs>
+                            </f>
+                        </fs>
+                    </f>
+                    <f name="description">
+                        <string xml:lang="en">Reduction of intervocalic /β/ in some past stems</string>
+                        <string xml:lang="pt">Queda de /β/ intervocálico no pretérito dalguns verbos</string>
+                        <string xml:lang="gl">Queda de /β/ intervocálico no pretérito dalgúns verbos</string>
+                    </f>
+                </fs>
                 <fs xml:id="analog-o" type="inova-gl">
                     <f name="taxonomy">
                         <fs type="linguistic">
