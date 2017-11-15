@@ -644,12 +644,22 @@ legend{
 button{
     color: white;
     background-color: #2b3966;
-    padding: 0.5em;
+    padding: 0.7em;
     margin-left: 1%;
+}
+.authors {
+    display: flex;
+    flex-direction: column;
+}
+
+.authors button{
+    width:15%;
+    align-self:center;
 }
 
 input{
     margin: 0 0.5% 0.5% 0.5%;
+    align-self: flex-start;
 }
 
 form{
@@ -659,6 +669,19 @@ form{
     margin-bottom: 6%;
 }
 
+div.form{
+    display:flex;
+}
+
+.item{
+    flex-grow:1;
+    width: 48%;
+}
+
+
+.form label{
+    padding-right:2%;
+}
 
 /*Phenomena forms*/
 
