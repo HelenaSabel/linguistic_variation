@@ -7,20 +7,23 @@ declare option output:encoding "UTF-8";
 let $authors := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[concat('#', @xml:id) = collection('/db/VTLGP/edition')//tei:name[@role eq 'author']/@ref]
 let $periods := $authors/tei:floruit/@period
 let $copyists := collection('/db/VTLGP/edition')//tei:div//tei:title//tei:rdg/substring(@hand, 2)
+let $authorsImpar := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[concat('#', @xml:id) = collection('/db/VTLGP/edition')//tei:name[@role eq 'author']/@ref][tei:persName/matches(., '^[A-J]')]
+let $authorsPar := doc('/db/VTLGP/ancillary/corpus-autores.xml')//tei:person[concat('#', @xml:id) = collection('/db/VTLGP/edition')//tei:name[@role eq 'author']/@ref][tei:persName/matches(., '^[L-Z]')]
 return
     
-    (<form
+    (<form class="authors"
         method="GET"
         action="edition.php">
+        <div class="form">
+        <div class="item">
         {
-            for $i in 1 to (count($authors))
-            let $author := $authors[$i]
+            for $i in 1 to (count($authorsImpar))
+            let $author := $authorsImpar[$i]
             let $songs := collection('/db/VTLGP/edition')//tei:name[@role eq 'author'][@ref = $author/concat('#', @xml:id)]/ancestor::tei:div
             order by $author
             return
                 <fieldset>
-                    <legend
-                        id="{$author/@xml:id/string()}">{$author/tei:persName/string()}</legend>
+                    <legend id="{$author/@xml:id/string()}">{$author/tei:persName/string()}</legend>
                     <div>
                         <input
                             type="radio"
@@ -33,16 +36,14 @@ return
                             for="none{$i}"><span
                                 class="en">None</span>
                             <span
-                                class="pt">Nenhuma</span><span
-                                class="gl">Ningunha</span></label>
+                                class="pt">Nenhuma</span><span class="gl">Ningunha</span></label>
                         <input
                             type="radio"
                             name="author[{$i}]"
                             value="{$author/@xml:id}"
                             id="author{$i}"
                             class="all"/>
-                        <label
-                            class="corpus all"
+                        <label class="corpus all"
                             for="author{$i}"><span
                                 class="pt gl">Todas</span>
                             <span
@@ -54,8 +55,69 @@ return
                             id="select{$i}"/>
                         <label
                             for="select{$i}"><span
-                                class="pt gl">Sele<span
-                                    class="gl">c</span>cionar</span>
+                                class="pt gl">Sele<span class="gl">c</span>cionar</span>
+                            <span
+                                class="en">Select</span></label>
+                        <ul
+                            class="hide">
+                            {
+                                for $song in $songs
+                                order by $song/number(substring-before(substring(@corresp, 3), 'B'))
+                                return
+                                    <li><input
+                                            type="checkbox"
+                                            id="{$song/substring(@corresp, 2)}"
+                                            name="song[]"
+                                            value="{$song/substring(@corresp, 2)}"/>
+                                        <label
+                                            for="{$song/substring(@corresp, 2)}">{string-join($song//tei:title//tei:idno, ', ')}</label></li>
+                            }</ul>
+                    
+                    </div>
+                </fieldset>
+        }</div>
+        <div class="item">
+         {
+            for $x in 1 to (count($authorsPar))
+            let $author := $authorsPar[$x]
+            let $i := $x + 14
+            let $songs := collection('/db/VTLGP/edition')//tei:name[@role eq 'author'][@ref = $author/concat('#', @xml:id)]/ancestor::tei:div
+            order by $author
+            return
+                <fieldset>
+                    <legend id="{$author/@xml:id/string()}">{$author/tei:persName/string()}</legend>
+                    <div>
+                        <input
+                            type="radio"
+                            name="author[{$i}]"
+                            class="all"
+                            id="none{$i}"
+                            checked="checked"/>
+                        <label
+                            class="all"
+                            for="none{$i}"><span
+                                class="en">None</span>
+                            <span
+                                class="pt">Nenhuma</span><span class="gl">Ningunha</span></label>
+                        <input
+                            type="radio"
+                            name="author[{$i}]"
+                            value="{$author/@xml:id}"
+                            id="author{$i}"
+                            class="all"/>
+                        <label class="corpus all"
+                            for="author{$i}"><span
+                                class="pt gl">Todas</span>
+                            <span
+                                class="en">All</span> ({count($songs)})</label>
+                        <input
+                            type="radio"
+                            name="author[{$i}]"
+                            class="show"
+                            id="select{$i}"/>
+                        <label
+                            for="select{$i}"><span
+                                class="pt gl">Sele<span class="gl">c</span>cionar</span>
                             <span
                                 class="en">Select</span></label>
                         <ul
@@ -76,13 +138,16 @@ return
                     </div>
                 </fieldset>
         }
+        
+        </div>
+        </div>
         <button
             class="submit"
             type="submit"><span
                 class="pt gl">Pesquisa</span><span
                 class="en">Search</span></button>
     </form>,
-    (: <h2
+   (: <h2
         id="period"><span
             class="pt">Por período</span><span
             class="en">By period</span></h2>,
@@ -199,16 +264,14 @@ return
                             for="none{$hand}"><span
                                 class="en">None</span>
                             <span
-                                class="pt">Nenhuma</span><span
-                                class="gl">Ningunha</span></label>
+                                class="pt">Nenhuma</span><span class="gl">Ningunha</span></label>
                         <input
                             type="radio"
                             name="scribe[{$hand}]"
                             value="{$hand}"
                             id="{$hand}"
                             class="all"/>
-                        <label
-                            class="corpus"
+                        <label class="corpus"
                             for="{$hand}"><span
                                 class="pt gl">Todas</span>
                             <span
@@ -220,8 +283,7 @@ return
                             id="select{$hand}"/>
                         <label
                             for="select{$hand}"><span
-                                class="pt gl">Sele<span
-                                    class="gl">c</span>cionar</span>
+                                class="pt gl">Sele<span class="gl">c</span>cionar</span>
                             <span
                                 class="en">Select</span></label>
                         <ul
