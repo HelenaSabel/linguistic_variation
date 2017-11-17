@@ -48,7 +48,7 @@
                 >Variantes gráficas</span>
             </p>
             <p><span class="en equipolent">Divergent readings</span><span
-                    class="pt equipolent">Lições divergentes</span><span class="gl equipolent">Leccións diverxentes</span>
+                    class="pt equipolent">Lições singulares</span><span class="gl equipolent">Leccións singulares</span>
             </p>
         </div>
         <p><span class="en">Click on the colored or underlined form for additional
