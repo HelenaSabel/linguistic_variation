@@ -18,13 +18,9 @@
     </head>
     <body><!--#include virtual="ssi/header.html"-->
         <main>
-            <h1><span class="pt gl">Fenómenos de varia<span class="pt">ção</span><span class="gl">ción</span></span><span class="en">Variation phenomena</span></h1>
-            <h2><span class="pt gl">Variantes de li<span class="pt">&#769;</span>ngua</span><span class="en">Linguistic variants</span></h2>
-            <?php 
-                require_once('config.php');
-                $xqul = REST_PATH . "/db/VTLGP/queries/form.xquery";
-                echo file_get_contents($xqul);
-         ?>
+            
+            <h2 class="gl pt">Aviso importante</h2>
+<h3>Os servidores do Laboratorio de Innovación en Humanidades Digitales (LINHD) están en proceso de migración. Esta páxina estará novamente dispoñíbel o 29 de novembro de 2018.</h3>
         </main>
         <!--#include virtual="ssi/footer.html"-->
     </body>

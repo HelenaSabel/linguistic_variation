@@ -1,8 +1,0 @@
-xquery version "3.0";
-declare namespace tei = "http://www.tei-c.org/ns/1.0";
-declare variable $lines as element(tei:l)+ := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem']//tei:l;
-declare variable $features as element(tei:fs)*  := doc('/db/VTLGP/feature-library.xml')//tei:fvLib/tei:fs;
-declare variable $additionPhenomena as xs:string+ := $features[.//tei:symbol/@value = ('addition', 'repetition')]/concat('#', @xml:id);
-for $line in $lines
-return $line[descendant::tei:rdg[some $ana in tokenize(@ana, '\s+') satisfies $ana = $additionPhenomena]]
-

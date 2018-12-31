@@ -1,8 +1,0 @@
-xquery version "3.0";
-declare namespace tei = "http://www.tei-c.org/ns/1.0";
-let $songs := collection('/db/VTLGP/edition')//tei:div[@type eq 'poem']
-let $readings := $songs//tei:rdg
-(: let $words := $readings[contains(@ana, '#l-pal')]:)
- let $words : = $readings[contains(@wit, '#B')][contains(., 'mas')] 
-for $word in $words
-return $word
